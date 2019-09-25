@@ -27,6 +27,7 @@ SHOW_GRAPH = True
 ALWAYS_CLEAR = True
 # version control - (1)delete downloaded files (2)clear log file
 VERSION_CONTROL = True
+# ********** ALSO CHECK THE LAST FEW LINES !!! **********
 
 # control to increase speed or avoid ambiguity
 if not GRAPH_REQUIRED or THREAD_NUM >= 3:
