@@ -5,19 +5,180 @@ import re
 import urlparse
 import os
 # import urllib
-import sys
+# import sys
 import shutil  # to clear non-empty folders
 import threading
 import Queue
 import time
 from Ex3_1_Bloom_Filter_class import BloomFilter
 
-# global variables for mode selecting and debugging outputs
-DEBUG_MODE = 1
-SHOW_LOGS = 1
-ALWAYS_CLEAR = 1
-GRAPH_REQUIRED = 1
-ADVANCED_MODE = 1  # minimize overflow crawls
+# global variables
+# [control]
+THREAD_NUM = 10
+# ********** CHECK BEOFRE UPLOAD !!! **********
+# [status]
+DEBUG_MODE = False
+# [features]
+SHOW_LOGS = True
+SHOW_REPORT = True
+SHOW_TIME = True
+GRAPH_REQUIRED = True
+SHOW_GRAPH = True
+ALWAYS_CLEAR = True
+# version control - (1)delete downloaded files (2)clear log file
+VERSION_CONTROL = True
+
+# control to increase speed or avoid ambiguity
+if not GRAPH_REQUIRED or THREAD_NUM >= 3:
+    SHOW_GRAPH = False
+if THREAD_NUM > 10:
+    SHOW_LOGS = False
+
+
+def crawl(in_seed, in_max_page, in_max_depth):
+    # initialize variables
+    global G_seed, G_crawled, G_max_page, G_max_depth
+    G_seed = in_seed
+    G_max_page = in_max_page
+    G_max_depth = in_max_depth
+    G_to_crawl_queue.put((G_seed, 0))
+    time_start = time.clock()
+
+    # clear the file and empty the folder
+    index_filename = 'index.txt'  # each line in index.txt: "link " + "corresponding file name"
+    folder = 'html'  # the folder to save all the web pages
+    if ALWAYS_CLEAR:
+        clear_storage(index_filename, folder)
+
+    # fork the waiting queue
+    for i in range(THREAD_NUM):
+        t = threading.Thread(target=working, args=(i,))
+        t.setDaemon(True)
+        # t.setDaemon(False)
+        t.start()
+
+    # wait until all the jobs are done
+    G_to_crawl_queue.join()
+
+    # calculate the run time
+    run_time = time.clock() - time_start
+
+    # for an easier version contro
+    if VERSION_CONTROL:
+        clear_storage(index_filename, folder)
+
+    # print report
+    if SHOW_REPORT:
+        total = 0
+        max_depth = 0
+        threads_report = "\nThreads:"
+        print "\n========================================"
+        print "**************** REPORT ****************"
+
+        for idx in range(THREAD_NUM):
+            total += G_crawled_page_cnt_thread[idx]
+            max_depth = max(max_depth, G_crawled_max_depth_thread[idx])
+            # form the threads report
+            threads_report = threads_report + "\nThread #%d\t-->\tPages: %d\tMax Depth: %d" \
+                             % (idx,
+                                G_crawled_page_cnt_thread[idx],
+                                G_crawled_max_depth_thread[
+                                    idx])
+        # print the task details
+        print "\nTarget: %s" % G_seed
+        print "\n[Task]"
+        print "\tMax Page:\t%d\t\tMax Depth:\t%d" % (G_max_page, G_max_depth)
+        print "[Crawled]"
+        print "\tTotal:\t\t%d\t\t\tMax Depth:\t%d" % (total, max_depth)
+        # print the time executed
+        if SHOW_TIME:
+            print "\n[Time] (seconds)"
+            print "\tTime Executed:\t\t%f" % run_time
+            print "\tAverage Per Page:\t%f" % (run_time / total)
+        # print the thread report
+        print threads_report
+        # print the graph if required
+        if SHOW_GRAPH:
+            print "\nStructure:"
+            print G_graph
+
+        print "\n***************** END *****************"
+        print "======================================="
+
+
+# get and handle one url each time from the queue
+def working(i):
+    # while (not G_to_crawl_queue.empty()) and count < max_page:
+    if DEBUG_MODE:
+        print "Thread", i, "starts"
+    while True:
+        argument_url, depth = G_to_crawl_queue.get()  # get the target url form the queue
+
+        if varLock.acquire():
+            # do_crawl: 0=pause, 1=crawl, -1=clear
+            if (G_crawled_page_count >= G_max_page) or (depth > G_max_depth):
+                do_crawl = -1
+            elif G_crawled_page_count < G_max_page - THREAD_NUM - 2:
+                do_crawl = 1
+            else:
+                do_crawl = 1 if 0 == i else 0
+
+            # release the variable lock
+            varLock.release()
+
+            if 1 == do_crawl:  # crawl it
+                crawl_using_argument_url(argument_url, depth, i)  # handle the url
+            elif 0 == do_crawl:  # pause
+                time.sleep(1)
+            else:  # -1==do_crawl i.e. discard the url
+                pass
+
+            G_to_crawl_queue.task_done()
+
+
+def crawl_using_argument_url(arg_url, depth, thread_idx):
+    global G_crawled_page_count
+
+    if not G_crawled.search(arg_url):  # judge whether the url has already been crawled
+        # if DEBUG_MODE:
+        #     print "[craw] " + arg_url
+        content = get_page(arg_url)  # get the elements in the page
+        if content:
+            if SHOW_LOGS:
+                print "Thread #%d\t[%d] %s" % (thread_idx, depth, arg_url)
+            add_page_to_folder(arg_url, content)
+            out_links = get_all_links(content, arg_url)  # find all the sub-urls on the given page
+
+            # add all the children urls to the queue
+            for url in out_links:
+                G_to_crawl_queue.put((url, depth + 1))
+
+            if varLock.acquire():
+                G_crawled.add(arg_url)  # declare that the page has already been crawled
+
+                G_crawled_page_count += 1
+                G_crawled_page_cnt_thread[thread_idx] += 1
+                G_crawled_max_depth_thread[thread_idx] = max(G_crawled_max_depth_thread[thread_idx],
+                                                             depth)
+
+                varLock.release()
+
+            # update the graph structure
+            if GRAPH_REQUIRED:
+                page_children = []
+                for i in out_links:
+                    page_children.append(i)
+                if varLock.acquire():
+                    G_graph[arg_url] = page_children
+                varLock.release()
+
+
+def clear_storage(index_filename, folder):
+    with open(index_filename, "w") as f:
+        f.write("")
+    # clear the target folder(if exists) and create a new empty folder
+    if os.path.exists(folder):
+        shutil.rmtree(folder)
 
 
 # @description
@@ -26,8 +187,8 @@ ADVANCED_MODE = 1  # minimize overflow crawls
 #     [target_url] the given url to check
 #     [head_url] the source url for possible completion
 def complete_url(target_url, head_url):
-    rule_1 = re.compile("^/{1}.+")  # starting with "/"
-    rule_2 = re.compile("^/{2}.+")  # starting with "//"
+    rule_1 = re.compile('^/{1}.+')  # starting with "/"
+    rule_2 = re.compile('^/{2}.+')  # starting with "//"
     rule_3 = re.compile("^http.+")  # starting with "http"
 
     if rule_1.match(target_url):  # /
@@ -111,122 +272,6 @@ def add_page_to_folder(page, content):
     f.close()
 
 
-def crawl(in_seed, in_max_page):
-    # initialize variables
-    global G_seed, G_max_page, G_crawled
-    G_seed = in_seed
-    G_max_page = in_max_page
-    G_to_crawl_queue.put(G_seed)
-
-    # clear the file and empty the folder
-    index_filename = 'index.txt'  # each line in index.txt: "link " + "corresponding file name"
-    folder = 'html'  # the folder to save all the web pages
-    if ALWAYS_CLEAR:
-        with open(index_filename, "w") as f:
-            f.write("")
-        # clear the target folder(if exists) and create a new empty folder
-        if os.path.exists(folder):
-            shutil.rmtree(folder)
-
-    # fork the waiting queue
-    for i in range(THREAD_NUM):
-        t = threading.Thread(target=working, args=(i,))
-        t.setDaemon(True)
-        # t.setDaemon(False)
-        t.start()
-
-    # wait until all the jobs are done
-    G_to_crawl_queue.join()
-    if SHOW_LOGS:
-        total = 0
-        print "---------------"
-        for idx in range(THREAD_NUM):
-            total += G_crawled_page_cnt_thread[idx]
-            print "Thread #%d\t-->\t%d" % (idx, G_crawled_page_cnt_thread[idx])
-        print "==>Total: %d" % total
-
-
-# get and handle one url each time from the queue
-def working(i):
-    # while (not G_to_crawl_queue.empty()) and count < max_page:
-    if DEBUG_MODE:
-        print "Thread", i, "starts"
-    while True:
-        argument_url = G_to_crawl_queue.get()  # get the target url form the queue
-
-        if ADVANCED_MODE:  # advanced mode
-            if varLock.acquire():
-                # do_crawl: 0=pause, 1=crawl, -1=clear
-                if G_crawled_page_count < G_max_page - THREAD_NUM - 2:
-                    do_crawl = 1
-                else:
-                    if G_crawled_page_count >= G_max_page:
-                        do_crawl = -1
-                    else:
-                        do_crawl = 1 if 0 == i else 0
-
-                # release the variable lock
-                varLock.release()
-
-            if 1 == do_crawl:  # crawl it
-                crawl_using_argument_url(argument_url, i)  # handle the url
-            elif 0 == do_crawl:  # pause
-                time.sleep(1)
-            else:  # -1==do_crawl i.e. clear the queue
-                pass
-
-            G_to_crawl_queue.task_done()
-
-        else:  # less advanced mode
-            if varLock.acquire():
-                if G_crawled_page_count >= G_max_page:
-                    varLock.release()
-                else:
-                    varLock.release()
-                    crawl_using_argument_url(argument_url, i)  # handle the url
-
-                # declare that the task is done
-                G_to_crawl_queue.task_done()
-
-
-def crawl_using_argument_url(arg_url, thread_idx):
-    global G_crawled_page_count
-
-    if not G_crawled.search(arg_url):  # judge whether the url has already been crawled
-        # if DEBUG_MODE:
-        #     print "[craw] " + arg_url
-        content = get_page(arg_url)  # get the elements in the page
-        if content:
-            print "Thread #%d\t%s" % (thread_idx, arg_url)
-            add_page_to_folder(arg_url, content)
-            out_links = get_all_links(content, arg_url)  # find all the sub-urls on the given page
-
-            # add all the children urls to the queue
-            for url in out_links:
-                G_to_crawl_queue.put(url)
-
-            if varLock.acquire():
-                G_crawled.add(arg_url)  # declare that the page has already been crawled
-
-                G_crawled_page_count += 1
-                G_crawled_page_cnt_thread[thread_idx] += 1
-                # print "==", crawled_page_count, thread_idx, crawled_page_cnt_thread
-
-                varLock.release()
-
-            # update the graph structure
-            if GRAPH_REQUIRED:
-                page_children = []
-                for i in out_links:
-                    page_children.append(i)
-                if varLock.acquire():
-                    G_graph[arg_url] = page_children
-                varLock.release()
-
-
-# global variables - control
-THREAD_NUM = 5  # the number of threads
-
 # global variables - content
 G_to_crawl_queue = Queue.Queue()
 G_crawled = BloomFilter(size=55555, ideal=1)
@@ -236,13 +281,12 @@ G_max_page = -1
 G_max_depth = -1
 G_crawled_page_count = 0
 G_crawled_page_cnt_thread = [0] * THREAD_NUM
+G_crawled_max_depth_thread = [0] * THREAD_NUM
 # variable lock to avoid multiple changes
 #   made by different threads on a global variable
 varLock = threading.Lock()
 
-crawl("http://www.sjtu.edu.cn", 20)
-# crawl("http://daily.zhihu.com", 20)
-print G_graph
+crawl("http://www.sjtu.edu.cn", 2000, 1)
 
 # if __name__ == '__main__':
 #     seed = sys.argv[1]
