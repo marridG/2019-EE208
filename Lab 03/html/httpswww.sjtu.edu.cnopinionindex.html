@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link href="images/style.css" type="text/css" rel="stylesheet">
+<title>机关服务评议</title>
+</head>
+<body>
+<div class="banner">
+<center>
+<table cellpadding=0 cellspacing=0 border=0 width=100% class="btb">
+<tr>
+<td width=302><img src="images/i_r6_c6.png" border=0 width=302 height=81 /></td>
+<td width=225>&nbsp</td>
+<td width=473><img src="images/title2015.png" border=0 width=473 height=59 /></td>
+</tr>
+</table>
+</center>
+</div>
+<div class="mdv">
+<form method="post" action="sendmail.php" name="myform" onsubmit="return check_submit();">
+
+	<table cellpadding=0 cellspacing=0 border=0 class="mtb">
+	 <tr>
+		<td class="ltd" >被评议部门</td>
+		<td class="rtd" >
+			<table cellpadding=0 cellspacing=0 border=0 width=100%>
+				<tr>
+					<td><select class="targetsa" id="targetsa" name="targetsa">
+						<option selected="selected" value="">--请选择被评议部门--</option>
+						<option value="党委办公室（改革与发展研究室、安全管理办公室）">党委办公室（改革与发展研究室、安全管理办公室）</option>
+						<option value="校长办公室（法律事务室、地方合作办公室）">校长办公室（法律事务室、地方合作办公室）</option>
+						<option value="纪委（监察处、审计处）">纪委（监察处、审计处）</option>
+						<option value="党委组织部（党校、机关党委、老干部处）">党委组织部（党校、机关党委、老干部处）</option>
+						<option value="党委宣传部（新闻中心、文明办）">党委宣传部（新闻中心、文明办）</option>
+						<option value="党委统战部">党委统战部</option>
+						<option value="学生工作指导委员会（学生处、团委、武装部）">学生工作指导委员会（学生处、团委、武装部）</option>
+						<option value="工会（妇委会）">工会（妇委会）</option>
+						<option value="保密办公室（科研生产质量管理办公室）">保密办公室（科研生产质量管理办公室）</option>					
+						<option value="研究生院">研究生院</option>
+						<option value="教务处（招生办公室、慕课推进办公室）">教务处（招生办公室、慕课推进办公室）</option>
+						<option value="科学技术发展研究院（先进技术与装备研究院）">科学技术发展研究院（先进技术与装备研究院）</option>
+						<option value="文科建设处">文科建设处</option>
+						<option value="国际合作与交流处（港澳台办公室）">国际合作与交流处（港澳台办公室）</option>
+						<option value="人力资源处">人力资源处</option>
+						<option value="财务计划处">财务计划处</option>
+						<option value="211/985工程办公室">211/985工程办公室</option>
+						<option value="规划发展处">规划发展处</option>
+						<option value="资产管理与实验室处">资产管理与实验室处</option>
+						<option value="经营性资产管理办公室">经营性资产管理办公室</option>
+						<option value="后勤保障处">后勤保障处</option>
+						<option value="保卫处">保卫处</option>
+						<option value="基建处">基建处</option>
+						<option value="发展联络处">发展联络处</option>
+						<option value="校友总会办公室">校友总会办公室</option>
+						<option value="招投标管理办公室">招投标管理办公室</option>
+						</select>
+					</td>
+					<td width=100 style="font-size:14px;" align=right>被评议人员：</td>
+					<td width=100><input type="text" name="targets" size=34 class="targets" /></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="ltd">评议人</td>
+		<td class="rtd" style="margin:0px;padding:0px;">
+			<table cellpadding=0 cellspacing=0 border=0 class="ttb" width=100%>
+				<tr class="ttru">
+					<td width=15% class="tltd" align=right >姓名:</td><td width=35% class="tltd" align=left> <input type="text" name="name" class="name" /></td>
+					<td width=15% class="trtd" align=right>单位: </td><td width=35% class="trtd" align=left><input type="text" name="depart" class="depart" /></td>		
+				</tr>
+				<tr class="ttrd">
+					<td width=15% class="tltd" align=right>您的邮箱: </td><td width=35% class="tltd" align=left><input type="text" name="mail"   class="mail" /></td>
+					<td width=15% class="trtd" align=right>联系电话: </td><td width=35% class="trtd" align=left><input type="text" name="phone" class="phone" /></td>							
+				</tr>
+			</table>
+		</td>
+	</tr>		
+	
+	<tr>
+		<td class="ltd">主题</td>
+		<td class="rtd"><input type="text" name="subject" size="34" class="subject" /></td>
+	</tr>
+
+	<tr>
+		<td class="atd" colspan=2 valign=bottom>具体评议内容(<span style="color:red;font-size:12px;">请简明扼要填写评议内容，字数不超过500字为宜。</span>)</td>
+	</tr>
+		
+	<tr>
+		<td class="atd" colspan=2><textarea class="contents" name="contents" class="contents" ></textarea>
+	</tr>
+		
+	<tr>
+		<td class="atd" colspan=2>
+			<table cellpadding=0 cellspacing=0 border=0 class="ftb">
+		       <tr>
+				  <td align=left>验证码：<input type="text" name="muth" id="muth" /><img src="images/muth.php" /></td>
+				  <td width=25% align=center><input type="submit" name="submit" id="submit"  value="发出评议" /></td>
+				  <td width=25% align=center><input type="reset" name="reset" id="reset"  value="重新评议" /></td>		
+				</tr>
+		    </table>
+		</td>
+	</tr>
+	</table>
+
+</form>		
+<script language=javascript>
+function check_submit() {
+if(document.myform.targetsa.value =="") {
+	alert('请选择被评议部门');
+	document.myform.targetsa.focus();
+	return false;	
+}
+
+if(document.myform.name.value =="") {
+	alert('请填写您的姓名');
+	document.myform.name.focus();
+	return false;	
+}
+
+if(document.myform.depart.value =="") {
+	alert('请填写您的工作单位');
+	document.myform.depart.focus();
+	return false;	
+}
+
+if(document.myform.mail.value =="") {
+	alert('请填写您的联系邮箱');
+	document.myform.mail.focus();
+	return false;	
+}
+
+
+if(document.myform.phone.value =="") {
+	alert('请填写您的联系电话');
+	document.myform.phone.focus();
+	return false;	
+}
+
+
+if(document.myform.subject.value =="") {
+	alert('请填写您的评议主题');
+	document.myform.subject.focus();
+	return false;	
+}
+
+
+if(document.myform.contents.value =="") {
+	alert('请填写您的评议内容');
+	document.myform.contents.focus();
+	return false;	
+}
+
+
+if(document.myform.muth.value =="") {
+	alert('请填写验证码');
+	document.myform.muth.focus();
+	return false;	
+}
+
+
+
+
+
+
+
+}
+
+	
+
+</script>
+
+	
+</div>
+
+
+</body>
+</html>
