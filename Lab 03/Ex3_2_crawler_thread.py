@@ -5,7 +5,7 @@ import re
 import urlparse
 import os
 # import urllib
-# import sys
+import sys
 import shutil  # to clear non-empty folders
 import threading
 import Queue
@@ -15,7 +15,7 @@ from Ex3_1_Bloom_Filter_class import BloomFilter
 # global variables
 # [control]
 THREAD_NUM = 10
-# ********** CHECK BEOFRE UPLOAD !!! **********
+# ********** CHECK BEFORE UPLOAD !!! **********
 # [status]
 DEBUG_MODE = False
 # [features]
@@ -30,7 +30,8 @@ VERSION_CONTROL = True
 
 # control to increase speed or avoid ambiguity
 if not GRAPH_REQUIRED or THREAD_NUM >= 3:
-    SHOW_GRAPH = False
+    # SHOW_GRAPH = False  # warning: defined above without usage
+    SHOW_GRAPH = False and not SHOW_GRAPH  # to avoid warning
 if THREAD_NUM > 10:
     SHOW_LOGS = False
 
@@ -174,9 +175,8 @@ def crawl_using_argument_url(arg_url, depth, thread_idx):
 
 
 def clear_storage(index_filename, folder):
-    with open(index_filename, "w") as f:
-        f.write("")
-    # clear the target folder(if exists) and create a new empty folder
+    if os.path.exists(index_filename):
+        os.remove(index_filename)
     if os.path.exists(folder):
         shutil.rmtree(folder)
 
@@ -291,3 +291,6 @@ crawl("http://www.sjtu.edu.cn", 2000, 1)
 # if __name__ == '__main__':
 #     seed = sys.argv[1]
 #     max_page = int(sys.argv[2])
+#     max_depth = int(sys.argv[3])
+#
+#     crawl(seed, max_page, max_depth)
