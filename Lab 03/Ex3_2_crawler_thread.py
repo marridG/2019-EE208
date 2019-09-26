@@ -25,6 +25,8 @@ SHOW_TIME = True
 GRAPH_REQUIRED = True
 SHOW_GRAPH = True
 ALWAYS_CLEAR = True
+MAX_FILE_NAME_LENGTH = 200
+ADVANCED_ELEMENT_MATCH = 0
 # version control - (1)delete downloaded files (2)clear log file
 VERSION_CONTROL = True
 # ********** ALSO CHECK THE LAST FEW LINES !!! **********
@@ -84,14 +86,13 @@ def crawl(in_seed, in_max_page, in_max_depth):
             threads_report = threads_report + "\nThread #%d\t-->\tPages: %d\tMax Depth: %d" \
                              % (idx,
                                 G_crawled_page_cnt_thread[idx],
-                                G_crawled_max_depth_thread[
-                                    idx])
+                                G_crawled_max_depth_thread[idx])
         # print the task details
         print "\nTarget: %s" % G_seed
         print "\n[Task]"
         print "\tMax Page:\t%d\t\tMax Depth:\t%d" % (G_max_page, G_max_depth)
         print "[Crawled]"
-        print "\tTotal:\t\t%d\t\t\tMax Depth:\t%d" % (total, max_depth)
+        print "\tTotal:\t\t%d\t\tMax Depth:\t%d" % (total, max_depth)
         # print the time executed
         if SHOW_TIME:
             print "\n[Time] (seconds)"
@@ -117,6 +118,9 @@ def working(i):
         argument_url, depth = G_to_crawl_queue.get()  # get the target url form the queue
 
         if varLock.acquire():
+            if DEBUG_MODE and G_crawled_page_count and not G_crawled_page_count % (G_max_page / 10):
+                print "\t --", G_crawled_page_count, "--"
+
             # do_crawl: 0=pause, 1=crawl, -1=clear
             if (G_crawled_page_count >= G_max_page) or (depth > G_max_depth):
                 do_crawl = -1
@@ -188,11 +192,11 @@ def clear_storage(index_filename, folder):
 #     [target_url] the given url to check
 #     [head_url] the source url for possible completion
 def complete_url(target_url, head_url):
-    rule_1 = re.compile('^/{1}.+')  # starting with "/"
+    rule_1 = re.compile('^/.+')  # starting with "/" or "//"
     rule_2 = re.compile('^/{2}.+')  # starting with "//"
     rule_3 = re.compile("^http.+")  # starting with "http"
 
-    if rule_1.match(target_url):  # /
+    if rule_1.match(target_url) and not rule_2.match(target_url):  # /
         target_url = urlparse.urljoin(head_url, target_url)
     elif rule_2.match(target_url):  # //
         target_url = "http:" + target_url
@@ -209,7 +213,7 @@ def valid_filename(s):
     import string
     valid_chars = "-_.() %s%s" % (string.ascii_letters, string.digits)
     s = ''.join(c for c in s if c in valid_chars)
-    return s
+    return s if len(s) <= MAX_FILE_NAME_LENGTH else s[:MAX_FILE_NAME_LENGTH - 1]
 
 
 # get the contents on the given page(timeout and DoS considered)
@@ -232,20 +236,31 @@ def get_page(page):
 # get all the links on the given page using the contents grabbed by BeautifulSoup
 def get_all_links(content, page_url):
     links = set()  # initialize the set to store all the links on the page
-    soup = BeautifulSoup(content, "html.parser")
-    for i in soup.findAll("a"):
-        this_link = i.get("href", "")
-        # if DEBUG_MODE:
-        #     print "-----"
-        #     print this_link
-        # complete and recheck the urls when necessary
-        this_link = complete_url(this_link, page_url)
+    if ADVANCED_ELEMENT_MATCH:
+        url_iterator = re.finditer("href=\".*?\"", content)
+        for i in url_iterator:
+            this_link = i.group().split('"')[1]
 
-        # recheck to ensure that there actually exists a non-duplicate story!
-        if this_link and this_link not in links:
-            links.add(this_link)
+            this_link = complete_url(this_link, page_url)
+
+            # recheck to ensure that there actually exists a non-duplicate story!
+            if this_link and this_link not in links:
+                links.add(this_link)
+    else:
+        soup = BeautifulSoup(content, "html.parser")
+        for i in soup.findAll("a"):
+            this_link = i.get("href", "")
             # if DEBUG_MODE:
-            #     print "Link added!"
+            #     print "-----"
+            #     print this_link
+            # complete and recheck the urls when necessary
+            this_link = complete_url(this_link, page_url)
+
+            # recheck to ensure that there actually exists a non-duplicate story!
+            if this_link and this_link not in links:
+                links.add(this_link)
+                # if DEBUG_MODE:
+                #     print "Link added!"
 
     return links
 
@@ -260,7 +275,12 @@ def add_page_to_folder(page, content):
     index = open(index_filename, 'a')
     # if DEBUG_MODE:
     #     print "[add_page] " + page
-    index.write(page.encode('ascii', 'ignore') + '\t' + filename + '\n')
+    try:
+        index.write(page.encode('ascii', 'ignore') + '\t' + filename + '\n')
+    except UnicodeDecodeError:
+        if DEBUG_MODE:
+            print "codec encode error"
+        index.write("ENCODE ERROR")
     index.close()
 
     # save the web pages
@@ -287,7 +307,7 @@ G_crawled_max_depth_thread = [0] * THREAD_NUM
 #   made by different threads on a global variable
 varLock = threading.Lock()
 
-crawl("http://www.sjtu.edu.cn", 2000, 1)
+crawl("http://www.sjtu.edu.cn", 100, 3)
 
 # if __name__ == '__main__':
 #     seed = sys.argv[1]
