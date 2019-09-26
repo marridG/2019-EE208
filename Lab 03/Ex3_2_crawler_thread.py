@@ -307,7 +307,7 @@ G_crawled_max_depth_thread = [0] * THREAD_NUM
 #   made by different threads on a global variable
 varLock = threading.Lock()
 
-crawl("http://www.sjtu.edu.cn", 100, 3)
+crawl("http://www.sjtu.edu.cn", 100, 2)
 
 # if __name__ == '__main__':
 #     seed = sys.argv[1]
