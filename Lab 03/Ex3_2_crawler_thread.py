@@ -13,8 +13,9 @@ import time
 from Ex3_1_Bloom_Filter_class import BloomFilter
 
 # global variables
-# [control]
+# [control - for users]
 THREAD_NUM = 10
+FINAL_SUBMISSION = True
 # ********** CHECK BEFORE UPLOAD !!! **********
 # [status]
 DEBUG_MODE = False
@@ -26,13 +27,13 @@ GRAPH_REQUIRED = True
 SHOW_GRAPH = True
 ALWAYS_CLEAR = True
 MAX_FILE_NAME_LENGTH = 200
-ADVANCED_ELEMENT_MATCH = 0
+ADVANCED_ELEMENT_MATCH = False
 # version control - (1)delete downloaded files (2)clear log file
 VERSION_CONTROL = True
 # ********** ALSO CHECK THE LAST FEW LINES !!! **********
 
 # control to increase speed or avoid ambiguity
-if not GRAPH_REQUIRED or THREAD_NUM >= 3:
+if not GRAPH_REQUIRED or THREAD_NUM >= 3 or max_page > 10:
     # SHOW_GRAPH = False  # warning: defined above without usage
     SHOW_GRAPH = False and not SHOW_GRAPH  # to avoid warning
 if THREAD_NUM > 10:
@@ -307,11 +308,23 @@ G_crawled_max_depth_thread = [0] * THREAD_NUM
 #   made by different threads on a global variable
 varLock = threading.Lock()
 
-crawl("http://www.sjtu.edu.cn", 100, 2)
+if not FINAL_SUBMISSION:
+    crawl("http://www.sjtu.edu.cn", 100, 2)
+else:
+    DEBUG_MODE = False
+    SHOW_LOGS = True
+    SHOW_REPORT = True
+    SHOW_TIME = True
+    GRAPH_REQUIRED = True
+    SHOW_GRAPH = False
+    ALWAYS_CLEAR = True
+    MAX_FILE_NAME_LENGTH = 200
+    ADVANCED_ELEMENT_MATCH = True
+    VERSION_CONTROL = False
 
-# if __name__ == '__main__':
-#     seed = sys.argv[1]
-#     max_page = int(sys.argv[2])
-#     max_depth = int(sys.argv[3])
-#
-#     crawl(seed, max_page, max_depth)
+    if __name__ == '__main__':
+        trm_seed = sys.argv[1]
+        trm_max_page = int(sys.argv[2])
+        trm_max_depth = int(sys.argv[3])
+
+        crawl(trm_seed, trm_max_page, trm_max_depth)
