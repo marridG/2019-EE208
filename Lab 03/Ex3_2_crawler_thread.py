@@ -1,9 +1,11 @@
 # -*- coding:utf-8 -*-
 from bs4 import BeautifulSoup
 import urllib2
+import string
 import re
 import urlparse
 import os
+from ctypes.wintypes import MAX_PATH
 # import urllib
 import sys
 import shutil  # to clear non-empty folders
@@ -15,7 +17,7 @@ from Ex3_1_Bloom_Filter_class import BloomFilter
 # global variables
 # [control - for users]
 THREAD_NUM = 10
-FINAL_SUBMISSION = True
+FINAL_SUBMISSION = False
 # ********** CHECK BEFORE UPLOAD !!! **********
 # [status]
 DEBUG_MODE = False
@@ -26,14 +28,14 @@ SHOW_TIME = True
 GRAPH_REQUIRED = True
 SHOW_GRAPH = True
 ALWAYS_CLEAR = True
-MAX_FILE_NAME_LENGTH = 200
-ADVANCED_ELEMENT_MATCH = False
+# MAX_FILE_NAME_LENGTH = 200
+ADVANCED_ELEMENT_MATCH = 0
 # version control - (1)delete downloaded files (2)clear log file
 VERSION_CONTROL = True
 # ********** ALSO CHECK THE LAST FEW LINES !!! **********
 
 # control to increase speed or avoid ambiguity
-if not GRAPH_REQUIRED or THREAD_NUM >= 3 or max_page > 10:
+if not GRAPH_REQUIRED or THREAD_NUM >= 3 or G_max_page > 10:
     # SHOW_GRAPH = False  # warning: defined above without usage
     SHOW_GRAPH = False and not SHOW_GRAPH  # to avoid warning
 if THREAD_NUM > 10:
@@ -211,10 +213,9 @@ def complete_url(target_url, head_url):
 
 # change for a valid file name
 def valid_filename(s):
-    import string
     valid_chars = "-_.() %s%s" % (string.ascii_letters, string.digits)
     s = ''.join(c for c in s if c in valid_chars)
-    return s if len(s) <= MAX_FILE_NAME_LENGTH else s[:MAX_FILE_NAME_LENGTH - 1]
+    return s if len(s) <= MAX_PATH else s[:MAX_PATH - 1]
 
 
 # get the contents on the given page(timeout and DoS considered)
@@ -309,7 +310,7 @@ G_crawled_max_depth_thread = [0] * THREAD_NUM
 varLock = threading.Lock()
 
 if not FINAL_SUBMISSION:
-    crawl("http://www.sjtu.edu.cn", 100, 2)
+    crawl("http://www.sjtu.edu.cn", 500, 5)
 else:
     DEBUG_MODE = False
     SHOW_LOGS = True
