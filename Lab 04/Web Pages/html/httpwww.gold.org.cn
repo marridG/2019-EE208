@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>中国黄金网</title>
+	<link rel="stylesheet" type="text/css" href="./images/reset.css">
+	<link rel="stylesheet" type="text/css" href="./images/index1.css" />
+	<link rel="stylesheet" type="text/css" href="./images/common_180228_1.css" />
+	<link rel="stylesheet" href="./images/swiper.min.css">
+	<script type="text/javascript" src="./images/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="./images/gold0.js" /></script>
+	<script src="./images/swiper.min.js"></script>
+	<script type="text/javascript" src="./images/index.js" width></script>
+<style>
+div{-webkit-user-select:text;}
+.div_OnedivThR2{margin-top:20px;}
+.div_OnedivThR2 li{width: 100%;height:30px;}
+.div_OnedivThR2 a{line-height:30px;}
+.twoL_ul_common{width: 100%;height: 26px;line-height: 26px;}
+.twoL_ul_common a{line-height: 26px;}
+
+.sy_wxp{width:300px;margin-left:25px;}
+.sy_wxp_tit{width:100%;height:30px;line-height:30px;}
+.sy_wxp_tit h1{float:left;font-size: 20px;color: #fff; background: #af090b;padding:0 12px;font-weight:normal;}
+.sy_wxp_tit a{float:right;color:#000;}
+.sy_wxp_tit a:hover{color:rgb(243, 184, 28)}
+.sy_wxp_txt{width:260px;margin-left:20px;}
+.sy_wxp_txt dl:first-child{border-bottom:1px solid #e7f1e9;}
+.sy_wxp_txt dl dt,.sy_wxp_txt dl dt img{width:100%;height:170px;}
+.sy_wxp_txt dl dd{height:26px;line-height:26px;margin:0;text-align:center;}
+.tab_remen_div ul li a{display:inline-block;width:270px; white-space:nowrap;text-overflow:ellipsis;}
+/*nav 20180612**/
+.daohang_ul li:first-child{width:100px;}
+.daohang_ul li{width:90px;}
+.daohang_ul li:last-child,.daohang_ul li:nth-child(10){width:112.5px;}
+</style>
+<script type="text/javascript">
+
+//wap端跳转
+function UrlSearch()
+{
+   var name,value;
+   var str=location.href; //取得整个地址栏
+   var num=str.indexOf("?")
+   str=str.substr(num+1); //取得所有参数   stringvar.substr(start [, length ]
+
+   var arr=str.split("&"); //各个参数放到数组里
+   for(var i=0;i < arr.length;i++){
+    num=arr[i].indexOf("=");
+    if(num>0){
+     name=arr[i].substring(0,num);
+     value=arr[i].substr(num+1);
+     this[name]=value;
+     }
+    }
+}
+var browserTypeFlag = false;//PC端默认false不现实按钮 移动端显示按钮true
+var Request=new UrlSearch(); //实例化
+var browserType = Request.browserType;//1:PC 2:mobile
+
+var browser = {
+		versions : function() {
+			var u = navigator.userAgent, app = navigator.appVersion;
+			return {//移动终端浏览器版本信息   
+				trident : u.indexOf('Trident') > -1, //IE内核  
+				presto : u.indexOf('Presto') > -1, //opera内核  
+				webKit : u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核  
+				gecko : u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核  
+				mobile : !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端  
+				ios : !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端  
+				android : u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器  
+				iPhone : u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器  
+				iPad : u.indexOf('iPad') > -1, //是否iPad    
+				webApp : u.indexOf('Safari') == -1
+			//是否web应该程序，没有头部与底部  
+			};
+		}(),
+		language : (navigator.browserLanguage || navigator.language)
+				.toLowerCase()
+	}
+
+	if (browser.versions.mobile || browser.versions.ios
+			|| browser.versions.android || browser.versions.iPhone
+			|| browser.versions.iPad) {
+		//window.location.href = "";
+browserTypeFlag = true;
+
+if(typeof(browserType) == "undefined" || browserType == 2){
+window.location.href = "/index_364.html";
+}
+if(0 == browserType || 1 == browserType){
+
+}else{
+//window.location.href = "/index_101.html?browserType="+browserType;
+}
+	}else{
+
+}
+	$(function() {
+if(browserTypeFlag){
+$(".browserType").css('display','block');
+
+}else{
+$(".browserType").css('display','none');
+}
+//根据参数跳转样式
+$('a').click(function(e){
+        		e = e || event;
+        	    var target = e.target || e.srcElement,
+        	        href;
+        	    if (target.tagName === 'A') {
+        	        href = target.href;
+        	        //window.open(href+"?browserType="+browserType);      
+        		//return false;
+        	    }else if (target.tagName === 'IMG') {
+                       target = e.currentTarget;
+        	       if (target.tagName === 'A') {
+        	        href = target.href;
+        	        //window.open(href+"?browserType="+browserType);      
+        		//return false;
+        	       }
+        	    }
+        	   
+        	});
+		// Slideshow 4
+		$("#slider4").responsiveSlides({
+			auto : false,
+			pager : false,
+			nav : true,
+			speed : 500,
+			namespace : "callbacks",
+			before : function() {
+				$('.events').append("<li>before event fired.</li>");
+			},
+			after : function() {
+				$('.events').append("<li>after event fired.</li>");
+			}
+		});
+
+	});
+</script>
+<style>
+.gu_one_r	{
+height:290px;
+}
+.gu_one_l{
+margin-top: 6px;
+}
+.callbacks .caption {
+background-color:rgb(0, 0, 0, 0);
+background-position: none;
+background-attachment:scroll ;
+background-repeat: repeat ;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;  
+    padding: 0px 65px;
+}
+.caption a{
+     color:black;
+     font-size:12px;
+}
+.dzbRel{
+   text-align:center;
+    font-size:13px;
+margin-left: 6px;
+
+}
+.dzbRel a{
+   margin-left: 2px;
+   margin-right: 2px;
+color: #7D0000;
+}
+#slider4 img{
+    height:228px;
+    width:160px;
+    margin-left: 61px;
+    margin-bottom: 14px;
+}
+#wrapper {
+	padding: 0px;
+        width:280px;
+margin: 0 auto;
+height:240px;
+}
+
+.callbacks_container {
+	
+}
+.gu_wz {
+	margin-left: 5px;
+}
+
+.c_lsit1 li {
+	font-size: 15px;
+}
+
+.gu_date {
+	margin-top: 10px;
+padding-right: 3px;
+}
+
+.gu_header_con {
+	font-size: 14px;
+}
+
+.gu_nav {
+	z-index: 200;
+}
+
+.gu_zhub_list ul li {
+	font-size: 15px;
+width: 325px;
+}
+
+.gu_zhub_txt p {
+	font-size: 14px;
+	height: 55px;
+}
+
+h3 a {
+	color: #7d0000;
+}
+
+.c_tag {
+	width: 277px;
+	background: url(images/c_bbg.png) left center repeat-x
+}
+
+.c_tag li {
+	width: 69px;
+	line-height: 35px;
+	padding-bottom: 5px;
+	float: left;
+	text-align: center
+}
+
+.c_tag li.now {
+	background: url(images/c_tagc.png) top center no-repeat;
+	color: #FFF
+}
+
+.gu_nav_alls li li a {
+	color: #9E8101;
+}
+.div_Onediv {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding-bottom: 22px;
+}
+
+.div_One {
+    width: 1045px;
+    height: auto;
+}
+.gu_one_z h5 a {
+	color: black;
+	font-size: 18px;
+        font-weight:600;
+         
+}
+
+.gu_zhub_txt h5 a {
+	color: black;
+	font-size: 16px;
+}
+
+.gu_two_box1 .gu_zhub_pic img {
+	width: 130px;
+	height: 100px;
+}
+.gu_zhub_pic_zt img {
+        width: 72px;
+	height: 72px;
+}
+.c_tag li {
+	width: 33.3%;
+}
+
+.c_tag li.now {
+	background: url(images/c_tagc.png) top center no-repeat;
+	color: #fff;
+	background-size: 100% 97%;
+}
+
+.weixin {
+	text-align: center;
+font-size: 16px;
+width: 90%;
+margin: auto;
+}
+.weixin div{
+       width:50%;
+       float:left;
+       margin-bottom: 10px;
+margin-top: 10px;
+}
+
+.weixin div img {
+	width: 120px;
+}
+
+
+.gu_nav_big {
+	height: 40px;
+	background-color: #7D0000;
+	line-height: 44px;
+	width: 1022px;
+	margin: 0px auto;
+}
+
+.gu_header {
+	height: auto;
+}
+
+.gu_nav_small {
+	line-height: 34px;
+	background-color:white;
+	display: none;
+	position: static;
+	top: 44px;
+	z-index: 100;
+	border-bottom: 1px solid #E4DAC3;
+	width: 1022px;
+	margin: 0px auto;
+}
+.gu_zhub_txt_2 h5 a {
+    color: black;
+    font-size: 16px;
+}
+.gu_zhub_txt_2 div{
+    color: #666666;
+    font-size: 14px;
+    line-height: 20px;
+    overflow: hidden;
+    margin-bottom:15px;
+}
+.gu_zhub_txt_2 img{
+	float:left;
+	padding-top:5px;
+        padding-bottom:0px;
+	padding-right:10px;
+}
+.gu_zhub_txt_2 .gu_zhub_pic{
+	padding-bottom: 10px;
+}
+
+.gu_three_box h3.zl{
+background-image:url("gu_bj_all.png");
+background-color:rgba(0, 0, 0, 0);
+background-position: right center;
+background-attachment:scroll ;
+background-repeat: no-repeat;
+background:  url("gu_bj_all.png") no-repeat scroll right center;
+background-size: 205px 5px;
+}
+.gu_zhub_list_2 {
+	background-color:#E8E3CF;
+	padding: 5px 10px 5px 10px;
+}
+
+.gu_zhub_list_2 h6,h6{
+        font-family: "宋体";
+	font-size: 18px;
+	font-weight: 700;
+color:#2e6e9e;
+padding-bottom: 5px;
+padding-top: 5px;
+
+}
+.gu_zhub_list_2 h6, h6 a{
+    color: #2e6e9e;
+}
+.gu_two_box h3, .gu_three_box h3 {
+    background:url("gu_bj_zb_3.png") 13px center no-repeat;
+}
+.gu_two_box1 h3 {
+    background: url("gu_bj_sc_3.png") 13px center no-repeat;
+}
+h3.gu_ky {
+    background: url("gu_bj_ky_3.png") left center no-repeat;
+}
+.gu_three_right h3.szb{
+background-image:url("gu_bj_all.png");
+background-color:rgba(0, 0, 0, 0);
+background-position: right center;
+background-attachment:scroll ;
+background-repeat: no-repeat;
+background: rgba(0, 0, 0, 0) url("gu_bj_all.png") no-repeat scroll right center;
+background-size: 267px 5px;
+}
+/*.gu_three_box h3 {
+background-image:url("gu_bj_all.png");
+background-color:rgba(0, 0, 0, 0);
+background-position: right center;
+background-attachment:scroll ;
+background-repeat: no-repeat;
+    background: url("gu_bj_all.png")  right center no-repeat 270px 5px;
+    background-size: 270px 5px;
+}*/
+
+.gu_three_box2 h3 {
+background:#FFFEEF;
+float:left;
+padding:0px 15px 0px 10px;
+width:auto;
+}
+.gu_three_box2{
+    background: url("gu_bj_all.png") left center repeat-x;
+height:65px;
+}
+
+.gu_three_right h3.zt{
+background-image:url("gu_bj_all.png");
+background-color:rgba(0, 0, 0, 0);
+background-position: right center;
+background-attachment:scroll ;
+background-repeat: no-repeat;
+background: rgba(0, 0, 0, 0) url("gu_bj_all.png") no-repeat scroll right center;
+background-size: 224px 5px;
+}
+.gu_three_right h3.ewm{
+background-image:url("gu_bj_all.png");
+background-color:rgba(0, 0, 0, 0);
+background-position: right center;
+background-attachment:scroll ;
+background-repeat: no-repeat;
+background: rgba(0, 0, 0, 0) url("gu_bj_all.png") no-repeat scroll right center;
+background-size: 185px 5px;
+}
+.gu_three_right h3.rmwz{
+background-image:url("gu_bj_all.png");
+background-color:rgba(0, 0, 0, 0);
+background-position: right center;
+background-attachment:scroll ;
+background-repeat: no-repeat;
+background: rgba(0, 0, 0, 0) url("gu_bj_all.png") no-repeat scroll right center;
+background-size: 148px 5px;
+}
+.szb{
+margin-bottom: 2px;
+}
+.szb img{
+        height:31px;
+}
+.gu_one_z h5 {
+	
+	padding-top: 0px;
+}
+.gu_one_z {
+	width: 320px;
+	float: left;
+	margin: 23px 20px;
+}
+.gu_one_z p {
+	height: 85px;
+        line-height: 23px; 
+        margin-top:10px;
+        font-size:14px;
+        color:#666;
+}
+.gu_one_z ul {
+	
+	padding-top: 2px;
+}
+.gu_main {
+	margin: 30px auto;
+}
+.gu_main_one {
+	width: 1000px;
+        padding:0px;
+	padding-top: 10px;
+
+}
+#YNews{
+ margin-top:30px;
+}
+#YNews,#YNews dl,#YNews dt img,#YNews dt {
+	height: 230px;
+	
+}
+.gu_zhub_list ul li a {
+	color: #2E6E9E;
+        
+}
+.gu_zhub_txt_2 h5 a {
+        font-weight:600;
+}
+.right_ad3{
+    width:90%;
+    margin:0 auto;
+    padding-bottom: 20px;
+}
+.right_ad1{
+    width:90%;
+    margin:0 auto;
+}
+.right_ad1 img{
+       margin:auto;
+       width:260px;
+       height:324px;
+}
+.right_ad2{
+    width:90%;
+    margin:0 auto;
+}
+.right_ad2 img{
+       margin:auto;
+       width:260px;
+}
+.gu_three_right {
+	margin-top:20px;
+}
+.colum2{
+width:313px;
+}
+
+.middle2{
+margin-left: 20px;
+}
+.row2 {
+       height:173px;
+}
+.row3 {
+       height:172px;
+}
+.gu_three_zt img {
+	height: 60px;
+}
+.gu_zhub_list {
+	margin: 2px 0px;
+width: 340px;
+}
+.r_bottom{
+       background: transparent url("gu_bj_all.png") no-repeat scroll right center / 210px 5px;
+}
+.gu_screen ul li a{
+	color: black;
+	
+}
+.over_flow{
+       width: 325px;
+       white-space:nowrap;
+       overflow:hidden;
+       text-overflow:ellipsis;
+       color: #2E6E9E;
+}
+.over_flow1 {
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #2E6E9E;
+}
+.over_flow2 {
+    width: 325px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+   
+}
+.over_flow3 {
+    width: 315px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+   font-weight:600;
+font-size:16px;
+}
+.gu_one_z  span a {
+    color: #7d0000;
+    font-size: 14px;
+    font-weight: 300;
+}
+</style>
+<script type="text/javascript">
+function setTab(name, num, n) {
+		for (i = 1; i <= n; i++) {
+			var menu = document.getElementById(name + i);
+			var con = document.getElementById(name + "_" + "con" + i);
+			menu.className = i == num ? "now" : "";
+			con.style.display = i == num ? "block" : "none";
+		}
+	}
+	$(document).ready(function() {
+		var siteid = $("#siteid").val();
+		var titlenum = 15;
+		getdocbypv(0, 10, 'daypvorder', '', siteid, titlenum);
+		getdocbypv(0, 10, 'weekpvorder', '', siteid, titlenum);
+		getdocbypv(0, 10, 'monthpvorder', '', siteid, titlenum);
+	});
+	function getdocbypv(docid,docnum,type,chnlid,siteid,titlenum){
+	 $.ajax({
+		url:"/TrsAppServer/news/read.action",
+		data:{docid:docid,docnum:docnum,type:type,chnlid:chnlid,siteid:siteid,titlenum:titlenum},
+		type: "post",
+		async:false,
+		dataType: "json",
+		success:function(message){
+                       var list = message['doclist'];
+			var dom = '';
+			for(var i in list){
+				var obj = list[i];
+				dom+='<li id=contact_'+obj.docid
+					+'><a href='+obj.docpuburl+' TARGET=_blank>'+obj.doctitle+'</a></li>';
+			}
+if(type == 'daypvorder'){
+$('#list_con1').append(dom);
+}else if(type == 'weekpvorder'){
+$('#list_con2').append(dom);
+}else {
+$('#list_con3').append(dom);
+}
+		}
+	});
+}
+</script>
+</head>
+<body>
+
+	<div class="index_1045">
+		<!--页面顶部 logo-->
+		<nav>
+			<div class="nav_img"></div>
+			<div class="nav_right">
+				<div class="shijian" id="theClock" ></div>
+				<form action="/was5/web/search" method="get" target="_blank" style="margin:0;display: inline;" id="searchform" name="searchform">
+					<input type="text" class="nav_inp" name="searchword" id="searchword" placeholder="请输入关键词" />
+					<input type="hidden" name="channelid" value="218216" />
+					<input type="hidden" name="d_channel" value="gold" />
+					<input class="nav_btn" type="submit" name="eNetsearch" value="站内检索" style="cursor:pointer;" />
+				</form>
+				<script type=text/javascript>   
+					/*var manulQuery = "关键词";
+					var sq = document.getElementById("searchword");
+					sq.value = manulQuery;  
+					function erase(q){
+						if(q.value==manulQuery)q.value="";
+					}
+					function recovery(q){
+						if(q.value==""){
+						   q.value = manulQuery;		   
+						}
+						else{
+							 sq.value = q.value;    
+						}
+					}  */ 
+				</script>								
+			</div>
+		</nav>
+		<!--页面导航-->
+		<header>
+			<!--一级导航-->
+<ul class="daohang_ul">
+	<li id='560' class="daohang_ul_active"  class="daohang_ul_active">
+		<a href='http://www.gold.org.cn/'>
+			<img src="./images/gu_home.png" />&nbsp;&nbsp;首页
+		</a>
+	</li>
+	<li id='579'>
+		<a href='./ky1227/'>矿业</a>
+	</li>
+	<li id='580'>
+		<a href='./zb1227/'>珠宝</a>
+	</li>
+	<li id='581'>
+		<a href='./sc1227/'>市场</a>
+	</li>
+	<li id='582'>
+		<a href='./zc1227/'>政策</a>
+	</li>
+	<li id='583'>
+		<a href='./dj/'>党建</a>
+	</li>
+	<li id='584'>
+		<a href='./pl/'>评论</a>
+	</li>
+	<li id='585'>
+		<a href='./zll/'>专栏</a>
+	</li>
+	<li id='685'>
+		<a href='./sshq_685/'>专题</a>
+	</li>
+	<li id=''>
+		<a href='http://ad.aigoldnet.com/' target="_blank">CGT认证</a>
+	</li>
+
+	<li id='586'>
+		<a href='./gywm/'>关于我们</a>
+	</li>
+</ul>
+<!--二级导航-->
+<div class="daohang_div">
+	<ul class="daohang_div_active" id='560s'>
+
+	</ul>
+	<ul id='579s'>
+	
+		<li id='587s'><a href="./ky1227/kyyw/" target="_blank">要闻</a></li>
+	
+		<li id='588s'><a href="./ky1227/kydj/" target="_blank">党建</a></li>
+	
+		<li id='749s'><a href="./ky1227/kygc/" target="_blank">观察</a></li>
+	
+		<li id='590s'><a href="./ky1227/zcfg1227/" target="_blank">政策法规</a></li>
+	
+		<li id='591s'><a href="./ky1227/hw20171227/" target="_blank">国际</a></li>
+	
+		<li id='597s'><a href="./ky1227/wh/" target="_blank">时评</a></li>
+	
+		<li id='593s'><a href="./ky1227/aq1227/" target="_blank">安全</a></li>
+	
+		<li id='594s'><a href="./ky1227/hb/" target="_blank">环保</a></li>
+	
+		<li id='595s'><a href="./ky1227/kj/" target="_blank">科技</a></li>
+	
+		<li id='596s'><a href="./ky1227/kj1227/" target="_blank">生活</a></li>
+	
+		<li id='598s'><a href="./ky1227/ksr/" target="_blank">人物</a></li>
+	
+	</ul>
+	<ul id='580s'>
+	
+		<li id='599s'><a href="./zb1227/zx/" target="_blank">资讯</a></li>
+	
+		<li id='600s'><a href="./zb1227/pp1227/" target="_blank">品牌</a></li>
+	
+		<li id='601s'><a href="./zb1227/ft/" target="_blank">访谈</a></li>
+	
+		<li id='602s'><a href="./zb1227/sd/" target="_blank">深度</a></li>
+	
+		<li id='603s'><a href="./zb1227/fs/" target="_blank">风尚</a></li>
+	
+		<li id='604s'><a href="./zb1227/zh/" target="_blank">展会</a></li>
+	
+	</ul>
+	<ul id='581s'>
+	
+		<li id='606s'><a href="./sc1227/scsd/" target="_blank">深度</a></li>
+	
+		<li id='607s'><a href="./sc1227/scyw/" target="_blank">要闻</a></li>
+	
+		<li id='608s'><a href="./sc1227/yj/" target="_blank">研究</a></li>
+	
+		<li id='609s'><a href="./sc1227/gj/" target="_blank">国际</a></li>
+	
+		<li id='610s'><a href="./sc1227/scdsj/" target="_blank">数据</a></li>
+	
+		<li id='612s'><a href="./sc1227/dzsp/" target="_blank">大宗商品</a></li>
+	
+	</ul>
+	<ul id='582s'>
+	
+		<li id='613s'><a href="./zc1227/jd1227/" target="_blank">解读</a></li>
+	
+		<li id='614s'><a href="./zc1227/gjfl/" target="_blank">国家法律</a></li>
+	
+		<li id='615s'><a href="./zc1227/xzfg/" target="_blank">行政法规</a></li>
+	
+		<li id='616s'><a href="./zc1227/hygf/" target="_blank">行业规范</a></li>
+	
+	</ul>
+	<ul id='583s'>
+	
+		<li id='617s'><a href="./dj/sjd/" target="_blank">十九大</a></li>
+	
+		<li id='618s'><a href="./dj/lxyz/" target="_blank">两学一做</a></li>
+	
+		<li id='619s'><a href="./dj/jcdt/" target="_blank">基层动态</a></li>
+	
+		<li id='620s'><a href="./dj/dyxs/" target="_blank">党员心声</a></li>
+	
+		<li id='621s'><a href="./dj/xxzl/" target="_blank">学习资料</a></li>
+	
+	</ul>
+	<ul id='584s'>
+	
+		<li id='623s'><a href="./pl/plky/" target="_blank">矿业</a></li>
+	
+		<li id='622s'><a href="./pl/plzb/" target="_blank">珠宝</a></li>
+	
+		<li id='624s'><a href="./pl/plsc/" target="_blank">市场</a></li>
+	
+	</ul>
+	<ul id='585s'>
+	
+		<li id='626s'><a href="./zll/ltkj/" target="_blank">老覃论金</a></li>
+	
+		<li id='628s'><a href="./zll/hgjs/" target="_blank">宏观金市</a></li>
+	
+		<li id='769s'><a href="./zll/ycsj/" target="_blank">有才说金</a></li>
+	
+		<li id='631s'><a href="./zll/dzzz/" target="_blank">店长支招</a></li>
+	
+		<li id='632s'><a href="./zll/yllx/" target="_blank">英伦来信</a></li>
+	
+	<!--隐藏掉明眼看金-->
+	
+	</ul>
+	<ul id='685s'>
+	
+		<li id='686s'><a href="./sshq_685/zxsj/" target="_blank">转型升级专题</a></li>
+	
+	
+		<li id='724s'><a href="./sshq_685/2016qglh/" target="_blank">2016全国两会</a></li>
+	
+		<li id='732s'><a href="./sshq_685/25zn/" target="_blank">《中国黄金报》创刊25周年</a></li>
+	
+		<li id='740s'><a href="./sshq_685/19DA/" target="_blank">党的十九大</a></li>
+	
+		<li id='771s'><a href="./sshq_685/2018lh/" target="_blank">2018两会</a></li>
+	
+		<li id='798s'><a href="./sshq_685/2018zggjhjdh/" target="_blank">2018中国国际黄金大会</a></li>
+	
+		<li id='808s'><a href="./sshq_685/dgjl/" target="_blank">大国金路专题</a></li>
+	
+		<li id='830s'><a href="./sshq_685/ggkfzt/" target="_blank">改革开放40年专题</a></li>
+	
+		<li id='842s'><a href="./sshq_685/2019lh/" target="_blank">2019两会</a></li>
+	
+		<li id='859s'><a href="./sshq_685/jshd/" target="_blank">金色华诞</a></li>
+	
+		<li id='876s'><a href="./sshq_685/bwcx/" target="_blank">不忘初心、牢记使命</a></li>
+	
+	</ul>
+	<ul id='586s'>
+	
+		<li id='634s'><a href="./gywm/bsjj/" target="_blank">报社简介</a></li>
+	
+		<li id='635s'><a href="./gywm/qmtpt/" target="_blank">全媒体平台</a></li>
+	
+		<li id='636s'><a href="./gywm/ggfw/" target="_blank">广告服务</a></li>
+	
+		<li id='637s'><a href="./gywm/dsj/" target="_blank">大事记</a></li>
+	
+		<li id='638s'><a href="./gywm/lxfs/" target="_blank">联系方式</a></li>
+	
+	</ul>	
+</div>
+<div style="width:100%;height:20px"></div>
+		</header>
+<input type="hidden" id="siteid" value="4" />
+		<!--内容区第一部分-->
+		<div class="div_One">
+			<!--头条-->
+			<div class="div_Onediv">
+			
+				<!--a href='./hjbindex/sttt/201909/t20190926_185522.html' target="_blank" class="one_tit"></a-->
+<a href="./hjbindex/sttt/201909/t20190926_185522.html" target="_blank"><font style="font-size:24pt" face="方正大黑简体">发挥好顶梁柱、主力军、先锋队作用<br>国有企业以优异成绩迎接新中国成立70周年</font></a>
+			
+			</div>
+			<!--头条 列表-->
+			<div class="div_OnedivS">
+				<ul >
+					
+						<li>
+							<a href='./hjbindex/sttt/201909/t20190925_185501.html' target="_blank">
+								中央企业人才工作会议在京举行
+							</a>
+						</li>
+					
+						<b >|</b>
+					
+						<li>
+							<a href='./hjbindex/sttt/201909/t20190917_185397.html' target="_blank">
+								《中国共产党党内法规制定条例》等3部党内法规印发
+							</a>
+						</li>
+					
+					<!--	<b >|</b>
+					
+						<li>
+							<a href='./sshq_685/jshd/jshdjdxw/201909/t20190929_185565.html' target="_blank">
+								为“中国梦”贡献黄金力量——党的十...
+							</a>
+						</li>
+					-->
+					</ul>
+			</div>
+			<div class="div_OnedivTh">
+				<div class="clearfix">
+					<!--新闻 轮播图-->
+					<div class="div_OnedivThL">
+						<div class="swiper-container" id="swiper">
+        					<div class="swiper-wrapper">
+								
+            					<div class="swiper-slide">
+        							<a href='./ky1227/kyyw/201909/t20190927_185535.html' class="luoluo" target="_blank">
+            							<img width="680px" height="340px" src='./ky1227/kyyw/201909/W020190927393197906495.png' />
+            						</a> 
+            						<div class="swiper_title">
+										<p>中国黄金“培育具有全球竞争力的世界一流矿业公司”战略研讨...</p>
+									</div>
+            					</div>
+								
+            					<div class="swiper-slide">
+        							<a href='./ky1227/kyyw/201909/t20190923_185461.html' class="luoluo" target="_blank">
+            							<img width="680px" height="340px" src='./ky1227/kyyw/201909/W020190924491156155257.png' />
+            						</a> 
+            						<div class="swiper_title">
+										<p>中国职业安全健康管理现场会闭幕 点赞紫金阿舍勒经验</p>
+									</div>
+            					</div>
+								
+            					<div class="swiper-slide">
+        							<a href='./sshq_685/bwcx/xwdt/201909/t20190918_185404.html' class="luoluo" target="_blank">
+            							<img width="680px" height="340px" src='./sshq_685/bwcx/xwdt/201909/W020190918517627107427.png' />
+            						</a> 
+            						<div class="swiper_title">
+										<p>中国黄金召开“不忘初心、牢记使命”主题教育第一批总结暨第...</p>
+									</div>
+            					</div>
+								
+            					<div class="swiper-slide">
+        							<a href='./hjbindex/tjlm/syhd/201909/t20190916_185357.html' class="luoluo" target="_blank">
+            							<img width="680px" height="340px" src='./hjbindex/tjlm/syhd/201909/W020190924523268833288.png' />
+            						</a> 
+            						<div class="swiper_title">
+										<p>2019年（第六届）中国黄金珠宝盛典在深举办</p>
+									</div>
+            					</div>
+								
+            					<div class="swiper-slide">
+        							<a href='http://ad.aigoldnet.com/' class="luoluo" target="_blank">
+            							<img width="680px" height="340px" src='./hjbindex/ttlb/201806/W020180614354984109937.jpg' />
+            						</a> 
+            						<div class="swiper_title">
+										<p>CGT特许黄金操盘师认证培训</p>
+									</div>
+            					</div>
+								
+        					</div>
+        					<!-- Add Pagination -->
+        					<div class="swiper-pagination"></div>        
+    					</div>						
+					</div>
+					<!--要闻-->
+					<div class="div_OnedivThR">
+						<div class="div_OnedivThR1 yw">
+							<a href="javascript:void(0)" style="cursor:default;">要闻</a>
+						</div>
+						<a href='./hjbindex/syyaowen/' class="index_divthr_a" target="_blank">更多&gt;&gt;</a>
+						<div class="div_OnedivThR2">
+							<ul>
+							
+								<li>
+									<a href='./hjbindex/sttt/201909/t20190926_185522.html' target="_blank">
+										国有企业以优异成绩迎接新中国成立70周年
+									</a>
+								</li>
+							
+								<li>
+									<a href='./hjbindex/sttt/201909/t20190925_185501.html' target="_blank">
+										中央企业人才工作会议在京举行
+									</a>
+								</li>
+							
+								<li>
+									<a href='./hjbindex/sttt/201909/t20190917_185397.html' target="_blank">
+										《中国共产党党内法规制定条例》等3部党...
+									</a>
+								</li>
+							
+								<li>
+									<a href='./sshq_685/jshd/jshdjdxw/201909/t20190929_185565.html' target="_blank">
+										为“中国梦”贡献黄金力量——党的十八...
+									</a>
+								</li>
+							
+								<li>
+									<a href='./sshq_685/jshd/jmgy/201909/t20190928_185550.html' target="_blank">
+										从“一穷二白”到“世界第一”
+									</a>
+								</li>
+							
+								<li>
+									<a href='./sshq_685/jshd/jshdttxw/201909/t20190924_185496.html' target="_blank">
+										习近平参观“庆祝中华人民共和国成立70...
+									</a>
+								</li>
+							
+								<li>
+									<a href='./hjbindex/sttt/201909/t20190924_185495.html' target="_blank">
+										习近平主持召开中共中央政治局会议
+									</a>
+								</li>
+							
+								<li>
+									<a href='./ky1227/kydj/201909/t20190924_185475.html' target="_blank">
+										山东黄金集团以高质量发展勇担新时代使...
+									</a>
+								</li>
+							
+								<li>
+									<a href='./ky1227/hb/201909/t20190924_185474.html' target="_blank">
+										四方携手签绿色之约 联合打造鹤庆北衙多...
+									</a>
+								</li>
+							
+								<li>
+									<a href='./sshq_685/jshd/zmjy/201909/t20190924_185476.html' target="_blank">
+										阜山金矿：打造绿色黄金产业链
+									</a>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>				
+		</div>
+		<!--内容区第二部分-->
+		<div class="main">
+			<!-- 内容区左侧 -->
+			<div class="main-left">
+				<!--矿业 广告图-->
+				<div class="main_twoL_img">
+				
+					<a href="http://www.gold.org.cn/sshq_685/jshd/" target="_blank">
+						<img width="683" height="115" src="./hjbindex/syky/201907/W020190725507647512290.jpg" />
+					</a>
+				
+				</div>
+				<!--矿业 子栏目列表-->
+				<div class="twoL_title"><p><a href="./ky1227/" target="_blank">矿业</a></p></div>
+				<div class="main-list">
+					<!--矿业 党建-->
+					<ul class="twoL_ul_l">					
+						<li class="twoL_ul_first"><a href="./ky1227/kydj/" target="_blank">党建</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/kydj/201909/t20190927_185538.html" target="_blank">太白公司启动“加强干部队伍建设，全面...</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sshq_685/bwcx/zgls/201909/t20190926_185514.html" target="_blank">“每周五人谈”，中原冶炼厂践行主题教...</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sshq_685/bwcx/zgls/201909/t20190925_185505.html" target="_blank">江西金山以破解难题推进主题教育走深走实</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/kydj/201909/t20190924_185475.html" target="_blank">山东黄金集团以高质量发展勇担新时代使...</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sshq_685/bwcx/xwdt/201909/t20190923_185457.html" target="_blank">黄金行业开展主题教育综述</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/kydj/201909/t20190920_185447.html" target="_blank">招金北疆矿山应急救援队危难时刻传递人...</a></li>
+						
+					</ul>
+					<!--矿业 观察-->
+					<ul class="twoL_ul_l">					
+						<li class="twoL_ul_first"><a href="./ky1227/kygc/" target="_blank">观察</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/kygc/201909/t20190928_185545.html" target="_blank">对如何建设世界一流矿业公司的思考</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/kygc/201909/t20190926_185533.html" target="_blank">内蒙古乌山：实现了矿山开发的智能化控制</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/kygc/201909/t20190926_185532.html" target="_blank">韦华南：科技创新是牵动发展全局的牛鼻子</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/kygc/201909/t20190926_185530.html" target="_blank">何亚清：智能矿山建设关乎国计民生</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/kygc/201909/t20190926_185531.html" target="_blank">胡乃联：我国矿山智能化要“因材施教”</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/kygc/201909/t20190926_185529.html" target="_blank">战凯：我国矿业迫切需要先进的技术和装备</a></li>
+						
+					</ul>
+					<!--矿业 安环-->
+					<ul class="twoL_ul_l">					
+						<li class="twoL_ul_first"><a href="./hjbindex/syky/syah/" target="_blank">安环</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/aq1227/201909/t20190928_185547.html" target="_blank">三山岛：细化各项安全生产措施</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/hb/201909/t20190928_185548.html" target="_blank">安徽太平迎接自然资源部绿色矿山入围核查</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/aq1227/201909/t20190928_185546.html" target="_blank">恒邦股份：“四不松劲”拧紧安全生产阀门</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/aq1227/201909/t20190926_185513.html" target="_blank">甘肃中金开展小东沟尾矿库防汛灾害暨环...</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/hb/201909/t20190924_185474.html" target="_blank">四方携手签绿色之约 联合打造鹤庆北衙多...</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/aq1227/201909/t20190923_185460.html" target="_blank">焦家：开展消防安全专项行动</a></li>
+						
+					</ul>
+					<!--矿业 科技-->
+					<ul class="twoL_ul_l">					
+						<li class="twoL_ul_first"><a href="./ky1227/kj/" target="_blank">科技</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/kj/201909/t20190925_185507.html" target="_blank">招金金泰：做反井工程施工领航者</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/kj/201909/t20190924_185484.html" target="_blank">内蒙古太平获得CNAS实验室认可证书</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/kj/201909/t20190918_185410.html" target="_blank">记招金科技如何打造国内领先科技研发平台</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/kj/201909/t20190912_185342.html" target="_blank">三鑫公司提升车间“两大战役”告捷</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/kj/201909/t20190910_185322.html" target="_blank">事事明助力双重预防机制建设 推动企业数...</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/kj/201909/t20190906_185284.html" target="_blank">中十冶BIM技术应用荣获陕西省“秦汉杯”...</a></li>
+						
+					</ul>
+					<!--矿业 国际-->
+					<ul class="twoL_ul_l">					
+						<li class="twoL_ul_first"><a href="./ky1227/hw20171227/" target="_blank">国际</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/hw20171227/201909/t20190920_185453.html" target="_blank">宋鑫：全方位对标世界一流，中国黄金一...</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/hw20171227/201909/t20190920_185452.html" target="_blank">刘冰：为加快推进高质量发展指明了方向...</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/hw20171227/201909/t20190920_185451.html" target="_blank">陈玉民：必须成为集团未来发展的行动指南</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/hw20171227/201909/t20190920_185450.html" target="_blank">陈景河：国际化是集团最重要的发展方向</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/hw20171227/201909/t20190920_185449.html" target="_blank">翁占斌：实现“中国招金”向“世界招金...</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/hw20171227/201909/t20190920_185440.html" target="_blank">刚果（布）总理点赞索瑞米 希望索瑞米一...</a></li>
+						
+					</ul>
+					<!--矿业 人物-->
+					<ul class="twoL_ul_l">					
+						<li class="twoL_ul_first"><a href="./ky1227/ksr/" target="_blank">人物</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/ksr/201909/t20190926_185516.html" target="_blank">三鑫提升车间钳工柯浩获“黄石工匠”殊荣</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/ksr/201909/t20190924_185483.html" target="_blank">记辽宁新都公司驻村扶贫工作队队长崔玉峰</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/ksr/201909/t20190920_185442.html" target="_blank">记嵩县山金公司运营管理部测量高级主管...</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/ksr/201909/t20190918_185409.html" target="_blank">记嵩县山金矿业有限公司常务副总经理、...</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/ksr/201909/t20190912_185344.html" target="_blank">中金三公司离休人员荣获“庆祝中华人民...</a></li>
+						
+							<li class="twoL_ul_common"><a href="./ky1227/ksr/201908/t20190830_185165.html" target="_blank">华泰龙外销采制样班组：用行动诠释爱岗敬业</a></li>
+						
+					</ul>
+				</div>
+				
+				<!-- 珠宝 广告图 -->
+				<div class="main_twoL_img">
+				
+					<a href="http://www.gold.org.cn/sshq_685/bwcx/" target="_blank">
+						<img width="683" height="115" src="./hjbindex/syzb/201907/W020190725487191936215.jpg" />
+					</a>
+				
+				</div>
+				<!-- 珠宝 子栏目列表-->
+				<div class="twoL_title"><p><a href="./zb1227/" target="_blank">珠宝</a></p></div>
+				<div class="main-list">
+					<!--珠宝 品牌-->
+					<ul class="twoL_ul_l">					
+						<li class="twoL_ul_first"><a href="./zb1227/pp1227/" target="_blank">品牌</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zb1227/pp1227/201909/t20190924_185493.html" target="_blank">IN品牌迪士尼系列珠宝全国首发</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zb1227/pp1227/201909/t20190924_185498.html" target="_blank">粤豪珠宝“新中式造办处”闪耀2019深圳...</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zb1227/pp1227/201909/t20190924_185497.html" target="_blank">“玫瑰印记”惊艳绽放，浪漫璀璨全场！</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zb1227/pp1227/201909/t20190920_185430.html" target="_blank">星光达：用直播方式展现最新研发成果</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zb1227/pp1227/201909/t20190917_185395.html" target="_blank">金一文化：抢占深圳国际珠宝展焦点</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zb1227/pp1227/201909/t20190917_185394.html" target="_blank">金至福：将加大资源品牌建设</a></li>
+						
+					</ul>
+					<!--珠宝 访谈-->
+					<ul class="twoL_ul_l">					
+						<li class="twoL_ul_first"><a href="./zb1227/ft/" target="_blank">访谈</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zb1227/ft/201908/t20190808_184899.html" target="_blank">王立新：推动金饰需求，行业变革必不可少</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zb1227/ft/201906/t20190611_183885.html" target="_blank">专访新加坡贵金属市场协会首席执行官郑良豪</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zb1227/ft/201905/t20190530_183746.html" target="_blank">访昆明宝发珠宝有限公司董事长翁文龙</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zb1227/ft/201905/t20190529_183725.html" target="_blank">专访国家首饰质量监督检验中心主任王春生</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zb1227/ft/201905/t20190523_183644.html" target="_blank">银饰设计里的“平民风”</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zb1227/ft/201905/t20190507_183388.html" target="_blank">访深圳市盛和电子商务有限责任公司总经...</a></li>
+						
+					</ul>
+					<!--珠宝 深度-->
+					<ul class="twoL_ul_l">					
+						<li class="twoL_ul_first"><a href="./zb1227/sd/" target="_blank">深度</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zb1227/sd/201909/t20190928_185543.html" target="_blank">金饰革命</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zb1227/sd/201909/t20190924_185489.html" target="_blank">兴国潮，树家风　黄金珠宝产业的新动能</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zb1227/sd/201909/t20190924_185482.html" target="_blank">深耕中国市场，培养新时代天然钻石消费者</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zb1227/sd/201909/t20190925_185510.html" target="_blank">国际珠宝首饰行业人士看好中国珠宝市场...</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zb1227/sd/201909/t20190920_185432.html" target="_blank">罗利斯：展会规模虽在萎缩，但线下体验...</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zb1227/sd/201909/t20190910_185331.html" target="_blank">在大变局中变革与升华</a></li>
+						
+					</ul>
+					<!--珠宝 风尚-->
+					<ul class="twoL_ul_l">					
+						<li class="twoL_ul_first"><a href="./zb1227/fs/" target="_blank">风尚</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zb1227/fs/201909/t20190920_185431.html" target="_blank">解密萃华珠宝的非遗传承与文化创新</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zb1227/fs/201909/t20190905_185276.html" target="_blank">设计，从心出发</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zb1227/fs/201908/t20190829_185150.html" target="_blank">老庙呈献“时来运转”系列</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zb1227/fs/201908/t20190808_184891.html" target="_blank">方元·老细金：传统工艺带来古风古韵</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zb1227/fs/201907/t20190717_184455.html" target="_blank">以传统预见未来</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zb1227/fs/201907/t20190704_184245.html" target="_blank">古埃及首饰的装饰语境</a></li>
+						
+					</ul>
+				</div>
+				
+				<!-- 市场 广告图-->
+				<div class="main_twoL_img">
+				
+					<a href="http://www.gold.org.cn/sshq_685/ggkfzt/" target="_blank">
+						<img width="683" height="115" src="./hjbindex/sysc/201903/W020190304505012735364.jpg" />
+					</a>
+				
+				</div>
+				<!-- 市场 子栏目列表-->
+				<div class="twoL_title"><p><a href="./sc1227/" target="_blank">市场</a></p></div>
+				<div class="main-list">
+					<!--市场 深度-->
+					<ul class="twoL_ul_l">					
+						<li class="twoL_ul_first"><a href="./sc1227/scsd/" target="_blank">深度</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sc1227/scsd/201909/t20190925_185509.html" target="_blank">创下6年新高的金价处在十字路口</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sc1227/scsd/201909/t20190923_185459.html" target="_blank">渠道变局：商业银行和金店，谁是销售之王</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sc1227/scsd/201909/t20190919_185428.html" target="_blank">从欧央行议息会议预测美联储议息会议</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sc1227/scsd/201909/t20190917_185392.html" target="_blank">金银长牛正当时 千金难买牛回头</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sc1227/scsd/201909/t20190912_185350.html" target="_blank">打造高质量发展黄金生态圈</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sc1227/scsd/201909/t20190909_185312.html" target="_blank">美联储利息政策转向奠定黄金牛市基础</a></li>
+						
+					</ul>
+					<!--市场 要闻-->
+					<ul class="twoL_ul_l">					
+						<li class="twoL_ul_first"><a href="./sc1227/scyw/" target="_blank">要闻</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sc1227/scyw/201909/t20190926_185527.html" target="_blank">第四届夏季中央企业投资发展论坛在天津举行</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sc1227/scyw/201909/t20190925_185502.html" target="_blank">2019全球贵金属年会将于深圳召开</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sc1227/scyw/201909/t20190920_185445.html" target="_blank">熊猫金币上金所挂牌一周年</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sc1227/scyw/201909/t20190919_185425.html" target="_blank">上金所国际板上市五周年盘点</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sc1227/scyw/201909/t20190916_185364.html" target="_blank">“中华人民共和国成立70周年金银纪念币...</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sc1227/scyw/201909/t20190910_185324.html" target="_blank">央行黄金储备“9连增” 9个月累计增持近...</a></li>
+						
+					</ul>
+					<!--市场 研究-->
+					<ul class="twoL_ul_l">					
+						<li class="twoL_ul_first"><a href="./sc1227/yj/" target="_blank">研究</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sc1227/yj/201909/t20190924_185485.html" target="_blank">风险事件推升黄金站上“千五”</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sc1227/yj/201909/t20190920_185444.html" target="_blank">金价上行空间不大</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sc1227/yj/201909/t20190917_185383.html" target="_blank">市场等待美联储议息</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sc1227/yj/201909/t20190916_185363.html" target="_blank">避险情绪持续降温 金价失守1500</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sc1227/yj/201909/t20190912_185341.html" target="_blank">“西扯东拉”下的“西价东移”</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sc1227/yj/201909/t20190912_185340.html" target="_blank">上海金的横空出世</a></li>
+						
+					</ul>
+					<!--市场 数据-->
+					<ul class="twoL_ul_l">					
+						<li class="twoL_ul_first"><a href="./sc1227/scdsj/" target="_blank">数据</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sc1227/scdsj/201909/t20190924_185488.html" target="_blank">资产荒日趋严重 金银牛市才刚开始</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sc1227/scdsj/201909/t20190917_185391.html" target="_blank">黄金已然成风 更多资产配置尚需智慧</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sc1227/scdsj/201909/t20190905_185271.html" target="_blank">负利率，黄金的起点还是终点？</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sc1227/scdsj/201908/t20190802_184798.html" target="_blank">2019年上半年我国黄金产量180.68吨</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sc1227/scdsj/201907/t20190731_184763.html" target="_blank">2019年央行黄金储备调研显示 未来将有更...</a></li>
+						
+							<li class="twoL_ul_common"><a href="./sc1227/scdsj/201907/t20190724_184590.html" target="_blank">历史上美联储降息时黄金走势如何？</a></li>
+						
+					</ul>
+				</div>
+				<!-- 专栏 广告图-->
+				<div class="main_twoL_img">
+					
+					<a href="http://www.gold.org.cn/sshq_685/dgjl/" target="_blank">
+						<img width="683" height="115" src="./hjbindex/tjlm/201907/W020190725492333646093.jpg" />
+					</a>
+					
+				</div>
+				<!-- 专栏 子栏目列表-->
+				<!--<div class="twoL_title"><p><a href="./hjbindex/tjlm/" target="_blank">专栏</a></p></div>-->
+				<div class="main-list">
+					<!--专栏 评论-->
+					<ul class="twoL_ul_l">					
+						<li class="twoL_ul_first"><a href="./pl/" target="_blank">评论</a></li>
+						
+							<li class="twoL_ul_common"><a href="./hjbindex/tjlm/sypl/201909/t20190928_185543.html" target="_blank">金饰革命</a></li>
+						
+							<li class="twoL_ul_common"><a href="./hjbindex/tjlm/sypl/201909/t20190928_185542.html" target="_blank">70年，黄金人踏梦再出发</a></li>
+						
+							<li class="twoL_ul_common"><a href="./hjbindex/tjlm/sypl/201909/t20190925_185509.html" target="_blank">创下6年新高的金价处在十字路口</a></li>
+						
+							<li class="twoL_ul_common"><a href="./hjbindex/tjlm/sypl/201909/t20190924_185489.html" target="_blank">兴国潮，树家风　黄金珠宝产业的新动能</a></li>
+						
+							<li class="twoL_ul_common"><a href="./hjbindex/tjlm/sypl/201909/t20190924_185485.html" target="_blank">风险事件推升黄金站上“千五”</a></li>
+						
+							<li class="twoL_ul_common"><a href="./hjbindex/tjlm/sypl/201909/t20190923_185459.html" target="_blank">渠道变局：商业银行和金店，谁是销售之王</a></li>
+						
+					</ul>
+					<!--专栏 政策-->
+					<ul class="twoL_ul_l">					
+						<li class="twoL_ul_first"><a href="./zc1227/" target="_blank">政策</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zc1227/jd1227/201909/t20190916_185362.html" target="_blank">对已经退出生态保护区的矿权将出台更细...</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zc1227/hygf/201909/t20190903_185228.html" target="_blank">新版《矿山地质环境保护规定》发布</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zc1227/jd1227/201908/t20190827_185091.html" target="_blank">黄金资源税税率调整为2％至6％</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zc1227/jd1227/201906/t20190612_183913.html" target="_blank">《内蒙古自治区绿色矿山管理办法（试行...</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zc1227/jd1227/201906/t20190610_183873.html" target="_blank">国务院国资委2019年版授权放权清单出炉</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zc1227/jd1227/201905/t20190521_183593.html" target="_blank">四部门联合印发《关于做好2019年降成本...</a></li>
+						
+					</ul>
+					<!--专栏 专栏-->
+					<ul class="twoL_ul_l">					
+						<li class="twoL_ul_first"><a href="./zll/" target="_blank">专栏</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zll/hgjs/201909/t20190928_185544.html" target="_blank">一带一路　金色之路</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zll/hgjs/201909/t20190925_185508.html" target="_blank">罗斯柴尔德“回归”</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zll/ltkj/201909/t20190924_185487.html" target="_blank">多方开始占优</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zll/yllx/201909/t20190924_185486.html" target="_blank">钻石加入第五个C并不容易</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zll/ycsj/201909/t20190923_185466.html" target="_blank">美联储内部分歧严重 金价维持高位震荡</a></li>
+						
+							<li class="twoL_ul_common"><a href="./zll/hgjs/201909/t20190920_185446.html" target="_blank">金价能过2000？至少不是现在！</a></li>
+						
+					</ul>
+					<!--专栏 活动-->
+					<ul class="twoL_ul_l">					
+						<li class="twoL_ul_first"><a href="./hjbindex/tjlm/syhd/" target="_blank">活动</a></li>
+						
+							<li class="twoL_ul_common"><a href="./hjbindex/tjlm/syhd/201909/t20190917_185388.html" target="_blank">《2019中国黄金珠宝消费者调查白皮书》发布</a></li>
+						
+							<li class="twoL_ul_common"><a href="./hjbindex/tjlm/syhd/201909/t20190917_185389.html" target="_blank">《非遗·细金——花丝百年技·忆》出版...</a></li>
+						
+							<li class="twoL_ul_common"><a href="./hjbindex/tjlm/syhd/201909/t20190917_185387.html" target="_blank">《70年70人·最美黄金珠宝奋斗者》系列...</a></li>
+						
+							<li class="twoL_ul_common"><a href="./hjbindex/tjlm/syhd/201909/t20190917_185386.html" target="_blank">“东方美物—国潮·文创”专题论坛举办</a></li>
+						
+							<li class="twoL_ul_common"><a href="./hjbindex/tjlm/syhd/201909/t20190917_185385.html" target="_blank">2019（第四届）中国金店100强榜单公布</a></li>
+						
+							<li class="twoL_ul_common"><a href="./hjbindex/tjlm/syhd/201909/t20190917_185384.html" target="_blank">“消费升级·零售转型”专题论坛召开</a></li>
+						
+					</ul>
+					<!--专栏 读书-->
+					<ul class="twoL_ul_l">					
+						<li class="twoL_ul_first"><a href="./hjbindex/tjlm/syds/" target="_blank">读书</a></li>
+						
+							<li class="twoL_ul_common"><a href="./hjbindex/tjlm/syds/201808/t20180831_180209.html" target="_blank">首本黄金行业新闻工作工具书发行</a></li>
+						
+							<li class="twoL_ul_common"><a href="./hjbindex/tjlm/syds/201803/t20180320_177876.html" target="_blank">2018中国市场报告：新消费革命已启幕（下）</a></li>
+						
+							<li class="twoL_ul_common"><a href="./hjbindex/tjlm/syds/201803/t20180320_177875.html" target="_blank">2018中国市场报告：新消费革命已启幕（上）</a></li>
+						
+							<li class="twoL_ul_common"><a href="./hjbindex/tjlm/syds/201802/t20180205_176507.html" target="_blank">一部以黄金及采金人生活为题材的长篇小说</a></li>
+						
+							<li class="twoL_ul_common"><a href="./hjbindex/tjlm/syds/201802/t20180201_175046.html" target="_blank">《狗头金》第五十一章（三）</a></li>
+						
+							<li class="twoL_ul_common"><a href="./hjbindex/tjlm/syds/201802/t20180201_175045.html" target="_blank">《狗头金》第五十一章（二）</a></li>
+						
+					</ul>
+					<!--专栏 课堂-->
+					<ul class="twoL_ul_l">					
+						<li class="twoL_ul_first"><a href="./hjbindex/tjlm/sykt/" target="_blank">课堂</a></li>
+						
+							<li class="twoL_ul_common"><a href="./hjbindex/tjlm/sykt/201905/t20190528_183705.html" target="_blank">嵩县金牛：圆盘取样机便捷又高效</a></li>
+						
+							<li class="twoL_ul_common"><a href="./hjbindex/tjlm/sykt/201905/t20190523_183640.html" target="_blank">焦家金矿用“微手术”为空压系统升级</a></li>
+						
+							<li class="twoL_ul_common"><a href="./hjbindex/tjlm/sykt/201905/t20190514_183494.html" target="_blank">嵩县前河：有效减少炭浸流程中的粉炭流失</a></li>
+						
+							<li class="twoL_ul_common"><a href="./hjbindex/tjlm/sykt/201904/t20190423_183097.html" target="_blank">新龙：引进水封爆破提效率</a></li>
+						
+							<li class="twoL_ul_common"><a href="./hjbindex/tjlm/sykt/201904/t20190409_182907.html" target="_blank">鑫泰实施选矿厂浓密机自动加热改造</a></li>
+						
+							<li class="twoL_ul_common"><a href="./hjbindex/tjlm/sykt/201811/t20181121_181181.html" target="_blank">新城：小技改解决锚杆台车大问题</a></li>
+						
+					</ul>
+				</div>	
+					
+				<!-- 关注我们 -->
+				<div class="main_foot">
+					<div class="gzwm">
+						<span>关注我们</span>
+						<img src="./images/c_rm.png" style="width: 200px;position: relative;top: -5px;" />
+					</div>
+					<ul class="wxhm">
+						
+						<li><img src="./ggwm/201512/W020180119495549138029.jpg" /><p  style="text-align: center;">中国黄金网</p></li>
+						
+						<li><img src="./ggwm/201512/W020180119495547971828.jpg" /><p  style="text-align: center;">采金人</p></li>
+						
+						<li><img src="./ggwm/201512/W020180119495545639621.jpg" /><p  style="text-align: center;">中国黄金报微博</p></li>
+						
+						<li><img src="./ggwm/201512/W020180119495546814589.jpg" /><p  style="text-align: center;">珠宝大观察</p></li>
+						
+					</ul>
+				</div>		
+			</div>
+			<!--内容区右侧-->
+			<div class="main-right">
+				<!-- 数字报轮播 -->
+				<div class="shuzibao">
+					<div class="shuzibao_img"><img src="./images/shuzibao.png" /><a href="http://epaper.gold.org.cn/dnis/client/zhongguohjb/index.jsp" target="_blank">更多&gt;&gt;</a></div>
+					<div class="shuzibao_lunbo">
+						<div class="swiper-container">
+							<!-- <div class="swiper-container" id="lunbo_bobo"> -->
+    						<div class="swiper-wrapper">
+								
+									<div class="swiper-slide" >
+										<!-- <div id="slide" class="swiper-slide" > -->
+										<div><a href="http://epaper.gold.org.cn/zghjb/html/2019-09/27/node_1.htm" target="_blank"><img src="./hjbindex/szb/201909/W020190927597447014542.jpg" /></a></div>
+										<p><a href="http://epaper.gold.org.cn/zghjb/html/2019-09/27/node_1.htm" target="_blank">2019年09月27日 第2490期</a></p>
+									</div>
+								
+    						</div>
+    						<!-- Add Arrows -->
+    						<!--div class="swiper-button-prev"></div>
+    						<div class="swiper-button-next"></div-->
+						</div>
+					</div>						
+				</div>
+				<!-- 文字列表 -->
+				<div class="shuzibao_ul">
+					<ul>
+						<li><a href="http://epaper.gold.org.cn/juas/register.jsp?doMainName=zhongguohjb" target="_blank">我要订阅</a></li>
+						<b >|</b>
+						<li><a href="http://epaper.gold.org.cn/search/adsearch.jsp" target="_blank">历史检索</a></li>
+						<b >|</b>
+						<li><a href="http://epaper.gold.org.cn/dnis/client/zhongguohjb/index.jsp" target="_blank">读者登录</a></li>
+					</ul>
+				</div>
+                                <!-- 视频 -->
+				<div class="shuzibao_shipin" style="margin-left:0;text-align:center;">				
+				
+					<video width="300" height="168" src='http://www.gold.org.cn/hjbindex/sp/201903/P020190307812995951744.mp4' controls="controls"></video> 
+				
+				</div>
+				<!-- 首页微视频 -->
+				<div class="sy_wxp">	
+					<div class="sy_wxp_tit">
+						<h1>黄金微视频</h1>
+						<a href='./twlblm/' target="_blank">更多&gt;&gt;</a>
+					</div>
+					<div class="sy_wxp_txt">
+					   
+						<dl>
+							<dt><a href="./twlblm/201903/P020190308501511499032.mp4" target="_blank"><img src="./twlblm/201903/W020190308501514054395.jpg" alt="秦岭视频截图.jpg"/></a></dt>
+							<dd><a href="./twlblm/201903/P020190308501511499032.mp4" target="_blank">岁月见证 情系秦岭</a></dd>
+						</dl>
+					   
+						<dl>
+							<dt><a href="./twlblm/201804/P020180517599955006884.mp4" target="_blank"><img src="./twlblm/201804/W020180420466451850693.jpg" alt="乌山截图.jpg"/></a></dt>
+							<dd><a href="./twlblm/201804/P020180517599955006884.mp4" target="_blank">中国黄金集团内蒙古矿业有限公司</a></dd>
+						</dl>
+					 
+					</div>
+				</div>
+				<!-- 专题 -->
+				
+				<!-- 十大热门文章 -->
+				<div class="remen">
+					<div class="remen_top">
+						<span>十大热门文章</span>
+						<img src="./images/c_rm.png" />
+					</div>
+					<ul class="remen_main_ul">
+						<li class="remen_tit_hover" data-index="0">一天</li>
+						<li data-index="1">一周</li>
+						<li data-index="2" style="padding-right: 2px;">一月</li>
+					</ul>
+					<div class="tab_remen_div">
+						<div class="remen_con_hover" data-index="0">
+							<img src="./images/c_tipbg.png" />
+							<ul class="day_ul daypvorder_ul" id="list_con1">									
+								
+							
+							</ul>
+						</div>		
+						<div data-index="1">
+							<img src="./images/c_tipbg.png" />
+							<ul class="month_ul weekpvorder_ul" id="list_con2">									
+								
+							</ul>
+						</div>
+						<div data-index="2">
+							<img src="./images/c_tipbg.png" />
+							<ul class="year_ul monthpvorder_ul" id="list_con3">									
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- 轮播图 -->
+				<div class="ad_lb"  style="display:none;">
+					<div class="swiper-container" id="adswip">
+					<div class="swiper-wrapper">
+						
+						<div id="adswip_slide" class="swiper-slide" >
+							<div><a href="./hjbindex/gglb/201801/t20180102_154367.html" target="_blank"><img width="322px" height="430px" src="./hjbindex/gglb/201801/W020180125549354999145.jpg" /></a></div>
+						</div>
+						
+						<div id="adswip_slide" class="swiper-slide" >
+							<div><a href="./hjbindex/gglb/201801/t20180102_154368.html" target="_blank"><img width="322px" height="430px" src="./hjbindex/gglb/201801/W020180125548542167143.jpg" /></a></div>
+						</div>
+						
+						<div id="adswip_slide" class="swiper-slide" >
+							<div><a href="./hjbindex/gglb/201801/t20180102_154369.html" target="_blank"><img width="322px" height="430px" src="./hjbindex/gglb/201801/W020180125548272466751.jpg" /></a></div>
+						</div>
+						
+					</div>
+					<!-- Add Arrows -->
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+					</div>
+				</div>
+				<!-- 专题logo -->
+				<div class="img4">
+				<!--全国金饰报价/全球官方黄金储备/其他专题-->
+				<!--							
+					
+						<a href="https://s.wcd.im/v/4o7ecZ37/" target="_blank"><img src="./hjbindex/sybj/qgjsbj/201905/W020190521605080701322.jpg" /></a>
+										
+											
+					
+						<a href="./hjbindex/sybj/qqgfhjcb/201801/t20180108_174553.html" target="_blank"><img src="./hjbindex/sybj/qqgfhjcb/201801/W020180125618346401507.jpg" /></a>
+										
+				-->
+											
+					
+						<a href="http://www.szjewelfair.com" target="_blank"><img src="./hjbindex/sybj/others/201904/W020190410574427035405.gif" /></a>
+					
+						<a href="http://imechina.cn/" target="_blank"><img src="./hjbindex/sybj/others/201812/W020181213499341279580.gif" /></a>
+										
+				
+				</div>
+				<!-- 黄金网每日热评 -->
+				<!--div class="jinping">
+					<div>
+						<span>黄金网每日热评</span>
+						<img src="./images/c_rm.png" style="width: 112px;height: 5px" />
+					</div>
+					<div class="jinping_ul">
+						<ul>
+						
+							<li style="list-style-type:square;"><a href='./hjbindex/hjwmrrp/201811/t20181101_180793.html' target="_blank">11月1日：小非农出炉 期金收跌</a></li>
+						
+							<li style="list-style-type:square;"><a href='./hjbindex/hjwmrrp/201810/t20181025_180700.html' target="_blank">10月25日：美元走强 期金收跌</a></li>
+						
+							<li style="list-style-type:square;"><a href='./hjbindex/hjwmrrp/201810/t20181024_180684.html' target="_blank">10月24日：期金收涨于三个多...</a></li>
+						
+							<li style="list-style-type:square;"><a href='./hjbindex/hjwmrrp/201810/t20181018_180623.html' target="_blank">10月18日：美指攀升 期金收跌</a></li>
+						
+							<li style="list-style-type:square;"><a href='./hjbindex/hjwmrrp/201810/t20181017_180607.html' target="_blank">10月17日：期金小幅收涨</a></li>
+						
+						</ul>
+					</div>
+				</div-->
+
+				<!-- 黄金网每周热评 -->
+				<!--div class="jinping">
+					<div>
+						<span>黄金网每周热评</span>
+						<img src="./images/c_rm.png" style="width: 112px;height: 5px" />
+					</div>
+					<div class="jinping_ul">
+						<ul>
+						
+								<li style="list-style-type:square;"><a href='./hjbindex/mzrp/201803/t20180312_177719.html' target="_blank">【3.05-3.09周评】3月10日：...</a></li>
+						
+								<li style="list-style-type:square;"><a href='./hjbindex/mzrp/201803/t20180305_177505.html' target="_blank">【2.26-3.02周评】3月4日：美...</a></li>
+						
+								<li style="list-style-type:square;"><a href='./hjbindex/mzrp/201802/t20180228_177117.html' target="_blank">【2.05-2.09周评】2月11日：...</a></li>
+						
+								<li style="list-style-type:square;"><a href='./hjbindex/mzrp/201802/t20180228_177116.html' target="_blank">【1.29-2.02周评】2月5日：今...</a></li>
+						
+								<li style="list-style-type:square;"><a href='./hjbindex/mzrp/201801/t20180130_174709.html' target="_blank">【1.22-1.26周评】1月27日：7...</a></li>
+						
+						</ul>
+					</div>
+				</div-->
+				<!-- 走势 -->
+				<div class="zoushitu" style="display:none;">
+					<!-- ifram -->
+					 <div class="wrapper"> 
+						<iframe class="iframeh" src="http://www.kitco.cn/index.htm" scrolling="no" frameborder="0"></iframe>
+					</div>
+					<div class="wrapper"> 
+						<iframe class="iframeb" src="http://www.kitco.cn/index.htm" scrolling="no" frameborder="0"></iframe>
+					</div>
+					<!--
+					<div class="wrapper"> 
+						<iframe class="iframej" src="http://www.kitco.cn/index.htm" scrolling="no" frameborder="0"></iframe>
+					</div> 
+					-->
+					<div class="wrapper"> 
+						<iframe class="iframehj" src="http://www.kitco.cn/index.htm" scrolling="no" frameborder="0"></iframe>
+					</div>
+					<div class="wrapper"> 
+						<iframe class="iframeyb" src="http://www.kitco.cn/index.htm" scrolling="no" frameborder="0"></iframe>
+					</div>
+				</div>	
+			</div>
+		</div>
+
+		<!-- 页面底部 -->
+		<footer >
+			<hr class="foot_hr">
+			<ul class="fooy_ul1">
+				<li><span>友情链接：<span></li>
+
+				<li><a href="http://www.sge.com.cn/" target="_blank"><a href="http://www.sge.com.cn/" target="_blank">上海黄金交易所</a></a></li>
+
+				<li><a href="http://www.shfe.com.cn/" target="_blank"><a href="http://www.shfe.com.cn/" target="_blank">上海期货交易所</a></a></li>
+
+				<li><a href="http://www.cnsde.com/" target="_blank"><a href="http://www.cnsde.com/" target="_blank">上海钻石交易所</a></a></li>
+
+				<li><a href="http://www.cgse.com.hk/" target="_blank"><a href="http://www.cgse.com.hk/" target="_blank">香港金银业贸易场</a></a></li>
+
+				<li><a href="http://www.cngold.org.cn/" target="_blank"><a href="http://www.cngold.org.cn/" target="_blank">中国黄金协会</a></a></li>
+
+				<li><a href="http://www.cnmn.com.cn/" target="_blank"><a href="http://www.cnmn.com.cn/" target="_blank">中国有色网</a></a></li>
+
+				<li><a href="http://www.gold.org/" target="_blank"><a href="http://www.gold.org/" target="_blank">世界黄金协会</a></a></li>
+
+
+			</ul>
+			<ul class="fooy_ul2">
+
+				<li><a href="https://www.chinagoldgroup.com/" target="_blank"><a href="https://www.chinagoldgroup.com/" target="_blank">中国黄金集团有限公司</a></a></li>
+
+				<li><a href="http://www.sd-gold.com/" target="_blank"><a href="http://www.sd-gold.com/" target="_blank">山东黄金集团有限公司</a></a></li>
+
+				<li><a href="http://www.zjky.cn/" target="_blank"><a href="http://www.zjky.cn/" target="_blank">紫金矿业集团股份有限公司</a></a></li>
+
+				<li><a href="http://www.gold-zhaoyuan.com/" target="_blank"><a href="http://www.gold-zhaoyuan.com/" target="_blank">山东招金集团有限公司</a></a></li>
+
+				<li><a href="http://www.lbgold.com/" target="_blank"><a href="http://www.lbgold.com/" target="_blank">灵宝黄金股份有限公司</a></a></li>
+
+			</ul>
+			<ul class="fooy_ul3">
+
+				<li><a href="http://www.ebaiyin.com/" target="_blank"><a href="http://www.ebaiyin.com/" target="_blank">中国白银网</a></a></li>
+
+				<li><a href="http://www.yocaigs.com/#/home/home_sge" target="_blank"><a href="http://www.yocaigs.com/#/home/home_sge" target="_blank">有才金银</a></a></li>
+
+				<li><a href="http://www.kitco.cn/" target="_blank"><a href="http://www.kitco.cn/" target="_blank">kitco贵金属网</a></a></li>
+
+				<li><a href="http://gold.hexun.com/" target="_blank"><a href="http://gold.hexun.com/" target="_blank">和讯黄金</a></a></li>
+
+				<li><a href="http://money.sohu.com/jin/" target="_blank"><a href="http://money.sohu.com/jin/" target="_blank">搜狐黄金</a></a></li>
+
+				<li><a href="http://finance.sina.com.cn/nmetal/" target="_blank"><a href="http://finance.sina.com.cn/nmetal/" target="_blank">新浪财经</a></a></li>
+
+				<li><a href="http://www.au114.cn/" target="_blank"><a href="http://www.au114.cn/" target="_blank">黄金网天下</a></a></li>
+
+				<li><a href="http://www.au999.cn/" target="_blank"><a href="http://www.au999.cn/" target="_blank">招金投资</a></a></li>
+
+			</ul>
+			<p>电话：010-84871308 010-84871329 <a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备05021944号-1</a></p>
+			<p>中国黄金报社版权所有，未经书面授权禁止使用</p>
+			<div class="foot_foot">
+				<img src="./images/batp20171013.png" />
+				<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502034328" target="_blank">京公网安备 11010502034328号 </a>
+			</div>
+		</footer>	
+	</div>
+	<div class="r-top"></div>
+	<script type="text/javascript" src="./images/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="./images/gold0.js" /></script>
+	<script src="./images/swiper.min.js"></script>
+	<script type="text/javascript" src="./images/index.js" width></script>
+	<script>
+	function getdocbypv(type){
+		$.ajax({
+			url:"/TrsAppServer/news/read.action",
+			data:{
+				docid:0,
+				docnum:10,
+				type:type,
+				chnlid:"",
+				siteid:"19",
+				titlenum:15
+			},
+			type: "post",
+			async:false,
+			dataType: "json",
+			success:function(message){
+	            var list = message['doclist'];
+				var dom = '';var doctitle="";var docpuburl="";
+				for(var i in list){
+					var obj = list[i];
+                    if(obj.doctitle.length>16){
+						doctitle = obj.doctitle.substring(0,16)+"...";
+					}else{
+						doctitle= obj.doctitle;
+					}
+					if(obj.docpuburl.indexOf("_share")!= -1){
+						docpuburl = obj.docpuburl.substring(0,obj.docpuburl.indexOf("_share"))+".html";
+					}else{
+						docpuburl = obj.docpuburl;
+					}
+					dom +='<li id=contact_'+obj.docid+'><a href='+docpuburl+' target="_blank">'+doctitle +'</a></li>';
+				}
+				$("."+type+"_ul").html(dom);
+			}
+		});
+	}
+	$(document).ready(function() {
+		getdocbypv('daypvorder');
+		getdocbypv('weekpvorder');
+		getdocbypv('monthpvorder');
+	});
+	</script>
+</body>
+</html>

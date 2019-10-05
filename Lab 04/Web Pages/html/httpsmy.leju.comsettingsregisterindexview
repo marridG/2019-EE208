@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>用户注册</title>
+	<link rel="stylesheet" type="text/css" href="//cdn.leju.com/consumer/v2/build/css/styles.css">
+</head>
+<body>
+<div class="sHeadBox">
+	<div class="sWrap">
+		<h1 class="logo">乐居</h1>
+		<span class="line"></span>
+		<span class="colName">用户中心</span>
+	</div>
+</div>
+<div class="sLoginBox">
+	<div class="sWrap clearfix">
+		<div class="imgBox2"></div>
+		<div class="sLoginConBox">
+			<div class="sLoginConBoxIn h522">
+				<div class="sLoginCon">
+					<div class="sRegister">
+						<h2>
+							<a href="//my.leju.com/web/sso/loginView">使用已有账号</a>
+							注册账号</h2>
+						<div class="regList">
+							<form id="registerForm" action="//my.leju.com/settings/register/index" method="POST" autocomplete="off" name="registerForm">
+								<ul class="inputList">
+									<li>
+										<!-- <div class="inputBox">
+											<div class="selBox">
+												<a class="phone menuC" href="javascript:;" data-show="true"><u></u>手机<i></i></a>
+												<ul class="menuList" style="display: none;">
+													<li class="menuWrap"><a class="email menuC" href="javascript:;" data-show=""><u></u>邮箱<i style="display:none;"></i></a></li>
+												</ul>
+											</div>
+											<input class="w172 mobileText placeholder" type="text" placeholder="请输入手机号" data-rule="isPhone,mobileError">
+											<i class="error" style="display:none;"></i>
+										</div> -->
+										<div class="inputBox">
+											<i class="i01"></i>
+											<input type="text" class="mobileText placeholder" data-rule="isPhone,mobileError" placeholder="请输入手机号码">
+											<i class="error" style="display:none;"></i>
+										</div>
+										<em class="mobileError"></em>
+									</li>
+									<li>
+										<div class="clearfix">
+											<div class="inputBox short">
+												<i class="i02"></i>
+												<input class="loginText imgText placeholder" type="text" placeholder="图片验证码" data-rule="imgNotnull,imgError">
+												<i class="error" style="display:none;"></i>
+											</div>
+											<a href="javascript:;"><img id="yz_num" class="yz_num" src="//my.leju.com/Settings/FindPwd/chengCode" onclick="changing()"></a>
+										</div>
+										<em class="imgError"></em>
+									</li>
+									<li>
+										<div class="clearfix">
+											<div class="inputBox short">
+												<i class="i03"></i>
+												<input class="loginText codeText placeholder" type="text" placeholder="验证码" data-rule="yzNotnull,yzError">
+												<i class="error" style="display:none;"></i>
+											</div>
+											<a class="num" href="javascript:;">获取验证码</a>
+										</div>
+										<em class="yzError"></em>
+									</li>
+									<li>
+										<div class="clearfix">
+											<div class="inputBox">
+												<i class="i02"></i>
+												<input class="loginText wordText placeholder" type="password" placeholder="密码6-20位字母，数字或符号" data-rule="isPassword,wordError">
+												<i class="error" style="display:none;"></i>
+											</div>
+											<em class="wordError dealError"></em>
+										</div>
+									</li>
+								</ul>
+								<p class="protocol"><input class="J_read_protocol" type="checkbox" checked="checked">阅读并接受<a href="//my.leju.com/Web/sso/protocol" target="_blank">《乐居用户服务协议》</a></p>
+								<div class="sBtnBox3">
+									<a class="sBtn04" href="javascript:;">注册</a>
+									<input type="hidden" name="key" value="" class="setKey" />
+									<input type="hidden" name="mobile" value="" class="setMail" />
+									<input type="hidden" name="password" value="" class="setWord" />
+									<input type="hidden" name="code" value="" class="setYzm" />
+									<input type="hidden" name="imageCode" value="" class="setImgCode" />
+                                    <input type="hidden" name="originUrl" class="setUrl" value="//my.leju.com/web/center/index" />
+								</div>
+							</form>
+						</div>
+						<div class="otherLogin">
+							你也可以用以下方式登录：
+							<a href="https://open.weixin.qq.com/connect/qrconnect?appid=wx5ddf9de8a90a40b9&redirect_uri=http%3A%2F%2Fmy.leju.com%2FWeb%2FCallback%2FcallbackAdd%3Fkey%3DYjA2Yzk0MDhiWGt1YkdWcWRTNWpiMjA9YjA0YQ%3D%3D%26originUrl%3D%2F%2Fmy.leju.com%2Fweb%2Fcenter%2Findex&response_type=code&scope=snsapi_login&state=MmE5ZDg4NGJNem94TlRjd01qYzNNakV3NmM4NQ==#wechat_redirect" class="wx"><span>微信登录</span></a>
+							<a href="https://api.weibo.com/oauth2/authorize?response_type=code&client_id=1682292631&redirect_uri=http%3A%2F%2Fmy.leju.com%2FWeb%2FCallback%2FcallbackAdd%3Fkey%3DYjA2Yzk0MDhiWGt1YkdWcWRTNWpiMjA9YjA0YQ%3D%3D%26originUrl%3D%2F%2Fmy.leju.com%2Fweb%2Fcenter%2Findex&state=NjI0YmQ4NGFNam94TlRjd01qYzNNakV3ZjYwMg==&scope=all" class="wb"><span>微博登录</span></a>
+							<a href="https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=101268452&redirect_uri=http%3A%2F%2Fmy.leju.com%2FWeb%2FCallback%2FcallbackAdd%3Fkey%3DYjA2Yzk0MDhiWGt1YkdWcWRTNWpiMjA9YjA0YQ%3D%3D%26originUrl%3D%2F%2Fmy.leju.com%2Fweb%2Fcenter%2Findex&state=NTdiZTQ0ZDdNVG94TlRjd01qYzNNakV3N2E5OA==" class="qq"><span>QQ登录</span></a>
+						</div>
+					</div>
+
+					<div class="notice">
+						<i></i>公告：原新浪通行证登录用户请使用新浪微博方式登录
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="sFooter">
+	<div class="sWrap">
+		<p>Copyright &copy; 1996-2014 SINA Corporation, All Rights Reserved</p>
+		<p>乐居房产、家居产品用户服务、产品咨询购买、技术支持客服服务热线：400-606-6969</p>
+	</div>
+</div>
+<!--弹层-->
+<div class="dll_popfixed none"></div>
+<div class="dll_pop dll_pop01 none">
+	<h2>提示<i class="dll_line"></i></h2>
+	<p class="dll_text">该手机号已注册乐居会员，可以通过密码或短信验证码快捷登录。</p>
+	<div class="dll_popbtn">
+		<a href="javascript:void(0);" class="dll_cancel">取消</a>
+		<a href="//my.leju.com/web/sso/loginView" class="dll_confirm">短信登录</a>
+	</div>
+</div>
+<script type='text/javascript' src='//cdn.leju.com/consumer/Core/index;consumer/Core/base64;consumer/Core/md5.js?r'></script><script src='//cdn.leju.com/consumer/Module/pcRegister.js?r'></script>
+<script>
+	function changing(){
+        document.getElementById('yz_num').src="//my.leju.com/Settings/Findpwd/chengCode?"+Math.random();
+    }
+</script> 
+<script type="text/javascript">
+    var city = ""; //city_en（无则传quanguo）
+    var level1_page = 'pcenter';
+    var level2_page = 'register';
+    var level3_page = '';
+    var custom_id = '';
+    var news_source='';
+</script>
+<script type="text/javascript" src="//cdn.leju.com/lejuTj/gather.pc.source.js"></script>
+</body>
+</html>

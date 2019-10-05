@@ -1,0 +1,51 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content=text/html; charset=gb2312>
+<title>索取密码_通行证_新浪网</title>
+</head>
+<body>
+<script language="JAVASCRIPT">
+function getRef() {
+	var refer = document.referrer;
+	if (!refer) {
+	    try {
+	        if (window.opener) {
+	            // IE下如果跨域则抛出权限异常
+	            // Safari和Chrome下window.opener.location没有任何属性
+	            refer = window.opener.location.href;
+	        }
+	    }
+	    catch (e) {}
+	}
+	return refer;
+}
+
+function getPath(url){
+    var parse_url = /^(?:([A-Za-z]+):(\/{0,3}))?([0-9.\-A-Za-z]+\.[0-9A-Za-z]+)?(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
+    var names = ['url', 'scheme', 'slash', 'host', 'port', 'path', 'query', 'hash'];
+    var results = parse_url.exec(url);
+    var that = {};
+    for (var i = 0, len = names.length; i < len; i += 1) {
+            that[names[i]] = results[i] || '';
+    }
+    return that;
+}
+
+
+var search = window.location.search;
+if(search) {
+	url = 'https://login.sina.com.cn/member/getpwd/getpwd0.php' + search;
+}else{
+	var refer = getRef();
+    var path = getPath(refer);
+    var reg = /weibo\.com$/;
+    if( refer && reg.test(path.host) ) {
+            url = 'https://login.sina.com.cn/member/getpwd/getpwd0.php?entry=weibo';
+    }else{
+            url = 'https://login.sina.com.cn/member/getpwd/getpwd0.php?entry=sso';
+    }
+}
+window.location.href = url;
+</script>
+</body>
+</html>

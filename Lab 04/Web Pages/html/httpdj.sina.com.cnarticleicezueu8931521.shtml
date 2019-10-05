@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
+    <link href="/gamedj/static/css/reset.css?version=201611161124" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="/gamedj/static/css/index.css?version=201611161124"/>
+    <script src="http://n.sinaimg.cn/game/homepage/js/jquery.min.js"></script>
+    <script src="http://games.sina.com.cn/307/2014/7/jquery.inview.min.js"></script>
+    <title>梦想成为电竞选手的韩国少年们-新浪电竞_电竞赛事_直播报道_新浪电子竞技</title>
+    <meta name="keywords" content="电竞,韩国,少年,梦想,电子竞技,DOTA2,英雄联盟,lol,炉石传说,CSGO,赛事报道,直播手游电竞,新浪网" />
+    <meta name="description" content="新浪电竞汇聚国内外电子竞技资讯报道,综合英雄联盟、DOTA2、炉石传说、绝地求生：大逃杀、CSGO、守望先锋等各类竞技游戏电竞赛事新闻、视频直播、战报点评。" />
+</head>
+<body>
+<div id="Ghead">
+    <!--顶部导航包括登录验证开始  依赖于jquery  -->
+    <link type="text/css" rel="stylesheet" href="/gamedj/static/css/dj_strandwhitetop.css?version=201611161124"/>
+    <script src="http://dj.sina.com.cn/gamedj/static/js/gameheader.js?version=201811161122" type="text/javascript" charset="utf-8"></script>
+    <script src="http://i.sso.sina.com.cn/js/ssologin.js?version=201811161122" type="text/javascript" charset="utf-8"></script>
+    <!--顶部导航包括登录验证开始  依赖于jquery -->
+</div>
+
+<!--head-->
+<header>
+    <div class="head_con">
+        <a href="/"><img class="logo" src="/gamedj/static/images/wdj_new/logo.png" /></a>
+        <nav>
+            <ul>
+                <li ><a href="/" target="_blank">电竞首页</a></li>
+                <li class="current"><a href="/information" target="_blank" >游戏资讯</a></li>
+                <li ><a href="/live" target="_blank" >直播聚合</a></li>
+                <li ><a href="/video" target="_blank" >游戏视频</a></li>
+                <li><a href="http://games.sina.com.cn/lol/" target="_blank" >英雄联盟</a></li>
+                <li><a href="http://games.sina.com.cn/dota2/" target="_blank" >DOTA2</a></li>
+                <!--<li><a href="http://txdj.dj.sina.com.cn" target="_blank">腾讯专区</a></li>-->
+            </ul>
+                            <span class="float_sign" style="left: 126px;"></span>
+                    </nav>
+        <div class="search">
+            <form id="formid" name="cheadSearchForm" method="get" action="/search" target="_blank">
+                <input type="text" placeholder="输入查询信息" name="keywords">
+                <div class="search_btn" onClick="search_form_submit();"></div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function search_form_submit(){
+            $("#formid").submit();
+        }
+    </script>
+</header>
+<link rel="stylesheet" type="text/css" href="http://news.sina.com.cn/css/87/20140926/comment.3.css">
+<style type="text/css">
+    .img_wrapper img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+<style type="text/css">
+    .sina-comment-form .ft .login input{height:24px;}
+/* page */
+.page_more { width: 100%; margin-top: 40px; overflow: hidden; }
+.pageZone { padding-top: 0; overflow: hidden; text-align: center; }
+.pageZone span { width: 38px; height: 38px; line-height: 38px; text-align: center; color: #474747; text-decoration: none; margin-right: 5px; font-size: 16px; cursor: pointer; display: inline-block; background: #f6f6f6; }
+.pageZone span a { color: #414141; text-decoration: none; }
+.pageZone span:hover { background: #3480f2; color: #fff; text-decoration: none; }
+.pageZone .Disabled { width: 85px; }
+.pageZone span.Disabled:hover { background: #f6f6f6; }
+.pageZone .Disabled a { display: inline-block; width: 85px; color: #aeaeae; }
+.pageZone .Disabled a:hover { color: #aeaeae; }
+.pageZone .next { width: 85px; }
+.pageZone .next a { display: inline-block; width: 85px; }
+.pageZone span.isNow { background: #3480f2; color: #FFFFFF; }
+.pageZone span.isNow a { color: #FFFFFF !important; }
+.pageZone span.dot { border: none; }
+.pageZone span a { display: inline-block; width: 38px; height: 38px; }
+.pageZone span a:hover { color: #fff; text-decoration: none; }
+/*图集*/
+.hdFigureWrap{margin: 20px auto 0;}
+.clearfix:after{content:".";display:block;height:0;visibility:hidden;clear:both}.clearfix{zoom:1}
+</style>
+<script>
+        var NowColumn = $('.top_nav .active');
+        $(function(){
+            $(document).on('mouseover','.top_nav_list',function(e){
+                $(this).addClass('hover').siblings().removeClass('hover');
+            }).on('mouseout','.top_nav_list',function(e){
+                $(this).removeClass('hover');
+            })
+
+            $('.two_nav').width($(window).width());
+
+            $('.top_nav_list').hover(function(){
+                var _this=$(this);
+                AutoNav(_this,$('.head_top'))
+            },function(){
+                $('.two_nav').hide();
+            })
+
+        })
+</script>
+<script src="http://ent.sina.com.cn/js/470/20130123/comment.js" charset="gb2312"></script>
+
+<script language='javascript' src='http://games.sina.com.cn/307/2014/5/yibu.js'></script>
+<script type="text/javascript">
+    //js地址
+    var ARTICLE_JSS = {
+        jq:'http://i0.sinaimg.cn/dy/js/jquery/jquery-1.7.2.min.js',
+        sab:'http://ent.sina.com.cn/js/470/20130205/sab.js',
+        sinalib:'http://news.sina.com.cn/js/87/20110714/205/sinalib.js',
+        subshow:'http://i3.sinaimg.cn/ty/sinaui/subshow/subshow2012070701.min.js',
+        weiboAll:'http://news.sina.com.cn/js/268/2011/1110/16/weibo-all.js',
+        sdfigure:'http://ent.sina.com.cn/js/470/20121129/sdfigure_v2.js',
+        hdfigure:'http://news.sina.com.cn/js/87/20121218/hdfigure_v2.js',
+        sinflash:'http://i1.sinaimg.cn/home/sinaflash.js',
+        weiboCard:'http://ent.sina.com.cn/js/20120914/weibocard.js',
+        guess:'http://ent.sina.com.cn/js/470/20130205/guess.js',
+        allcont:'http://fashion.sina.com.cn/js/4/20130912/icontent/allcontent_new.js',
+        shareOnWeibo:'http://news.sina.com.cn/js/87/20111011/227/shareonweibo.js',
+        weiboCard2013:'http://tech.sina.com.cn/js/717/20131127/content/weibocard2013.js',
+        wbUsersRec:'http://news.sina.com.cn/js/87/20140623/wbUsesRec.js'
+    };
+
+    //余下全文
+    jsLoader(ARTICLE_JSS.jq)
+            .jsLoader(ARTICLE_JSS.sinalib)
+            .jsLoader({url:ARTICLE_JSS.allcont,charset:'gbk'})
+
+</script>
+
+<!-- 社交化微博组件 -->
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<div class="acticle_content">
+    <div class="acticle_container clear">
+        <div class="top_left">
+            <div class="acticle_nav">
+                <ul class="bdsharebuttonbox aticleShare" data-tag="share_1">
+                    <li><a href="javascript:void(0)" class="weibo" data-cmd="tsina"></a></li>
+                    <li><a href="javascript:void(0)" class="weixin"  data-cmd="weixin"></a></li>
+                    <li><a href="javascript:void(0)" class="qzone"  data-cmd="qzone"></a></li>
+                    <li><a href="#SI_FormList1" class="comment"></a></li>
+                </ul>
+                <div class="weixinpop" style="display: none;width: 120px; height: 120px; box-shadow:rgb(0, 0, 0) 0px 0px 15px -6px;left: 70px;top: 37px;"><div class="t" style="left: -4px; top: 50px;  transform: rotate(-90deg); -webkit-transform: rotate(-90deg);"></div> <img style="width: 96px; height: 96px; margin-top: 12px;" src="http://bshare.optimix.asia/barCode?site=weixin&amp;url=http://dj.sina.com.cn/article/icezueu8931521.shtml#weibo_comment"></div>
+            </div>
+            <div class="acticle_main">
+                <div class="acticle_top">
+                    <div class="breadcrumb">
+                        <a target="_blank" href="/">新浪电竞</a><i> &gt; </i>
+                        <a target="_blank" href="/information">资讯列表</a>
+                        <i> &gt; </i>正文页
+                    </div>
+                    <h1>梦想成为电竞选手的韩国少年们</h1>
+                    <div class="txtdetail">
+                        <span class="timer">2019-09-28 13:17</span><span class="Author">作者：kbcr</span><span class="from">来源：游戏研究社</span>
+                    </div>
+                </div>
+
+                <div class="acticle_body">
+                    <div id="artibody">
+                        <div class="img_wrapper"><img src="http://n.sinaimg.cn/games/crawl/59/w550h309/20190928/41f6-ifffqup5706214.jpg" alt=""><span class="img_descr"></span></div>
+<p style="text-align: left;">　　<strong>千军万马过独木桥。</strong></p>
+<p style="text-align: left;">　　2017年，韩国的夏天，在游戏里朋友的劝说下，金基仁参加了业余选手的选拔会，第一回没过。第二回，他成为了 Ever 8战队的职业选手。这时候他还在上高中，成绩一般，人生规划是想平凡地上学，毕业后找工作。</p>
+<p style="text-align: left;">　　金基仁给自己的定位是一个喜欢游戏、喜欢玩的学生，他第一次玩《英雄联盟》是在2013年，定级到了白银二。</p>
+<p style="text-align: left;">　　大部分人应该都没听过他的名字，但对他的游戏ID“Kiin”不会陌生。2018年，19岁的Kinn入选为亚运会表演赛的参赛选手，在国内他频繁被称为“韩国第一上单”。在这之后，Kiin的父母也没再提起“非要当职业选手吗？”这句问题。</p>
+<p style="text-align: left;">　　1999年出生的Kiin有着与年龄毫不匹配的名气，他从普普通通的高中生，成为名噪一方的电竞选手，期间时间不过一年，这也正是电子竞技对青少年而言最大的魅力之一。</p>
+<p style="text-align: left;">　　在韩国，每个热爱游戏的少年都想成为下一个能快速崭露头角的Kiin。在这个娱乐产业高度发达的国家里，电子竞技是年轻人中最普遍的爱好。这些在虚拟战场上获得荣耀的选手的地位早已无异于演艺明星，一位美国选手曾感叹自己在家乡无人问津，但在韩国街头却频繁被男女老少喊出名字。</p>
+<p style="text-align: left;">　　在韩国一股股的电竞热潮之下，无数青少年正在为了成为这样耀眼的存在而努力。</p>
+<p style="text-align: left;">　　<strong>1</strong></p>
+<p style="text-align: left;">　　韩国的一家育儿论坛上，一位母亲发了个求助帖：“我的儿子想当电竞选手”。</p>
+<p style="text-align: left;">　　帖子里，她讲了讲自己的儿子。这是个很懂事的小孩，说过自己想当职业选手，并且保证不耽误学习。但让这位母亲难过的是，她经常看到自己的孩子在完成学业后，紧接着又去学习电竞技巧——而这时候往往已经很晚了。</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/games/crawl/208/w509h499/20190928/168d-ifffqup5706266.jpg" alt=""><span class="img_descr"></span></div>
+<p style="text-align: left;">　　这则帖子下回复很多，不少韩国妈妈也面对着同样的问题：孩子想当电竞选手，作为家长不知如何应对。有的家长同样手足无措，同样不知如何是好；有的家长正在支持孩子遥远的电竞梦；有的家长说孩子已经逐过梦，然后又放弃了。</p>
+<p style="text-align: left;">　　韩国父母一代的成年人对“电竞选手”这个职业的看法不太严苛。面对着电视台采访的镜头，孩子们也逐渐开始畅言自己“想成为职业电竞选手”的梦想。</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/games/crawl/55/w550h305/20190928/923d-ifffqup5706323.jpg" alt=""><span class="img_descr"></span></div>
+<p style="text-align: left;">　　韩国的学校里，学生们想当电竞选手的愿望不被当作是一个笑话。2013年，著名战队KT Rollster的大门曾被五十铃中学的老师们敲响，他们带领学生集体前来看望自己的梦想地。</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/games/crawl/100/w540h360/20190928/aa1e-ifffqup5706367.jpg" alt=""><span class="img_descr"></span></div>
+<p style="text-align: left;">　　这19位初一学生参与了学校的理想调查，他们将“职业玩家”填成了自己的首选。</p>
+<p style="text-align: left;">　　类似的情形在韩国内逐渐蔓延。根据尼尔森韩国的一项调查，去年，电子竞技在15至29岁的韩国人中排名第三，仅次于足球和棒球。在往年韩国教育部对小学生的调查中名列第八，高于“科学家”。</p>
+<p style="text-align: left;">　　这群电竞热潮中的年轻人们并不理解大人们对电竞行业的担忧，一位梦想成为电竞选手的少年曾忿忿不平的说，棒球运动员、钢琴家都是正经职业，电竞选手也亦如此。在韩国，英雄联盟选手Faker被称为是韩国的迈克尔·乔丹——韩国少年们的童年偶像。</p>
+<p style="text-align: left;">　　<strong>2</strong></p>
+<p style="text-align: left;">　　在韩国互联网上，满溢着怀抱电竞梦想的少年自白书。如果以“电竞选手”为关键词进行搜索，紧接着跳出来的关联词就是，“想成为电竞选手”，再接着就是“电竞培训学校”。</p>
+<p style="text-align: left;">　　在巨大愿景的驱使下，电竞培训学校逐渐在韩国发芽，产业化。与想象中不同的是，这些学校都颇为专业正规，但价格与寻常学校相比更加不菲。</p>
+<p style="text-align: left;">　　一家学校说，来他们这里学生大约有100名左右，学生每周大约要学习五个小时的电子竞技课程，也可以根据自己的需要自由地学习。每个学生每月花费40万韩元（约2300人民币）。</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/games/crawl/112/w550h362/20190928/c60e-ifffqup5706404.jpg" alt=""><span class="img_descr"></span></div>
+<p style="text-align: left;">　　据这些学校的开办者所说，很多孩子都是由父母陪着来的，大部分态度都较为支持，因为有不少家长自己就玩游戏。</p>
+<p style="text-align: left;">　　每周六，韩国少年泰民都会与父亲一起坐三个半小时的巴士来到一家电竞培训学校。他今年早些时候首次告诉父母他决定成为职业游戏玩家，他的父亲很快就是YouTube上做了功课。</p>
+<p style="text-align: left;">　　这位父亲说，他观看了很多有关职业游戏的视频，了解了这条道路上的困难和障碍：“在一切事情上，除非你是天才，否则需要采取某些步骤……有教练教他是可靠的。”</p>
+<p style="text-align: left;">　　泰民在家中的每个小时几乎都在玩《守望先锋》。上学的时候玩了五个小时，周末练习长达10个小时，在这期间，他的父亲会给他关上门，把电视音量调小，还调整晚饭时间，以便不去占用他的学习时间。</p>
+<p style="text-align: left;">　　学校里的一位教练表示，泰民的练习时间其实不算长，这里的很多孩子一周要练40个小时或以上。</p>
+<p style="text-align: left;">　　14岁的成昌庆以普通玩家的水平加入了首尔游戏学院。在这家看上去和网吧无异的学校里，他最终成为排名前1％的选手：“在我来这里之前，我只是和那些能力水平与我差不多的朋友一起玩。这里有很多学生比我好很多，所以给了我很多动力。现在我可以在更高的水平上打比赛了”。</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/games/crawl/129/w550h379/20190928/ab65-ifffqup5706452.jpg" alt=""><span class="img_descr"></span></div>
+<p style="text-align: left;">　　首尔游戏学院</p>
+<p style="text-align: left;">　　与成百上千名渴望踏上职业道路的选手相匹配的，是接连不断的电竞赛事。由不同赞助商发起的不同小型电竞赛事正在韩国不断冒出，奖金大多数很微薄——甚至有的只是钥匙链之类的纪念品，但能给少年们一个崭露头角的希望。</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/games/crawl/197/w550h447/20190928/d105-ifffqup5706495.jpg" alt=""><span class="img_descr"></span></div>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/games/crawl/175/w550h425/20190928/bd62-ifffqup5706525.jpg" alt=""><span class="img_descr"></span></div>
+<p style="text-align: left;">　　在这片土地上，电竞选手是一个可以接受的职业。一个最简单的例子是一个呼吁众筹的新闻，“向梦想成为职业游戏选手的学生募集赞助”：一位家庭情况困苦之极，连自己房间都没有的韩国学生正在寻求爱心人士的帮助。他学习成绩不错，游戏水平同样，而且曾在GSL游戏世界大赛上进入前四强。这位学生想修好自己家的破旧房屋，也想参加电脑辅导班，梦想是成为电竞选手。</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/games/crawl/61/w550h311/20190928/4024-ifffqup5706565.jpg" alt=""><span class="img_descr"></span></div>
+<p style="text-align: left;">　　令人注意的是，这位贫困学生在标题里写下了“想成为电竞选手”的梦想。我们也应该都明白，在很多其它国家，没人会在众筹网站上写这个——得到的回复会很明显。</p>
+<p style="text-align: left;">　　<strong>3</strong></p>
+<p style="text-align: left;">　　电竞风潮席卷韩国少年们的心房，这个现象已经持续了很多年。</p>
+<p style="text-align: left;">　　1997年，金融风暴来到韩国，大小公司接连破产。政府投资于IT行业试图力挽狂澜，让国内个人电脑价格急剧下降，紧接着高速网络逐渐覆盖全国。</p>
+<p style="text-align: left;">　　在这之后，各式网吧如雨后春笋般从韩国冒出，不计其数。有人曾说，在韩国小巷沿着走，5分钟就能发现一家网吧。在学业压力并不轻松的韩国，这里成了青少年们的避风港。午夜时分，韩国学生们敲击键盘，试图把家长“考名校”“以后进三星/LG上班”的期望抛之脑后。</p>
+<p style="text-align: left;">　　这种环境是肥沃的土壤，而游戏产业扎根成长。当大多数国家还没有“电竞”这个概念的时候，游戏比赛已经开始在韩国的电视上出现。大型公司的赞助、家喻户晓的选手……在经济与社会相互影响下，这里是世界上最佳的电子竞技温床。</p>
+<p style="text-align: left;">　　相比现在，过去的电竞路要窄上些许。</p>
+<p style="text-align: left;">　　2008年， 被星际玩家称为“教主”的李永浩拿下了Bacchus OSL冠军，成为最年轻的OSL冠军选手，这年他15岁。这段时间的韩国已经有了电竞相关的电视节目，曾去李永浩的学校探访，在嬉笑打闹的孩子们中间，记录下这位年轻选手的学校生活。</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/games/crawl/15/w499h316/20190928/5cdc-ifffqup5706615.jpg" alt=""><span class="img_descr"></span></div>
+<p style="text-align: left;">　　但这位如今已经名震四方，留下很多记录的选手，在小时候玩《星际争霸》时也曾多次遭到父母阻拦，而且家里甚至没有一台电脑。直到他对父母承诺自己将在一个月内成为一名半职业游戏玩家——很显然最后他成功了。</p>
+<p style="text-align: left;">　　但时至今日，这种情况也只是稍有改观。英雄联盟选手PawN说，自己为到达今天的位置做出了牺牲。他17岁离家，而“这对韩国人来说很不正常”，父母当初极力反对，但直到他开始赚钱才改变主意。</p>
+<p style="text-align: left;">　　另一位队友Smeb也有相似的境遇：“不，他们没有感到高兴。我想这说明了成年人如何看待职业。你可以通过学习和上学来取得成功。但游戏被认为是不好的，在他们眼中是没有用的。”</p>
+<p style="text-align: left;">　　而在电竞行业，大部分选手都是像他们这样天赋型——在极年轻的时候就凭借实力初出茅庐，一步步登上世界舞台。而目前流行的“培训班”出身的，最终机身电竞行业的选手虽然存在，但很少，大多也并不知名。即使在电竞产业如此发达的国家内，当一个孩子向父母阐述，得到不看好的回答仍然是常态，原因显而易见——太难了。</p>
+<p style="text-align: left;">　　在无限涌动的电竞热潮之下，我们最终看到的只有这些最终走向领奖台的少年们，而他们的存在是凤毛麟角，是概率中的概率。</p>
+<p style="text-align: left;">　　<strong>4</strong></p>
+<p style="text-align: left;">　　当记者问到已经成名的职业选手，如何看待如今年轻人都想步入电竞行业时，得到的回答大多是“望慎重”。一位星际选手说，他认为大多数人都不应该尝试。因为一场比赛，大约会有两三百人为之努力，但最终能登场的只有三四个。努力当然可以成为职业玩家，但登顶很难——对于这一行业来说，不登顶对于一个职业选手而言，就意味着困境。</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/games/crawl/413/w540h673/20190928/e69a-ifffqup5706664.jpg" alt=""><span class="img_descr"></span></div>
+<p style="text-align: left;">　　韩国的电竞以高强度训练著名。通常一名选手平均每天需要12-15个小时的训练，比赛淡季时也要8小时以上。但这种努力换来的最终也只有几年不到的辉煌——作为电竞选手的职业寿命太短了。</p>
+<p style="text-align: left;">　　五到六年，普遍被认为是一位职业选手巅峰状态的期限，时间一过，他们就要开始为自己规划第二人生。</p>
+<p style="text-align: left;">　　有一则报道起了这样一个名字——“前职业玩家，自豪地生活在社会中”，问中用夸赞的语气讲述了一些选手在褪去光环后的人生：有人考上了大学，有人考取了会计证，有人成为上班族，也有人最终选择当一名工人。“近来经常有职业玩家选择了一般职业而不是职业游戏团体或游戏直播的情况，这对电子竞技是一个积极的信号。”</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/games/crawl/113/w550h363/20190928/ab43-ifffqup5706734.jpg" alt=""><span class="img_descr"></span></div>
+<p style="text-align: left;">　　正如之前所说，电竞选手在韩国是一个可接受的职业，但对于社会中的大多数人来说，也仅此而已了。</p>
+<p style="text-align: left;">　　但即使这样，这份巨大的，虚无缥缈的梦想仍会笼罩在这些少年的心头。当商城闭店，地铁停止运营，白夜的嘈杂从韩国褪去，鼠标键盘声还是会从夜幕里响起。设备齐全、人头攒动的网吧仍在城市里孜孜不倦的运行，这里是万千韩国少年们的逐梦之地。其中大部分人是为了缓解压力，而有些人则是抱着成为电竞选手的期望，他们中的大多数都不能如愿，但最后总会有那么一两个少年从万千概率里走出来，站上世界舞台，成为家喻户晓的明星。</p>
+                    </div>
+                                    </div>
+                <div class="recommend">
+                    <h3><i></i>相关推荐</h3>
+                    <div class="recommend_con">
+                                                    <div class="pictrue">
+                                <a href="http://weibo.com/sinaesports">
+                                    <img src="http://n.sinaimg.cn/games/20161110/XGf--fxxsmif2660901.jpg" />
+                                    <div class="mask"></div>
+                                   
+                                </a>
+                            </div>
+                                                                            <div class="recommend_list">
+                                <ul>
+                                                                            <li><i></i><a href="/article/icezueu8751150.shtml" target="_blank">遇“竞”徽文化 TGA腾讯电竞运动会9月分站赛揭幕</a></li>
+                                                                            <li><i></i><a href="/article/icezzrq8491913.shtml" target="_blank">互惠共享 2019首届中韩电竞教育高峰论坛在京举办</a></li>
+                                                                            <li><i></i><a href="/article/icezzrq8363537.shtml" target="_blank">斗鱼直播等行业大咖 把脉电竞教育发展</a></li>
+                                                                            <li><i></i><a href="/article/icezzrq8277070.shtml" target="_blank">吉克电竞椅首亮红牛“战马杯”</a></li>
+                                                                            <li><i></i><a href="/article/icezzrq8074023.shtml" target="_blank">活力延安 英雄电竞 老区人民喜迎电竞新时尚</a></li>
+                                                                    </ul>
+                            </div>
+                                            </div>
+                </div>
+                <!--<div class="sina-comment-wrap" id="SI_FormList1"></div>
+                <script src="http://i.sso.sina.com.cn/js/ssologin.js" charset="utf-8"></script>-->
+				<div class="sina-comment-wrap" id="SI_FormList1"></div>
+				<script src="http://i.sso.sina.com.cn/js/outlogin_layer.js" charset="utf-8"></script>
+                <script src="http://news.sina.com.cn/js/87/20140926/comment.3.min.js"></script>
+                <!--<script>
+                    ;(function(exports){
+                        var $ = exports.___sinacMNT___;
+                        var FormList11 = new $.cmnt.FormList('SI_FormList1',{
+                            // 频道
+                            channel:'yx',
+                            // 新闻id
+                            newsid:'comos-icezueu8931521',
+                            parent:'',
+                            // 编码，默认为gbk,可使用utf-8,一般和页面编码一致
+                            encoding:'utf-8'
+                        },{
+                            // 频道
+                            channel: 'yx',
+                            // 新闻id
+                            newsid:'comos-icezueu8931521',
+                            // 评论类型，单条新闻为0（如正文页评论），多条新闻为1（如高清图评论）
+                            group: 0,
+                            // 编码，默认为gbk,可使用utf-8,一般和页面编码一致
+                            encoding:'utf-8',
+                            // 第几张开始加载，默认为1
+                            page: 1,
+                            // 每次显示条数，默认为20
+                            pageSize: 20,
+                            // 隐藏评论列表
+                            hideList:0,
+                            // 最新评论默认显示条数
+                            hotPageNum:5,
+                            // 最新评论默认显示条数
+                            firstPageNum:5,
+                            // 可点击最新评论正文“更多评论”按钮次数,达到该次数后，显示“查看更多评论”链接，再点击则跳转
+                            clickMoreTimes:3,
+                            // 加载完成回调，可在回调中获取评论数等评论数据
+                            loaded:function(self){
+                                // console.log(self);
+                            }
+                        },{});
+                    })(window);
+                </script>-->
+				<script>
+					;(function(exports){
+						var $ = exports.___sinacMNT___;
+						// 保持和页面编码一致，gbk或utf-8
+						$.cmnt.config.encoding = 'utf-8';
+						var FormList1 = new $.cmnt.FormList('SI_FormList1',{
+							// 频道编号
+							channel:'yx',
+							// 新闻id
+							newsid:'comos-icezueu8931521',
+							// 默认为空
+							parent:''
+						},{
+							channel: 'yx',
+							// 新闻id
+							newsid:'comos-icezueu8931521',
+							// 默认为0，多条新闻（图片）集合的评论为1
+							group: 0,
+							// 开始页数，默认为1
+							page: 1,
+							// 每页评论条数
+							pageSize: 20,
+							// 最大楼层
+							maxFloor:1,
+							 // 隐藏评论列表，只显示评论框
+							hideList:0
+							// // 最新评论默认显示条数
+							// hotPageNum:5,
+							// // 最新评论默认显示条数
+							// firstPageNum:5,
+							// // 可点击最新评论正文“更多评论”按钮次数,达到该次数后，显示“查看更多评论”链接，再点击则跳转
+							// clickMoreTimes:3
+						},{});
+					})(window);
+				</script>
+            </div>
+        </div>
+        <div class="top_right">
+            <div class="Ad_slots">
+    <a href="http://dj.sina.com.cn/search?keywords=lpl" target="_blank"><img src="http://n.sinaimg.cn/games/590/w340h250/20190529/89ef-hxsrwwq5214736.png"></a>
+</div>
+
+                            <!--热门资讯-->
+                <div class="Hot_news">
+                    <div class="module_title clear">
+                        <h2>
+                            <p class="chinese">热门资讯</p>
+                            <p class="english">HOT NEWS</p>
+                            <span class="mark_line"></span>
+                        </h2>
+                    </div>
+                    <div class="Hot_news_list">
+                        <ul>
+                                                                                                <li><i class="te">1</i><a href="/article/icezuev0092358.shtml">MDL成都Major中国区海选赛落下帷幕</a></li>
+                                                                                                                                <li><i class="te">2</i><a href="/article/icezzrr0133054.shtml">虎牙S9《电竞大实话》相约总决赛，群星璀璨！</a></li>
+                                                                                                                                <li><i class="te">3</i><a href="/article/icezueu9802566.shtml">MDL成都Major各大赛区预选赛直邀名单公布！</a></li>
+                                                                                                                                <li><i>4</i><a href="/article/icezzrq9843101.shtml">星际巅峰对决国庆再燃！中国区四大种子蓄势待发</a></li>
+                                                                                                                                <li><i>5</i><a href="/article/icezueu9801090.shtml">北境电竞嘉年华：激扬青春，书写唐山全新篇章</a></li>
+                                                                                                                                <li><i>6</i><a href="/article/icezzrq9441893.shtml">2019首届中国移动电子竞技大赛湖北省高校赛收官</a></li>
+                                                                                                                                <li><i>7</i><a href="/article/icezueu9387630.shtml">点金手模式：TI冠军落败，主播队赢得欧洲区冠军</a></li>
+                                                                                                                                <li><i>8</i><a href="/article/icezueu9379640.shtml">潮人推荐 国庆来创智汇邂逅俄罗斯“国民偶像”！</a></li>
+                                                                                                                                <li><i>9</i><a href="/article/icezueu9360171.shtml">云南与腾讯发布首个省级文旅IP形象“云南云”</a></li>
+                                                                                                                                <li><i>10</i><a href="/article/icezzrq9401915.shtml">业内游戏引擎纷纷支持光追，RTX赋能游戏未来</a></li>
+                                                                                    </ul>
+                    </div>
+                </div>
+                            <!--热门视频-->
+    <div class="Hot_videos">
+        <div class="module_title clear">
+            <h2>
+                <p class="chinese">热门视频</p>
+                <p class="english">HOT VIDEOS</p>
+                <span class="mark_line"></span>
+            </h2>
+        </div>
+        <div class="Hot_videos_list">
+                                    <div class="video_list">
+                <div class="article_pic">
+                    <a href="http://games.sina.com.cn/news/yw/2019-09-20/esports-iicezzrq7226171.shtml" target="_blank"><img src="http://n.sinaimg.cn/games/639/w400h239/20190920/a7bb-iewtemz6536681.jpg" style="opacity: 1;"><i class="video_btn"></i></a>
+                </div>
+                <p class="article_title"><a href="http://games.sina.com.cn/news/yw/2019-09-20/esports-iicezzrq7226171.shtml" target="_blank">全新永恒之森系列灵动而至！阿狸新皮肤来啦！</a></p>
+            </div>
+                                    <div class="video_list">
+                <div class="article_pic">
+                    <a href="http://games.sina.com.cn/news/yw/2019-09-11/esports-iicezueu5007304.shtml" target="_blank"><img src="http://n.sinaimg.cn/games/639/w400h239/20190911/7b63-iekuaqt8475794.png" style="opacity: 1;"><i class="video_btn"></i></a>
+                </div>
+                <p class="article_title"><a href="http://games.sina.com.cn/news/yw/2019-09-11/esports-iicezueu5007304.shtml" target="_blank">新将来袭《英雄联盟》公布5款新皮肤特效演示</a></p>
+            </div>
+                                    <div class="video_list">
+                <div class="article_pic">
+                    <a href="http://games.sina.com.cn/news/yw/2019-08-25/esports-ihytcitn1815205.shtml" target="_blank"><img src="http://n.sinaimg.cn/games/639/w400h239/20190825/cbed-icqznhc1073546.png" style="opacity: 1;"><i class="video_btn"></i></a>
+                </div>
+                <p class="article_title"><a href="http://games.sina.com.cn/news/yw/2019-08-25/esports-ihytcitn1815205.shtml" target="_blank">TI10举办地公布——A队主场瑞典斯德哥尔摩</a></p>
+            </div>
+                                    <div class="video_list">
+                <div class="article_pic">
+                    <a href="http://games.sina.com.cn/news/yw/2019-08-22/esports-ihytcitn1115904.shtml" target="_blank"><img src="http://n.sinaimg.cn/games/639/w400h239/20190822/3ed9-icqznfz5475421.jpg" style="opacity: 1;"><i class="video_btn"></i></a>
+                </div>
+                <p class="article_title"><a href="http://games.sina.com.cn/news/yw/2019-08-22/esports-ihytcitn1115904.shtml" target="_blank">“为何而战”？LPL夏季赛季后赛宣传片热血出炉</a></p>
+            </div>
+                    </div>
+    </div>
+    
+                <!--原创推荐-->
+    <div class="Original">
+        <div class="module_title clear">
+            <h2>
+                <p class="chinese">原创推荐</p>
+                <p class="english">Original</p>
+                <span class="mark_line"></span>
+            </h2>
+        </div>
+        <div class="Original_con">
+            <div class="Original_b">
+                <div class="pictrue">
+                    <a href="http://dj.sina.com.cn/article/fyvtmxc7495502.shtml" target="_blank">
+                        <img src="http://n.sinaimg.cn/games/507/w330h177/20180409/HC2r-fyvtmxe4832082.png">
+                        <div class="mask"></div>
+                        <p>成千上万名设计师制作不一样的英雄联盟</p>
+                    </a>
+                </div>
+            </div>
+                                    <div class="Original_s">
+                <div class="pictrue">
+                    <a href="http://games.sina.com.cn/news/sd/2019-09-28/esports-iicezueu8931521.shtml" target="_blank"><img src="http://n.sinaimg.cn/games/639/w400h239/20190928/81b4-ifffqup5715065.jpg"></a>
+                </div>
+                <p class="article_title"><a href="/article/icezueu8931521.shtml" target="_blank">梦想成为电竞选手的韩国少年们</a></p>
+                <p class="time">2019-09-28 13:17:51</p>
+            </div>
+                                                <div class="Original_s">
+                <div class="pictrue">
+                    <a href="http://games.sina.com.cn/news/sd/2019-09-16/esports-iicezueu6048488.shtml" target="_blank"><img src="http://n.sinaimg.cn/games/639/w400h239/20190916/6b88-ietnfsp3610244.jpg"></a>
+                </div>
+                <p class="article_title"><a href="/article/icezueu6048488.shtml" target="_blank">在新加坡的比赛中，我和选手聊了聊文莱电竞行业</a></p>
+                <p class="time">2019-09-16 09:25:08</p>
+            </div>
+                                                        </div>
+    </div>
+    
+            <div class="Ad_slots">
+    <a href="http://dj.sina.com.cn/esports/wegl2019.shtml" target="_blank"><img src="http://n.sinaimg.cn/games/590/w340h250/20190710/522d-hzrevpz6730010.jpg"></a>
+</div>
+
+        </div>
+    </div>
+</div>
+<script>
+    var pagecount = 0;
+    function changePage(page){
+        page = page ? parseInt(page) : 1;
+        $.ajax({
+            type: 'GET',
+            dataType: 'json',
+            cache : false,
+            url:"/ajax_fun/get_content_news/icezueu8931521/"+page,
+            success:function(msg){
+                if(msg && msg.status == "succ"){
+                    var leng = msg.num;
+                    var pre = page -1;
+                    var preDis = pre?'next':'Disabled';
+                    var preClick = pre?' onclick = "changePage('+pre+')"':'';
+                    var pagenum = '<div class="page_more"><div class="pageZone"><span title="上一页" class="'+preDis+'" data-page="'+pre+'"><a href="javascript:void(0);"'+preClick+' data-page="'+pre+'">上一页</a></span>';
+                    var isNow = '';
+                    var pageclick = '';
+                    for(var i =1;i<=leng;i++){
+                        if(i == page){
+                            isNow = "isNow";
+                            pageclick = '';
+                        }else{
+                            isNow = 'jump';
+                            pageclick = ' onclick="changePage('+i+')"';
+                        }
+                        pagenum += '<span title="'+i+'" class="'+isNow+'" data-page="'+i+'"><a href="javascript:void(0);"'+pageclick+' data-page="'+i+'">'+i+'</a></span>';
+                    };
+                    var next = page + 1;
+                    var nextDis = page >= leng?'Disabled':'jump';
+                    var nextClick = page >= leng?'':' onclick = "changePage('+next+')"';
+                    pagenum += '<span title="下一页" class="next '+nextDis+'" data-page="'+next+'"><a href="javascript:void(0);"'+nextClick+' data-page="'+next+'">下一页</a></span></div></div>';
+                    if(msg.list){
+                        $("#artibody").html(msg.list);
+                        $(".page1").html(pagenum);
+                    }
+                    document.body.scrollTop =150;
+                }
+            }
+        });
+    };
+    //左侧按钮
+    var nav_top = $('.acticle_nav').offset().top;
+    $(window).scroll(function() {
+        var s_top = $(window).scrollTop();
+        if(s_top >= nav_top - 20){
+            $('.acticle_nav').css({'position':'fixed' , 'top' : 20,})
+        }else {
+            $('.acticle_nav').removeAttr('style')
+        }
+    });
+    //右侧 浮动 
+     (function(){
+        var RightTop = $('.top_right').offset().top;
+        $(window).scroll(function() {
+            var LeftTop = $('.top_left').offset().top;
+            var Leftheight = $('.top_left').height();
+            var RightHeight = $('.top_right').height();
+            var WindowHeight = $(window).height();
+            var ScrollTop = $(window).scrollTop();
+            if(Leftheight>RightHeight){
+                if(ScrollTop>=RightTop+RightHeight-WindowHeight){
+                if(ScrollTop<=LeftTop+Leftheight-WindowHeight){
+                    $('.top_right').addClass('rfixed');
+                    $('.top_right').removeClass('rfixed2');
+                }else if(ScrollTop>LeftTop+Leftheight-WindowHeight) {
+                    $('.top_right').addClass('rfixed2');
+                }
+                }else{
+                    $('.top_right').removeClass('rfixed rfixed2');
+                }
+            }
+
+        })
+    })();
+    //weixinpop
+    $(document).on('click','.aticleShare a',function (e) {
+        if($(this).attr('data-cmd')=='weixin'){
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        var pos = $(this).offset();
+        var _this = $(this)
+        var href = $.trim(window.location.href);
+        console.log(href);
+        //使用了外部接口
+        $(".weixinpop").show();
+        //$('.weixinpop').css({left:pos.left+60, top:pos.top-40}).show();
+    });
+    //点击空白处消失
+    $(document).click(function (e) {
+        $('.weixinpop').hide();
+    });
+</script>
+<!-- end 添加js -->
+<!--footer-->
+<div class="foot1" style="position: relative">
+    <div class="foot1_con">
+                <div class="Friend_link">
+            <p class="title">友情链接</p>
+                                            <ul class="link_list link_list1">
+                    <li>
+                        <a href="http://games.sina.com.cn/" target="_blank">新浪游戏</a>
+                    </li>
+                </ul>
+                                            <ul class="link_list link_list1">
+                    <li>
+                        <a href="http://kan.sina.com.cn/" target="_blank">看游戏</a>
+                    </li>
+                </ul>
+                                            <ul class="link_list link_list1">
+                    <li>
+                        <a href="http://sports.sina.com.cn/" target="_blank">新浪体育</a>
+                    </li>
+                </ul>
+                                            <ul class="link_list link_list2">
+                    <li>
+                        <a href="http://games.sina.com.cn/vg/" target="_blank">电玩游戏</a>
+                    </li>
+                </ul>
+                                            <ul class="link_list link_list2">
+                    <li>
+                        <a href="http://games.sina.com.cn/z/wow/indexpage.shtml" target="_blank">魔兽世界</a>
+                    </li>
+                </ul>
+                                            <ul class="link_list link_list2">
+                    <li>
+                        <a href="http://k.18183.com/" target="_blank">K电竞</a>
+                    </li>
+                </ul>
+                                            <ul class="link_list link_list3">
+                    <li>
+                        <a href="http://lol.dj.sina.com.cn/" target="_blank">英雄联盟</a>
+                    </li>
+                </ul>
+                                            <ul class="link_list link_list3">
+                    <li>
+                        <a href="http://dota2.dj.sina.com.cn/" target="_blank">DOTA2</a>
+                    </li>
+                </ul>
+                                            <ul class="link_list link_list3">
+                    <li>
+                        <a href="http://www.huomao.com" target="_blank">火猫直播</a>
+                    </li>
+                </ul>
+                                            <ul class="link_list link_list3">
+                    <li>
+                        <a href="http://www.famulei.com/" target="_blank">伐木累</a>
+                    </li>
+                </ul>
+                                                                                                                                                                                    </div>
+                <div class="Official_weixin">
+            <p class="title">官方微信</p>
+            <div class="QR">
+                <img src="http://n.sinaimg.cn/games/55d1b789/20190709/chonglang.png" />
+                <p>网上冲浪记事官方微信</p>
+            </div>
+        </div>
+        <div class="Share_contact">
+            <p class="title">分享联系</p>
+            <div class="share">
+                <a title="分享到新浪微博" href="http://weibo.com/sinaesports?refer_flag=1001030101_&is_hot=1" class="share_btn weibo" target="_blank"></a>
+                <a title="分享到微信" href="javascript:void(0);" id="foot_weixin" class="share_btn weixin"></a>
+                <a href="http://connect.qq.com/widget/shareqq/index.html?url=http://dj.sina.com.cn&title=新浪电竞-专业电竞媒体-赛事直播报道-新浪电子竞技&description=新浪电竞是国内专业电竞门户网站,综合英雄联盟、DOTA2、炉石传说、魔兽争霸、CSGO、守望先锋等各类竞技游戏电竞赛事资讯报道、视频直播、战报点评。&charset=utf-8;" target="_blank" data-cmd="more" class="share_btn mshare"></a>
+            </div>
+            <p class="mailbox"><i></i> <a title="发送邮箱" href="Mailto:yys@dj.sina.cn" style="color:#808080">yys@dj.sina.cn </a></p>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('#foot_weixin').click(function(e){
+                $('.foot1').append(' <div class="weixinpop" style="top: 210px;left: 50%;margin-left: 260px;"><div class="t"></div><img src="http://bshare.optimix.asia/barCode?site=weixin&amp;url=http://dj.sina.com.cn/article/fxxsmif3134363.shtml">用微信扫描二维码<br>分享至微信朋友圈</div>')
+                e.stopPropagation();
+            })
+        })
+    </script>
+</div>
+<footer>
+    <p class="firstLine"><a href="javascript:void(0);">新浪简介</a><span class="interval">|</span><a href="javascript:void(0);">About Sina</a><span class="interval">|</span><a href="javascript:void(0);">网站地图</a><span class="interval">|</span><a href="javascript:void(0);">广告服务</a><span class="interval">|</span><a href="javascript:void(0);">联系我们</a><span class="interval">|</span><a href="javascript:void(0);">招聘信息</a><span class="interval">|</span><a href="javascript:void(0);">网站律师</a><span class="interval">|</span><a href="javascript:void(0);">SINA English</a><span class="interval">|</span><a href="javascript:void(0);">通行证注册</a><span class="interval">|</span><a href="javascript:void(0);">产品答疑</a></p>
+    <p>Copyright © 1996-2016 SINA Corporation, All Rights Reserved</p>
+    <p>新浪公司 版权所有</p>
+</footer>
+
+<!--右边按钮-->
+<div class="right_btn">
+    <a class="weixin" href="javascript:void(0);"><i></i></a>
+    <a class="totop" href="javascript:void(0);"><i></i></a>
+    <img class="QR" src="/gamedj/static/images/wdj_new/right_qr.png" />
+</div>
+<script src="/gamedj/static/js/jquery.easing.js?version=201811161122"></script>
+<script src="/gamedj/static/js/public.js?version=201811161122"></script>
+
+<script>
+    //赛程切换
+    (function () {
+        var $Tag = $(".Schedule_tag").find("li");
+        var $con = $(".Schedule_con");
+        var $float_Sign = $(".Schedule_float_sign");
+        changeTag($Tag, $con, "current", "click", function ($tag,index) {
+            $float_Sign.stop().animate({
+                "left": $tag.position().left - 1 ,
+                "width": $tag.width() + 2,
+            },{duration:300,easing: "easeOutBack"})
+            if($con.eq(index).find('.scroll_con').length == 0){
+                Wscroll($con.eq(index))
+            }
+        })
+    })();
+    
+    //视频切换
+    (function () {
+        var $Tag = $(".Hot_videos_tag").find("a");
+        var $con = $(".Hot_videos_con");
+        var $float_Sign = $(".videos_float_sign");
+        changeTag($Tag, $con, "current", "click", function ($tag) {
+            $float_Sign.stop().animate({
+                "left": $tag.position().left - 1 ,
+                "width": $tag.width(),
+            },{duration:300,easing: "easeOutBack"});
+            $con.removeClass("video_cur");
+            //var index = $(".Hot_videos_tag .current").index($Tag)
+            var index = $Tag.index($(".Hot_videos_tag .current"));
+            $con.eq(index).addClass("video_cur");
+        })
+    })();
+    //深度报道
+    (function () {
+        var $Tag = $(".detailed_list");
+        changeTag($Tag, null, "active", "hover")
+    })();
+    /*资讯图片延迟加载*/
+   /*
+    $('.E_sports_news img[data-src]').live('inview', function(event, isVisible) {
+        if (!isVisible) {
+            return;
+        }
+        var _this = $(this);
+        _this.load(function() {
+            _this.css({opacity: 1});
+            console.log("come in");
+        });
+        _this.attr('src', _this.attr('data-src'));
+
+        _this.removeAttr('data-src');
+    });*/
+    
+    /*延时加载页面图片*/
+    $('.E_sports_news img[data-src]').live('inview', function(event, isVisible) {
+      if (!isVisible) {return;}
+      var img = $(this);
+      // Show a smooth animation
+      img.css('opacity', 0);
+      img.attr('src',"");
+      img.load(function() { img.animate({ opacity: 1 }, 500); });
+      // Change src
+      img.attr('src', img.attr('data-src'));
+      // Remove it from live event selector
+      img.removeAttr('data-src');
+    });
+   
+
+    //首页热门专题
+    $('.Popular_topics').live('inview', function(event, isVisible) {
+        if (!isVisible) {
+            return;
+        }
+        $(this).find('.Popular_topics_list').addClass('enlarge')
+    });
+
+    
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?1ec76ed58610652c8364bc543c6f2c9f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!-- SUDA_CODE_START -->
+<script type="text/javascript" charset="utf-8" src="http://mjs.sinaimg.cn/wap/public/suda/201611031750/suda_log.min.js"></script>
+<!-- SUDA_CODE_END -->
+</body>
+</html>
+
+

@@ -1,0 +1,254 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>微博舆情_投资易</title>
+	<meta name="keywords" content="新浪财经  大数据  股市 量化投资 投资易 level2 资金流向 大盘指数 数策选股 热点概念
+基于新浪网、新浪微博每天数百万新闻资讯与用户信息，将大数据的创新应用通过可视化的方式展示给用户，让股民用户无需专业技能，即可享有大数据对股市的挖掘成果，个性化定制股市操作策略与分析逻辑，稳准出击，理智预判，智能持仓，为用户提供高效、客观的股票信息决策支持。"/>
+    <meta name="description" content="新浪财经全新网页版沪深Level2行情，十档盘口，50笔委托，3秒行情刷新速度，实时逐笔，弹幕实时聊天，高手解盘"/>
+    <meta content="width=1260,maximum-scale=2.0" name="viewport"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="stylesheet" href="/view/public/css/common.min.css?id=201801232">
+<link rel="stylesheet" href="/view/public/css/wbyq/index.css?id=201801232">
+
+</head>
+<body>
+<script type='text/javascript' charset="utf-8">
+	var _isSetPhone = '0';
+	var _isSetSurvey = '0';
+    var _uid = '';
+    var _version = 'public';
+    var _tzylogin = !!0;
+    var _payUpdate = !!0;
+    (function() {
+        var doc = document,
+                wa = doc.createElement('script'),
+                s = doc.getElementsByTagName('script')[0];
+        wa.type = 'text/javascript';
+        wa.charset = 'utf-8';
+        wa.async = true;
+        wa.src = 'https://www.sinaimg.cn/unipro/pub/suda_s_v851c.js?v=20190219';
+        s.parentNode.insertBefore(wa, s);
+    })();
+</script>
+<!-- header -->
+<div class="header">
+    <div class="wrap clearfix">
+        <a href="/" class="tzy-logo" suda-uatrack="key=touzi_pc_v2_navigate&value=touzi_pc_v2_navigate_01">投资易</a>
+        <div class="userInfo">
+                        <span><a href="https://touzi.sina.com.cn/login?r=https%3A%2F%2Ftouzi.sina.com.cn%2Fpublic%2Fwbyq%3Ftimestamp%3D1570273439">登录</a></span> | <a href="http://comment4.news.sina.com.cn/comment/skin/feedback.html?channel=ly&newsid=1288 " target="_blank" suda-uatrack="key=touzi_pc_v2_navigate&value=touzi_pc_v2_navigate_03">意见反馈</a> | <a href="/public/help" suda-uatrack="key=touzi_pc_v2_navigate&value=touzi_pc_v2_navigate_21">帮助中心</a>
+                    </div>
+    </div>
+    <div class="wrap clearfix">
+        <div id="mymenu" class="mymenu">
+            <ul class="clearfix"></ul>
+                        <div class="fxpc-link"><a href="javascript:;" class="pc-link" suda-uatrack="key=touzi_pc_v2_navigate&value=touzi_pc_v2_navigate_57" data-event="dc|creat">风险评测</a></div>
+            <!--<div class="aboutme-link"><a href="http://touzi.sina.com.cn/view/public/contact/" class="contact-link" suda-uatrack="key=touzi_pc_v2_navigate&value=touzi_pc_v2_navigate_59">联系我们</a></div>-->
+        </div>
+        <div class="searchbar">
+            <input suda-uatrack="key=touzi_pc_v2_navigate&value=touzi_pc_v2_navigate_11" type="text" class="shb-input" id="suggest_top" onfocus="this.style.color='#fff';" onBlur="if(this.value == '')this.style.color='';"><span class="shb-btn" id="submit_search" ani-cls="opacity"></span>
+        </div>
+    </div>
+</div>
+<div class="navTop">
+    <ul class="wrap clearfix">
+        <li ><a href="/public" suda-uatrack="key=touzi_pc_v2_navigate&value=touzi_pc_v2_navigate_12">市场概览</a></li>
+        <li ><a href="/public/mystock" suda-uatrack="key=touzi_pc_v2_navigate&value=touzi_pc_v2_navigate_13">我的自选</a></li>
+        <li ><a href="/public/theme" suda-uatrack="key=touzi_pc_v2_navigate&value=touzi_pc_v2_navigate_14">概念机会</a></li>
+        <li ><a href="/public/data" suda-uatrack="key=touzi_pc_v2_navigate&value=touzi_pc_v2_navigate_15">资金流向</a></li>
+        <li ><a href="/public/bhot" suda-uatrack="key=touzi_pc_v2_navigate&value=touzi_pc_v2_navigate_16">行为热度</a></li>
+        <li ><a href="/public/strategy" suda-uatrack="key=touzi_pc_v2_navigate&value=touzi_pc_v2_navigate_17">潜力热股</a></li>
+        <li class='cur'><a href="/public/wbyq" suda-uatrack="key=touzi_pc_v2_navigate&value=touzi_pc_v2_navigate_18">微博舆情</a></li>
+        <li ><a href="/public/choose" suda-uatrack="key=touzi_pc_v2_navigate&value=touzi_pc_v2_navigate_19">数策选股</a></li>
+        <!--<li><a href="http://finance.sina.com.cn/video" target="_blank" suda-uatrack="key=touzi_pc_v2_navigate&value=touzi_pc_v2_navigate_20">牛眼看盘</a></li>-->
+        <li class="icon_bigdata "><a href="/public/xray" suda-uatrack="key=touzi_pc_v2_navigate&value=touzi_pc_v2_navigate_55">大数据诊股</a></li>
+        <li ><a href="/public/dragon" suda-uatrack="key=touzi_pc_v2_navigate&value=touzi_pc_v2_navigate_61">龙虎榜</a></li>
+        <!--<li ><a href="http://touzi.sina.com.cn/view/public/video/video.php" target="_blank" suda-uatrack="key=touzi_pc_v2_navigate&value=touzi_pc_v2_navigate_56">培训视频</a></li>-->
+        <!--<li ><a target="_blank" href="http://touzi.sina.com.cn/public/live/?type=index" suda-uatrack="key=touzi_pc_v2_navigate&value=touzi_pc_v2_navigate_60">名师直播</a></li>-->
+    </ul>
+</div><div class="tabs">
+    <div class="subnav">
+        <div class="wrap clearfix tabs-menu">
+            <ul class="sublist" style="padding-left:703px;display:none">
+                <li class='cur' data-tabs="home.index"><a href="javascript:void(0)">微博判市</a></li>
+                <li  data-tabs="home.hotTalk"><a href="javascript:void(0)">微博热议</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script id="sub1_htmlTmp" type="text/x-dot-template">
+    <div class="wrap">
+        <div class="wbyqIndex">
+            <div class="t_part">
+                <div class="t_tit clearfix">
+                    <h2>微博股票热度趋势图</h2>
+                </div>
+                <div class="t_cont">
+                    <div class="weiBoHotChartWrap"><div id='weiBoHotChart'></div></div>
+                </div>
+            </div>
+            <div class="t_part nomargin">
+                <div class="t_tit clearfix">
+                    <h2>人气指数排行榜</h2>
+                </div>
+                <div class="t_cont rqzhishu">
+                    <div id='weiBoStockHotCon'>
+                        <div id='weiBoStockHotTab' class='tabs-menu'>
+                            <ul>
+                                <li data-tabs='2h' class='cur'>2小时</li>
+                                <li data-tabs='6h'>6小时</li>
+                                <li data-tabs='12h'>12小时</li>
+                                <li data-tabs='1d'>1天</li>
+                                <li data-tabs='1w'>1周</li>
+                                <li data-tabs='1m'>1月</li>
+                            </ul>
+                        </div>
+                        <div id='weiBoStockHotChart'></div>
+                        <div id='weiBoStockHotLg' class='tabs-lg'>
+                            <ul class='clearFix'>
+                                <li data-tabs='-8' class='cur'>8%</li>
+                                <li data-tabs='-6' style='background-color: #ff5656;'>6%</li>
+                                <li data-tabs='-4' style='background-color: #ff8080;'>4%</li>
+                                <li data-tabs='-2' style='background-color: #ffdfd6;color: #f54545;'>2%</li>
+                                <li data-tabs='0'  style='background-color: #F3F3F3;color: #000;'>0</li>
+                                <li data-tabs='2'  style='background-color: #d3edd4;color: #23ab4c;'>-2%</li>
+                                <li data-tabs='4'  style='background-color: #7cd29a;'>-4%</li>
+                                <li data-tabs='6'  style='background-color: #4cbb73;'>-6%</li>
+                                <li data-tabs='8'  style='background-color: #23ab4c;'>-8%</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class='marketWeiBoStockPicCon'>
+                        <ul id='motionTabs' class='tabs-menu'>
+                            <li data-tabs='0' class='cur'>全部情感</li>
+                            <li data-tabs='1'>正面情感</li>
+                            <li data-tabs='2'>中性情感</li>
+                            <li data-tabs='3'>负面情感</li>
+                        </ul>
+                        <div class='marketWeiBoStockPic'>
+                            <a id="marketWeiBoStockLink" href="//touzi.sina.com.cn/stock/$symbol" target="_blank"><img id='marketWeiBoStockImg' src='//touzi.sina.com.cn/view/BillImageFree.php?dir=$motion&amp;symbol=$symbol'></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<script id="sub2_htmlTmp" type="text/x-dot-template">
+    <div class="wrap">
+        <div class="wbyqIndex">
+            <div class="t_part">
+                <div class="t_tit t_tit2 clearfix">
+                    <h2>微博热议</h2>
+                    <div class="t_search">
+                        <input type="text" id="suggest_theme" name="q" autocomplete="off" class="search_txt" onfocus="this.style.color='#333';" onblur="if(this.value == '')this.style.color='';" placeholder="请输入您感兴趣股票/代码/名称">
+                        <input type="button" class="btn" value="" id="theme_search" suda-uatrack="key=touzi&amp;value=touzi_pc_v1_concept_themes_search">
+                    </div>
+                </div>
+                <div class="t_cont">
+                    <div class="hotTalk clearfix">
+                        <div class="hot_left">
+                            <div class="tabs">
+                                <div class="tabs-menu">
+                                    <ul class="clearfix">
+                                        <li data-tabs="weibo|get" data-time="0">全部</li>
+                                        <li data-tabs="weibo|get" data-time="1">精华</li>
+                                        <li data-tabs="weibo|get" data-time="2">精华</li>
+                                        <li data-tabs="weibo|get" data-time="3">精华</li>
+                                        <li data-tabs="weibo|get" data-time="4">精华</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hot_right">
+                            <div class="hot_listWrap">
+                                <div class="hot_tit">微博股票提及数变动上升</div>
+                                <div id="hot_weibo_up"></div>
+
+                            </div>
+                            <div class="hot_listWrap">
+                                <div class="hot_tit">微博股票提及数变动下降</div>
+                                <div id="hot_weibo_down"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<script id="weibo_list_dataTmp" type="text/x-dot-template">
+    {{~it.data:value:index}}
+    <div class="sectionTxt clearfix">
+        <a href="http://weibo.com/u/{{=value.uid}}" target="_blank" class="headPic">
+            <img src="{{=value.headImage}}">
+        </a>
+        <div class="weibo-list">
+            <h3 class="weibo-list-name"><a href="http://weibo.com/u/5883691670" title="{{=value.nickname}}" target="_blank" class="weibo-user">{{=value.nickname}}</a></h3>
+            <p class="weibo-list-text">{{=value.content}}</p>
+            {{?value.containsPhoto}}
+            <div class="linePicShow">
+                <a href="http://weibo.com/{{=value.uid}}/{{=value.mid62}}" target="_blank">查看原微博图片&gt;&gt;</a>
+            </div>
+            {{?}}
+            {{?value.extend}}
+            <div class="weibo-list-retweet"><div class="weibo-list-retweetname"><a href="http://weibo.com/u/{{=value.retweetUid}}" title="{{=value.retweetNickname}}" target="_blank" class="weibo-user">{{=value.retweetNickname}}</a></div><p class="weibo-list-text">{{=value.extend}}</p></div>
+            {{?}}
+            <div class="weibo-list-meta clearfix">
+                <p class="weibo-list-meta-l">{{=value.pubTime}}</p>
+                <div class="weibo-list-meta-r">
+                    <a href="http://weibo.com/{{=value.uid}}/{{=value.mid62}}?type=repost" target="_blank">转发</a>
+                    <a href="http://weibo.com/{{=value.uid}}/{{=value.mid62}}?type=comment" target="_blank">评论</a>
+                </div>
+            </div>
+            <div class="weiboStock clearfix">相关股票： {{=value.stocks}}</div>
+        </div>
+    </div>
+    {{~}}
+</script>
+<script id="hot_weibo_up_dataTmp" type="text/x-dot-template">
+    <table class="hotweibo">
+        {{~it.data:value:index}}
+        <tr>
+            <td>{{=value.namelink}}</td>
+            <td><div><span class="ani-number" data-ani="width|{{=value.percent}}"></span></div></td>
+            <td>{{=value.CHG}}%</td>
+        </tr>
+        {{~}}
+    </table>
+</script>
+<!-- footer -->
+<div class="footer">
+    <!--<div class="friendConcact"><img src="/view/v2/images/login_icon_05v3.png?id=20170114" alt=""></div>-->
+    客户服务热线：<span id="channel_tel">400-156-6699</span> 欢迎批评指正<br>风险提示：本产品利用客观数据进行数据模型运算，由此得出的相关结论，仅供参考，不构成投资建议，据此操作，盈亏自负。<br><a href="http://corp.sina.com.cn/chn/">新浪简介</a> | <a href="http://corp.sina.com.cn/eng/">About Sina</a> | <a href="http://emarketing.sina.com.cn/">广告服务</a> | <a href="http://www.sina.com.cn/contactus.html">联系我们</a> |
+    <a href="http://corp.sina.com.cn/chn/sina_job.html">招聘信息</a> | <a href="http://www.sina.com.cn/intro/lawfirm.shtml">网站律师</a>
+    | <a href="http://english.sina.com">SINA English</a> | <a href="https://login.sina.com.cn/signup/signup.php">通行证注册</a> | <a href="http://tech.sina.com.cn/focus/sinahelp.shtml">产品答疑</a><br>Copyright © 1996-2017 SINA Corporation, All Rights Reserved<br>新浪公司 版权所有
+</div>
+
+<!-- footer end -->
+<link rel="stylesheet" href="/view/public/css/login.css?id=20190527">
+<script type="text/javascript" src="https://i.sso.sina.com.cn/js/outlogin_layer.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://i.sso.sina.com.cn/js/qrcode_login.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://current.sina.com.cn/theone/IO.WebPush4.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src='https://finance.sina.com.cn/hsuan/js/flashcanvas.js'></script>
+<![endif]-->
+<script type="text/javascript" src='https://finance.sina.com.cn/sinafinancesdk/js/sf_sdk.js'></script>
+<script src="//s4.cnzz.com/z_stat.php?id=1261354188&web_id=1261354188" language="JavaScript"></script><!--测试环境-->
+<script src="https://n.sinaimg.cn/finance/tzy/js/jq.js" charset="utf-8"></script>
+<script src='/view/public/js/common.js?id=20190527'></script>
+<script src="https://finance.sina.com.cn/js/chart/d3.3.5.js"></script>
+<script src="/view/public/js/wbyq/index.js?id=201801232"></script>
+<script src="/view/public/js/pageload.js?id=201801232"></script>
+<script type="text/javascript">
+    (function(){
+        if(window.top !== window.self || window._thereIsNoRealTimeMessage){return};
+        var script = document.createElement('script');
+        script.setAttribute('charset', 'gb2312');
+        script.src = 'https://n.sinaimg.cn/finance/tzy/js/realtime.js';
+        document.getElementsByTagName('head')[0].appendChild(script);
+    })();
+</script>
+</body>
+</html>

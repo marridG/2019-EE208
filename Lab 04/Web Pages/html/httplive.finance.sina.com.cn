@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    
+<title>财经直播_股市直播_新浪财经_新浪网</title>
+<meta name="keywords" content="新浪财经直播，股市直播，实时解盘，股票咨询"/>
+<meta name="description" content="财经直播是新浪财经重磅推出的集牛人在线答疑、股民问答互动、重磅事件解读、A股行情实时解析等于一体的直播平台。"/>
+
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <meta name="renderer" content="webkit">
+    <link rel="dns-prefetch" href="//n.sinaimg.cn"/>
+    <!--CSS格式化-->
+    <link rel="stylesheet" charset="utf-8" href="//n.sinaimg.cn/finance/mina_vote/dist/normalize-min.css?livepc=190530">
+    <!--牛眼通用样式-->
+    <link rel="stylesheet" charset="utf-8" href="//n.sinaimg.cn/finance/niuyan2017/dist/common-min.css?livepc=190530"/>
+    
+<link rel="stylesheet" charset="utf-8" href="//n.sinaimg.cn/finance/niuyan2017/dist/index-min.css?livepc=190530"/>
+
+    <script>
+        var PAGE_CONFIG = {
+            TEACHER_ID: '',//播主UID
+            PROGRAM_ID: '',//当前节目ID
+            USER_ID: '',//当前用户ID
+            USER_NICK: '',
+            USER_AVATAR: '',
+            USER_AVATAR_LARGE: '',
+            HEADER_NOFIX: '1'
+        };
+    </script>
+</head>
+<body >
+<!--通用侧栏-->
+<div class="aside" id="aside">
+    <a class="item go-code" node-pop="right" href="javascript:;" a-m-type="go-code"><span class="onhover"></span></a>
+    <a class="item go-top" href="javascript:;" a-type="go-top"><span class="onhover">回到<br>顶部</span></a>
+</div>
+<!--通用侧栏-->
+<!--通用顶栏 start-->
+<div class="m-top-nav" id="top_bar">
+    <div class="wrap">
+        <h1 class="m-logos">
+            <a class="niuyan" href="http://live.finance.sina.com.cn" target="_blank">新浪财经直播</a>
+        </h1>
+        <div class="m-links">
+            <a href="/" class="active" suda-uatrack="key=pc_live_fin&value=index">首页</a>
+            <a href="/user"  suda-uatrack="key=pc_live_fin&value=personal_center">个人中心</a>
+        </div>
+        <div class="m-search" suda-uatrack="key=pc_live_fin&value=search">
+            <form action="/search" target="_blank" method="get">
+                <label for="top_search"></label>
+                <input type="search" required placeholder="搜索播主" id="top_search" name="keyword">
+                <button type="submit" title="点击搜索"></button>
+            </form>
+        </div>
+        <div class="m-join">
+            <a href="javascript:;" class="m-join-btn"
+               onclick="javascript:document.getElementById('top_join_popup').style.display='block';">我要直播</a>
+            <div class="m-join-popup" id="top_join_popup" style="display:none;">
+                <div class="inner">
+                    <span class="m-btn-close"
+                          onclick="javascript:document.getElementById('top_join_popup').style.display='none';">X </span>
+                    <p>
+                        <a class="email" href="mailto:liuchen3@staff.sina.com.cn" target="_blank" title="点击发送邮件">liuchen3@staff.sina.com.cn</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="m-top-user" id="top_user">
+            <div class="view-in view">
+                <span class="item user-name">我的用户名</span>
+                <i class="sep">|</i>
+                <a href="javascript:;" class="item" a-type="logout">退出</a>
+            </div>
+            <div class="view-out view">
+                <a href="javascript:;" class="item" a-type="login">登录</a>
+                <i class="sep">|</i>
+                <a class="item" target="_blank" href="https://login.sina.com.cn/signup/signup?entry=sports">注册</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--通用顶栏 end-->
+
+<!--主打 start-->
+<div class="header wrap part module-loading" id="header" suda-uatrack="key=pc_live_fin&value=focus_pic">
+    <!--轮播 start-->
+    <div class="left hero-slider">
+        <div class="slider-wrap clearfix" id="hero_slider">
+            <a class="slider-card" target="_blank" href="@@=it.program_url$$">
+                <div class="s-poster">
+                    <img data-src="@@=it.pic1$$" alt="@@=it.teacher.name$$：@@=it.title$$">
+                </div>
+                <div class="s-text"><h3>@@=it.teacher.name$$：@@=it.title$$</h3></div>
+            </a>
+        </div>
+        <div class="slider-dot clearfix" id="hero_slider_dot" style="display: none"></div>
+    </div>
+    <!--轮播 end-->
+    <!--直播推荐 start-->
+    <ul class="right hero-items" id="hero_items">
+        <li class="type-@@=it.program_type$$ status-@@=it.extraInfo.live_status$$">
+            <a class="inner" target="_blank" href="@@=it.program_url$$">@@=it.teacher.name$$：@@=it.title$$</a>
+        </li>
+    </ul>
+    <!--直播推荐 end-->
+</div>
+<!--主打 end-->
+
+<div class="wrap" id="main">
+    <!--左侧 start-->
+    <div class="left w-9">
+        <!--直播聚焦 start-->
+        <div class="section" suda-uatrack="key=pc_live_fin&value=live_focus" style="display:none;">
+            <div class="part-head">
+                <h2 class="active">直播聚焦</h2>
+            </div>
+            <div class="cont module-loading" id="hot_items">
+                <div class="live-card-M pay-type-@@=it.pay_type$$ program-type-@@=it.program_type$$ status-@@=it.extraInfo.live_status$$">
+                    <a class="poster" href="@@=it.program_url$$" target="_blank">
+                        <img data-src="@@=it.pic1$$">
+                        <span class="status">@@=it.status_text$$</span>
+                        <span class="pay-type">@@=it.pay_type_text$$</span>
+                    </a>
+                    <div class="info">
+                        <h3><a href="@@=it.program_url$$" target="_blank">@@=it.title$$</a></h3>
+                        <div class="ft">
+                            <span class="name"><a href="@@=it.teacher_url$$" target="_blank">@@=it.teacher.name$$</a></span>
+                            <p class="time"><span>@@=it.start_time$$</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--直播聚焦 end-->
+
+        <!--图文 视频 我的 start-->
+        <div id="program-tab" class="program-tab">
+            <div class="part-head-wrap">
+                <div class="part-head tab-nav">
+                    <h2 class="active" tab="tuwen" suda-uatrack="key=pc_live_fin&value=pic_live">图文直播</h2>
+                    <h2 tab="live" suda-uatrack="key=pc_live_fin&value=video_live">视频直播</h2>
+                    <h2 tab="my" suda-uatrack="key=pc_live_fin&value=attention">我的关注</h2>
+                </div>
+            </div>
+            <div class="tab-wrap">
+                <!--图文卡片 start-->
+                <div class="tuwen-card-L">
+                    <a class="avatar" href="@@=it.program.teacher_url$$" target="_blank"><img data-src="@@=it.user.portrait_big$$" alt="@@=it.user.name$$"></a>
+                    @@? it.user.follow_status$$
+                    <span class="follow active" a-type="unfollow" uid="@@=it.user.uid$$">已关注</span>
+                    @@??$$
+                    <span class="follow" a-type="follow" uid="@@=it.user.uid$$">关注</span>
+                    @@?$$
+                    <div class="info">
+                        <h3><a class="link" href="@@=it.program.program_url$$" target="_blank"><span class="name">@@=it.user.name$$</span></a></h3>
+                        <!--<span class="title">@@=it.program.title$$</span>-->
+                        <div class="time">@@=it.publish_time$$</div>
+                        @@? it.islive$$
+                        <div class="content">@@=it.content$$</div>
+                        @@??$$
+                        <div class="content">
+                            <p><em>网友提问：</em>@@=it.question$$</p>
+                            <p><em>老师回复：</em>@@=it.answer$$</p>
+                        </div>
+                        @@?$$
+                    </div>
+                </div>
+                <!--图文卡片 end-->
+                <!--节目卡片 start-->
+                <div class="live-card-L pay-type-@@=it.pay_type$$ program-type-@@=it.program_type$$ status-@@=it.extraInfo.live_status$$">
+                    <a class="poster" href="@@=it.program_url$$" target="_blank">
+                        <img data-src="@@=it.pic1$$">
+                        <span class="status">@@=it.status_text$$</span>
+                        <span class="pay-type">@@=it.pay_type_text$$</span>
+                    </a>
+                    <div class="info">
+                        <h3><a href="@@=it.program_url$$" target="_blank">@@=it.title$$</a></h3>
+                        <div class="ft">
+                        <span class="name"><a href="@@=it.teacher_url$$"
+                                              target="_blank">@@=it.teacher.name$$</a></span>
+                            <p class="time"><span>@@=it.start_time$$</span></p>
+                        </div>
+                    </div>
+                </div>
+                <!--节目卡片 end-->
+            </div>
+
+        </div>
+        <!--图文 视频 我的 end-->
+        <div style="background-image:url(//n.sinaimg.cn/finance/app2018/images/live/app.png?a=1); background-image:-webkit-image-set(url(//n.sinaimg.cn/finance/app2018/images/live/app.png) 1x, url(//n.sinaimg.cn/finance/app2018/images/live/app2x.png) 2x); background-repeat:no-repeat; background-position:0 0; background-size:100% 100%;margin:10px auto;">
+            <a style="display: block;height:90px;" href="https://finance.sina.com.cn/mobile/comfinanceweb.shtml?source=zhibo02" target="_blank" data-sudaclick="sf_cjapp_aboveBlogger_p"></a>
+        </div>
+        <!--全部播主 start-->
+        <div class="section" suda-uatrack="key=pc_live_fin&value=all_bozhu">
+            <div class="part-head">
+                <h2 class="active">全部播主</h2>
+            </div>
+            <div id="all_teachers">
+                <div class="teacher-card-L blk">
+                    <div class="info">
+                        <h3><a href="@@=it.teacher_url$$" target="_blank">@@=it.name$$</a></h3>
+                        <p>@@=it.signature_long$$</p>
+                    </div>
+                    <a class="avatar" href="@@=it.teacher_url$$" target="_blank"><img data-src="@@=it.portrait_big$$"
+                                                                                      alt="@@=it.name$$"></a>
+                    @@? it.follow_status$$
+                    <span class="follow active" a-type="unfollow" uid="@@=it.uid$$">已关注</span>
+                    @@??$$
+                    <span class="follow" a-type="follow" uid="@@=it.uid$$">关注</span>
+                    @@?$$
+                    <ul class="status">
+                        <li class="followed">关注 <em>@@=it.follow_num$$</em></li>
+                        <li class="visited">访问 <em>@@=it.view_num$$</em></li>
+                        <li class="played">直播数 <em>@@=it.program_num$$</em></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--全部播主 end-->
+    </div>
+    <!--左侧 end-->
+
+    <!--右侧 start-->
+    <div class="right w-3">
+        <!--推荐播主 start-->
+        <div class="section" suda-uatrack="key=pc_live_fin&value=introduce">
+            <div class="part-head">
+                <h2 class="active">推荐播主</h2>
+            </div>
+            <div class="cont" id="push_teachers">
+                <div class="teacher-card-M blk">
+                    <div class="info">
+                        <h3><a href="@@=it.teacher_url$$" target="_blank">@@=it.name$$</a></h3>
+                        <p class="followed">关注 <em>@@=it.follow_num$$</em></p>
+                    </div>
+                    <a class="avatar" href="@@=it.teacher_url$$" target="_blank">
+                        <img data-src="@@=it.portrait_big$$" alt="@@=it.name$$"></a>
+                    @@? it.follow_status$$
+                    <span class="follow active" a-type="unfollow" uid="@@=it.uid$$">已关注</span>
+                    @@??$$
+                    <span class="follow" a-type="follow" uid="@@=it.uid$$">关注</span>
+                    @@?$$
+                </div>
+            </div>
+        </div>
+        <!--推荐播主 end-->
+
+        <!--人气榜 start-->
+        <div class="section" suda-uatrack="key=pc_live_fin&value=hot">
+            <div class="part-head">
+                <h2 class="active">人气榜</h2>
+            </div>
+            <div class="cont blk">
+                <table class="rank-table" id="hot_teachers">
+                    <thead>
+                    <tr>
+                        <th width="20%">名次</th>
+                        <th width="50%">播主</th>
+                        <th width="30%">访问</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="rank-@@=it.rank$$">
+                        <td><span>@@=it.rank$$</span></td>
+                        <td><a href="@@=it.teacher_url$$" target="_blank">@@=it.name$$</a></td>
+                        <td>@@=it.view_num$$</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--人气榜 end-->
+    </div>
+    <!--右侧 end-->
+</div>
+
+<!-- 通用页脚 start -->
+<div class="footer">
+    <div class="inner part">
+        <div class="wrap">
+            <div class="col">
+                <h3>联系我们</h3>
+                <p>
+                    <span class="phone">400-052-0066</span>
+                    <a class="email" href="mailto:liuchen3@staff.sina.com.cn" target="_blank" title="点击发送邮件">liuchen3@staff.sina.com.cn</a>
+                </p>
+            </div>
+            <div class="col">
+                <h3>免责声明</h3>
+                <p class="bold">博主所发内容不构成买卖股票依据。新浪财经网站提供此互动平台不代表认可其观点。新浪财经所有博主不提供代客理财等非法业务。有私下进行收费咨询或推销其他产品服务，属于非法个人行为，与新浪财经无关，请各位网友务必不要上当受骗！投资有风险，入市需谨慎！</p>
+            </div>
+            <div class="col">
+                <h3>手机客户端</h3>
+                <p><img class="qr-img" src="//n.sinaimg.cn/finance/niuyan2017/images/app_qr.png" alt="手机客户端"></p>
+            </div>
+        </div>
+    </div>
+    <div class="ft">Copyright &#169; 1996 - 2018 SINA Corporation, All Rights Reserved 新浪公司 <a target="_blank" href="http://www.sina.com.cn/intro/copyright.shtml">版权所有</a>
+    </div>
+</div>
+<!-- 通用页脚 end -->
+
+<!-- common js start -->
+<script charset="utf-8" src="//i.sso.sina.com.cn/js/outlogin_layer.js?livepc=190530"></script>
+<script charset="utf-8" src="//n.sinaimg.cn/finance/fe/doT.min.js?livepc=190530"></script>
+<script charset="utf-8" src="//n.sinaimg.cn/finance/6adc145b/20170803/pages-min.js?livepc=190530"></script>
+<script charset="utf-8" src="//n.sinaimg.cn/finance/fe/slider-min.js?livepc=190530"></script>
+<script charset="utf-8" src="//news.sina.com.cn/268/2015/0112/jquery.newest.js?livepc=190530"></script>
+<script charset="utf-8" src="//n.sinaimg.cn/finance/66ceb6d9/20181101/shiming.js?livepc=190530"></script>
+<script charset="utf-8" src="//n.sinaimg.cn/tech/66ceb6d9/20181109/util.js?livepc=190530"></script>
+<script charset="utf-8" src="//n.sinaimg.cn/finance/niuyan2017/dist/app-min.js?livepc=190530"></script>
+
+<script charset="utf-8" src="//n.sinaimg.cn/finance/niuyan2017/dist/index-min.js?livepc=190530"></script>
+<!-- 点击地图 begin -->
+<script type="text/javascript" src="http://www.sinaimg.cn/unipro/pub/suda_m_v629.js"></script>
+<script type="text/javascript">suds_init(4090,100.0000,1015,2);</script>
+<!-- 点击地图 end -->
+
+<script type="text/javascript" charset="utf-8" src="http://n.sinaimg.cn/tech/66ceb6d9/20180326/topheader.js?livepc=190530"></script>
+<script type="text/javascript" charset="utf-8" src="http://www.sinaimg.cn/unipro/pub/suda_s_v851c.js"></script>
+</body>
+</html>

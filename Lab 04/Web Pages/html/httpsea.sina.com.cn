@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>效果营销平台-首页</title>
+	<link rel="stylesheet" href="http://rm.sina.com.cn/minisite/20140421emarketing/css/base.css" />
+	<script src="http://rm.sina.com.cn/minisite/20140421emarketing/js/jquery-1.11.0.min.js"></script>
+	<script src="http://rm.sina.com.cn/minisite/20140421emarketing/js/jq_fadePlayer.js"></script>
+	<script src="http://rm.sina.com.cn/minisite/20140421emarketing/js/date.js"></script>
+	<script src="http://rm.sina.com.cn/minisite/20140421emarketing/js/scroll_pic.js"></script>
+    <script>
+    $(function () {
+        //调用轮播插件
+        $('#player').fadePlayer();
+        
+        $('.links').hover(function () {
+            $('#scrollArrLeft4').show();
+            $('#scrollArrRight4').show();
+        },function () {
+            $('#scrollArrLeft4').hide();
+            $('#scrollArrRight4').hide();
+        })
+        
+    });    
+    </script>
+</head>
+<body>
+    
+	﻿<script>
+    $(function () {
+        //填充省份
+        var parr=new Array();
+        var pstr='';
+        for(var p in x1dl){
+            if(parr[x1dl[p][0]]!=1){
+                pstr+='<option value="'+x1dl[p][0]+'" >'+x1dl[p][0]+'</option>';
+                parr[x1dl[p][0]]=1;
+            }
+        }
+        $("#province").html(pstr);
+        changeProvince();
+
+        //打开登录
+        var login = $('#login');
+        $('#question').click(function () {
+            var w = ($(window).width() - login.width()) / 2;
+            var h = ($(window).height() - login.height()) / 2 + $(window).scrollTop();
+            login.css({
+                top : h,
+                left : w
+            }).fadeIn();
+            return false;
+        })
+        $('#lg_close').click(function () {
+            login.fadeOut();
+            return false;
+        })
+
+       
+      //导航效果
+        $('#menus').find('a').hover(function () {
+            var checkIndex = $(this).parent().index();
+            if (!$(this).hasClass('me'+(checkIndex+1)+'_2')) {
+                $(this).addClass('me'+(checkIndex+1)+'_2');
+            }
+        },function () {
+            var checkIndex = $(this).parent().index();
+            $(this).removeClass('me'+(checkIndex+1)+'_2');
+        });
+        
+    });
+    function changeProvince(){
+            var cstr='';
+            var pValue=$("#province").val();
+            var carr=new Array();
+            for(var p in x1dl)
+                {
+                if(x1dl[p][0]==pValue)
+                    {
+                    if(carr[x1dl[p][1]]!=1)
+                        {
+                            cstr+='<option value="'+x1dl[p][1]+'" >'+x1dl[p][1]+'</option>';
+                            carr[x1dl[p][1]]=1;
+                        }
+
+                    }
+
+                }
+            $("#city").html(cstr);
+            changeCity();
+        }
+        function changeCity(){
+            var sstr='';
+            var cValue=$("#city").val();
+            for(var p in x1dl){
+                if(x1dl[p][1]==cValue){
+                    sstr+='<option value="'+x1dl[p][3]+'" >'+x1dl[p][2]+'</option>';
+                    }
+
+                }
+        }
+    </script>
+    <script src="http://rm.sina.com.cn/minisite/20140421emarketing/js/consult.js"></script>
+<!-- 登录 -->
+    <div id="login" class="login psa">
+        <div class="lg_tit wid fl psa">
+            <span class="ft_14">申请咨询</span>&nbsp;&nbsp;&nbsp;&nbsp;我们将根据您的信息告诉您广告投放方式！
+            <a href="#" id="lg_close" class="dsb lg_close psa"></a>
+        </div>
+        <div class="lg_l fl">
+            <table cellsapcing=0 cellpadding=0>
+                <tr>
+                    <td align="right">营业执照所在地：</td>
+                    <td>
+                        <select onchange="changeProvince()" name="province" id="province"></select>
+                        <select onchange="changeCity()" name="city" id="city"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">公司名称：</td>
+                    <td><input type="text" id="company_name" name="company_name"/></td>
+                </tr>
+                <tr>
+                    <td align="right">公司网址：</td>
+                    <td><input type="text" id="company_address" name="company_address"/></td>
+                </tr>
+                <tr>
+                    <td align="right">行业：</td>
+                    <td >
+                        <select name="industry" id="industry">
+                            <option value="IT服务">IT服务</option>
+                            <option value="医疗保健">医疗保健</option>
+                            <option value="服装服饰">服装服饰</option>
+                            <option value="政府组织/公益组织">政府组织/公益组织</option>
+                            <option value="广告/会展">广告/会展</option>
+                            <option value="化妆/卫浴用品">化妆/卫浴用品</option>
+                            <option value="家居装饰">家居装饰</option>
+                            <option value="教育培训">教育培训</option>
+                            <option value="金融投资">金融投资</option>
+                            <option value="旅游">旅游</option>
+                            <option value="美容健体">美容健体</option>
+                            <option value="汽车装饰">汽车装饰</option>
+                            <option value="软件研发">软件研发</option>
+                            <option value="生活服务">生活服务</option>
+                            <option value="食品销售">食品销售</option>
+                            <option value="电子电器产品">电子电器产品</option>
+                            <option value="通讯服务">通讯服务</option>
+                            <option value="网络服务">网络服务</option>
+                            <option value="新闻传媒">新闻传媒</option>
+                            <option value="鞋帽箱包">鞋帽箱包</option>
+                            <option value="游戏">婴幼用品</option>
+                            <option value="IT服务">游戏</option>
+                            <option value="钟表首饰">钟表首饰</option>
+                            <option value="烟酒销售">烟酒销售</option>
+                            <option value="商务服务">商务服务</option>
+                            <option value="通讯电信">通讯电信</option>
+                            <option value="餐饮美食">餐饮美食</option>
+                            <option value="综合百货">综合百货</option>
+                            <option value="其他">其他</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">联系人：</td>
+                    <td><input type="text" name="contact"  id="contact" value=""/></td>
+                </tr>
+            </table>
+        </div>
+        <div class="lg_r fr">
+            <table cellsapcing="0" cellpadding="0">
+                <tr>
+                    <td></td>
+                    <td align="left"><span class="ft_cr">*</span>联系电话至少写 1 项</td>
+                </tr>
+                <tr>
+                    <td align="right">座机：</td>
+                    <td><input type="text" id="tel" name="tel" value="" /></td>
+                </tr>
+                <tr>
+                    <td align="right">手机：</td>
+                    <td><input type="text" id="mobile" name="mobile" value=""/></td>
+                </tr>
+                <tr>
+                    <td align="right">推广目的：</td>
+                    <td >
+                        <select name="purpose" id="purpose">
+                            <option value="品牌">品牌</option>
+                            <option value="效果">效果</option>
+                            <option value="活动">活动</option>
+                            <option value="其他">其他</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">推广预算：</td>
+                    <td>
+                        <select name="budget" id="budget">
+                            <option value="1000元以下/日">1000元以下/日</option>
+                            <option value="1000-5000元/日">1000-5000元/日</option>
+                            <option value="5000-10000元/日">5000-10000元/日</option>
+                            <option value="10000元以上/日">10000元以上/日</option>
+                            <option value="其他">其他</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="lg_sub mar_auto clb"><input type="image" src="http://rm.sina.com.cn/minisite/20140421emarketing/img/submit.jpg" alt="" onclick="consult();" /> 在线咨询  <a href="mailto:pdbchannel@vip.sina.com">pdbchannel</a></div>
+    </div>
+    <!-- 登录 end /--> 
+<div class="header wid fl">
+		<div class="header_box psr">
+			<div class="logo fl"><a href="index.php"><img src="http://rm.sina.com.cn/minisite/20140421emarketing/img/logo.jpg" alt="logo" /></a></div>
+            <div class="weibo_logo2 psa"><a href="http://weibo.com/218821345" target="_blank"><img src="http://rm.sina.com.cn/minisite/20140421emarketing/img/weibo_logo.jpg" alt="weibo_logo" /></a></div>
+            <div class="weibo_logo psa"><a href="http://e.sina.com.cn/sme.php" target="_blank"><img src="http://rm.sina.com.cn/minisite/20140421emarketing/img/weibo_logo.png" alt="weibo_logo" /></a></div>
+            <div class="question" id="question"><img src="http://rm.sina.com.cn/minisite/20140421emarketing/img/btn_01.png" alt=""/></div>
+			<ul class="menus fr bgg" id="menus">
+				<li><a href="index.php" class="dsb fl">首页</a></li>
+				<li><a href="spread.php" class="dsb fl">推广联盟</a></li>
+				<li><a href="plan.php" class="dsb fl">解决方案</a></li>
+				<li><a href="case.php" class="dsb fl">成功案例</a></li>
+				<li><a href="doing.php" class="dsb fl">市场活动</a></li>
+				<li><a href="school.php" class="dsb fl">营销学院</a></li>
+				<li><a href="about.php" class="dsb fl">关于我们</a></li>
+			</ul>
+		</div>
+</div>	
+	<div class="player wid psr fl" id="player">
+		<!-- <div class="index_banner index_banner_player_1 psa wid fl">
+			<div class="wid_960 mar_auto">
+			    <a href="index.php" class="player_a dsb mar_auto wid psr">
+				<img src="http://rm.sina.com.cn/minisite/20140421emarketing/img/img_17.jpg" alt="" />
+			    </a>
+			</div>
+		</div>
+
+		<div class="index_banner index_banner_player_2 psa wid fl dsn">
+			<div class="wid_960 mar_auto">
+			    <a href="plan.php" class="player_a dsb mar_auto wid psr">
+				<img src="http://rm.sina.com.cn/minisite/20140421emarketing/img/img_18.jpg" alt="" />
+				</a>
+			</div>
+		</div>
+
+		<div class="index_banner index_banner_player_3 psa wid fl dsn">
+			<div class="wid_960 mar_auto">
+			    <a href="spread.php" class="player_a dsb mar_auto wid psr">
+				<img src="http://rm.sina.com.cn/minisite/20140421emarketing/img/img_19.jpg" alt="" />
+				</a>
+			</div>
+		</div>
+		
+		<div class="index_banner index_banner_player_4 psa wid fl dsn">
+            <div class="wid_960 mar_auto">
+                <a href="http://e.sina.com.cn/doing.php?act=info&id=69" class="player_a dsb mar_auto wid psr">
+                	<img src="http://rm.sina.com.cn/minisite/20140421emarketing/img/seabanner.jpg" alt="" />
+                </a>
+            </div>
+        </div> -->
+        
+        <div class="index_banner psa wid fl">
+			<div class="wid_960 mar_auto">
+			    <a href="doing.php?act=info&id=91" class="player_a dsb mar_auto wid psr">
+				<img src="http://rm.sina.com.cn/minisite/20140421emarketing/img/img_201509071545.jpg" alt="" />
+			    </a>
+			</div>
+		</div>
+        
+        <div class="index_banner psa wid fl">
+			<div class="wid_960 mar_auto">
+			    <a href="index.php" class="player_a dsb mar_auto wid psr">
+				<img src="http://rm.sina.com.cn/minisite/20140421emarketing/img/img_17.jpg" alt="" />
+			    </a>
+			</div>
+		</div>
+
+		<div class="index_banner psa wid fl dsn">
+			<div class="wid_960 mar_auto">
+			    <a href="plan.php" class="player_a dsb mar_auto wid psr">
+				<img src="http://rm.sina.com.cn/minisite/20140421emarketing/img/img_18.jpg" alt="" />
+				</a>
+			</div>
+		</div>
+
+		<div class="index_banner psa wid fl dsn">
+			<div class="wid_960 mar_auto">
+			    <a href="spread.php" class="player_a dsb mar_auto wid psr">
+				<img src="http://rm.sina.com.cn/minisite/20140421emarketing/img/img_19.jpg" alt="" />
+				</a>
+			</div>
+		</div>
+		
+		<div class="index_banner psa wid fl dsn">
+            <div class="wid_960 mar_auto">
+                <a href="http://e.sina.com.cn/doing.php?act=info&id=69" class="player_a dsb mar_auto wid psr">
+                	<img src="http://rm.sina.com.cn/minisite/20140421emarketing/img/seabanner.jpg" alt="" />
+                </a>
+            </div>
+        </div>
+
+		<div class="dot wid">
+			<div class="dot2 wid_960 mar_auto psr">
+			<div class="dot_box psa" id="dot">
+				<li class="li_check"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="content wid fl">
+		<div class="content_box ft_yh">
+			<div class="content_box_l fl">
+				<a href="case.php?act=list"><h1 class="ft_24 ft_wnor ft_c1">成功案例</h1></a>
+				<!-- 内容循环区 -->
+								<div class="content_lists wid fl">
+					<div class="content_lists_img fl"><img  src="http://video.vic.sina.com.cn/allvic//13/3c/87365.jpg"  alt="" onerror="javascript:this.src='http://rm.sina.com.cn/minisite/20140421emarketing/img/img_01.jpg';" width="214" height="140" /></div>
+					<div class="content_lists_text fl">
+						<a href="case.php?act=info&id=83" target="_blank"><h2 class="ft_wnor ft_20" title="金浪奖生活服务行业案例-车轮APP" style="color:#000000">金浪奖生活服务行业案例-车轮APP</h2></a>
+						<p class="ft_14"><a href="case.php?act=info&id=83" target="_blank">
+	 
+
+
+	全国违章查询-车轮查违章是一款由专注于汽车移动领域的车轮团队专心研发的车主必备app。自发布以来，为有车一族提供了一键查违章、办违章、加油卡，等服务，受到了用户和行业的广泛认可与好评。 
+
+
+	一、推广需求 
+...</a></p>
+					</div>
+				</div>
+                				<div class="content_lists wid fl">
+					<div class="content_lists_img fl"><img  src="http://video.vic.sina.com.cn/allvic//ec/88/41139.jpg"  alt="" onerror="javascript:this.src='http://rm.sina.com.cn/minisite/20140421emarketing/img/img_01.jpg';" width="214" height="140" /></div>
+					<div class="content_lists_text fl">
+						<a href="case.php?act=info&id=81" target="_blank"><h2 class="ft_wnor ft_20" title="金浪奖金融行业案例-投哪网" style="color:#000000">金浪奖金融行业案例-投哪网</h2></a>
+						<p class="ft_14"><a href="case.php?act=info&id=81" target="_blank">
+	
+
+
+	
+		投哪网p2p网贷平台。是广发证券旗下互联网金融领域领先的P2P理财平台(原融信财富),践行普惠金融,为投资理财用户提供安全高收益的P2P网站产品。
+	
+	
+		&nbsp;
+	
+	
+		一、推广需求...</a></p>
+					</div>
+				</div>
+                				<!-- 内容循环区 end /-->
+			</div>
+
+			<div class="content_box_r fr">
+				<a href="doing.php?act=list"><h1 class="ft_24 ft_wnor ft_c1">聚焦新闻</h1></a>
+				<div class="content_news">
+                    <!-- 内容循环区 -->
+                    					<div class="conent_news_text fl ft_14">
+						<a href="doing.php?act=info&id=109" target="_blank"><h2 class="ft_14 ft_c2" title="新浪程序化营销奔驰、宝马重奖代理商 七星大奖闪耀迪拜">新浪程序化营销奔驰、宝马重奖代理商 七星大奖闪耀迪拜</h2></a>
+						<p class="ft_c2">&nbsp;&nbsp;&nbsp;&nbsp;
+	
+ 
+
+
+	
+ 
+
+
+	新浪领导与合作伙伴合影留念 
+
+
+	 
+
+
+	 活动现场，新浪高层大咖，空降盛典！...<a href="doing.php?act=info&id=109" target="_blank">[详细]	</a></p>
+					</div>
+			        					<div class="conent_news_text fl ft_14">
+						<a href="doing.php?act=info&id=108" target="_blank"><h2 class="ft_14 ft_c2" title="“数说中国”2015新浪程序化营销中国行·厦门站圆满落幕">“数说中国”2015新浪程序化营销中国行·厦门站圆满落幕</h2></a>
+						<p class="ft_c2">&nbsp;&nbsp;&nbsp;&nbsp;
+	善观时变，顺势而为；大数据时代，“数据2015
+ 
+
+
+	新浪网2015年第三季度财报显示，电商已跻身平台广告客户前三甲，可见...<a href="doing.php?act=info&id=108" target="_blank">[详细]	</a></p>
+					</div>
+			        					<!-- 内容循环区 end /-->
+			
+				</div>
+			</div>
+			
+			<div class="content_box_b wid fl">
+				<h1 class="ft_24 ft_wnor ft_c1">合作伙伴</h1>
+				<div class="links">
+				
+				<!--滚动图片 begin-->
+                    <div id="myTab1_Content3" class="fl psr" style="width:100%">
+                    <div class="pic_box_1">
+                            <!-- 图片列表 begin -->
+                            	                            <ul style="width:100%; float:left;">
+			                        <li class="li1"><img src="http://video.vic.sina.com.cn/allvic//6f/25/50522.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//e6/df/49560.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//a7/22/31743.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//61/1c/23370.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//93/3f/60103.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//9c/ff/11086.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//4f/cf/54913.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//48/e7/50681.jpg" alt="" /></li>
+		                        </ul>
+	                        	                            <ul style="width:100%; float:left;">
+			                        <li class="li1"><img src="http://video.vic.sina.com.cn/allvic//e2/21/22937.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//7d/4c/87839.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//10/16/87417.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//c9/31/61972.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//10/d4/92832.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//ef/48/83444.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//e9/d7/67302.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//f5/36/79742.jpg" alt="" /></li>
+		                        </ul>
+	                        	                            <ul style="width:100%; float:left;">
+			                        <li class="li1"><img src="http://video.vic.sina.com.cn/allvic//71/71/30378.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//6f/d8/87046.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//17/17/64138.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//a6/ef/55645.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//7a/b9/22195.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//98/14/81821.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//6f/52/85750.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//db/39/66040.jpg" alt="" /></li>
+		                        </ul>
+	                        	                            <ul style="width:100%; float:left;">
+			                        <li class="li1"><img src="http://video.vic.sina.com.cn/allvic//05/f9/20451.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//5d/75/32815.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//02/80/78344.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//16/72/39462.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//c4/0c/70633.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//81/2e/65952.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//7d/c2/37298.jpg" alt="" /></li>
+			                        <li><img src="http://video.vic.sina.com.cn/allvic//97/af/65683.jpg" alt="" /></li>
+		                        </ul>
+	                                                    <!-- 图片列表 end -->
+                    </div>
+                 </div>
+                 <!--滚动图片 end-->
+                 
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer wid fl">
+		<div class="footer_bg_line wid">
+			<div class="footer_box ft_yh ft_14">
+				Copyright &copy 1996-2014 SINA Corporation, All Rights Reserved
+				<br><br>新浪品牌广告及效果广告产品咨询热线： <a href="mailto:pdbchannel@sina.com">pdbchannel@sina.com</a>
+			</div>
+		</div>
+</div></body>
+</html>

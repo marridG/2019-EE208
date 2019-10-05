@@ -1,0 +1,537 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="robots" content="noindex,nofollow"><meta name="robots" content="noarchive">
+	
+			<title>				基金业界_基金_新浪财经</title>
+			<meta name="Keywords" content="				基金业界_基金_新浪财经" />
+			<meta name="Description" content="				基金业界_基金_新浪财经" />
+
+<!--script type="text/javascript" src="http://image2.sina.com.cn/home/sinaflash.js"></script-->
+<script type="text/javascript">
+	document.domain = "sina.com.cn";
+	var catNews = "qh";
+	var colNews = "pzyj";
+</script>
+<script type="text/javascript">
+//===================================
+/*
+舌签构造函数
+SubShowClass(ID[,eventType][,defaultID][,openClassName][,closeClassName])
+version 1.21
+*/
+function SubShowClass(ID,eventType,defaultID,openClassName,closeClassName){this.version="1.21";this.author="mengjia";this.parentObj=SubShowClass.$(ID);if(this.parentObj==null&&ID!="none"){throw new Error("SubShowClass(ID)参数错误:ID 对像存在!(value:"+ID+")")};if(!SubShowClass.childs){SubShowClass.childs=[]};this.ID=SubShowClass.childs.length;SubShowClass.childs.push(this);this.lock=false;this.label=[];this.defaultID=defaultID==null?0:defaultID;this.selectedIndex=this.defaultID;this.openClassName=openClassName==null?"selected":openClassName;this.closeClassName=closeClassName==null?"":closeClassName;this.mouseIn=false;var mouseInFunc=Function("SubShowClass.childs["+this.ID+"].mouseIn = true"),mouseOutFunc=Function("SubShowClass.childs["+this.ID+"].mouseIn = false");if(ID!="none"){if(this.parentObj.attachEvent){this.parentObj.attachEvent("onmouseover",mouseInFunc)}else{this.parentObj.addEventListener("mouseover",mouseInFunc,false)}};if(ID!="none"){if(this.parentObj.attachEvent){this.parentObj.attachEvent("onmouseout",mouseOutFunc)}else{this.parentObj.addEventListener("mouseout",mouseOutFunc,false)}};if(typeof(eventType)!="string"){eventType="onmousedown"};eventType=eventType.toLowerCase();switch(eventType){case "onmouseover":this.eventType="mouseover";break;case "onmouseout":this.eventType="mouseout";break;case "onclick":this.eventType="click";break;case "onmouseup":this.eventType="mouseup";break;default:this.eventType="mousedown"};this.addLabel=function(labelID,contID,parentBg,springEvent,blurEvent){if(SubShowClass.$(labelID)==null&&labelID!="none"){throw new Error("addLabel(labelID)参数错误:labelID 对像存在!(value:"+labelID+")")};var TempID=this.label.length;if(parentBg==""){parentBg=null};this.label.push([labelID,contID,parentBg,springEvent,blurEvent]);var tempFunc=Function('SubShowClass.childs['+this.ID+'].select('+TempID+')');if(labelID!="none"){if(SubShowClass.$(labelID).attachEvent){SubShowClass.$(labelID).attachEvent("on"+this.eventType,tempFunc)}else{SubShowClass.$(labelID).addEventListener(this.eventType,tempFunc,false)}};if(TempID==this.defaultID){if(labelID!="none"){SubShowClass.$(labelID).className=this.openClassName};if(SubShowClass.$(contID)){SubShowClass.$(contID).style.display=""};if(ID!="none"){if(parentBg!=null){this.parentObj.style.background=parentBg}};if(springEvent!=null){eval(springEvent)}}else{if(labelID!="none"){SubShowClass.$(labelID).className=this.closeClassName};if(SubShowClass.$(contID)){SubShowClass.$(contID).style.display="none"}};if(SubShowClass.$(contID)){if(SubShowClass.$(contID).attachEvent){SubShowClass.$(contID).attachEvent("onmouseover",mouseInFunc)}else{SubShowClass.$(contID).addEventListener("mouseover",mouseInFunc,false)};if(SubShowClass.$(contID).attachEvent){SubShowClass.$(contID).attachEvent("onmouseout",mouseOutFunc)}else{SubShowClass.$(contID).addEventListener("mouseout",mouseOutFunc,false)}}};this.select=function(num,force){if(typeof(num)!="number"){throw new Error("select(num)参数错误:num 不是 number 类型!(value:"+num+")")};if(force!=true&&this.selectedIndex==num){return};var i;for(i=0;i<this.label.length;i++){if(i==num){if(this.label[i][0]!="none"){SubShowClass.$(this.label[i][0]).className=this.openClassName};if(SubShowClass.$(this.label[i][1])){SubShowClass.$(this.label[i][1]).style.display=""};if(ID!="none"){if(this.label[i][2]!=null){this.parentObj.style.background=this.label[i][2]}};if(this.label[i][3]!=null){eval(this.label[i][3])}}else if(this.selectedIndex==i||force==true){if(this.label[i][0]!="none"){SubShowClass.$(this.label[i][0]).className=this.closeClassName};if(SubShowClass.$(this.label[i][1])){SubShowClass.$(this.label[i][1]).style.display="none"};if(this.label[i][4]!=null){eval(this.label[i][4])}}};this.selectedIndex=num};this.random=function(){if(arguments.length!=this.label.length){throw new Error("random()参数错误:参数数量与标签数量不符!(length:"+arguments.length+")")};var sum=0,i;for(i=0;i<arguments.length;i++){sum+=arguments[i]};var randomNum=Math.random(),percent=0;for(i=0;i<arguments.length;i++){percent+=arguments[i]/sum;if(randomNum<percent){this.select(i);break}}};this.autoPlay=false;var autoPlayTimeObj=null;this.spaceTime=5000;this.play=function(spTime){if(typeof(spTime)=="number"){this.spaceTime=spTime};clearInterval(autoPlayTimeObj);autoPlayTimeObj=setInterval("SubShowClass.childs["+this.ID+"].autoPlayFunc()",this.spaceTime);this.autoPlay=true};this.autoPlayFunc=function(){if(this.autoPlay==false||this.mouseIn==true){return};this.nextLabel()};this.nextLabel=function(){var index=this.selectedIndex;index++;if(index>=this.label.length){index=0};this.select(index);if(this.autoPlay==true){clearInterval(autoPlayTimeObj);autoPlayTimeObj=setInterval("SubShowClass.childs["+this.ID+"].autoPlayFunc()",this.spaceTime)}};this.previousLabel=function(){var index=this.selectedIndex;index--;if(index<0){index=this.label.length-1};this.select(index);if(this.autoPlay==true){clearInterval(autoPlayTimeObj);autoPlayTimeObj=setInterval("SubShowClass.childs["+this.ID+"].autoPlayFunc()",this.spaceTime)}};this.stop=function(){clearInterval(autoPlayTimeObj);this.autoPlay=false}};SubShowClass.$=function(objName){if(document.getElementById){return eval('document.getElementById("'+objName+'")')}else{return eval('document.all.'+objName)}}
+//===================================
+</script>
+
+<style type="text/css">
+/* 奥运新闻列表页 */
+
+
+/* 全局 */
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin:0;padding:0;border:0;}
+body{background:#fff;color:#000;}
+td,p,li,select,input,textarea,div{font-size:12px;}
+
+ul{list-style-type:none;}
+select,input{vertical-align:middle;}
+
+
+a:link{color:#0334ad;text-decoration:none;}
+a:visited{color:#0334ad;text-decoration:none;}
+a:hover,a:active,a:focus{color:#c00;text-decoration:underline;}
+
+#page{width:950px; margin:5px auto; overflow:hidden;}
+a.videoNews{background:url(http://i0.sinaimg.cn/dy/deco/2007/1211/yocc/unfcn_mj_01.gif) no-repeat 100% 50%;padding-right:20px; zoom:1;}/* 视频图标链接 */
+a.videoNewsLeft{background:url(http://i0.sinaimg.cn/dy/deco/2007/1211/yocc/unfcn_mj_01.gif) no-repeat -19982px 50%;padding-left:20px; zoom:1;}/* 视频图标链接（左图标） */
+
+/* Main */
+#Main{position:relative}
+.MainBtm{height:20px; border:1px #a1d1ff solid; border-top:none;}
+
+/*  */
+/* 080719001 ws begin */
+.Main_b1{height:41px; /*overflow:hidden;*/ zoom:1; background:url(http://www.sinaimg.cn/dy/deco/2009/0114/2008_szz_list_bg_001.gif) no-repeat 0 0;}
+.Main_b1 h1{float:left; width:286px; overflow:hidden; padding:3px 0 0 12px;}
+.aL{float:left;width:330px;overflow:hidden;text-align:center;}
+.aL .logo_01{float:left;width:86px;}
+.aL .logo_02{float:left;width:220px;padding:8px 0 0 20px;text-align:left;}
+.aL .imgPic{margin:8px 0 0 35px;}
+.aL h2{font-family: "微软雅黑", Microsoft YaHei, "宋体", SimSun, Arial, System; font-size:18px; color:#025fcd; text-align:left; text-indent:39px; padding-top:6px;font-weight:bold}
+.crumb{float:left; padding:0 0 0 10px; overflow:hiddenl; line-height:34px; color:#333;}
+.crumb a,.crumb a:visited{color:#333; text-decoration:none;}
+.crumb a:hover,.crumb a:active{color:#c00; text-decoration:underline;}
+
+
+/* 搜索 */
+	
+	.searchBlk{display:none;}
+	
+.searchBlk{height:54px; overflow:hidden; zoom:1; background:url(http://www.sinaimg.cn/dy/deco/2009/0114/2008_szz_list_bg_001.gif) no-repeat 0 -32px; padding:0 0 0 470px; color:#999;}
+.searchBlk label{float:left; width:55px; overflow:hidden; cursor:pointer;}
+span.sBTR{float:left; padding:2px 0 0 0; vertical-align:top;}
+span.sBTT{float:left; line-height:27px; *line-height:30px;}
+.searchBlk_iB{float:left; overflow:hidden; zoom:1; width:300px;}
+.searchBlk_iB_i{width:220px; height:17px; *height:16px; overflow:hidden; border:1px #a4abb1 solid; padding:3px 0 0 0; *padding:4px 0 0 0; margin:2px 10px 0 0; background:url(http://www.sinaimg.cn/dy/deco/2009/0114/2008_szz_list_bg_001.gif) no-repeat 0 -100px #fff; color:#a5a5a5; text-indent:28px; float:left;}
+.searchBlk_iB_s{float:left; width:66px; height:22px; overflow:hidden; border:none; padding:0; margin:0; text-align:center; font-size:12px; color:#000; background:url(http://www.sinaimg.cn/dy/deco/2009/0114/2008_szz_list_bg_001.gif) no-repeat -885px -100px; margin:2px 0 0; cursor:pointer;}
+/* 080719001 ws end */
+
+
+/* 列表 */
+.listBlk{border:1px #a1d1ff solid; border-bottom:none; border-top:none; background:url(http://www.sinaimg.cn/dy/deco/2009/0114/2008_szz_list_bg_002.gif) repeat-y center; padding:5px 0 25px;}
+.listBlk ul{padding:7px 0 8px 200px; overflow:hidden;}
+.listBlk li{font-size:14px; line-height:23px; clear:both;}
+.listBlk li span{font-size:12px; color:#9a9a9a; margin-left:8px}
+
+
+/* 分页 */
+.pagebox{overflow:hidden; zoom:1; font-size:12px; font-family:"宋体",sans-serif;}
+.pagebox span{float:left; margin-right:2px; overflow:hidden; text-align:center; background:#fff;}
+.pagebox span a{display:block; overflow:hidden; zoom:1; _float:left;}
+.pagebox span.pagebox_pre_nolink{border:1px #ddd solid; width:53px; height:21px; line-height:21px; text-align:center; color:#999; cursor:default;}
+.pagebox span.pagebox_pre{color:#3568b9; height:23px;}
+.pagebox span.pagebox_pre a,.pagebox span.pagebox_pre a:visited,.pagebox span.pagebox_next a,.pagebox span.pagebox_next a:visited{border:1px #b8b8b8 solid; color:#b8b8b8; text-decoration:none; text-align:center; width:53px; cursor:pointer; height:21px; line-height:21px;}
+.pagebox span.pagebox_pre a:hover,.pagebox span.pagebox_pre a:active,.pagebox span.pagebox_next a:hover,.pagebox span.pagebox_next a:active{color:#363636; border:1px #363636 solid;}
+.pagebox span.pagebox_num_nonce{border:1px #ab0101 solid; padding:0 8px; height:21px; line-height:21px; color:#fff; cursor:default; background:#d20001;}
+.pagebox span.pagebox_num{color:#3568b9; height:23px;}
+.pagebox span.pagebox_num a,.pagebox span.pagebox_num a:visited{border:1px #b8b8b8 solid; color:#8a8a8a; text-decoration:none; padding:0 8px; cursor:pointer; height:21px; line-height:21px;}
+.pagebox span.pagebox_num a:hover,.pagebox span.pagebox_num a:active{border:1px #363636 solid;color:#363636;}
+.pagebox span.pagebox_num_ellipsis{color:#393733; width:22px; background:none; line-height:23px;}
+.pagebox span.pagebox_next_nolink{border:1px #ddd solid; width:53px; height:21px; line-height:21px; text-align:center; color:#999; cursor:default;}
+
+
+
+
+
+/* footer */
+.footer{text-align:center; line-height:30px; padding:20px 0 0;}
+.copyright{font-family:Arial, Helvetica, sans-serif;}
+
+
+/* 间隔 */
+.hs01{height:10px; overflow:hidden; background:#fff; clear:both; font-size:0; line-height:500px;}
+
+
+/* 常用链接 begin */
+a.linkRed:link,a.linkRed:visited{color:#f00!important;}/* 红色 */
+a.linkRed:hover{color:#c00!important;}
+a.linkBlack:link,a.linkBlack:visited{color:#000!important;}/* 黑色 */
+a.linkBlack:hover{color:#f00!important;}
+a.linkWhite:link,a.linkWhite:visited{color:#fff!important;}/* 白色 */
+a.linkWhite:hover{color:#f00!important;}
+a.linkGray:link,a.linkGray:visited{color:#5d5d5d!important;}/* 灰色 */
+a.linkGray:hover{color:#f00!important;}
+a.linkCyan:link,a.linkCyan:visited{color:#92e4fa!important;text-decoration:underline;}/* 青色 */
+a.linkCyan:hover{color:#f00!important;}
+a.videoNews{background:url(http://i1.sinaimg.cn/dy/deco/2007/1211/yocc/unfcn_mj_01.gif) no-repeat 100% 50%;padding-right:18px;}/* 视频图标链接 */
+a.videoNewsLeft{background:url(http://i1.sinaimg.cn/dy/deco/2007/1211/yocc/unfcn_mj_01.gif) no-repeat -19982px 50%;padding-left:18px;}/* 视频图标链接（左图标） */
+/* 常用链接 end */
+
+/* 共用列表 begin */
+.list_009 li{padding-left:1em;background:url(http://i1.sinaimg.cn/dy/deco/2007/1211/yocc/unfcn_mj_01.gif) no-repeat 5px 50%;}
+.list_00f li{padding-left:1em;background:url(http://i1.sinaimg.cn/dy/deco/2007/1211/yocc/unfcn_mj_01.gif) no-repeat -995px 50%;}
+.list_000 li{padding-left:1em;background:url(http://i1.sinaimg.cn/dy/deco/2007/1211/yocc/unfcn_mj_01.gif) no-repeat -1995px 50%;}
+.list_333 li{padding-left:1em;background:url(http://i1.sinaimg.cn/dy/deco/2007/1211/yocc/unfcn_mj_01.gif) no-repeat -2995px 50%;}
+.list_666 li{padding-left:1em;background:url(http://i1.sinaimg.cn/dy/deco/2007/1211/yocc/unfcn_mj_01.gif) no-repeat -3995px 50%;}
+.list_999 li{padding-left:1em;background:url(http://i1.sinaimg.cn/dy/deco/2007/1211/yocc/unfcn_mj_01.gif) no-repeat -4995px 50%;}
+li.list_nostyle{background:none;}
+/* 共用列表 end */
+</style>
+
+<style type="text/css">
+.secondaryHeader{height:33px;overflow:hidden;background:url(http://i2.sinaimg.cn/dy/images/header/2008/standardl2nav_bg.gif) repeat-x #fff;color:#000;font-size:12px;}
+.secondaryHeader a,.secondaryHeader a:visited{color:#000;text-decoration:none;}
+.secondaryHeader a:hover,.secondaryHeader a:active{color:#c00;text-decoration:underline;}
+.sHBorder{border:1px #e3e3e3 solid;padding:0 10px 0 12px;overflow:hidden;zoom:1;}
+.sHLogo{float:left;height:31px;line-height:31px;overflow:hidden;}
+.sHLogo span{display:block;float:left;display:table-cell;vertical-align:middle;*display:block;*font-size:27px;*font-family:Arial;height:31px;}
+.sHLogo span img{vertical-align:middle;}
+.sHLinks{float:right;line-height:31px;}
+/* nav begin */
+.Nav{zoom:1;height:45px;}
+.Nav .Logo{width:161px;padding-left:15px;float:left;}
+.Nav .NavLink{width:930px;margin-top:5px;height:28px;line-height:28px;padding:2px 0 0 27px;color:#5374b7;background:url(http://i0.sinaimg.cn/dy/deco/2008/0331/yocc08img/news_mj_001.gif) #0b3798 repeat-x 0 -50px;float:left;white-space:nowrap;position:relative;}
+.Nav .NavSelect{width:79px;float:left;background:url(http://i0.sinaimg.cn/dy/deco/2008/0331/yocc08img/news_mj_001.gif) #0b3798 repeat-x 0 -50px;height:26px;margin-top:5px;padding:4px 0 0;position:relative;}
+.Nav .NavSelect h4{width:59px;line-height:19px;padding:2px 15px 0 0;cursor:pointer;background:url(http://i2.sinaimg.cn/dy/deco/2008/0618/news_mj_001.gif) no-repeat 0 0;color:#fff;text-align:center;font-size:12px;font-weight:normal;}
+#blk_lmdh_01 a{margin:0 2px}
+.Nav .NavSelect #blk_sjdy_01{display:none;top:25px;left:0;border:1px solid #011e62;border-top:none;width:64px;padding:4px;background:#fff;filter:Alpha(Opacity=90);opacity:0.9;position:absolute;}
+#blk_sjdy_01 a{line-height:20px;display:block;padding-left:3px;color:#222;text-decoration:none;}
+#blk_sjdy_01 a:hover{background:#eee;}
+#blk_sjdy_01 .line{height:1px;overflow:hidden;background:#ddd;font-size:0;margin:2px 0;display:block;}
+
+.Nav a:link,.Nav a:visited{color:#fff;text-decoration:none;}
+.Nav a:hover{text-decoration:underline;}
+/* Nav end */
+.listBlk .hs01{background:none}
+
+</style>
+</head>
+<body>
+	
+<!-- SUDA_CODE_START -->
+<script type="text/javascript" src="http://i3.sinaimg.cn/unipro/pub/suda_s_v851c.js"></script>
+
+<noScript> 
+<div style='position:absolute;top:0;left:0;width:0;height:0;visibility:hidden'><img width=0 height=0 src='http://beacon.sina.com.cn/a.gif?noScript' border='0' alt='' /></div> 
+</noScript> 
+<!-- SUDA_CODE_END -->
+	
+	
+<!-- for iPad begin -->
+    <script type="text/javascript">
+    (function(){
+    	if(!/\((iPhone|iPad|iPod)/i.test(navigator.userAgent)){return};
+    	var iPadScript = document.createElement("script");
+    	iPadScript.src = "http://news.sina.com.cn/js/ui/ipad/reset.js";
+    	document.getElementsByTagName("head")[0].appendChild(iPadScript);
+    })();
+    </script>
+<!-- for iPad end -->
+<div id="page">
+<!-- 标准二级导航_财经 begin -->
+
+<div class="secondaryHeader">
+	<div class="sHBorder">
+		<div class="sHLogo"><span><a href="http://finance.sina.com.cn/"><img src="http://i1.sinaimg.cn/dy/images/header/2009/standardl2nav_sina_new.gif" alt="新浪网" /></a><a href="http://finance.sina.com.cn/"><img src="http://i1.sinaimg.cn/dy/images/header/2009/standardl2nav_finance.gif" alt="新浪财经" /></a></span></div>
+		<div class="sHLinks"><a href="http://finance.sina.com.cn/">财经首页</a>&nbsp;|&nbsp;<a href="http://www.sina.com.cn/">新浪首页</a>&nbsp;|&nbsp;<a href="http://news.sina.com.cn/guide/">新浪导航</a></div>
+	</div>
+</div>
+<!-- 标准二级导航_财经 end -->
+
+<!--顶通 begin -->
+
+
+<!--顶通 end -->
+
+<!-- Nav begin -->
+	<div class="Nav" style="position:relative;z-index:1;">
+	<div class="NavLink" id="blk_lmdh_01">
+		<a href="http://finance.sina.com.cn/stock/">沪深股票</a>
+		<a href="http://finance.sina.com.cn/stock/hkstock/">港股</a>
+		<a href="http://finance.sina.com.cn/stock/usstock/">美股</a>
+		<a href="http://finance.sina.com.cn/fund/">基金</a>
+		<a href="http://finance.sina.com.cn/forex/">外汇</a>
+		<a href="http://finance.sina.com.cn/futuremarket/">期货</a>
+		<a href="http://finance.sina.com.cn/nmetal/">黄金</a>
+		<a href="http://finance.sina.com.cn/bond/">债券</a>
+		<a href="http://otc.finance.sina.com.cn/">新三板</a>
+                |
+		<a href="http://finance.sina.com.cn/money/bank/">银行</a>
+		<a href="http://finance.sina.com.cn/money/insurance/">保险</a>
+		<a href="http://finance.sina.com.cn/trust/">信托</a>		
+		|		
+		<a href="http://biz.finance.sina.com.cn/hq/">行情中心</a>
+                <a href="http://vip.stock.finance.sina.com.cn/portfolio/main.php">自选股</a>	
+                <a href="http://vip.stock.finance.sina.com.cn/moneyflow/">资金流向</a>
+                <a href="http://vip.stock.finance.sina.com.cn/q/go.php/vInvestConsult/kind/qgqp/index.phtml">千股千评</a>
+		<a href="http://finance.sina.com.cn/fund/openfund_daily.html">基金净值</a>
+                <a href="http://finance.sina.com.cn/money/globalindex/">环球股指</a>
+		|
+                <a href="http://finance.sina.com.cn/zl/">专栏</a>
+		<span id="bloglist" class="bloglist" style="position:relative"><a style="position:relative;" id="bloglist" class="bloglist" href="http://blog.sina.com.cn/lm/finance/">博客</a><span class="blog_list" id="blog_list"><ul><li><a href="http://blog.sina.com.cn/lm/finance/" target="_blank">财经博客</a></li><li><a href="http://blog.sina.com.cn/lm/stock/" target="_blank">股票博客</a></li></ul></span></span>		
+		<a href="http://guba.sina.com.cn/" >股市汇</a>
+	</div>
+</div>
+<style>
+.bloglist .blog_list{ display:none; position:absolute; left:-10px; padding:3px 0 0; top:11px; top:8px\9; width:70px;}
+.bloglist .blog_list ul{border:solid 1px #a0c3ec; background:#e1eeff; height:auto; }
+.bloglist .blog_list li{text-align:center; font-size:12px; float:none; height:auto; padding:0;}
+.bloglist .blog_list li a, .bloglist .blog_list li a:visited{ display:block; line-height:22px; color:#007; margin:0 !important;}
+.current  .blog_list{ display:block}
+.bloglist .blog_list li a:hover{color:#fff; background:#4e7fd1;}
+</style>
+<script type="text/javascript">
+	var nav_list=document.getElementById("bloglist");
+
+		nav_list.onmouseover=function () {
+			this.className+=' current';
+		}
+		nav_list.onmouseout=function () {
+			this.className=this.className.replace(/current/gi,'');
+		}
+</script>
+<!-- Nav end -->
+<!-- Main begin -->
+<div id="Main">
+	
+	<div class="Main_b1">
+				<!-- 080719001 ws begin -->
+			<div class="aL">
+					<h2>基金业界</h2>
+			</div>
+			<!-- 080719001 ws end -->
+
+			<!-- 路径导航 begin -->
+			<div class="crumb">
+				基金&nbsp;&gt;&nbsp;			基金业界
+			</div>
+			<!-- 路径导航 end -->		
+		
+<!-- 回顾 begin -->
+<!--
+<div class="date">
+	<style>
+		.SinaCalendar_Cnl{width:140px; line-height:22px; padding:2px 0 0 0; text-align:center; color:#d5e4f3; background:url(http://i2.sinaimg.cn/dy/deco/2008/1111/yocc081109img/nwn_cl_018.gif) no-repeat; cursor: pointer; font-size:14px;}
+		.date{position:relative ;top:5px;width:150px; float:right; margin-right:12px;}
+	</style>
+	<script type="text/javascript">
+		function SinaCalendar_GetObj(objName)
+		{
+			if(document.getElementById)
+			{
+				return eval('document.getElementById("' + objName + '")');
+			}else if(document.layers)
+			{
+				return eval("document.layers['" + objName +"']");
+			}else
+			{
+				return eval('document.all.' + objName);
+			}
+		}
+
+		function SinaCalendar_GetOffsetPos(element)
+		{
+			var posTop = 0, posLeft = 0;
+			do 
+			{
+				posTop += element.offsetTop || 0;
+				posLeft += element.offsetLeft || 0;
+				element = element.offsetParent;
+			} while (element);
+			
+			return [posLeft, posTop];
+		 }
+
+		function SinaCalendar_ie()
+		{
+			var browser = navigator.appVersion;
+			if(browser.indexOf("MSIE") >= 1)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+
+		function SinaCalendar_ChangeCnl(divIdOrder)
+		{
+			var divName = "SinaCalendar_CnlCon_" +  divIdOrder;
+			var topDivName = "SinaCalendar_Cnl_" +  divIdOrder;
+			if(SinaCalendar_GetObj(divName).style.display == 'block')
+			{
+				SinaCalendar_GetObj(divName).style.display = 'none';
+			}
+			else if(SinaCalendar_GetObj(divName).style.display == 'none')
+			{
+				var i = 0;
+
+				while(1)
+				{
+					if(document.getElementById("SinaCalendar_CnlCon_" + i))
+					{
+						document.getElementById("SinaCalendar_CnlCon_" + i).style.display = "none";
+					}
+					else
+					{
+						break;
+					}
+
+					i ++;
+				}
+				SinaCalendar_GetObj(divName).style.display = 'block';
+			}
+		}
+
+		function SinaCalendar_closeDiv(divIdOrder)
+		{
+			document.getElementById("SinaCalendar_CnlCon_" + divIdOrder).style.display	=	'none';
+		}
+
+
+		function CreateDiv(divIdOrder,title,url,defaultUrl,startdate,top,left,divZindex)//061221修改，增加divZindex参数，在CreateDiv时需递减
+		{
+			document.write("<div style='width:140px; margin:0 auto;'>");//增加宽度控制并居中
+			document.write("<div style='position:relative;' style='z-index:"+ divZindex + ";'>");
+			document.write("	<div class='SinaCalendar_Cnl' id='SinaCalendar_Cnl_" + divIdOrder + "' onclick='javascript:SinaCalendar_ChangeCnl(" + divIdOrder + ");'>&nbsp;&nbsp;" + title + "</div>");
+
+
+			document.write("	<div name='SinaCalendar_CnlCon' id='SinaCalendar_CnlCon_" + divIdOrder + "' style='display:none;position:absolute;top:" + top + "px; left:" + left + "px;width:140px; height:176px;'>");
+
+
+			document.write("		<div style='background:#cde0f4; width:140px; height:15px;' align='right'><img src='http://i1.sinaimg.cn/dy/20061220_calendar/RLT_ws_002.gif' width='15' height='15' alt='关闭' title='关闭' style='cursor:pointer;' onclick='SinaCalendar_closeDiv(" + divIdOrder +")'/></div>");
+
+
+			//document.write("		<iframe name='RL' frameborder='0' height='162' width='140' marginheight='0' marginwidth='0' scrolling='no' src='http://news.sina.com.cn/iframe/news/calender102/index.html?startDate=" + startdate + "&url=" + url + "&defaultUrl=" + defaultUrl + "'></iframe>");
+			document.write("		<iframe name='RL' frameborder='0' height='162' width='140' marginheight='0' marginwidth='0' scrolling='no' src='http://finance.sina.com.cn/iframe/333/2009-05-08/guest584.shtml?startDate=" + startdate + "&url=" + url + "&defaultUrl=" + defaultUrl + "'></iframe>");
+			document.write("	</div>");
+			document.write("</div>");
+			document.write("</div>");
+		}
+
+	CreateDiv(0,"查看往日新闻","http://roll.finance.sina.com.cn/finance/gjcj/gjjj/year-month-day/index.shtml","http://finance.sina.com.cn/","2009-1-15",20,0,99);
+
+	</script>
+</div>
+-->
+<!-- 回顾 end -->
+	</div>
+	
+		
+	<!-- 搜索 begin -->
+	<div class="searchBlk">
+		<form>
+		<div id="T_Menu_01">
+			<label for="S_Menu_00"><span class="sBTR"><input type="radio" name="kl" checked="checked" id="S_Menu_00" value="新闻" /></span><span class="sBTT">新闻</span></label>
+			<label for="S_Menu_01"><span class="sBTR"><input type="radio" name="kl" id="S_Menu_01" value="图片" /></span><span class="sBTT">图片</span></label>
+			<label for="S_Menu_02"><span class="sBTR"><input type="radio" name="kl" id="S_Menu_02" value="视频" /></span><span class="sBTT">视频</span></label>
+		</div>
+		</form>
+
+		<!-- 搜新闻 begin -->
+		<div class="searchBlk_iB" id="S_Cont_00"><form name="hform_02" action="http://search.sina.com.cn/" method="get" target="_blank">
+				<input type="hidden" name="t" value="keyword" />
+				<input type="hidden" name="c" value="news" />
+				<input type="hidden" name="ie" value="utf-8" />
+				<input type="text" name="q" class="searchBlk_iB_i" value="输入关键字" onclick="this.value=''" style="width:215px"/>
+				<input type="submit" class="searchBlk_iB_s" value="搜新闻" /></form>
+		</div>
+		<!-- 搜新闻 end -->
+		
+		<!-- 搜图片 begin -->
+		<div class="searchBlk_iB" id="S_Cont_01"><form action="http://search.sina.com.cn/" name="hform_05" target="_blank">
+			<input type="text" name="q" class="searchBlk_iB_i" value="输入关键字" onclick="this.value=''" />
+            <input type="hidden" name="t" value="keyword">
+            <input type="hidden" name="c" value="img">
+			<input type="hidden" name="ie" value="utf-8" />
+			<input type="submit" class="searchBlk_iB_s" value="搜图片" /></form>
+		</div>
+		<!-- 搜图片 end -->
+		
+		<!-- 搜视频 begin -->
+		<div class="searchBlk_iB" id="S_Cont_02"><form action="http://video.sina.com.cn/search/index.php" name="hform_03" target="_blank">
+			<input type="text" name="k" class="searchBlk_iB_i" value="输入关键字" onclick="this.value=''" />
+			<input type="hidden" name="ie" value="utf-8" />
+                       <!-- <input type="hidden" name="t" value="2"> -->
+                       <!--  <input type="hidden" name="c" value="news">-->
+			<input type="submit" class="searchBlk_iB_s" value="搜视频" /></form>
+		</div>
+		<!-- 搜视频 end -->
+
+		<script type="text/javascript">
+			var SubShow_01=new SubShowClass("T_Menu_01","onclick");for(var i=0;i<3;i++){SubShow_01.addLabel("S_Menu_0"+i,"S_Cont_0"+i)}
+		</script>
+	</div>
+	<!-- 搜索 end -->
+	
+	
+	<!-- 列表 begin -->
+	<div class="listBlk">
+				
+
+<!--cached2019-10-05 19:25:44-->
+
+<!-- 分页 begin -->
+	<table cellspacing="0" style="margin:0 auto;">
+	<tbody>
+		<tr>
+			<td>
+				<span class="pagebox">
+							<span class="pagebox_pre_nolink">上一页</span>		
+								<span class="pagebox_num_nonce">1</span>			<span class="pagebox_num">
+				<a href="http://finance.sina.com.cn/roll/index.d.html?cid=56948&page=2">2</a>
+			</span>				<span class="pagebox_num">
+				<a href="http://finance.sina.com.cn/roll/index.d.html?cid=56948&page=3">3</a>
+			</span>				<span class="pagebox_num">
+				<a href="http://finance.sina.com.cn/roll/index.d.html?cid=56948&page=4">4</a>
+			</span>				<span class="pagebox_num">
+				<a href="http://finance.sina.com.cn/roll/index.d.html?cid=56948&page=5">5</a>
+			</span>	
+							<span class="pagebox_next">
+		<a href="http://finance.sina.com.cn/roll/index.d.html?cid=56948&page=2">下一页</a></span>
+				</span>
+			</td>
+		</tr>
+	</tbody>
+</table><!-- 分页 end -->
+
+<div class="hs01"> </div>
+					<ul class="list_009">
+								<li><a href="https://finance.sina.com.cn/money/fund/jjyj/2019-10-05/doc-iicezuev0171496.shtml" target="_blank">理财公司如何抢夺超级富豪客户</a><span>(10月05日 11:30)</span></li>			<li><a href="https://finance.sina.com.cn/money/fund/jjyj/2019-10-05/doc-iicezzrr0008334.shtml" target="_blank">请祖国相信基金的力量 行业共表拳拳之心</a><span>(10月04日 07:24)</span></li>			<li><a href="https://finance.sina.com.cn/money/fund/jjyj/2019-09-30/doc-iicezzrq9476729.shtml" target="_blank">最后1只保本基金转型 短债基金能否扛起债券投资大旗</a><span>(09月30日 21:49)</span></li>			<li><a href="https://finance.sina.com.cn/money/fund/jjyj/2019-09-30/doc-iicezzrq9471763.shtml" target="_blank">抓住市场机遇、财通成长优选混合近一年收益近50%</a><span>(09月30日 21:15)</span></li>			<li><a href="https://finance.sina.com.cn/money/fund/jjyj/2019-09-30/doc-iicezzrq9470724.shtml" target="_blank">百亿私募节前忙加仓 医药与电子行业备受关注</a><span>(09月30日 21:09)</span></li>
+				</ul>				<ul class="list_009">
+								<li><a href="https://finance.sina.com.cn/money/fund/jjyj/2019-09-30/doc-iicezzrq9462578.shtml" target="_blank">浙商基金总经理聂挺进：打造AI驱动的资产管理公司</a><span>(09月30日 20:13)</span></li>			<li><a href="https://finance.sina.com.cn/money/fund/jjyj/2019-09-30/doc-iicezueu9383146.shtml" target="_blank">外汇局：截至9月30日批准QFII额度1113.76亿美元</a><span>(09月30日 16:55)</span></li>			<li><a href="https://finance.sina.com.cn/roll/2019-09-30/doc-iicezzrq9363393.shtml" target="_blank">企业年金基金上半年规模突破1.6万亿元 含权类收益高</a><span>(09月30日 12:24)</span></li>			<li><a href="https://finance.sina.com.cn/stock/observe/2019-09-30/doc-iicezzrq9350509.shtml" target="_blank">熊基金近两年惨不忍睹 大成、华商为何输得哑口无言</a><span>(09月30日 11:20)</span></li>			<li><a href="https://finance.sina.com.cn/money/fund/jjyj/2019-09-30/doc-iicezzrq9312144.shtml" target="_blank">公募持续布局科技股:基本面确定 掘金高增标的</a><span>(09月30日 08:33)</span></li>
+				</ul>				<ul class="list_009">
+								<li><a href="https://finance.sina.com.cn/money/fund/jjyj/2019-09-30/doc-iicezueu9255278.shtml" target="_blank">中基协:公募基金行业献礼 助力实体经济服务养老体系</a><span>(09月30日 07:00)</span></li>			<li><a href="https://finance.sina.com.cn/money/fund/jjyj/2019-09-30/doc-iicezueu9261222.shtml" target="_blank">A股处反弹窗口 基金关注节后三季报行情</a><span>(09月30日 05:42)</span></li>			<li><a href="https://finance.sina.com.cn/money/fund/jjyj/2019-09-30/doc-iicezueu9259269.shtml" target="_blank">“最牛基”获利83.73% 明星基金经理不改A股长牛判断</a><span>(09月30日 05:42)</span></li>			<li><a href="https://finance.sina.com.cn/roll/2019-09-30/doc-iicezueu9248508.shtml" target="_blank">保本基金谢幕 公募创新不止步</a><span>(09月30日 05:15)</span></li>			<li><a href="https://finance.sina.com.cn/roll/2019-09-30/doc-iicezueu9248503.shtml" target="_blank">公募持续布局科技股 掘金高增长标的</a><span>(09月30日 05:15)</span></li>
+				</ul>				<ul class="list_009">
+								<li><a href="https://finance.sina.com.cn/roll/2019-09-30/doc-iicezzrq9290533.shtml" target="_blank">前三季"最牛基"获利83.73% 基金经理不改A股长牛判断</a><span>(09月30日 05:15)</span></li>			<li><a href="https://finance.sina.com.cn/roll/2019-09-30/doc-iicezzrq9290527.shtml" target="_blank">锚定业绩 机构调研关注绩优个股</a><span>(09月30日 05:15)</span></li>			<li><a href="https://finance.sina.com.cn/roll/2019-09-30/doc-iicezueu9248481.shtml" target="_blank">创业板相关ETF连续五周净流出</a><span>(09月30日 05:15)</span></li>			<li><a href="https://finance.sina.com.cn/roll/2019-09-30/doc-iicezueu9248461.shtml" target="_blank">王大鹏：甄选高景气赛道 把握健康产业投资机遇</a><span>(09月30日 05:15)</span></li>			<li><a href="https://finance.sina.com.cn/roll/2019-09-30/doc-iicezzrq9301809.shtml" target="_blank">前三季度公募全线飘红 股票基金领跑平均收益达30%</a><span>(09月30日 02:47)</span></li>
+				</ul>				<ul class="list_009">
+								<li><a href="https://finance.sina.com.cn/roll/2019-09-30/doc-iicezzrq9282607.shtml" target="_blank">富兰克林邓普顿：养老金市场是一片蓝海</a><span>(09月30日 02:02)</span></li>			<li><a href="https://finance.sina.com.cn/roll/2019-09-30/doc-iicezzrq9282603.shtml" target="_blank">拾贝投资胡建平：看好金融及消费龙头企业</a><span>(09月30日 02:01)</span></li>			<li><a href="https://finance.sina.com.cn/roll/2019-09-30/doc-iicezueu9240557.shtml" target="_blank">A股投资生态生变  高送转炒作悄然退潮</a><span>(09月30日 02:01)</span></li>			<li><a href="https://finance.sina.com.cn/roll/2019-09-30/doc-iicezueu9240556.shtml" target="_blank">权益投资难度提升 公募亟需变中求进</a><span>(09月30日 02:01)</span></li>			<li><a href="https://finance.sina.com.cn/roll/2019-09-30/doc-iicezueu9240554.shtml" target="_blank">富国基金张圣贤：军工板块基本面迎拐点</a><span>(09月30日 02:01)</span></li>
+				</ul>				<ul class="list_009">
+								<li><a href="https://finance.sina.com.cn/roll/2019-09-30/doc-iicezzrq9282577.shtml" target="_blank">鹏华基金伍旋：做一个不随大流的逆向投资者</a><span>(09月30日 02:01)</span></li>			<li><a href="https://finance.sina.com.cn/roll/2019-09-30/doc-iicezzrq9282555.shtml" target="_blank">从余额宝的爆红看ETF的发展</a><span>(09月30日 02:01)</span></li>			<li><a href="https://finance.sina.com.cn/roll/2019-09-30/doc-iicezueu9238607.shtml" target="_blank">前三季度公募基金全线飘红 股票基金领跑平均收益30%</a><span>(09月30日 01:22)</span></li>			<li><a href="https://finance.sina.com.cn/money/fund/jjyj/2019-09-30/doc-iicezueu9238611.shtml" target="_blank">砥砺奋进谱华章 风正扬帆启新航</a><span>(09月30日 01:22)</span></li>			<li><a href="https://finance.sina.com.cn/roll/2019-09-30/doc-iicezueu9238606.shtml" target="_blank">新基金年内募资超8000亿 权益基金爆款频出</a><span>(09月30日 01:22)</span></li>
+				</ul>				<ul class="list_009">
+								<li><a href="https://finance.sina.com.cn/roll/2019-09-30/doc-iicezzrq9280168.shtml" target="_blank">又一轮私募自查来了 共涉及18项内容</a><span>(09月30日 01:20)</span></li>			<li><a href="https://finance.sina.com.cn/money/fund/jjyj/2019-09-30/doc-iicezueu9265898.shtml" target="_blank">电子行业成机构调研重点 博时基金等调研了这些个股</a><span>(09月30日 00:00)</span></li>			<li><a href="https://finance.sina.com.cn/money/fund/jjyj/2019-09-29/doc-iicezueu9220466.shtml" target="_blank">剧透:今年前十的基金大多重仓了它 板块将如何演绎？</a><span>(09月29日 22:12)</span></li>			<li><a href="https://finance.sina.com.cn/wm/2019-09-29/doc-iicezueu9220669.shtml" target="_blank">今年新基募资榜:第1名汇添富500亿 是金信基金4500倍</a><span>(09月29日 21:58)</span></li>			<li><a href="https://finance.sina.com.cn/money/fund/jjyj/2019-09-29/doc-iicezueu9203536.shtml" target="_blank">悬念还剩最后一天 前三季度各类公募冠军基金将揭晓</a><span>(09月29日 20:31)</span></li>
+				</ul>				<ul class="list_009">
+								<li><a href="https://finance.sina.com.cn/money/fund/jjyj/2019-09-29/doc-iicezzrq9237955.shtml" target="_blank">量化私募江湖：外资巨头登陆 本土机构5家跻身百亿</a><span>(09月29日 19:53)</span></li>			<li><a href="https://finance.sina.com.cn/money/fund/jjyj/2019-09-29/doc-iicezueu9194289.shtml" target="_blank">量化私募生变：外资巨头登陆 本土机构5家跻身百亿</a><span>(09月29日 19:39)</span></li>			<li><a href="https://finance.sina.com.cn/money/fund/jjyj/2019-09-29/doc-iicezueu9184591.shtml" target="_blank">献礼视频 | 南方基金勇于追梦 请祖国相信基金的力量</a><span>(09月29日 18:52)</span></li>			<li><a href="https://finance.sina.com.cn/roll/2019-09-29/doc-iicezzrq9200768.shtml" target="_blank">九月基金发行创年内新高 三季度新增1500亿买什么票?</a><span>(09月29日 16:49)</span></li>			<li><a href="https://finance.sina.com.cn/money/fund/jjyj/2019-09-29/doc-iicezueu9120837.shtml" target="_blank">信达澳银基金经理离职 曾管理6只基金</a><span>(09月29日 14:05)</span></li>
+				</ul>				<ul class="list_009">
+								<li><a href="https://finance.sina.com.cn/money/fund/jjyj/2019-09-29/doc-iicezueu9119104.shtml" target="_blank">全球投资机会在哪里？百亿老牌与外资私募深度解读</a><span>(09月29日 13:45)</span></li>			<li><a href="https://finance.sina.com.cn/money/fund/jjyj/2019-09-29/doc-iicezzrq9153385.shtml" target="_blank">A股ETF总成交额509.49亿元 近一周净流入11亿元</a><span>(09月29日 13:21)</span></li>			<li><a href="https://finance.sina.com.cn/money/fund/jjyj/2019-09-29/doc-iicezzrq9131402.shtml" target="_blank">给你“稳稳的幸福”？基金公司杀入绝对收益产品蓝海</a><span>(09月29日 11:35)</span></li>			<li><a href="https://finance.sina.com.cn/money/fund/jjyj/2019-09-29/doc-iicezueu9090613.shtml" target="_blank">香港成中小基金新战场 永赢基金申请设立香港子公司</a><span>(09月29日 11:32)</span></li>			<li><a href="https://finance.sina.com.cn/money/fund/jjyj/2019-09-29/doc-iicezzrq9131212.shtml" target="_blank">给你“稳稳的幸福”？基金公司杀入一大片“蓝海”</a><span>(09月29日 11:30)</span></li>
+				</ul><div class="hs01"> </div>
+
+<!-- 分页 begin -->
+	<table cellspacing="0" style="margin:0 auto;">
+	<tbody>
+		<tr>
+			<td>
+				<span class="pagebox">
+							<span class="pagebox_pre_nolink">上一页</span>		
+								<span class="pagebox_num_nonce">1</span>			<span class="pagebox_num">
+				<a href="http://finance.sina.com.cn/roll/index.d.html?cid=56948&page=2">2</a>
+			</span>				<span class="pagebox_num">
+				<a href="http://finance.sina.com.cn/roll/index.d.html?cid=56948&page=3">3</a>
+			</span>				<span class="pagebox_num">
+				<a href="http://finance.sina.com.cn/roll/index.d.html?cid=56948&page=4">4</a>
+			</span>				<span class="pagebox_num">
+				<a href="http://finance.sina.com.cn/roll/index.d.html?cid=56948&page=5">5</a>
+			</span>	
+							<span class="pagebox_next">
+		<a href="http://finance.sina.com.cn/roll/index.d.html?cid=56948&page=2">下一页</a></span>
+				</span>
+			</td>
+		</tr>
+	</tbody>
+</table><!-- 分页 end -->
+
+
+	</div>
+	<!-- 列表 end -->
+	
+	<div class="MainBtm"></div>
+		        
+	
+</div>
+<!-- Main end -->
+
+
+<!-- footer begin -->
+<div class="footer">
+	<p><a href="http://corp.sina.com.cn/chn/" class="sinatail">新浪简介</a> | 
+		<a href="http://corp.sina.com.cn/eng/" class="sinatail">About Sina</a> | 
+		<a href="http://emarketing.sina.com.cn/" class="sinatail">广告服务</a> | 
+		<a href="http://corp.sina.com.cn/chn/sina_job.html" class="sinatail">招聘信息</a> | 
+		<a href="http://www.sina.com.cn/intro/lawfirm.shtml" class="sinatail">网站律师</a> | 
+		<a href="http://english.sina.com" class="sinatail">SINA English</a> | 
+		<a href="http://members.sina.com.cn/apply/" class="sinatail">会员注册</a> | 
+		<a href="http://tech.sina.com.cn/focus/sinahelp.shtml" class="sinatail">产品答疑</a></p>
+	<p>Copyright <span class="copyright">&copy;</span> 1996 - 2019 SINA Corporation,  All Rights Reserved</p>
+	<p>新浪公司 <a href="http://www.sina.com.cn/intro/copyright.shtml" class="sinatail">版权所有</a></p>
+</div>
+<!-- footer end -->
+</div>
+
+<script type="text/javascript" src="http://www.sinaimg.cn/unipro/pub/suda_m_v629.js"></script>
+<script type="text/javascript">suds_init(2289,100.0000,1015,2);</script>
+ 
+
+</body>
+</html>

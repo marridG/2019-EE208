@@ -1,0 +1,398 @@
+@charset "UTF-8";
+/** Created by zhaojian3 on 2016/4/7. */
+@import "http://games.sina.com.cn/308/2014/0805/28/standbottom.css";
+body, input, button, select, textarea, table { font: 14px "Microsoft YaHei", "微软雅黑", "SimSun", "宋体"; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { margin: 0; padding: 0; }
+
+fieldset, img { border: 0; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+ol, ul { list-style: none; }
+
+input, button, select, textarea { outline: none; }
+
+textarea { resize: none; }
+
+a:link, a:visited, a:hover, a:active { text-decoration: none; }
+
+/*重设 HTML5 标签*/
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+
+/*==公用样式==*/
+.clear:after { visibility: hidden; display: block; font-size: 0; content: ""; clear: both; height: 0; }
+
+.clear { zoom: 1; }
+
+/*开始*/
+body { background: #fff; min-width: 1200px; color: #474747; }
+
+.centerPart { width: 1200px; position: relative; margin: 0 auto; }
+
+img { max-width: 100%; }
+
+.trans { transition: all 2s; }
+
+.trans:hover { -webkit-transform: scale(1.1); transform: scale(1.1); }
+
+.fl { float: left; }
+
+.fr { float: right; }
+
+a { color: #474747; }
+
+a:hover { color: #f65049; }
+
+.redText { color: #f65049; }
+
+.hot { display: inline-block; line-height: 13px; font-size: 12px; color: #fff; padding: 0 3px; background: #ff5554; font-style: normal; vertical-align: middle; margin: 0 8px; }
+
+.skew-hot { display: block; width: 46px; height: 38px; position: absolute; top: 0; left: 0; background: url("http://n.sinaimg.cn/games/2016vr/sprite1.png"); background-position: -154px 0; }
+
+/*--START top black nav--*/
+/*.VR-top{ position: relative; height: 60px; background: #252525; margin: 0 auto 30px;
+  a{ color: #d2d2d2;}
+  .top-center{ height: 100%; font-size: 14px; color: #d2d2d2; line-height: 60px;}
+  .top-menu{ float: left;
+    .t-m-item{ float: left; margin: 0 35px 0 0;}
+    .VR-top-link{ color: #d2d2d2; padding: 0 24px;}
+    .first-l-inter{ display: block; width: 1px; height: 12px; float: left; background: #4a4a4a; margin: 24px 35px 0 0;}
+  }
+  .VR-logon-wrap{ float: right;}
+}*/
+/*--END top black nav--*/
+/*--START head AD 1200 * 90--*/
+.VR-headAD a, .VR-headAD img { display: block; width: 100%; }
+
+/*--END head AD 1200 * 90--*/
+/*--START header logo and search--*/
+.VR-header { margin: 20px auto 30px; height: 40px; }
+
+.VR-header .VR-logo { display: block; float: left; width: 175px; height: 38px; background: url("http://n.sinaimg.cn/games/2016vr/logo.png"); }
+
+.VR-header .header-search-wrap { float: right; position: relative; width: 280px; background-color: #efefef; }
+
+.VR-header .header-search-wrap .h-s-input { display: block; height: 30px; width: 206px; line-height: 30px; padding: 5px 15px; background-color: #efefef; border: none; outline: none; font-size: 14px; color: #7a7a7a; }
+
+.VR-header .header-search-wrap .submitbtn { display: block; width: 44px; height: 39px; position: absolute; top: 0; right: 0; background: url("http://n.sinaimg.cn/games/2016vr/sprite1.png"); background-position: -100px 0; }
+
+.VR-header .header-search-wrap .submitbtn:hover { background-color: #f65049; background-position: -100px -39px; }
+
+.VR-header .friendlinks { float: right; font-size: 0; }
+
+.VR-header .friendlinks .f-l-item { display: block; float: left; }
+
+.VR-header .friendlinks img {  vertical-align: bottom; margin-right: 30px; display: block; }
+
+/*--END header logo and search--*/
+/*--START red nav--*/
+.VR-nav { /* margin-bottom: 44px;*/ height: 60px; /* border-bottom: solid 1px #ebebeb;*/ background: #fff; position: relative; z-index: 20; }
+
+.VR-nav .first-level-wrap { height: 60px; line-height: 60px; background: #f65049; position: relative; z-index: 2; }
+
+.VR-nav .first-level-wrap .first-level-item {float: left;position: relative;width:150px;}
+
+.VR-nav .first-level-wrap .first-level-item.on .tips_top { display: block; }
+
+.VR-nav .first-level-wrap .first-level-item.on ul { display: block; }
+
+.VR-nav .first-level-wrap .first-level-item.on a { background: rgba(0, 0, 0, 0.1); }
+
+.VR-nav .first-level-wrap .first-level-item.on .downnav-wrap a { background: none; }
+
+.VR-nav .first-level-wrap .first-level-item a {display: block;font-size: 16px;color: #fff;height: 60px;text-align:center;}
+
+.VR-nav .first-level-wrap .first-level-item a:hover { background: rgba(0, 0, 0, 0.1); }
+
+.VR-nav .first-level-wrap .first-level-item .downnav-wrap { position: absolute; z-index: 5; top: 60px; display: none; width: 1200px; height: 60px; line-height: 60px; }
+
+.VR-nav .first-level-wrap .first-level-item .downnav-wrap ul { float: left; position: relative; }
+
+.VR-nav .first-level-wrap .first-level-item .downnav-wrap .second-level-item { width:150px;display: block; float: left; }
+
+.VR-nav .first-level-wrap .first-level-item .downnav-wrap .second-level-item a { display: block; font-size: 16px; color: #474747; }
+
+.VR-nav .first-level-wrap .first-level-item .downnav-wrap .second-level-item a:hover, .VR-nav .first-level-wrap .first-level-item .downnav-wrap .second-level-item a.current { color: #f65049; border-bottom: solid 1px #f65049; }
+
+.VR-nav .first-level-wrap .down_arrow { display: inline-block;position:absolute;top:0px;right: 27px; width: 10px; height: 60px; background: url("http://n.sinaimg.cn/games/2016vr/sprite1.png"); background-position: -144px 0; vertical-align: middle; }
+.VR-nav .first-level-wrap .down_arrow2{right:34px;}
+.VR-nav .first-level-wrap .tips_top { display: none; cursor: pointer; position: absolute; z-index: 2; bottom: 0; left: 50%; margin: 0 0 0 -4px; border-width: 7px; border-style: dashed dashed solid dashed; border-color: transparent transparent #fff transparent; }
+
+.VR-nav .emptydiv { display: none; width: 100%; height: 60px; border-bottom: solid 1px #ebebeb; box-shadow: 0 2px 10px #aaa; background: #fff; position: absolute; z-index: 1; top: 100%; }
+
+.news-list-detail .page_more {margin-bottom: 0px;}
+
+.news-list-detail .pageZone { text-align: center; width: 100%; margin: 20px 0 0 0; overflow: hidden; }
+
+.news-list-detail .pageZone span { width: 38px; height: 38px; line-height: 38px; text-align: center; color: #474747; text-decoration: none; margin-right: 5px; font-size: 16px; cursor: pointer; display: inline-block; background: #f6f6f6; -moz-user-select: none; -webkit-user-select: none; -ms-user-select: none; }
+
+.news-list-detail .pageZone span a { color: #414141; text-decoration: none; }
+
+.news-list-detail .pageZone span:hover { background: #f65049; color: #fff; text-decoration: none; }
+
+.news-list-detail .pageZone .Disabled { width: 85px; color: #B0B0B0; cursor: default; }
+
+.news-list-detail .pageZone span.Disabled:hover { background: #f6f6f6; color: #B0B0B0; }
+
+.news-list-detail .pageZone .Disabled a { display: inline-block; width: 85px; color: #aeaeae; }
+
+.news-list-detail .pageZone .Disabled a:hover { color: #aeaeae; }
+
+.news-list-detail .pageZone .next, .news-list-detail #pageZone .next5, .news-list-detail #pageZone .prev { width: 85px; }
+
+.news-list-detail .pageZone .next a { display: inline-block; width: 85px; }
+
+.news-list-detail .pageZone span.isNow { background: #f65049; color: #FFFFFF; }
+
+.news-list-detail .pageZone span.isNow a { color: #FFFFFF !important; }
+
+.news-list-detail .pageZone span.dot { border: none; }
+
+.news-list-detail .pageZone span a { display: inline-block; width: 38px; height: 38px; }
+
+.news-list-detail .pageZone span a:hover { color: #fff; text-decoration: none; }
+
+/*--END red nav--*/
+/*--START VR-main--*/
+.VR-main-wrap { padding: 44px 0 70px; }
+
+.VR-main-wrap .main-list { position: relative; }
+
+.VR-main-wrap .news-list-content-left { width: 815px; float: left; }
+
+.VR-main-wrap .news-list-content-right { width: 310px; float: right; }
+
+.common-title-wrap { margin: 0 0 20px 0; }
+
+.common-title-wrap .title_icon { display: block; width: 50px; height: 50px; float: left; margin: 0 10px 0 0; background: url("http://n.sinaimg.cn/games/2016vr/sprite1.png") no-repeat; }
+
+.common-title-wrap .title_icon.t-i-1 { background-position: -100px -222px; }
+
+.common-title-wrap .title_icon.t-i-2 { background-position: -150px -222px; }
+
+.common-title-wrap .title_icon.t-i-3 { background-position: 0px -272px; }
+
+.common-title-wrap .title_icon.t-i-4 { background-position: 0px -172px; }
+
+.common-title-wrap .title_icon.t-i-5 { background-position: -50px -172px; }
+
+.common-title-wrap .title_icon.t-i-6 { background-position: -100px -172px; }
+
+.common-title-wrap .title_icon.t-i-7 { background-position: -150px -172px; }
+
+.common-title-wrap .title_icon.t-i-8 { background-position: 0px -222px; }
+
+.common-title-wrap .title_icon.t-i-9 { background-position: -50px -222px; }
+
+.common-title-wrap .common-title { font-size: 23px; font-weight: bold; color: #f65049; line-height: 32px; }
+
+.common-title-wrap .common-title-more { float: right; color: #828282; line-height: 50px; font-size: 14px; }
+
+.common-title-wrap .common-title-more b { color: #a9a9a9; font-weight: bold; font-size: 16px; }
+
+.common-title-wrap .common-title-more:hover { color: #f65049; }
+
+.common-title-wrap .common-title-more:hover b { color: #f65049; }
+
+.common-title-wrap .common-title-en { font-size: 12px; color: #b7b7b7; line-height: 20px; }
+
+/*加载的样式*/
+.loading { text-align: center; font-size: 20px; line-height: 20px; }
+
+.loading img { width: 20px; height: 20px; vertical-align: -3px; }
+
+.listboxwp { width: 815px; padding: 27px 0; border-bottom: 1px solid #e7e7e7; font-size: 14px; color: #929291; position: relative; }
+
+.listboxwp a:hover { color: #f65049; }
+
+.listboxwp .imgwp { width: 179px; height: 108px; float: left; margin: 6px 24px 20px 0; position: relative; overflow: hidden; }
+
+.listboxwp .imgwp a { display: block; }
+
+.listboxwp .imgwp img { width: 100%; height: 108px; }
+
+.listboxwp .imgwp:hover img { -webkit-transform: scale(1.06); transform: scale(1.06); }
+
+.listboxwp h3 { font-size: 18px; height: 18px; margin-bottom: 20px; }
+
+.listboxwp h3 .obvioussina { margin-left: 14px; }
+
+.listboxwp h3 a.org { font-size: 14px; font-weight: normal; }
+
+.listboxwp .conwp { height: 114px; overflow: hidden; margin-bottom: 17px; }
+
+.listboxwp .conwp a { color: #929291; }
+
+.listboxwp .conwp a:hover { color: #f65049; }
+
+.listboxwp .conwp .org { color: #f65049; }
+
+.listboxwp i { font: 8px "SimSun", "宋体"; padding: 0 12px; color: #c6c6c6; }
+
+.listboxwp p { line-height: 26px; margin-bottom: 17px; color: #666565; }
+
+.listboxwp .time { padding: 0 55px 0  5px; }
+
+.listboxwp .from { padding: 0 50px 0 13px; }
+
+.listboxwp span.share { margin: 0 8px; }
+
+.listboxwp a.share { margin: 0 8px; }
+
+.listboxwp > a.gray { margin-right: 6px; }
+
+.listboxwp span.gray { font-size: 14px; color: #929291; vertical-align: -2px; font-weight: normal; }
+
+.listboxwp .conimgwp { height: 108px; margin-bottom: 17px; padding-top: 6px; overflow: hidden; }
+
+.listboxwp .conimgwp a { margin-right: 5px; overflow: hidden; float: left; }
+
+.listboxwp .conimgwp img { height: 108px; transition: all 1s; }
+
+.listboxwp .conimgwp a img:hover { -webkit-transform: scale(1.1); transform: scale(1.1); }
+
+.listboxwp .bigitem { height: 219px; overflow: hidden; margin-bottom: 17px; }
+
+.listboxwp .bigitem p { margin-bottom: 13px; }
+
+.listboxwp .bigimgwp { width: 267px; height: 210px; float: left; margin: 6px 24px 20px 0; position: relative; overflow: hidden; }
+
+.listboxwp .bigimgwp img { width: 100%; height: 100%; }
+
+.listboxwp .bigimgwp:hover img { -webkit-transform: scale(1.06); transform: scale(1.06); }
+
+.listboxwp .bigitem ul { padding-top: 13px; }
+
+.listboxwp .bigitem ul li { float: left; margin-right: 10px; text-align: center; color: #929291; }
+
+.listboxwp .bigitem ul li .smallimg { display: block; width: 111px; height: 70px; overflow: hidden; margin-bottom: 6px; }
+
+.listboxwp .bigitem ul li img { width: 111px; height: 70px; display: block; transition: all 1s; }
+
+.listboxwp .bigitem ul li a:hover img { -webkit-transform: scale(1.1); transform: scale(1.1); }
+
+.listboxwp .bigitem ul li a.gray { color: #666565; }
+
+.listboxwp .bigitem ul li a.gray:hover { color: #ff6600; }
+
+.loading { width: 100%; height: 42px; text-align: center; font-size: 14px; line-height: 42px; margin-bottom: 45px; margin-top: -1px; position: relative; }
+
+.loading a { display: block; background-color: #f7f7f7; color: #929291; }
+
+.loading a:hover { display: block; background-color: #eaeaea; color: #f65049; }
+
+.hvideo { width: 19px; height: 15px; display: inline-block; background: url(http://n.sinaimg.cn/games/2016vr/sprite.png) -53px -53px; vertical-align: middle; margin-left: 15px; }
+
+.hpictu { width: 19px; height: 15px; display: inline-block; background: url(http://n.sinaimg.cn/games/2016vr/sprite.png) -94px -53px; vertical-align: middle; margin: 0 5px 0 15px; }
+
+.imgvideo { width: 34px; height: 34px; background: url(http://n.sinaimg.cn/games/2016vr/sprite.png) -98px -181px; position: absolute; top: 50%; left: 50%; margin: -17px 0 0 -17px; }
+
+.imgvideo:hover { background-position: -98px -221px; }
+
+.sharebtn { width: 16px; height: 14px; display: inline-block; background: url(http://n.sinaimg.cn/games/2016vr/sprite.png); vertical-align: middle; cursor: pointer; }
+
+.weibo { background-position: -24px -101px; }
+
+.weibo:hover { background-position: -24px -132px; }
+
+.weixin { background-position: -61px -101px; }
+
+.weixin:hover { background-position: -61px -132px; }
+
+.mshare { background-position: -98px -101px; }
+
+.mshare:hover { background-position: -98px -131px; }
+
+.commont { background-position: -137px -101px; }
+
+.commont:hover { background-position: -137px -131px; }
+
+.listbox-more { display: block; background: #ededed; width: 100%; height: 50px; line-height: 50px; text-align: center; color: #787878; font-size: 15px; font-weight: bold; }
+
+/* page */
+.page_more { width: 100%; margin-top: 40px; margin-bottom: 20px; overflow: hidden; }
+
+.pageZone { padding-top: 0; overflow: hidden; text-align: center; }
+
+.pageZone span { width: 38px; height: 38px; line-height: 38px; text-align: center; color: #474747; text-decoration: none; margin-right: 5px; font-size: 16px; cursor: pointer; display: inline-block; background: #f6f6f6; }
+
+.pageZone span a { color: #414141; text-decoration: none; }
+
+.pageZone span:hover { background: #f77309; color: #fff; text-decoration: none; }
+
+.pageZone .Disabled { width: 85px; }
+
+.pageZone span.Disabled:hover { background: #f6f6f6; }
+
+.pageZone .Disabled a { display: inline-block; width: 85px; color: #aeaeae; }
+
+.pageZone .Disabled a:hover { color: #aeaeae; }
+
+.pageZone .next { width: 85px; }
+
+.pageZone .next a { display: inline-block; width: 85px; }
+
+.pageZone span.isNow { background: #f77309; color: #FFFFFF; }
+
+.pageZone span.isNow a { color: #FFFFFF !important; }
+
+.pageZone span.dot { border: none; }
+
+.pageZone span a { display: inline-block; width: 38px; height: 38px; }
+
+.pageZone span a:hover { color: #fff; text-decoration: none; }
+
+/*--END VR-main--*/
+/*weixin pop*/
+.weixinpop { width: 217px; height: 274px; background: #fff; position: absolute; color: #929291; line-height: 22px; border: 1px solid #d7d7d7; box-shadow: 0 3px 0 rgba(0, 0, 0, 0.12); font-size: 14px; text-align: center; z-index: 1000; }
+
+.weixinpop .t { width: 11px; height: 7px; background: url(http://n.sinaimg.cn/game/homepage/t.gif); position: absolute; left: 50%; top: -7px; margin-left: -5px; }
+
+.weixinpop img { width: 184px; height: 184px; margin: 10px 10px 5px; }
+
+.weixinpop table { margin: 20px auto 18px !important; }
+
+.bd_weixin_popup, .bd_weixin_popup_bg { visibility: hidden; opacity: 0; }
+
+/*--foot--*/
+.totop { display: block; width: 58px; height: 58px; position: fixed; left: 50%; margin-left: 650px; bottom: 100px; background: url("http://n.sinaimg.cn/games/2016vr/sprite1.png") no-repeat; background-position: -50px -272px; transition: all .2s; }
+
+.totop:hover { background-position: -50px -330px; }
+
+.rightAD img { display: block; width: 100%; }
+
+/*热门推荐*/
+.hotRecommend { margin: 55px 0 0 0; }
+
+.hotRecommend .common-title-wrap { margin-bottom: 25px; }
+
+.hotRecommend .rec-item { line-height: 26px; margin-bottom: 35px; }
+
+.hotRecommend .rec-item .rec-item-pic { width: 118px; height: 111px; position: relative; float: left; overflow: hidden; margin: 0 18px 0 0; }
+
+.hotRecommend .rec-item .rec-item-pic:hover .playbtn { -webkit-transform: rotateZ(360deg); transform: rotateZ(360deg); }
+
+.hotRecommend .rec-item .rec-item-pic img { display: block; width: 100%; height: 100%; }
+
+.hotRecommend .rec-item .rec-item-pic .playbtn { position: absolute; z-index: 2; width: 34px; height: 34px; top: 50%; left: 50%; margin: -17px 0 0 -17px; transition: all .5s; }
+
+.hotRecommend .rec-item .rec-item-pic .skew-hot { z-index: 3; }
+
+.hotRecommend .rec-item .name { font-size: 14px; font-weight: bold; height: 52px; overflow: hidden; }
+
+.hotRecommend .rec-item .info { color: #838383; height: 52px; overflow: hidden; margin-top: 7px; }
+
+.dot-list-hot li { position: relative; line-height: 36px; }
+
+.dot-list-hot li .dot { display: inline-block; width: 4px; height: 4px; vertical-align: middle; background: #d6d6d6; margin-right: 8px; }
+
+.dot-list-hot li .hot { margin: -1px 0 0 8px; }
+
+.rightAD { margin: 0 0 55px 0; }
+
+.rightAD img { display: block; width: 100%; }
+
+.right-weibo iframe { display: block; }

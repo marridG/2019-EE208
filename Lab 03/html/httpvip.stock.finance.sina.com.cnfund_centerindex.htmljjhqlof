@@ -1,0 +1,709 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>基金净值查询|基金数据中心_新浪财经_新浪网</title>
+<meta name="keywords" content="基金,基金净值,基金净值查询,基金数据中心,基金估值,基金回报,基金分红,基金评级,基金持仓" />
+<meta name="description" content="新浪财经基金数据为您提供最及时、最全面、最精准的基金行业数据，包括基金净值、基金估值、基金回报、基金分红、持仓数据等等，帮您把握行情准确出击" />
+<meta name="stencil" content="PGLS000664" />
+<!--<link rel="stylesheet" href="style.css" type="text/css" />-->
+<style type="text/css">
+/* CSS Document */
+
+/* CSS Document */
+
+/* ================== css reset ================== */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img,blockquote { margin:0; padding:0; }
+fieldset, img { border:none; }
+address, caption, cite, code, dfn, th, var,em { font-style:normal; font-weight:normal; }
+ul, ol, li { list-style:none; }
+select, input { vertical-align:middle; }
+select, input, textarea { font-size:12px; margin:0; }
+table { border-collapse:collapse; }
+body { background:#fff; color:#333; padding:5px 0; font:12px/20px "宋体"; }
+.clearfix:after { content:"."; display:block; height:0; visibility:hidden; clear:both; }
+.clearfix { zoom:1; }
+.clearit { clear:both; height:10px; font-size:0; overflow:hidden;zoom:1; }
+a { color:#4b4b4b; text-decoration:none; }
+a:visited { color:#800080; }
+a:hover, a:active, a:focus { color:#f00; text-decoration:underline; }
+.wrap { width:980px; margin:0 auto; }
+
+/*others added by yan*/
+ h1, h2, h3, h4, h5, h6{ font-weight:normal; }
+.fred,.fred:visited, .fred a, .fred a:visited{color:#ff0000;}
+.fred a:hover{color:#ff0000;}
+.fgreen,.fgreen:visited, .fgreen a, .fgreen a:visited{color:#009944;}
+.fgreen a:hover{color:#009944;}
+.fblue, .fblue a{color:#005991; text-decoration:none;}
+.fblue:visited, .fblue a:visited{color:#800080; text-decoration:none;}
+.fblue a:hover{color:#f00; text-decoration:none;}
+
+.fSblue,.fSblue:visited, .fSblue a, .fSblue a:visited{color:#005991; text-decoration:none;}
+.fSblue a:hover{color:#f00; text-decoration:none;}
+
+.fLblue a:link,.fLblue a:visited{ color:#007ccb;}
+.fLblue a:hover{color:#f00;text-decoration:none;}
+
+.fgrey, .fgrey a{color:#828282;}
+.fgrey:visited, .fgrey a:visited{color:#800080; text-decoration:none;}
+.fgrey a:hover{color:#f00;}
+.fSgrey,.fSgrey:visited, .fSgrey a, .fSgrey a:visited{color:#828282;}
+.fSgrey a:hover{color:#f00;}
+
+.fblock, .fblock a, .fblock a:visited{color:#373737; text-decoration:none;}
+.fblock a:hover{color:#f00; text-decoration:underline;}
+.forange a,.forange a:visited{ color:#ef5a00;}
+.forange a:hover{ color:#f00;}
+.fmid{ text-align:center;}
+.f14{ font-size:14px;}
+
+.fSblack,.fSblack:visited,.fSblack a,.fSblack a:visited{color:#4B4B4B;}
+.fSblack:hover,.fSblack a:hover{color:#f00}
+
+.fSBblack,.fSBblack:visited,.fSBblack a,.fSBblack a:visited{color:#4B4B4B;font-weight:bold;}
+.fSBblack:hover,.fSBblack a:hover{color:#f00;font-weight:bold;}
+/* 导航 */
+.secondaryHeader{height:33px;overflow:hidden;background:url(http://www.sinaimg.cn/dy/images/header/2008/standardl2nav_bg.gif) repeat-x #fff;color:#000;font-size:12px;font-weight:100;}
+.secondaryHeader a,.secondaryHeader a:visited{color:#000;text-decoration:none;}
+.secondaryHeader a:hover,.secondaryHeader a:active{color:#c00;text-decoration:underline;}
+.sHBorder{border:1px #e3e3e3 solid;padding:0 10px 0 12px;overflow:hidden;zoom:1;}
+.sHLogo{float:left;height:31px;line-height:31px;overflow:hidden;}
+.sHLogo span,.sHLogo span a,.sHLogo span a:link,.sHLogo span a:visited,.sHLogo span a:hover{display:block;*float:left;display:table-cell;vertical-align:middle;*display:block;*font-size:27px;*font-family:Arial;height:31px;}
+.sHLogo span,.sHLogo span a img,.sHLogo span a:link img,.sHLogo span a:visited img,.sHLogo span a:hover img{vertical-align:middle;}
+.sHLinks{float:right;line-height:31px;}
+.sHBorder img{border:0}
+
+/*顶部导航*/
+.top_nav {height:29px; line-height:29px; background:url(http://www.sinaimg.cn/cj/subject/2009/0618/top_nav_bg.gif) repeat-x; margin-bottom:1px; margin-top:10px;}
+.top_nav a:link {color:#fff; text-decoration:none;}
+.top_nav a:visited {color:#fff; text-decoration:none;}
+.top_nav a:hover {color:#fff; text-decoration:underline;}
+.top_nav a:active {color:#fff; text-decoration:none;}
+.top_nav dt {float:left; width:92px; text-align:center;}
+.top_nav dt.black {background:url(http://www.sinaimg.cn/cj/subject/2009/0618/top_nav_bg.gif) 0px -42px repeat-x;}
+.top_nav dt.black a {display:block; height:29px; background:url(http://www.sinaimg.cn/cj/subject/2009/0618/top_nav_bg.gif) 100px -78px no-repeat;}
+.top_nav dt.blue {background:url(http://www.sinaimg.cn/cj/subject/2009/0618/top_nav_bg.gif) 0px -114px no-repeat;}
+.top_nav dd {float:left; padding-left:15px;}
+.top_nav dd a {margin:0px 19px;}
+/*--标题banner--*/
+.banner {position:relative;height:32px; background: url(view/images/gegu_logo.png) 0 0 no-repeat; margin:10px 0; padding-bottom:10px; border-bottom:6px solid #b4cceb;}
+.banner .logo{position:absolute;left:0px;top:0px;width:190px;height:32px; text-indent:-999px;overflow:hidden;zoom:1;}
+.lookup_wrap {float:right; width:280px; padding:5px 0 0; text-align:right; height:22px; margin-top:5px;}
+.lookup_wrap input, .lookup_wrap select {color:#666;}
+.time_wrap {float:right; width:300px; height:22px; line-height:22px; background: url(view/images/gegu_bannar_bg.png) no-repeat 0px 7px; padding:5px 0 0 20px; margin-top:5px;}
+.banner .link_wrap {float:right; width:90px; height:22px; line-height:22px; padding:5px 0 0 10px; margin-top:5px; text-align:center;}
+.link_wrap a:link,.link_wrap a:visited{ color:#4b4b4b;}
+.link_wrap a:hover{color:#ef5a00; text-decoration:none;}
+.banner_line {height:5px; margin-bottom:10px; font-size:0px; background:url(http://www.sinaimg.cn/cj/subject/2009/0618/hq_jpg.jpg) repeat-x 0px -145px;}
+.content {background:url(http://www.sinaimg.cn/cj/subject/2009/0618/hq_gif.gif) repeat-y -335px 0;}
+/*--标题 个股名称--*/
+.stockIntro{ background:url(view/images/gegu_bg01.png) 0 0 repeat-x; height:39px; padding:10px 10px 0;}
+
+
+/* ============== 横切定义 ============== */
+.part01 {overflow:hidden;zoom:1; }
+.part01 .p_l{float:left; width:185px; padding-right:0px;margin-bottom:-32767px;padding-bottom:32767px; background-color:#f8f8f8;}
+.part01 .p_r{float:right; width:785px;display:none;margin-bottom:-32767px;padding-bottom:32767px;}
+.help{ position:absolute;width:88px; height:40px;  top:26px; right:20px;  z-index:9; zoom:1;}
+.help .hBtn{ display:block; background:url(view/images/gegu_main.png) 0 -50px no-repeat;width:100px; height:40px;text-indent:-999em;overflow:hidden;outline:none;blr:expression(this.onFocus=this.blur());   }
+.help .hBtn:hover{ background-position:0 -100px;}
+.help .hCon{ position:absolute; top:50px; left:-300px; width:300px; z-index:999; background:url(view/images/gegu_bg01.png) 0 -102px repeat-x; border:1px solid #90c6fe; padding:10px 15px; }
+.help .hCon p{text-indent:2em;}
+.help .close{ background:url(view/images/gegu_main.png) -105px -118px no-repeat; padding-left:20px; color:#017bec; float:right; width:30px; cursor:pointer;}
+/*左侧树型菜单*/
+.p_l_menu dl{ margin:1px 0 2px;}
+.p_l_menu dt{ height:27px;line-height:27px;  background:#c6d5fa; border:1px solid #a4c2f3; font-size:14px;}
+.p_l_menu .vMenu{  background:url(view/images/fund_tmenu.png) 10px 6px no-repeat; display:block; padding-left:30px;  }
+.p_l_menu .selected  .vMenu{ background-position:  10px -26px;}
+.p_l_menu dd{zoom:1;position:relative;z-index:10;}
+.p_l_menu .selected dd{ display:block;}
+
+/*首页*/
+.p_r_pic{ border:1px solid #ceddfb; border-top:none; padding:10px 30px; margin-bottom:10px;}
+.pic{ float:left; padding:10px; text-align:center;}
+.pic p{ background:#f2f2f4; height:25px; line-height:25px; width:330px; color:#005991;}
+.p_r_cont{border:1px solid #ceddfb; border-top:none; padding-top:3px; margin-bottom:10px;}
+
+/*二级页*/
+.p_r_nav{ height:29px; line-height:29px; border:1px solid #c6d5fa; border-bottom:none; background:url(view/images/fund_tmenu.png) 0 -100px repeat-x; text-align:right; padding:0 10px; overflow:hidden;zoom:1;margin-top:1px;}
+.p_r_nav .lf{ float:left;}
+.p_r_nav .pageN a{  display:inline-block; color:#007ccb;  padding:0 3px;}
+.p_r_nav .pageN a.Ybg{background:url(view/images/fund_tmenu.png) 0 -65px;}
+.bgN{ background:none; border:none;}
+.p_r_ps{ background:#eaf1ff; height:29px; padding-left:10px; line-height:29px; color:#9f9f9f; }
+.fundTab{ padding-top:5px;}
+.no_border_bottom table{margin-bottom:-1px;overflow:hidden;}
+.table table{width:100%;}
+.table table thead th,.table table thead td{background-color:#eaf1ff;vertical-align:middle;line-height:30px; text-align:center;padding-top:0px;padding-bottom:0px;}
+.table tbody td,.table tbody th{  height:30px; line-height:30px; border-bottom:1px  dashed #afafaf; text-align:center;}
+.table tbody th{text-align:right;}
+.table .bgN td{ border-bottom:none;}
+.table .selected{ background:#f0f5ff;}
+/*分页*/
+.PageList{ margin-top:20px;position:relative;height:20px;}
+ p.page,.page{ font-family: "宋体", sans-serif; text-align:right;font-size:12px;line-height:21px; color:#999;}
+.page span,.page a{ display:inline-block; padding:0px 5px; background:#fff; height:15px; line-height:15px;margin:0 3px;}
+.page a{border:1px #9aafe5 solid; color:#838383; text-decoration:none;background:#f6f7f8;}
+.page span{border:1px #d4e5ef solid;color:#838383; background:#f6f7f8;}
+.page span.cur,.page .cur a{background:none; color:#008ccc; border:none}
+.page .cur a:hover{ border:none; text-decoration:underline; color:#008ccc}
+.page a:hover,.page a:active{ border:1px #2e6ab1 solid;color:#363636; text-decoration:none}
+.page_left{ text-align:left}
+.page_right{ text-align:right}
+
+.page_left{ text-align:left}
+.page_right{ text-align:right}
+/*footer*/
+.footer{color:#005991;line-height:22px;margin:2em 0;text-align:center; font-family:Arial, Helvetica, sans-serif, "黑体"; padding-top:30px;}
+.footer a:link,.footer a:visited,.footer a:hover{ color:#005991; text-decoration:underline;}
+/* ================= commen define end================ */
+/* ==========各页面代码 begin=========== */
+/*分类资金统计*/
+
+
+/* ==========各页面代码 end=========== */
+tbody .colorize{color:#333;}
+tbody .col{background-color:#ffffff}
+
+.fblue tbody{color:#333;}
+thead td.colorize,thead th.colorize{color:inherit}
+.table table thead td.col,.table table thead th.col{background-color:#ffffff}
+
+.red{color:Red;}
+.green{color:Green;}
+tbody .r_5{padding-right:5px;}
+tbody .r_th_5 tbody th{padding-right:5px;}
+tbody .r_10{padding-right:10px;}
+tbody .r_th_10 tbody th{padding-right:10px;}
+tbody .r_15{padding-right:15px;}
+tbody .r_th_15 tbody th{padding-right:15px;}
+tbody .r_20{padding-right:20px;}
+tbody .r_th_20 tbody th{padding-right:20px;}
+tbody .r_30{padding-right:30px;}
+tbody .r_th_30 tbody th{padding-right:30px;}
+tbody .r_35{padding-right:35px;}
+tbody .r_th_35 tbody th{padding-right:35px;}
+tbody .r_40{padding-right:45px;}
+tbody .r_th_40 tbody th{padding-right:45px;}
+tbody .r_60{padding-right:60px;}
+
+tbody a.manager{display:block;width:75px;height:30px;overflow:hidden;cursor:default;color:#333;}
+tbody a.manager:link,tbody a.manager:visited,tbody a.manager:hover{color:#333;}
+tbody a.yjbjjz{display:block;height:30px;overflow:hidden;cursor:default;color:#333;}
+tbody a.yjbjjz:link,tbody a.yjbjjz:visited,tbody a.yjbjjz:hover{color:#333;}
+tbody a.ydsygz{display:block;width:100px;height:30px;overflow:hidden;cursor:default;color:#333;}
+tbody a.ydsygz:link,tbody a.ydsygz:visited,tbody a.ydsygz:hover{color:#333;}
+tbody a.ggzz{display:block;width:75px;height:30px;overflow:hidden;cursor:default;color:#333;}
+tbody a.ggzz:link,tbody a.ggzz:visited,tbody a.ggzz:hover{color:#333;}
+tbody a.sxzsfs{display:block;width:75px;height:30px;overflow:hidden;cursor:default;color:#333;}
+tbody a.sxzsfs:link,tbody a.sxzsfs:visited,tbody a.sxzsfs:hover{color:#333;}
+a{outline:none;}
+
+thead .sort_up{background: url(http://www.sinaimg.cn/cj/subject/2009/0618/up_arrow.gif) no-repeat center right;padding-right:10px;}
+thead .sort_down{background: url(http://www.sinaimg.cn/cj/subject/2009/0618/down_arrow.gif) no-repeat center right;padding-right:10px;}
+tbody .sort_up,tbody .sort_down{ background-color:#EAF1FF}
+.js-company{width:150px;}
+.divEmptyData{ text-align:center;}
+
+
+.p_l_menu dd .secondaryMenu{position:relative;height:25px; line-height:25px;}
+.p_l_menu .secondaryMenu a{ padding-left:30px;outline:none;blr:expression(this.onFocus=this.blur());}
+.p_l_menu .last{ background:none;}
+.menu_2nd{display:none;position:absolute;z-index:22;top:-5px;left:185px;width:104px;padding-left:10px;overflow:hidden;}
+.menu_2nd .arrow{position:absolute;left:0px;top:13px;width:11px;height:11px;z-index:30; background:url(view/images/menu_2nd_back.gif) 0 0 no-repeat;}
+.menu_2nd .menu_2nd_top{height:3px;background:url(view/images/menu_2nd_back.gif) 0 -13px no-repeat;line-height:3px;font-size:1px;}
+.menu_2nd .menu_2nd_bottom{height:3px;background:url(view/images/menu_2nd_back.gif) 0 -19px no-repeat;line-height:3px;}
+.menu_2nd ul{ background-color:#e0e7f5;border:1px solid #bccbe1;border-top:none;border-bottom:none;margin-bottom:-1px;overflow:hidden;padding:0 3px;}
+.menu_2nd li{height:27px;line-height:27px;background:url(view/images/menu_2nd_border.png) 0 bottom repeat-x; text-indent:-20px;}
+
+.name{display:block;width:140px;height:30px;overflow:hidden;}
+
+.relative_outer{position:relative;zoom:1;}
+.fundTab{overflow:auto;/*position:relative;*/width:100%;}
+.fundTab .copy{position:absolute;top:5px;width:auto;background-color:White;zoom:1;}
+.fundTab .copy .selected{background-color:White; }
+.fundTab .copy thead td,#cJJPJ .copy thead th{vertical-align:middle;}
+.fundTab .copy thead img{cursor:pointer;}
+.fundTab .go_l{position:absolute;z-index:2000;left:160px;top:10px;width:20px;height:20px;background:url(view/images/go_l.gif) center no-repeat;cursor:pointer;}
+.fundTab .go_r{position:absolute;z-index:2000;right:5px;top:10px;width:20px;height:20px;background:url(view/images/go_r.gif) center no-repeat;cursor:pointer;}
+
+.border_top{border-top:1px solid #005991;}
+.border-right{border-right:1px solid #005991;}
+.border-left{border-left:1px solid #005991;}
+#HBStypejz a,a:visited { color:#f00; }
+#HBStypeHBPH a,a:visited { color:#f00; }
+</style>
+<script type="text/javascript">
+    document.domain = 'sina.com.cn';
+</script>
+<script type="text/javascript" src="http://www.sinaimg.cn/jslib/jquery-1.4.2.min.js"></script>
+<script charset="utf-8" src="http://i.sso.sina.com.cn/js/ssologin.js" type="text/javascript"></script>
+<script type="text/javascript" src="view/js/loginmanager.js"></script>
+<script type="text/javascript" src="view/js/logincomponent.js"></script>
+<script type="text/javascript" src="view/js/Util.Common.js" ></script>
+<script type="text/javascript" src="view/js/Util.SL.js" ></script>
+<script type="text/javascript" src="view/js/IO.Ajax.js" ></script>
+<script type="text/javascript" src="view/js/IO.SRV.js" ></script>
+<script type="text/javascript" src="view/js/IO.XSRV2.js" ></script>
+<script type="text/javascript" src="view/js/QuotesDataIO.js" ></script>
+<script type="text/javascript" src="view/js/QuotesDataLight.js" ></script>
+<script type="text/javascript" src="view/js/stock_list.js" ></script>
+<script type="text/javascript" src="view/js/stock_listloader.js" ></script>
+<script type="text/javascript" src="view/js/main.js"></script>
+
+<!-- 天相评级 -->
+<script type="text/javascript" src="view/js/stock_list_txpj.js"></script>
+
+
+<!--<script type="text/javascript" src="http://n.sinaimg.cn/075e21ca/20150428/fund_wcf_tuiguang.js"></script>-->
+<!--<script type="text/javascript" src="http://n.sinaimg.cn/finance/fbl_20160426/fund_wcf_tuiguang.js"></script>-->
+<script type="text/javascript" src="view/js/fund_wcf_tuiguang.js"></script>
+
+<script type="text/javascript" src="http://vip.stock.finance.sina.com.cn/fund_center/api/jsonp.php/var%20companyList=/NetValue_Service.getAllCompany"></script>
+</head>
+<body>
+<div class="wrap">
+  <!-- 导航 begin -->
+  <div class="secondaryHeader">
+    <div class="sHBorder">
+      <div class="sHLogo"><span><a href="http://www.sina.com.cn/"> <img alt="新浪网" src="http://www.sinaimg.cn/dy/images/header/2009/standardl2nav_sina_new.gif"></a><a href="http://finance.sina.com.cn/"> <img alt="新浪财经" src="http://www.sinaimg.cn/dy/images/header/2009/standardl2nav_finance.gif"></a></span></div>
+      <div class="sHLinks"><a href="http://finance.sina.com.cn/">财经首页</a>&nbsp;|&nbsp;<a href="http://www.sina.com.cn/">新浪首页</a>&nbsp;|&nbsp;<a href="http://news.sina.com.cn/guide/">新浪导航</a></div>
+    </div>
+  </div>
+  <div style="*zoom:1;margin-top:10px;" data-sudaclick="ad_banner_p"><!-- 2016-05-05 -->
+			<a target="_blank" href="http://ifund.finance.sina.com.cn/view/promote/"><img src="http://www.sinaimg.cn/cj/imgtable/idx/2016/0510/U12678P31T88D31920F2012DT20160510112834.jpg" width="980" height="90" /></a>
+  </div>
+  <dl class="top_nav">
+    <dt class="black"><a href="http://finance.sina.com.cn/">财经首页</a></dt>
+    <dd> <a href="http://finance.sina.com.cn/stock/index.shtml">股票</a> <a href="http://finance.sina.com.cn/fund/index.shtml">基金</a><a href="http://finance.sina.com.cn/stock/hkstock/index.shtml">港股</a><a href="http://finance.sina.com.cn/stock/usstock/index.shtml">美股</a><a href="http://finance.sina.com.cn/futuremarket/index.shtml">期货</a><a href="http://finance.sina.com.cn/forex/index.shtml">外汇</a><a href="http://finance.sina.com.cn/nmetal/">贵金属</a><a href="http://finance.sina.com.cn/bond/">债券</a><a href="http://finance.sina.com.cn/qizhi/index.shtml">期指</a><a href="http://finance.sina.com.cn/money/">理财</a><a href="http://vip.stock.finance.sina.com.cn/myfund/main.php">我的自选</a> </dd>
+    <dt class="blue"><a href="http://biz.finance.sina.com.cn/hq/">行情中心</a></dt>
+  </dl>
+  <!-- 导航 end -->
+
+      <!-- top 广告位 begin -->
+   <div style="display:none;height:90px;overflow:hidden;zoom:1;margin-top:10px;" id="topAD">
+		<div style="width:950px;margin:0 auto;"><iframe width="950" scrolling="no" height="90" frameborder="0" marginwidth="0" marginheight="0" src="http://finance.sina.com.cn/iframe/463/2007/1019/PDPS000000004696.html"></iframe>
+		</div>
+
+  </div>
+  <!-- top 广告位 end -->
+
+  <!-- 个股banner begin-->
+  <div class="banner">
+    <a href="http://vip.stock.finance.sina.com.cn/fund_center/index.html" class="logo">基金数据中心</a>
+    <div class="link_wrap" style="width:200px"> <a href="http://money.finance.sina.com.cn/fund/view/vNewFund_FundListings.php">基金代码查询</a> <a href="http://money.finance.sina.com.cn/fund/view/vFundFilter_Search.php">基金筛选器</a> <a href="http://vip.stock.finance.sina.com.cn/myfund/main.php">自选基金</a></div>
+    <div class="lookup_wrap">
+      <script type="text/javascript" src="http://finance.sina.com.cn/basejs/suggestServer.js"></script>
+      <form action="http://biz.finance.sina.com.cn/suggest/lookup_n.php" target="_blank" method="get" style="position:relative; zoom:1; z-index:100;">
+        <input type="text" id="inputSuggest" name="q" value="代码/名称/拼音" />
+        <select id="selectSuggest" name="country" onchange="setValue(this);">
+          <option value="" selected="selected">全部</option>
+          <option value="stock">沪深</option>
+          <option value="21,22,23,24,25,26,27">基金</option>
+          <option value="hkstock">港股</option>
+          <option value="usstock">美股</option>
+		  <option value="91">基金经理</option>
+        </select>
+        <input type="submit" value="搜索" style="color:#005991" />
+      </form>
+      <script type="text/javascript">
+
+			var suggestServer = new SuggestServer();
+			suggestServer.bind({
+				"input": "inputSuggest",
+				"value": "@2@",
+				"type": "",
+				"max": 10,
+				"width": 300,
+				"link": "http://biz.finance.sina.com.cn/suggest/lookup_n.php?country=@type@&q=@code@",
+				"head": ["选项", "代码", "中文名称"],
+				"body": [-1, 2, 4],
+				"callback": null
+			});
+
+			function setValue(obj) {
+				suggestServer.changeLink("http://biz.finance.sina.com.cn/suggest/lookup_n.php?country=@type@&q=@code@");
+				if(obj.value =='91'){
+					suggestServer.changeLink("http://stock.finance.sina.com.cn/manager/view/mInfo.php?mid=@code@");
+				}
+				suggestServer.changeType(obj.value);
+			}
+		</script>
+    </div>
+  </div>
+  <!-- 个股banner end -->
+  <!-- main -->
+  <div class="part01 clearfix">
+    <div class="p_l p_l_menu fSblue" id="divMenu"></div>
+
+    <div class="p_r" id="divIndex">
+      <div class="p_r_nav"> <span class="lf fSblue"><a href="javascript:void(0);"  class="f14">市场概况</a> </span> </div>
+      <div class="p_r_pic clearfix">
+      	<div class="pic">
+        	<a href="http://finance.sina.com.cn/fund/quotes/index000011.shtml" target="_blank"><img src="http://image.sinajs.cn/newchart/small/nsh000011.gif" id="indexMapSH" /></a>
+            <p><a href="http://finance.sina.com.cn/fund/quotes/index000011.shtml" target="_blank" class="fSblue f14">沪基</a> <span class="fred" id="indexHQSH">--.-- --% --亿元</span></p>
+        </div>
+        <div class="pic">
+        	<a href="http://finance.sina.com.cn/fund/quotes/index399305.shtml" target="_blank"><img src="http://image.sinajs.cn/newchart/small/nsz399305.gif" id="indexMapSZ" style="display: none;"/></a>
+            <p style="display:none;"><a href="http://finance.sina.com.cn/fund/quotes/index399305.shtml" target="_blank" class="fSblue f14">深基</a> <span class="fred" id="indexHQSZ">--.-- --% --亿元</span></p>
+        </div>
+      </div>
+      <!--我的自选基金 begin-->
+      <div class="p_r_nav"><div class="lf"><a href="javascript:void(0);"  class="f14  fSblue">我的自选基金</a> &nbsp;&nbsp;
+      <span  id="typeMyFund"></span></div>
+        <p class="forange"><a href="http://vip.stock.finance.sina.com.cn/myfund/main.php" target="_blank">进入我的自选基金首页>></a></p>
+      </div>
+      <div class="p_r_cont" >
+          <!--fund chart begin-->
+          <div class="fundMy clearfix table no_border_bottom r_th_15">
+            <div id="myNotLogin" style="padding:0 10px;line-height:50px;">
+                <span>用户名：</span>
+                <input type="text" id="inputName" style="width:120px;" />
+                <span>密码：</span>
+                <input type="password" id="inputPwd" style="width:120px;" />
+                <input type="button" value="登录" id="btnLogin" />
+                <span>我的自选系列提供强大的证券管理定制功能，未注册<a href="http://login.sina.com.cn/signup/signup.php?entry=finance&r=http://vip.stock.finance.sina.com.cn/portfolio/main.php" target="_blank" style="color:Red">请点击此处</a>。</span>
+            </div>
+            <div id="myLogined" class="table fblue"></div>
+        </div>
+          <!--fund chart end-->
+      </div>
+       <!--我的自选基金 end-->
+       <!--回报排行 begin-->
+      <div class="p_r_nav"><div class="lf"><a href="javascript:void(0);"  class="f14  fSblue">回报排行</a> &nbsp;&nbsp;
+      <span  id="typeHBPHIndex"><a href="javascript:void(0)" class="fSBblack" js-type="kfs">开放式基金</a> | <a href="javascript:void(0)" class="fSblack" js-type="fbs">封闭式基金</a> | <a href="javascript:void(0)" class="fSblack" js-type="cxx">分级子基金</a></span></div>
+        <!--<span class="pageN fLblue" id="pageSizeHot">每页显示 <a href="javascript:void(0);" class="Ybg">20</a> <a href="javascript:void(0);">40</a> <a href="javascript:void(0);">60</a> 行</span>-->
+      </div>
+      <div class="p_r_cont" >
+          <div class="fundHot clearfix table fblue no_border_bottom r_th_15" id="cHBPHIndex" style="height:361px;"></div>
+      </div>
+       <!--回报排行 end-->
+    </div>
+
+    <div class="p_r" id="divJJJZPH">
+      <div class="p_r_nav"> <span class="lf"><a href="#" class="fSblack">基金数据中心首页</a> > <span id="tJZPH"></span></span> <span class="pageN fLblue" id="pageJZPH">每页显示 <a class="Ybg" href="javascript:void(0);">20</a> <a href="javascript:void(0);">40</a> <a href="javascript:void(0);">80</a> 行</span> </div>
+      <p class="p_r_ps" id="JZPHtip1">注：点击每列标题可排序。例如：点击“最新价”可以按价格排序</p>
+      <div class="p_r_nav bgN"><span class="lf" style="color:#9F9F9F" id="JZPHtip2">注：点击每列标题可排序。例如：点击“最新价”可以按价格排序</span> <span class="lf" id="jzType"><a href="#jzkfsjj" class="fSBblack">开放式基金净值排行</a> | <a href="#jzfbsjj" class="fSblack">封闭式基金净值排行</a> | <a href="#jzhbsjj" class="fSblack">货币式基金净值排行</a> | <a href="#jzcxsjj" class="fSblack">创新式基金净值排行</a></span>
+        <span class="lf" id="HBStypejz" style="margin-left:120px"></span>
+        <div class="exchange">
+          <div style="display: none;" class="suggest"></div>
+          <div style="display: none;" class="suggest"></div>
+          <select name="company" class="fSgrey js-company" id="companyJZPH">
+            <option selected="selected" value="" >-全部基金公司-</option>
+          </select>
+          <input type="button"  value="查询" style="color:#005991" id="searchJZPH" />
+        </div>
+      </div>
+      <!--fund chart begin-->
+      <div class="fundTab table fblue" id="jjjzC"></div>
+      <!--fund chart end-->
+      <div class="PageList" style="position:relative;"><p style="position:absolute;z-index:11;left:10px;top:0px;color:red;">提示：基金净值每天15:30-23:00动态更新。</p><p class="page" id="jjjzP"></p></div>
+    </div>
+	<!--基金排行start-->
+	<div class="p_r" id="divJJHQ">
+      <div class="p_r_nav"> <span class="lf"><a href="#" class="fSblack">基金数据中心首页</a> > <span id="tJJHQ"></span></span> <span class="pageN fLblue" id="pageJJHQ">每页显示 <a  href="javascript:void(0);">20</a> <a href="javascript:void(0);">40</a> <a class="Ybg" href="javascript:void(0);">80</a> 行</span> </div>
+      <p class="p_r_ps" style="color:#9F9F9F;background:white;" id="JJHQtip1">注：点击每列标题可排序。例如：点击“最新价”可以按价格排序</p>
+      <div class="p_r_nav bgN" style="display: none;"><span class="lf" style="color:#9F9F9F" id="JJHQtip2"></span>
+        <div class="exchange" style="display: none;">
+          <div style="display: none;" class="suggest"></div>
+          <!--select name="company" class="fSgrey js-company" id="companyXSWD">
+            <option selected="selected" value="" >-全部基金公司-</option>
+          </select>
+          <input type="button"  value="查询" style="color:#005991" id="searchXSWD" /-->
+        </div>
+      </div>
+      <!--fund chart begin-->
+      <div class="relative_outer">
+      <div class="fundTab table fblue" id="cJJHQ"></div>
+      </div>
+      <!--fund chart end-->
+      <div class="PageList"><p class="page" id="pJJHQ"></p></div>
+    </div>
+
+
+	<!--基金排行end-->
+
+    <div class="p_r" id="divHBPH">
+      <div class="p_r_nav"> <span class="lf"><a href="#" class="fSblack">基金数据中心首页</a> > <span id="tHBPH"></span></span> <span class="pageN fLblue" id="pageHBPH">每页显示 <a class="Ybg" href="javascript:void(0);">20</a> <a href="javascript:void(0);">40</a> <a href="javascript:void(0);">80</a> 行</span> </div>
+      <p class="p_r_ps" id="HBPHtip1">注：点击每列标题可排序。例如：点击“最新价”可以按价格排序</p>
+      <div class="p_r_nav bgN"><span class="lf" style="color:#9F9F9F" id="HBPHtip2">注：点击每列标题可排序。例如：点击“最新价”可以按价格排序</span> <span class="lf" id="typeHBPH"><a href="#jzkfsjj" class="fSblue">开放式基金净值排行</a> | <a href="#jzfbsjj" class="fSblack">封闭式基金净值排行</a> | <a href="#jzhbsjj" class="fSblack">货币式基金净值排行</a> | <a href="#jzcxsjj" class="fSblack">创新式基金净值排行</a></span>
+        <span class="lf" id="HBStypeHBPH" style="margin-left:120px"></span>
+        <div class="exchange">
+          <div style="display: none;" class="suggest"></div>
+          <div style="display: none;" class="suggest"></div>
+          <select name="company" class="fSgrey js-company" id="companyHBPH">
+            <option selected="selected" value="" >-全部基金公司-</option>
+          </select>
+          <input type="button"  value="查询" style="color:#005991" id="searchHBPH" />
+        </div>
+      </div>
+      <!--fund chart begin-->
+      <div class="relative_outer">
+          <div class="fundTab table fblue" id="cHBPH"></div>
+      </div>
+      <!--fund chart end-->
+      <div class="PageList"><p class="page" id="pHBPH"></p></div>
+    </div>
+   <!-- 新增的持仓的表格  -->
+
+       <div class="p_r" id="divJJCC">
+      <div class="p_r_nav"> <span class="lf"><a href="#" class="fSblack">基金数据中心首页</a> > <span id="tJJCC"></span></span> <span class="pageN fLblue" id="pageJJCC">每页显示 <a class="Ybg" href="javascript:void(0);">20</a> <a href="javascript:void(0);">40</a> <a href="javascript:void(0);">80</a> 行</span> </div>
+     <!-- <p class="p_r_ps" id="JJCCtip1">注：点击每列标题可排序。例如：点击“最新价”可以按价格排序</p>-->
+      <div class="p_r_nav bgN"><span class="lf" style="color:#9F9F9F" id="JJCCtip2"></span>
+        <div class="exchange" style="text-align:left">
+
+		   <select class="fSgrey" id="yearJJCC_o" ></select>
+          <select class="fSgrey" id="monthJJCC_o" ></select>
+		  <span id="JJCCtip3">到：</span>
+	   <select class="fSgrey" id="yearJJCC_t"></select>
+          <select class="fSgrey" id="monthJJCC_t"  ></select>
+
+          <select name="company" class="fSgrey js-company" id="companyJJCC">
+          <option selected="selected" value="" >-全部基金公司-</option>
+
+          </select>
+		     <select class="fSgrey" id="companynameJJCC" style="width: 150px;"></select>
+          <input type="button"  value="查询" style="color:#005991" id="searchJJCC" />
+        </div>
+      </div>
+      <!--fund chart begin-->
+      <div class="relative_outer">
+          <div class="fundTab table fblue" id="cJJCC"></div>
+      </div>
+      <!--fund chart end-->
+      <div class="PageList"><p class="page" id="pJJCC"></p></div>
+    </div>
+
+  <!--  新增的持仓的表格  -->
+    <div class="p_r" id="divHQ">
+      <div class="p_r_nav"> <span class="lf"><a href="#" class="fSblack">基金数据中心首页</a> >  <span id="tHQ"></span></span> <span class="pageN fLblue" id="pageHQ" style="display:none;">每页显示 <a class="Ybg" href="javascript:void(0);">20</a> <a href="javascript:void(0);">40</a> <a href="javascript:void(0);">60</a> 行</span> </div>
+      <p class="p_r_ps">注：点击每列标题可排序。例如：点击“最新价”可以按价格排序</p>
+      <div class="p_r_nav bgN" style="display:none;"> <span class="lf" id="typeHQ"><a href="#jzkfsjj" class="fSBblack">开放式基金净值排行</a> | <a href="#jzfbsjj" class="fSblack">封闭式基金净值排行</a> | <a href="#jzhbsjj" class="fSblack">货币式基金净值排行</a> | <a href="#jzcxsjj" class="fSblack">创新式基金净值排行</a></span>
+        <div class="exchange">
+          <div style="display: none;" class="suggest"></div>
+          <div style="display: none;" class="suggest"></div>
+          <select name="company" class="fSgrey js-company" id="companyHQ">
+            <option selected="selected" value="" >-全部基金公司-</option>
+          </select>
+          <input type="button"  value="查询" style="color:#005991" id="searchHQ" />
+        </div>
+      </div>
+      <!--fund chart begin-->
+      <div class="fundTab table fblue" id="cHQ"></div>
+      <!--fund chart end-->
+      <div class="PageList"><p class="page" id="pHQ"></p></div>
+    </div>
+
+    <div class="p_r" id="divJJPJ">
+      <div class="p_r_nav"> <span class="lf"><a href="#" class="fSblack">基金数据中心首页</a> > <span id="tJJPJ"></span></span> <span class="pageN fLblue" id="pageJJPJ">每页显示 <a class="Ybg" href="javascript:void(0);">20</a> <a href="javascript:void(0);">40</a> <a href="javascript:void(0);">80</a> 行</span> </div>
+      <p class="p_r_ps" id="JJPJtip1">注：点击每列标题可排序。例如：点击“最新价”可以按价格排序</p>
+      <div class="p_r_nav bgN"><span class="lf" style="color:#9F9F9F" id="JJPJtip2">注：点击每列标题可排序。例如：点击“最新价”可以按价格排序</span> <span class="lf" id="typeJJPJ"><a href="#jzkfsjj" class="fSblue">开放式基金净值排行</a> | <a href="#jzfbsjj" class="fSblack">封闭式基金净值排行</a> | <a href="#jzhbsjj" class="fSblack">货币式基金净值排行</a> | <a href="#jzcxsjj" class="fSblack">创新式基金净值排行</a></span>
+        <div class="exchange">
+          <div style="display: none;" class="suggest"></div>
+          <div style="display: none;" class="suggest"></div>
+          <select class="fSgrey" id="yearJJPJ" style="width:65px;"></select>
+          <select class="fSgrey" id="monthJJPJ" style="width:78px;"></select>
+		  <!--select class="fSgrey" id="dayJJPJ"></select-->
+          <select name="company" class="fSgrey js-company" id="companyJJPJ">
+            <option selected="selected" value="" >-全部基金公司-</option>
+          </select>
+          <input type="button"  value="查询" style="color:#005991" id="searchJJPJ" />
+        </div>
+      </div>
+      <!--fund chart begin-->
+      <div class="relative_outer">
+      <div class="fundTab table fblue" id="cJJPJ"></div>
+      </div>
+      <!--fund chart end-->
+      <div class="PageList"><p class="page" id="pJJPJ"></p></div>
+
+    </div>
+
+
+	<!--begin-->
+
+
+	<div class="p_r" id="divJJGM">
+      <div class="p_r_nav"> <span class="lf"><a href="#" class="fSblack">基金数据中心首页</a> > <span id="tJJGM"></span></span> <span class="pageN fLblue" id="pageJJGM">每页显示 <a href="javascript:void(0);">20</a> <a class="Ybg" href="javascript:void(0);">40</a> <a href="javascript:void(0);">80</a> 行</span> </div>
+      <p class="p_r_ps" id="JJGMtip1">注：点击每列标题可排序。例如：点击“最新价”可以按价格排序</p>
+      <div class="p_r_nav bgN"><span class="lf" style="color:#9F9F9F" id="JJGMtip2">注：点击每列标题可排序。例如：点击“最新价”可以按价格排序</span><span class="lf" style="color:#9F9F9F" id="JJGMtip2"><span class="lf" id="typeJJGM"></span></span>
+        <div class="exchange" >
+          <div  class="suggest"></div>
+          <select name="company" class="fSgrey js-company" id="companyJJGM">
+            <option selected="selected" value="" >-全部基金公司-</option>
+          </select>
+          <input type="button"  value="查询" style="color:#005991" id="searchJJGM" />
+        </div>
+      </div>
+      <!--fund chart begin-->
+      <div class="relative_outer">
+      <div class="fundTab table fblue" id="cJJGM"></div>
+      </div>
+      <!--fund chart end-->
+      <div class="PageList"><p class="page" id="pJJGM"></p></div>
+    </div>
+
+	<div class="p_r" id="divJJGS">
+      <div class="p_r_nav"> <span class="lf"><a href="#" class="fSblack">基金数据中心首页</a> > <span id="tJJGS"></span></span> <span class="pageN fLblue" id="pageJJGS">每页显示 <a  href="javascript:void(0);">20</a> <a class="Ybg" href="javascript:void(0);">40</a> <a href="javascript:void(0);">80</a> 行</span> </div>
+      <p class="p_r_ps" style="color:#9F9F9F;background:white;" id="JJGStip1">注：点击每列标题可排序。例如：点击“最新价”可以按价格排序</p>
+      <div class="p_r_nav bgN" style="display: none;"><span class="lf" style="color:#9F9F9F" id="JJGStip2"><span class="lf" id="typeJJGS"><!--a href="#jjgs" class="fSblue">基金公司</a> | <a href="#tgyh" class="fSblack">托管银行</a--></span></span>
+        <div class="exchange" style="display: none;">
+          <div style="display: none;" class="suggest"></div>
+          <!--select name="company" class="fSgrey js-company" id="companyJJGS">
+            <option selected="selected" value="" >-全部基金公司-</option>
+          </select>
+          <input type="button"  value="查询" style="color:#005991" id="searchJJGS" /-->
+        </div>
+      </div>
+      <!--fund chart begin-->
+      <div class="relative_outer">
+      <div class="fundTab table fblue" id="cJJGS"></div>
+      </div>
+      <!--fund chart end-->
+      <div class="PageList"><p class="page" id="pJJGS"></p></div>
+    </div>
+
+
+	<div class="p_r" id="divXSWD">
+      <div class="p_r_nav"> <span class="lf"><a href="#" class="fSblack">基金数据中心首页</a> > <span id="tXSWD"></span></span> <span class="pageN fLblue" id="pageXSWD">每页显示 <a  href="javascript:void(0);">20</a> <a href="javascript:void(0);">40</a> <a class="Ybg" href="javascript:void(0);">80</a> 行</span> </div>
+      <p class="p_r_ps" style="color:#9F9F9F;background:white;" id="XSWDtip1">注：点击每列标题可排序。例如：点击“最新价”可以按价格排序</p>
+      <div class="p_r_nav bgN" style="display: none;"><span class="lf" style="color:#9F9F9F" id="XSWDtip2"></span>
+        <div class="exchange" style="display: none;">
+          <div style="display: none;" class="suggest"></div>
+          <!--select name="company" class="fSgrey js-company" id="companyXSWD">
+            <option selected="selected" value="" >-全部基金公司-</option>
+          </select>
+          <input type="button"  value="查询" style="color:#005991" id="searchXSWD" /-->
+        </div>
+      </div>
+      <!--fund chart begin-->
+      <div class="relative_outer">
+      <div class="fundTab table fblue" id="cXSWD"></div>
+      </div>
+      <!--fund chart end-->
+      <div class="PageList"><p class="page" id="pXSWD"></p></div>
+    </div>
+
+	<div class="p_r" id="divSMPJ">
+      <div class="p_r_nav"> <span class="lf"><a href="#" class="fSblack">基金数据中心首页</a> > <span id="tSMPJ"></span></span> <span class="pageN fLblue" id="pageSMPJ">每页显示 <a  href="javascript:void(0);">20</a> <a href="javascript:void(0);">40</a> <a class="Ybg" href="javascript:void(0);">80</a> 行</span> </div>
+     <!-- <p class="p_r_ps" style="color:#9F9F9F;background:white;float:left" id="SMPJtip1">注：点击每列标题可排序。例如：点击“最新价”可以按价格排序</p>-->
+      <div class="p_r_nav bgN" style=""><span class="lf" style="color:#9F9F9F" id="SMPJtip2"></span>
+        <div class="exchange" style="float:left">
+
+          <div style="display: none;" class="suggest"></div>
+		   <div style="display: none;" class="suggest"></div>
+		  <select class="fSgrey" id="yearSMPJ" style="width:70px;"></select>
+          <select class="fSgrey" id="monthSMPJ" style="width:80px;"></select>
+          <!--select name="company" class="fSgrey js-company" id="companySMPJ">
+            <option selected="selected" value="" >-全部基金公司-</option>
+          </select-->
+          <input type="button"  value="查询" style="color:#005991" id="searchSMPJ" />
+        </div>
+		<p class="p_r_ps" style="background:white;float:right" id="SMPJTime"></p>
+		<!--<p class="p_r_ps" style="color:red;background:white;float:right" id="SMPJtip1">咨询私募投资详情 专家热线：010-62676051</p>-->
+      </div>
+      <!--fund chart begin-->
+      <div class="relative_outer">
+      <div class="fundTab table fblue" id="cSMPJ"></div>
+      </div>
+      <!--fund chart end-->
+      <div class="PageList"><p class="page" id="pSMPJ"></p></div>
+    </div>
+	<!--end-->
+
+	<div class="p_r" id="divFJJJ">
+      <div class="p_r_nav"> <span class="lf"><a href="#" class="fSblack">基金数据中心首页</a> > <span id="tFJJJ"></span></span> <span class="pageN fLblue" id="pageFJJJ">每页显示 <a  href="javascript:void(0);">20</a> <a href="javascript:void(0);">40</a> <a class="Ybg" href="javascript:void(0);">80</a> 行</span> </div>
+     <!-- <p class="p_r_ps" style="color:#9F9F9F;background:white;float:left" id="SMPJtip1">注：点击每列标题可排序。例如：点击“最新价”可以按价格排序</p>-->
+      <div class="p_r_nav bgN" style=""><span class="lf" style="color:#9F9F9F" id="FJJJtip2"></span>
+        <div class="exchange" style="float:left">
+
+          <div style="display: none;" class="suggest"></div>
+		   <div style="display: none;" class="suggest"></div>
+        </div>
+        <div style="float:right;">数据来源：<a href="http://www.jnlc.com/" target="_blank">金牛理财网</a></div>
+      </div>
+      <!--fund chart begin-->
+      <div class="relative_outer">
+      	<div class="fundTab table fblue" id="cFJJJ"></div>
+      </div>
+      <!--fund chart end-->
+      <div class="PageList"><p class="page" id="pFJJJ"></p></div>
+      <div class="PromptFJJJ"></div>
+    </div>
+	<!--end-->
+
+	<div class="p_r" id="divFJFEBD">
+      <div class="p_r_nav"> <span class="lf"><a href="#" class="fSblack">基金数据中心首页</a> > <span id="tFJFEBD"></span></span> <span class="pageN fLblue" id="pageFJFEBD">每页显示 <a  href="javascript:void(0);">20</a> <a href="javascript:void(0);">40</a> <a class="Ybg" href="javascript:void(0);">80</a> 行</span> </div>
+     <!-- <p class="p_r_ps" style="color:#9F9F9F;background:white;float:left" id="SMPJtip1">注：点击每列标题可排序。例如：点击“最新价”可以按价格排序</p>-->
+      <div class="p_r_nav bgN" style=""><span class="lf" style="color:#9F9F9F" id="FJFEBDtip2"><span class="lf" id="typeFJFEBD"></span></span>
+        <div class="exchange" style="float:left">
+
+          <div style="display: none;" class="suggest"></div>
+		   <div style="display: none;" class="suggest"></div>
+        </div>
+        <div style="float:right;">数据来源：<a href="http://www.jnlc.com/" target="_blank">金牛理财网</a></div>
+      </div>
+      <!--fund chart begin-->
+      <div class="relative_outer">
+      	<div class="fundTab table fblue" id="cFJFEBD"></div>
+      </div>
+      <!--fund chart end-->
+      <div class="PageList"><p class="page" id="pFJFEBD"></p></div>
+      <div class="PromptFJJJ"></div>
+    </div>
+	<!--end-->
+
+
+
+  </div>
+  <!-- end main -->
+  <!-- footer -->
+  <div class="footer"> <a href="http://corp.sina.com.cn/chn/">新浪简介</a> | <a href="http://corp.sina.com.cn/eng/">About Sina</a> | <a href="http://emarketing.sina.com.cn/">广告服务</a> | <a href="http://www.sina.com.cn/contactus.html">联系我们</a> | <a href="http://corp.sina.com.cn/chn/sina_job.html">招聘信息</a> | <a href="http://www.sina.com.cn/intro/lawfirm.shtml">网站律师</a> | <a href="http://english.sina.com">SINA English</a> | <a href="http://members.sina.com.cn/apply/">会员注册</a> | <a href="http://tech.sina.com.cn/focus/sinahelp.shtml">产品答疑</a><br>
+    <br />
+    Copyright &copy; 1996-2011 SINA Corporation, All Rights Reserved<br />
+    <br />
+    新浪公司　<a target="_blank" href="http://home.sina.com.cn/intro/copyright.shtml">版权所有</a> </div>
+  <!-- end footer -->
+</div>
+<div style="display:none;">
+    <a id="aMark" href="" target="_blank"><img src="http://www.sinaimg.cn/cj/subject/2009/0618/images/addto_p.gif" alt="收藏" /></a>
+    <a id="aBar" href="" target="_blank"><img src="http://www.sinaimg.cn/cj/subject/2009/0618/images/linkto_ba.gif" alt="股吧" /></a>
+	<a id="pure" href="" target="_blank"></a>
+</div>
+<script type="text/javascript">
+$(function(){
+    $('.table').mouseover(function(ev)
+    {
+        if(/T[DH]|A|IMG/i.test(ev.target.tagName))
+        {
+            $(ev.target).parents('tr').addClass("selected");
+        }
+    });
+    $(".table").mouseout(function(ev)
+    {
+        if(/T[DH]|A|IMG/i.test(ev.target.tagName))
+        {
+            $(ev.target).parents('tr').removeClass("selected");
+        }
+    });
+});
+</script>
+
+<div id="divLoader" style="display:none;"></div>
+<!--Adforward Begin:-->
+<IFRAME MARGINHEIGHT=0 MARGINWIDTH=0 FRAMEBORDER=0 WIDTH=1 HEIGHT=1 SCROLLING=NO SRC="http://1421.adsina.allyes.com/main/adfshow?user=AFP6_for_SINA|Finance|Finance_fund_centerPV&db=sina&border=0&local=yes">
+<SCRIPT LANGUAGE="JavaScript1.1" SRC="http://1421.adsina.allyes.com/main/adfshow?user=AFP6_for_SINA|Finance|Finance_fund_centerPV&db=sina&local=yes&js=on"></SCRIPT>
+<NOSCRIPT><A HREF="http://1421.adsina.allyes.com/main/adfclick?user=AFP6_for_SINA|Finance|Finance_fund_centerPV&db=sina"><IMG SRC="http://1421.adsina.allyes.com/main/adfshow?user=AFP6_for_SINA|Finance|Finance_fund_centerPV&db=sina" WIDTH=1 HEIGHT=1 BORDER=0></a></NOSCRIPT></IFRAME>
+<!--Adforward End-->
+</body>
+<script type="text/javascript" src="http://www.sinaimg.cn/unipro/pub/suda_m_v629.js"></script>
+<script type="text/javascript">suds_init(1674,33.33,995,2);</script>
+<!-- SUDA_CODE_START -->
+<script type="text/javascript" src="http://www.sinaimg.cn/unipro/pub/suda_s_v852c.js"></script>
+<script type="text/javascript" >
+	_S_pSt();
+</script>
+<!-- SUDA_CODE_END -->
+</html>

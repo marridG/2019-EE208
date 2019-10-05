@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>新浪美术馆_新浪</title>
+    <link rel="stylesheet" type="text/css" href="/css/zoom/v2/zoom.css?2019100520">
+</head>
+<body class="page-zoom">
+    <div class="header" node-type="header">
+        <ul class="crumbs">
+            <li class="logo"><a href="http://gallery.collection.sina.com.cn/">新浪美术馆</a></li>
+            <li node-type="trigger" class="trigger"><a href="javascript:;">美术馆</a></li>
+            <li node-type="trigger" class="trigger"><a href="javascript:;">藏品</a></li>
+        </ul>
+        <ul class="extra">
+            <li><a href="http://collection.sina.com.cn/">收藏首页</a>&emsp;|</li>
+            <li>&emsp;<a href="http://www.sina.com.cn/">新浪首页</a>&emsp;|</li>
+            <li>&emsp;<a href="http://news.sina.com.cn/guide/">新浪导航</a></li>
+        </ul>
+        <div node-type="layer" class="more more-a" style="display:none;">
+            <ul class="clearfix">
+                                    <li><a target="_blank" href="http://gallery.collection.sina.com.cn/tertiary/organization/41">德基美术馆</a></li>
+                                    <li><a target="_blank" href="http://gallery.collection.sina.com.cn/tertiary/organization/37">上海驰翰美术馆</a></li>
+                                    <li><a target="_blank" href="http://gallery.collection.sina.com.cn/tertiary/organization/30">中国国家博物馆</a></li>
+                                    <li><a target="_blank" href="http://gallery.collection.sina.com.cn/tertiary/organization/17">广东省美术馆</a></li>
+                                    <li><a target="_blank" href="http://gallery.collection.sina.com.cn/tertiary/organization/16">何香凝美术馆</a></li>
+                                    <li><a target="_blank" href="http://gallery.collection.sina.com.cn/tertiary/organization/15">广东省博物馆</a></li>
+                                    <li><a target="_blank" href="http://gallery.collection.sina.com.cn/tertiary/organization/14">中央美术学院美术馆</a></li>
+                                    <li><a target="_blank" href="http://gallery.collection.sina.com.cn/tertiary/organization/10">湖北美术馆</a></li>
+                                    <li><a target="_blank" href="http://gallery.collection.sina.com.cn/tertiary/organization/4">龙美术馆</a></li>
+                            </ul>
+        </div>
+        <div node-type="layer" class="more more-b" style="display:none;">
+            <ul class="clearfix">
+                                    <li><a target="_blank" href="http://gallery.collection.sina.com.cn/tertiary/category_and_search/category/10">当代艺术</a></li>
+                                    <li><a target="_blank" href="http://gallery.collection.sina.com.cn/tertiary/category_and_search/category/4/1">古代书画</a></li>
+                                    <li><a target="_blank" href="http://gallery.collection.sina.com.cn/tertiary/category_and_search/category/4/2">近现代书画</a></li>
+                                    <li><a target="_blank" href="http://gallery.collection.sina.com.cn/tertiary/category_and_search/category/6/3">紫砂</a></li>
+                                    <li><a target="_blank" href="http://gallery.collection.sina.com.cn/tertiary/category_and_search/category/5">油雕影像</a></li>
+                                    <li><a target="_blank" href="http://gallery.collection.sina.com.cn/tertiary/category_and_search/category/6/1">瓷器</a></li>
+                                    <li><a target="_blank" href="http://gallery.collection.sina.com.cn/tertiary/category_and_search/category/6/2">玉石</a></li>
+                                    <li><a target="_blank" href="http://gallery.collection.sina.com.cn/tertiary/category_and_search/category/9/12">竹木牙角漆器</a></li>
+                                    <li><a target="_blank" href="http://gallery.collection.sina.com.cn/tertiary/category_and_search/category/9/9">青铜器</a></li>
+                            </ul>
+        </div>
+    </div>
+    <div class="body dhdphotos-container" node-type="body">
+    </div>
+    <script src="http://news.sina.com.cn/js/792/2014-03-18/80/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="/js/zoom/v2/DHDPhotos.core.min.js?2019100520"></script>
+		<!-- DMP_CODE_START DAGGER --> 
+	<script type="text/javascript">
+	(function(d, s, id) {
+		var n = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		s = d.createElement(s);
+		s.id = id;
+		s.setAttribute('charset', 'utf-8');
+		s.src = '//d' + Math.floor(0 + Math.random() * (8 - 0 + 1)) + '.sina.com.cn/litong/zhitou/sinaads/src/spec/sinaads_ck.js';
+		n.parentNode.insertBefore(s, n);
+	})(document, 'script', 'sinaads-ck-script');
+	</script>
+	<!-- DMP_CODE_END DAGGER -->
+</body>
+<script>
+(function(exports) {
+    (function(con) {
+        // the dummy function
+        function dummy() {};
+        for (var methods = ['error', 'info', 'log', 'warn', 'clear'], func; func = methods.pop();) {
+            con[func] = con[func] || dummy;
+        }
+    }(exports.console = exports.console || {}));
+    console = exports.console;
+    var getParam = function(key) {
+        var paras = location.search;
+        if (paras) {
+            var arr = paras.substr(1).split('&');
+            for (var i = 0; i < arr.length; i++) {
+                data = arr[i].split('=');
+                if (data[0] == key) {
+                    return data[1];
+                }
+            }
+        }
+    };
+    var getNodes = function(wrap) {
+        wrap = typeof wrap == 'string' ? $('#' + wrap) : wrap;
+        var attr = 'node-type';
+        var nodes = $("[" + attr + "]", wrap);
+        var nodesObj = {};
+        nodesObj.wrap = wrap;
+        nodes.each(function(i) {
+            var item = $(this);
+            nodesObj[item.attr(attr)] = item;
+        });
+        return nodesObj;
+    };
+    var winSize = function(_target) {
+        var w, h;
+        if (_target) {
+            target = _target.document;
+        } else {
+            target = document;
+        }
+
+        if (target.compatMode === "CSS1Compat") {
+            w = target.documentElement["clientWidth"];
+            h = target.documentElement["clientHeight"];
+        } else if (self.innerHeight) { // all except Explorer
+            if (_target) {
+                target = _target.self;
+            } else {
+                target = self;
+            }
+            w = target.innerWidth;
+            h = target.innerHeight;
+
+        } else if (target.documentElement && target.documentElement.clientHeight) { // Explorer 6 Strict Mode
+            w = target.documentElement.clientWidth;
+            h = target.documentElement.clientHeight;
+
+        } else if (target.body) { // other Explorers
+            w = target.body.clientWidth;
+            h = target.body.clientHeight;
+        }
+        return {
+            width: w,
+            height: h
+        };
+    };
+    var setShare = function(data){
+        console.log(data);
+        var info = data.result.data.info;
+        var text = '我刚刚在 @新浪美术馆 浏览了：【'+info.title+'】，新浪美术馆有您想看的高清艺术品。@新浪收藏';
+        var img = info.list_cover_img;
+        exports._bd_share_config = {
+            "common": {
+                "bdSnsKey": {},
+                "bdText": text,
+                "bdMini": "2",
+                "bdMiniList": false,
+                "bdPic": img,
+                "bdStyle": "0",
+                "bdSize": "16"
+            },
+            "slide": {
+                "type": "slide",
+                "bdImg": "3",
+                "bdPos": "right",
+                "bdTop": "43"
+            },
+            "image": {
+                "viewList": ["qzone", "tsina", "tqq", "renren", "weixin"],
+                "viewText": "分享到：",
+                "viewSize": "16"
+            },
+            "selectShare": {
+                "bdContainerClass": null,
+                "bdSelectMiniList": ["qzone", "tsina", "tqq", "renren", "weixin"]
+            }
+        };
+        with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+    };
+    var dom = getNodes($('body'));
+    DHDPhotos.getHDPictures({
+        container: dom.body,
+        getPos:function(){
+            var win = $(window);
+            var hHeight = 41;
+            return {
+                'top': Math.max($("body,html").scrollTop(), $(document).scrollTop())+hHeight,
+                'left': Math.max($("body,html").scrollLeft(), $(document).scrollLeft()),
+                'width': win.width(),
+                'height': win.height()-hHeight
+            };
+        },
+        //api : 'http://slide.news.sina.com.cn/interface/api_zoom.php?format=json',
+        //api: 'http://gallery.photo.sina.com.cn/api/zoom/pic?format=json',
+        api: '/api/zoom/pic?format=json',
+        channel_id: '26',
+        pictures_id: 2482,
+        thumbView: true,
+        destoryBack: function() {
+            // it.hideMask();
+        },
+        ready:function(interAction,data){
+            setShare(data);
+        }
+    });
+
+	// 菜单
+	(function() {
+		var NODEATTR = 'node-type';
+		var triggers = dom.header.find('['+NODEATTR+'=trigger]');
+		var layers = dom.header.find('['+NODEATTR+'=layer]');
+		var hide = function(layer){
+			layer.each(function(){
+				var item = $(this);
+				var index = layers.index(item);
+				var trigger = triggers.eq(index);
+				item.hide(function(){
+					trigger.removeClass('hover');
+				});
+			});
+
+		};
+		var show = function(layer){
+			var index = layers.index(layer);
+			var trigger = triggers.eq(index);
+			trigger.addClass('hover');
+			layer.show('fast','linear',function(){
+			});
+		};
+		var clearLayerTimeout = function(layer){
+			clearTimeout(layer.data('timeoutId'));
+		};
+		var getLayerByTirgger = function(trigger){
+			var index = trigger.index(triggers);
+			var layer = layers.eq(index);
+			return layer;
+		};
+		var delayHide = function(layer){
+			layer.data('timeoutId',setTimeout(function(){
+				hide(layer);
+			},500));
+		};
+		// 打开收起
+		dom.header.on('click mouseover', '['+NODEATTR+'=trigger]', function(e) {
+			var trigger = $(this);
+			var left = trigger.offset().left;
+			var layer = getLayerByTirgger(trigger);
+			clearLayerTimeout(layer);
+			hide(layers.not(layer));
+			layer.css({
+				left:left
+			});
+			show(layer);
+			e.stopPropagation();
+		});
+		dom.header.on('mouseout', '['+NODEATTR+'=trigger]', function(e) {
+			var trigger = $(this);
+			var layer = getLayerByTirgger(trigger);
+			delayHide(layer);
+			e.stopPropagation();
+		});
+		// 全局关闭
+		$('body').on('click', function(e) {
+			hide(layers);
+		});
+		layers.on('mouseover', function(e) {
+			var layer = $(this);
+			clearLayerTimeout(layer);
+			e.stopPropagation();
+		});
+		layers.on('mouseout', function(e) {
+			var layer = $(this);
+			delayHide(layer);
+			e.stopPropagation();
+		});
+		layers.on('click', function(e) {
+			e.stopPropagation();
+		});
+	})();
+})(window);
+</script>
+</html>

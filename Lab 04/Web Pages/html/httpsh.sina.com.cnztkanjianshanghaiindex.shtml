@@ -1,0 +1,1511 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>看见上海_新浪上海</title>
+    <link rel="stylesheet" type="text/css" href="http://n1.sinaimg.cn/sh/seesh/style3.css" />
+    <script type="text/javascript" src="http://i2.sinaimg.cn/cj/dfz/js/base.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://sh.sinaimg.cn/js/wb16.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://n.sinaimg.cn/sh/seesh/nav.js"></script>
+    <script src="http://n.sinaimg.cn/sh/seesh/jquery.min.js"></script>
+    <script type="text/javascript">
+        var jq = $.noConflict(true);
+    </script>
+
+    <meta name="viewport" content="width=device-width,target-densityDpi=device-dpi, user-scalable=no" />
+    <script type="text/javascript">
+        var viewport = document.querySelector("meta[name=viewport]");
+        var winWidths = $(window).width();
+        var densityDpi = 640 / winWidths;
+        densityDpi = densityDpi > 1 ? 300 * 640 * densityDpi / 640 : densityDpi;
+
+        if (isWeixin()) {
+            viewport.setAttribute('content', 'width=640, user-scalable=no, target-densityDpi=' + densityDpi);
+        } else {
+            viewport.setAttribute('content', 'width=640, user-scalable=no');
+            window.setTimeout(function () {
+                viewport.setAttribute('content', 'width=640, user-scalable=no');
+            }, 1000);
+        }
+        function isWeixin() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
+    <script>
+        var fontSize = 80;
+        var elm = document.documentElement;
+        elm.style.fontSize = fontSize * (elm.clientWidth / 320) + 'px';
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+            $(".txt1").animate({ right: '+=841px' }, 1000);
+            $(".txt2").animate({ right: '+=841px' }, 1500);
+
+        })
+    </script>
+
+    <!--wx star-->
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="http://sh.sinaimg.cn/subject/2016/wx/wx.js"></script>
+    <script>
+        var hyTit = "看见上海";
+        var hyDec = "看见上海";
+        var pyTit = "看见上海";
+        var wxLink = window.location.href;
+        var wxImgUrl = "http://n.sinaimg.cn/sh/duihua/500.png";
+    </script>
+    <!--wx End-->
+</head>
+
+<body><!-- body code begin -->
+
+<!-- SUDA_CODE_START --> 
+<script type="text/javascript"> 
+//<!--
+(function(){var an="V=2.1.16";var ah=window,F=document,s=navigator,W=s.userAgent,ao=ah.screen,j=ah.location.href;var aD="https:"==ah.location.protocol?"https://s":"http://",ay="beacon.sina.com.cn";var N=aD+ay+"/a.gif?",z=aD+ay+"/g.gif?",R=aD+ay+"/f.gif?",ag=aD+ay+"/e.gif?",aB=aD+"beacon.sinauda.com/i.gif?";var aA=F.referrer.toLowerCase();var aa="SINAGLOBAL",Y="FSINAGLOBAL",H="Apache",P="ULV",l="SUP",aE="UOR",E="_s_acc",X="_s_tentry",n=false,az=false,B=(document.domain=="sina.com.cn")?true:false;var o=0;var aG=false,A=false;var al="";var m=16777215,Z=0,C,K=0;var r="",b="",a="";var M=[],S=[],I=[];var u=0;var v=0;var p="";var am=false;var w=false;function O(){var e=document.createElement("iframe");e.src=aD+ay+"/data.html?"+new Date().getTime();e.id="sudaDataFrame";e.style.height="0px";e.style.width="1px";e.style.overflow="hidden";e.frameborder="0";e.scrolling="no";document.getElementsByTagName("head")[0].appendChild(e)}function k(){var e=document.createElement("iframe");e.src=aD+ay+"/ckctl.html";e.id="ckctlFrame";e.style.height="0px";e.style.width="1px";e.style.overflow="hidden";e.frameborder="0";e.scrolling="no";document.getElementsByTagName("head")[0].appendChild(e)}function q(){var e=document.createElement("script");e.src=aD+ay+"/h.js";document.getElementsByTagName("head")[0].appendChild(e)}function h(aH,i){var D=F.getElementsByName(aH);var e=(i>0)?i:0;return(D.length>e)?D[e].content:""}function aF(){var aJ=F.getElementsByName("sudameta");var aR=[];for(var aO=0;aO<aJ.length;aO++){var aK=aJ[aO].content;if(aK){if(aK.indexOf(";")!=-1){var D=aK.split(";");for(var aH=0;aH<D.length;aH++){var aP=aw(D[aH]);if(!aP){continue}aR.push(aP)}}else{aR.push(aK)}}}var aM=F.getElementsByTagName("meta");for(var aO=0,aI=aM.length;aO<aI;aO++){var aN=aM[aO];if(aN.name=="tags"){aR.push("content_tags:"+encodeURI(aN.content))}}var aL=t("vjuids");aR.push("vjuids:"+aL);var e="";var aQ=j.indexOf("#");if(aQ!=-1){e=escape(j.substr(aQ+1));aR.push("hashtag:"+e)}return aR}function V(aK,D,aI,aH){if(aK==""){return""}aH=(aH=="")?"=":aH;D+=aH;var aJ=aK.indexOf(D);if(aJ<0){return""}aJ+=D.length;var i=aK.indexOf(aI,aJ);if(i<aJ){i=aK.length}return aK.substring(aJ,i)}function t(e){if(undefined==e||""==e){return""}return V(F.cookie,e,";","")}function at(aI,e,i,aH){if(e!=null){if((undefined==aH)||(null==aH)){aH="sina.com.cn"}if((undefined==i)||(null==i)||(""==i)){F.cookie=aI+"="+e+";domain="+aH+";path=/"}else{var D=new Date();var aJ=D.getTime();aJ=aJ+86400000*i;D.setTime(aJ);aJ=D.getTime();F.cookie=aI+"="+e+";domain="+aH+";expires="+D.toUTCString()+";path=/"}}}function f(D){try{var i=document.getElementById("sudaDataFrame").contentWindow.storage;return i.get(D)}catch(aH){return false}}function ar(D,aH){try{var i=document.getElementById("sudaDataFrame").contentWindow.storage;i.set(D,aH);return true}catch(aI){return false}}function L(){var aJ=15;var D=window.SUDA.etag;if(!B){return"-"}if(u==0){O();q()}if(D&&D!=undefined){w=true}ls_gid=f(aa);if(ls_gid===false||w==false){return false}else{am=true}if(ls_gid&&ls_gid.length>aJ){at(aa,ls_gid,3650);n=true;return ls_gid}else{if(D&&D.length>aJ){at(aa,D,3650);az=true}var i=0,aI=500;var aH=setInterval((function(){var e=t(aa);if(w){e=D}i+=1;if(i>3){clearInterval(aH)}if(e.length>aJ){clearInterval(aH);ar(aa,e)}}),aI);return w?D:t(aa)}}function U(e,aH,D){var i=e;if(i==null){return false}aH=aH||"click";if((typeof D).toLowerCase()!="function"){return}if(i.attachEvent){i.attachEvent("on"+aH,D)}else{if(i.addEventListener){i.addEventListener(aH,D,false)}else{i["on"+aH]=D}}return true}function af(){if(window.event!=null){return window.event}else{if(window.event){return window.event}var D=arguments.callee.caller;var i;var aH=0;while(D!=null&&aH<40){i=D.arguments[0];if(i&&(i.constructor==Event||i.constructor==MouseEvent||i.constructor==KeyboardEvent)){return i}aH++;D=D.caller}return i}}function g(i){i=i||af();if(!i.target){i.target=i.srcElement;i.pageX=i.x;i.pageY=i.y}if(typeof i.layerX=="undefined"){i.layerX=i.offsetX}if(typeof i.layerY=="undefined"){i.layerY=i.offsetY}return i}function aw(aH){if(typeof aH!=="string"){throw"trim need a string as parameter"}var e=aH.length;var D=0;var i=/(\u3000|\s|\t|\u00A0)/;while(D<e){if(!i.test(aH.charAt(D))){break}D+=1}while(e>D){if(!i.test(aH.charAt(e-1))){break}e-=1}return aH.slice(D,e)}function c(e){return Object.prototype.toString.call(e)==="[object Array]"}function J(aH,aL){var aN=aw(aH).split("&");var aM={};var D=function(i){if(aL){try{return decodeURIComponent(i)}catch(aP){return i}}else{return i}};for(var aJ=0,aK=aN.length;aJ<aK;aJ++){if(aN[aJ]){var aI=aN[aJ].split("=");var e=aI[0];var aO=aI[1];if(aI.length<2){aO=e;e="$nullName"}if(!aM[e]){aM[e]=D(aO)}else{if(c(aM[e])!=true){aM[e]=[aM[e]]}aM[e].push(D(aO))}}}return aM}function ac(D,aI){for(var aH=0,e=D.length;aH<e;aH++){aI(D[aH],aH)}}function ak(i){var e=new RegExp("^http(?:s)?://([^/]+)","im");if(i.match(e)){return i.match(e)[1].toString()}else{return""}}function aj(aO){try{var aL="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";var D="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_=";var aQ=function(e){var aR="",aS=0;for(;aS<e.length;aS++){aR+="%"+aH(e[aS])}return decodeURIComponent(aR)};var aH=function(e){var i="0"+e.toString(16);return i.length<=2?i:i.substr(1)};var aP=function(aY,aV,aR){if(typeof(aY)=="string"){aY=aY.split("")}var aX=function(a7,a9){for(var a8=0;a8<a7.length;a8++){if(a7[a8]==a9){return a8}}return -1};var aS=[];var a6,a4,a1="";var a5,a3,a0,aZ="";if(aY.length%4!=0){}var e=/[^A-Za-z0-9\+\/\=]/g;var a2=aL.split("");if(aV=="urlsafe"){e=/[^A-Za-z0-9\-_\=]/g;a2=D.split("")}var aU=0;if(aV=="binnary"){a2=[];for(aU=0;aU<=64;aU++){a2[aU]=aU+128}}if(aV!="binnary"&&e.exec(aY.join(""))){return aR=="array"?[]:""}aU=0;do{a5=aX(a2,aY[aU++]);a3=aX(a2,aY[aU++]);a0=aX(a2,aY[aU++]);aZ=aX(a2,aY[aU++]);a6=(a5<<2)|(a3>>4);a4=((a3&15)<<4)|(a0>>2);a1=((a0&3)<<6)|aZ;aS.push(a6);if(a0!=64&&a0!=-1){aS.push(a4)}if(aZ!=64&&aZ!=-1){aS.push(a1)}a6=a4=a1="";a5=a3=a0=aZ=""}while(aU<aY.length);if(aR=="array"){return aS}var aW="",aT=0;for(;aT<aS.lenth;aT++){aW+=String.fromCharCode(aS[aT])}return aW};var aI=[];var aN=aO.substr(0,3);var aK=aO.substr(3);switch(aN){case"v01":for(var aJ=0;aJ<aK.length;aJ+=2){aI.push(parseInt(aK.substr(aJ,2),16))}return decodeURIComponent(aQ(aP(aI,"binnary","array")));break;case"v02":aI=aP(aK,"urlsafe","array");return aQ(aP(aI,"binnary","array"));break;default:return decodeURIComponent(aO)}}catch(aM){return""}}var ap={screenSize:function(){return(m&8388608==8388608)?ao.width+"x"+ao.height:""},colorDepth:function(){return(m&4194304==4194304)?ao.colorDepth:""},appCode:function(){return(m&2097152==2097152)?s.appCodeName:""},appName:function(){return(m&1048576==1048576)?((s.appName.indexOf("Microsoft Internet Explorer")>-1)?"MSIE":s.appName):""},cpu:function(){return(m&524288==524288)?(s.cpuClass||s.oscpu):""},platform:function(){return(m&262144==262144)?(s.platform):""},jsVer:function(){if(m&131072!=131072){return""}var aI,e,aK,D=1,aH=0,i=(s.appName.indexOf("Microsoft Internet Explorer")>-1)?"MSIE":s.appName,aJ=s.appVersion;if("MSIE"==i){e="MSIE";aI=aJ.indexOf(e);if(aI>=0){aK=window.parseInt(aJ.substring(aI+5));if(3<=aK){D=1.1;if(4<=aK){D=1.3}}}}else{if(("Netscape"==i)||("Opera"==i)||("Mozilla"==i)){D=1.3;e="Netscape6";aI=aJ.indexOf(e);if(aI>=0){D=1.5}}}return D},network:function(){if(m&65536!=65536){return""}var i="";i=(s.connection&&s.connection.type)?s.connection.type:i;try{F.body.addBehavior("#default#clientCaps");i=F.body.connectionType}catch(D){i="unkown"}return i},language:function(){return(m&32768==32768)?(s.systemLanguage||s.language):""},timezone:function(){return(m&16384==16384)?(new Date().getTimezoneOffset()/60):""},flashVer:function(){if(m&8192!=8192){return""}var aK=s.plugins,aH,aL,aN;if(aK&&aK.length){for(var aJ in aK){aL=aK[aJ];if(aL.description==null){continue}if(aH!=null){break}aN=aL.description.toLowerCase();if(aN.indexOf("flash")!=-1){aH=aL.version?parseInt(aL.version):aN.match(/\d+/);continue}}}else{if(window.ActiveXObject){for(var aI=10;aI>=2;aI--){try{var D=new ActiveXObject("ShockwaveFlash.ShockwaveFlash."+aI);if(D){aH=aI;break}}catch(aM){}}}else{if(W.indexOf("webtv/2.5")!=-1){aH=3}else{if(W.indexOf("webtv")!=-1){aH=2}}}}return aH},javaEnabled:function(){if(m&4096!=4096){return""}var D=s.plugins,i=s.javaEnabled(),aH,aI;if(i==true){return 1}if(D&&D.length){for(var e in D){aH=D[e];if(aH.description==null){continue}if(i!=null){break}aI=aH.description.toLowerCase();if(aI.indexOf("java plug-in")!=-1){i=parseInt(aH.version);continue}}}else{if(window.ActiveXObject){i=(new ActiveXObject("JavaWebStart.IsInstalled")!=null)}}return i?1:0}};var ad={pageId:function(i){var D=i||r,aK="-9999-0-0-1";if((undefined==D)||(""==D)){try{var aH=h("publishid");if(""!=aH){var aJ=aH.split(",");if(aJ.length>0){if(aJ.length>=3){aK="-9999-0-"+aJ[1]+"-"+aJ[2]}D=aJ[0]}}else{D="0"}}catch(aI){D="0"}D=D+aK}return D},sessionCount:function(){var e=t("_s_upa");if(e==""){e=0}return e},excuteCount:function(){return SUDA.sudaCount},referrer:function(){if(m&2048!=2048){return""}var e=/^[^\?&#]*.swf([\?#])?/;if((aA=="")||(aA.match(e))){var i=V(j,"ref","&","");if(i!=""){return escape(i)}}return escape(aA)},isHomepage:function(){if(m&1024!=1024){return""}var D="";try{F.body.addBehavior("#default#homePage");D=F.body.isHomePage(j)?"Y":"N"}catch(i){D="unkown"}return D},PGLS:function(){return(m&512==512)?h("stencil"):""},ZT:function(){if(m&256!=256){return""}var e=h("subjectid");e.replace(",",".");e.replace(";",",");return escape(e)},mediaType:function(){return(m&128==128)?h("mediaid"):""},domCount:function(){return(m&64==64)?F.getElementsByTagName("*").length:""},iframeCount:function(){return(m&32==32)?F.getElementsByTagName("iframe").length:""}};var av={visitorId:function(){var i=15;var e=t(aa);if(e.length>i&&u==0){return e}else{return}},fvisitorId:function(e){if(!e){var e=t(Y);return e}else{at(Y,e,3650)}},sessionId:function(){var e=t(H);if(""==e){var i=new Date();e=Math.random()*10000000000000+"."+i.getTime()}return e},flashCookie:function(e){if(e){}else{return p}},lastVisit:function(){var D=t(H);var aI=t(P);var aH=aI.split(":");var aJ="",i;if(aH.length>=6){if(D!=aH[4]){i=new Date();var e=new Date(window.parseInt(aH[0]));aH[1]=window.parseInt(aH[1])+1;if(i.getMonth()!=e.getMonth()){aH[2]=1}else{aH[2]=window.parseInt(aH[2])+1}if(((i.getTime()-e.getTime())/86400000)>=7){aH[3]=1}else{if(i.getDay()<e.getDay()){aH[3]=1}else{aH[3]=window.parseInt(aH[3])+1}}aJ=aH[0]+":"+aH[1]+":"+aH[2]+":"+aH[3];aH[5]=aH[0];aH[0]=i.getTime();at(P,aH[0]+":"+aH[1]+":"+aH[2]+":"+aH[3]+":"+D+":"+aH[5],360)}else{aJ=aH[5]+":"+aH[1]+":"+aH[2]+":"+aH[3]}}else{i=new Date();aJ=":1:1:1";at(P,i.getTime()+aJ+":"+D+":",360)}return aJ},userNick:function(){if(al!=""){return al}var D=unescape(t(l));if(D!=""){var i=V(D,"ag","&","");var e=V(D,"user","&","");var aH=V(D,"uid","&","");var aJ=V(D,"sex","&","");var aI=V(D,"dob","&","");al=i+":"+e+":"+aH+":"+aJ+":"+aI;return al}else{return""}},userOrigin:function(){if(m&4!=4){return""}var e=t(aE);var i=e.split(":");if(i.length>=2){return i[0]}else{return""}},advCount:function(){return(m&2==2)?t(E):""},setUOR:function(){var aL=t(aE),aP="",i="",aO="",aI="",aM=j.toLowerCase(),D=F.referrer.toLowerCase();var aQ=/[&|?]c=spr(_[A-Za-z0-9]{1,}){3,}/;var aK=new Date();if(aM.match(aQ)){aO=aM.match(aQ)[0]}else{if(D.match(aQ)){aO=D.match(aQ)[0]}}if(aO!=""){aO=aO.substr(3)+":"+aK.getTime()}if(aL==""){if(t(P)==""){aP=ak(D);i=ak(aM)}at(aE,aP+","+i+","+aO,365)}else{var aJ=0,aN=aL.split(",");if(aN.length>=1){aP=aN[0]}if(aN.length>=2){i=aN[1]}if(aN.length>=3){aI=aN[2]}if(aO!=""){aJ=1}else{var aH=aI.split(":");if(aH.length>=2){var e=new Date(window.parseInt(aH[1]));if(e.getTime()<(aK.getTime()-86400000*30)){aJ=1}}}if(aJ){at(aE,aP+","+i+","+aO,365)}}},setAEC:function(e){if(""==e){return}var i=t(E);if(i.indexOf(e+",")<0){i=i+e+","}at(E,i,7)},ssoInfo:function(){var D=unescape(aj(t("sso_info")));if(D!=""){if(D.indexOf("uid=")!=-1){var i=V(D,"uid","&","");return escape("uid:"+i)}else{var e=V(D,"u","&","");return escape("u:"+unescape(e))}}else{return""}},subp:function(){return t("SUBP")}};var ai={CI:function(){var e=["sz:"+ap.screenSize(),"dp:"+ap.colorDepth(),"ac:"+ap.appCode(),"an:"+ap.appName(),"cpu:"+ap.cpu(),"pf:"+ap.platform(),"jv:"+ap.jsVer(),"ct:"+ap.network(),"lg:"+ap.language(),"tz:"+ap.timezone(),"fv:"+ap.flashVer(),"ja:"+ap.javaEnabled()];return"CI="+e.join("|")},PI:function(e){var i=["pid:"+ad.pageId(e),"st:"+ad.sessionCount(),"et:"+ad.excuteCount(),"ref:"+ad.referrer(),"hp:"+ad.isHomepage(),"PGLS:"+ad.PGLS(),"ZT:"+ad.ZT(),"MT:"+ad.mediaType(),"keys:","dom:"+ad.domCount(),"ifr:"+ad.iframeCount()];return"PI="+i.join("|")},UI:function(){var e=["vid:"+av.visitorId(),"sid:"+av.sessionId(),"lv:"+av.lastVisit(),"un:"+av.userNick(),"uo:"+av.userOrigin(),"ae:"+av.advCount(),"lu:"+av.fvisitorId(),"si:"+av.ssoInfo(),"rs:"+(n?1:0),"dm:"+(B?1:0),"su:"+av.subp()];return"UI="+e.join("|")},EX:function(i,e){if(m&1!=1){return""}i=(null!=i)?i||"":b;e=(null!=e)?e||"":a;return"EX=ex1:"+i+"|ex2:"+e},MT:function(){return"MT="+aF().join("|")},V:function(){return an},R:function(){return"gUid_"+new Date().getTime()}};function ax(){var aK="-",aH=F.referrer.toLowerCase(),D=j.toLowerCase();if(""==t(X)){if(""!=aH){aK=ak(aH)}at(X,aK,"","weibo.com")}var aI=/weibo.com\/reg.php/;if(D.match(aI)){var aJ=V(unescape(D),"sharehost","&","");var i=V(unescape(D),"appkey","&","");if(""!=aJ){at(X,aJ,"","weibo.com")}at("appkey",i,"","weibo.com")}}function d(e,i){G(e,i)}function G(i,D){D=D||{};var e=new Image(),aH;if(D&&D.callback&&typeof D.callback=="function"){e.onload=function(){clearTimeout(aH);aH=null;D.callback(true)}}SUDA.img=e;e.src=i;aH=setTimeout(function(){if(D&&D.callback&&typeof D.callback=="function"){D.callback(false);e.onload=null}},D.timeout||2000)}function x(e,aH,D,aI){SUDA.sudaCount++;if(!av.visitorId()&&!L()){if(u<3){u++;setTimeout(x,500);return}}var i=N+[ai.V(),ai.CI(),ai.PI(e),ai.UI(),ai.MT(),ai.EX(aH,D),ai.R()].join("&");G(i,aI)}function y(e,D,i){if(aG||A){return}if(SUDA.sudaCount!=0){return}x(e,D,i)}function ab(e,aH){if((""==e)||(undefined==e)){return}av.setAEC(e);if(0==aH){return}var D="AcTrack||"+t(aa)+"||"+t(H)+"||"+av.userNick()+"||"+e+"||";var i=ag+D+"&gUid_"+new Date().getTime();d(i)}function aq(aI,e,i,aJ){aJ=aJ||{};if(!i){i=""}else{i=escape(i)}var aH="UATrack||"+t(aa)+"||"+t(H)+"||"+av.userNick()+"||"+aI+"||"+e+"||"+ad.referrer()+"||"+i+"||"+(aJ.realUrl||"")+"||"+(aJ.ext||"");var D=ag+aH+"&gUid_"+new Date().getTime();d(D,aJ)}function aC(aK){var i=g(aK);var aI=i.target;var aH="",aL="",D="";var aJ;if(aI!=null&&aI.getAttribute&&(!aI.getAttribute("suda-uatrack")&&!aI.getAttribute("suda-actrack")&&!aI.getAttribute("suda-data"))){while(aI!=null&&aI.getAttribute&&(!!aI.getAttribute("suda-uatrack")||!!aI.getAttribute("suda-actrack")||!!aI.getAttribute("suda-data"))==false){if(aI==F.body){return}aI=aI.parentNode}}if(aI==null||aI.getAttribute==null){return}aH=aI.getAttribute("suda-actrack")||"";aL=aI.getAttribute("suda-uatrack")||aI.getAttribute("suda-data")||"";sudaUrls=aI.getAttribute("suda-urls")||"";if(aL){aJ=J(aL);if(aI.tagName.toLowerCase()=="a"){D=aI.href}opts={};opts.ext=(aJ.ext||"");aJ.key&&SUDA.uaTrack&&SUDA.uaTrack(aJ.key,aJ.value||aJ.key,D,opts)}if(aH){aJ=J(aH);aJ.key&&SUDA.acTrack&&SUDA.acTrack(aJ.key,aJ.value||aJ.key)}}if(window.SUDA&&Object.prototype.toString.call(window.SUDA)==="[object Array]"){for(var Q=0,ae=SUDA.length;Q<ae;Q++){switch(SUDA[Q][0]){case"setGatherType":m=SUDA[Q][1];break;case"setGatherInfo":r=SUDA[Q][1]||r;b=SUDA[Q][2]||b;a=SUDA[Q][3]||a;break;case"setPerformance":Z=SUDA[Q][1];break;case"setPerformanceFilter":C=SUDA[Q][1];break;case"setPerformanceInterval":K=SUDA[Q][1]*1||0;K=isNaN(K)?0:K;break;case"setGatherMore":M.push(SUDA[Q].slice(1));break;case"acTrack":S.push(SUDA[Q].slice(1));break;case"uaTrack":I.push(SUDA[Q].slice(1));break}}}aG=(function(D,i){if(ah.top==ah){return false}else{try{if(F.body.clientHeight==0){return false}return((F.body.clientHeight>=D)&&(F.body.clientWidth>=i))?false:true}catch(aH){return true}}})(320,240);A=(function(){return false})();av.setUOR();var au=av.sessionId();window.SUDA=window.SUDA||[];SUDA.sudaCount=SUDA.sudaCount||0;SUDA.log=function(){x.apply(null,arguments)};SUDA.acTrack=function(){ab.apply(null,arguments)};SUDA.uaTrack=function(){aq.apply(null,arguments)};U(F.body,"click",aC);window.GB_SUDA=SUDA;GB_SUDA._S_pSt=function(){};GB_SUDA._S_acTrack=function(){ab.apply(null,arguments)};GB_SUDA._S_uaTrack=function(){aq.apply(null,arguments)};window._S_pSt=function(){};window._S_acTrack=function(){ab.apply(null,arguments)};window._S_uaTrack=function(){aq.apply(null,arguments)};window._S_PID_="";if(!window.SUDA.disableClickstream){y()}try{k()}catch(T){}})();
+//-->
+</script> 
+<noScript> 
+<div style='position:absolute;top:0;left:0;width:0;height:0;visibility:hidden'><img width=0 height=0 src='http://beacon.sina.com.cn/a.gif?noScript' border='0' alt='' /></div> 
+</noScript> 
+<!-- SUDA_CODE_END -->
+
+<!-- SSO_GETCOOKIE_START -->
+<script type="text/javascript">var sinaSSOManager=sinaSSOManager||{};sinaSSOManager.getSinaCookie=function(){function dc(u){if(u==undefined){return""}var decoded=decodeURIComponent(u);return decoded=="null"?"":decoded}function ps(str){var arr=str.split("&");var arrtmp;var arrResult={};for(var i=0;i<arr.length;i++){arrtmp=arr[i].split("=");arrResult[arrtmp[0]]=dc(arrtmp[1])}return arrResult}function gC(name){var Res=eval("/"+name+"=([^;]+)/").exec(document.cookie);return Res==null?null:Res[1]}var sup=dc(gC("SUP"));if(!sup){sup=dc(gC("SUR"))}if(!sup){return null}return ps(sup)};</script>
+<!-- SSO_GETCOOKIE_END -->
+
+<script type="text/javascript">new function(r,s,t){this.a=function(n,t,e){if(window.addEventListener){n.addEventListener(t,e,false);}else if(window.attachEvent){n.attachEvent("on"+t,e);}};this.b=function(f){var t=this;return function(){return f.apply(t,arguments);};};this.c=function(){var f=document.getElementsByTagName("form");for(var i=0;i<f.length;i++){var o=f[i].action;if(this.r.test(o)){f[i].action=o.replace(this.r,this.s);}}};this.r=r;this.s=s;this.d=setInterval(this.b(this.c),t);this.a(window,"load",this.b(function(){this.c();clearInterval(this.d);}));}(/http:\/\/www\.google\.c(om|n)\/search/, "http://keyword.sina.com.cn/searchword.php", 250);</script>
+<!-- body code end -->
+
+    <div class="wxshow">
+        <div class="back"></div>
+    </div>
+    <div class="page">
+        <!--微信分享 开始-->
+
+        <div class="pop"></div>
+        <div class="wb">
+            <div class="clos"></div>
+            <textarea name="texa" class="fwbtex"></textarea>
+            <a href="javascript:fswb();" class="fwb"></a>
+        </div>
+        <!--微信分享 结束-->
+        <!--pc导航 开始-->
+        <div class="top">
+            <div class="w1100">
+                <div class="logo"><img src="http://n.sinaimg.cn/sh/seesh/logo.jpg" /></div>
+                <div class="logo1"><a href="http://sh.sina.com.cn/" target="_blank"><img src="http://n.sinaimg.cn/sh/seesh/logo1.jpg" /></a></div>
+                <div class="nav">
+
+                    <ul>
+
+                        <li class="cur"><a href="#a1">文话上海</a></li>
+
+                        <li><a href="#a2">醉美上海</a></li>
+
+                        <li><a href="#a3">发现上海</a></li>
+
+                        <li><a href="#a4">网友投稿</a></li>
+
+
+                    </ul>
+                    <div class="curBg"></div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <!--pc导航 结束-->
+        <!--移动导航 开始-->
+        <header id="header">
+            <span class="right"></span>
+        </header>
+        <div class="jiao"></div>
+        <div class="menu">
+
+            <li class="a1 icon1">文话上海</li>
+            <li class="a2 icon2">醉美上海</li>
+            <li class="a3 icon3">发现上海</li>
+            <li class="a4 icon4">网友投稿</li>
+
+        </div>
+        <!--移动导航 结束-->
+
+        <!--pc 切换 开始-->
+        			
+	<!--pc 切换 开始-->
+        <script src="http://sh.sinaimg.cn/subject/2015/Jjzx03/jquery.SuperSlide.2.1.1.js"></script>
+        <div id="tabs" class="tabs">
+            
+            
+            <div class="hd">
+                <ul>
+					<li></li>
+		<li></li>
+					</ul>
+            </div>
+            <div class="bd">
+                <ul>
+						<li style="background:url('http://n.sinaimg.cn/sh/110/w1920h590/20190326/RPVO-hutwezf6775769.jpg') no-repeat center top; height:590px;">
+    <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_559795.html#p=1" target="_blank" class="lnk"></a>
+                        <div class="txt1">
+                            <p><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_559795.html#p=1" target="_blank">申城迎最美赏花季</a></p>
+                        </div>
+                        <div class="txt2">
+                            <p>万物复苏，春暖花开，申城最美的赏花季随之而来。</p>
+                        </div>
+                    </li>
+		<li style="background:url('http://n.sinaimg.cn/sh/110/w1920h590/20190318/uiX5-hukwxnv0767048.jpg') no-repeat center top; height:590px;">
+    <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_558746.html" target="_blank" class="lnk"></a>
+                        <div class="txt1">
+                            <p><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_558746.html" target="_blank">申城市民赏花热情高涨</a></p>
+                        </div>
+                        <div class="txt2">
+                            <p>连续数日温暖的天气，催开申城各处的春花，最好的赏花季节已经开启。</p>
+                        </div>
+                    </li>
+						
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript">
+           jQuery(".tabs").slide({mainCell:".bd ul",effect:"fold",autoPlay:true,
+ endFun:function(i,c){
+        jQuery(".tabs .txt1").css({"right":-860}).eq(i).animate({"right":0});
+        jQuery(".tabs .txt2").css({"right":-860}).eq(i).animate({"right":0});
+}
+});
+        </script>
+        <!--pc 切换 结束-->
+
+
+
+
+
+
+
+
+ 
+        <!--pc 切换 结束-->
+
+
+
+
+        <!--移动切换 开始-->
+        			
+	   <div class="device">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide"><a href="https://photo.sina.cn/album_19_63553_559795.htm?ch=19&cid=news" target="_blank"><img src="http://n.sinaimg.cn/sh/134/w640h294/20190326/gUfF-hutwezf6794959.jpg" /></a><div class="tbg"><a href="https://photo.sina.cn/album_19_63553_559795.htm?ch=19&cid=news" target="_blank">申城迎最美赏花季</a></div> </div>
+
+	                    <div class="swiper-slide"><a href="https://photo.sina.cn/album_19_63553_558746.htm?ch=19&cid=news" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/134/w640h294/20190318/5oRt-hukwxnv0780949.jpg" /></a><div class="tbg"><a href="https://photo.sina.cn/album_19_63553_558746.htm?ch=19&cid=news" target="_blank">申城市民赏花热情高涨</a></div> </div>
+
+	                </div>
+            </div>
+            <div class="pagination"></div>
+        </div>
+        <!--移动切换结束-->
+
+        <a name="a1"></a>
+        <div class="tit1">
+<div class="w1100">
+
+<h2>文话上海</h2>
+<em>/</em>
+<p>Culture</p>
+<span>图说上海文化与市井</span>
+</div>
+</div>
+
+        <div class="w1100">
+
+            <div class="piclist">
+                <div class="hidden">
+                    <ul>
+                        		
+                        <li ctit="1528">
+                            <a href="http://slide.sh.sina.com.cn/tjjx/slide_19_63553_554231.html#p=1" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20190227/gMDz-htptaqf2272355.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/tjjx/slide_19_63553_554231.html#p=1">愚园路从农田变弄堂博物馆</a></span>
+                                <p>全长2.7公里，横跨静安、长宁两区的愚园路，是花园弄堂博物馆，沿途有沪西别墅等上海优秀历史建筑。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1527">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_556062.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20190227/flPy-htptaqf2261142.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_556062.html">豫园灯会迎来大客流</a></span>
+                                <p>2019豫园新春民俗艺术灯会自亮灯以来，一直受市民和游客的欢迎。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1523">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_549678.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/471/w296h175/20190122/htV0-hryfqhk5988844.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_549678.html">静安别墅的前世今生</a></span>
+                                <p>静安别墅地处南京西路1025弄，1928年由开发商张潭如投资建造，1932年正式竣工。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1525">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_548493.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/471/w296h175/20190122/5xA6-hryfqhk5867990.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_548493.html">申城第一情侣街关张</a></span>
+                                <p>“申城第一情侣街”东平路关张的消息引发不少网友关注，这条小马路，位于上海繁华地段。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1524">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_545884.html#p=1" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/471/w296h175/20181211/Cjh5-hpinrye0495917.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_545884.html#p=1">思南公馆富有情调和气质</a></span>
+                                <p>思南公馆是上海市中心唯一一个以成片花园洋房的保留保护为宗旨的项目，坐拥51栋历史悠久的花园洋房。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1522">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_547603.html#p=1" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20181205/kAGJ-hprknvt1822310.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_547603.html#p=1">国展中心流光溢彩</a></span>
+                                <p>夜幕降临，国家会展中心变身端庄大气、生气灵动的灯海，斑斓的灯光将这里装点一新。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1521">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_541113.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20181104/ITFi-hnknmqw7673794.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_541113.html">海派风格景点新天地</a></span>
+                                <p>新天地是上海具有浓厚“海派”风格的都市旅游景点，它的前身是上海石库门居住区。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1520">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_537847.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20181104/sYsl-hnknmqw7727330.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_537847.html">江湾体育场记忆</a></span>
+                                <p>对于很多人来说，江湾体育场并不陌生，在这里有不少上海滩足球记忆。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1519">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_533628.html#p=1" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180809/xvqB-hhnunsp8201052.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_533628.html#p=1">田子坊里的上海弄堂印象</a></span>
+                                <p>如今的田子坊呈现的是上海亲切、温暖和嘈杂的一面。这条富有上海滩味道的弄堂里，各式店铺云集。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1518">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_526001.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180518/J_BG-fzrwiaz5573807.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_526001.html">南翔古猗园古风浓郁</a></span>
+                                <p>古猗园位于上海市西北郊嘉定区南翔镇。园林最早建于明代嘉靖年间，离市中心21公里，占地10公顷。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1008">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_521564.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180409/YOiq-fyvtmxe3378859.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_521564.html">武康路浓缩百年上海历史</a></span>
+                                <p>武康路，原名福开森路，修筑于1907年，它见证上海近代百年历史。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1007">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_521365.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180408/5gCt-fytnfyp0517654.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_521365.html">多伦路文化名人街建筑风格各异</a></span>
+                                <p>多伦路南傍四川北路商贸闹市，北邻鲁迅公园，动静相间一里有余。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1524">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_520891.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180408/wIwG-fyvtmxc8421941.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_520891.html">昌里路夜市全部关停</a></span>
+                                <p>最近浦东“夜宵圣地”“昌里路夜市”关停的消息引发不少网友热议。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1006">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_520126.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180330/D0BZ-fyssmmc7842705.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_520126.html">乒博馆免费开放 亮点藏品一览</a></span>
+                                <p>上海再添全新体育文化地标，乒博馆3月31日起免费对外开放。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="983">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_518413.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180327/FpFF-fysqfnh2792516.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_518413.html">云南路美食街老字号抱团</a></span>
+                                <p>提起上海老牌美食街，不得不提这条全长只有250米的云南南路美食街。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="982">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_513857.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180326/dr7r-fysqfnf9505219.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_513857.html">豫园灯会年味浓游人如织</a></span>
+                                <p>2018年是农历戊戌狗年，近40组大型灯组、近千只气氛灯点缀着豫园商城。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="985">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_507384.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180322/soEF-fysnevk6023934.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_507384.html">北京东路将告别五金一条街特色</a></span>
+                                <p>曾以“五金机电一条街”闻名全国的北京东路，即将面临转型。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="986">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_503532.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180321/tv7o-fyskeue3864793.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_503532.html">徐家汇天主教堂重装亮相</a></span>
+                                <p>经过两年多封闭修缮，上海徐家汇天主教堂完成大修工程。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                        
+
+
+
+
+
+ 
+                    </ul>
+</div>
+                <ul class="list">数据加载中，请稍后...</ul>
+                <div class="more"><a href="javascript:;" onclick="piclist.loadMore();">查看更多</a></div>
+            </div>
+
+
+        </div>
+
+
+
+        <a name="a2"></a>
+        <div class="tit2">
+<div class="w1100">
+<h2>醉美上海</h2>
+<em>/</em>
+<p>Beautiful</p>
+<span>定格在光影里的上海风光</span>
+</div>
+</div>
+        <div class="bg">
+            <div class="w1100">
+                <div class="piclist0">
+                    <div class="hidden0">
+                        <ul>
+                            		
+                        <li ctit="1604">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_553751.html#p=1" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20190202/LoPD-hsmkfyn6885328.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_553751.html#p=1">深坑酒店:矿坑变建筑奇迹</a></span>
+                                <p>深坑酒店自开业以来一直备受外界的关注，从开业至今热度不减，而酒店原址是一个废弃的采石矿坑。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1603">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_550316.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20190104/fBAf-hqzxptp4937395.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_550316.html">四平路变身黄金大道</a></span>
+                                <p>四平路，美出了新高度，在架空线入地、合杆整治后，四平路的天际线变清爽。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1602">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_551991.html#p=1" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20181214/HRjt-hqackac5430324.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_551991.html#p=1">上海马勒别墅宛若童话城堡</a></span>
+                                <p>马勒别墅1936年建成，传说这所房子的设计师依照当年花园主人马勒最宠爱的小女儿一个梦境设计。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1601">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_550735.html#p=1" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20181205/qREM-hpinryc3876834.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_550735.html#p=1">上海千年古银杏现深秋美景</a></span>
+                                <p>深秋时节，色叶树惊艳变装。魔都一号古银杏（1200岁）已披上闪闪的黄金战袍，呈现霸气美景。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1600">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_539642.html#p=1" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20181104/ECu9-hnknmqw7628649.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_539642.html#p=1">朱家角古镇富有江南水乡韵味</a></span>
+                                <p>古镇呈现桥多、弄多、角多的特点，显露出无限的水乡文化气息，在这里可看到古色古香的明清时期街市、建筑等众多名胜古迹。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1599">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_536350.html#p=1" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180719/qu0P-hfnsvza8893077.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_536350.html#p=1">申城进入加长版三伏天</a></span>
+                                <p>上海7月17日正式进入“加长版”三伏天！一年中最热的日子终于来了，高清版水晶天，通透的空气更是让魔都美不胜收！</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1598">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_519908.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180330/sCp1-fyssmmc7867770.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_519908.html">最美公交车站缤纷夜景惹人醉</a></span>
+                                <p>夜幕降临，在灯光的映衬下，沪最美公交车站樱花似繁星点点。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1001">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_519688.html#p=1" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180328/mOUP-fysqfnh7702208.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_519688.html#p=1">同济大学樱花正浪漫</a></span>
+                                <p>又是一年春暖花开，同济园樱花朵朵正烂漫。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1002">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_519506.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180328/Lw14-fysqfnh7723406.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_519506.html">市中心最大片郁金香花海绽放</a></span>
+                                <p>在大宁公园，2018新湖郁金香花博会已开幕，将持续到4月7日。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1597">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_517870.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180328/ivwr-fysqfnh7733624.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_517870.html">上海植物园春花浪漫美如画</a></span>
+                                <p>随着天气转暖，又到一年春花浪漫时，上海各处的春花纷纷绽放迎春。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1596">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_512795.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180321/jWzL-fyskeue3886519.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_512795.html">世纪公园梅花含芳吐艳</a></span>
+                                <p>在世纪公园内，蜡梅吐露芬芳，颜色各异的梅花已经绽放。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="986">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_516167.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180321/2dvy-fyskeue3897748.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_516167.html">顾村公园早樱绽放淡雅唯美</a></span>
+                                <p>在上海顾村公园内早樱绽放，虽然还未大面积绽放，但已吸引不少游客驻足观赏。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="987">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_501384.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180322/jSiv-fysnevk6055179.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_501384.html">岳阳路落叶景观成网红</a></span>
+                                <p>岳阳路因为“落叶不扫”成为“网红路”，在路上展出一场以&quot;爱&quot;为主题的街头落叶艺术装置展。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="988">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_501705.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180321/blIe-fyskeue3936737.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_501705.html">上海大宁公园秋色怡人</a></span>
+                                <p>临近初冬，申城气温走低，上海大宁公园也迎来一年中最美的赏叶季。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="989">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_504301.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180321/UOpu-fyskeue4052398.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_504301.html">炫美圣诞树亮相街头</a></span>
+                                <p>花式多样的圣诞树已在圣诞节期间出现在上海各大商场，吸引不少市民围观拍照留念。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="990">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_504911.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180321/i5sh-fyskeue4062667.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_504911.html">绚丽灯光带亮相淮海路</a></span>
+                                <p>黄浦区打造淮海路夜景灯光，随着2018年淮海路亮灯仪式的举行，一批全新LED灯光亮相淮海路。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                        
+
+
+
+
+
+ 
+                           </ul>
+</div>
+                    <ul class="list0">数据加载中，请稍后...</ul>
+                    <div class="more0"><a href="javascript:;" onclick="piclist0.loadMore0();">加载更多</a></div>
+                </div>
+            </div>
+        </div>
+
+        <a name="a3"></a>
+        <div class="tit3">
+<div class="w1100">
+<h2>发现上海</h2>
+<em>/</em>
+<p>Discovery</p>
+<span>新鲜好玩的上海城事</span>
+</div>
+</div>
+        <div class="w1100">
+            <div class="piclist1">
+                <div class="hidden1">
+                    <ul>
+                        		
+                        <li ctit="1822">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_558453.html#p=1" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20190326/h9Ys-hutwezf6812812.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_558453.html#p=1">时蔬上市 香椿价格一枝独秀</a></span>
+                                <p>这段时间“香椿自由”成为热门词汇，部分地方香椿售价高达100元/斤，网友纷纷调侃“吃不起”。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1821">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_558445.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20190326/EEfg-hutwezf6806471.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_558445.html">阳光重返申城市民百态</a></span>
+                                <p>上海迎来明媚的阳光，随着天空放晴，市民们纷纷走出家门，享受久违暖阳。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1820">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_557654.html#p=1" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20190312/u4MU-htzuhtq2172072.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_557654.html#p=1">新世界城大修年底回归</a></span>
+                                <p>继第一百货、上海世贸广场重装亮相后，南京路“金三角”的最后一角——新世界城将在3月11日闭店改造。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1819">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_557307.html#p=1" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20190312/hMza-htzuhtq2157234.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_557307.html#p=1">上海持续阴雨市民百态</a></span>
+                                <p>自去年12月起至今，上海被阴雨天持续“霸屏”，太阳成了稀罕物，这几个月下雨日超过半数，堪称百年一遇。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1818">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_555224.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20190227/sjHj-htptaqf2281509.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_555224.html">春运路上众生相</a></span>
+                                <p>春运像一个巨大的候鸟迁移，不同的面孔，带着各自的心事和情绪描绘出一幅“春运众生相”。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1817">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_555492.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20190125/DG3I-hsccyrs5190127.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_555492.html">春运小候鸟呆萌可爱</a></span>
+                                <p>在春运熙熙攘攘的客流中，“小候鸟”们跟随父母长辈踏上迁徙之旅，回老家过年。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1816">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_555120.html#p=1" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20190125/_f8--hsccyrs5186279.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_555120.html#p=1">沪上火车站启用人脸识别闸机</a></span>
+                                <p>上海火车站启用自助实名制核验闸机，不仅提高旅客通行的便捷性，也可杜绝冒用车票登车现象。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1814">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_552792.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20190104/-MS1-hqzxptp4900653.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_552792.html">申城圣诞节日氛围浓</a></span>
+                                <p>申城大街小巷节日氛围浓，各大商场圣诞树亮灯，还有缤纷的彩灯装扮。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1815">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_551429.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20190116/MKGp-hrsechc4850641.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_551429.html">申城现少量积雪美景醉人</a></span>
+                                <p>12月9日，雪后的申城出现了少量的积雪，树木房屋被积雪掩盖，有市民堆起了雪人。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1813">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_552322.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20181225/acv--hqtwzec2386066.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_552322.html">高配版电话亭可充电蹭WiFi</a></span>
+                                <p>愚园路上一部分电话亭变身，除了可让行人驻足休憩外，还附带WiFi和手机充电功能。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1812">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_549238.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20181119/NMSk-hmivixn3901900.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_549238.html">上马开跑 现场人山人海</a></span>
+                                <p>2018上海马拉松在11月18日开跑，航拍无人机在跑者上方盘旋，现场人山人海。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1811">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_548818.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20181119/TFqB-hnyuqhi2915015.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_548818.html">沪产柑橘公园直销1.9元/斤</a></span>
+                                <p>11月12日至30日，上海中山公园等8家公园销售新鲜柑橘，直销单价为1.9元/斤。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1810">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_547980.html#p=1" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20181113/uoqD-hnstwwr4082045.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_547980.html#p=1">探营进博会明星展品</a></span>
+                                <p>进博会上诸多或新奇酷炫、或高端奢华的明星展品让人大开眼界。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1809">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_545112.html#p=1" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20181113/QlkX-hnstwwr4071139.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_545112.html#p=1">上海发光斑马线在外滩投用</a></span>
+                                <p>上海外滩又增加一个全新的“景点”啦，会发光的“斑马线”惊艳亮相！</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1808">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_540424.html#p=1" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20181104/lvjr-hnknmqw7690118.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_540424.html#p=1">上海书展开幕书迷热情高涨</a></span>
+                                <p>2018上海书展首发新书500多种，举办首发活动约200场，现场书迷热情高涨。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1807">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_542649.html#p=1" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20181104/YJyY-hnknmqw7680835.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_542649.html#p=1">中秋临近网红月饼热销</a></span>
+                                <p>上海南京路步行街上的各大老字号月饼摊位前，市民排着长队等候购买现烤月饼，新口味月饼吸引了不少食客。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1806">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_543512.html#p=1" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180920/1q-y-hikxxna3601428.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_543512.html#p=1">爱牙日特写:爱与笑容相伴</a></span>
+                                <p>忙工作忙生活，你有多久没真心笑过了？9月20日是全国爱牙日，一起晒晒你的花式露齿照吧！</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1805">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_543414.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180920/ZSDk-hikxxna3602416.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_543414.html">孙杨入学上海体育学院</a></span>
+                                <p>9月19日，在上体新生开学典礼上，博士生孙杨作为2018级新生代表发言，并风趣的表示免费教校友们游泳。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1804">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_541006.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/471/w296h175/20180823/XBXl-hhzsnec4605636.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_541006.html">车墩影视城还原老上海风情</a></span>
+                                <p>在松江车墩有旧上海的市井风情，有拍电影的幕后秘密，还有欧式的标准庭院，在这里可以体验1930年代的上海。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1803">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_529697.html#p=1" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/471/w296h175/20180809/gSc4-hhnunsp8154474.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_529697.html#p=1">安徒生童话乐园充满童趣</a></span>
+                                <p>安徒生童话乐园是全球首家以童话作家安徒生命名的大型主题乐园，园内充满童趣，大量北欧风格的建筑成为亮点。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1802">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_530654.html#p=1" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180621/FkS--fzrwiaz7458409.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_530654.html#p=1">高考生考场外争分夺秒复习</a></span>
+                                <p>今年上海近5万名考生走进高考考场。6月7日上午，在第三女子中学考点外，不少考生在等待入场的时间里，争分夺秒复习。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1799">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_530647.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180621/3mYi-fzrwiaz7458727.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_530647.html">上海高考家长穿旗袍护航</a></span>
+                                <p>6月7日，上海2018年高考开考！大批家长场外护航！有家长笑称：自己第一次穿旗袍，希望孩子考试旗开得胜！</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1801">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_527444.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180518/mH-2-haturfs1618162.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_527444.html">上海入夏 市民清凉出行</a></span>
+                                <p>5月15日，上海中心城区徐家汇站最高温度34.2℃，街头市民纷纷换上夏装，清凉出行。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1800">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_525092.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180518/mm2O-haturfs1536061.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_525092.html">铁路迎五一假期客流最高峰</a></span>
+                                <p>铁路小长假运输从4月28日启动，运输期限从4月28日至5月1日，共计4天。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="991">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_516077.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180321/9mw1-fyskeue4079179.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_516077.html">申城气温飙升暖如夏日</a></span>
+                                <p>申城气温飙升，市民纷纷脱下厚厚的外套，穿短袖短裤出门的市民在街头随处可见。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="992">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_503719.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180322/r9Uv-fysnevk6083986.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_503719.html">上海爷叔卖内衣二十余年</a></span>
+                                <p>在上海愚园路上有一家内衣店，它的招牌和门店设计并不醒目，但顾客络绎不绝。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="993">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_508702.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180322/AO1m-fysnevk6113831.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_508702.html">申城首条行李箱专用道亮相</a></span>
+                                <p>五角场政通路成了网红，在这里建成的上海首条行李箱专用道受到不少网友关注。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="994">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_512490.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180322/uFM9-fysnevk6096684.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_512490.html">上海火车站春运热闹繁忙</a></span>
+                                <p>2018年春运拉开帷幕，上海火车站热闹繁忙，旅客归乡心切。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="995">
+                            <a href="http://slide.sh.sina.com.cn/slide_19_63553_513906.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180322/CEsU-fysnevk6077628.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/slide_19_63553_513906.html">老民警春节坚守岗位</a></span>
+                                <p>老顾是陆家嘴治安派出所里的民警，从警24年，接触110工作也已经有12个年头。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="996">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_504650.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180322/FzFl-fysnevk6130770.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_504650.html">曹家渡花鸟市场关闭</a></span>
+                                <p>上海市中心最大的花鸟市场--曹家渡花鸟市场，在2018年12月26日正式关闭。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="997">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_505847.html#p=1" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180321/Sf5Y-fyskeue4088215.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_505847.html#p=1">上海铁路迎客流高峰</a></span>
+                                <p>元旦小长假不少市民和游客趁着假期外出游玩，上海铁路迎来客流高峰。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="998">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_510761.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180322/SSOx-fysnevk6297177.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_510761.html">上海雨雪天市民百态</a></span>
+                                <p>上海多地出现积雪，不少路面结冰，低温雨雪天来袭市民出行受影响。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="1009">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_496030.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180327/wPEk-fysqfnh2607453.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_496030.html">共享健身舱实地探访</a></span>
+                                <p>一种健身途径——共享健身舱出现在上海街头，引来不少市民的关注。</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                                                <li ctit="999">
+                            <a href="http://slide.sh.sina.com.cn/news/slide_19_63553_497895.html" target="_blank"><img src="http://n.sinaimg.cn/sh/transform/435/w260h175/20180322/CJpg-fysnevk6107328.jpg" /></a>
+                            <div class="txt">
+                                <span><a href="http://slide.sh.sina.com.cn/news/slide_19_63553_497895.html">崇明柑橘进公园</a></span>
+                                <p>本地产优质柑橘进市区六大公园的第一天，3万斤柑橘销售一空！</p>
+                            </div>
+                            <div class="t"></div>
+                            <div class="num1"></div>
+                            <div class="zz"></div>
+                            <div class="num2"></div>
+                        </li>
+                        
+
+
+
+
+
+ 
+                    </ul>
+</div>
+                <ul class="list1">数据加载中，请稍后...</ul>
+                <div class="more1"><a href="javascript:;" onclick="piclist1.loadMore1();">加载更多</a></div>
+            </div>
+
+
+
+
+        </div>
+        <a name="a4"></a>
+        <div class="h_tit4"></div>
+        <div class="bg0">
+<div class="tit04">
+<div class="w1100">
+<h2>网友投稿</h2>
+<em>/</em>
+<p>Contribute</p>
+<span>图说上海文化与市井</span>
+</div>
+</div>
+
+<div class="w1100">
+<div class="intro">
+<h2>栏目简介</h2>
+<p class="pt1"> 《看见上海》是新浪上海站品牌图刊栏目，栏目用影像记录上海城</p>
+<p class="pt2">事，展现上海人文、风景，发掘更多具有代表性的上海符号，感知申</p>
+<p class="pt2">城记忆。栏目向全社会征集摄影作品， 投稿图片可用不同的视角记</p>
+<p class="pt5">录上海故事、用图像来展现街头巷尾，捕捉趣味横生的市井百态……</p>
+<p class="pt5">欢迎广大专业摄影师与摄影爱好者踊跃投稿。</p>
+</div>
+<div class="mail">
+<h2>栏目投稿邮箱</h2>
+<p><a href="mailto:xiudp@shmail.sina.com.cn">xiudp@shmail.sina.com.cn</a></p>
+</div>
+<div class="xize">
+<h2>投稿细则</h2>
+<p class="pt3">1、投稿者应保证对其所投作品拥有独立、完整的著作权。</p>
+<p class="pt6">2、图片内容真实, 投稿作品除对影调、色彩进行适度调整外，不接受</p>
+<p class="pt4">后期合成制作的照片。</p>
+<p class="pt7">3、投稿图片一律为JPG格式，图片数据最长边不小于2000像素，JPG</p>
+<p class="pt4">文件大小1M至2M。</p>
+<p class="pt2">4、来稿需注明投稿人姓名和地址、及联系方式。 </p>
+<p class="pt2">5、图集配以200字以上的图片介绍，根据需要单张图片也可添加相关</p>
+<p class="pt4">图片说明。</p>
+<p>6、所有选用作品，主办单位拥有宣传、展览等使用权，不另支付稿酬</p>
+
+
+</div>
+<div class="mail mail0">
+<a href="mailto:xiudp@shmail.sina.com.cn">xiudp@shmail.sina.com.cn</a>
+</div>
+</div>
+</div>
+        <div class="footer"></div>
+
+        <iframe src="http://sh.sina.com.cn/2018/iframe/4079.html" height="620" width="1920" frameborder="0" scrolling="no" class="ifrm"></iframe>
+
+
+        <script>
+
+
+
+            var _content = []; //临时存储li循环内容
+            var piclist = {
+                _default: 8, //默认显示图片个数
+                _loading: 4,  //每次点击按钮后加载的个数
+                init: function () {
+
+                    var lis = $(".piclist .hidden li");
+                    $(".piclist ul.list").html("");
+
+                    for (var n = 0; n < piclist._default; n++) {
+                        lis.eq(n).appendTo(".piclist ul.list");
+                    }
+                    $(".piclist ul.list img").each(function () {
+                        $(this).attr('src', $(this).attr('realSrc'));
+                    })
+                    for (var i = piclist._default; i < lis.length; i++) {
+                        _content.push(lis.eq(i));
+                    }
+                    $(".piclist .hidden").html("");
+                },
+                loadMore: function () {
+                    var mLis = $(".piclist ul.list li").length;
+
+                    for (var i = 0; i < piclist._loading; i++) {
+                        var target = _content.shift();
+
+                        if (!target) {
+                            $('.piclist .more').html("<p>全部加载完毕...</p>");
+                            break;
+                        }
+                        $(".piclist ul.list").append(target);
+                        $(".piclist ul.list img").eq(mLis + i).each(function () {
+                            $(this).attr('src', $(this).attr('realSrc'));
+                        });
+
+                    }
+
+                    getH();
+					InP();
+                }
+            }
+            piclist.init();
+
+
+
+            var _content0 = []; //临时存储li循环内容
+            var piclist0 = {
+                _default0: 8, //默认显示图片个数
+                _loading0: 4,  //每次点击按钮后加载的个数
+                init: function () {
+
+                    var lis0 = $(".piclist0 .hidden0 li");
+                    $(".piclist0 ul.list0").html("");
+                    for (var n = 0; n < piclist0._default0; n++) {
+                        lis0.eq(n).appendTo(".piclist0 ul.list0");
+                    }
+                    $(".piclist0 ul.list0 img").each(function () {
+                        $(this).attr('src', $(this).attr('realSrc'));
+                    })
+                    for (var i = piclist0._default0; i < lis0.length; i++) {
+                        _content0.push(lis0.eq(i));
+                    }
+                    $(".piclist0 .hidden0").html("");
+
+                },
+                loadMore0: function () {
+
+
+
+
+
+                    var mLis0 = $(".piclist0 ul.list0 li").length;
+
+                    for (var i = 0; i < piclist0._loading0; i++) {
+                        var target = _content0.shift();
+
+                        if (!target) {
+                            $('.piclist0 .more0').html("<p>全部加载完毕...</p>");
+
+                            break;
+                        }
+                        $(".piclist0 ul.list0").append(target);
+                        $(".piclist0 ul.list0 img").eq(mLis0 + i).each(function () {
+                            $(this).attr('src', $(this).attr('realSrc'));
+                        });
+
+                    }
+
+                    getH();
+					InP();
+                }
+            }
+            piclist0.init();
+
+
+            var _content1 = []; //临时存储li循环内容
+            var piclist1 = {
+                _default1: 8, //默认显示图片个数
+                _loading1: 4,  //每次点击按钮后加载的个数
+                init: function () {
+
+                    var lis1 = $(".piclist1 .hidden1 li");
+                    $(".piclist1 ul.list1").html("");
+                    for (var n = 0; n < piclist1._default1; n++) {
+                        lis1.eq(n).appendTo(".piclist1 ul.list1");
+                    }
+                    $(".piclist1 ul.list1 img").each(function () {
+                        $(this).attr('src', $(this).attr('realSrc'));
+                    })
+                    for (var i = piclist1._default1; i < lis1.length; i++) {
+                        _content1.push(lis1.eq(i));
+                    }
+                    $(".piclist1 .hidden1").html("");
+
+                },
+                loadMore1: function () {
+                    var mLis1 = $(".piclist1 ul.list1 li").length;
+                    for (var i = 0; i < piclist1._loading1; i++) {
+                        var target = _content1.shift();
+
+                        if (!target) {
+                            $('.piclist1 .more1').html("<p>全部加载完毕...</p>");
+
+                            break;
+                        }
+                        $(".piclist1 ul.list1").append(target);
+                        $(".piclist1 ul.list1 img").eq(mLis1 + i).each(function () {
+                            $(this).attr('src', $(this).attr('realSrc'));
+                        });
+
+                    }
+                    getH();
+					InP();
+                }
+            }
+            piclist1.init();
+
+
+
+
+            jq(function () {
+                jq("#header span.right").on("click", function () {
+                    var val = jq(this).attr('class');
+                    if (val.indexOf('on') == -1) {
+                        jq(this).addClass('on');
+                        jq(".menu").show(0).stop().animate({
+                            height: '245px'
+                        }, 0);
+
+                        jq(".jiao").show(0).stop().animate({
+                            height: '14px'
+                        }, 0);
+
+                    } else {
+                        jq(this).removeClass('on');
+                        jq(".menu").hide(0).stop().animate({
+                            height: '0'
+                        }, 0);
+
+                        jq(".jiao").show(0).stop().animate({
+                            height: '0'
+                        }, 0);
+                    }
+                })
+
+                jq(".menu li").on("click", function () {
+                    jq(this).parents(".menu").hide();
+                    jq(".jiao").hide();
+                    jq("#header span.right").removeClass('on');
+                })
+
+            });
+
+
+
+        </script>
+
+
+
+        <script>
+
+
+            var a1H = $(".tbg").offset().top;
+            var a2H = $(".more").offset().top;
+            var a3H = $(".more0").offset().top;
+            var a4H = $(".more1").offset().top;
+
+            function getH() {
+                a1H = $(".tbg").offset().top;
+                a2H = $(".more").offset().top;
+                a3H = $(".more0").offset().top;
+                a4H = $(".more1").offset().top;
+            }
+
+            $(document).ready(function () {
+
+                $('.a1').click('touchstart', function (e) {
+
+                    $('body').animate({ scrollTop: a1H + "px" }, 800);
+                });
+
+                $('.a2').click('touchstart', function (e) {
+                    $('body').animate({ scrollTop: a2H + "px" }, 800);
+                });
+
+                $('.a3').click('touchstart', function (e) {
+                    $('body').animate({ scrollTop: a3H + "px" }, 800);
+                });
+
+                $('.a4').click('touchstart', function (e) {
+                    $('body').animate({ scrollTop: a4H + "px" }, 800);
+                });
+
+
+            });
+        </script>
+
+
+        <script src="http://n.sinaimg.cn/sh/seesh/jquery-1.10.1.min.js"></script>
+        <script src="http://n.sinaimg.cn/sh/seesh/idangerous.swiper.js"></script>
+        <script>
+            var mySwiper = new Swiper('.swiper-container', {
+                pagination: '.pagination',
+                loop: true,
+                grabCursor: true,
+                paginationClickable: true,
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+            })
+            $('.arrow-left').on('click', function (e) {
+                e.preventDefault()
+                mySwiper.swipePrev()
+            })
+            $('.arrow-right').on('click', function (e) {
+                e.preventDefault()
+                mySwiper.swipeNext()
+            })
+        </script>
+    </div>
+
+
+
+
+
+    <script>
+
+        $(".t").live('click', function () {
+
+            if (isWeiXin()) {
+                $(".wxshow").css("display", "block");
+                Fun('.wxshow');
+            } else {
+
+                $(".pop").css("display", "block");
+                Fun('.wb');
+            }
+        })
+
+
+        $(".t").live('touchstart', function () {
+
+            if (isWeiXin()) {
+                $(".wxshow").css("display", "block");
+                Fun('.wxshow');
+            } else {
+
+                Fun('.wb');
+            }
+        })
+
+
+        $(".clos").click(function () {
+
+            $(".pop").fadeOut();
+            $(".wb").fadeOut();
+
+        })
+
+
+        $(".back").live('touchstart', function () {
+
+            $(".wxshow").css("display", "none");
+        })
+
+
+        function Fun(divName) {
+
+            var top = ($(window).height() - $(divName).height()) / 2;
+            var left = ($(window).width() - $(divName).width()) / 2;
+            var scrollTop = $(document).scrollTop();
+            var scrollLeft = $(document).scrollLeft();
+            $(divName).css({ position: 'absolute', 'top': top + scrollTop, left: left + scrollLeft }).fadeIn();
+
+
+
+        }
+
+
+        var wbfximg = "http://n.sinaimg.cn/sh/2018gmzz/pt.jpg"
+        function fswb() {
+
+            if (!WB.is_login()) {
+                DFZ.APP.DialogLogin.open(login_callback);
+                return;
+            }
+            else {
+                var addtt = $("textarea").val();
+                var info = { 'text': addtt, 'picurl': wbfximg, 'category': '2018seesh', 'pop': 0 };
+                WB.fswb(info, location.href, 1);
+                alert("已成功发布");
+            }
+
+        }
+        function login_callback() {
+            location.reload();
+        }
+
+
+
+        function isWeiXin() {
+            var ua = window.navigator.userAgent.toLowerCase();
+            console.log(ua);
+            if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+
+
+        //982-1981
+        getInfo();
+		var Gdata;
+        function getInfo() {
+            $.getJSON("http://common.sh.sina.com.cn/2013/zhuangti/vote/inamount18.php?callback=?", { category: "kjsh1803" }, function (data) {
+                var str = "";
+				Gdata=data;
+               InP();
+            });
+        }
+		
+		function InP(){
+				for (var o in Gdata) {
+                    $("li[ctit='" + Gdata[o].id + "'] .num1").html(Gdata[o].p1);
+                    $("li[ctit='" + Gdata[o].id + "'] .num2").html(Gdata[o].p2);
+                }
+		}
+
+       
+        function tpfun(voteid,vsi,dome) {
+            
+        }
+        $('.t').live("click", function () {
+            /*wb str*/
+            var getWbTitle = $(this).parent("li").find("span").find("a").html();
+            var getWbTex = $(this).parent("li").find("p").html();
+            var getWbUrl = $(this).parent("li").find("span").find("a").attr("href");
+            var getWbImg = $(this).parent("li").find("a").find("img").attr("src");
+            wbfximg = getWbImg;
+            $(".fwbtex").val("《" + getWbTitle + "》" + getWbTex + getWbUrl);
+            /*wb end*/
+
+            /*wx str*/
+            //hyTit = getWbTitle;
+            //hyDec = getWbTex;
+            //pyTit = getWbTitle;
+            //wxLink = getWbUrl;
+            //wxImgUrl = getWbImg;
+            /*wx end*/
+
+            var voteid = $(this).parent("li").attr("cTit");
+            var thisparent = $(this).parent("li").find(".num1");
+            $.getJSON("http://common.sh.sina.com.cn/2013/zhuangti/vote/invote18.php?callback=?", { voteid: voteid, liint: 1, category: "kjsh1803" }, function (json) {
+                if (json.error == 0) {
+                    var amount = parseInt($(thisparent).html());
+                    $(thisparent).html(amount + 1);
+                } else {
+                }
+            });
+        });
+        $('.zz').live("click", function () {
+            var voteid = $(this).parent("li").attr("cTit");
+            var thisparent = $(this).parent("li").find(".num2");
+            $.getJSON("http://common.sh.sina.com.cn/2013/zhuangti/vote/invote18.php?callback=?", { voteid: voteid, liint: 2, category: "kjsh1803" }, function (json) {
+                if (json.error == 0) {
+                    var amount = parseInt($(thisparent).html());
+                    $(thisparent).html(amount + 1);
+                } else {
+                }
+            });
+        });
+
+    </script>
+    <script type="text/javascript" src="http://n.sinaimg.cn/sh/bylwd/loginjs.js"></script>
+    <link rel="stylesheet" href="http://sh.sinaimg.cn/subject/2016/Question/imgh5/login.css">
+    <script type="text/javascript" src="http://i.sso.sina.com.cn/js/ssologin.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://i.sso.sina.com.cn/js/sinaSSOManager.js" charset="utf-8"></script>
+</body>
+</html>

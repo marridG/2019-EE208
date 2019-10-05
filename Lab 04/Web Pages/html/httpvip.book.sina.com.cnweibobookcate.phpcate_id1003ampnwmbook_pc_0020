@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>小说阅读推荐--新浪小说</title>
+    <meta name="keywords" content="小说阅读,小说阅读推荐" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="http://vipbookedge.sinaedge.com/static/static/paidRead/assets/css/common.css?v=0.20190125"/>
+	<link rel="stylesheet" type="text/css" href="http://vipbookedge.sinaedge.com/static/static/paidRead/assets/css/list-common.css?v=0.20190125" />
+	<link rel="stylesheet" type="text/css" href="http://vipbookedge.sinaedge.com/static/static/paidRead/assets/css/all-sale.css?v=0.20190125" />
+
+</head>
+<div class="nav">
+    <script type="text/javascript">
+
+var VAR_GLOBAL = {};
+var _cfg = {};
+
+	VAR_GLOBAL['site_static'] = 'http://vipbookedge.sinaedge.com/static/static/';
+	_cfg['static'] =  'http://vipbookedge.sinaedge.com/static/static/';
+	_cfg['uid'] = "0"; 
+	_cfg['i_statbookclieck'] = '/weibobook/ajax/read_count.php';
+    _cfg['i_weibouserinfo'] = '/newcms/i/weibo_userinfo.php';//用户信息
+    _cfg['i_bookshelf'] = '/weibobook/ajax/bookshelf.php';//书架
+ 
+    _cfg['i_checklikes'] = '/ajax/user/checklikes';//关注-点赞数
+    _cfg['i_likesupdate'] = '/ajax/user/likesupdate';//点赞取消赞
+    _cfg['i_action_stat'] = '/weibobook/ajax/stat.php';
+//    _cfg['userSendMsgUrl'] = '/newcms/i/ajax/send_message.php';//发私信
+    _cfg['checkUserSendMsgUrl'] = '/newcms/i/ajax/get_user_log.php';//检测是否发私信
+    _cfg['rechargeChooseUrl'] = '/weibobook/ajax/recharge_choose.php';//获取充值金额
+    _cfg['feedbackUrl'] = '/weibobook/feedback.php';//反馈页
+    _cfg['rechargeUrl'] = '/weibobook/ajax/recharge.php';//充值接口
+</script>
+
+<div class="sr-weibo-top" style="display:none">
+    <div id="weibo_top_public"></div>
+    <script src="http://js.t.sinajs.cn/t4/home/js/public/topInit.js?version=0.0091355821117"></script>
+</div>
+
+
+<div class="WDS_global_nav" id="WDS_TopNav"></div>
+
+<script src="http://vipbookedge.sinaedge.com/static/static/package/WDSTop.js?version=0.20190125"></script>
+	 
+<script type="text/javascript">
+
+
+    var $CONFIG = {
+		
+        name: '',
+        uid: '0',
+        any: '&wvr=4',
+        islogin: 0,
+        icon: '',
+        lang: "zh-cn",
+        verified: "",
+        backurl: "http://weibo.com/login.php?entry=book&url=http://book.weibo.com/",
+        topUserInfo: "http://vip.book.sina.com.cn/weibobook/ajax/top_user_info.php",
+		topCssPath: "http://vipbookedge.sinaedge.com/static/static/write-center/render/assets/css/nav.css?version=0.20190125",
+        verify: "220",
+        entry: "book",
+        top: 1,
+        _wv: '5'
+     
+		
+    };
+    
+    WDSTopGlobal && WDSTopGlobal.init($CONFIG); 
+	
+</script>
+<!--/.WDS_global_nav--></div>
+
+<div class="header">
+
+
+    <div class="wid1000">
+        <div class="header-nav clearfix">
+            <!-- header-logo -->
+            <div class="header-logo">
+                <a href="/weibobook?pos=20001"><h1><img src="http://vipbookedge.sinaedge.com/static/static/paidRead/assets/images/logo-news.png" alt="小说阅读"/></h1></a>
+            </div>
+            <!-- header-seacher -->
+                            <div class="header-seacher">
+                    <input type="text" value="" placeholder="搜索书名作者" />
+                    <span><img src="http://vipbookedge.sinaedge.com/static/static/paidRead/assets/images/search.png" align="middle"></span>
+                </div>
+                    </div>
+    </div>
+    <!-- header-menu -->
+    <div class="header-menu">
+        <div class="wid1000">
+            <ul>
+                <li ><a href="/weibobook?pos=20002">首页</a></li>
+                <li ><h2><span>玄幻小说推荐</span><a href="/weibobook/man.php?pos=20003">男生小说</a></h2></li>
+                <li ><h2><span>言情小说推荐</span><a href="/weibobook/girl.php?pos=20004">女生小说</a></h2></li>
+                <li ><h2><span>出版书籍</span><a href="/weibobook/publish.php?pos=20005">出版图书</a></h2></li>
+                <li ><h2><span>今日限免</span><a href="/weibobook/free.php">今日限免</a></h2></li>
+                <li  ><h2><span>小说推荐排行榜</span><a href="/weibobook/rank.php?pos=20006">排行榜</a></h2></li>
+                <li><h2><span>我要写书</span><a href="http://book.weibo.com/weibobook/userv1/apply_resident_author.php?pos=202001" target="_blank">我要写书</a></h2></li>
+            </ul>
+        </div>
+    </div>
+    <div class="slide_bar">
+        <div class="bookShelf_rt">
+            <a href="javascript:;" target="_blank">我的书架</a>
+        </div>
+        <div class="bookShelf_fl">
+            <a href="http://book.weibo.com/newcms/tp_p4c69t179.html?pos=20032" target="_blank">作者福利</a>
+        </div>
+        <div class="bookShelf_sign">
+            <a href="http://book.weibo.com/newcms/tp_p4c69t200.html?pos=20033" target="_blank">我要签约</a>
+        </div>
+        <div class="bookShelf_download">
+            <a href="JavaScript:;" target="_blank">下载APP
+                <div class="downcode-pic">
+                    <div class="code-warp">
+                        <img src="http://vipbookedge.sinaedge.com/static/static/paidRead/assets/images/s-code-index-1.png">
+                                                <p>扫码下载免费畅读</p>
+                        <span></span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="backToTop">
+            <a href="javascript:;">返回顶部</a>
+        </div>
+        <div class="s-new-opinion">
+            <a href="javascript:;"><i></i>
+                                <p>意见反馈</p></a>
+        </div>
+
+        <!-- 广告位二 -->
+                                                                                                                                                                                                                                                                                                                                                                                        </div>
+</div>	<!-- container -->
+	<div class="container">
+		<div class="wid1000">
+			<!-- banner -->
+			<div class="all-sale ">
+				<!-- left -->
+				<div class="all-s-left fl">
+					<div class="all-fl-title"><a  href="/weibobook/cate.php">作品分类</a></div>
+					<dl>
+						<dt><span>男生</span></dt>
+						<dd>
+                                                            <a  href="?cate_id=1036&w=0&s=0&order=1">都市校园</a>
+                                                            <a class="current" href="?cate_id=1003&w=0&s=0&order=1">玄幻奇幻</a>
+                                                            <a  href="?cate_id=1001&w=0&s=0&order=1">武侠仙侠</a>
+                                                            <a  href="?cate_id=1035&w=0&s=0&order=1">悬疑灵异</a>
+                                                            <a  href="?cate_id=1002&w=0&s=0&order=1">科幻末世</a>
+                                                            <a  href="?cate_id=1031&w=0&s=0&order=1">游戏竞技</a>
+                                                            <a  href="?cate_id=1042&w=0&s=0&order=1">同人小说</a>
+                            						</dd>
+					</dl>
+
+					<dl>
+						<dt><span>女生</span></dt>
+						<dd>
+                                                            <a  href="?cate_id=1006005&w=0&s=0&order=1">穿越重生</a>
+                                                            <a  href="?cate_id=1006003&w=0&s=0&order=1">古风古韵</a>
+                                                            <a  href="?cate_id=1007&w=0&s=0&order=1">浪漫青春</a>
+                                                            <a  href="?cate_id=1006004 &w=0&s=0&order=1">总裁豪门</a>
+                                                            <a  href="?cate_id=1006006&w=0&s=0&order=1">都市情缘</a>
+                                                            <a  href="?cate_id=1006007 &w=0&s=0&order=1">幻想言情</a>
+                                                            <a  href="?cate_id=1043&w=0&s=0&order=1">同人言情</a>
+                            						</dd>
+					</dl>
+
+					<dl>
+						<dt><span>出版</span></dt>
+						<dd>
+                                                            <a  href="?cate_id=50&w=0&s=0&order=1">流行小说</a>
+                                                            <a  href="?cate_id=13&w=0&s=0&order=1">时尚生活</a>
+                                                            <a  href="?cate_id=3&w=0&s=0&order=1">经管励志</a>
+                                                            <a  href="?cate_id=22&w=0&s=0&order=1">社科科普</a>
+                                                            <a  href="?cate_id=4&w=0&s=0&order=1">文学艺术</a>
+                                                            <a  href="?cate_id=48&w=0&s=0&order=1">家庭情感</a>
+                            						</dd>
+					</dl>
+				</div>
+				<!-- right -->
+				<div class="all-s-right fr">
+					<div class="all-fr-title">玄幻奇幻</div>
+					<!-- 分类 -->
+					<div class="all-s-nav">
+						<p>
+							<span>作品字数：</span>
+									                      <a  href="?cate_id=1003&w=1&s=0&order=1">30万以下</a>
+		                  			                      <a  href="?cate_id=1003&w=2&s=0&order=1">30-50万</a>
+		                  			                      <a  href="?cate_id=1003&w=3&s=0&order=1">50-100万</a>
+		                  			                      <a  href="?cate_id=1003&w=4&s=0&order=1">100-200万</a>
+		                  			                      <a  href="?cate_id=1003&w=5&s=0&order=1">200万以上</a>
+		                  							</p>
+
+						<p>
+							<span>作品状态：</span>
+																	                      <a  href="?cate_id=1003&w=0&s=1&order=1">已完结</a>
+										                  											                      <a  href="?cate_id=1003&w=0&s=2&order=1">连载中</a>
+										                  											                  							</p>
+
+						<p>
+							<span>排序方式：</span>
+									                      <a class="active" href="?cate_id=1003&w=0&s=0&order=1">最热</a>
+		                  			                      <a  href="?cate_id=1003&w=0&s=0&order=2">最新</a>
+		                  							</p>
+						
+					</div><!-- 分类-end -->
+										<!-- 列表 -->
+					<div class="all-s-list">
+						<div class="book_list">
+							<ul>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/5398447.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/175/cover_306fcaddd8ba32b4ae9f72ee75130505.jpg?1515092204" alt="万古战尊"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/5398447.html">万古战尊</a></p>
+										<p class="book_author"><span>寂寞观鱼</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/5398447.html">白牧尘，曾被称作星空下第一天才，拥有世所罕见的天灵五脉。他曾拥有最显赫的身份，被看做数千年来最有希望登顶武道之人。他曾拥有最美丽的未婚妻子，集万千宠爱于一身。而这一切，都从一场背叛，而划上了句号。他被最信任的师傅，最信任的未婚妻子所害，并被夺走最引以为傲的天赋灵根。本以为生命因此而终止，熟料一场重生，赋予了他万古最强天赋！“师傅，青竹，等着我回来，这一切才刚刚开始”</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/5408112.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/112/cover_2a5c3a0013a18871f30e4f05a9567957.jpg?1539920952" alt="星武战帝"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/5408112.html">星武战帝</a></p>
+										<p class="book_author"><span>语成</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/5408112.html">弹指天翻地覆，拔剑神惊魔惧！绝世战神三百年后醒来，掌灭天骄至尊，脚踏八荒六合。
+举世皆敌又如何？以无敌之姿，横扫天下！
+这一世，我必将登临万界巅峰，横扫诸天，天上地下，唯我独尊。</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/5408036.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/36/cover_aa82258b5b9c27876f6d6c4381ae3678.jpg?1539852986" alt="重生之万古剑神"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/5408036.html">重生之万古剑神</a></p>
+										<p class="book_author"><span>白加黑</span>&nbsp;【连载中】</p>
+										<p class="info">简介：<a href="/weibobook/book/5408036.html">万年前，一代天骄林浩横空出世，百年修行，登临神道！却被挚爱之人泄露其身怀逆天剑典之秘，神界七大神王联手，崩断神道，剑神喋血，传奇落幕。————真武界，青云城，剑神重生。这一世。林浩再以逆天剑典，重续辉煌。以神剑之利，破苍穹，斩神王，成就诸天万界，万古第一剑神之名！曾经，皆已过去。如今，才是开始！</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/5420621.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/77/cover_3ca213c70a63b1882faef751abf68857.jpg?1548727729" alt="无上丹尊"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/5420621.html">无上丹尊</a></p>
+										<p class="book_author"><span>梦醒泪殇</span>&nbsp;【连载中】</p>
+										<p class="info">简介：<a href="/weibobook/book/5420621.html">本是先天奇才，却因武魂被夺，血脉受损，沦为废物，夺取武魂之人，却被世人追捧，享受无上荣耀。
+一朝仙帝记忆觉醒，修五行仙法，凝聚五种武魂，开启一条称霸九天的强者之路。
+什么双生武魂？什么千年不遇的奇才？什么天命之子？统统臣服在我的脚下，我要这九天的神魔，因我而颤抖！</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/5387190.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/182/cover_41623ebc0614beb7c38eed7a52564d98.jpg?1491986568" alt="神逆九霄"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/5387190.html">神逆九霄</a></p>
+										<p class="book_author"><span>红泥火炉</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/5387190.html">一代天之骄子，却遭至亲暗害！少年丁晨重生偏僻学院，以盖世神功，逆天改命！无论何种阻碍，都将成为我崛起之路上的助力！我如九天神日，有朝一日，必让九霄为之颤抖！</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/5405812.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/116/cover_5bdb4585a4eb6f642cf1358e9f99fa6c.jpg?1533798921" alt="丹神归来"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/5405812.html">丹神归来</a></p>
+										<p class="book_author"><span>南科狐律</span>&nbsp;【连载中】</p>
+										<p class="info">简介：<a href="/weibobook/book/5405812.html">无上丹神，遭人偷袭，真身陨落，逆天重生。
+  重活一世，吴辰注定要强势崛起，修行最强的玄功，炼制最好的丹药，掌控最强的神兵，拥有最美的女人。
+  这一世，吴辰注定要逆天，遇神杀神，遇佛杀佛，九天之下，唯我独尊。</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/5386724.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/228/cover_0628d994a3685d5d527284969fb46a30.jpg?1555666233" alt="万界武神"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/5386724.html">万界武神</a></p>
+										<p class="book_author"><span>书狂人</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/5386724.html">这是一个武魂绚烂的世界。
+在这里，书武魂可诗词杀人，箭武魂能万里追魂，画武魂能画地为牢……刀武魂能斩破苍穹。
+羽化神朝天星城，一个拥有超级武魂的少年逆天改命，重回十六岁。
+一段热血沸腾的传奇，自此开始。
+———诸天万界，我主沉浮！</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/5398408.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/136/cover_339e18e6f58ce2210b3ed841195e93aa.jpg?1515088476" alt="绝世战皇"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/5398408.html">绝世战皇</a></p>
+										<p class="book_author"><span>流觞曲水</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/5398408.html">诸天万界，唯我独尊！少年叶轩从渺小中崛起，逆天而上，战苍穹、动乾坤、舞风云，一步一步成就绝世战皇。</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/5394655.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/223/cover_ebd0c562f315daf1d514e9fea87efe45.jpg?1506064868" alt="不死武神"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/5394655.html">不死武神</a></p>
+										<p class="book_author"><span>君落雨</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/5394655.html">一代剑帝周铭被兄弟陷害而死，重生五百年后，前世他是万中无一的天才，这一世他是万中无一的废材。
+他的敌人已经成为了至高武帝，威名响彻整个大陆，世人敬仰膜拜；而他却成了一个默默无闻的小族子弟，受尽欺凌。
+看周铭如何逆境而起，踏天才，斩妖魔，报前世之仇，杀今世之敌，打破这一片天，成就不死神位！</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/5386659.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/163/cover_b150d986de14e63f57ba7039afa5c444.jpg?1490255742" alt="绝世邪尊"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/5386659.html">绝世邪尊</a></p>
+										<p class="book_author"><span>毕竟是蠢才</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/5386659.html">身怀战神血脉，傲血战意，力压诸雄！不灭圣体，肉身成圣，横扫八荒六合！
+天覆地灭，唯我永尊！</a></p>
+									</div>
+								</li>
+															</ul>
+						</div>
+					</div>
+					<!-- 列表-end -->
+															<!-- page -->
+					<div class="all-s-page">
+												<a class="prev" href="javascript:;">上一页</a>
+						
+								        				        				        		<a href="javascript:;" class="current">1</a>
+		        		<a href="?cate_id=1003&amp;amp%3Bnwm=book_pc_0020&amp;vt=4&page=2">2</a>		        		<a href="?cate_id=1003&amp;amp%3Bnwm=book_pc_0020&amp;vt=4&page=3">3</a>		        		<a href="?cate_id=1003&amp;amp%3Bnwm=book_pc_0020&amp;vt=4&page=4">4</a>		        		<a href="?cate_id=1003&amp;amp%3Bnwm=book_pc_0020&amp;vt=4&page=5">5</a>
+		        				        		<a  class="next" href="?cate_id=1003&amp;amp%3Bnwm=book_pc_0020&amp;vt=4&page=2">下一页</a>
+		        							</div>
+										<!-- page-end -->
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="spc30"></div>
+
+<div class="sr-foot">
+    <div class="sr-foot-wrap">
+      <div class="sr-foot-main">
+        <p class="sr-business-license"><span>新浪小说在线书城由中文在线提供运营支持</span><a href="http://cms.17k.com/news/182.html" target="_blank">新出网许（京）字045号</a></p>
+        <div class="ft-info"><a href="http://corp.sina.com.cn/chn/">新浪简介</a> ┊ <a href="http://corp.sina.com.cn/eng/">About Sina</a> ┊ <a href="http://emarketing.sina.com.cn/">广告服务</a> ┊ <a href="http://www.sina.com.cn/contactus.html">联系我们</a> ┊ <a href="http://career.sina.com.cn/">诚聘英才</a> ┊ <a href="http://www.sina.com.cn/intro/lawfirm.shtml">网站律师</a> ┊ <a href="http://english.sina.com">SINA English</a> ┊ <a href="https://login.sina.com.cn/signup/signup.php">注册</a> ┊ <a href="http://help.sina.com.cn/">产品答疑</a></div>
+        <p class="ft-copy">Copyright 1996-2017 SINA Corporation, All Rights Reserved</p>
+      </div>
+    </div>
+ </div>
+ 
+ <!-- SUDA_CODE_START -->
+<script type='text/javascript' charset="utf-8">
+
+(function() {
+    var doc = document,
+    wa = doc.createElement('script'),
+    s = doc.getElementsByTagName('script')[0];
+    wa.type = 'text/javascript';
+    wa.charset = 'utf-8';
+    wa.async = true;
+    wa.src = 'http://www.sinaimg.cn/unipro/pub/suda_s_v851c.js';
+    s.parentNode.insertBefore(wa, s);
+})();
+
+</script>
+<!-- SUDA_CODE_END -->
+ <script src="http://vipbookedge.sinaedge.com/static/static/paidRead/assets/js/config.js?v=0.20190125"></script>
+<script src="http://vipbookedge.sinaedge.com/static/static/paidRead/assets/js/require/require.js?v=0.20190125" data-main="base"></script>
+
+</body>
+</html>

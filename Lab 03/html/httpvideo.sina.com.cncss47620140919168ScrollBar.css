@@ -1,0 +1,22 @@
+.scrollbar{ position: absolute; z-index: 100;}
+.scrollbar_v{ width: 10px; top: 0; right: 0;}
+.scrollbar_h{ height: 10px; bottom: 0; left: 0;}
+.scrollbar_path{ position: absolute; z-index: 101; width: 100%; height: 100%; background-color: #eee;}
+.scrollbar_handle{ position: absolute; z-index: 102; left: 0; top: 0; z-index: 102; font-size: 0; line-height: 0; overflow: hidden;}
+.scrollbar_v .scrollbar_handle{ width: 10px;}
+.scrollbar_h .scrollbar_handle{ height: 10px;}
+.scrollbar_handle_head, .scrollbar_handle_body, .scrollbar_handle_foot{ display: block; cursor: pointer;}
+.scrollbar_handle_head{}
+.scrollbar_handle_body{ background-color: #b1b1b1;}
+.scrollbar_handle_foot{}
+.scrollbar_v .scrollbar_handle_head{ height: 5px; background: url(http://i0.sinaimg.cn/video/2014spj_news/icon_sprite.png) -70px -75px no-repeat;}
+.scrollbar_v .scrollbar_on .scrollbar_handle_head{/* background-position: -90px -75px;*/}
+.scrollbar_v .scrollbar_on .scrollbar_handle_body{/* background-color: #919191;*/}
+.scrollbar_v .scrollbar_handle_foot{ height: 5px; background: url(http://i0.sinaimg.cn/video/2014spj_news/icon_sprite.png) -70px -100px no-repeat;}
+.scrollbar_v .scrollbar_on .scrollbar_handle_foot{ /*background-position: -90px -100px;*/}
+.scrollbar_h .scrollbar_handle_head{ float: left; display: inline; width: 2px; height: 6px; background: url(http://i3.sinaimg.cn/video/2014spj_news/scrollbar_sprite.png) 0 -40px no-repeat;}
+.scrollbar_h .scrollbar_on .scrollbar_handle_head{ background-position: -20px -40px;}
+.scrollbar_h .scrollbar_handle_body{ float: left; display: inline; height: 6px;}
+.scrollbar_h .scrollbar_on .scrollbar_handle_body{ background-color: #919191;}
+.scrollbar_h .scrollbar_handle_foot{ float: right; display: inline; width: 2px; height: 6px; background: url(http://i3.sinaimg.cn/video/2014spj_news/scrollbar_sprite.png) 0 -60px no-repeat;}
+.scrollbar_h .scrollbar_on .scrollbar_handle_foot{ background-position: -20px -60px;}

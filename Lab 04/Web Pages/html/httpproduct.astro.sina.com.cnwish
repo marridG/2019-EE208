@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+		<title>许愿星| 天灵灵,地灵灵,这里许愿一定灵_新浪星座_新浪网</title>
+		<meta name="keywords" content="许愿,许愿网,许愿池,最灵许愿,秘密,秘密网,秘密分享,星座,恋爱,心事,匿名秘密,匿名许愿,晒秘密,私密,偷窥">
+		<meta name="description" content="一颗星星代表一个愿望，一弯月亮藏着一个秘密，每一份心事都可以悄悄说给这里的夜空。来倾诉吧，你准备好了吗？">
+       <link rel="stylesheet" href="http://n.sinaimg.cn/astro/xuyuanxing/css/common/public.css?ver=2">
+        <link rel="stylesheet" type="text/css" href="http://n.sinaimg.cn/astro/xuyuanxing/css/pages/index.09bd43a5.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    </head>
+    <body>
+        <div class="sina_top_bar">
+            <div class="sina_top_inner">
+                <div class="xuyuan_logo"><a href='http://astro.sina.com.cn/' target='_blank' class='aleft'></a></div>
+                
+                <div class="fl xuyuan_bar1"><a href="http://product.astro.sina.com.cn/wish/" class="top_lnk">首页</a><a href="http://product.astro.sina.com.cn/wish/peep" class="top_lnk">偷窥</a><a href="http://product.astro.sina.com.cn/wish/rank" class="top_lnk" style="border:none">排行榜</a></div>
+                
+                <div class="fr xuyuan_bar">
+                    <div class="searchBar" id='searchBar'>
+                               <select name="c" id="search_type">
+                                
+                        <option value="keyword">全部</option>
+                               
+                        <option value="horoscope">星座</option>
+                               
+                        <option value="nickname">昵称</option>
+                               
+                        <option value="content">内容</option>
+                                 </select>
+                        <input type='text' name='c_txt' class='searchText'/>
+                          <a class='searchSubmit fl' href='javascript:;' id='searchSubmit'></a>
+                    </div>
+                    
+                    <div class="sina_top_bar_user">
+      <div id="logout" class="logout" style="display: block;"><span class="thumb_default"><img src="http://i.sso.sina.com.cn/images/login/thumb_default.png" alt=""></span><a id="login_btn" class="login_btn" href="javascript:void(0);">登录</a></div>
+      <div id="login" class="login" style="display: none;">
+        <div class="user_info_wrap">
+                    <div class="user_info"><a class="thumb_user" href="http://product.astro.sina.com.cn/wish/home/" target="_blank"><img src="http://zhiyuan.edu.sina.com.cn/images/zhiyuantong2015/profile_img.png" alt=""></a><i class="u_ico"></i></div>
+                    <ul class="user_info_list">
+                        <li><a href="http://product.astro.sina.com.cn/wish/home/" target="_blank"><span class="fl">评论</span></a></li>
+                        <li><a href="http://product.astro.sina.com.cn/wish/home/" target="_blank"><span class="fl">赞</span></a></li>
+                        <li><a href="http://product.astro.sina.com.cn/wish/home/?tabname='unpay'" target="_blank"><span class="fl">待支付</span></a></li>
+         
+                        <li><a id="logout_btn" href="javascript:void(0);">退出</a></li>
+                    </ul>
+                </div>                
+             
+                
+      </div>
+    </div>
+                    
+                </div>
+              
+                
+            </div>
+                
+        </div> 
+        <script>
+        window.$scope ={}
+        $scope.http_host='http://product.astro.sina.com.cn'
+         $scope.horoscopeMap = {
+         0:'保密',
+         1:'白羊座',
+         2:'金牛座',   
+         3:'双子座',        
+         4:'巨蟹座',         
+         5:'狮子座',          
+         6:'处女座',         
+         7:'天秤座',          
+         8:'天蝎座',         
+         9:'射手座',     
+         10:'魔羯座',         
+         11:'水瓶座',          
+         12:'双鱼座'
+      } 
+        </script>        
+        <div class='user-post-form-overlay'></div>
+<div class="user-post-form" node-type='user-post-form-outter'>
+            <div class="user-post-form-top">
+                <div class='fl' style="*width:200px;">
+                <span class='title1'>我的星座&nbsp;&nbsp;:&nbsp;&nbsp;</span><select id="astro1" name='astro' data-horo='' class="user-post-form-selcet"></select> 
+                </div>
+                <span class="close" node-type="user-post-form-close"></span>
+                
+                
+                <div class='fr' style='margin-right:14px;'><span class='title1'>告诉TA&nbsp;&nbsp;</span><input type="text" id='wished_user' class='fl input1'/> <span class='title1'>TA的星座&nbsp;&nbsp;</span><select id="astro2" name='astro' class="user-post-form-selcet"></select> </div>
+                
+                
+            </div>
+            <div class="user-post-form-top-1" id="user-xuyuan-switch-l">
+                <div class="user-xuyuan-switch-l on" node-type="user-xuyuan-switch" data-bind="0">
+                    <div class="switch-txt">许 愿</div>
+                </div>
+                  <div class="user-xuyuan-switch-r" node-type="user-xuyuan-switch" data-bind="1">
+                    <div class="switch-txt">秘 密</div>
+                </div>  
+            </div>
+            <div class="user-bar-1">选择级别:
+                                <span node-type="stars-show"><label><input type="radio" name="price" data-id="2" checked='true' data-sort="1"/>  免费</label>
+                  
+                </span>  
+                                <span node-type="stars-show"><label><input type="radio" name="price" data-id="3"  data-sort="2"/>  初级星</label>
+                                <div class="user-post-form-pop" style="width: 240px;padding-bottom:10px;"><i node-type="user-post-form-pop-close" class="user-post-form-pop-close"></i>
+                  <div class='clearfix'>
+                  <div class="stars-logo lv2"></div><span class='stars-title'>初级星</span>
+                  </div>
+                  <div class='f16'>特权价格 : ￥3.00</div>
+                  <div class='f16'>有效期 : 3天</div>
+                  <div class='f14'>特权介绍 : 初级星形状为小星球，超过有效期恢复免费形状，可以通过付费延长悬挂时间。</div>
+                </div>
+                  
+                </span>  
+                                <span node-type="stars-show"><label><input type="radio" name="price" data-id="4"  data-sort="3"/>  中级星</label>
+                                <div class="user-post-form-pop" style="width: 240px;padding-bottom:10px;"><i node-type="user-post-form-pop-close" class="user-post-form-pop-close"></i>
+                  <div class='clearfix'>
+                  <div class="stars-logo lv3"></div><span class='stars-title'>中级星</span>
+                  </div>
+                  <div class='f16'>特权价格 : ￥5.00</div>
+                  <div class='f16'>有效期 : 7天</div>
+                  <div class='f14'>特权介绍 : 中级星形状为中等大小星球，超过有效期恢复免费形状，可以通过付费延长悬挂时间。</div>
+                </div>
+                  
+                </span>  
+                                <span node-type="stars-show"><label><input type="radio" name="price" data-id="5"  data-sort="4"/>  高级星</label>
+                                <div class="user-post-form-pop" style="width: 240px;padding-bottom:10px;"><i node-type="user-post-form-pop-close" class="user-post-form-pop-close"></i>
+                  <div class='clearfix'>
+                  <div class="stars-logo lv4"></div><span class='stars-title'>高级星</span>
+                  </div>
+                  <div class='f16'>特权价格 : ￥15.00</div>
+                  <div class='f16'>有效期 : 25天</div>
+                  <div class='f14'>特权介绍 : 高级星形状为大星球，超过有效期恢复免费形状，可以通过付费延长悬挂时间。</div>
+                </div>
+                  
+                </span>  
+                            </div>
+           <textarea class="user-bar-content" id='user-bar-content' name="content" placeholder="我希望……"></textarea>
+           <div class="clearfix user-post-form-bottom-1">
+           <div class="face-bar" node-type='initface'><span class="fl face" node-type='initface'></span> </div>
+           <label><input id="weibobox" type="checkbox" name="price"/>  转发到微博</label>
+           <label><input id="noname" type="checkbox" name="price"/>  匿名</label>
+           <label><input id="comment_deny" type="checkbox" name="price"/>  禁止回复</label>
+           
+           <div class="user-form-post" node-type='formpost' id="user-form-post">发布</div>
+           </div>
+        </div>
+        
+                <div class="button button1" id='main-wish'><i class='wish'></i>许&nbsp;&nbsp;愿</div>
+         <div class="button button2" id='main-switch'><i class='switch'></i>换一换</div>
+         
+        <div class="bg-cover">
+           
+        <div class="bg-title"></div>      
+        
+        <div class="bg-path">  
+          <div class='scrollLeft' id='scrollLeft'></div>
+            <div class='scrollRight' id='scrollRight'></div>
+           <div id='slide100Wrap' class='slide100'>       
+            <div id='slide100' class='slide100'></div>   
+            </div> 
+        </div>
+        </div>
+        <script type="text/json" data-name="currentPage">
+        [1]
+        </script>    
+<script type="text/javascript" src="http://n.sinaimg.cn/lib/core/core.js?ver=1"></script>
+<script type="text/javascript" src="http://i.sso.sina.com.cn/js/outlogin_layer.js?ver=1" charset="utf-8"></script>
+
+          <script type="text/javascript" src="http://n.sinaimg.cn/astro/xuyuanxing/js/comp/header.js?ver=1"></script>    <script type="text/javascript" src="http://n.sinaimg.cn/lib/core/require.js"></script>
+ <script type="text/javascript" src="http://n.sinaimg.cn/astro/xuyuanxing/js/pages/indexMain.f3b768a7.js"></script>
+          <div id="uni_footer">
+    <p><a href="http://astro.sina.com.cn/guest.html" target="_blank">星座频道意见反馈留言板</a>　　　电话：4000520066　　　欢迎批评指正<br>
+        <a href="http://corp.sina.com.cn/chn/">新浪简介</a> | <a href="http://corp.sina.com.cn/eng/">About Sina</a> | <a href="http://emarketing.sina.com.cn/">广告服务</a> | <a href="http://corp.sina.com.cn/chn/sina_job.html">招聘信息</a>
+        | <a href="http://www.sina.com.cn/intro/lawfirm.shtml">网站律师</a> | <a href="http://english.sina.com/">SINA
+            English</a> | <a href="http://login.sina.com.cn/signup/signup.php">通行证注册</a> | <a href="http://tech.sina.com.cn/focus/sinahelp.shtml">产品答疑</a></p>
+    <p>Copyright © 1996-2019 SINA Corporation, All Rights Reserved<br>
+        新浪公司　<a href="http://home.sina.com.cn/intro/copyright.shtml" target="_blank">版权所有</a><br></p>
+</div>
+    <!-- SUDA_CODE_START DAGGER --> 
+<script type="text/javascript" src="//www.sinaimg.cn/unipro/pub/suda_s_v851c.js"></script>
+<noScript> 
+<div style='position:absolute;top:0;left:0;width:0;height:0;visibility:hidden'><img width=0 height=0 src='//beacon.sina.com.cn/a.gif?noScript' border='0' alt='' /></div> 
+</noScript> 
+<!-- SUDA_CODE_END DAGGER -->
+<!-- DMP_CODE_START DAGGER --> 
+<script type="text/javascript">
+(function(d, s, id) {
+    var n = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    s = d.createElement(s);
+    s.id = id;
+    s.setAttribute('charset', 'utf-8');
+    s.src = '//d' + Math.floor(0 + Math.random() * (8 - 0 + 1)) + '.sina.com.cn/litong/zhitou/sinaads/src/spec/sinaads_ck.js';
+    n.parentNode.insertBefore(s, n);
+})(document, 'script', 'sinaads-ck-script');
+</script>
+<!-- DMP_CODE_END DAGGER -->
+</body>
+</html>

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="renderer" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>剑网3让红包飞</title>
+  <link href="https://n.sinaimg.cn/games/sina.gdc/reset.css" rel="stylesheet" type="text/css"/>
+  <link href="https://n.sinaimg.cn/games/jws20181220/index1.css" type="text/css" rel="stylesheet"/>
+  <script src="https://n.sinaimg.cn/games/sina.gdc/jquery-1.7.min.js"></script>
+  <meta itemprop="name" content='剑网3世外蓬莱 我要去蓬莱探索东海大世界，来不及解释啦，快来领红包上船吧！'/>
+  <meta itemprop="image" content="https://n.sinaimg.cn/97973/5c0313c7/20181218/300x300.png" />
+  <meta name="description" itemprop="description" content="剑网3世外蓬莱 我要去蓬莱探索东海大世界，来不及解释啦，快来领红包上船吧！" />
+
+
+  <!--  顶部导航包括登录验证开始  依赖于jquery    -->
+  <!--<link type="text/css" rel="stylesheet" href="https://games.sina.com.cn/308/2014/0424/13/strandwhitetop.css"/>
+  <script src="https://n.sinaimg.cn/game/article/js/gametophtml.js"></script>
+  <script src="https://i.sso.sina.com.cn/js/ssologin.js?version20140415"></script>-->
+  <link rel="stylesheet" type="text/css" href="https://n.sinaimg.cn/games/system/strandwhitetop.css?v=201901">
+<script type="text/javascript" charset="UTF-8" src="/gameact/statics/js/common.js?201805"></script>
+<script type="text/javascript" charset="UTF-8" src="https://i.sso.sina.com.cn/js/outlogin_layer.js"></script>
+<script type="text/javascript" charset="UTF-8" src="/gameact/statics/js/user_homepage.js?20190318"></script>
+<script type="text/javascript" charset="UTF-8" src="https://i.sso.sina.com.cn/js/ssologin.js?version20140415"></script>
+
+<script>
+	$(function () {
+		$('.login_action').on('click', function () {
+			if (!user_id) {
+				SOL.loginShow();
+			}
+			return;
+		});
+		$('.logout_action').on('click', function () {
+			if (user_id) {
+				SOL.logout();
+			}
+			return;
+		});
+	});
+	
+	var is_login = parseInt('0');
+</script>
+<script type="text/javascript">
+    	var lott_lottery=0;
+    	var imgwidth = "114px";//微博好友头像宽
+		var imgheight = "114px"; //微博好友头像高
+		var len_fl = "6";//微博好友数目
+		var lott="0";
+		var weibosta='';
+		var wContent = "#剑网3世外蓬莱#我要去蓬莱探索东海大世界，来不及解释啦，快来领红包上船吧！";
+		var symbol = "jx31219"
+		var user_id="0";
+		var tuid="";
+		//var cardstatus=0;
+</script>
+<script type="text/javascript" charset="UTF-8" src="/gameact/statics/js/publicact/public.js?111"></script>
+<!--<script type="text/javascript" charset="UTF-8" src="/gameact/statics/js/publicact/comment.js?16"></script>-->
+<!-- SUDA_CODE_START -->
+<script type="text/javascript" charset="utf-8" src="https://www.sinaimg.cn/unipro/pub/suda_s_v851c.js"></script>
+<!-- SUDA_CODE_END -->
+
+  <!-- 微信分享 start -->
+
+  <!--  顶部导航包括登录验证开始  依赖于jquery    -->
+  <script>
+    //预加载
+    function preloadImages(images,callback,drawPercent){
+      var imageArray = [],
+        loadedImagesNum = 0;
+      for (var i = 0; i < images.length; i++){
+        imageArray[i] = new Image();
+        imageArray[i].onload = function(){
+          imageLoadPost();
+        };
+        imageArray[i].onerror = function(){
+          imageLoadPost();
+        };
+        imageArray[i].src = images[i];
+      }
+      function imageLoadPost(){
+        loadedImagesNum++;
+        if(drawPercent){
+          drawPercent(loadedImagesNum,imageArray.length);
+        }
+        if(loadedImagesNum === images.length){
+          if(callback){callback()}
+        }
+      }
+    }
+    var stage1=[
+      'https://n.sinaimg.cn/games/jws20181220/header.jpg',
+      'https://n.sinaimg.cn/games/jws20181220/logo.png',
+      'https://n.sinaimg.cn/games/jws20181220/slogan.png',
+      'https://n.sinaimg.cn/games/jws20181220/slogan-txt.png'
+    ];
+    var stage2=[
+      'https://n.sinaimg.cn/games/jws20181220/bg1.jpg',
+      'https://n.sinaimg.cn/games/jws20181220/bg2.jpg',
+      'https://n.sinaimg.cn/games/jws20181220/title1.png',
+      'https://n.sinaimg.cn/games/jws20181220/css_sprites.png',
+      'https://n.sinaimg.cn/games/jws20181220/bg3.jpg',
+      'https://n.sinaimg.cn/games/jws20181220/nav.png',
+      'https://n.sinaimg.cn/games/jws20181220/nav1.png',
+      'https://n.sinaimg.cn/games/jws20181220/money.png',
+      'https://n.sinaimg.cn/games/jws20181220/bg4-1.jpg',
+      'https://n.sinaimg.cn/games/jws20181220/title2.png',
+      'https://n.sinaimg.cn/games/jws20181220/border.png',
+      'https://n.sinaimg.cn/games/jws20181220/bg-dialog3.png',
+      'https://n.sinaimg.cn/games/jws20181220/bg-dialog2.png'
+    ];
+    preloadImages(stage1,function(){
+      $('.part1').css('display','block');
+      preloadImages(stage2);
+    });
+  </script>
+</head>
+<body>
+<div class="container">
+  <!--  头图和登录部分  -->
+  <div class="part1-wrap">
+    <div class="part1" style="display:none;">
+      <div class="part1-container">
+        <a href="http://jx3.xoyo.com/" target="_blank" class="logo fadeInRight"></a>
+        <div class="slogan-big fadeInRight"></div>
+        <div class="slogan-little fadeInRight"></div>
+      </div>
+    </div>
+  </div>
+  <!--注册/下载-->
+  <div class="part2">
+    <div class="part2-container">
+      <div class="register">
+        <iframe  src="https://jx3.xoyo.com/zt/2018/12/20/xinlang-reg/index.html?ozs=986079-751" frameborder="0" scrolling="no"  seamless width="100%" height="302"></iframe>
+      </div>
+    </div>
+  </div>
+  <!--加入门派-->
+  <div class="part3">
+    <div class="part3-container">
+      <div class="title"></div>
+      <ul class="school">
+        <li>
+          <div class="img-con">
+            <img src="https://n.sinaimg.cn/games/jws20181220/photo1.png" alt="">
+            <span class="name"><img src="https://n.sinaimg.cn/games/jws20181220/name1.png" alt=""></span>
+          </div>
+          <a href="javascript:;" class="btn-join btn-join-blue"></a>
+        </li>
+        <li>
+          <div class="img-con">
+            <img src="https://n.sinaimg.cn/games/jws20181220/photo2.png" alt="">
+            <span class="name"><img src="https://n.sinaimg.cn/games/jws20181220/name2.png" alt=""></span>
+          </div>
+          <a href="javascript:;" class="btn-join btn-join-blue"></a>
+        </li>
+        <li>
+          <div class="img-con">
+            <img src="https://n.sinaimg.cn/games/jws20181220/photo3.png" alt="">
+            <span class="name"><img src="https://n.sinaimg.cn/games/jws20181220/name3.png" alt=""></span>
+          </div>
+          <a href="javascript:;" class="btn-join btn-join-blue"></a>
+        </li>
+        <li>
+          <div class="img-con">
+            <img src="https://n.sinaimg.cn/games/jws20181220/photo4.png" alt="">
+            <span class="name"><img src="https://n.sinaimg.cn/games/jws20181220/name4.png" alt=""></span>
+          </div>
+          <a href="javascript:;" class="btn-join btn-join-blue"></a>
+        </li>
+        <li>
+          <div class="img-con">
+            <img src="https://n.sinaimg.cn/games/jws20181220/photo5.png" alt="">
+            <span class="name"><img src="https://n.sinaimg.cn/games/jws20181220/name5.png" alt=""></span>
+          </div>
+          <a href="javascript:;" class="btn-join btn-join-blue"></a>
+        </li>
+        <li>
+          <div class="img-con">
+            <img src="https://n.sinaimg.cn/games/jws20181220/photo6.png" alt="">
+            <span class="name"><img src="https://n.sinaimg.cn/games/jws20181220/name6.png" alt=""></span>
+          </div>
+          <a href="javascript:;" class="btn-join btn-join-blue"></a>
+        </li>
+        <li class="li-last">
+          <div class="img-con">
+            <img src="https://n.sinaimg.cn/games/jws20181220/photo7.png" alt="">
+            <span class="name"><img src="https://n.sinaimg.cn/games/jws20181220/name7.png" alt=""></span>
+          </div>
+          <a href="javascript:;" class="btn-join btn-join-blue"></a>
+        </li>
+        <li>
+          <div class="img-con">
+            <img src="https://n.sinaimg.cn/games/jws20181220/photo8.png" alt="">
+            <span class="name"><img src="https://n.sinaimg.cn/games/jws20181220/name8.png" alt=""></span>
+          </div>
+          <a href="javascript:;" class="btn-join btn-join-blue"></a>
+        </li>
+        <li>
+          <div class="img-con">
+            <img src="https://n.sinaimg.cn/games/jws20181220/photo9.png" alt="">
+            <span class="name"><img src="https://n.sinaimg.cn/games/jws20181220/name9.png" alt=""></span>
+          </div>
+          <a href="javascript:;" class="btn-join btn-join-blue"></a>
+        </li>
+        <li>
+          <div class="img-con">
+            <img src="https://n.sinaimg.cn/games/jws20181220/photo10.png" alt="">
+            <span class="name"><img src="https://n.sinaimg.cn/games/jws20181220/name10.png" alt=""></span>
+          </div>
+          <a href="javascript:;" class="btn-join btn-join-blue"></a>
+        </li>
+        <li>
+          <div class="img-con">
+            <img src="https://n.sinaimg.cn/games/jws20181220/photo11.png" alt="">
+            <span class="name"><img src="https://n.sinaimg.cn/games/jws20181220/name11.png" alt=""></span>
+          </div>
+          <a href="javascript:;" class="btn-join btn-join-blue"></a>
+        </li>
+        <li>
+          <div class="img-con">
+            <img src="https://n.sinaimg.cn/games/jws20181220/photo12.png" alt="">
+            <span class="name"><img src="https://n.sinaimg.cn/games/jws20181220/name12.png" alt=""></span>
+          </div>
+          <a href="javascript:;" class="btn-join btn-join-blue"></a>
+        </li>
+        <li>
+          <div class="img-con">
+            <img src="https://n.sinaimg.cn/games/jws20181220/photo13.png" alt="">
+            <span class="name"><img src="https://n.sinaimg.cn/games/jws20181220/name13.png" alt=""></span>
+          </div>
+          <a href="javascript:;" class="btn-join btn-join-blue"></a>
+        </li>
+        <li class="li-last">
+          <div class="img-con">
+            <img src="https://n.sinaimg.cn/games/jws20181220/photo14.png" alt="">
+            <span class="name"><img src="https://n.sinaimg.cn/games/jws20181220/name14.png" alt=""></span>
+          </div>
+          <a href="javascript:;" class="btn-join btn-join-blue"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--点击领取大红包-->
+  <div class="part4 scrollDiv">
+    <div class="part4-container">
+      <span class="nav1"></span>
+      <span class="nav2"></span>
+      <div class="btn-container">
+        <span class="photo-money scaleAni"></span>
+        <a href="javascript:;" class="btn-redbag"></a>
+      </div>
+    </div>
+  </div>
+  <!--视频-->
+  <div class="part5">
+    <div class="part5-container">
+      <h1 class="title"></h1>
+      <div class="video-container">
+        <img src="https://n.sinaimg.cn/games/jws20181220/video.png" alt="">
+        <span class="border"></span>
+        <a href="javascript:;" target="_blank" class="btn-video">
+          <span class="arrow rotateAni"></span>
+        </a>
+        <div class="video-bg">
+          <!--视频资源,poster为视频未加载完毕时显示的图片，可以为视频第一帧-->
+          <video id="video1" src ="http://f.sinaimg.cn/games/55d1b789/20190108/jw3.mp4" width="100%" height="100%"
+                 controls="controls" preload="auto" webkit-playsinline playsinline poster="">
+          </video>
+          <span class="close"></span>
+        </div>
+      </div>
+      <a href="http://jx3.xoyo.com/" class="btn-internet"></a>
+    </div>
+  </div>
+  <!--新浪底部3 begin-->
+  <div class="footer">
+    <div id="Gtrail" class=trail>
+      <div style="text-align:center; font-size:12px; margin:0 auto;">
+        <div id="ZWTrail">
+          <p><a href="https://corp.sina.com.cn/chn/" target="_blank" class="sinatail">新浪简介</a> | <a href="https://corp.sina.com.cn/eng/" target="_blank" class="sinatail">About Sina</a> | <a href="https://games.sina.com.cn/guide/index.shtml" target="_blank" class="sinatail">网站地图</a> | <a href="https://emarketing.sina.com.cn/" target="_blank" class="sinatail">广告服务</a> | <a href="https://www.sina.com.cn/contactus.html" target="_blank" class="sinatail">联系我们</a> | <a href="https://corp.sina.com.cn/chn/sina_job.html" target="_blank" class="sinatail">招聘信息</a> | <a href="https://www.sina.com.cn/intro/lawfirm.shtml" class="sinatail">网站律师</a> | <a href="https://english.sina.com" class="sinatail">SINA English</a> | <a href="https://login.sina.com.cn/signup/signup.php" target="_blank" class="sinatail">会员注册</a> | <a href="https://tech.sina.com.cn/focus/sinahelp.shtml" target="_blank" class="sinatail">产品答疑</a></p>
+          <br />
+          <p>Copyright &copy; 1996-2015 SINA Corporation, All Rights Reserved</p>
+          <br />
+          <p>新浪公司 <a href="https://www.sina.com.cn/intro/copyright.shtml" target="_blank">版权所有</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--新浪底部3 end-->
+  <!-- 弹窗 begin-->
+  <!-- 规则弹窗-->
+  <div class="dialog dialog-rules">
+    <div class="dialog-container">
+      <p class="num active-code">3877477678888</p>
+      <p class="txt">请保存此礼包码，并于游戏内激活</p>
+      <p class="rule">1. 请各位亲爱的玩家保存好您的游戏新手包激活码</p>
+      <p class="rule">2. 下载并进入游戏内，点击右上角活动日历，输入激活码，即可领取游戏礼包</p>
+      <p class="rule">3. 剑网3新用户激活游戏礼包并达到20级，我们会发送一个15元现金红包至您的新浪账户</p>
+      <p class="rule">4. 现金红包总额数量有限，先到先得，1月10日前发放完毕</p>
+      <span class="close"></span>
+    </div>
+  </div>
+  <!-- 中奖弹窗-->
+  <div class="dialog dialog-prize">
+    <div class="dialog-container">
+      <p class="txt1" id="moneyts">恭喜您</p>
+      <p class="txt2" id="money">获得0元现金红包</p>
+      <p class="txt3">您已加入门派，请到微博中转发</p>
+      <p class="txt3">并@好友加入门派吧！</p>
+      <span class="close"></span>
+    </div>
+  </div>
+</div>
+
+<!-- 弹窗 end-->
+<script>
+
+    if(parseInt(is_login)!=0){
+        checkmp();
+    }
+    function checkmp() {
+        $.ajax({
+            type: 'get',
+            url: "/game/"+symbol+"/jx31219card",
+            dataType: 'json',
+            data:{
+                'status':1,
+            },
+            success: function(data){
+                if(data.code==200){
+                    //没有加入过可以抽
+                    flag=0;
+                }else{
+                    //加入过不可以抽
+                    //data.data
+                    flag=1;
+                    var shownum=parseInt(data.data)-1;
+                    $('.school li .btn-join').removeClass('btn-join-blue'); //此处是移除蓝色状态;(因为此类名有hover状态亮蓝色)
+                    $('.school li').each(function(index,element){
+
+                        if(index!=shownum){
+                            $(element).find('.btn-join').addClass('btn-join-grey'); //添加灰色状态; 不可点状态为灰色
+                        }else{
+                           // $('.dialog-prize').show();
+                            $(element).find('.btn-join').addClass('btn-join-yellow'); //添加黄色状态; 点击后状态为黄色
+                            $('.school li').eq(index).find('.btn-join').parent().addClass('cur');
+                          //  $('.dialog-container').css('display','block');
+                        }
+                    });
+                }
+            }
+        });
+    }
+  //视频
+  $(".btn-video").click(function(){
+    $(this).next('.video-bg').show();
+    $(this).next('.video-bg').find('video')[0].play();
+  });
+  $(".video-bg .close").click(function(){
+    $(this).parent().hide();
+    $(this).parent().find('video')[0].pause();
+  });
+
+  //大红包动画出场
+  var windowHeight = $(window).height();
+  var pageHeight0 = $('.scrollDiv').eq(0).offset().top+$('.scrollDiv').eq(0).height()/2;
+  $(window).scroll(function(){
+    var scrollHeight = $(document).scrollTop();
+    if(scrollHeight>=pageHeight0-windowHeight){
+      $('.nav1,.nav2').show();
+      $('.nav1').addClass('fadeInLeft');
+      $('.nav2').addClass('fadeInLeft');
+    }else{
+      $('.nav1,.nav2').hide();
+      $('.nav1').removeClass('fadeInLeft');
+      $('.nav2').removeClass('fadeInLeft');
+    }
+  });
+
+  //点击加入门派
+  var flag = 0;
+  $('.school li .btn-join').click(function(){
+      if(parseInt(is_login)==0){
+          //waplogincheck();
+          SOL.loginShow();
+          return;
+      };
+    if(flag == 0){
+      $(this).parent().addClass('cur');
+        $.ajax({
+            type: 'POST',
+            url: "/act_ajax/"+symbol+"/sendSmallHb",
+            dataType: 'json',
+            success: function(data){
+                console.log(data);
+                if(data.code==200){
+                    var moneynum=data.data.amount;
+                    var money_num=moneynum/100;
+                    //获得5元现金红包
+                    $("#money").html("获得"+money_num+"元现金红包");
+                    ///
+                    flag =1;
+                    var num=0;
+                    $('.school li .btn-join').removeClass('btn-join-blue'); //此处是移除蓝色状态;(因为此类名有hover状态亮蓝色)
+                    $('.school li').each(function(index,element){
+                        if($(element).hasClass('cur')){
+                            inum=index;
+                            $('.dialog-prize').show();
+                            $(element).find('.btn-join').addClass('btn-join-yellow'); //添加黄色状态; 点击后状态为黄色
+                            $('.dialog-container').css('display','block');
+                        }else{
+                            $(element).find('.btn-join').addClass('btn-join-grey'); //添加灰色状态; 不可点状态为灰色;
+                        }
+                    });
+                    inum=parseInt(inum+1);
+                    $.ajax({
+                        type: 'get',
+                        url: "/game/"+symbol+"/jx31219card",
+                        dataType: 'json',
+                        data:{
+                            'status':2,
+                            'num':inum,
+                        },
+                        success: function(data){
+                            if(data.code==200){
+                                flag=0;
+                            }else{
+                                flag=1;
+                            }
+                        }
+                    });
+                    share();
+                }else{
+                    if(data.code==207&&data.msg==2006){
+                        $("#moneyts").html("很遗憾");
+                        $("#money").html("您已经领过该红包");
+                    }else{
+                        $("#moneyts").html("很遗憾");
+                        $("#money").html("您没有领到红包");
+                    }
+                }
+            }
+        });
+    }else if(flag == 1){
+      if($(this).parent().hasClass('cur')){
+        alert('您已经选择过门派');
+      }
+    }
+  });
+  $('.btn-send-weibo').click(function(){
+    $('.dialog-container').css('display','none');
+  });
+
+
+  //弹窗
+  //点击领取大礼包
+  $(".btn-redbag").click(function() {
+      if(parseInt(is_login)==0){
+          //waplogincheck();
+          SOL.loginShow();
+          return;
+      };
+      $.ajax({
+          type: 'get',
+          url: "/act_ajax/"+symbol+"/sendCardNo",
+          dataType: 'json',
+          data:{
+              'item_id':27173,
+              'gid':3733,
+              'tuid':tuid
+          },
+          success: function(data){
+              if(data.code==200||data.code==400||data.code==403){
+                  $('.active-code').html(data.data.kahao);
+              }else{
+                  if (data.code==209||data.code==208){
+                      $('.active-code').html("您已经领过，请去存卡箱查看！");
+                  }else{
+                      $('.active-code').html("领卡失败");
+                  }
+
+                  //false
+              }
+          }
+      });
+    $(".dialog-rules").show();
+  });
+  //关闭弹窗
+  $(".dialog .close").click(function() {
+    $(this).closest('.dialog').hide();
+  });
+
+  function share(){
+      if(parseInt(is_login)==0){
+          waplogincheck();
+          return;
+      };
+      weibcontent ="#剑网3世外蓬莱#我@ 大侠要去蓬莱探索东海大世界，来不及解释啦，快来领红包上船吧！";
+      $.ajax({
+          type: 'POST',
+          url: "/act/"+symbol+"/add_times/wb",
+          dataType: 'json',
+          data:{'content':weibcontent},
+          success: function(data){
+              console.log(data);
+          }
+      });
+  }
+</script>
+</body>
+</html>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?07479cf3d9c04334c457af390755ff8e";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>

@@ -1,0 +1,863 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=gb2312">
+<title>中国军事新闻,军事实力,军事武器,中国军情_新浪军事_新浪网</title>
+<meta name="keywords" content="舰船知识,中国军事新闻">
+<meta name="description" content="舰船知识_新浪网">
+<script type="text/javascript" src="http://i3.sinaimg.cn/home/sinaflash.js"></script>
+<script type="text/javascript">
+	document.domain = "sina.com.cn";
+	var catNews = "zgjq";
+</script>
+<script language="JavaScript">
+var newWindow = null
+function windowOpener(loadpos)
+{	
+  newWindow = window.open(loadpos,"surveywin","toolbar,resizable,scrollbars,dependent,width=400,height=280");
+	newWindow.focus();
+}
+</script>
+<script language="javascript">
+//检查是否超出查询范围（最前/最后 日期）
+function if_out_seekBorder() {
+
+		//如果输入的日期是以前的，调出old新闻列表
+	if(nian1<1999 || (nian1==2003 && yue1<11) || (nian1==2003 && yue1==11 && ri1<13) ){
+		ri1='old'; yue1=11;
+		return true;
+	} else if(nian1>cur_year || (nian1==cur_year && yue1>cur_month) || (nian1==cur_year && yue1==cur_month && ri1>=cur_day))	{
+		alert("只能查询今日以前的新闻！");
+		return false;
+	} else {
+		return true;
+	} 
+}
+
+//检查是否超出所选月的天数范围
+function mon_arr(m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12) {
+
+	this[1] = m1;
+	this[2] = m2;
+	this[3] = m3;
+	this[4] = m4;
+	this[5] = m5;
+	this[6] = m6;
+	this[7] = m7;
+	this[8] = m8;
+	this[9] = m9;
+	this[10] = m10;
+	this[11] = m11;
+	this[12] = m12;
+}
+
+function month_days(year,month) {
+
+	var monthDays = new mon_arr(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+	if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
+		monthDays[2] = 29;
+	return monthDays[month];	
+
+}
+
+function if_out_curMonDay () {
+
+	if ( ri1 > month_days(nian1,yue1) ){
+		alert("所选日期无效，请重新输入");
+		return false;	 
+	} else {
+		return true;
+	} 
+}
+
+//全局变量定义
+var nian1;
+var yue1;
+var ri1;
+var cur_year;
+var cur_month;
+var cur_day;
+
+//主控函数
+function diaodu(search) {
+	nian1=search.nian.options[search.nian.selectedIndex].value;
+	yue1=search.yue.options[search.yue.selectedIndex].value;
+	ri1=search.ri.options[search.ri.selectedIndex].value;
+
+	var myDate=new Date();
+
+	cur_year=myDate.getYear();
+	cur_month=myDate.getMonth()+1;
+	cur_day=myDate.getDate();
+
+	if(nian1==0){
+		alert("请选择年份！");
+		return false;
+	}
+	if(yue1==0){
+		alert("请选择月份！");
+		return false;
+	}
+	if(ri1==0){
+		alert("请选择日期！");
+		return false;
+	}
+
+	//检查是否超出查询范围（最前/最后 日期）
+	if( !if_out_seekBorder() ) { return false; };
+
+	//检查是否超出所选月的天数范围
+	if( !if_out_curMonDay() ) { return false; };
+
+	type1="col";
+	var yue0='';
+	var day0='';
+
+	window.location.href="/"+type1+"/"+nian1+"-"+yue1+"-"+ri1+".html";
+	return true;
+}
+
+</script>
+<style type="text/css">
+/* 初始化CSS */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+fieldset, img { border:none; }
+address, caption, cite, code, dfn, th, var { font-style:normal; font-weight:normal; }
+ul, ol { list-style:none; }
+select, input { vertical-align:middle; }
+select, input, textarea { font-size:12px; margin:0; }
+table { border-collapse:collapse; }
+body { background:#fff; color:#333; padding:5px 0; font:12px/1.67 "宋体"; }
+.clearfix:after { content:"."; display:block; height:0; visibility:hidden; clear:both; }
+.clearfix { zoom:1; }
+.clearit { clear:both; height:0; font-size:0; overflow:hidden; }
+a:link { color:#009; text-decoration:none; }
+a:visited { color:#800080;text-decoration:none;  }
+a:hover, a:active, a:focus { color:#f00; text-decoration:underline; }
+
+.wrap { margin:0 auto; width:950px; }
+
+/*导航*/
+.mil_nav,.mil_nav ul{background:url(http://www.sinaimg.cn/jc/20100803mil/images/mil_yc_green.png) -9999em 0 no-repeat;}
+.mil_nav{clear:both;width: 100%;height: 32px;line-height: 32px;margin-bottom: 8px;background-position: 0 -32px;background-repeat: repeat-x;margin-top:5px;}
+.mil_nav ul{float: left;height: 32px;background-position: -20px 0;}
+.mil_nav li{float: left;width: 72px;text-align: center;}
+.mil_nav li a,.mil_nav li a:visited{color: #fff;}
+.mil_nav .mil_nav_rt{float: right;width: 5px;height: 32px;background-position: 0 0;}
+
+/* 尾部样式 */
+.footer { line-height: 26px; width: 950px; clear: both; margin-top: 20px; text-align:center }
+/* 新闻排行 */
+.rank_nav { background:url(http://www.sinaimg.cn/jc/pic/images/news_rank.jpg) no-repeat 0 0; height:108px}
+.rank_nav a:link{ color:#fff}
+.rank_nav .pie{color:#536945; margin:0 6px}
+.rank_ot{ text-align:right; padding:5px 32px}
+.rank_disc{ padding:0px 0 0 336px}
+
+.M_bd_mod{ border:solid 1px #D2D8CE; margin-bottom:10px}
+.M_bd_mod .inner{ border: solid 1px #FBFCFB; background:#F0F2EE; padding:10px;zoom:1}
+.M_bd_mod .hd{ background:url(http://www.sinaimg.cn/jc/pic/images/arr_yh_01.png) no-repeat 10px 50%; padding:0 20px; margin-bottom:10px}
+.M_bd_mod .hd h2 img{ vertical-align:middle}
+.M_bd_mod .Date_wrap{ border:solid 1px #E1E5DE; background:#F8F9F7 url(http://www.sinaimg.cn/jc/pic/images/th_br_yh_01.png) repeat-x 0 1px; border-top:0; padding-bottom:5px}
+.Date_wrap table{width:100%; border-collapse:separate; border-spacing:0}
+.Date_wrap th{ border: solid 1px #B7CCC3; border-color:#B7CCC3 #B1C5BB #C9CFCE #EFF2ED; line-height:32px; color:#818E79}
+.Date_wrap td{/*border:solid 1px #E6E9E7; border-color:#FEFEFE #FEFEFE #E6E9E7; border-width:1px 0;*/ background: url(http://www.sinaimg.cn/jc/pic/images/tsline.png) repeat-x 50% 100%; line-height:28px; padding-bottom:2px; text-align:center; color:#999}
+.Date_wrap td.linkNews{ text-align:left; color:#105B4F; padding-left:8px}
+.Date_wrap td.fir{ background-position:0 100%; padding-left:30px; background-repeat:no-repeat; width:20px}
+.Date_wrap td.lst{ background-position:100% 100%;background-repeat:no-repeat}
+.Date_wrap .last_row td{ background:none}
+.Date_wrap .first_row td{ padding-top:8px}
+
+.rk_num{ background:url(http://www.sinaimg.cn/jc/pic/images/renk_num_07.png) no-repeat 0 0; width:16px; height:13px; line-height:13px; text-align:center; padding-right:3px; color:#709458;display:-moz-inline-stack;display:inline-block;zoom:1; font-family:Verdana, Geneva, sans-serif; font-size:10px}
+.no1{ background:url(http://www.sinaimg.cn/jc/pic/images/renk_num_01.png); color:#fff}
+.no2{ background:url(http://www.sinaimg.cn/jc/pic/images/renk_num_03.png); color:#fff}
+.no3{ background:url(http://www.sinaimg.cn/jc/pic/images/renk_num_05.png); color:#fff}
+
+
+
+
+.linkNews a:link{color:#105B4F}
+.linkNews a:hover{color:#F00;}
+.linkCmt a:link{color:#476CB1}
+.linkCmt a:hover{color:#F00;}
+
+
+.row{ margin:10px auto}
+.col2{ background:url(http://www.sinaimg.cn/jc/pic/images/bg_yh_01.png) repeat-y 0 0}
+.col2 .main{ float:right; width:640px}
+.col2 .side{ float:left; width:300px}
+
+.col2 .main .hd{ background:url(http://www.sinaimg.cn/jc/pic/images/jqtit_yh_01.png) no-repeat 0 0; height:29px; line-height:29px; position:relative; z-index:10}
+.col2 .main .hd h2{padding:6px 0 0 26px;}
+
+.fixList{ padding:5px 17px 0;zoom:1}
+.fixList ul{ margin:10px 0}
+.fixList ul li{ background: url(http://www.sinaimg.cn/jc/pic/images/list_dot.png) no-repeat 0 50%; padding-left:8px; position:relative; font-size:14px;zoom:1}
+.fixList ul li a{ text-decoration:none}
+.fixList ul li span.time{ position:absolute; right:0; color:#999; font-size:12px; z-index:0}
+
+/* 分页 */
+.pagebox{zoom:1; font-size:12px; font-family:"宋体",sans-serif; text-align:center; margin:20px auto; padding-bottom:5px}
+.pagebox span{margin-right:-3px;text-align:center; background:#fff; display:inline-block; display:-moz-inline-stack; vertical-align:middle; zoom:1;_display:inline}
+.pagebox span a{ display:inline-block;display:-moz-inline-stack;overflow:hidden;zoom:1;}
+.pagebox span.pagebox_pre_nolink{border:1px #ddd solid; width:53px; height:21px; line-height:21px; text-align:center; color:#999; cursor:default;}
+.pagebox span.pagebox_next{width:53px; height:23px; line-height:21px; text-align:center;}
+.pagebox span.pagebox_pre{color:#3568b9; height:23px;}
+.pagebox span.pagebox_pre a,.pagebox span.pagebox_pre a:visited,.pagebox span.pagebox_next a,.pagebox span.pagebox_next a:visited{border:1px #648C86 solid; color:#648C86; text-decoration:none; text-align:center; width:53px; cursor:pointer; height:21px; line-height:21px;}
+.pagebox span.pagebox_pre a:hover,.pagebox span.pagebox_pre a:active,.pagebox span.pagebox_next a:hover,.pagebox span.pagebox_next a:active{color:#363636; border:1px #2e6ab1 solid;}
+.pagebox span.pagebox_num_nonce{padding:0 8px; height:23px; line-height:23px; color:#fff; cursor:default; background:#648C86; font-weight:bold;}
+.pagebox span.pagebox_num{color:#3568b9; height:23px;}
+.pagebox span.pagebox_num a,.pagebox span.pagebox_num a:visited{border:1px #648C86 solid; color:#648C86; text-decoration:none; padding:0 8px; cursor:pointer; height:21px; line-height:21px;}
+.pagebox span.pagebox_num a:hover,.pagebox span.pagebox_num a:active{border:1px #2e6ab1 solid;color:#363636;}
+.pagebox span.pagebox_num_ellipsis{color:#393733; width:22px; background:none; line-height:23px;}
+.pagebox span.pagebox_next_nolink{border:1px #ddd solid; width:53px; height:21px; line-height:21px; text-align:center; color:#999; cursor:default;}
+
+.date_nav{ background:url(http://www.sinaimg.cn/jc/pic/images/hgbg_yh_01.png) no-repeat 0 0; height:29px; position:relative}
+
+.col2 .side .hd,.rkh{background:url(http://www.sinaimg.cn/jc/pic/images/rkbg_yh_01.png) no-repeat 0 0; height:29px; line-height:29px}
+.tabs {padding-left:3px}
+.tabs li{ float: left; text-align:center; width:96px; height:29px; line-height:29px; background:url(http://www.sinaimg.cn/jc/pic/images/rksep_yh_01.png) no-repeat 100% 50%; padding-right:2px; cursor:default}
+.tabs li span{ display:block; font-size:0; line-height:500; height:100%}
+.tabs li.selected{ background:url(http://www.sinaimg.cn/jc/pic/images/rkcur_yh_01.png) no-repeat 0 0; width:97px; color:#0B1E22}
+
+.rank_list{ padding:5px 0 0 8px}
+.rank_list li{background:url(http://www.sinaimg.cn/jc/pic/images/r_line_yh_01.png) no-repeat 50% 100%; padding:2px; line-height:28px;zoom:1; _height:20px; _padding-top:9px}
+#rk_news span{background:url(http://www.sinaimg.cn/jc/pic/images/rank_news_yh_01.png) no-repeat 50% 50%}
+#rk_news.selected span{ background-image:url(http://www.sinaimg.cn/jc/pic/images/rank_txt_01.png)}
+#rk_bbs span{background:url(http://www.sinaimg.cn/jc/pic/images/rank_txt_03.png) no-repeat 50% 50%}
+#rk_bbs.selected span{ background-image:url(http://www.sinaimg.cn/jc/pic/images/rank_txt_hover_yh_01.png)}
+#rk_blog span{ background:url(http://www.sinaimg.cn/jc/pic/images/rank_txt_05.png) no-repeat 50% 50%}
+#rk_blog.selected span{ background-image:url(http://www.sinaimg.cn/jc/pic/images/rank_blog_hover_yh_01.png)}
+
+.ia_form{ margin:-29px -20px 0 auto; text-align:right}
+.ia_form input{ border:solid 1px #d2d8ce; padding:4px 3px 5px; background:#fff;vertical-align:middle}
+.ia_form button{ padding:0; background:none; border:none; vertical-align:middle; margin-left:-3px}
+.ia_form button img{vertical-align:middle}
+.M_bd_mod .IAsk{ border-color:#D2D8CE; background: url(http://www.sinaimg.cn/jc/pic/images/IA_hd_yh_01.png) repeat-x 0 -1px #fff;}
+.IAsk .more{ text-align:right; display:block;margin:-24px 0 0; padding-right:10px; height:20px; padding-bottom:7px; position:relative; z-index:10; margin-left:800px;*line-height:normal;zoom:1; overflow:hidden; padding-top:1px;}
+.IAsk .more a{ border:solid 1px #C5CEC0; color:#466733; padding:3px;zoom:1;*line-height:normal; *padding-bottom:0}
+.IAsk .more a:hover{ text-decoration:underline; color:#f00}
+.ia_tabs{ border:solid 1px #ABC2B6; border-bottom:none; position:relative; margin:-1px; z-index:2; padding-left:10px}
+.ia_tabs li{ width:120px;/*border: solid 1px #B7CCC3; border-color:#B7CCC3 #B1C5BB #C9CFCE #EFF2ED;*/ line-height:30px; background:url(http://www.sinaimg.cn/jc/pic/images/iasep_yh_01.png) no-repeat 100% 0; padding-right:2px;text-align:center; float:left; height:30px; cursor:default}
+.ia_tabs li.selected{ border:solid 1px #436F68; background:url(http://www.sinaimg.cn/jc/pic/images/iacur_yh_01.png) repeat-x 0 0px; position:relative; z-index:2; margin:-1px 0}
+.ia_tabs li span{display:block; font-size:0; line-height:500; height:100%; background:url(http://www.sinaimg.cn/jc/pic/images/ia_all_yh_01.png) no-repeat 50% 50%}
+#all.selected span{ background-image:url(http://www.sinaimg.cn/jc/pic/images/ia_txt_yh_01.png)}
+#sol span{background-image:url(http://www.sinaimg.cn/jc/pic/images/ia_txt_yh_02.png)}
+#sol.selected span{background-image:url(http://www.sinaimg.cn/jc/pic/images/sol_yh_01.png)}
+#high span{background-image:url(http://www.sinaimg.cn/jc/pic/images/ia_txt_yh_03.png)}
+#high.selected span{background-image:url(http://www.sinaimg.cn/jc/pic/images/ia_h_yh_01.png)}
+#hard span{background-image:url(http://www.sinaimg.cn/jc/pic/images/ia_txt_yh_04.png)}
+#hard.selected span{background-image:url(http://www.sinaimg.cn/jc/pic/images/ia_ty_yh_01.png)}
+#alr span{background-image:url(http://www.sinaimg.cn/jc/pic/images/ia_txt_yh_05.png)}
+#alr.selected span{background-image:url(http://www.sinaimg.cn/jc/pic/images/sola_yh_01.png)}
+.IA_wrap{ clear:both; width:920px; margin:0 auto; position:relative; height:366px}
+.total_num{ position:absolute; right:10px; top:0px; color:#466733; line-height:30px}
+.IA_wrap th{ border:none; background:#F4F5F2; line-height:30px}
+.IA_wrap td{ color:#476CB1; background:#fff; padding-bottom:0; line-height:28px; white-space:nowrap}
+.IA_wrap td.linkNews{ font-size:14px}
+.link_type{ color:#999}
+.linkNews a.link_type:link{ color:#999}
+
+.IA_wrap td.fir { width:auto; padding-left:24; color:#999}
+.IA_wrap th.fir{ padding-left:110px; text-align: left}
+.IA_wrap td.IA_num{ text-align:left; padding-left:25px; width:35px}
+.IA_wrap th.lst,
+.IA_wrap td.lst{ padding-right:80px; text-align:left}
+.IA_wrap th.status{ width:190px}
+#loading{background:url(http://i2.sinaimg.cn/ty/09csl/loading.gif) no-repeat 50% 50%; position:absolute; top:50%; height:60px; margin-top:-30px; z-index:2; width:60px; left:50%; margin-left:-30px; visibility: hidden}
+.s_alr{ color:#32AD02}
+#date_wrap{ height:318px}
+</style>
+</head>
+<body>
+<!-- for iPad begin -->
+    <script type="text/javascript">
+    (function(){
+    	if(!/\((iPhone|iPad|iPod)/i.test(navigator.userAgent)){return};
+    	var iPadScript = document.createElement("script");
+    	iPadScript.src = "http://news.sina.com.cn/js/ui/ipad/reset.js";
+    	document.getElementsByTagName("head")[0].appendChild(iPadScript);
+    })();
+    </script>
+<!-- for iPad end -->
+<div class="wrap">
+	<!-- 标准二级导航_军事 begin -->
+	<style type="text/css">
+.secondaryHeader{height:33px;overflow:hidden;background:url(http://i0.sinaimg.cn/dy/images/header/2008/standardl2nav_bg.gif) repeat-x #fff;color:#000;font-size:12px;font-weight:100;}
+.secondaryHeader a,.secondaryHeader a:visited{color:#000;text-decoration:none;}
+.secondaryHeader a:hover,.secondaryHeader a:active{color:#c00;text-decoration:underline;}
+.sHBorder{border:1px #e3e3e3 solid;padding:0 10px 0 12px;overflow:hidden;zoom:1;}
+.sHLogo{float:left;height:31px;line-height:31px;overflow:hidden;}
+.sHLogo span,.sHLogo span a{display:block;*float:left;display:table-cell;vertical-align:middle;*display:block;*font-size:27px;*font-family:Arial;height:31px;}
+.sHLogo span,.sHLogo span a img{vertical-align:middle;border:0;}
+.sHLinks{float:right;line-height:31px;}
+</style>
+	<div class="secondaryHeader">
+		<div class="sHBorder">
+			<div class="sHLogo"><span><a href="http://www.sina.com.cn/"><img src="http://i1.sinaimg.cn/dy/images/header/2009/standardl2nav_sina_new.gif" alt="新浪网" /></a><a href="http://mil.news.sina.com.cn/"><img src="http://i3.sinaimg.cn/dy/images/header/2009/standardl2nav_mil.gif" alt="新浪军事" /></a></span></div>
+			<div class="sHLinks"><a href="http://mil.news.sina.com.cn/">军事首页</a>&nbsp;|&nbsp;<a href="http://www.sina.com.cn/">新浪首页</a>&nbsp;|&nbsp;<a href="http://news.sina.com.cn/guide/">新浪导航</a></div>
+		</div>
+	</div>
+	<!-- 标准二级导航_军事 end -->
+	<!-- 顶通广告 begin-->
+<!--_SINA_ADS_BEGIN_-->
+<iframe width="950" height="90" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" src="http://mil.news.sina.com.cn/iframe/108/2010/0209/118.html"></iframe>
+<!--_SINA_ADS_END_-->
+	<!-- 顶通广告 end -->
+	<!--军事导航开始 -->
+	<div class="mil_nav">
+			<ul class="sub_page">
+    <li><a target="_self" title="" href="http://mil.news.sina.com.cn">首页</a></li>
+		<li class="current"><a target="_self" href="http://roll.mil.news.sina.com.cn/col/zgjq/index.shtml">中国军情</a></li>
+			<li><a target="_self" href="http://roll.mil.news.sina.com.cn/col/gjjq/index.shtml">国际军情</a></li>
+		
+	<li><a target="_self" href="http://sky.news.sina.com.cn/">航空航天</a></li>
+	<li><a target="_self" href="http://club.mil.news.sina.com.cn">军事论坛</a></li>
+	<li><a target="_self" href="http://club.mil.news.sina.com.cn/forum-11-1.html">军帖原创</a></li>
+	<li><a target="_self" href="http://club.mil.news.sina.com.cn/forum-2-1.html">三军论坛</a></li>
+	<li><a target="_self" href="http://t.sina.com.cn/milnews">军事微博</a></li>
+	<li><a target="_self" href="http://blog.sina.com.cn/lm/mil/index.html">军事博客</a></li>
+	<li><a target="_self" href="http://mil.news.sina.com.cn/video/index.shtml">精彩视频</a></li>
+	<li><a target="_self" href="http://mil.news.sina.com.cn/photo/index.shtml">军事图库</a></li>
+	<li><a target="_self" href="http://mil.news.sina.com.cn/hotnews/Daily/index.shtml">新闻排行</a></li>
+	<li><a target="_self" href="http://mil.news.sina.com.cn/oldnews/index.shtml">回顾页面</a></li>
+			</ul>
+			<span class="mil_nav_rt"></span>
+		</div>
+
+		<!-- 2010/11/9 begin -->
+<style type="text/css">
+.mil_nav{margin-bottom: 0;height: 30px;}
+.mil_nav .sub_page{background: url(http://www.sinaimg.cn/jc/deco/2010/1117/list/mil_nav_home.png) 0 0 no-repeat;}
+.mil_nav .current{width: 93px;margin: 0 -7px;background: url(http://www.sinaimg.cn/jc/deco/2010/1117/list/mil_nav_current.png) 0 0 no-repeat;}
+.mil_body{margin-top: 10px;}
+.search_bar {height: 30px;border: 1px solid #c3ccbc;padding: 0 10px;background: -moz-linear-gradient(top,#fafcfa,#dde1db);background: -webkit-gradient(linear,0 0,0 bottom,from(#fafcfa),to(#dde1db));filter:progid:DXImageTransform.Microsoft.gradient(GradientType =0,startColorstr=#fafcfa, endColorstr=#dde1db)}
+.unify_search {float: right;font-family: '宋体';margin-top: 4px;}
+.unify_search .kw{color:#999;float: left;width: 130px;height: 18px;margin-right: 6px;line-height: 18px;padding: 2px 2px 2px 20px;border: 0;background: url(http://www.sinaimg.cn/jc/deco/2010/1117/list/search_sprite.png) 0 0 no-repeat;}
+.unify_search select{float: left;width: 53px;height: 22px;margin-right: 6px;*margin-top: 1px;border: 1px solid #ccc;padding: 1px;color: #666;}
+.unify_search .gray{color: #ccc;}
+.unify_search .sb{float: left;width: 58px;height: 22px;padding-bottom: 2px;overflow: hidden;*line-height: 23px;_line-height: 25px;cursor: pointer;border:0;background: url(http://www.sinaimg.cn/jc/deco/2010/1117/list/search_sprite.png) -240px 0 no-repeat;color: #444;}
+</style>
+<!-- 搜索css start -->
+<style type="text/css">
+.search_bar{position: relative; z-index:30;filter:none;background:url(http://www.sinaimg.cn/dy/deco/2014/0428/search_bar.png) repeat-x left top;}
+.inp-txt-wrap{position: relative;}
+.top-suggest-wrap{top:26px; position: absolute;border: 1px solid #E1E1E1;background: #fff;width:150px;margin:0 0 0 664px;z-index:99999;zoom:1; left: -1px;font-family: "Arial","SimSun","宋体";overflow: hidden;}
+.top-suggest-wrap .top-suggest-item,.top-suggest-wrap .top-suggest-tip,.top-suggest-wrap .top-suggest-more{height: 26px;line-height: 26px;padding-left: 14px;overflow: hidden;}
+.top-suggest-wrap .top-suggest-item{cursor: pointer;}
+.top-suggest-wrap .top-suggest-mover{background-color: #ddd;color: #000;}
+.top-suggest-wrap .top-suggest-tip{color: #000;line-height: 30px;height: 30px;border-bottom: 1px dashed #eee;}
+.top-suggest-wrap .top-suggest-more{font-size: 12px;border-top: 1px dashed #eee;height: 30px;line-height: 30px;}
+.top-suggest-more a{display: inline;line-height: 30px;}
+.top-suggest-more a:link, .top-suggest-more a:visited{color: #105B4F;}
+.top-suggest-more a:hover, .top-suggest-more a:active, .top-suggest-more a:focus{color: #F00;text-decoration:none;}
+.top-suggest-more .top-suggest-hotAll{float: left;margin-left: 0px;}
+.top-suggest-more .top-suggest-toHomePage{float:right;margin-right: 10px;}
+</style>
+<!-- 搜索css end -->
+<!-- 多项搜索 -->
+<div class="search_bar">
+	<form id="unify_search" class="unify_search" name="cheadSearchForm" method="get" action="http://search.sina.com.cn/" target="_blank">
+		<input type="text" name="q" class="kw" value="请输入关键词" onfocus="this.className='kw';if (this.value=='请输入关键词') {this.value=''}" onblur="if(this.value==''){this.className+=' gray';this.value='请输入关键词'}" />
+		<select name="c">
+			<option value="news" selected>新闻</option>
+			<option value="img">图片</option>
+			 <option value="blog">博客</option>
+            <option value="video">视频</option>
+			<!-- 不需要的项直接删掉就行了 JS不用动 -->
+		</select>
+		<input type="submit" class="sb" value="搜 索" />
+	</form>
+</div>
+<!-- 搜索js start -->
+<script src="http://ent.sina.com.cn/470/2014/0328/search_suggest.js"></script>
+<script type="text/javascript">
+(function(){
+		// 表单
+		var frm = document.cheadSearchForm;
+		// 下拉选择
+		var select = frm.c;
+		// 输入框
+		var input = frm.q;
+		// 提交按钮
+		var submit = function(){
+			frm.submit();
+		};
+		// 是否新闻
+		var isNews = function(){
+			return select.value==='news';
+		};
+		// 提交
+		new searchsUggest({
+			input : input,
+			maxLen : 10,
+			placeholderStr:'请输入关键词',
+			showHotList:isNews,
+			showSuggestList:isNews,
+			onSelect: submit
+		});
+})();
+</script>
+<!-- 搜索js end -->
+<script type="text/javascript">
+<!--
+//统一站内搜索
+document.getElementById('unify_search').onsubmit=function () {
+	var kw=this.q.value;
+	if (!kw || kw=='请输入关键词') {
+		alert('请输入搜索关键词!');
+		this.q.focus();
+		return false;
+	}
+	switch (this.opt.value) {
+		case 'zt':
+			this.action='http://search.sina.com.cn/?c=zt&range=title&q='+kw;
+			break;
+		case 'blog':
+			this.action='http://search.sina.com.cn/?c=blog&from=milroll&q='+kw;
+			break;
+		case 'tblog':
+			this.action='http://t.sina.com.cn/k/'+kw;
+			break;
+		case 'video':
+			this.action='http://video.sina.com.cn/search/index.php?k='+kw;
+			break;
+		case 'music':
+			this.action='http://music.sina.com.cn/yueku/search/s.php?t=all&key='+kw;
+			break;
+		default:
+			this.action='http://search.sina.com.cn/?range=all&c=news&sort=time&c='+this.opt.value+'&q='+kw;
+			break;
+	}
+}
+//-->
+</script>
+<!-- 多项搜索end -->
+<!-- 2010/11/9 end -->
+	<!--军事导航结束 -->
+	<div class="row col2 clearfix" style="zoom:1; z-index:20; position:relative">
+		<div class="main">
+			<div class="hd">
+				<h2><img src="http://www.sinaimg.cn/jc/pic/images/zgjq_yh_01.png" width="55" height="14" alt="中国军情" /></h2>
+				<!-- 回顾 begin -->
+<div class="date">
+	<style>
+.SinaCalendar_Cnl{width:140px; line-height:22px; padding:2px 0 0 0; text-align:center; color:#576379; background:url(http://i2.sinaimg.cn/dy/20061220_calendar/RLT_ws_001.gif) no-repeat; cursor: pointer; font-size:12px;}
+.date{position:relative ;top:-18px;width:150px; float:right; margin-right:12px;}
+	</style>
+	<script type="text/javascript">
+		function SinaCalendar_GetObj(objName)
+		{
+			if(document.getElementById)
+			{
+				return eval('document.getElementById("' + objName + '")');
+			}else if(document.layers)
+			{
+				return eval("document.layers['" + objName +"']");
+			}else
+			{
+				return eval('document.all.' + objName);
+			}
+		}
+
+		function SinaCalendar_GetOffsetPos(element)
+		{
+			var posTop = 0, posLeft = 0;
+			do 
+			{
+				posTop += element.offsetTop || 0;
+				posLeft += element.offsetLeft || 0;
+				element = element.offsetParent;
+			} while (element);
+			
+			return [posLeft, posTop];
+		 }
+
+		function SinaCalendar_ie()
+		{
+			var browser = navigator.appVersion;
+			if(browser.indexOf("MSIE") >= 1)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+
+		function SinaCalendar_ChangeCnl(divIdOrder)
+		{
+			var divName = "SinaCalendar_CnlCon_" +  divIdOrder;
+			var topDivName = "SinaCalendar_Cnl_" +  divIdOrder;
+			if(SinaCalendar_GetObj(divName).style.display == 'block')
+			{
+				SinaCalendar_GetObj(divName).style.display = 'none';
+			}
+			else if(SinaCalendar_GetObj(divName).style.display == 'none')
+			{
+				var i = 0;
+
+				while(1)
+				{
+					if(document.getElementById("SinaCalendar_CnlCon_" + i))
+					{
+						document.getElementById("SinaCalendar_CnlCon_" + i).style.display = "none";
+					}
+					else
+					{
+						break;
+					}
+
+					i ++;
+				}
+				SinaCalendar_GetObj(divName).style.display = 'block';
+			}
+		}
+
+		function SinaCalendar_closeDiv(divIdOrder)
+		{
+			document.getElementById("SinaCalendar_CnlCon_" + divIdOrder).style.display	=	'none';
+		}
+
+
+		function CreateDiv(divIdOrder,title,url,defaultUrl,startdate,top,left,divZindex)//061221修改，增加divZindex参数，在CreateDiv时需递减
+		{
+			document.write("<div style='width:140px; margin:0 auto;'>");//增加宽度控制并居中
+			document.write("<div style='position:relative;' style='z-index:"+ divZindex + ";'>");
+			document.write("	<div class='SinaCalendar_Cnl' id='SinaCalendar_Cnl_" + divIdOrder + "' onclick='javascript:SinaCalendar_ChangeCnl(" + divIdOrder + ");'>&nbsp;&nbsp;" + title + "</div>");
+
+
+			document.write("	<div name='SinaCalendar_CnlCon' id='SinaCalendar_CnlCon_" + divIdOrder + "' style='display:none;position:absolute;top:" + top + "px; left:" + left + "px;width:140px; height:176px;'>");
+
+
+			document.write("		<div style='background:#cde0f4; width:140px; height:15px;' align='right'><img src='http://i1.sinaimg.cn/dy/20061220_calendar/RLT_ws_002.gif' width='15' height='15' alt='关闭' title='关闭' style='cursor:pointer;' onclick='SinaCalendar_closeDiv(" + divIdOrder +")'/></div>");
+
+
+			//document.write("		<iframe name='RL' frameborder='0' height='162' width='140' marginheight='0' marginwidth='0' scrolling='no' src='http://news.sina.com.cn/iframe/news/calender102/index.html?startDate=" + startdate + "&url=" + url + "&defaultUrl=" + defaultUrl + "'></iframe>");
+			document.write("		<iframe name='RL' frameborder='0' height='162' width='140' marginheight='0' marginwidth='0' scrolling='no' src='http://mil.news.sina.com.cn/iframe/108/2009/1222/115.html?startDate=" + startdate + "&url=" + url + "&defaultUrl=" + defaultUrl + "'></iframe>");
+			document.write("	</div>");
+			document.write("</div>");
+			document.write("</div>");
+		}
+
+	CreateDiv(0,"查看往日新闻","http://roll.mil.news.sina.com.cn/col/zgjq/year-month-day/index.shtml","http://mil.news.sina.com.cn/","2008-1-1",20,0,99);
+
+	</script>
+</div>
+<!-- 回顾 end -->
+			</div>
+			<div class="fixList">
+
+			<ul class="linkNews">
+			
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihmutuec2014243.shtml" target="_blank">这支台军部队 竟被台网友臆想成大陆火箭军"克星"</a><span class="time">(2018年11月20日 18:26)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihnyuqhi4838841.shtml" target="_blank">我军战士扫雷失去双手双眼后 还反过来安慰心理医生</a><span class="time">(2018年11月20日 18:04)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihnyuqhi4665125.shtml" target="_blank">美里根号曾多次访港 航母外交背后却是遏制中国方针</a><span class="time">(2018年11月20日 16:24)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihnyuqhi4652834.shtml" target="_blank">俄军苏57弹仓之谜解开：尺寸巨大 细节比歼20差太远</a><span class="time">(2018年11月20日 16:17)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihnyuqhi4540716.shtml" target="_blank">美军核航母编队正常停靠香港 台媒却给自己强行加戏</a><span class="time">(2018年11月20日 15:17)</span></li>
+					
+		</ul>
+<ul class="linkNews">
+			
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihmutuec1949400.shtml" target="_blank">美媒：美军里根号航母进入中国南海 与多艘美舰会合</a><span class="time">(2018年11月20日 15:08)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihnyuqhi4504948.shtml" target="_blank">台媒评美军里根号航母进南海 刻意强调在台选举前夕</a><span class="time">(2018年11月20日 14:59)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihnyuqhi4490460.shtml" target="_blank">美国里根号航母编队将访问香港 相关行动已获批准</a><span class="time">(2018年11月20日 14:52)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihnyuqhi4445393.shtml" target="_blank">韩媒：中韩两国时隔2年后重启渔业联合巡逻</a><span class="time">(2018年11月20日 14:30)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihnyuqhi4395830.shtml" target="_blank">美军里根号航母编队进南海 明日将停靠中国香港</a><span class="time">(2018年11月20日 14:03)</span></li>
+					
+		</ul>
+<ul class="linkNews">
+			
+				<li><a href="http://mil.news.sina.com.cn/2018-11-20/doc-ihmutuec1914473.shtml" target="_blank">中国歼10B超机动能力有一先天缺陷 距离实战还很远</a><span class="time">(2018年11月20日 13:24)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihmutuec1900364.shtml" target="_blank">日本计划成立"宇宙部队" 暂不谋求打击他国导弹基地</a><span class="time">(2018年11月20日 12:32)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihmutuec1889903.shtml" target="_blank">中国最大LNG船研制成功 建造难度堪比航母</a><span class="time">(2018年11月20日 12:00)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihnyuqhi4157641.shtml" target="_blank">从千岛湖舰看我军补给能力：61天为22艘次舰船补给</a><span class="time">(2018年11月20日 11:47)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihnyuqhi4146762.shtml" target="_blank">蔡英文干这事或被出国际奥委会 美国也帮不上忙</a><span class="time">(2018年11月20日 11:42)</span></li>
+					
+		</ul>
+<ul class="linkNews">
+			
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihmutuec1882096.shtml" target="_blank">中国向阿根廷赠送猛士军车及摩托 助其G20安保工作</a><span class="time">(2018年11月20日 11:40)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/2018-11-20/doc-ihnyuqhi4056856.shtml" target="_blank">中国千岛湖舰曾在恶劣海况补给神盾舰 两舰几乎相撞</a><span class="time">(2018年11月20日 11:05)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihnyuqhi4042455.shtml" target="_blank">美军里根号航母编队进入中国南海(图)</a><span class="time">(2018年11月20日 11:00)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/2018-11-20/doc-ihnyuqhi4030605.shtml" target="_blank">中国北斗三号星座部署完成 19颗卫星助北斗走向全球</a><span class="time">(2018年11月20日 10:54)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihnyuqhi3947221.shtml" target="_blank">美军已在中国周边部署两支航母编队 对俄方向却没有</a><span class="time">(2018年11月20日 10:19)</span></li>
+					
+		</ul>
+<ul class="linkNews">
+			
+				<li><a href="http://news.sina.com.cn/bn/mil/2018-11-20/doc-ihmutuec1842635.shtml" target="_blank">美军航母突然驶抵地中海 还有两支航母编队在中国周边</a><span class="time">(2018年11月20日 10:14)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihmutuec1829068.shtml" target="_blank">中国这位退伍女兵了不起 5年随战舰到访五大洲(图)</a><span class="time">(2018年11月20日 09:41)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihmutuec1822650.shtml" target="_blank">英媒：中国出资20亿美元改造前美驻菲律宾军事基地</a><span class="time">(2018年11月20日 09:25)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihmutuec1821372.shtml" target="_blank">中国今年已完成十次北斗卫星发射 全流程时间缩短1/3</a><span class="time">(2018年11月20日 09:22)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihnyuqhi3812712.shtml" target="_blank">中国北斗导航系统组网速度有多快：1年就射10箭18星</a><span class="time">(2018年11月20日 09:11)</span></li>
+					
+		</ul>
+<ul class="linkNews">
+			
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihnyuqhi3784389.shtml" target="_blank">彩虹10倾转旋翼机用途解析：或成为中国航母的眼睛</a><span class="time">(2018年11月20日 08:53)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/2018-11-20/doc-ihnyuqhi3772214.shtml" target="_blank">一箭五星：中国成功发射试验六号及四颗微纳卫星</a><span class="time">(2018年11月20日 08:44)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihmutuec1807597.shtml" target="_blank">奔驰APP标“中国台湾”台独抗议 回应:我们一贯如此</a><span class="time">(2018年11月20日 08:42)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/2018-11-20/doc-ihnyuqhi3764707.shtml" target="_blank">台湾“独派”鼓噪“东奥正名公投” 美方：信守一中</a><span class="time">(2018年11月20日 08:38)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihmutuec1804252.shtml" target="_blank">台湾名将对“奥运正名”说不：别拿运动员未来当赌注</a><span class="time">(2018年11月20日 08:30)</span></li>
+					
+		</ul>
+<ul class="linkNews">
+			
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihnyuqhi3699976.shtml" target="_blank">中国是否会说服巴新拒绝澳美建军事基地？中方回应</a><span class="time">(2018年11月20日 07:29)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihmutuec1791700.shtml" target="_blank">中国渔船在东海沉没5人失联 中日均派飞机搜救</a><span class="time">(2018年11月20日 07:25)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-20/doc-ihmutuec1790776.shtml" target="_blank">彭斯担忧中国在柬埔寨建海军基地 柬首相：歪曲事实</a><span class="time">(2018年11月20日 07:19)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/2018-11-20/doc-ihnyuqhi3584858.shtml" target="_blank">美澳将重建巴新军事基地系针对中国？澳国防部长否认</a><span class="time">(2018年11月20日 02:47)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-19/doc-ihnyuqhi3121816.shtml" target="_blank">铭记中国23位两弹一星勋章获得者 如今仅有四位在世</a><span class="time">(2018年11月19日 18:54)</span></li>
+					
+		</ul>
+<ul class="linkNews">
+			
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-19/doc-ihnyuqhi3068074.shtml" target="_blank">台军心战喊话被叫停 台网友：亲爱的共军我们认输了</a><span class="time">(2018年11月19日 18:17)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-19/doc-ihnyuqhi3057867.shtml" target="_blank">军报原副总编谈军队战斗力:对越自卫还击战留教训</a><span class="time">(2018年11月19日 18:12)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-19/doc-ihmutuec1677663.shtml" target="_blank">多国军官来中国海淘武器：阿联酋关注彩虹无人机(图)</a><span class="time">(2018年11月19日 18:05)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/2018-11-19/doc-ihnyuqhi3002032.shtml" target="_blank">中国外交官"强闯巴新外长办公室"？耿爽:你觉得可能吗</a><span class="time">(2018年11月19日 17:39)</span></li>
+					
+					
+				<li><a href="http://mil.news.sina.com.cn/china/2018-11-19/doc-ihnyuqhi2933108.shtml" target="_blank">中国为何一定要搞北斗系统 GPS曾让我舰船海上迷失</a><span class="time">(2018年11月19日 17:02)</span></li>
+					
+		</ul>
+
+			</div>
+			<style>
+			.page span {margin-right:5px}
+			</style>
+			<div class="pagebox page" id="_function_code_page"><span class="pagebox_pre_nolink">上一页</span><span class="pagebox_num_nonce">1</span><span class="pagebox_num"><a href="./index_2.shtml">2</a></span><span class="pagebox_num"><a href="./index_3.shtml">3</a></span><span class="pagebox_num"><a href="./index_4.shtml">4</a></span><span class="pagebox_num"><a href="./index_5.shtml">5</a></span><span class="pagebox_next"><a title="下一页" href="./index_2.shtml">下一页</a></span><span class="pagebox_next"><a title="下5页" href="./index_10.shtml">下5页</a></span> </div>
+							<!-- 回顾 begin -->
+<div class="date_nav">
+
+	<script type="text/javascript">
+		function SinaCalendar_GetObj(objName)
+		{
+			if(document.getElementById)
+			{
+				return eval('document.getElementById("' + objName + '")');
+			}else if(document.layers)
+			{
+				return eval("document.layers['" + objName +"']");
+			}else
+			{
+				return eval('document.all.' + objName);
+			}
+		}
+
+		function SinaCalendar_GetOffsetPos(element)
+		{
+			var posTop = 0, posLeft = 0;
+			do 
+			{
+				posTop += element.offsetTop || 0;
+				posLeft += element.offsetLeft || 0;
+				element = element.offsetParent;
+			} while (element);
+			
+			return [posLeft, posTop];
+		 }
+
+		function SinaCalendar_ie()
+		{
+			var browser = navigator.appVersion;
+			if(browser.indexOf("MSIE") >= 1)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+
+		function SinaCalendar_ChangeCnl2(divIdOrder)
+		{
+			var divName = "SinaCalendar_CnlCon2_" +  divIdOrder;
+			var topDivName = "SinaCalendar_Cnl2_" +  divIdOrder;
+			if(SinaCalendar_GetObj(divName).style.display == 'block')
+			{
+				SinaCalendar_GetObj(divName).style.display = 'none';
+			}
+			else if(SinaCalendar_GetObj(divName).style.display == 'none')
+			{
+				var i = 0;
+
+				while(1)
+				{
+					if(document.getElementById("SinaCalendar_CnlCon2_" + i))
+					{
+						document.getElementById("SinaCalendar_CnlCon2_" + i).style.display = "none";
+					}
+					else
+					{
+						break;
+					}
+
+					i ++;
+				}
+				SinaCalendar_GetObj(divName).style.display = 'block';
+			}
+		}
+
+		function SinaCalendar_closeDiv2(divIdOrder)
+		{
+			document.getElementById("SinaCalendar_CnlCon2_" + divIdOrder).style.display	=	'none';
+		}
+
+
+		function CreateDiv2(divIdOrder,title,url,defaultUrl,startdate,top,left,divZindex)//061221修改，增加divZindex参数，在CreateDiv时需递减
+		{
+			document.write("<div style='width:140px; margin:0 auto;'>");//增加宽度控制并居中
+			document.write("<div style='position:relative;right: -235px; top: 2px;' style='z-index:"+ divZindex + ";'>");
+			document.write("	<div class='SinaCalendar_Cnl' id='SinaCalendar_Cnl2_" + divIdOrder + "' onclick='javascript:SinaCalendar_ChangeCnl2(" + divIdOrder + ");'>&nbsp;&nbsp;" + title + "</div>");
+
+
+			document.write("	<div name='SinaCalendar_CnlCon2' id='SinaCalendar_CnlCon2_" + divIdOrder + "' style='display:none;position:absolute;top:" + top + "px; left:" + left + "px;width:140px; height:176px;'>");
+
+
+			document.write("		<div style='background:#cde0f4; width:140px; height:15px;' align='right'><img src='http://i1.sinaimg.cn/dy/20061220_calendar/RLT_ws_002.gif' width='15' height='15' alt='关闭' title='关闭' style='cursor:pointer;' onclick='SinaCalendar_closeDiv2(" + divIdOrder +")'/></div>");
+
+
+			//document.write("		<iframe name='RL' frameborder='0' height='162' width='140' marginheight='0' marginwidth='0' scrolling='no' src='http://news.sina.com.cn/iframe/news/calender102/index.html?startDate=" + startdate + "&url=" + url + "&defaultUrl=" + defaultUrl + "'></iframe>");
+			document.write("		<iframe name='RL' frameborder='0' height='162' width='140' marginheight='0' marginwidth='0' scrolling='no' src='http://mil.news.sina.com.cn/iframe/108/2009/1222/115.html?startDate=" + startdate + "&url=" + url + "&defaultUrl=" + defaultUrl + "'></iframe>");
+			document.write("	</div>");
+			document.write("</div>");
+			document.write("</div>");
+		}
+
+	CreateDiv2(0,"查看往日新闻","http://roll.mil.news.sina.com.cn/col/zgjq/year-month-day/index.shtml","http://mil.news.sina.com.cn/","2008-1-1",20,0,99);
+
+	</script>
+</div>
+<!-- 回顾 end -->
+		</div>
+		<div class="side">
+			<iframe src="http://mil.news.sina.com.cn/iframe/108/2009/1223/116.html" frameborder=0 width=300 height=674 scrolling=no></iframe>
+		</div>
+	</div>
+	<script language="javascript" type="text/javascript">
+<!--//--><![CDATA[//><!--
+/*
+舌签构造函数
+SubShowClass(ID[,eventType][,defaultID][,openClassName][,closeClassName])
+version 1.30
+*/
+function SubShowClass(ID,eventType,defaultID,openClassName,closeClassName){this.parentObj=SubShowClass.$(ID);if(this.parentObj==null&&ID!="none"){throw new Error("SubShowClass(ID)参数错误:ID 对像不存在!(value:"+ID+")")};if(!SubShowClass.childs){SubShowClass.childs=[]};this.ID=SubShowClass.childs.length;SubShowClass.childs.push(this);this.lock=false;this.label=[];this.defaultID=defaultID==null?0:defaultID;this.selectedIndex=this.defaultID;this.openClassName=openClassName==null?"selected":openClassName;this.closeClassName=closeClassName==null?"":closeClassName;this.mouseIn=false;var mouseInFunc=Function("SubShowClass.childs["+this.ID+"].mouseIn = true"),mouseOutFunc=Function("SubShowClass.childs["+this.ID+"].mouseIn = false");if(ID!="none"){if(this.parentObj.attachEvent){this.parentObj.attachEvent("onmouseover",mouseInFunc)}else{this.parentObj.addEventListener("mouseover",mouseInFunc,false)}};if(ID!="none"){if(this.parentObj.attachEvent){this.parentObj.attachEvent("onmouseout",mouseOutFunc)}else{this.parentObj.addEventListener("mouseout",mouseOutFunc,false)}};if(typeof(eventType)!="string"){eventType="onmousedown"};eventType=eventType.toLowerCase();switch(eventType){case "onmouseover":this.eventType="mouseover";break;case "onmouseout":this.eventType="mouseout";break;case "onclick":this.eventType="click";break;case "onmouseup":this.eventType="mouseup";break;default:this.eventType="mousedown"};this.autoPlay=false;this.autoPlayTimeObj=null;this.spaceTime=5000};SubShowClass.prototype.version="1.30";SubShowClass.prototype.author="mengjia";SubShowClass.prototype.addLabel=function(labelID,contID,parentBg,springEvent,blurEvent){if(SubShowClass.$(labelID)==null&&labelID!="none"){throw new Error("addLabel(labelID)参数错误:labelID 对像不存在!(value:"+labelID+")")};var TempID=this.label.length;if(parentBg==""){parentBg=null};this.label.push([labelID,contID,parentBg,springEvent,blurEvent]);var tempFunc=Function('SubShowClass.childs['+this.ID+'].select('+TempID+')');if(labelID!="none"){if(SubShowClass.$(labelID).attachEvent){SubShowClass.$(labelID).attachEvent("on"+this.eventType,tempFunc)}else{SubShowClass.$(labelID).addEventListener(this.eventType,tempFunc,false)}};if(TempID==this.defaultID){if(labelID!="none"){SubShowClass.$(labelID).className=this.openClassName};if(SubShowClass.$(contID)){SubShowClass.$(contID).style.display=""};if(this.ID!="none"){if(parentBg!=null){this.parentObj.style.background=parentBg}};if(springEvent!=null){eval(springEvent)}}else{if(labelID!="none"){SubShowClass.$(labelID).className=this.closeClassName};if(SubShowClass.$(contID)){SubShowClass.$(contID).style.display="none"}};var mouseInFunc=Function("SubShowClass.childs["+this.ID+"].mouseIn = true"),mouseOutFunc=Function("SubShowClass.childs["+this.ID+"].mouseIn = false");if(SubShowClass.$(contID)){if(SubShowClass.$(contID).attachEvent){SubShowClass.$(contID).attachEvent("onmouseover",mouseInFunc)}else{SubShowClass.$(contID).addEventListener("mouseover",mouseInFunc,false)};if(SubShowClass.$(contID).attachEvent){SubShowClass.$(contID).attachEvent("onmouseout",mouseOutFunc)}else{SubShowClass.$(contID).addEventListener("mouseout",mouseOutFunc,false)}}};SubShowClass.prototype.select=function(num,force){if(typeof(num)!="number"){throw new Error("select(num)参数错误:num 不是 number 类型!(value:"+num+")")};if(force!=true&&this.selectedIndex==num){return};var i;for(i=0;i<this.label.length;i++){if(i==num){if(this.label[i][0]!="none"){SubShowClass.$(this.label[i][0]).className=this.openClassName};if(SubShowClass.$(this.label[i][1])){SubShowClass.$(this.label[i][1]).style.display=""};if(this.ID!="none"){if(this.label[i][2]!=null){this.parentObj.style.background=this.label[i][2]}};if(this.label[i][3]!=null){eval(this.label[i][3])}}else if(this.selectedIndex==i||force==true){if(this.label[i][0]!="none"){SubShowClass.$(this.label[i][0]).className=this.closeClassName};if(SubShowClass.$(this.label[i][1])){SubShowClass.$(this.label[i][1]).style.display="none"};if(this.label[i][4]!=null){eval(this.label[i][4])}}};this.selectedIndex=num};SubShowClass.prototype.random=function(){var O=this;if(arguments.length!=O.label.length){throw new Error("random()参数错误:参数数量与标签数量不符!(length:"+arguments.length+")")};var l=0,o;for(o=0;o<arguments.length;o++){l+=arguments[o]};var I=Math.random(),i=0;for(o=0;o<arguments.length;o++){i+=arguments[o]/l;if(I<i){O.select(o);break}}};SubShowClass.prototype.order=function(){var O=this;if(arguments.length!=O.label.length){throw new Error("order()参数错误:参数数量与标签数量不符!(length:"+arguments.length+")")};if(!(/^\d+$/).test(SubShowClass.sum)){return};var i=0,o;for(o=0;o<arguments.length;o++){i+=arguments[o]};var I=SubShowClass.sum%i;if(I==0){I=i};var l=0;for(o=0;o<arguments.length;o++){l+=arguments[o];if(l>=I){O.select(o);break}}};SubShowClass.prototype.play=function(spTime){if(typeof(spTime)=="number"){this.spaceTime=spTime};clearInterval(this.autoPlayTimeObj);this.autoPlayTimeObj=setInterval("SubShowClass.childs["+this.ID+"].autoPlayFunc()",this.spaceTime);this.autoPlay=true};SubShowClass.prototype.autoPlayFunc=function(){var i=this;if(i.autoPlay==false||i.mouseIn==true){return};i.nextLabel()};SubShowClass.prototype.nextLabel=function(){var index=this.selectedIndex;index++;if(index>=this.label.length){index=0};this.select(index);if(this.autoPlay==true){clearInterval(this.autoPlayTimeObj);this.autoPlayTimeObj=setInterval("SubShowClass.childs["+this.ID+"].autoPlayFunc()",this.spaceTime)}};SubShowClass.prototype.previousLabel=function(){var index=this.selectedIndex;index--;if(index<0){index=this.label.length-1};this.select(index);if(this.autoPlay==true){clearInterval(this.autoPlayTimeObj);this.autoPlayTimeObj=setInterval("SubShowClass.childs["+this.ID+"].autoPlayFunc()",this.spaceTime)}};SubShowClass.prototype.stop=function(){var i=this;clearInterval(i.autoPlayTimeObj);i.autoPlay=false};SubShowClass.$=function(objName){if(document.getElementById){return eval('document.getElementById("'+objName+'")')}else{return eval('document.all.'+objName)}};SubShowClass.readCookie=function(O){var o="",l=O+"=";if(document.cookie.length>0){var i=document.cookie.indexOf(l);if(i!=-1){i+=l.length;var I=document.cookie.indexOf(";",i);if(I==-1)I=document.cookie.length;o=unescape(document.cookie.substring(i,I))}};return o};SubShowClass.writeCookie=function(i,l,o,c){var O="",I="";if(o!=null){O=new Date((new Date).getTime()+o*3600000);O="; expires="+O.toGMTString()};if(c!=null){I=";domain="+c};document.cookie=i+"="+escape(l)+O+I};SubShowClass.sum=SubShowClass.readCookie("SSCSum");if((/^\d+$/).test(SubShowClass.sum)){SubShowClass.sum++}else{SubShowClass.sum=1};SubShowClass.writeCookie("SSCSum",SubShowClass.sum,12);
+//--><!]]>
+</script>
+
+	<!--尾部代码开始 -->
+	<div class="footer">
+		<p><a href="http://comment4.news.sina.com.cn/comment/skin/feedback.html" target="_blank">新浪军事意见反馈留言板</a>　　欢迎批评指正</p>
+		<p><a href="http://corp.sina.com.cn/chn/">新浪简介</a> | <a href="http://corp.sina.com.cn/eng/">About Sina</a> | <a href="http://ads.sina.com.cn/">广告服务</a> | <a href="http://www.sina.com.cn/contactus.html">联系我们</a> | <a href="http://corp.sina.com.cn/chn/sina_job.html">招聘信息</a> | <a href="http://www.sina.com.cn/intro/lawfirm.shtml">网站律师</a> | <a href="http://english.sina.com">SINA English</a> | <a href="http://members.sina.com.cn/apply/">会员注册</a> | <a href="http://tech.sina.com.cn/focus/sinahelp.shtml">产品答疑</a></p>
+		<p>Copyright &copy; 1996-2016 SINA Corporation, All Rights Reserved<br />
+			新浪公司　<a href=http://home.sina.com.cn/intro/copyright.shtml target="_blank">版权所有</a></p>
+	</div>
+	<!--尾部代码结束 -->
+</div>
+
+
+<!-- 浮层广告 begin -->
+<script>
+    (function (d, s, id) {
+        var s, n = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        s = d.createElement(s);
+        s.id = id;
+        s.setAttribute('charset', 'utf-8');
+        s.src = '//d' + Math.floor(0 + Math.random() * (9 - 0 + 1)) + '.sina.com.cn/litong/zhitou/sinaads/release/sinaads.js';
+        n.parentNode.insertBefore(s, n);
+    })(document, 'script', 'sinaads-script');
+</script>
+<ins class="sinaads" data-ad-pdps="PDPS000000057572"></ins>
+<script>(sinaads = window.sinaads || []).push({
+    params:{
+        sinaads_ad_delay: 5,
+        sinaads_pop_position:"right bottom"
+    }
+});</script>
+<!-- 浮层广告 end -->
+
+<!-- 二维码 begin --><script type="text/javascript" src="http://news.sina.com.cn/js/952/dmcode/rightdmcode_mil_china.js"></script><!-- 二维码 end -->
+<script type="text/javascript" src="http://www.sinaimg.cn/unipro/pub/suda_m_v629.js"></script>
+<script type="text/javascript">suds_init(2288,100.0000,1015,2);</script>
+ 
+<!-- DMP_CODE_START DAGGER -->                                                               
+<script type='text/javascript'>
+(function(d, s, id) {
+    var n = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    s = d.createElement(s);
+    s.id = id;
+    s.setAttribute('charset', 'utf-8');
+    s.src = '//d' + Math.floor(0 + Math.random() * (8 - 0 + 1)) +  '.sina.com.cn/litong/zhitou/sinaads/src/spec/sinaads_ck.js'; 
+    n.parentNode.insertBefore(s, n);
+})(document, 'script', 'sinaads-ck-script');
+</script>
+<!-- DMP_CODE_END DAGGER --></body>
+</html>

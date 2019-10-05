@@ -1,0 +1,940 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>现代钱币网 硬分币,长城币,纪念币,精制纪念币,人民币,评级币</title>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport"  xmlns="http://www.w3.org/1999/xhtml"/>
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="description" content="人民币,第一套人民币,第二套人民币,第三套人民币,硬币,硬分币,长城币,纪念币,金银币,收藏,精制币,评级币" />
+<meta name="keywords" content="现代钱币网是中国现代流通硬币(硬分币,长城币,三花币),纪念币,精制纪念币,人民币(第一套人民币,第二套人民币,第三套人民币),金银币,评级币等知识,学术,行情,交易,拍卖 最专业的网站" />
+<!-- 网站手动缩放 start-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="target-densitydpi=device-dpi" />
+<meta name="viewport" content="target-densitydpi=high-dpi" />
+<meta name="viewport" content="target-densitydpi=medium-dpi" />
+<meta name="viewport" content="target-densitydpi=low-dpi" />
+<meta name="viewport" content="target-densitydpi=200" /> 
+<!-- 网站手动缩放 -->
+<link rel='archives' title='现代钱币网' href='http://www.coin001.cn/simple' /><base id="headbase" href="http://www.coin001.cn/" />
+<link rel="stylesheet" type="text/css" href="images/pw_core_new.css?100919" />
+<LINK rel='stylesheet' type='text/css' href="images/service/css/css.css">
+<link rel="stylesheet" type="text/css" href="html/channel/finance170704/style/base.css"/>
+<link rel="stylesheet" type="text/css" href="html/channel/finance170704/style/index.css"/>
+<link rel="stylesheet" type="text/css" href="html/channel/finance170704/style/pad.css" media="(min-width:540px) and (max-width:979px)"/><script type="text/javascript" language="JavaScript" src="js/pw_ajax.js"></script>
+<script>
+	var isIE=!!window.ActiveXObject;
+var isIE6=isIE&&!window.XMLHttpRequest;
+if(isIE){
+if(isIE6){
+alert('您IE浏览版本太低了,请升级或者换其他浏览器。');
+}
+}
+</script>
+<script src="html/channel/finance170704/js/jquery-1.11.1.min.js"></script>
+<script src="html/channel/finance170704/js/slide.js"></script>
+
+<SCRIPT type="text/javascript" LANGUAGE="JavaScript" src="js/core/core.js"></SCRIPT>
+<script src="html/channel/finance170704/js/js.js"></script>
+<script language="JavaScript">
+
+var imgpath = 'images';
+//var verifyhash = 'cc39bf7f';
+var modeimg = 'mode/area/images';
+var modeBase = '';
+var winduid = '';
+var windid	= '';
+var groupid	= 'guest';
+var channelid	= '20';
+
+function beginInput(e){
+	if(e&&e.stopPropagation)
+	   e.stopPropagation();
+	else
+	   window.event.cancelBubble=true;
+	var write_honor = getObj('write_honor');
+	if(write_honor.className=='l_write l_write_hover')
+		return;
+	write_honor.className='l_write l_write_hover';
+	write_honor.lastChild.value = unescapeHTML(write_honor.firstChild.innerHTML);
+	write_honor.lastChild.select();
+	document.body.onclick = endInput;
+	document.body.onkeydown = function(e){
+		e=window.event||e;
+		var keycode = e.keyCode||e.which;
+		if(keycode==13)
+endInput();
+	};
+}
+
+function endInput(){
+	var empty = "还没有签名，写一个吧～";
+	var write_honor = getObj('write_honor');
+	write_honor.firstChild.innerHTML = write_honor.lastChild.value == "" ? empty : escapeHTML(write_honor.lastChild.value);
+	write_honor.className='l_write';
+	document.body.onclick = null;
+	document.body.onkeydown = null;
+	if(write_honor.lastChild.value != empty){
+		var url = 'pw_ajax.php?action=honor&';
+		var data = 'step=2&content=' + write_honor.lastChild.value;
+		ajax.send(url,data,function() {
+var rText = ajax.request.responseText.split('	');
+if (rText[0] != 'success') {
+	ajax.guide();
+}
+		});
+	}
+}
+
+function escapeHTML(n) {
+	return n.replace(/&/g,'&amp;').
+		replace(/>/g,'&gt;').
+		replace(/</g,'&lt;').
+		replace(/"/g,'&quot;');
+};
+function unescapeHTML(n) {
+	return n.replace(/&amp;/g,'&').
+		replace(/&gt;/g,'>').
+		replace(/&lt;/g,'<').
+		replace(/&quot;/g,'"');
+};
+</script>
+</head>
+<!-- <style type="text/css">
+ body{background:url(html/channel/finance170704/images/bg_images.jpg) no-repeat center 0px;}
+</style> -->
+
+<body>
+	<!-- *** service start *** --><script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":["tsina","weixin","qzone","tqq"],"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"2","bdPos":"right","bdTop":"155"},"image":{"viewList":["tsina","tqq","weixin","qzone"],"viewText":"分享到：","viewSize":"16"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<div id='xixi' onclick="toBig()"  style="position:absolute;z-index:100;left:-1000px;cursor:pointer">
+<TABLE style="FLOAT: left;" border="0" cellSpacing="0" cellPadding="0" width="157">
+  <TBODY>
+  <TR>
+    <TD class="main_head" height="39" vAlign="top">&nbsp;</TD></TR>
+  <TR>
+    <TD class="info" vAlign="top">
+      <TABLE class="qqtable" border="0" cellSpacing="0" cellPadding="0" width="120" 
+      align="center">
+        <TBODY>
+        <TR>
+          <TD height="5"></TD></TR>
+       <!-- <TR>
+          <TD height="30" align="middle"><SPAN><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2309440498&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:2309440498:52" >客服</a></SPAN></TD></TR>-->
+		<!-- <TR>
+<TD height="30" align="middle"><SPAN><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2776201265&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:2776201265:52">客服2</a></SPAN></TD></TR> -->
+	<!--	 <TR>
+<TD height="30" align="middle"><SPAN><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=404163&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:404163:52">总版主&nbsp;&nbsp;&nbsp;</a></SPAN></TD></TR> 
+	
+		
+		
+
+		
+        <TR>
+          <TD height="5"></TD>
+		</TR>-->
+        <TR>
+          <TD align=middle>
+            <DIV class="qun"><FONT 
+            color="#9b9b9b">客服电话 : </FONT><BR><SPAN>010-63468408</SPAN><BR><SPAN>（周一至周五</SPAN><BR><SPAN>8:30-17:00）,</SPAN><BR><SPAN> 13520200133  <!--  18710069438 --> </SPAN><BR><SPAN>（8:30-22:00）</SPAN><BR></DIV></TD>
+		</TR>
+		<TR><TD align="middle" >
+<DIV><SPAN>网站官方微信：</SPAN>
+<img src="images/coin001_weixin.jpg" width="95" height="95" style="width:95px;height:95">
+</DIV>
+		</TD></TR>
+		
+		
+		  
+		  </TBODY></TABLE></TD></TR>
+  <TR>
+    <TD class=down_kefu vAlign=top></TD></TR></TBODY></TABLE>
+<div class=Obtn></div></div>
+<script language=javascript>
+		service=function (id,_top,_left){
+		var me=id.charAt?document.getElementById(id):id, d1=document.body, d2=document.documentElement;
+		d1.style.height=d2.style.height='100%';me.style.top=_top?_top+'px':0;me.style.left=_left+"px";//[(_left>0?'left':'left')]=_left?Math.abs(_left)+'px':0;
+		me.style.position='absolute';
+		setInterval(function (){me.style.top=parseInt(me.style.top)+(Math.max(d1.scrollTop,d2.scrollTop)+_top-parseInt(me.style.top))*0.1+'px';},10+parseInt(Math.random()*20));
+		return arguments.callee;
+		};
+		window.onload=function (){
+		service('xixi',100,-152);
+		}
+	</script>
+
+<script language=javascript> 
+lastScrollY=0; 
+
+var InterTime = 1;
+var maxWidth=-1;
+var minWidth=-152;
+var numInter = 8;
+
+var BigInter ;
+var SmallInter ;
+
+var o =  document.getElementById("xixi");
+	var i = parseInt(o.style.left);
+	function Big()
+	{
+		if(parseInt(o.style.left)<maxWidth)
+		{
+i = parseInt(o.style.left);
+i += numInter;	
+o.style.left=i+"px";	
+if(i==maxWidth)
+	clearInterval(BigInter);
+		}
+	}
+	function toBig()
+	{
+		if(parseInt(o.style.left)<maxWidth){
+		clearInterval(SmallInter);
+		clearInterval(BigInter);
+BigInter = setInterval(Big,InterTime);
+		}else{
+		toSmall();
+		}
+	}
+	function Small()
+	{
+		if(parseInt(o.style.left)>minWidth)
+		{
+i = parseInt(o.style.left);
+i -= numInter;
+o.style.left=i+"px";
+
+if(i==minWidth)
+	clearInterval(SmallInter);
+		}
+	}
+	function toSmall()
+	{
+		clearInterval(SmallInter);
+		clearInterval(BigInter);
+		SmallInter = setInterval(Small,InterTime);
+		
+	}
+	
+</script>
+
+
+
+
+
+<!--<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":["tsina","weixin","qzone","tqq"],"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"2","bdPos":"right","bdTop":"155"},"image":{"viewList":["tsina","tqq","weixin","qzone"],"viewText":"分享到：","viewSize":"16"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script> -->
+<!--<!-- *** service end *** -->
+<!--头部开始-->
+<div class="header">
+   <a href="/"><div class="logo"></div></a>
+   <div class="search">
+        <div style="float: left;">
+<form action="searcher.php" method="post" onsubmit="return searchCheck(this);">
+            <div class="search_b ">
+	<input placeholder="请输入搜索文字"  name="keyword" style="padding-left:10px; width:335px;"></input>
+<!-- 	<div class="selectbox">
+		<span class="selected" ><span class="selectedval">帖子</span><i></i></span>
+		<ol id="selectboxval" onClick="getSearchType1(event)" style="display: none;">
+<li type="thread"  >贴子</li>
+<li type="diary">日志</li>
+		 	<li type="user">用户</li>
+<li type="forum">版块</li>
+<li type="group">群组</li> 
+		</ol>
+	</div> -->
+            </div>
+<input type="hidden" value="cc39bf7f" name="verify">
+<input value="2" type="hidden" name="step">
+<input value="thread" type="hidden" id="search_type" name="type">
+            <button>搜索</button>
+</form>
+        </div>
+<script>
+	jQuery(".selectbox").click(function(){
+		jQuery("#selectboxval").toggle();
+	});
+	function getSearchType1(e){
+		var n = e.srcElement;
+		if(n && n.tagName!='LI') return;
+		jQuery(".selectedval").text(jQuery(n).text());
+		jQuery("#search_type").val(jQuery(n).attr("type"));
+		
+	}
+</script>	       
+        <!-- <div class="sheat">
+         	<span>热门搜索</span>
+                	<a href="searcher.php?keyword=流通纪念币&type=thread">流通纪念币</a>
+                	<a href="searcher.php?keyword=长城币&type=thread">长城币</a>
+                	<a href="searcher.php?keyword=硬分币&type=thread">硬分币</a>
+                	<a href="searcher.php?keyword=精制币&type=thread">精制币</a>
+         </div>-->
+   </div>
+   <div class="follow_w">
+       <div class="follow_k"><!-- <p>钱币网公众号</p> --><img src="html/channel/finance170704/images/pic_dq.png" alt="" /> </div>              
+   </div>
+</div>
+<!--导航-->
+<div class="nav">
+      <ul class="navul">
+		<li class="navcur"    onmouseover="tmpHideAllCross('nav_key_sub_36'); " class="hover_nav" ><a id="nav_key_up_36" href="index.php?m=area" title="" >首页</a></li>
+		<li    onmouseover="tmpHideAllCross('nav_key_sub_61'); read.open('nav_key_sub_61', 'nav_key_up_61', null, 0, window['nav_key_up_61']); " class="hover_nav"  ><a id="nav_key_up_61" href="" title="" >钱币拍卖</a></li>
+		<li    ><a id="nav_key_up_34" href="index.php?m=bbs" title="" >论坛</a></li>
+		<li    ><a id="nav_key_up_87" href="usercontract.php?action=contract&amp;contracttype=contract5" title="" >委托拍卖</a></li>
+		<li    ><a id="nav_key_up_83" href="index.php?m=dianpu" title="" >现代网店</a></li>
+		<li    ><a id="nav_key_up_78" href="userpay.php" title="会员" target="_blank">个人中心</a></li>
+         <!--  <li><a class="navcur">首页</a></li>
+          <li class="hover_nav">
+              <a>钱币拍卖 <i></i></a>
+              <ol style="">
+                  <li><a href="">现代拍卖</a></li>
+                  <li><a href="">贵金属币章</a></li>
+                  <li><a href="">纸币拍卖</a></li>
+                  <li><a href="">世界钱币</a></li>
+                  <li><a href="">自由拍卖</a></li>
+                  <li><a href="">春秋大拍</a></li>
+              </ol>
+          </li>
+          <li><a>论坛</a></li>
+          <li><a>网站代拍</a></li>
+          <li><a>现代网店</a></li>
+          <li><a>世界纸钞网</a></li>
+          <li><a>个人中心</a></li> -->
+      </ul>
+</div>
+        <div id="navB" class="pr">
+        	<div id="nav_key_sub_61" style="display:none;">
+	<div class="pw_menu" style="overflow:hidden;">
+	
+                <ol class=" hover_nav" style="width:9em;">
+	
+                    <li><a id="nav_key_up_74" href="hack.php?H_name=auction" title="" target="_blank">现代拍卖</a></li>
+                    <li><a id="nav_key_up_101" href="hack.php?H_name=auctionguijinshu" title="" target="_blank">贵金属币章拍卖</a></li>
+                    <li><a id="nav_key_up_103" href="hack.php?H_name=auctionxiandaizhibi" title="" target="_blank">纸币拍卖</a></li>
+                    <li><a id="nav_key_up_95" href="hack.php?H_name=auctiontuangou" title="" >团购拍卖</a></li>
+                    <li><a id="nav_key_up_75" href="hack.php?H_name=freeauction" title="" target="_blank">自由拍卖</a></li>
+                    <li><a id="nav_key_up_98" href="hack.php?H_name=bigauction" title="" target="_blank">春秋大拍</a></li>
+                    <li><a id="nav_key_up_107" href="hack.php?H_name=monthauction" title="" target="_blank">现代月拍</a></li>
+                </ol>
+	</div>
+            </div>
+
+<div class="navB">
+	<div class="navBbg">
+	</div>
+            </div>
+</div>
+<script language="javascript">
+var timeoutSpecifyId = {};
+
+function tmpClose(elementId) {
+	timeoutSpecifyId[elementId] = setTimeout(function() {
+		getObj(elementId).style.display = 'none';
+	}, 100);
+}
+function tmpHideAllCross(currentSubMenuId) {
+	var elements = getElementsByClassName('navB', getObj('navB'));
+	for (i=0; i<elements.length; i++) {
+		if (elements[i].id != '' && elements[i].id != currentSubMenuId) elements[i].style.display = 'none';
+	}
+}
+
+function ctrlSubMenu(parentId, subMenuId) {
+	clearTimeout(timeoutSpecifyId[subMenuId]);
+
+	tmpHideAllCross(subMenuId);
+	getObj(subMenuId).style.display = '';
+
+	getObj(parentId).onmouseout = function() {
+		tmpClose(subMenuId);
+		getObj(parentId).onmouseout = '';
+	};
+	getObj(subMenuId).onmouseout = function() {
+		tmpClose(subMenuId);
+	};
+	getObj(subMenuId).onmouseover = function() {
+		clearTimeout(timeoutSpecifyId[subMenuId]);
+		getObj(subMenuId).style.display = '';
+	};
+}
+</script>
+
+
+<!-- 版心 -->
+<div  class="centerblock">
+    <!-- 轮播图 -->
+    <div id="mySlide" style="width: 425px; height: 271px;"></div>
+    <!-- 钱币论坛 -->
+    <div class="forum">
+          <div class="content">
+              <h4><span><i class="iconfontyyy">&#xe607;</i>现代资讯</span> <a href="index.php?m=bbs" target="_blank">更多></a></h4>
+ 
+              <ul style="height:132px;">
+                <div class="view-hover" altname="A1钱币论坛@finance" channelid="finance170704"><li class="content_list"><em></em><a href="http://www.coin001.com/read.php?tid=170990" title="<b><font color=#FF0000>1018现代月拍征集倒计时（最后5天）</font></b>" target="_blank"><b><font color=#FF0000>1018现代月拍征集倒计时（最后5天）</font></b></a></li><li class="content_list"><em></em><a href="http://www.coin001.com/read.php?tid=171731" title="老孙说钱币第三季（21）国庆节赏纪念币" target="_blank">老孙说钱币第三季（21）国庆节赏纪念币</a></li><li class="content_list"><em></em><a href="http://www.coin001.com/read.php?tid=171713" title="国庆节与纪念币   作者：赵燕生" target="_blank">国庆节与纪念币   作者：赵燕生</a></li><li class="content_list"><em></em><a href="http://www.coin001.com/read.php?tid=170980" title="2019秋季大拍-拍品展示（更新至第3期）" target="_blank">2019秋季大拍-拍品展示（更新至第3期）</a></li><li class="content_list"><em></em><a href="http://www.coin001.com/read.php?tid=171792" title="PCGS送评服务政策调整" target="_blank">PCGS送评服务政策调整</a></li><li class="content_list"><em></em><a href="http://www.coin001.com/read.php?tid=171608" title="2019年国庆节网站办公室放假安排" target="_blank">2019年国庆节网站办公室放假安排</a></li></div> 
+	
+              </ul>
+          </div>
+          <div class="four" >
+	<a href="userpay.php?action=apply" target="_blank"><img src="html/channel/finance170704/images/abcd(1).jpg" alt=""></a>
+	<a href="usercontract.php?action=contract&contracttype=yuepai" target="_blank"><img src="html/channel/finance170704/images/yuepai.jpg" alt=""></a>
+	<a href="usercontract.php?action=contract&contracttype=contract6" target="_blank"><img src="html/channel/finance170704/images/abcd(3).jpg" alt=""></a>
+          </div>
+	
+    </div>
+    <!-- 登录和行情报价 -->
+    <div class="offer">
+
+        <!-- 登陆之前 -->
+         <div class="home-login-box" >
+            <div class="fl avatar-frame">
+               <div class="avatar-frame-block png24"></div>
+               <img class="avatar-img" src="html/channel/finance170704/images/noface.png" alt="" />
+            </div>
+
+            <div class="home-login-info" >
+               <p class="p_hello"><span>Hi</span>，您好！</p>
+               <a href="userpay.php" class="inline-block simple-btn simple-btn1" title="登录">登录</a>
+               <a href="register.php#breadCrumb" class="inline-block simple-btn simple-btn2" title="注册">注册</a>
+            </div>
+
+         </div>
+	
+         <!-- 行情报价 -->
+          <div class="quote" >
+              <!-- <h4><span><i class="iconfontyyy">&#xe69d;</i>行情报价</span> <a href="thread.php?fid=24" target="_blank">更多></a></h4>
+              <ul>
+                  <div class="view-hover" altname="A2行情报价@finance" channelid="finance170704"><li class="quote-lis"><em></em><a href="read.php?tid=171772" title="2019年9月28号 金银币参考综合报价" target="_blank">2019年9月28号 金银币参考综合报价</a></li><li class="quote-lis"><em></em><a href="read.php?tid=171695" title="2019年9.26号连体钞纪念钞报价" target="_blank">2019年9.26号连体钞纪念钞报价</a></li><li class="quote-lis"><em></em><a href="read.php?tid=171291" title="2019.09.18流通纪念币（钞）报价" target="_blank">2019.09.18流通纪念币（钞）报价</a></li><li class="quote-lis"><em></em><a href="read.php?tid=170967" title="2019.9.5PMG评级纸币参考报价" target="_blank">2019.9.5PMG评级纸币参考报价</a></li></div>
+              </ul> -->
+  <ul class="quote_ul">
+		<li class="quote-lis"> <em></em><a href="thread.php?fid=21" target="_blank">钱币论坛</a></li>
+                    <li class="quote-lis"> <em></em><a href="thread.php?fid=24" target="_blank">行情报价</a></li>
+                    <li class="quote-lis"> <em></em><a href="thread.php?fid=18" target="_blank">网站公告</a></li>
+                    <li class="quote-lis"> <em></em><a href="thread.php?fid=20" target="_blank">钱币知识</a></li>
+                    <li class="quote-lis"> <em></em><a href="thread.php?fid=47" target="_blank">网站精粹</a></li>
+                    <li class="quote-lis"> <em></em><a href="thread.php?fid=22" target="_blank">藏品展示</a></li>
+                    <li class="quote-lis"> <em></em><a href="thread.php?fid=42" target="_blank">杂项论坛</a></li>
+                    <li class="quote-lis"> <em></em><a href="thread.php?fid=23" target="_blank">钱币鉴定</a></li>
+                    <li class="quote-lis"> <em></em><a href="thread.php?fid=66" target="_blank">纸币论坛</a></li>
+                    <li class="quote-lis"> <em></em><a href="thread.php?fid=64" target="_blank">贵金属币章论坛</a></li>
+                    <li class="quote-lis"> <em></em><a href="thread.php?fid=65" target="_blank">流通硬币论坛</a></li>
+               </ul>
+          </div>
+    </div>
+
+</div>
+<!-- 版心结束 -->
+<!-- ＰＣＧＳ广告 -->
+<div class="pcgs-ad"><div class="view-hover" altname="CB通栏广告@finance" channelid="finance170704"><a href="http://www.pcgs.com.cn/" target="_blank"><img src="images/banner/pcgs-2018-04-13 .jpg" height="95" width="960" /></a></div></div>
+
+<!-- 日常拍卖 -->
+<div class="daily">
+      <a href="hack.php?H_name=auction" class="daily_more">更多></a>
+     <a href="javascript:viod(0);" class="daily-btn daily-btn-left"></a>
+     <a href="javascript:viod(0);" class="daily-btn daily-btn-right"></a>
+	 <!--class类名代表不同的颜色样式 
+     贵金属拍卖:metal_tit  
+     纸币拍卖:notes_tit   
+     世界钱币拍卖:world_tit   
+     自由拍卖:free_tit -->
+     <div  class="tab_change">
+          <div class="modern modern_tit tab_title"><a href="hack.php?H_name=auction" target="_blank">现代拍卖</a><input type="hidden" class="tab_hidd"  name="tab_hidd[]" value="modern_tit"></div>
+          <div class="notes tab_title"><a href="hack.php?H_name=auctionxiandaizhibi" target="_blank">纸币拍卖</a><input type="hidden" name="tab_hidd[]" class="tab_hidd" value="notes_tit"></div>
+          <div class="free tab_title"><a href="hack.php?H_name=freeauction" target="_blank">自由拍卖</a><input type="hidden" class="tab_hidd" value="free_tit" name="tab_hidd[]"></div>
+     </div>
+     <div class="daily-box">
+     <div class="daily-box-box">
+     <!-- 现代拍卖 -->
+       <div class="five modern" >
+          
+	
+              <!--  一个商品 -->
+               <div class="bright-green da-block">
+                    <a href="hack.php?H_name=auction&action=detail&aid=127103&skip=1" title="建国40周年样币NGC 67 冠军分 五彩包浆 浓墨重彩 超级五彩斑斓带原包装" class="img" target="_blank"><img src="newauctionimages/auction/s_2019/fdcbed1570020821.jpg" alt="建国40周年样币NGC 67 冠军分 五彩包浆 浓墨重彩 超级五彩斑斓带原包装" /></a>
+                    <p class="da-block-name"><a href="hack.php?H_name=auction&action=detail&aid=127103&skip=1" title="建国40周年样币NGC 67 冠军分 五彩包浆 浓墨重彩 超级五彩斑斓带原包装" target="_blank">建国40周年样币NGC 67 冠军分 五彩包浆 浓墨重彩 超级五彩斑斓带原包装</a></p>
+                    <p class="da-block-money"><span>￥19001</span></p>
+                    <p class="da-block-time"><span>2019-10-09 21:43</span></p>
+               </div>
+	
+              <!--  一个商品 -->
+               <div class=" da-block">
+                    <a href="hack.php?H_name=auction&action=detail&aid=127061&skip=1" title="【70周年国庆巨献】1985年精制老西藏原盒原证，超顶级满喷原包浆老西藏！测光淡黄包浆，特别完美的品相" class="img" target="_blank"><img src="newauctionimages/auction/s_2019/4cb0a01569900790.jpeg" alt="【70周年国庆巨献】1985年精制老西藏原盒原证，超顶级满喷原包浆老西藏！测光淡黄包浆，特别完美的品相" /></a>
+                    <p class="da-block-name"><a href="hack.php?H_name=auction&action=detail&aid=127061&skip=1" title="【70周年国庆巨献】1985年精制老西藏原盒原证，超顶级满喷原包浆老西藏！测光淡黄包浆，特别完美的品相" target="_blank">【70周年国庆巨献】1985年精制老西藏原盒原证，超顶级满喷原包浆老西藏！测光淡黄包浆，特别完美的品相</a></p>
+                    <p class="da-block-money"><span>￥17888</span></p>
+                    <p class="da-block-time"><span>2019-10-05 20:30</span></p>
+               </div>
+	
+              <!--  一个商品 -->
+               <div class=" da-block">
+                    <a href="hack.php?H_name=auction&action=detail&aid=127097&skip=1" title="【乾坤收藏专场拍卖】1984年 精制长城1元【周轶再评级绿标】 NGC PF68UC" class="img" target="_blank"><img src="newauctionimages/auction/s_2019/ad14301570010239.jpg" alt="【乾坤收藏专场拍卖】1984年 精制长城1元【周轶再评级绿标】 NGC PF68UC" /></a>
+                    <p class="da-block-name"><a href="hack.php?H_name=auction&action=detail&aid=127097&skip=1" title="【乾坤收藏专场拍卖】1984年 精制长城1元【周轶再评级绿标】 NGC PF68UC" target="_blank">【乾坤收藏专场拍卖】1984年 精制长城1元【周轶再评级绿标】 NGC PF68UC</a></p>
+                    <p class="da-block-money"><span>￥15201</span></p>
+                    <p class="da-block-time"><span>2019-10-10 21:58</span></p>
+               </div>
+	
+              <!--  一个商品 -->
+               <div class=" da-block">
+                    <a href="hack.php?H_name=auction&action=detail&aid=127140&skip=1" title="NGC MS67 1985年老西藏样币" class="img" target="_blank"><img src="newauctionimages/auction/s_2019/dec4a41570241922.jpg" alt="NGC MS67 1985年老西藏样币" /></a>
+                    <p class="da-block-name"><a href="hack.php?H_name=auction&action=detail&aid=127140&skip=1" title="NGC MS67 1985年老西藏样币" target="_blank">NGC MS67 1985年老西藏样币</a></p>
+                    <p class="da-block-money"><span>￥14000</span></p>
+                    <p class="da-block-time"><span>2019-10-09 21:00</span></p>
+               </div>
+	
+              <!--  一个商品 -->
+               <div class=" da-block">
+                    <a href="hack.php?H_name=auction&action=detail&aid=127064&skip=1" title="【70周年国庆巨献】1981年精制长城币原装白本，元币五彩氧化！" class="img" target="_blank"><img src="newauctionimages/auction/s_2019/1ff2601569902036.jpeg" alt="【70周年国庆巨献】1981年精制长城币原装白本，元币五彩氧化！" /></a>
+                    <p class="da-block-name"><a href="hack.php?H_name=auction&action=detail&aid=127064&skip=1" title="【70周年国庆巨献】1981年精制长城币原装白本，元币五彩氧化！" target="_blank">【70周年国庆巨献】1981年精制长城币原装白本，元币五彩氧化！</a></p>
+                    <p class="da-block-money"><span>￥13001</span></p>
+                    <p class="da-block-time"><span>2019-10-05 20:30</span></p>
+               </div>
+
+         
+     </div>
+      <!-- 纸币拍卖 -->
+       <div class="five notes">  
+         
+              <!--  一个商品 -->
+               <div class=" da-block">
+                    <a href="hack.php?H_name=auctionxiandaizhibi&action=detail&aid=9176&skip=1" title="【德鑫轩专场拍卖】PMG 64分古币车工（9955253）" class="img"><img src="newauctionimages/auctionxiandaizhibi/s_5801881570072071.jpg" alt="【德鑫轩专场拍卖】PMG 64分古币车工（9955253）" /></a>
+                    <p class="da-block-name"><a href="hack.php?H_name=auctionxiandaizhibi&action=detail&aid=9176&skip=1" title="【德鑫轩专场拍卖】PMG 64分古币车工（9955253）">【德鑫轩专场拍卖】PMG 64分古币车工（9955253）</a></p>
+                    <p class="da-block-money"><span>￥1610</span></p>
+                    <p class="da-block-time"><span>2019-10-11 20:59</span></p>
+               </div>
+              <!--  一个商品 -->
+               <div class=" da-block">
+                    <a href="hack.php?H_name=auctionxiandaizhibi&action=detail&aid=9192&skip=1" title="【德鑫轩专场拍卖】PMG 67分7950外汇券（08169）" class="img"><img src="newauctionimages/auctionxiandaizhibi/s_f21a911570097422.jpg" alt="【德鑫轩专场拍卖】PMG 67分7950外汇券（08169）" /></a>
+                    <p class="da-block-name"><a href="hack.php?H_name=auctionxiandaizhibi&action=detail&aid=9192&skip=1" title="【德鑫轩专场拍卖】PMG 67分7950外汇券（08169）">【德鑫轩专场拍卖】PMG 67分7950外汇券（08169）</a></p>
+                    <p class="da-block-money"><span>￥1000</span></p>
+                    <p class="da-block-time"><span>2019-10-11 21:16</span></p>
+               </div>
+              <!--  一个商品 -->
+               <div class=" da-block">
+                    <a href="hack.php?H_name=auctionxiandaizhibi&action=detail&aid=9174&skip=1" title="【德鑫轩专场拍卖】PMG 64分古币车工（9955255）" class="img"><img src="newauctionimages/auctionxiandaizhibi/s_3c427c1570071976.jpg" alt="【德鑫轩专场拍卖】PMG 64分古币车工（9955255）" /></a>
+                    <p class="da-block-name"><a href="hack.php?H_name=auctionxiandaizhibi&action=detail&aid=9174&skip=1" title="【德鑫轩专场拍卖】PMG 64分古币车工（9955255）">【德鑫轩专场拍卖】PMG 64分古币车工（9955255）</a></p>
+                    <p class="da-block-money"><span>￥888</span></p>
+                    <p class="da-block-time"><span>2019-10-11 20:58</span></p>
+               </div>
+              <!--  一个商品 -->
+               <div class=" da-block">
+                    <a href="hack.php?H_name=auctionxiandaizhibi&action=detail&aid=9180&skip=1" title="【德鑫轩专场拍卖】PMG 68分三罗深版炼钢（9100898）" class="img"><img src="newauctionimages/auctionxiandaizhibi/s_b3d7d61570072286.jpg" alt="【德鑫轩专场拍卖】PMG 68分三罗深版炼钢（9100898）" /></a>
+                    <p class="da-block-name"><a href="hack.php?H_name=auctionxiandaizhibi&action=detail&aid=9180&skip=1" title="【德鑫轩专场拍卖】PMG 68分三罗深版炼钢（9100898）">【德鑫轩专场拍卖】PMG 68分三罗深版炼钢（9100898）</a></p>
+                    <p class="da-block-money"><span>￥820</span></p>
+                    <p class="da-block-time"><span>2019-10-11 21:03</span></p>
+               </div>
+              <!--  一个商品 -->
+               <div class=" da-block">
+                    <a href="hack.php?H_name=auctionxiandaizhibi&action=detail&aid=9171&skip=1" title="【德鑫轩专场拍卖】PMG 66分荷花钞三联体 无4靓号" class="img"><img src="newauctionimages/auctionxiandaizhibi/s_d644361570067298.jpg" alt="【德鑫轩专场拍卖】PMG 66分荷花钞三联体 无4靓号" /></a>
+                    <p class="da-block-name"><a href="hack.php?H_name=auctionxiandaizhibi&action=detail&aid=9171&skip=1" title="【德鑫轩专场拍卖】PMG 66分荷花钞三联体 无4靓号">【德鑫轩专场拍卖】PMG 66分荷花钞三联体 无4靓号</a></p>
+                    <p class="da-block-money"><span>￥810</span></p>
+                    <p class="da-block-time"><span>2019-10-11 20:54</span></p>
+               </div>
+         
+     </div>
+     <!-- 自由拍卖 -->
+       <div class="five free">
+              <!--  一个商品 -->
+               <div class=" da-block">
+                    <a target="_blank" href="hack.php?H_name=freeauction&action=detail&aid=19060&skip=1" title="人行版中国珍稀野生动物鸡鳄蝶鲟朱丹白鳍豚纪念币外纸盒塑合套装（十枚动物缺熊猫金丝猴华南虎，猫猴如图的小版没见过）" class="img"><img src="newauctionimages/freeauction/s_2019/22b55f1569937701.jpg" alt="人行版中国珍稀野生动物鸡鳄蝶鲟朱丹白鳍豚纪念币外纸盒塑合套装（十枚动物缺熊猫金丝猴华南虎，猫猴如图的小版没见过）" /></a>
+                    <p class="da-block-name"><a target="_blank" href="hack.php?H_name=freeauction&action=detail&aid=19060&skip=1" title="人行版中国珍稀野生动物鸡鳄蝶鲟朱丹白鳍豚纪念币外纸盒塑合套装（十枚动物缺熊猫金丝猴华南虎，猫猴如图的小版没见过）">人行版中国珍稀野生动物鸡鳄蝶鲟朱丹白鳍豚纪念币外纸盒塑合套装（十枚动物缺熊猫金丝猴华南虎，猫猴如图的小版没见过）</a></p>
+                    <p class="da-block-money"><span>￥511</span></p>
+                    <p class="da-block-time"><span>2019-10-05 21:30</span></p>
+               </div>
+              <!--  一个商品 -->
+               <div class=" da-block">
+                    <a target="_blank" href="hack.php?H_name=freeauction&action=detail&aid=19058&skip=1" title="稀少倒模齿轮版/带彩建国40周年纪念币6枚全部倒模&nbsp;&nbsp;全新卷拆6枚一起拍" class="img"><img src="newauctionimages/freeauction/s_2019/e97aa61569923066.jpg" alt="稀少倒模齿轮版/带彩建国40周年纪念币6枚全部倒模&nbsp;&nbsp;全新卷拆6枚一起拍" /></a>
+                    <p class="da-block-name"><a target="_blank" href="hack.php?H_name=freeauction&action=detail&aid=19058&skip=1" title="稀少倒模齿轮版/带彩建国40周年纪念币6枚全部倒模&nbsp;&nbsp;全新卷拆6枚一起拍">稀少倒模齿轮版/带彩建国40周年纪念币6枚全部倒模&nbsp;&nbsp;全新卷拆6枚一起拍</a></p>
+                    <p class="da-block-money"><span>￥251</span></p>
+                    <p class="da-block-time"><span>2019-10-09 20:29</span></p>
+               </div>
+              <!--  一个商品 -->
+               <div class=" da-block">
+                    <a target="_blank" href="hack.php?H_name=freeauction&action=detail&aid=19070&skip=1" title="1997年和1998年精制2分共计24枚（发行量2万）" class="img"><img src="newauctionimages/freeauction/s_2019/d87fde1570177556.jpg" alt="1997年和1998年精制2分共计24枚（发行量2万）" /></a>
+                    <p class="da-block-name"><a target="_blank" href="hack.php?H_name=freeauction&action=detail&aid=19070&skip=1" title="1997年和1998年精制2分共计24枚（发行量2万）">1997年和1998年精制2分共计24枚（发行量2万）</a></p>
+                    <p class="da-block-money"><span>￥244</span></p>
+                    <p class="da-block-time"><span>2019-10-08 21:31</span></p>
+               </div>
+              <!--  一个商品 -->
+               <div class=" da-block">
+                    <a target="_blank" href="hack.php?H_name=freeauction&action=detail&aid=19063&skip=1" title="人行版小三珍纪念币套装（抗战。世妇会。联合国，实物拍摄，收藏品相，人行版瓶颈品种，收藏佳品）" class="img"><img src="newauctionimages/freeauction/s_2019/0c311d1570019720.jpg" alt="人行版小三珍纪念币套装（抗战。世妇会。联合国，实物拍摄，收藏品相，人行版瓶颈品种，收藏佳品）" /></a>
+                    <p class="da-block-name"><a target="_blank" href="hack.php?H_name=freeauction&action=detail&aid=19063&skip=1" title="人行版小三珍纪念币套装（抗战。世妇会。联合国，实物拍摄，收藏品相，人行版瓶颈品种，收藏佳品）">人行版小三珍纪念币套装（抗战。世妇会。联合国，实物拍摄，收藏品相，人行版瓶颈品种，收藏佳品）</a></p>
+                    <p class="da-block-money"><span>￥162</span></p>
+                    <p class="da-block-time"><span>2019-10-06 21:30</span></p>
+               </div>
+              <!--  一个商品 -->
+               <div class=" da-block">
+                    <a target="_blank" href="hack.php?H_name=freeauction&action=detail&aid=19059&skip=1" title="银盾评级67分 第一轮马生肖币10枚一起拍&nbsp;&nbsp;全部67分" class="img"><img src="newauctionimages/freeauction/s_2019/5f75c51569927526.jpg" alt="银盾评级67分 第一轮马生肖币10枚一起拍&nbsp;&nbsp;全部67分" /></a>
+                    <p class="da-block-name"><a target="_blank" href="hack.php?H_name=freeauction&action=detail&aid=19059&skip=1" title="银盾评级67分 第一轮马生肖币10枚一起拍&nbsp;&nbsp;全部67分">银盾评级67分 第一轮马生肖币10枚一起拍&nbsp;&nbsp;全部67分</a></p>
+                    <p class="da-block-money"><span>￥101</span></p>
+                    <p class="da-block-time"><span>2019-10-08 20:28</span></p>
+               </div>
+        
+     </div>
+     </div>
+     </div>
+</div>
+  <script type="text/javascript">
+  jQuery(function() {
+    qiangge(5000,500);
+  });
+  </script>
+
+<!-- 钱币交易 -->
+<div class="coin-trading">
+      <div class="trad1000">
+         <div class="coin-trading-title">
+               <span>钱币交易</span>
+         </div>
+      </div>   
+      <ul class="coin-trading-icon">
+          <li><a href="thread.php?fid=25" target="_blank" title="纪念币"><img src="html/channel/finance170704/images/coin-trad1.jpg" alt="纪念币" /></a></li>
+          <li><a href="thread.php?fid=34" target="_blank" title="流通币"><img src="html/channel/finance170704/images/coin-trad2.jpg" alt="流通币" /></a></li>
+          <li><a href="thread.php?fid=45" target="_blank" title="纸币"><img src="html/channel/finance170704/images/coin-trad3.jpg" alt="纸币" /></a></li>
+          <li><a href="thread.php?fid=56" target="_blank" title="评级纪念币"><img src="html/channel/finance170704/images/coin-trad4.jpg" alt="评级纪念币" /></a></li>
+          <li><a href="thread.php?fid=57" target="_blank" title="评级流通币"><img src="html/channel/finance170704/images/coin-trad5.jpg" alt="评级流通币" /></a></li>
+          <li><a href="thread.php?fid=58" target="_blank" title="评级纸币"><img src="html/channel/finance170704/images/coin-trad6.jpg" alt="评级纸币" /></a></li>
+          <li><a href="thread.php?fid=46" target="_blank" title="金银币"><img src="html/channel/finance170704/images/coin-trad7.jpg" alt="评级邮票交易" /></a></li>         
+		  <li><a href="thread.php?fid=85" target="_blank" title=""><img src="html/channel/finance170704/images/youpiao.jpg" alt="评级邮票交易" /></a></li>
+          <li><a href="thread.php?fid=54" target="_blank" title="古币"><img src="html/channel/finance170704/images/coin-trad8.jpg" alt="古币" /></a></li>
+        <!--   <li><a href="thread.php?fid=55" target="_blank" title="港澳台"><img src="html/channel/finance170704/images/coin-trad9.jpg" alt="港澳台" /></a></li> -->
+          <li><a href="thread.php?fid=53" target="_blank" title="纪念章"><img src="html/channel/finance170704/images/coin-trad10.jpg" alt="纪念章" /></a></li>
+          <li><a href="thread.php?fid=60" target="_blank" title="杂项"><img src="html/channel/finance170704/images/coin-trad11.jpg" alt="杂项" /></a></li>
+          <li><a href="thread.php?fid=75" target="_blank" title="世界纸币"><img src="html/channel/finance170704/images/coin-trad12.jpg" alt="世界纸币" /></a></li>
+          <li><a href="thread.php?fid=76" target="_blank" title="世界硬币"><img src="html/channel/finance170704/images/coin-trad13.jpg" alt="世界硬币" /></a></li>
+      </ul>
+      <ul class="coin-trading-content">
+		<div class="view-hover" altname="A3交易@finance" channelid="finance170704"><li><em></em><a href="read.php?tid=171880" title="建国40周年样币NGC 67 冠军分 五彩包浆" target="_blank">建国40周年样币NGC 67 冠军分 五彩包浆</a></li><li><em></em><a href="read.php?tid=171875" title="建行精制币 NGC PF69UC(重喷砂高镜面)带" target="_blank">建行精制币 NGC PF69UC(重喷砂高镜面)带</a></li><li><em></em><a href="read.php?tid=171781" title="罕见双面重喷万里长城精制币 NGC PF69UC" target="_blank">罕见双面重喷万里长城精制币 NGC PF69UC</a></li><li><em></em><a href="read.php?tid=171825" title="【出自藏五彩811长城币一些，卷拆品" target="_blank">【出自藏五彩811长城币一些，卷拆品</a></li><li><em></em><a href="read.php?tid=171945" title="【金总封装彩银猪、本银猪2枚套盒】" target="_blank">【金总封装彩银猪、本银猪2枚套盒】</a></li><li><em></em><a href="read.php?tid=171954" title="出售97和98精制菊花67uc，合计35枚，" target="_blank">出售97和98精制菊花67uc，合计35枚，</a></li><li><em></em><a href="read.php?tid=171599" title="唯一带星标五星车工补号PMG67★" target="_blank">唯一带星标五星车工补号PMG67★</a></li><li><em></em><a href="read.php?tid=171782" title="原包生肖精制币   特价出售" target="_blank">原包生肖精制币   特价出售</a></li><li><em></em><a href="read.php?tid=171833" title="出售2000年普制牡丹NGC ms 66/67" target="_blank">出售2000年普制牡丹NGC ms 66/67</a></li><li><em></em><a href="read.php?tid=171575" title="1981年普制套装流通硬币（红皮本）" target="_blank">1981年普制套装流通硬币（红皮本）</a></li><li><em></em><a href="read.php?tid=171858" title="特价7800出.1980年大黑本" target="_blank">特价7800出.1980年大黑本</a></li><li><em></em><a href="read.php?tid=171759" title="稀有！错标9050 ju珍稀补号,PMG66" target="_blank">稀有！错标9050 ju珍稀补号,PMG66</a></li></div>
+      </ul>
+</div>
+<!-- 广告位 -->
+<div class="ad-seat">
+    <div class="ad-seatimg">
+		<div class="view-hover" altname="C1通栏广告@finance" channelid="finance170704"><a href="http://www.coin001.com/11m" target="_blank"><img src="attachment/pushpic/20190423012913.jpg" height="126" width="325" /></a></div>
+	</div>
+    <div class="ad-seatimg ad-seat02">
+		<div class="view-hover" altname="C2通栏广告@finance" channelid="finance170704"><a href="http://www.coin001.com/usercontract.php?action=contract&amp;contracttype=yuepai" target="_blank"><img src="attachment/pushpic/20190905103646.jpg" height="126" width="325" /></a></div>
+	</div>
+   <div class="ad-seatimg "> 
+		<div class="view-hover" altname="C3通栏广告@finance" channelid="finance170704"><a href="http://www.coin001.com/thread.php?fid=84" target="_blank"><img src="attachment/pushpic/20190426071352.jpg" height="126" width="325" /></a></div>
+   </div>
+	
+</div>
+<!-- 店铺交易 -->
+<div class="coin-trading">
+      <div class="trad1000">
+         <div class="coin-trading-title">
+               <span>店铺交易</span>
+         </div>
+      </div>
+</div>  
+<!-- VIP店铺交易 -->
+<div class="vipdivtrad">
+     <ul class="viplist">
+	
+         <li>
+              <a href="index.php?m=dianpu&c=info&id=392" title="官方旗舰店" class="viplogo" target="_blank"><img src="attachment/dianpu/logo/392.jpg" alt="" /></a>
+              <a href="index.php?m=dianpu&c=info&id=392" title="官方旗舰店" class="vipname" target="_blank">官方旗舰店</a>
+              <!-- <span class="vipspan"></span> -->
+         </li>
+	
+         <li>
+              <a href="index.php?m=dianpu&c=info&id=165" title="诚轩阁" class="viplogo" target="_blank"><img src="attachment/dianpu/logo/165.jpg" alt="" /></a>
+              <a href="index.php?m=dianpu&c=info&id=165" title="诚轩阁" class="vipname" target="_blank">诚轩阁</a>
+              <!-- <span class="vipspan"></span> -->
+         </li>
+	
+         <li>
+              <a href="index.php?m=dianpu&c=info&id=126" title="流通硬分币大全" class="viplogo" target="_blank"><img src="attachment/dianpu/logo/126.jpg" alt="" /></a>
+              <a href="index.php?m=dianpu&c=info&id=126" title="流通硬分币大全" class="vipname" target="_blank">流通硬分币大全</a>
+              <!-- <span class="vipspan"></span> -->
+         </li>
+	
+         <li>
+              <a href="index.php?m=dianpu&c=info&id=36" title="11M" class="viplogo" target="_blank"><img src="attachment/dianpu/logo/36.png" alt="" /></a>
+              <a href="index.php?m=dianpu&c=info&id=36" title="11M" class="vipname" target="_blank">11M</a>
+              <!-- <span class="vipspan"></span> -->
+         </li>
+	
+         <li>
+              <a href="index.php?m=dianpu&c=info&id=2" title="钱多多de小店" class="viplogo" target="_blank"><img src="attachment/dianpu/logo/2.jpg" alt="" /></a>
+              <a href="index.php?m=dianpu&c=info&id=2" title="钱多多de小店" class="vipname" target="_blank">钱多多de小店</a>
+              <!-- <span class="vipspan"></span> -->
+         </li>
+	
+         <li>
+              <a href="index.php?m=dianpu&c=info&id=478" title="香港收藏品交易所" class="viplogo" target="_blank"><img src="attachment/dianpu/logo/478.jpg" alt="" /></a>
+              <a href="index.php?m=dianpu&c=info&id=478" title="香港收藏品交易所" class="vipname" target="_blank">香港收藏品交易所</a>
+              <!-- <span class="vipspan"></span> -->
+         </li>
+	
+         <li>
+              <a href="index.php?m=dianpu&c=info&id=116" title="帝王钱币" class="viplogo" target="_blank"><img src="attachment/dianpu/logo/116.jpg" alt="" /></a>
+              <a href="index.php?m=dianpu&c=info&id=116" title="帝王钱币" class="vipname" target="_blank">帝王钱币</a>
+              <!-- <span class="vipspan"></span> -->
+         </li>
+	
+     
+<li><img src="html/channel/finance170704/images/zhao.jpg" alt="" style="margin:0 10px;"/></li>
+     
+<li><img src="html/channel/finance170704/images/zhao.jpg" alt="" style="margin:0 10px;"/></li>
+     
+<li><img src="html/channel/finance170704/images/zhao.jpg" alt="" style="margin:0 10px;"/></li>
+     </ul>
+</div>
+<!-- 全部商品 -->
+<div class="all-shop">
+      <!-- 左边菜单 -->
+      <div class="shop-menu">
+           <h4>全部商品 <a href="index.php?m=dianpu" target="_blank"><i class="iconfontyyy">&#xe798;</i></a></h4>
+           <div class="menus">
+              <a href="index.php?m=dianpu&c=productlist&cat1=433" class="menus-black" target="_blank">中国流通硬币</a>
+  
+              <a href="index.php?m=dianpu&c=productlist&cat2=434" target="_blank">硬分币</a>
+  
+              <a href="index.php?m=dianpu&c=productlist&cat2=435" target="_blank">长城币</a>
+  
+              <a href="index.php?m=dianpu&c=productlist&cat2=436" target="_blank">新老三花币</a>
+  
+              <a href="index.php?m=dianpu&c=productlist&cat2=461" target="_blank">套币</a>
+           </div>
+           <div class="menus">
+              <a href="index.php?m=dianpu&c=productlist&cat1=437" class="menus-black" target="_blank">中国流通纪念币</a>
+  
+              <a href="index.php?m=dianpu&c=productlist&cat2=438" target="_blank">普制纪念币</a>
+  
+              <a href="index.php?m=dianpu&c=productlist&cat2=439" target="_blank">精制纪念币</a>
+  
+              <a href="index.php?m=dianpu&c=productlist&cat2=440" target="_blank">样币</a>
+           </div>
+           <div class="menus">
+              <a href="index.php?m=dianpu&c=productlist&cat1=441" class="menus-black" target="_blank">中国纸币</a>
+  
+              <a href="index.php?m=dianpu&c=productlist&cat2=442" target="_blank">一版纸币</a>
+  
+              <a href="index.php?m=dianpu&c=productlist&cat2=443" target="_blank">二版纸币</a>
+  
+              <a href="index.php?m=dianpu&c=productlist&cat2=444" target="_blank">三版纸币</a>
+  
+              <a href="index.php?m=dianpu&c=productlist&cat2=445" target="_blank">四/五版纸币</a>
+  
+              <a href="index.php?m=dianpu&c=productlist&cat2=453" target="_blank">票证</a>
+  
+              <a href="index.php?m=dianpu&c=productlist&cat2=459" target="_blank">老纸币</a>
+  
+              <a href="index.php?m=dianpu&c=productlist&cat2=460" target="_blank">纪念钞/连体钞</a>
+  
+              <a href="index.php?m=dianpu&c=productlist&cat2=470" target="_blank">港澳台纸币</a>
+           </div>
+           <div class="menus">
+              <a href="index.php?m=dianpu&c=productlist&cat1=446" class="menus-black" target="_blank">中国贵金属币</a>
+              <a href="index.php?m=dianpu&c=productlist&cat1=447" class="menus-black" target="_blank">中国纪念章</a>
+              <a href="index.php?m=dianpu&c=productlist&cat1=462" class="menus-black" target="_blank">外国纸钞</a>
+              <a href="index.php?m=dianpu&c=productlist&cat1=451" class="menus-black" target="_blank">外国硬币</a>
+              <a href="index.php?m=dianpu&c=productlist&cat1=448" class="menus-black" target="_blank">近代货币</a>
+              <a href="index.php?m=dianpu&c=productlist&cat1=454" class="menus-black" target="_blank">古钱币</a>
+              <a href="index.php?m=dianpu&c=productlist&cat1=452" class="menus-black" target="_blank">邮票</a>
+              <a href="index.php?m=dianpu&c=productlist&cat1=458" class="menus-black" target="_blank">其它</a>
+           </div>
+           <a href="index.php?m=dianpu&c=index&c=checkin&a=checkin&p=step2" target="_blank"><img class="shop-banner" src="html/channel/finance170704/images/shop-banner.jpg" alt="" /></a>
+      </div>
+      <!-- 右边商品 -->
+      <div class="shop-list">
+            <hr/>
+            <ul class="shop-list-case">
+	
+                 <li>
+                     <a class="case-img" target="_blank" href="index.php?m=dianpu&c=product&a=detail&id=375&productid=7265" title="德国1953年 马到成功高浮雕方形镂空超巨型大铁章 178×102MM 339克" alt="德国1953年 马到成功高浮雕方形镂空超巨型大铁章 178×102MM 339克"><img src="attachment/product_sm/s_d1c86a157026576971026.jpg" title="德国1953年 马到成功高浮雕方形镂空超巨型大铁章 178×102MM 339克" alt="德国1953年 马到成功高浮雕方形镂空超巨型大铁章 178×102MM 339克"/></a>
+                     <a target="_blank" href="index.php?m=dianpu&c=product&a=detail&id=375&productid=7265" title="德国1953年 马到成功高浮雕方形镂空超巨型大铁章 178×102MM 339克" alt="德国1953年 马到成功高浮雕方形镂空超巨型大铁章 178×102MM 339克" class="case-cont">德国1953年 马到成功高浮雕方形镂空超巨型大铁章 178×102MM 339克</a>
+	
+                     <p><em>￥260</em></p>
+	
+                 </li>
+	
+                 <li>
+                     <a class="case-img" target="_blank" href="index.php?m=dianpu&c=product&a=detail&id=486&productid=7251" title="1980年1角" alt="1980年1角"><img src="attachment/product_sm/s_0b14b1156956730444986.jpg" title="1980年1角" alt="1980年1角"/></a>
+                     <a target="_blank" href="index.php?m=dianpu&c=product&a=detail&id=486&productid=7251" title="1980年1角" alt="1980年1角" class="case-cont">1980年1角</a>
+	
+                     <p><em>￥108</em></p>
+	
+                 </li>
+	
+                 <li>
+                     <a class="case-img" target="_blank" href="index.php?m=dianpu&c=product&a=detail&id=353&productid=7239" title="PMG67首期标航天纪念钞" alt="PMG67首期标航天纪念钞"><img src="attachment/product_sm/s_25157f156937072065224.jpg" title="PMG67首期标航天纪念钞" alt="PMG67首期标航天纪念钞"/></a>
+                     <a target="_blank" href="index.php?m=dianpu&c=product&a=detail&id=353&productid=7239" title="PMG67首期标航天纪念钞" alt="PMG67首期标航天纪念钞" class="case-cont">PMG67首期标航天纪念钞</a>
+	
+                     <p><em>￥518</em></p>
+	
+                 </li>
+	
+                 <li>
+                     <a class="case-img" target="_blank" href="index.php?m=dianpu&c=product&a=detail&id=165&productid=7195" title="精制和一 pf68uc" alt="精制和一 pf68uc"><img src="attachment/product_sm/s_5c2d29156851611118359.jpg" title="精制和一 pf68uc" alt="精制和一 pf68uc"/></a>
+                     <a target="_blank" href="index.php?m=dianpu&c=product&a=detail&id=165&productid=7195" title="精制和一 pf68uc" alt="精制和一 pf68uc" class="case-cont">精制和一 pf68uc</a>
+	
+                     <p><em>￥1400</em></p>
+	
+                 </li>
+	
+                 <li>
+                     <a class="case-img" target="_blank" href="index.php?m=dianpu&c=product&a=detail&id=269&productid=7184" title="PMG 58 民国二十五年中央银行伍百圆 “大红袍”" alt="PMG 58 民国二十五年中央银行伍百圆 “大红袍”"><img src="attachment/product_sm/s_2d3a04156833903538272.jpg" title="PMG 58 民国二十五年中央银行伍百圆 “大红袍”" alt="PMG 58 民国二十五年中央银行伍百圆 “大红袍”"/></a>
+                     <a target="_blank" href="index.php?m=dianpu&c=product&a=detail&id=269&productid=7184" title="PMG 58 民国二十五年中央银行伍百圆 “大红袍”" alt="PMG 58 民国二十五年中央银行伍百圆 “大红袍”" class="case-cont">PMG 58 民国二十五年中央银行伍百圆 “大红袍”</a>
+                     <p><em>￥13888</em><del>￥16000</del></p>
+	
+                 </li>
+	
+                 <li>
+                     <a class="case-img" target="_blank" href="index.php?m=dianpu&c=product&a=detail&id=457&productid=7174" title="1992年精制2分 5分 NGC PF66CA 稀少老标 状态好 四小龙之一" alt="1992年精制2分 5分 NGC PF66CA 稀少老标 状态好 四小龙之一"><img src="attachment/product_sm/s_b33066156794319635100.jpg" title="1992年精制2分 5分 NGC PF66CA 稀少老标 状态好 四小龙之一" alt="1992年精制2分 5分 NGC PF66CA 稀少老标 状态好 四小龙之一"/></a>
+                     <a target="_blank" href="index.php?m=dianpu&c=product&a=detail&id=457&productid=7174" title="1992年精制2分 5分 NGC PF66CA 稀少老标 状态好 四小龙之一" alt="1992年精制2分 5分 NGC PF66CA 稀少老标 状态好 四小龙之一" class="case-cont">1992年精制2分 5分 NGC PF66CA 稀少老标 状态好 四小龙之一</a>
+	
+                     <p><em>￥450</em></p>
+	
+                 </li>
+	
+                 <li>
+                     <a class="case-img" target="_blank" href="index.php?m=dianpu&c=product&a=detail&id=478&productid=7142" title="梅花五角91-00小全套 全66分 串号不同" alt="梅花五角91-00小全套 全66分 串号不同"><img src="attachment/product_sm/s_83277e156724061254663.jpg" title="梅花五角91-00小全套 全66分 串号不同" alt="梅花五角91-00小全套 全66分 串号不同"/></a>
+                     <a target="_blank" href="index.php?m=dianpu&c=product&a=detail&id=478&productid=7142" title="梅花五角91-00小全套 全66分 串号不同" alt="梅花五角91-00小全套 全66分 串号不同" class="case-cont">梅花五角91-00小全套 全66分 串号不同</a>
+	
+                     <p><em>￥800</em></p>
+	
+                 </li>
+	
+                 <li>
+                     <a class="case-img" target="_blank" href="index.php?m=dianpu&c=product&a=detail&id=423&productid=7111" title="3版18k1分纸币，稀缺冠，20冠号" alt="3版18k1分纸币，稀缺冠，20冠号"><img src="attachment/product_sm/s_aa3fcc156614071735376.jpg" title="3版18k1分纸币，稀缺冠，20冠号" alt="3版18k1分纸币，稀缺冠，20冠号"/></a>
+                     <a target="_blank" href="index.php?m=dianpu&c=product&a=detail&id=423&productid=7111" title="3版18k1分纸币，稀缺冠，20冠号" alt="3版18k1分纸币，稀缺冠，20冠号" class="case-cont">3版18k1分纸币，稀缺冠，20冠号</a>
+                     <p><em>￥4</em><del>￥5</del></p>
+	
+                 </li>
+	
+                 <li>
+                     <a class="case-img" target="_blank" href="index.php?m=dianpu&c=product&a=detail&id=190&productid=7091" title="《NGC67·建行纪念币·“年”字左侧底板铸缺铸造错版》" alt="《NGC67·建行纪念币·“年”字左侧底板铸缺铸造错版》"><img src="attachment/product_sm/s_c88850156585940243710.jpg" title="《NGC67·建行纪念币·“年”字左侧底板铸缺铸造错版》" alt="《NGC67·建行纪念币·“年”字左侧底板铸缺铸造错版》"/></a>
+                     <a target="_blank" href="index.php?m=dianpu&c=product&a=detail&id=190&productid=7091" title="《NGC67·建行纪念币·“年”字左侧底板铸缺铸造错版》" alt="《NGC67·建行纪念币·“年”字左侧底板铸缺铸造错版》" class="case-cont">《NGC67·建行纪念币·“年”字左侧底板铸缺铸造错版》</a>
+	
+                     <p><em>￥88888.00</em></p>
+	
+                 </li>
+	
+                 <li>
+                     <a class="case-img" target="_blank" href="index.php?m=dianpu&c=product&a=detail&id=392&productid=7073" title="预订送豪礼《中国金银币标准目录》第2版 包邮" alt="预订送豪礼《中国金银币标准目录》第2版 包邮"><img src="attachment/product_sm/s_0b2dcc156533990964361.jpg" title="预订送豪礼《中国金银币标准目录》第2版 包邮" alt="预订送豪礼《中国金银币标准目录》第2版 包邮"/></a>
+                     <a target="_blank" href="index.php?m=dianpu&c=product&a=detail&id=392&productid=7073" title="预订送豪礼《中国金银币标准目录》第2版 包邮" alt="预订送豪礼《中国金银币标准目录》第2版 包邮" class="case-cont">预订送豪礼《中国金银币标准目录》第2版 包邮</a>
+	
+                     <p><em>￥378</em></p>
+	
+                 </li>
+	               
+            </ul>
+      </div>
+</div>
+<!-- 栏目 -->
+<div class="column-div">
+     <ul class="column-ul">
+          <li>
+             <a href="museum.php?uid=8461" title="殷国清博物馆"  target="_blank"><img src="html/channel/finance170704/images/column (1).png" alt="殷国清博物馆" /></a>
+             <a href="museum.php?uid=8461" title="殷国清博物馆" alt="殷国清博物馆" target="_blank">殷国清博物馆</a>
+          </li>
+          <li>
+             <a href="museum.php?uid=6" title="孙克勤博物馆" target="_blank"><img src="html/channel/finance170704/images/column (2).png" alt="孙克勤博物馆" /></a>
+             <a href="museum.php?uid=6" title="孙克勤博物馆" target="_blank">孙克勤博物馆</a>
+          </li>
+          <li>
+             <a href="zhibiku.php" title="世界纸币图片库" target="_blank"><img src="html/channel/finance170704/images/column (3).png" alt="世界纸币图片库" /></a>
+             <a href="zhibiku.php" title="世界纸币图片库" target="_blank">世界纸币图片库</a>
+          </li>
+          <li>
+             <a href="zhibiku.php?&action=yuansu" title="中国纸币设计元素" target="_blank"><img src="html/channel/finance170704/images/column (4).png" alt="中国纸币设计元素" /></a>
+             <a href="zhibiku.php?&action=yuansu" title="中国纸币设计元素" target="_blank">中国纸币设计元素</a>
+          </li>
+          <li>
+             <a href="zhibiku.php?&action=yishu" title="纸币上的艺术" target="_blank"><img src="html/channel/finance170704/images/column (5).png" alt="纸币上的艺术" /></a>
+             <a href="zhibiku.php?&action=yishu" title="纸币上的艺术" target="_blank">纸币上的艺术</a>
+          </li>
+          <li>
+             <a href="zhibiku.php?&action=jianzhu" title="纸币上的建筑" target="_blank"><img src="html/channel/finance170704/images/column (6).png" alt="纸币上的建筑" /></a>
+             <a href="zhibiku.php?&action=jianzhu" title="纸币上的建筑" target="_blank">纸币上的建筑</a>
+          </li>
+          <li>
+             <a href="zhibiku.php?&action=yinchao" title="世界印刷机构" target="_blank"><img src="html/channel/finance170704/images/column (7).png" alt="世界印刷机构" /></a>
+             <a href="zhibiku.php?&action=yinchao" title="世界印刷机构" target="_blank">世界印刷机构</a>
+          </li>
+          <li>
+             <a href="zhibiku.php?&action=huilv" title="汇率换算" target="_blank"><img src="html/channel/finance170704/images/column (8).png" alt="汇率换算" /></a>
+             <a href="zhibiku.php?&action=huilv" title="汇率换算" target="_blank">汇率换算</a>
+          </li>
+     </ul>
+</div>
+<script type="text/javascript">
+  jQuery(document).ready(function() { 
+  //第一个轮播图  
+    var num=null;
+    var jie=jQuery("<div></div>"); /*创建节点*/
+    /*jQuery(".box li p").before(jie); 在p 的前面插入节点*/
+    jQuery(".spring_box li p").after(jie);
+
+    /*当鼠标经过li 的时候，它的二毛和三毛 升上来*/
+    jQuery(".spring_box li").hover(function() {
+      jQuery(this).children('div,p').stop().animate({"bottom":0},400);
+    }, function() {
+      /*当鼠标离开li 的时候，它的二毛和三毛 降上来*/
+      jQuery(this).children('div,p').stop().animate({"bottom":-131},400);
+    });
+
+    jQuery(".spring_box li div").fadeTo(0,0.6); /*把div 变成半透明的盒子*/
+  });
+
+  //版新轮播图
+    var arr=[//模拟ajax请求的数据
+	
+        {imgurl:"newattachment/zhibinews/201909/3d98181567731431.jpg",href:"http://www.coin001.com/read.php?tid&#61;170990",text:"1018现代月拍拍品征集火热进行中！"}
+        ,{imgurl:"newattachment/zhibinews/201909/71a7751569804682.jpg",href:"http://www.coin001.com/read.php?tid&#61;171608",text:"现代钱币网祝大家国庆节快乐！"}
+	  
+    ];
+    jQuery(function(){
+        jQuery("#mySlide").mySlide(arr,5000);
+    })
+  </script><div class="footer">
+     <div class="footerz">
+          <img src="html/channel/finance170704/images/wenhua.png" />
+          <p class="adress"><span> 公司：北京天成文化发展有限公司</span><span> 地址：北京市西城区宣武门外大街6号北办西翼1309</span></p> 
+           <p class="friendlink"><span>友情链接：</span>
+                <a href="http://www.pcgs.com.cn/?utm_source=Coin001&amp;utm_medium=banner&amp;utm_campaign=Coin001.Chinese.Fi" target="_blank" title="PCGS">PCGS</a>
+                <a href="http://www.coin001.com/11m" target="_blank" title="11M">11M</a>
+                <a href="http://www.e1988.com/" target="_blank" title="中邮网">中邮网</a>
+                <a href="http://www.jibi.net/" target="_blank" title="集币在线">集币在线</a>
+                <a href="http://gongbocoins.com.cn/" target="_blank" title="公博古钱币">公博古钱币</a>
+                <a href="http://www.shouxi.com/" target="_blank" title="首席收藏">首席收藏</a>
+                <a href="http://auc.yjzx.com/" target="_blank" title="易金在线">易金在线</a>
+                <a href="http://www.paibh.com/" target="_blank" title="派宝会">派宝会</a>
+                <a href="http://blog.sina.com.cn/jingzhibilaosun" target="_blank" title="北京老孙的博客">北京老孙的博客</a>
+                <a href="http://collection.sina.com.cn/" target="_blank" title="新浪收藏">新浪收藏</a>
+                <a href="http://www.dequanyuan.com.cn" target="_blank" title="北京德泉缘">北京德泉缘</a>
+                <a href="http://www.gzv6.com/" target="_blank" title="广州V6">广州V6</a>
+           </p>
+           <p class="links">
+                <a href="hack.php?H_name=indexhtml&action=aboutUs" target="_blank">关于我们</a>
+                <a>交易规则</a>
+                <a href="userpay.php?action=apply" target="_blank">PCGS送评</a>
+                <a href="usercontract.php?action=contract&contracttype=contract5" target="_blank">拍卖委托</a>
+                <a href="hack.php?H_name=indexhtml&action=aboutCopy" target="_blank">版权信息</a>
+                <a href="hack.php?H_name=indexhtml" target="_blank">免责声明</a>
+                <a>网站地图</a>
+           </p>
+           <p class="copyright">Copyright © 2019 现代钱币网 版权所有 
+<!-- 		   京ICP备14019065号  -->
+ 京ICP备14019065号-1
+		   
+		   | <a target="_blank" href="images/icp/icp2019.jpg">京ICP证140350号</a> | <a target="_blank" href="images/icp/icp.jpg">营业执照 </a>| <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010202005560" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="images/icp/ba.png" style="float:left;padding-right:2px;"/>京公网安备 11010202005560号</a><span class="zhanzhang"><script src="http://s5.cnzz.com/stat.php?id=3691998&web_id=3691998&show=pic" language="JavaScript"></script></span>
+		   | <a target="_blank" href="images/icp/zhizhao.jpg">营业执照 </a>
+		   </p>
+		   <style>
+.zhanzhang img{
+	display:inline-block;text-decoration:none;padding-left:2px;
+}
+		   </style>
+		   <p class="copyright">联系电话：010-63468408 E-mail:pyang@coin001.com</p>
+     </div>
+</div>
+	</div></div></div></div>
+<script language="JavaScript" src="js/global.js"></script>
+<script language="JavaScript">
+var openmenu = {'td_userinfomore' : 'menu_userinfomore','td_u' : 'menu_u','td_home' : 'menu_home','td_profile' : 'menu_profile','td_message' : 'menu_message','td_sort' : 'menu_sort'};
+read.InitMenu();
+</script>
+
+</body>
+</html>

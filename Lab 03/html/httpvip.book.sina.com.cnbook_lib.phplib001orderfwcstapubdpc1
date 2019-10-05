@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>404</title>
+<link rel="shortcut icon" href="http://static.book.weibo.com/wwwv2/images/ico.ico?version=0.418" />
+<link href="http://vipbookedge.sinaedge.com/static/static/css/book/sr.global.css?version=0.256" rel="stylesheet" type="text/css" />
+<link href="http://vipbookedge.sinaedge.com/static/static/css/book/sr.jumppage.css?version=0.256" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://vipbookedge.sinaedge.com/static/static/package/jquery.min.js?version=0.256"></script>
+</head>
+<body>
+<div class="sr-weibo-top">
+	<div id="weibo_top_public"></div>
+    <script src="http://js.t.sinajs.cn/t4/home/js/public/topInit.js?version=0.0091355821117"></script>
+</div>
+
+ <div class="WDS_global_nav" id="WDS_TopNav">
+
+</div>
+
+<div class="head_box">
+    <div class="ft_head">
+        <div class="logo"><h1>小说阅读推荐</h1><a href="http://vip.book.sina.com.cn/">微博读书</a></div>
+        <div class="menu">
+            <ul>
+                <li class="cur center"><h2><a href='http://vip.book.sina.com.cn/' target='_self'>首页</a></h2></li>
+                <li class="b_line"></li>
+                <!-- <li class="center"><h2><a href='http://vip.book.sina.com.cn/rank.html' target='_self'>榜单</a></h2></li>-->
+                <li><h2><a href='http://book.weibo.com/top' target='_blank'>亚洲好书榜</a></h2></li>
+				<li class="b_line"></li>
+				<li><h2><a href='http://vip.book.sina.com.cn/weibobook?nwm=book_pc_0050' target='_blank'>书城</a></h2><span class='new'></span></li>
+            </ul>
+        </div>
+        <div class="search sr-js-searchbox" style="display:block">
+				<dl>
+					<dd>
+						<span class="input"><input value="找喜欢的作者和书" type="text" search-url="http://vip.book.sina.com.cn/search?words={keyword}" default-url="http://vip.book.sina.com.cn/search"/></span>
+					</dd>
+					<dt>
+						<a class="btn_search" href="javascript:;"><span>搜 索</span></a>
+					</dt>
+				</dl>
+				<div class="clear"></div>
+			</div>
+        <div class="clear"></div>
+                <div class="addFavorite" id="favorite" title="微博读书-分享改变阅读">
+                <a href='http://book.weibo.com' onclick='return addFavorite();'  title="微博读书-分享改变阅读" rel="sidebar"></a>
+				<!-- javascript:window.external.AddFavorite('http://book.weibo.com/',' 微博读书')' -->
+		</div>
+		<script type="text/javascript">
+                function addFavorite() {
+                    var sURL = window.location.href;
+                    var sTitle = document.title;
+                    try {
+                        window.external.addFavorite(sURL, sTitle);
+                    } catch (e) {
+                        if(window.navigator.userAgent.toLowerCase().indexOf("firefox")<0)
+	                        {
+	                        	 alert("您的浏览器不支持，请按 Ctrl+D 手动收藏！");
+    	                         return false;
+	                        }
+                    }
+                };
+               window.onload = function(){
+               	 setTimeout(function(){
+	                	document.getElementById('favorite').style.display = 'none';
+	                },30000)
+               }
+	    </script>
+	    	</div>
+</div>
+<!-- 导航条 模块 结束 --><!--主体部分-->
+<div class="sr-body">
+	<div class="sr-body-wrap">
+    	<div class="sr-nofound-error">
+    		            <div class="sr-error-text">404 <span class="subText">ERROR</span></div>
+                        <div class="sr-error-juump" id="sr-js-error-juump">
+            	<p>如果没有自动跳转，请<a href="http://vip.book.sina.com.cn/weibobook">点击这里</a></p>
+                <p><span>5</span>秒之后跳转回首页</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--主体部分 结束-->
+<!--底部模块-->
+<!--底部模块-->
+<div class="sr-foot">
+	<div class="sr-foot-wrap">
+    	<div class="sr-foot-main">
+            <p class="sr-foot-link">
+            <a href="http://help.weibo.com/?refer=didao&bottomnav=1&wvr=5" target="_blank">微博帮助</a><em>|</em>
+            <a href="http://weiba.weibo.com/wanzhuanweibo?bottomnav=1&wvr=5" rel='nofollow' target="_blank">意见反馈</a><em>|</em>
+            <a href="http://open.weibo.com/?bottomnav=1&wvr=5" rel='nofollow' target="_blank">开放平台</a><em>|</em>
+            <a href="http://hr.weibo.com/?bottomnav=1&wvr=5" rel='nofollow' target="_blank">微博招聘</a><em>|</em>
+            <a href="http://news.sina.com.cn/guide/?bottomnav=1&wvr=5" target="_blank">新浪网导航</a><em>|</em>
+            <a href="http://vip.book.sina.com.cn/download.html" target="_blank">客户端下载</a>
+            <p class="sr-business-license"><span>北京微梦创科网络技术有限公司</span><a href="http://weibo.com/aj/static/jww.html?_wv=5" target="_blank">京网文[2011]0398-130号</a><a href="http://www.miibeian.gov.cn/" target="_blank">京ICP证100780号</a></p>
+            <p class="sr-Copyright"><span>Copyright © 1996-2015 SINA</span></p>
+        </div>
+    </div>
+</div>
+<!--底部模块 结束-->
+<script type="text/javascript" src="http://vipbookedge.sinaedge.com/static/static/package/common/p.common.js?version=0.256"></script>
+<script type="text/javascript" src="http://vipbookedge.sinaedge.com/static/static/scripts/book/sr.xing.js?version=0.256"></script>
+<script type="text/javascript">
+var $CONFIG = {
+		name: '',
+		uid: '',
+		any: '&wvr=4',
+		islogin: 0,
+		icon: '',
+		lang: "zh-cn",
+		verified: "",
+		backurl: "http://weibo.com/login.php?entry=book&url=http://vip.book.sina.com.cn/weibobook?_t=1570273322",
+		verify: "220",
+		entry: "book",
+		_wv: '5'
+	};
+	WBtopGlobal && WBtopGlobal.init($CONFIG);//WBtopPublic
+	//'http://book.weibo.com/ajax/user/topuserinfo'
+	WDStopNav && WDStopNav.init('/ajax/user/topuserinfo?_t=1570273322');
+</script><!--底部模块 结束-->
+<script type="text/javascript">
+//自动跳转处理方法
+(function(){
+
+var error = $('#sr-js-error-juump');
+var numElement = error.find('span');
+var url = error.find('a').attr('href') ? error.find('a').attr('href') : SMK.config.get('host'); 
+
+//自动跳转处理事件
+var errorPlay = function(){
+	var num = parseInt(numElement.html()) - 1;
+	if(num > 0) setTimeout(errorPlay,1000);
+	if(num == 0) window.location.href = url;
+	numElement.html(num);
+}
+
+//初始化处理事件
+setTimeout(errorPlay,1000);
+
+})();
+
+</script>
+</body>
+</html>

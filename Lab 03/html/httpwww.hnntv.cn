@@ -1,0 +1,3588 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>海南网络广播电视台</title>
+	<link rel="icon" href="http://www.hnntv.cn/favicon51.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="http://www.hnntv.cn/favicon51.ico" type="image/x-icon"> 
+	<!-- 模板样式1 -->
+	<link  rel="stylesheet" href="http://tv.hnntv.cn/t/1/13/images/base.css"/>
+	<!-- 通用样式 -->
+	<link  rel="stylesheet" href="http://tv.hnntv.cn/t/1/13/images/style.css"/>
+	<!-- 首页样式 -->
+	<link  rel="stylesheet" href="http://tv.hnntv.cn/t/1/13/images/index.css"/>
+	<!-- JS -->
+	<script src="http://tv.hnntv.cn/t/1/13/images/jquery.js"></script>
+	<script src="http://tv.hnntv.cn/t/1/13/images/jquery_002.js" type="text/javascript"></script>
+	<script src="http://tv.hnntv.cn/t/1/13/images/project.js"></script>
+	<script src="http://tv.hnntv.cn/t/1/13/images/g.js"></script>
+	<!-- 模板JS -->
+	<script src="http://tv.hnntv.cn/t/1/13/images/jquery_003.js"></script>
+	<script src="http://tv.hnntv.cn/t/1/13/images/base.js"></script>
+	<script src="http://tv.hnntv.cn/t/1/13/images/swfobject.js"></script>
+	
+
+    <style type="text/css">
+/*
+ html{
+    -webkit-filter:grayscale(100%);
+    -moz-filter:grayscale(100%);
+    -ms-filter:grayscale(100%);
+    -o-filter:grayscale(100%);
+    filter:grayscale(100%);
+    filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)
+}
+*{
+    -moz-filter: grayscale(100%); 
+    -ms-filter: grayscale(100%); 
+    -o-filter: grayscale(100%); 
+    filter: gray;
+}
+*/
+
+
+/*热点新闻导航开始1*/
+.cell_3116_{background:#fff;font-size:20px; height:; line-height:50px;overflow:hidden;/*border:1px solid #ddd;*/ border-top: #666666 2px solid;margin-top:;}
+.cell_3116_ li{float:left; width:132px;border-right:1px solid #ddd;text-align:center;}
+.cell_3116_ li.go-home{background:none;padding:0 10px; color:red; font-family:微软雅黑; font-size:18px; font-weight:bold;}
+.cell_3116_ li a{color:#666;padding:0 5px; font-family:微软雅黑; font-size:20px;font-weight:700;}
+.cell_3116_ li.current{background:#036; color:}
+.cell_3116_ li.current a{ color:}
+.cell_3116_ li a:hover{text-decoration:none; color:;}
+
+
+
+/* 海视*/
+
+.cell_1821_ li a:hover{text-decoration:underline; }
+.cell_1820_ li a:hover{text-decoration: underline; }
+.cell_3136_{height:50px; line-height:;  padding:;border-right:1px solid #ddd; text-align:center;border-top:2px solid #666; }
+.cell_3136_ a:hover{background:#ff5e01;}
+.cell_3136_ .tl-header a{display:block;overflow:hidden;width:130px; color:#666; font-size:18px; font-family:"Microsoft YaHei";}
+.cell_3136_ .tl-header{ float:left;}
+.cell_3136_ .tl-more{float:right; font-family:tahoma, arial; }
+.cell_3136_ .tl-more a{color:;font-size:;font-weight:}
+
+.cell_3140_{background:; height:; line-height:47px; padding:0 27px; margin:;overflow:hidden;border-right:1px solid #ddd;border-top:2px solid #666; }
+.cell_3140_ .tl-header{ float:left; margin-right:;}
+.cell_3140_ .tl-header a{font-size:18px; color:#666; font-weight:; font-family:微软雅黑; width:;display:width:128px;}
+.cell_3140_ .tl-more{ float:right; font-family:tahoma, arial; }
+.cell_3140_ .tl-more a{color:; font-size:; }
+.cell_3140_ a:hover{background:#ff5e01;}
+
+.cell_3141_{background:; height:; line-height:47px; padding:0 27px; margin:;overflow:hidden;/*border-right:;*/border-top:2px solid #666; }
+.cell_3141_ .tl-header{ float:left; margin-right:;}
+.cell_3141_ .tl-header a{font-size:18px; color:#666; font-weight:; font-family:微软雅黑; width:;display:width:128px;}
+.cell_3141_ .tl-more{ float:right; font-family:tahoma, arial; }
+.cell_3141_ .tl-more a{color:; font-size:; }
+.cell_3141_ a:hover{background:#ff5e01;}
+
+.tabslist .cur a{ color:#FFF;}
+.tabslist  .cur{background:#ff5e01;}
+
+
+
+
+
+
+
+/* 图片*/
+.cell_3142_{ height:47px; line-height:47px; padding:0 20px; margin:0 0 10px 0;overflow:hidden;border-right:}
+.cell_3142_ .tl-header{ float:left;}
+.cell_3142_ .tl-header a{font-size:20px; color:#9C9C9D; font-weight:700; font-family:微软雅黑}
+.cell_3142_ .tl-more{ float:right; font-family:tahoma, arial; }
+.cell_3142_ .tl-more a{color:#CDCDCE; font-size:18px; font-family:微软雅黑 }
+.cell_3142_ .tl-header a:hover{color: #ff5e01;text-decoration:none;}
+
+
+/*专题*/
+.cell_3160_{background:; height:; line-height:40px; padding:0 2px; margin:;overflow:hidden;border-right:}
+.cell_3160_ .tl-header{ float:left;}
+.cell_3160_ .tl-header a{font-size:20px; color:#9C9C9D; font-weight:700; font-family:微软雅黑}
+.cell_3160_ .tl-more{ float:right; font-family:tahoma, arial; }
+.cell_3160_ .tl-more a{color:#CDCDCE; font-size:18px; font-family:微软雅黑 }
+.cell_3160_ .tl-header a:hover{color:;text-decoration:none;}
+
+
+
+/* 直播*/
+.cell_3740_{background:url(http://tv.hnntv.cn/t/1/13/images/untitled.png) no-repeat 65px center transparent; height:; line-height:45px; padding:0 30px 0 20px; margin:;overflow:hidden;border-right:1px solid #dddddd;border:}
+.cell_3740_ .tl-header{ float:left; margin-right:;}
+.cell_3740_ .tl-header a{font-size:20px; color:; font-weight:700; font-family:微软雅黑; width:95px;display:}
+.cell_3740_ .tl-more{ float:right; font-family:tahoma, arial; }
+.cell_3740_ .tl-more a{color:; font-size:; }
+.cell_3740_ a:hover{color:#ff5e01;}
+
+.cell_3740_ .tl-header.cur a{ color:;}
+.cell_3740_ .tl-header.cur{background:;}
+
+/* 频道*/
+.cell_3741_{background:;font-size:16px; height:; line-height:40px;overflow:hidden;width:1133px;}
+.cell_3741_ li{float:left; /*text-align:center;*/ background:#efefef;width:140px; line-height:40px;height:40px;margin:0 0 1px 1px}
+.cell_3741_ li.go-home{background:none;}
+.cell_3741_ li a{width:140px;color:#8a8a8a;padding:0 0 0 10px; font-family:微软雅黑; font-size:16px;font-weight:100;display:inline-block;height:40px}
+.cell_3741_ li.cur{color:#fff;}
+.cell_3741_ li.cur a{color:#fff;background:#ff5e01}
+.cell_3741_ li a:hover{text-decoration:none; color:#fff; background:#9a9a9a;}
+
+
+/* 节目*/
+.cell_3742_{background:; height:; line-height:45px; padding:0 20px; margin:;overflow:hidden;border-right:1px solid #dddddd;border:}
+.cell_3742_ .tl-header{ float:left; margin-right:;}
+.cell_3742_ .tl-header a{font-size:20px; color:#333; font-weight:700; font-family:微软雅黑; width:;display:}
+.cell_3742_ .tl-more{ float:right; font-family:tahoma, arial; }
+.cell_3742_ .tl-more a{color:; font-size:; }
+.cell_3742_ a:hover{color:#ff5e01;}
+.cell_3742_ .tl-header.cur a{ color:;}
+.cell_3742_ .tl-header.cur{background:;}
+
+
+
+
+
+
+/* 频道导航开始*/
+.cell_5184_{padding:;background:;line-height:36px;font-size:14px;color:#666;width:;border-bottom:;}
+.cell_5184_ li{background:;padding-left:10px;float:left;width:;border-bottom:;margin:;height:;text-align:left}
+.cell_5184_ li a{font-size:14px;color:#666; font-family:}
+.cell_5184_ a{font-size:14px;color:#666; font-family:}
+.cell_5184_ .time{color:;font-size:14px;float:right;display:none;}
+.
+
+
+/* 媒体官方开始*/
+.cell_6736_{background:; height:; line-height:45px; padding:0 20px; margin:;overflow:hidden;border-right:1px solid #ddd;border:}
+.cell_6736_ .tl-header{ float:left;margin-left:30px; margin-right:20px;}
+.cell_6736_ .tl-header a{font-size:20px; color:#333; font-weight:700; font-family:微软雅黑; width:;display:}
+.cell_6736_ .tl-more{ float:right; font-family:tahoma, arial; }
+.cell_6736_ .tl-more a{color:#FFF; font-size:14px; }
+.cell_6736_ a:hover{color:#ff5e01;}
+.cell_6736_ .tl-header.cur a{ color:;}
+.cell_6736_ .tl-header.cur{background:;}
+
+/* 市县开始*/
+.cell_6737_{background:; height:; line-height:45px; padding:0 20px; margin:;overflow:hidden;border-right:1px solid #ddd;border:}
+.cell_6737_ .tl-header{ float:left; margin-right:;}
+.cell_6737_ .tl-header a{font-size:20px; color:#333; font-weight:700; font-family:微软雅黑; width:;display:}
+.cell_6737_ .tl-more{ float:right; font-family:tahoma, arial; }
+.cell_6737_ .tl-more a{color:#FFF; font-size:14px; }
+.cell_6737_ a:hover{color:#ff5e01;}
+.cell_6737_ .tl-header.cur a{ color:;}
+.cell_6737_ .tl-header.cur{background:;}
+
+/* 主持人开始*/
+.cell_6738_{background:; height:; line-height:45px; padding:0 20px; margin:;overflow:hidden;border-right:1px solid #ddd;border:}
+.cell_6738_ .tl-header{ float:left; margin-right:;}
+.cell_6738_ .tl-header a{font-size:20px; color:#333; font-weight:700; font-family:微软雅黑; width:;display:}
+.cell_6738_ .tl-more{ float:right; font-family:tahoma, arial; }
+.cell_6738_ .tl-more a{color:#FFF; font-size:14px; }
+.cell_6738_ a:hover{color:#ff5e01;}
+.cell_6738_ .tl-header.cur a{ color:;}
+.cell_6738_ .tl-header.cur{background:;}
+
+/* 导航开始*/
+.cell_7647_{background:; height:; line-height:45px; padding:0 10px; margin:;overflow:hidden;border-right:1px solid #ddd}
+.cell_7647_ .tl-header{ float:left;}
+.cell_7647_ .tl-header a{font-size:20px; color:#333; font-weight:700; font-family:微软雅黑}
+.cell_7647_ .tl-more{ float:right; font-family:tahoma, arial; }
+.cell_7647_ .tl-more a{color:; font-size:; font-family:微软雅黑 }
+.cell_7647_ .tl-header a:hover{color:#ff5e01;text-decoration:none;}
+
+/* 头部导航开始*/
+.adlf {
+    position:absolute;
+    margin:0 auto;
+	left: 50%;
+	top: 174px;
+	width: 0px;
+}
+.adclose {
+	display:block;
+	width: 100%;
+	height: 20px;
+	text-align: center;
+	font-weight: bold;
+	line-height: 20px;
+	background: #999;
+	color: #fff;
+}
+
+.gdtv_topmenu0{
+    margin: 0 auto;
+
+	width: 100%;
+	height: 40px;
+	
+}
+.gdtv_topmenu{
+	margin: 0 auto;
+	background: #ff5e01;
+	width: 1200px;
+	height: 40px;
+}
+.gdtv_topmenu .gtm_l {
+	margin: 2px 0 3px 23px;
+	float: left;
+	width: 500px;
+	height: 35px;
+}
+.gdtv_topmenu .gtm_l ul li{
+	float:left;
+	margin: 0 0 0 15px;
+	height: 35px;
+	color: #fff;
+	font: 14px 微软雅黑,宋体,Tahoma,Verdana,sans-serif;
+	line-height: 35px;
+}
+.gdtv_topmenu .gtm_l ul li .grtn{
+	color: #fff;
+	font: 14px 微软雅黑,宋体,Tahoma,Verdana,sans-serif;
+	line-height: 35px;
+}
+.gdtv_topmenu .gtm_l ul li .lzw{
+	color: #fff;
+	font: 14px 微软雅黑,宋体,Tahoma,Verdana,sans-serif;
+	font-weight: bold;
+	line-height: 35px;
+}
+.gdtv_topmenu .gtm_r {
+	margin: 2px 0 3px 30px;
+	float: right;
+	width:200px;
+	height: 35px;
+	line-height: 35px;
+}
+.gdtv_topmenu .gtm_r ul li{
+	color:#fff;
+	font: 14px 微软雅黑,宋体,Tahoma,Verdana,sans-serif;
+	line-height: 35px;
+}
+.gdtv_topmenu .gtm_r ul li a{
+	float:left;
+	margin: 0;
+	padding: 0 10px;
+	height: 35px;
+	color: #fff;
+	font: 14px 微软雅黑,宋体,Tahoma,Verdana,sans-serif;
+	line-height: 35px;
+}
+.gdtv_topmenu .gtm_r ul li.li_wx{
+	position:relative;
+}
+.gdtv_topmenu .gtm_r ul li.li_wx .wx_tp{
+	display:none;
+	position:absolute;
+	border:1px solid #d3d3d3;
+	padding:10px;
+	top:38px;
+	left:-55px;
+	z-index:999999;
+	background:#fff;
+}
+.gdtv_topmenu .gtm_r ul li.li_wx a{
+	display:block;
+	text-align:center;
+	height:35px;
+	line-height:35px;
+}
+.gdtv_topmenu .gtm_r ul li.li_wx a:hover{
+	background:#7abd27;
+	color:#fff;
+}
+
+.pindao{ width:1200px; height:35px; margin:auto; margin-top:0px; }
+.sh{ margin-bottom:10px;}
+
+
+#othertext{display:none}
+#guanggaowei01 { width:1200px; height:50px; margin:0 auto; overflow:hidden; margin-bottom:10px;}
+</style>
+
+
+
+<!--泰山压顶广告开始-->
+<!--
+<style>
+.gg_full {POSITION: relative; MARGIN: 0px auto; WIDTH: 1200px;background:#e8e8e8}
+.gg_full .gg_fcon {	DISPLAY: none; HEIGHT: 400px;}
+</style>
+
+<DIV class="gg_full wrapfix" style="">
+<DIV class="gg_fcon"></DIV></DIV>
+
+<script language="JavaScript" type="text/javascript">
+var gg960ShowTime = 4000; //播放时间
+var gg960Time = null;
+function open_gg960(showBtn){
+    $('.gg_full .gg_fcon').html(gg960Con).slideDown(300,function(){
+        if(showBtn !== false){
+            $('.gg_full .gg_fbtn').fadeIn();
+        }
+        if(gg960Time){clearTimeout(gg960Time);}
+        gg960Time = setTimeout(close_gg960,gg960ShowTime);
+    });
+}
+function close_gg960(){
+    $('.gg_full .gg_fcon').slideUp(500,function(){
+        $(this).html('');
+    });
+}
+var gg960Con;
+var fullAdUrl = 'http://www.hnntv.cn/wzzt/hnzcf/index.html'
+var fullAdName = 'http://www.hnntv.cn/imageszt/qpadabcd.jpg';
+if(fullAdName)
+{
+gg960Con = '<a href="'+fullAdUrl+'" target="_blank"><img width="1200" height="400" src="'+fullAdName+'"/></a>';
+setTimeout(open_gg960,1500);//延迟显示
+}
+</SCRIPT>
+
+-->
+
+<!--泰山压顶广告结束-->
+
+
+
+
+
+
+<meta name="keywords" content="海南网络广播电视台,海南网台"><meta name="description" content="">
+<script type="text/javascript">
+var gUserAgent= navigator.userAgent.toLowerCase();
+var m2o_site={"id":"1","name":"\u6d77\u5357\u7f51\u7edc\u5e7f\u64ad\u7535\u89c6\u53f0","domain":"hnntv.cn","domain_id":"188"};var m2o_column={"id":null,"title":null,"keywords":null};var m2o_content = {"id":null,"title":null,"keywords":null,"bundle_id":null,"module_id":null,"content_id":null,"content_fromid":null,"rid":null};</script>
+<style type="text/css">.cell_3940_{padding:;}
+.cell_3940_ .text, .cell_3940_ .submit{border:1px solid rgb(175, 175, 175);box-shadow:none;border-radius:0;color:#333;background:#FFF;line-height:18px;outline:none;font-size:14px;}
+.cell_3940_ .text{width:185px;border-right:none;padding:5px 6px;height:18px;}
+.cell_3940_ .submit{cursor:pointer;margin:0;width:60px;background: #ff5e01;border:none;height:30px;line-height:28px;color:#FFF;}
+.cell_3940_ .search-select{height:28px;border:1px solid rgb(175, 175, 175);border-right:none;width:50px;color:rgb(102,102,102);padding:0 0 0 10px;line-height:28px;position:relative;cursor:pointer;font-size:14px;}
+.cell_3940_ .search-select h5{font-weight:100;background:url(http://tv.hnntv.cn/t/icon/201308/20130801102050zEdX.png) no-repeat 38px 12px transparent;}
+.cell_3940_ .search-select-item{position:absolute;border:1px solid rgb(175, 175, 175);border-bottom:none;background:#FFF;top:28px;left:-1px;width:60px;}
+.cell_3940_ .search-select-item li{border-bottom:1px solid rgb(175, 175, 175);padding:0 0 0 10px;}
+.cell_3941_{line-height: 36px; font-family:"Hiragino Sans GB","Microsoft YaHei";font-size:30px;}
+.cell_3941_ li{/*text-indent:10px;*/float:none;text-align:center;/*white-space:nowrap;*/}
+.cell_3941_ li a{margin-right:5px;color:;font-family:"Hiragino Sans GB","Microsoft YaHei";font-size:30px;}
+.cell_3941_ li a:hover{text-decoration:none; }
+.cell_3941_ li .beforewz{padding-right:5px; border-right:1px solid #9da9b4; }
+.cell_3941_ li .afterwz{padding-left:5px; border-left:1px solid #9da9b4; }
+
+.cell_3942_{font:14px/40px "微软雅黑","Arial Narrow",HELVETICA; position: relative;float: left;left: 50%;}
+.cell_3942_ li{text-indent:;position: relative;left: -50%;text-align:center;}
+.cell_3942_ li a{margin-right:5px;color:#666; }
+.cell_3942_ li a:hover{text-decoration:none; }
+.cell_3942_ li .beforewz{padding-right:5px; border-right:1px solid #9da9b4; }
+.cell_3942_ li .afterwz{padding-left:5px; border-left:1px solid #9da9b4; }
+.cell_3942_ .fline{margin:0 3px;}
+
+.cell_4230_{position:relative;overflow:hidden;width:570px;height:321px;}
+.cell_4230_ .slide-content li{width:570px;height:321px;float:left;position:relative;}
+.cell_4230_ .slide-content li img{width:570px;height:321px;}
+.cell_4230_ .focus-overlay{background:url(http://www.hnntv.cn/imageszt/slide_mask1.png) 0 bottom repeat-x; position:absolute;bottom:0;right:0;width:100%;height:50px;opacity:0.5;filter:alpha(opacity=50);}
+.cell_4230_ .focus-info{position:absolute;bottom:0;width:100%;height:80px;line-height:80px;left:0;text-align:center}
+.cell_4230_ .focus-title{padding:8px 10px 3px;}
+.cell_4230_ .focus-title a{color:#FFF;font-size:18px;}
+.cell_4230_ .focus-desc{color:#666;font-size:12px;padding:0 10px;}
+.cell_4230_  .ctrl-btn a{width:50px;height:70px;position:absolute;top:50%;margin-top:-35px;cursor:pointer;opacity:.3;filter:alpha(opacity=30);}
+.cell_4230_   .ctrl-btn a:hover{opacity:1;filter:alpha(opacity=100);text-decoration:none}
+.cell_4230_  .ctrl-btn .ctrl-prev{left:0;background:url(http://tv.hnntv.cn/t/1/9/images/201510291804309sE3.png) no-repeat left top transparent;}
+.cell_4230_  .ctrl-btn .ctrl-next{right:0;background:url(http://tv.hnntv.cn/t/1/9/images/20151029180516UZfi.png) no-repeat right top transparent;}
+.cell_4230_ .switchable-triggers{position:absolute;display:none;bottom:;right:5px;z-index:10001;}
+.cell_4230_ .switchable-triggers li{float:left;width:18px;height:8px;overflow:hidden;text-indent:-999em;background:#FFF;margin-right:5px;cursor:pointer}
+.cell_4230_.switchable-triggers li.current{background:;width:22px;}
+
+
+.cell_3944_{line-height: 30px; font-family:"Hiragino Sans GB","Microsoft YaHei";font-size:16px;}
+.cell_3944_ li{/*text-indent:10px;*/float:none;text-align:left;/*white-space:nowrap;*/}
+.cell_3944_ li a{margin-right:5px;color:;font-family:"Hiragino Sans GB","Microsoft YaHei";font-size:16px;}
+.cell_3944_ li a:hover{text-decoration:none; }
+.cell_3944_ li .beforewz{padding-right:5px; border-right:1px solid #9da9b4; }
+.cell_3944_ li .afterwz{padding-left:5px; border-left:1px solid #9da9b4; }
+
+.cell_3945_{line-height: 30px; font-family:"Hiragino Sans GB","Microsoft YaHei";font-size:16px;}
+.cell_3945_ li{/*text-indent:10px;*/float:none;text-align:left;/*white-space:nowrap;*/}
+.cell_3945_ li a{margin-right:5px;color:;font-family:"Hiragino Sans GB","Microsoft YaHei";font-size:16px;}
+.cell_3945_ li a:hover{text-decoration:none; }
+.cell_3945_ li .beforewz{padding-right:5px; border-right:1px solid #9da9b4; }
+.cell_3945_ li .afterwz{padding-left:5px; border-left:1px solid #9da9b4; }
+
+.cell_3947_ {padding:; height: 510px;}
+.cell_3947_  ul{width:110%}
+.cell_3947_  li{float:left;display:inline;line-height:20px;width:252px;height:230px;margin:20px 0 10px 10px ;font-size:16px;position:relative;}
+.cell_3947_  li img{border:1px solid #aeaeae;width:250px;height:142px}
+.cell_3947_  p{text-align:;background:;position:absolute;top:;line-height:26px;background:#000;opacity:.6;filter:alpha(opacity=60);width:242px;padding:0 5px;}
+.cell_3947_  p .span_title{color:;font-size:16px;font-family:"宋体";}
+.cell_3947_  li .colname{position:absolute;background:#000;opacity:.6;filter:alpha(opacity=60);line-height:22px;padding:0 10px;display:inline-block;top:15px;left:1px;color:;font-size:16px}
+.cell_3947_  .focus-desc{color:#717171;font-size:;padding:15px 5px;font-weight:700;font-family:"微软雅黑";}
+.cell_3947_ .focus-desc:hover{color:;}
+
+.cell_3948_ {padding:; height: 510px;}
+.cell_3948_  ul{width:110%}
+.cell_3948_  li{float:left;display:inline;line-height:20px;width:252px;height:220px;margin:10px 0 10px 10px ;font-size:16px;position:relative;}
+.cell_3948_  li img{border:1px solid #aeaeae;width:250px;height:142px}
+.cell_3948_  p{text-align:;background:;position:absolute;top:;line-height:26px;background:#000;opacity:.6;filter:alpha(opacity=60);width:242px;padding:0 5px;}
+.cell_3948_  p .span_title{color:;font-size:16px;font-family:"宋体";}
+.cell_3948_  li .colname{position:absolute;background:#000;opacity:.6;filter:alpha(opacity=60);line-height:22px;padding:0 10px;display:inline-block;top:15px;left:1px;color:;font-size:16px}
+.cell_3948_  .focus-desc{color:#717171;font-size:;padding:15px 5px;font-weight:700;font-family:"微软雅黑";}
+.cell_3948_ .focus-desc:hover{color:;}
+
+.cell_3949_ {padding:; height: 510px;}
+.cell_3949_  ul{width:110%}
+.cell_3949_  li{float:left;display:inline;line-height:20px;width:252px;height:215px;margin:20px 0 10px 10px ;font-size:16px;position:relative;}
+.cell_3949_  li img{border:1px solid #aeaeae;width:250px;height:142px}
+.cell_3949_  p{text-align:;background:;position:absolute;top:;line-height:26px;background:#000;opacity:.6;filter:alpha(opacity=60);width:242px;padding:0 5px;}
+.cell_3949_  p .span_title{color:;font-size:16px;font-family:"宋体";}
+.cell_3949_  li .colname{position:absolute;background:#000;opacity:.6;filter:alpha(opacity=60);line-height:22px;padding:0 10px;display:inline-block;top:15px;left:1px;color:;font-size:16px}
+.cell_3949_  .focus-desc{color:#717171;font-size:;padding:15px 5px;font-weight:700;font-family:"微软雅黑";}
+.cell_3949_ .focus-desc:hover{color:;}
+
+.cell_3950_ {padding:; height: 510px;}
+.cell_3950_  ul{width:110%}
+.cell_3950_  li{float:left;display:inline;line-height:20px;width:252px;height:215px;margin:20px 0 10px 10px ;font-size:16px;position:relative;}
+.cell_3950_  li img{border:1px solid #aeaeae;width:250px;height:142px}
+.cell_3950_  p{text-align:;background:;position:absolute;top:;line-height:26px;background:#000;opacity:.6;filter:alpha(opacity=60);width:242px;padding:0 5px;}
+.cell_3950_  p .span_title{color:;font-size:16px;font-family:"宋体";}
+.cell_3950_  li .colname{position:absolute;background:#000;opacity:.6;filter:alpha(opacity=60);line-height:22px;padding:0 10px;display:inline-block;top:15px;left:1px;color:;font-size:16px}
+.cell_3950_  .focus-desc{color:#717171;font-size:;padding:15px 5px;font-weight:700;font-family:"微软雅黑";}
+.cell_3950_ .focus-desc:hover{color:;}
+
+.cell_3951_ {padding:; height: 510px;}
+.cell_3951_  ul{width:110%}
+.cell_3951_  li{float:left;display:inline;line-height:20px;width:252px;height:215px;margin:20px 0 10px 10px ;font-size:16px;position:relative;}
+.cell_3951_  li img{border:1px solid #aeaeae;width:250px;height:142px}
+.cell_3951_  p{text-align:;background:;position:absolute;top:;line-height:26px;background:#000;opacity:.6;filter:alpha(opacity=60);width:242px;padding:0 5px;}
+.cell_3951_  p .span_title{color:;font-size:16px;font-family:"宋体";}
+.cell_3951_  li .colname{position:absolute;background:#000;opacity:.6;filter:alpha(opacity=60);line-height:22px;padding:0 10px;display:inline-block;top:15px;left:1px;color:;font-size:16px}
+.cell_3951_  .focus-desc{color:#717171;font-size:;padding:15px 5px;font-weight:700;font-family:"微软雅黑";}
+.cell_3951_ .focus-desc:hover{color:;}
+
+.cell_3952_ {padding:; height: 510px;}
+.cell_3952_  ul{width:110%}
+.cell_3952_  li{float:left;display:inline;line-height:20px;width:252px;height:215px;margin:20px 0 10px 10px ;font-size:16px;position:relative;}
+.cell_3952_  li img{border:1px solid #aeaeae;width:250px;height:142px}
+.cell_3952_  p{text-align:;background:;position:absolute;top:;line-height:26px;background:#000;opacity:.6;filter:alpha(opacity=60);width:242px;padding:0 5px;}
+.cell_3952_  p .span_title{color:;font-size:16px;font-family:"宋体";}
+.cell_3952_  li .colname{position:absolute;background:#000;opacity:.6;filter:alpha(opacity=60);line-height:22px;padding:0 10px;display:inline-block;top:15px;left:1px;color:;font-size:16px}
+.cell_3952_  .focus-desc{color:#717171;font-size:;padding:15px 5px;font-weight:700;font-family:"微软雅黑";}
+.cell_3952_ .focus-desc:hover{color:#ff5e01;}
+
+.cell_3954_{background:; height:; line-height:38px; padding:0 20px; margin:;overflow:hidden;border-right:{#border-right};border:}
+.cell_3954_ .tl-header{ float:left; margin-right:{#margin-right};}
+.cell_3954_ .tl-header a{font-size:20px; color:#666;font-weight:{#font-weight}; font-family:微软雅黑; width:;display:}
+
+.cell_3954_ .tl-more{ float:right; font-family:tahoma, arial; }
+.cell_3954_ .tl-more a{color:#cdcdce; font-size:14px;}
+.cell_3954_ a:hover{color:#ff5e01;}
+.cell_3954_ .tl-header.cur a{ color:;}
+.cell_3954_ .tl-header.cur{background:;}
+.cell_3955_{background:;height:;line-height:38px;font-size:14px;overflow:hidden;}
+.cell_3955_ li{float:left;background:url(http://tv.hnntv.cn/t/1/9/images/20151010142055r0kS.jpg) no-repeat right center transparent;}
+.cell_3955_ li.go-home{background:none;}
+.cell_3955_ li a{color:#999;padding:0 5px; font-family:宋体; font-size:14px;font-weight:700;}
+.cell_3955_ li.cur{color:#C5000A;}
+.cell_3955_ li.cur a{color:#C5000A;background:}
+.cell_3955_ a:hover{text-decoration:none; color:#ff5e01; background:}
+.cell_3956_{padding:0px 0 10px 38px;position:relative;zoom:1}
+.cell_3956_ .inner{width:758px;height:162px;overflow:hidden}
+.cell_3956_ .item{float:left;width:758px}
+.cell_3956_ .item li{float:left;width:204px;height:162px;margin:0 25px 0 15px}
+.cell_3956_ .item li p{padding:5px 0 0;text-align:left;line-height:23px}
+.cell_3956_ .item li a{color:#666;font-size:14px}
+.cell_3956_ .btn{width:50px;height:80px;position:absolute;top:60px;cursor:pointer;margin-top:-40px}
+.cell_3956_ .carousel-prev{left:0;background:url(http://tv.hnntv.cn/t/1/9/images/20150909172429QiV2.jpg) no-repeat left center transparent}
+.cell_3956_ .carousel-next{right:0;background:url(http://tv.hnntv.cn/t/1/9/images/20150909172438RdCB.jpg) no-repeat right center transparent}
+.cell_3958_{background:; height:; line-height:38px; padding:0 20px; margin:;overflow:hidden;border-right:{#border-right};border:}
+.cell_3958_ .tl-header{ float:left; margin-right:{#margin-right};}
+.cell_3958_ .tl-header a{font-size:20px; color:#666;font-weight:{#font-weight}; font-family:微软雅黑; width:;display:}
+
+.cell_3958_ .tl-more{ float:right; font-family:tahoma, arial; }
+.cell_3958_ .tl-more a{color:#cdcdce; font-size:14px;}
+.cell_3958_ a:hover{color:#ff5e01;}
+.cell_3958_ .tl-header.cur a{ color:;}
+.cell_3958_ .tl-header.cur{background:;}
+.cell_3959_{background:;height:;line-height:38px;font-size:14px;overflow:hidden;}
+.cell_3959_ li{float:left;background:url(http://tv.hnntv.cn/t/1/9/images/20151010142055r0kS.jpg) no-repeat right center transparent;}
+.cell_3959_ li.go-home{background:none;}
+.cell_3959_ li a{color:#999;padding:0 5px; font-family:宋体; font-size:14px;font-weight:700;}
+.cell_3959_ li.cur{color:#C5000A;}
+.cell_3959_ li.cur a{color:#C5000A;background:}
+.cell_3959_ a:hover{text-decoration:none; color:#ff5e01; background:}
+.cell_3960_{padding:0px 0 10px 38px;position:relative;zoom:1}
+.cell_3960_ .inner{width:758px;height:162px;overflow:hidden}
+.cell_3960_ .item{float:left;width:758px}
+.cell_3960_ .item li{float:left;width:204px;height:162px;margin:0 25px 0 15px}
+.cell_3960_ .item li p{padding:5px 0 0;text-align:left;line-height:23px}
+.cell_3960_ .item li a{color:#666;font-size:14px}
+.cell_3960_ .btn{width:50px;height:80px;position:absolute;top:60px;cursor:pointer;margin-top:-40px}
+.cell_3960_ .carousel-prev{left:0;background:url(http://tv.hnntv.cn/t/1/9/images/20150909172429QiV2.jpg) no-repeat left center transparent}
+.cell_3960_ .carousel-next{right:0;background:url(http://tv.hnntv.cn/t/1/9/images/20150909172438RdCB.jpg) no-repeat right center transparent}
+.cell_3961_{background:; height:; line-height:38px; padding:0 20px; margin:;overflow:hidden;border-right:{#border-right};border:}
+.cell_3961_ .tl-header{ float:left; margin-right:{#margin-right};}
+.cell_3961_ .tl-header a{font-size:20px; color:#666;font-weight:{#font-weight}; font-family:微软雅黑; width:;display:}
+
+.cell_3961_ .tl-more{ float:right; font-family:tahoma, arial; }
+.cell_3961_ .tl-more a{color:#cdcdce; font-size:14px;}
+.cell_3961_ a:hover{color:#ff5e01;}
+.cell_3961_ .tl-header.cur a{ color:;}
+.cell_3961_ .tl-header.cur{background:;}
+.cell_3962_{background:;height:;line-height:38px;font-size:14px;overflow:hidden;}
+.cell_3962_ li{float:left;background:url(http://tv.hnntv.cn/t/1/9/images/20151010142055r0kS.jpg) no-repeat right center transparent;}
+.cell_3962_ li.go-home{background:none;}
+.cell_3962_ li a{color:#999;padding:0 5px; font-family:宋体; font-size:14px;font-weight:700;}
+.cell_3962_ li.cur{color:#C5000A;}
+.cell_3962_ li.cur a{color:#C5000A;background:}
+.cell_3962_ a:hover{text-decoration:none; color:#ff5e01; background:}
+.cell_3963_{padding:0px 0 10px 38px;position:relative;zoom:1}
+.cell_3963_ .inner{width:758px;height:162px;overflow:hidden}
+.cell_3963_ .item{float:left;width:758px}
+.cell_3963_ .item li{float:left;width:204px;height:162px;margin:0 25px 0 15px}
+.cell_3963_ .item li p{padding:5px 0 0;text-align:left;line-height:23px}
+.cell_3963_ .item li a{color:#666;font-size:14px}
+.cell_3963_ .btn{width:50px;height:80px;position:absolute;top:60px;cursor:pointer;margin-top:-40px}
+.cell_3963_ .carousel-prev{left:0;background:url(http://tv.hnntv.cn/t/1/9/images/20150909172429QiV2.jpg) no-repeat left center transparent}
+.cell_3963_ .carousel-next{right:0;background:url(http://tv.hnntv.cn/t/1/9/images/20150909172438RdCB.jpg) no-repeat right center transparent}
+.cell_3964_{background:; height:; line-height:38px; padding:0 20px; margin:;overflow:hidden;border-right:{#border-right};border:}
+.cell_3964_ .tl-header{ float:left; margin-right:{#margin-right};}
+.cell_3964_ .tl-header a{font-size:20px; color:#666;font-weight:{#font-weight}; font-family:微软雅黑; width:;display:}
+
+.cell_3964_ .tl-more{ float:right; font-family:tahoma, arial; }
+.cell_3964_ .tl-more a{color:#cdcdce; font-size:14px;}
+.cell_3964_ a:hover{color:#ff5e01;}
+.cell_3964_ .tl-header.cur a{ color:;}
+.cell_3964_ .tl-header.cur{background:;}
+.cell_3965_{background:;height:;line-height:38px;font-size:14px;overflow:hidden;}
+.cell_3965_ li{float:left;background:url(http://tv.hnntv.cn/t/1/9/images/20151010142055r0kS.jpg) no-repeat right center transparent;}
+.cell_3965_ li.go-home{background:none;}
+.cell_3965_ li a{color:#999;padding:0 5px; font-family:宋体; font-size:14px;font-weight:700;}
+.cell_3965_ li.cur{color:#C5000A;}
+.cell_3965_ li.cur a{color:#C5000A;background:}
+.cell_3965_ a:hover{text-decoration:none; color:#ff5e01; background:}
+.cell_3966_{padding:0px 0 10px 38px;position:relative;zoom:1}
+.cell_3966_ .inner{width:758px;height:162px;overflow:hidden}
+.cell_3966_ .item{float:left;width:758px}
+.cell_3966_ .item li{float:left;width:204px;height:162px;margin:0 25px 0 15px}
+.cell_3966_ .item li p{padding:5px 0 0;text-align:left;line-height:23px}
+.cell_3966_ .item li a{color:#666;font-size:14px}
+.cell_3966_ .btn{width:50px;height:80px;position:absolute;top:60px;cursor:pointer;margin-top:-40px}
+.cell_3966_ .carousel-prev{left:0;background:url(http://tv.hnntv.cn/t/1/9/images/20150909172429QiV2.jpg) no-repeat left center transparent}
+.cell_3966_ .carousel-next{right:0;background:url(http://tv.hnntv.cn/t/1/9/images/20150909172438RdCB.jpg) no-repeat right center transparent}
+.cell_3967_{background:; height:; line-height:38px; padding:0 20px; margin:;overflow:hidden;border-right:{#border-right};border:}
+.cell_3967_ .tl-header{ float:left; margin-right:{#margin-right};}
+.cell_3967_ .tl-header a{font-size:20px; color:#666;font-weight:{#font-weight}; font-family:微软雅黑; width:;display:}
+
+.cell_3967_ .tl-more{ float:right; font-family:tahoma, arial; }
+.cell_3967_ .tl-more a{color:#cdcdce; font-size:14px;}
+.cell_3967_ a:hover{color:#ff5e01;}
+.cell_3967_ .tl-header.cur a{ color:;}
+.cell_3967_ .tl-header.cur{background:;}
+.cell_3968_{background:;height:;line-height:38px;font-size:14px;overflow:hidden;}
+.cell_3968_ li{float:left;background:url(http://tv.hnntv.cn/t/1/9/images/20151010142055r0kS.jpg) no-repeat right center transparent;}
+.cell_3968_ li.go-home{background:none;}
+.cell_3968_ li a{color:#999;padding:0 5px; font-family:宋体; font-size:14px;font-weight:700;}
+.cell_3968_ li.cur{color:#C5000A;}
+.cell_3968_ li.cur a{color:#C5000A;background:}
+.cell_3968_ a:hover{text-decoration:none; color:#ff5e01; background:}
+.cell_3969_{padding:0px 0 10px 38px;position:relative;zoom:1}
+.cell_3969_ .inner{width:758px;height:162px;overflow:hidden}
+.cell_3969_ .item{float:left;width:758px}
+.cell_3969_ .item li{float:left;width:204px;height:162px;margin:0 25px 0 15px}
+.cell_3969_ .item li p{padding:5px 0 0;text-align:left;line-height:23px}
+.cell_3969_ .item li a{color:#666;font-size:14px}
+.cell_3969_ .btn{width:50px;height:80px;position:absolute;top:60px;cursor:pointer;margin-top:-40px}
+.cell_3969_ .carousel-prev{left:0;background:url(http://tv.hnntv.cn/t/1/9/images/20150909172429QiV2.jpg) no-repeat left center transparent}
+.cell_3969_ .carousel-next{right:0;background:url(http://tv.hnntv.cn/t/1/9/images/20150909172438RdCB.jpg) no-repeat right center transparent}
+.cell_3970_{background:; height:; line-height:38px; padding:0 20px; margin:;overflow:hidden;border-right:{#border-right};border:}
+.cell_3970_ .tl-header{ float:left; margin-right:{#margin-right};}
+.cell_3970_ .tl-header a{font-size:20px; color:#666;font-weight:{#font-weight}; font-family:微软雅黑; width:;display:}
+
+.cell_3970_ .tl-more{ float:right; font-family:tahoma, arial; }
+.cell_3970_ .tl-more a{color:#cdcdce; font-size:14px;}
+.cell_3970_ a:hover{color:#ff5e01;}
+.cell_3970_ .tl-header.cur a{ color:;}
+.cell_3970_ .tl-header.cur{background:;}
+.cell_3971_{background:;height:;line-height:38px;font-size:14px;overflow:hidden;}
+.cell_3971_ li{float:left;background:url(http://tv.hnntv.cn/t/1/9/images/20151010142055r0kS.jpg) no-repeat right center transparent;}
+.cell_3971_ li.go-home{background:none;}
+.cell_3971_ li a{color:#999;padding:0 5px; font-family:宋体; font-size:14px;font-weight:700;}
+.cell_3971_ li.cur{color:#C5000A;}
+.cell_3971_ li.cur a{color:#C5000A;background:}
+.cell_3971_ a:hover{text-decoration:none; color:#ff5e01; background:}
+.cell_3972_{padding:0px 0 10px 38px;position:relative;zoom:1}
+.cell_3972_ .inner{width:758px;height:162px;overflow:hidden}
+.cell_3972_ .item{float:left;width:758px}
+.cell_3972_ .item li{float:left;width:204px;height:162px;margin:0 25px 0 15px}
+.cell_3972_ .item li p{padding:5px 0 0;text-align:left;line-height:23px}
+.cell_3972_ .item li a{color:#666;font-size:14px}
+.cell_3972_ .btn{width:50px;height:80px;position:absolute;top:60px;cursor:pointer;margin-top:-40px}
+.cell_3972_ .carousel-prev{left:0;background:url(http://tv.hnntv.cn/t/1/9/images/20150909172429QiV2.jpg) no-repeat left center transparent}
+.cell_3972_ .carousel-next{right:0;background:url(http://tv.hnntv.cn/t/1/9/images/20150909172438RdCB.jpg) no-repeat right center transparent}
+.cell_3973_{background:; height:; line-height:38px; padding:0 20px; margin:;overflow:hidden;border-right:{#border-right};border:}
+.cell_3973_ .tl-header{ float:left; margin-right:{#margin-right};}
+.cell_3973_ .tl-header a{font-size:20px; color:#666;font-weight:{#font-weight}; font-family:微软雅黑; width:;display:}
+
+.cell_3973_ .tl-more{ float:right; font-family:tahoma, arial; }
+.cell_3973_ .tl-more a{color:#cdcdce; font-size:14px;}
+.cell_3973_ a:hover{color:#ff5e01;}
+.cell_3973_ .tl-header.cur a{ color:;}
+.cell_3973_ .tl-header.cur{background:;}
+.cell_3974_{background:;height:;line-height:38px;font-size:14px;overflow:hidden;}
+.cell_3974_ li{float:left;background:url(http://tv.hnntv.cn/t/1/9/images/20151010142055r0kS.jpg) no-repeat right center transparent;}
+.cell_3974_ li.go-home{background:none;}
+.cell_3974_ li a{color:#999;padding:0 5px; font-family:宋体; font-size:14px;font-weight:700;}
+.cell_3974_ li.cur{color:#C5000A;}
+.cell_3974_ li.cur a{color:#C5000A;background:}
+.cell_3974_ a:hover{text-decoration:none; color:#ff5e01; background:}
+.cell_3975_{padding:0px 0 10px 38px;position:relative;zoom:1}
+.cell_3975_ .inner{width:758px;height:162px;overflow:hidden}
+.cell_3975_ .item{float:left;width:758px}
+.cell_3975_ .item li{float:left;width:204px;height:162px;margin:0 25px 0 15px}
+.cell_3975_ .item li p{padding:5px 0 0;text-align:left;line-height:23px}
+.cell_3975_ .item li a{color:#666;font-size:14px}
+.cell_3975_ .btn{width:50px;height:80px;position:absolute;top:60px;cursor:pointer;margin-top:-40px}
+.cell_3975_ .carousel-prev{left:0;background:url(http://tv.hnntv.cn/t/1/9/images/20150909172429QiV2.jpg) no-repeat left center transparent}
+.cell_3975_ .carousel-next{right:0;background:url(http://tv.hnntv.cn/t/1/9/images/20150909172438RdCB.jpg) no-repeat right center transparent}
+.cell_3976_{background:; height:; line-height:38px; padding:0 20px; margin:;overflow:hidden;border-right:{#border-right};border:}
+.cell_3976_ .tl-header{ float:left; margin-right:{#margin-right};}
+.cell_3976_ .tl-header a{font-size:20px; color:#666;font-weight:{#font-weight}; font-family:微软雅黑; width:;display:}
+
+.cell_3976_ .tl-more{ float:right; font-family:tahoma, arial; }
+.cell_3976_ .tl-more a{color:#cdcdce; font-size:14px;}
+.cell_3976_ a:hover{color:#ff5e01;}
+.cell_3976_ .tl-header.cur a{ color:;}
+.cell_3976_ .tl-header.cur{background:;}
+.cell_3977_{background:;height:;line-height:38px;font-size:14px;overflow:hidden;}
+.cell_3977_ li{float:left;background:url(http://tv.hnntv.cn/t/1/9/images/20151010142055r0kS.jpg) no-repeat right center transparent;}
+.cell_3977_ li.go-home{background:none;}
+.cell_3977_ li a{color:#999;padding:0 5px; font-family:宋体; font-size:14px;font-weight:700;}
+.cell_3977_ li.cur{color:#C5000A;}
+.cell_3977_ li.cur a{color:#C5000A;background:}
+.cell_3977_ a:hover{text-decoration:none; color:#ff5e01; background:}
+.cell_3978_{padding:0px 0 10px 38px;position:relative;zoom:1}
+.cell_3978_ .inner{width:758px;height:162px;overflow:hidden}
+.cell_3978_ .item{float:left;width:758px}
+.cell_3978_ .item li{float:left;width:204px;height:162px;margin:0 25px 0 15px}
+.cell_3978_ .item li p{padding:5px 0 0;text-align:left;line-height:23px}
+.cell_3978_ .item li a{color:#666;font-size:14px}
+.cell_3978_ .btn{width:50px;height:80px;position:absolute;top:60px;cursor:pointer;margin-top:-40px}
+.cell_3978_ .carousel-prev{left:0;background:url(http://tv.hnntv.cn/t/1/9/images/20150909172429QiV2.jpg) no-repeat left center transparent}
+.cell_3978_ .carousel-next{right:0;background:url(http://tv.hnntv.cn/t/1/9/images/20150909172438RdCB.jpg) no-repeat right center transparent}
+.cell_3979_{padding:}
+.cell_3979_ ul{width:110%}
+.cell_3979_ li{float:left;display:inline;line-height:20px;width:;height:;margin:;font-size:}
+.cell_3979_ p{padding:5px 0 0;text-align:}
+.cell_3979_ p a{color:;font-size:;line-height:}
+
+.cell_3980_ {line-height:20px;padding:0 0 15px 0;border-bottom:}
+.cell_3980_   img{border:1px solid #b2b2b2;padding:;float:left}
+.cell_3980_  .itb-txt{margin-left:70px;background:url(http://www.hnntv.cn/imageszt/20150914104503o6YA.jpg) no-repeat left top #eee; padding:10px 5px 0px 25px;width:285px; height:50px;}
+.cell_3980_  .itb-title{font-size:14px;color:#666;font-weight:100;padding-top:5px;}
+.cell_3980_  .itb-desc{font-size:12px;padding-top:3px;color:#aaa}
+.cell_3980_  .itb-detail{margin-left:10px;color:#666;font-size:12px}
+.cell_3980_ pullright .itb-img{float:right}
+.cell_3980_ pullright .itb-txt{margin-right:90px;margin-left:0}
+.cell_3980_  .itb-img{float:left; padding-left:0px;}
+.cell_3980_  .author{display:block;line-height:18px;font-size:14px;color:#9c9c9d;text-align:center;}
+.cell_3980_  .itb-txt .cutsubtitle{ font-size:12px;color:#9b9b9d;line-height:25px;}
+
+.cell_3981_ {line-height:20px;padding:0 0 15px 0;border-bottom:}
+.cell_3981_   img{border:1px solid #b2b2b2;padding:;float:left}
+.cell_3981_  .itb-txt{margin-left:70px;background:url(http://www.hnntv.cn/imageszt/20150914104503o6YA.jpg) no-repeat left top #eee; padding:10px 5px 0px 25px;width:285px; height:50px;}
+.cell_3981_  .itb-title{font-size:14px;color:#666;font-weight:100;padding-top:5px;}
+.cell_3981_  .itb-desc{font-size:12px;padding-top:3px;color:#aaa}
+.cell_3981_  .itb-detail{margin-left:10px;color:#666;font-size:12px}
+.cell_3981_ pullright .itb-img{float:right}
+.cell_3981_ pullright .itb-txt{margin-right:90px;margin-left:0}
+.cell_3981_  .itb-img{float:left; padding-left:0px;}
+.cell_3981_  .author{display:block;line-height:18px;font-size:14px;color:#9c9c9d;text-align:center;}
+.cell_3981_  .itb-txt .cutsubtitle{ font-size:12px;color:#9b9b9d;line-height:25px;}
+
+.cell_3984_{position:relative;overflow:hidden;width:920px;height:130px;}
+.cell_3984_ .slide-content li{width:920px;height:130px;float:left;position:relative;}
+.cell_3984_ .focus-overlay{background:black;opacity:.6;filter:alpha(opacity=60);position:absolute;bottom:0;right:0;width:100%;height:0;}
+.cell_3984_ .focus-info{position:absolute;bottom:0;width:100%;height:0;line-height:18px;left:0;}
+.cell_3984_ .focus-title{padding:8px 10px 3px;}
+.cell_3984_ .focus-title a{color:;font-size:14px;font-weight:700;}
+.cell_3984_ .focus-desc{color:;font-size:;padding:0 10px;}
+
+.cell_3984_  .ctrl-btn a{width:50px;height:70px;position:absolute;top:;cursor:pointer;opacity:.3;filter:alpha(opacity=30);}
+.cell_3984_  .ctrl-btn a:hover{opacity:1;filter:alpha(opacity=100);text-decoration:none}
+.cell_3984_  .ctrl-btn .ctrl-prev{left:0;background:;}
+.cell_3984_  .ctrl-btn .ctrl-next{right:0;background:;}
+
+.cell_3984_ .switchable-triggers{position:absolute;bottom:5px;right:5px;z-index:10001;}
+.cell_3984_ .switchable-triggers li{float:left;width:18px;height:9px;overflow:hidden;text-indent:-999em;background:url() no-repeat;margin-right:5px;cursor:pointer}
+.cell_3984_ .switchable-triggers li.current{background:url() no-repeat;}
+
+
+.cell_3986_ {padding:0 0 25px 0;background:;line-height:26px;font-size:14PX;color:#7D7D7D;padding-top:;width:}
+.cell_3986_  li{background:;padding-left:10px;text-align:left; padding-bottom:;border-bottom:;height:}
+.cell_3986_  li a{font-size:14PX;color:#7D7D7D; font-family:微软雅黑; font-weight:100; line-height:28px;}
+.cell_3986_  a{font-size:14px;color:#7D7D7D; font-family:微软雅黑; font-weight:100;}
+.cell_3987_ {padding:0 0 25px 0;background:;line-height:26px;font-size:14PX;color:#7D7D7D;padding-top:;width:}
+.cell_3987_  li{background:;padding-left:10px;text-align:left; padding-bottom:;border-bottom:;height:}
+.cell_3987_  li a{font-size:14PX;color:#7D7D7D; font-family:微软雅黑; font-weight:100; line-height:28px;}
+.cell_3987_  a{font-size:14px;color:#7D7D7D; font-family:微软雅黑; font-weight:100;}
+.cell_4245_ {line-height:20px;padding:0 0 15px 0;border-bottom:}
+.cell_4245_   img{border:1px solid #b2b2b2;padding:;float:left}
+.cell_4245_  .itb-txt{margin-left:70px;background:url(http://www.hnntv.cn/imageszt/20150914104503o6YA.jpg) no-repeat left top #eee; padding:10px 5px 0px 25px;width:285px; height:50px;}
+.cell_4245_  .itb-title{font-size:14px;color:#666;font-weight:100;padding-top:5px;}
+.cell_4245_  .itb-desc{font-size:12px;padding-top:3px;color:#aaa}
+.cell_4245_  .itb-detail{margin-left:10px;color:#666;font-size:12px}
+.cell_4245_ pullright .itb-img{float:right}
+.cell_4245_ pullright .itb-txt{margin-right:90px;margin-left:0}
+.cell_4245_  .itb-img{float:left; padding-left:0px;}
+.cell_4245_  .author{display:block;line-height:18px;font-size:14px;color:#9c9c9d;text-align:center;}
+.cell_4245_  .itb-txt .cutsubtitle{ font-size:12px;color:#9b9b9d;line-height:25px;}
+
+</style>
+</head>
+
+<!--对联广告 begin-->
+
+<script language="JavaScript" type="text/javascript">
+function hidead()
+{
+document.getElementById("lovexin12").style.display="none";
+document.getElementById("lovexin14").style.display="none";
+}
+lastScrollY=0;
+function heartBeat(){ 
+var diffY;
+if (document.documentElement && document.documentElement.scrollTop)
+diffY = document.documentElement.scrollTop;
+else if (document.body)
+diffY = document.body.scrollTop
+else
+{/*Netscape stuff*/}
+percent=.1*(diffY-lastScrollY); 
+if(percent>0)percent=Math.ceil(percent); 
+else percent=Math.floor(percent); 
+document.getElementById("lovexin12").style.top=parseInt(document.getElementById("lovexin12").style.top)+percent+"px";
+document.getElementById("lovexin14").style.top=parseInt(document.getElementById("lovexin14").style.top)+percent+"px";
+lastScrollY=lastScrollY+percent; 
+}
+</script>
+	<!-- 对联广告 -->
+
+<!--
+<DIV id="lovexin12" style="POSITION:absolute;TOP:250px;left:2px;border:1px solid #eee">
+<div id="leftads1">
+<a href="http://www.hnntv.cn/st/jrrd/2018-10-15/206809.html"><img src="http://www.hnntv.cn/imageszt/20180421190910ab.jpg" width="108" height="270"></a>
+
+</div>
+
+<p id="loveclose" style=" background:#FFF;"><a href='javascript:hidead();'>关闭</a></p>
+</div>
+
+<DIV id="lovexin14" style="POSITION:absolute;TOP:250px;right:2px; border:1px solid #eee">
+
+<div id="rightads1">
+
+<a href="http://www.hnntv.cn/st/jrrd/2018-10-15/206809.html"><img src="http://www.hnntv.cn/imageszt/20180421190910ab.jpg" width="108" height="270"></a>
+
+</div>
+
+
+
+<p id="loveclose" style=" background:#FFF;"><a href='javascript:hidead();'>关闭</a></p>
+</div>
+-->
+
+<style type="text/css">
+#lovexin12 img,#lovexin14 img{border:0px solid #ddd;}
+#loveclose{ text-align:right; line-height:20px}
+#loveclose a{font-size:12px; color:#666}
+</style>
+
+
+<!--随屏滚动效果js-->
+<script language="JavaScript" type="text/javascript">
+window.setInterval("heartBeat()",1);
+
+</script>
+<!--对联广告 end--> 
+
+<body>
+
+
+<div id="piaohong_bg">
+
+<div id="piaohong_zhanwei" >
+<a style=" color:#F00" id="othertext" href="http://www.hnntv.cn/wzzt/xzgcl70zn/index.html" target="_blank"></a>
+<a id="piaohong_url" href="http://www.hnntv.cn/wzzt/xzgcl70zn/index.html" target="_blank" ></a>
+</div> 
+
+<!--全国两会顶图
+<iframe width="100%" height="910"  frameborder="0" scrolling="no" src="http://www.hnntv.cn/wzzt/hnjs30zn/folder1068/"></iframe>
+
+
+-->
+
+<div id="piaohong">
+	
+<style>
+
+@media screen and (max-width:1200px) {
+	#piaohong_bg iframe{width:1220px}
+}
+
+body{background:url(http://www.hnntv.cn/imageszt/hong20190923.jpg) no-repeat center top;}
+#piaohong_url{width:1200px;height:320px; display:block;}
+
+#piaohong_bg{ width:100%; margin:auto}
+#piaohong_zhanwei{ width:1200px;margin:0 auto;}
+#piaohong{ width:1220px; margin:0 auto; background-color:#FFF}
+#guanggaowei01{padding-top:5px}
+#othertext{width:200px; height:94px; line-height:94px; color:#FFF; float:right; text-align:right}
+#othertext{display: block}
+@media screen and (max-width:1220px) {
+		#piaohong_bg{width:1220px; background:url(http://www.hnntv.cn/imageszt/hong20190923.jpg) no-repeat center top;}
+
+}
+</style>
+
+
+
+<!--
+<div id="guanggaowei001" style="margin:0 auto ;height:50px;width:1200px;">
+        		<li><a href="http://www.hnntv.cn/20190412zpab22.html" target="_blank"><img src="http://www.hnntv.cn/imageszt/hnwtzpbm0415.jpg" height="50" width="1200"></a></li>
+  </div>
+  
+<div  style="margin:0 auto ;height:2px;width:1200px;"></div> 
+
+
+<div  style="margin:0 auto ;height:2px;width:1200px; height:52px;">
+
+<img src="http://www.hnntv.cn/imageszt/untitled12.jpg" width="1200" height="50" usemap="#Map">
+<map name="Map">
+  <area shape="rect" coords="0,3,597,43" href="http://www.hnntv.cn/wzzt/ggkf40/index.html" target="_blank">
+  <area shape="rect" coords="604,-1,1197,41" href="http://www.hnntv.cn/wzzt/ggkf40/index.html" target="_blank">
+</map>
+</div> 
+
+
+
+
+
+<div  style="margin:0 auto ;height:50px;width:1200px;">
+
+<iframe scrolling="no" width="1200" height="50" frameborder="0" src="http://www.hnntv.cn/st/folder762/folder570/index.html"></iframe>	
+  </div>
+ 
+  <div  style="margin:0 auto ;height:2px;width:1200px;"></div>  -->
+  
+  
+ <!--
+ <div  style="margin:0 auto ;height:323px;width:1200px;">
+<a href="http://www.hnntv.cn/wzzt/2019boao/index.html" target="_blank">		
+ <img src="http://www.hnntv.cn/imageszt/2019boao/ban2.jpg" height="323" width="1200">  </a></div> 
+<div  style="margin:0 auto ;height:2px;width:1200px;"></div> 
+ -->
+
+
+<!-- 开始top -->
+<div class="gdtv_topmenu0">
+<div class="gdtv_topmenu">
+<div class="gtm_l"><ul>
+    <li><a class="grtn" href="http://www.bluehn.com/" target="_top">海南广播电视总台（蓝网）</a></li>
+    <li>|</li>
+    <li><a class="grtn" href="http://www.hnntv.cn/" target="_top">海南网络广播电视台</a></li>
+	<li>|</li>
+<li><a class="grtn" href="http://www.hnntv.cn/sthn/" target="_top">视听海南客户端</a></li>
+
+</ul></div>
+<div class="gtm_r" ><ul>
+  
+		<li class="li_wx">
+		<a href="javascript:void(0);">微信</a>
+		<div class="wx_tp"><img src="http://tv.hnntv.cn/t/1/13/images/weixin.png" alt="海南网络广播电视台官方微信号" /></div>
+	</li>
+	<li><a href="http://weibo.com/bluehn/profile?s=6cm7D0&is_hot=1" target="_blank">微博</a></li>
+	<li><a href="#" target="_blank">广告投放</a></li>
+	
+	
+</ul></div>
+</div>
+</div>
+<script>
+$(".gtm_r li.li_wx").mouseover(function(){
+    $(".wx_tp").show();
+});
+$(".gtm_r li.li_wx").mouseleave(function(){
+    $(".wx_tp").hide();
+});
+</script>
+<!-- 结束top -->
+
+
+<!--频道导航开始-->    
+<div class="pindao" >
+
+<div class="left rc" >
+            			<!--频道导航开始-->  
+            			<div class="left">
+            				<ul class="cell_5184_ clearfix">  
+                  <li>    </li>
+					<li>
+                            
+                
+
+								<li>
+                <span class="time"></span>
+				<a target="_self" href="http://www.hnlzw.net/" title="海南廉政网" style="color:#000;">海南廉政网 </a>	
+			</li>
+			
+					<li>
+                <span class="time"></span>
+				<a target="_self" href="http://www.ycqfw.net/" title="椰城清风网" style="color:#000;"> 椰城清风网 </a>	
+			</li>
+					<li>
+                <span class="time"></span>
+				<a target="_self" href="http://xyy.hnntv.cn/" title="逍遥旅游" style="color:#000;"> 逍遥旅游 </a>	
+			</li>
+			
+				<li>
+                <span class="time"></span>
+				<a target="_self" href="http://www.hnntv.cn/wzzt/gczgqmkg/" title="歌唱祖国 全民K歌" style="color:#f00;"> 歌唱祖国 全民K歌</a>	
+			</li>
+
+			
+				
+	  
+		</ul>
+            			</div>
+						<!--频道导航结束-->  
+						
+            		</div>
+
+
+
+ <!--天气预报开始-->
+            
+            <div id="weather" style="margin-top:5px; height:40px; width:230px; float:right;">
+ 
+        
+        <div class="date" style=" float:right;margin-top:3px;  overflow:hidden;"> 
+    <iframe width="225" scrolling="no" height="25" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=34&icon=1&num=3"></iframe>         
+      
+        </div>
+                
+    </div>
+	
+	 <!--天气预报结束-->
+            
+ </div>
+ 
+          
+	<!-- header -->
+ 
+ <style> 
+.header{background:#f1f1f1; width:1200px; margin:auto; height:50px;}
+ .nav{ height:50px;  margin-top:0px; padding-top:0px;}
+.navl li div{ border:none;}   
+ 
+ </style>
+    
+    <div style=" width:100%; background:#f1f1f1; height:92px; margin-bottom:20px; border-top:#CCC 1px solid; border-bottom:#CCC 1px solid;">
+    
+	<div class="header" style=" margin-top:0px; padding-top:0px;" >
+        <!-- 导航 -->
+        <div class="nav" style="height:92px; margin-top:0px; padding-top:0px;">
+            <!-- logo开始 -->
+              
+			  
+            <div class="left" style="  border-right:#CCC 1px solid; height:92px;" >
+             <div id="logo_pic" style="height:55px; margin-top:17px;"><a href="http://www.hnntv.cn/" target="_blank"><img  src="http://tv.hnntv.cn/t/1/13/images/logoh.png" width="193" height="53" /></a></div>
+
+          </div>
+		  <!-- logo结束 -->
+		  
+            <!-- 导航 -->
+            <div class="navc right"  style=" margin-top:9px;">
+  
+                 
+                <!-- 热搜与搜索 -->
+            	<div class="index_search overflow" style=" float:right; width:320px; ">
+            	
+				<div class="right ipt" style="padding-right:0px; margin-right:0px; width:260px; margin-top:12px;">
+				
+				<!-- 热搜与搜索开始 -->
+               <form class="cell_3940_ clearfix" method="post"  target="_blank"  action="http://tv.hnntv.cn/search/index.php">	<div class="search-main fl">
+	<input type="text" class="text no-radius-shadow" autocomplete="off" name="search_text" value="" placeholder="请输入关键词" /><input type="submit" value="搜索" class="submit no-radius-shadow" />
+	</div>
+</form>
+				<!-- 热搜与搜索结束 -->
+				
+            		</div>
+                
+                    
+                    
+                    
+            	</div>
+            
+            	
+				<!-- 导航开始 -->
+				
+				<div class="navcon right" style=" border: none; background:none; margin-top:5px; margin-right:70px">
+					<ul class="navl"  >
+						<li class="nLi on" >
+						
+							<div class="cell_3740_" >
+            	<h3 class="tl-header" ><a class="mtit" href="http://www.hnntv.cn/live/" target="_self" title="直播">直播</a></h3> 
+				
+         		
+</div>
+							
+                        
+						<li ><div class="cell_7647_" >
+            	<h3 class="tl-header"><a class="mtit"   href="http://www.hnntv.cn/st/kands/" target="_blank" title="点播">点播</a></h3> 
+				
+         		
+</div></li>
+						
+						<li class="nLi on">
+						<div class="cell_6736_">
+            	<h3 class="tl-header"><a class="mtit" href="" target="_self" title="媒体">媒体</a></h3> 
+				
+         		
+</div>
+<!--二级导航-->
+<ul class="sub notindex" style="display: none;">
+<div style="width:1128px;height:13px; /* border-bottom:1px solid #CCC; */ background:none;"><div style=" float:left; width:500px; height:14px; "></div><div style=" float:right; height:14px; width:628px;  background:url(http://tv.hnntv.cn/t/1/13/images/sanjiao.png) no-repeat left;"></div></div>							
+								<div class="left" style=" background:#FFF; margin-left:100px">
+										<ul class="cell_3741_">
+                   <li style=" background:#ff5e01;">
+                 <a href="" title="频道" target="_self" style=" color:#FFF;">频道</a>
+             </li>
+             
+                   <li>
+                 <a href="http://tc.hnntv.cn/index.shtml" title="海南卫视" target="_self">海南卫视</a>
+             </li>
+                   <li>
+                 <a href="http://www.hnntv.cn/mtgw/sanshaTV/index.html" title="三沙卫视" target="_self">三沙卫视</a>
+             </li>
+                   <li>
+                 <a href="http://www.hnntv.cn/mtgw/dypd/index.html" title="海南经济" target="_self">海南经济</a>
+             </li>
+                   <li>
+                 <a href="http://www.hnntv.cn/mtgw/xwpd/index.html" title="海南新闻" target="_self">海南新闻</a>
+             </li>
+                   <li>
+                 <a href="http://www.hnntv.cn/mtgw/ysylpd/index.html" title="海南公共" target="_self">海南公共</a>
+             </li>
+             
+             
+                   <li>
+                 <a href="http://www.hnntv.cn/mtgw/ysjpd/index.html" title="海南文旅" target="_self">海南文旅</a>
+             </li>
+             
+                    <li>
+                 <a href="http://www.hnntv.cn/mtgw/hntv4/index.html" title="海南少儿" target="_self">海南少儿</a>
+             </li>
+                   <li style=" background:#ff5e01;">
+                 <a href="" title="频率" target="_self" style=" color:#FFF;">频率</a>
+             </li>
+                   <li>
+                 <a href="http://www.hnntv.cn/mtgw/xwgb/index.html" title="新闻广播" target="_self">新闻广播</a>
+             </li>
+                   <li>
+                 <a href="http://www.hnntv.cn/mtgw/gjlydzs/index.html" title="国际旅游岛之声" target="_self">国际旅游岛之声</a>
+             </li>
+                   <li>
+                 <a href="http://www.hnntv.cn/mtgw/hnfm100/index.html" title="交通广播" target="_self">交通广播</a>
+             </li>
+                   <li>
+                 <a href="http://www.hnntv.cn/mtgw/wygb/index.html" title="音乐广播" target="_self">音乐广播</a>
+             </li>
+             
+             <li>
+                 <a href="http://www.hnntv.cn/mtgw/hnmsgb/index.html" title="海南民生广播" target="_self">海南民生广播</a>
+             </li>
+             <li style=" background:#ff5e01;">
+                 <a href="http://www.hnntv.cn/mtgw/hnspb/index.html" title="平面媒体" target="_self" style=" color:#FFF;">平面媒体</a>
+             </li>
+             <li>
+                 <a href="http://www.hnntv.cn/mtgw/hnspb/index.html" title="海南声屏报" target="_self">海南声屏报</a>
+             </li>
+            
+			
+      </ul>
+								</div>
+								
+							</ul>
+
+</li>
+<li><div class="cell_3742_">
+            	<h3 class="tl-header"><a class="mtit" href="http://www.hnntv.cn/epg/" target="_self" title="节目单">节目单</a></h3> 
+				
+         		
+</div></li>
+						<li><div class="cell_6738_">
+            	<h3 class="tl-header"><a class="mtit" href="http://www.hnntv.cn/st/zcr/" target="_self" title="主持人">主持人</a></h3> 
+				
+</div></li>
+						<li class="nLi on"><div class="cell_6737_">
+            	<h3 class="tl-header"><a class="mtit" href="" target="_self" title="市县">市县</a></h3> </div>
+<!--二级导航-->
+
+<style>.shixian  li { font-size:16px; font-family:"微软雅黑"; width:60px; text-align:center; }.shixian{ height:55px; background:#f0f0f0; }
+.navcon ul.navl li .sub,.navcon_ty li .sub{ position:absolute; width:1128px; height:81px; top:56px; left:-450px; z-index:10;}
+.navcon ul.navl li .sub1,.navcon_ty li .sub1{ position:absolute; width:1155px; height:81px; background:#f0f0f0; top:55px; left:-630px; z-index:10; }
+.navcon li .sub1 .nav_zbxl,.navcon_ty li .sub1 .nav_zbxl{ width:102px; height:55px; background-color:#f0f0f0;}
+.navcon li .sub1 .nav_zbxl span,.navcon_ty li .sub1 .nav_zbxl span{ display:block; text-align:center; font-size:20px; color:#8a8a8a; padding-top:25px; line-height:35px;}
+.navcon li .sub1 .nav_zbxl em,.navcon_ty li .sub1 .nav_zbxl em{ display:block; text-align:center;}
+.shixian li a:hover{ background:#ff5e01; padding:5px; color:#FFF;}
+
+
+#lytv{OVERFLOW: hidden; WIDTH:570px; HEIGHT: 330px;position:relative; z-index:9999; background:#FFF;}
+#lytv p{color: #0099ff; font-size:14px; width:100%; text-align:center; line-height:25px; height:25px;}
+#lytv iframe{ width:570px; height:290px; border:0px}
+#tvorpic{width:100%; height:auto; overflow:hidden}
+</style>
+<ul class="sub1 notindex" style="display: none; height:55px; ">
+
+<div style="width:1155px;height:14px; border-bottom:1px solid #CCC;"><div style=" float:left; width:662px; height:14px; "></div><div style=" float:right; height:14px; width:493px;  background:url(http://tv.hnntv.cn/t/1/13/images/sanjiao.png) no-repeat left;"></div></div>					
+								<div class="left00">
+									<ul class="shixian">                                  
+<li><a href="http://www.hnntv.cn/spsx/hk/index.html" title="海口" target="_self">海口</a></li>
+<li><a href="http://www.hnntv.cn/spsx/sy/" title="三亚" target="_self">三亚</a></li>
+<li><a href="" title="三沙" target="_self">三沙</a></li>
+<li><a href="" title="儋州" target="_self">儋州 </a></li>
+<li><a href="" title="琼海" target="_self">  琼海 </a></li>
+<li><a href="http://www.hnntv.cn/spsx/wc/index.html" title="文昌" target="_self"> 文昌 </a></li>
+<li><a href="" title="万宁" target="_self"> 万宁</a></li>
+<li><a href="" title="东方" target="_self"> 东方 </a> </li>
+<li><a href="" title="五指山" target="_self">五指山  </a></li>
+<li><a href="" title="乐东" target="_self">乐东  </a></li>
+<li><a href="" title="澄迈" target="_self"> 澄迈 </a></li>
+<li><a href="" title="临高" target="_self"> 临高 </a></li>
+<li><a href="" title="定安" target="_self"> 定安</a></li>
+<li> <a href="" title="屯昌" target="_self">屯昌 </a></li>
+<li><a href="" title="陵水" target="_self"> 陵水 </a></li>
+<li><a href="" title="昌江" target="_self"> 昌江 </a></li>
+<li><a href="" title="保亭" target="_self"> 保亭  </a></li>
+<li><a href="" title="白沙" target="_self">白沙  </a></li>
+<li><a href="" title="琼中" target="_self">琼中</a></li>
+    
+      </ul>
+								</div>
+							
+						  </ul>
+
+
+</li>
+						<li><div class="cell_6738_">
+            	<h3 class="tl-header"><a class="mtit" href="http://www.hnntv.cn/st/hd/index.html" target="_self" title="互动">互动</a></h3> 
+				
+         		
+</div></li>
+
+					</ul>
+					<script type="text/javascript">
+						$(".nav_more").hover(function(){
+							$(this).find(".more_slidedown").slideDown(300);
+						},function(){
+							$(this).find(".more_slidedown").slideUp(300);
+						});
+						jQuery(".navl").slide({ type:"menu", titCell:".nLi", targetCell:".sub",effect:"slideDown",delayTime:300,triggerTime:0,returnDefault:true});
+					</script>
+                    
+                    	<script type="text/javascript">
+						$(".nav_more").hover(function(){
+							$(this).find(".more_slidedown").slideDown(300);
+						},function(){
+							$(this).find(".more_slidedown").slideUp(300);
+						});
+						jQuery(".navl").slide({ type:"menu", titCell:".nLi", targetCell:".sub1",effect:"slideDown",delayTime:300,triggerTime:0,returnDefault:true});
+					</script>
+				</div>
+                
+                <!-- 导航结束 -->
+           
+                
+                
+                
+            </div>
+            <div class="clear"></div>
+        </div>
+	</div>
+    
+    
+    </div>
+<div class="wrap w1200 center">
+
+	
+	<div class="main">   </div>
+	<div class="main" style="" id="autoads01">
+<div hg_adbox="138" id="ad_138"></div>
+</div>
+	<div class="main" id="autoads1" style="display: none;">
+<div hg_adbox="139" id="ad_139"></div>
+</div>
+	<!-- topv -->
+	<div class="main livebg">
+		<div class="video_player"></div>
+	</div>
+
+	<!-- main -->
+	
+	<div class="main overflow">
+    
+    	<!-- 头条 -->
+				<div class="hnews overflow" style="width:1200px;height:auto">
+				
+				<!-- 头条 -->
+					<ul class="cell_3941_ clearfix">    				<li>
+			<a target="_blank" class="m2o-type-news- " href="http://www.hnntv.cn/st/ttiao/2019-10-04/362409.html" title="这篇重要文章里，习近平讲的7个故事发人深思" style="color:#000;" > 这篇重要文章里，习近平讲的7个故事发人深思</a>				
+			</li>
+		</ul>
+<!-- 头条结束 -->
+
+<!-- 头条相关开始 -->
+					<ul class="cell_3942_ clearfix">
+<li style="line-height:26px;margin:10px auto">
+                    </li>
+</ul>
+					<!-- 头条相关结束 -->
+
+				</div>
+                
+                
+                
+    <!--幻灯片-->            
+   	<!-- banner -->
+    
+    <div style="width:1200px; margin:auto; height:360px;">
+	<div class="banner overflow" style=" padding:0px; width:570px;  float:left;">
+                
+				
+					<div class="bl left">
+					
+					<!--幻灯片开始--> 	
+					
+					<DIV id="tvorpic"></DIV> 
+    				<script type="text/javascript" src="http://tv.hnntv.cn/imageszt/dd0.js" charset="gbk"></script><div class="cell_4230_">
+<ul class="slide-content" style="position: absolute; left: 0px; width: 3420px; transition-property: none; transition-duration: 500ms; transition-timing-function: ease-in-out;">
+    	        		<li><a href="http://www.hnntv.cn/st/slide/2019-10-05/362421.html" target="_blank" title="各地上演精彩纷呈灯光秀——祝福你的生日我的中国"><img src="http://imgs.hnntv.cn/material/news/img/570x321/2019/10/be461cff61d9d4805cb0a6386fb1d6a5.jpg" alt="各地上演精彩纷呈灯光秀——祝福你的生日我的中国" height="321"  width="570" /></a><span class="focus-overlay"></span><div class="focus-info"><p class="focus-title"><a href="http://www.hnntv.cn/st/slide/2019-10-05/362421.html" target="_blank">各地上演精彩纷呈灯光秀——祝福你的生日我的中国</a></p></div></li>
+		        		<li><a href="http://www.hnntv.cn/st/slide/2019-10-05/362417.html" target="_blank" title="五彩斑斓的水下世界"><img src="http://imgs.hnntv.cn/material/news/img/570x321/2019/10/ff4197bacd0e90ab3493ac00fcc38f52.jpg" alt="五彩斑斓的水下世界" height="321"  width="570" /></a><span class="focus-overlay"></span><div class="focus-info"><p class="focus-title"><a href="http://www.hnntv.cn/st/slide/2019-10-05/362417.html" target="_blank">五彩斑斓的水下世界</a></p></div></li>
+		        		<li><a href="http://www.hnntv.cn/st/slide/2019-10-05/362415.html" target="_blank" title="首批北京冬奥会和冬残奥会吉祥物特许商品开售"><img src="http://imgs.hnntv.cn/material/news/img/570x321/2019/10/201910051545533ULn.png" alt="首批北京冬奥会和冬残奥会吉祥物特许商品开售" height="321"  width="570" /></a><span class="focus-overlay"></span><div class="focus-info"><p class="focus-title"><a href="http://www.hnntv.cn/st/slide/2019-10-05/362415.html" target="_blank">首批北京冬奥会和冬残奥会吉祥物特许商品开售</a></p></div></li>
+		        		<li><a href="http://www.hnntv.cn/st/slide/2019-10-04/362231.html" target="_blank" title="我们为什么要大阅兵？至少为了让2000万英烈看看这可爱的中国！"><img src="http://imgs.hnntv.cn/material/news/img/570x321/2019/10/201910042214010b08.jpeg" alt="我们为什么要大阅兵？至少为了让2000万英烈看看这可爱的中国！" height="321"  width="570" /></a><span class="focus-overlay"></span><div class="focus-info"><p class="focus-title"><a href="http://www.hnntv.cn/st/slide/2019-10-04/362231.html" target="_blank">我们为什么要大阅兵？至少为了让2000万英烈看看这可爱的中国！</a></p></div></li>
+		        		<li><a href="http://www.hnntv.cn/st/slide/2019-10-04/362249.html" target="_blank" title="揭秘！国庆彩车都有什么含义？设计稿公布"><img src="http://imgs.hnntv.cn/material/news/img/570x321/2019/10/201910042211208A20.png" alt="揭秘！国庆彩车都有什么含义？设计稿公布" height="321"  width="570" /></a><span class="focus-overlay"></span><div class="focus-info"><p class="focus-title"><a href="http://www.hnntv.cn/st/slide/2019-10-04/362249.html" target="_blank">揭秘！国庆彩车都有什么含义？设计稿公布</a></p></div></li>
+				
+	</ul>
+    	<div class="ctrl-btn">
+		<a class="ctrl-prev" target="_blank"><em></em></a>
+		<a class="ctrl-next" target="_blank"><em></em></a>
+	</div>
+    </div>
+<p style="color:#003777; font-size:14px; width:100%; text-align:center; line-height:25px; height:25px;">脱贫致富电视夜校</p>
+	<!--幻灯片结束--> 
+					</div>
+					
+					
+					
+					
+					
+					
+					
+                    
+                    
+                    
+				</div>             
+                
+<style>
+.second{ height:188px;}
+.second ul li{ line-height:30px; } 
+.second span a{ color:#ff5e01; font-weight:bold;}
+.hotr_list ul li a:hover{text-decoration:underline}
+ </style>                
+                
+      <div class="hotr_list" style=" float:right; margin-top:0px; padding-top:0px; width:612px; height:323px;">
+      
+      <!--第一行-->
+	  
+					<div>
+					<!--第一行节目推荐1开始-->
+					<ul class="cell_3944_ clearfix">    				<li>
+			<a target="_blank" class="m2o-type-news- " href="http://www.hnntv.cn/video/News/hnxwlb/2019-10-04/362136.html" title="海南：用足用好离岛免税政策 助推国际旅游消费中心建设" style="color:#000;" > ·  海南：用足用好离岛免税政策 助推国际旅游消费中心建设</a>				
+			</li>
+		</ul>
+<!--第一行节目推荐1结束-->
+</div>
+
+<!--第一行节目推荐2开始-->
+					<div class="second">
+					
+		<ul class="cell_3945_ clearfix">    				<li>
+			<a target="_blank" class="m2o-type-news- " href="http://www.hnntv.cn/st/bjst/2019-10-04/362232.html" title="庆祝新中国成立70周年大型成就展：海南元素令人瞩目" style="color:#000;" > ·  庆祝新中国成立70周年大型成就展：海南元素令人瞩目</a>				
+			</li>
+					<li>
+			<a target="_blank" class="m2o-type-news- " href="http://www.hnntv.cn/video/News/hnxwlb/2019-10-04/362134.html" title="庆祝新中国成立70周年大会在海南引起热烈反响" style="color:#000;" > ·  庆祝新中国成立70周年大会在海南引起热烈反响</a>				
+			</li>
+					<li>
+			<a target="_blank" class="m2o-type-news- " href="http://www.hnntv.cn/st/bjst/2019-10-04/362233.html" title="我们走过70年 海南：热带特色高效农业 让农民捧上“金饭碗”" style="color:#000;" > ·  我们走过70年 海南：热带特色高效农业 让农民捧上“金饭碗”</a>				
+			</li>
+					<li>
+			<a target="_blank" class="m2o-type-news- " href="http://www.hnntv.cn/video/News/hnxwlb/2019-10-04/362132.html" title="落实“菜篮子”节日保供稳价：黄金周海南多措并举确保百姓“菜篮子”量足价稳" style="color:#000;" > ·  落实“菜篮子”节日保供稳价：黄金周海南多措并举确保百姓“菜篮子”量足价稳</a>				
+			</li>
+					<li>
+			<a target="_blank" class="m2o-type-news- " href="http://www.hnntv.cn/st/bjst/2019-10-04/362234.html" title="国庆黄金周：海口景区氛围喜庆 市民游客畅享休闲时光" style="color:#000;" > ·  国庆黄金周：海口景区氛围喜庆 市民游客畅享休闲时光</a>				
+			</li>
+					<li>
+			<a target="_blank" class="m2o-type-news- " href="http://www.hnntv.cn/st/bjst/2019-10-04/362235.html" title="国庆黄金周：海南各地精心准备“大餐” 旅游市场持续升温" style="color:#000;" > ·  国庆黄金周：海南各地精心准备“大餐” 旅游市场持续升温</a>				
+			</li>
+		</ul>
+<!--第一行节目推荐2结束-->
+</div>
+					
+					
+        
+<style>.br{width:612px; height:110px; } 
+</style>        
+        
+        
+					<div class="right br">
+					
+					
+					<!--专题推荐开始-->
+					
+						<div class="cell_1822_">
+<ul class="clearfix" style=" float:left;">    
+    	
+    	
+ <style>
+ .ggw1{ width:192px; height:99px; float:left; margin-right:10px;}.ggw2{ width:192px; height:99px; float:left; margin-right:10px;}.ggw3{ width:192px; height:99px; float:left; margin-right:10px;}.ggw4{ width:388px; height:41px; float:left; }  </style>           
+            
+<div class="ggw1">      <!--第一屏广告位-->
+  
+<!--  -->
+<iframe scrolling="no" width="192" height="99" frameborder="0" src="http://www.hnntv.cn/st/folder762/folder571/"></iframe>
+
+  </div>           
+            	
+
+<div class="ggw2">   <!--第二屏广告位-->  
+<iframe scrolling="no" width="192" height="99" frameborder="0" src="http://www.hnntv.cn/st/folder762/folder572/"></iframe>
+  </div>  
+
+<div class="ggw3">   <!--第三屏广告位-->  
+<iframe scrolling="no" width="192" height="99" frameborder="0" src="http://www.hnntv.cn/st/folder762/folder573/"></iframe>
+  </div>
+
+
+		
+	
+	</div>
+						
+<!--专题推荐结束-->
+
+
+
+					</div>			
+					<div>
+					</div> 
+				</div>    
+				
+              
+             
+
+        
+    </div>                  
+   <!--
+ <div style=" width:1188px; overflow:hidden; margin-bottom:10px; margin-top:-30px">
+		        		<a href="http://www.hnntv.cn/wzzt/2017zjyg/index.html" target="_blank"><img src="http://www.hnntv.cn/imageszt/2018hnlh/banabc.jpg" height="50" width="1200"></a>
+  </div>-->
+		<!-- 热点新闻 -->
+       
+		<div class="hotnews overflow">
+        <!--左-->
+        
+        
+			<div class="left hotl">
+			
+			
+				<!-- 选项卡 -->
+				<div class="hn_tabs tabs overflow" style=" margin-top:0px;">
+				
+				<!-- 热点新闻导航开始1-->
+					<div class="tabstit overflow">
+						<ul class="cell_3116_">
+						
+                               <li class="m2o-column-940" style="background: rgb(3, 88, 179) none repeat scroll 0% 0%;">
+                 <a href="http://www.hnntv.cn/st/jrrd/" title="今日热点" target="_blank" style="color: rgb(255, 255, 255);">今日热点</a>
+             </li>
+                               <li class="m2o-column-511" style="background: rgb(255, 255, 255) none repeat scroll 0% 0%;">
+                 <a href="http://www.hnntv.cn/video/News/hnxwlb/" title="海南新闻联播" target="_blank" style="color: rgb(102, 102, 102);">海南新闻联播</a>
+             </li>
+                               <li class="m2o-column-928" style="background: rgb(255, 255, 255) none repeat scroll 0% 0%;">
+                 <a href="http://www.hnntv.cn/video/ms/zbhn/" title="直播海南" target="_blank" style="color: rgb(102, 102, 102);">直播海南</a>
+             </li>
+                               <li class="m2o-column-1483" style="background: rgb(255, 255, 255) none repeat scroll 0% 0%;">
+                 <a href="http://www.hnntv.cn/st/gn/" title="国内" target="_blank" style="color: rgb(102, 102, 102);">国内</a>
+             </li>
+                               <li class="m2o-column-515" style="/*border-right: medium none;*/ background: rgb(255, 255, 255) none repeat scroll 0% 0%;">
+                 <a href="http://www.hnntv.cn/st/gj/" title="国际" target="_blank" style="color: rgb(102, 102, 102);">国际</a>
+             </li>
+             
+             
+             <li class="m2o-column-516" style="border-right: medium none; background: rgb(255, 255, 255) none repeat scroll 0% 0%;">
+                 <a href="http://www.hnntv.cn/st/qmtxc/" title="全媒体现场" target="_blank" style="color: rgb(102, 102, 102);">全媒体现场</a>
+             </li>
+ 
+             
+      </ul>    
+					</div>
+					<!-- 热点新闻导航结束1-->
+					
+					
+					<div class="hn_tabscon">
+					
+			<!-- 今日热点开始1-->	
+			<div class="overflow">
+<div class="cell_3947_">
+    <ul class="clearfix">
+    										<li>
+			<a href="http://www.hnntv.cn/st/jrrd/2019-10-05/362420.html"  target="_blank" title="公安部交管局：今明两天将迎来返程高峰"><img  alt="公安部交管局：今明两天将迎来返程高峰" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/10/20191005142029GG6X.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/st/jrrd/2019-10-05/362420.html" target="_blank" >公安部交管局：今明两天将迎来返程高峰</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/st/jrrd/2019-10-05/362419.html"  target="_blank" title="探秘大兴机场刷脸通行：5G+AI让登机只需20分钟"><img  alt="探秘大兴机场刷脸通行：5G+AI让登机只需20分钟" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/10/201910051423379YxS.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/st/jrrd/2019-10-05/362419.html" target="_blank" >探秘大兴机场刷脸通行：5G+AI让登机只需20分钟</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/st/jrrd/2019-10-05/362358.html"  target="_blank" title="5G套餐最快本月开售 1G流量价格或低至1元或者5毛"><img  alt="5G套餐最快本月开售 1G流量价格或低至1元或者5毛" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/10/201910051139109o6v.jpg" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/st/jrrd/2019-10-05/362358.html" target="_blank" >5G套餐最快本月开售 1G流量价格或低至1元或者5毛</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/st/jrrd/2019-10-05/362266.html"  target="_blank" title="中国成功发射高分十号卫星 主要用于国土普查、防灾减灾等领域"><img  alt="中国成功发射高分十号卫星 主要用于国土普查、防灾减灾等领域" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/10/556cad931e1cd65b569c5549d5a62f41.jpg" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/st/jrrd/2019-10-05/362266.html" target="_blank" >中国成功发射高分十号卫星 主要用于国土普查、防灾减灾等领域</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/st/jrrd/2019-10-04/362225.html"  target="_blank" title="超震撼！《钢铁洪流进行曲》《东风浩荡进行曲》配大阅兵全程MV来了！"><img  alt="超震撼！《钢铁洪流进行曲》《东风浩荡进行曲》配大阅兵全程MV来了！" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/10/20191004213840x7uD.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/st/jrrd/2019-10-04/362225.html" target="_blank" >超震撼！《钢铁洪流进行曲》《东风浩荡进行曲》配大阅兵全程MV来了！</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/st/jrrd/2019-10-04/362098.html"  target="_blank" title="林郑月娥：订立《禁蒙面法》，5日生效最高判囚1年"><img  alt="林郑月娥：订立《禁蒙面法》，5日生效最高判囚1年" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/10/201910041605410f0E.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/st/jrrd/2019-10-04/362098.html" target="_blank" >林郑月娥：订立《禁蒙面法》，5日生效最高判囚1年</a></div>
+                <div class="clear"></div>
+			</li>	
+							
+	</ul>
+</div>
+</div>
+<!-- 今日热点结束1-->
+
+
+					</div>
+					<div class="hn_tabscon hidden">
+				<!-- 海南新闻联播开始1-->		
+				<div class="overflow">
+<div class="cell_3948_">
+    <ul class="clearfix">
+    										<li>
+			<a href="http://www.hnntv.cn/video/News/hnxwlb/2019-10-04/362202.html"  target="_blank" title="《海南新闻联播》2019年10月04日"><img  alt="《海南新闻联播》2019年10月04日" src="http://imgs.hnntv.cn/material/livmedia/img/250x142/2019/10/cab247e8d149968f910899bd4c319354.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/video/News/hnxwlb/2019-10-04/362202.html" target="_blank" >《海南新闻联播》2019年10月04日</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/video/News/hnxwlb/2019-10-04/362136.html"  target="_blank" title="聚焦海南国际旅游消费年 海南：用足用好离岛免税政策 助推国际旅游消费中心建设"><img  alt="聚焦海南国际旅游消费年 海南：用足用好离岛免税政策 助推国际旅游消费中心建设" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/10/20191004193258oSPi.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/video/News/hnxwlb/2019-10-04/362136.html" target="_blank" >聚焦海南国际旅游消费年 海南：用足用好离岛免税政策 助推国际旅游消费中心建设</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/video/News/hnxwlb/2019-10-04/362135.html"  target="_blank" title="庆祝新中国成立70周年大型成就展：海南元素令人瞩目"><img  alt="庆祝新中国成立70周年大型成就展：海南元素令人瞩目" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/10/20191004193436DDDD.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/video/News/hnxwlb/2019-10-04/362135.html" target="_blank" >庆祝新中国成立70周年大型成就展：海南元素令人瞩目</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/video/News/hnxwlb/2019-10-04/362134.html"  target="_blank" title="庆祝新中国成立70周年大会在海南引起热烈反响：凝心聚力共筑中国梦 加快建设美好新海南"><img  alt="庆祝新中国成立70周年大会在海南引起热烈反响：凝心聚力共筑中国梦 加快建设美好新海南" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/10/20191004193545umic.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/video/News/hnxwlb/2019-10-04/362134.html" target="_blank" >庆祝新中国成立70周年大会在海南引起热烈反响：凝心聚力共筑中国梦 加快建设美好新海南</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/video/News/hnxwlb/2019-10-04/362133.html"  target="_blank" title="我们走过70年 海南：热带特色高效农业 让农民捧上“金饭碗”"><img  alt="我们走过70年 海南：热带特色高效农业 让农民捧上“金饭碗”" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/10/20191004193703zHqb.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/video/News/hnxwlb/2019-10-04/362133.html" target="_blank" >我们走过70年 海南：热带特色高效农业 让农民捧上“金饭碗”</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/video/News/hnxwlb/2019-10-04/362169.html"  target="_blank" title="我和我的祖国"><img  alt="我和我的祖国" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/10/201910042056573WLU.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/video/News/hnxwlb/2019-10-04/362169.html" target="_blank" >我和我的祖国</a></div>
+                <div class="clear"></div>
+			</li>	
+							
+	</ul>
+</div>
+</div><!-- 海南新闻联播结束1-->
+					</div>
+
+					<div class="hn_tabscon hidden">
+						
+				<!-- 直播海南开始1-->			
+					<div class="overflow">
+<div class="cell_3949_">
+    <ul class="clearfix">
+    										<li>
+			<a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362137.html"  target="_blank" title="《直播海南》2019年10月04日"><img  alt="《直播海南》2019年10月04日" src="http://imgs.hnntv.cn/material/livmedia/img/250x142/2019/10/8e8d75749d806312a2d113a7db93fb8c.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362137.html" target="_blank" >《直播海南》2019年10月04日</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362160.html"  target="_blank" title="新中国成立70周年庆祝大会在海南引起热烈反响：感受辉煌成就 积聚奋进力量"><img  alt="新中国成立70周年庆祝大会在海南引起热烈反响：感受辉煌成就 积聚奋进力量" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/10/20191004201729LA0j.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362160.html" target="_blank" >新中国成立70周年庆祝大会在海南引起热烈反响：感受辉煌成就 积聚奋进力量</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362159.html"  target="_blank" title="“美好新海南”号彩车亮相北京奥林匹克公园"><img  alt="“美好新海南”号彩车亮相北京奥林匹克公园" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/10/201910042015527ody.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362159.html" target="_blank" >“美好新海南”号彩车亮相北京奥林匹克公园</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362162.html"  target="_blank" title="我的我的祖国之唱响"><img  alt="我的我的祖国之唱响" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/10/2019100420105769cj.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362162.html" target="_blank" >我的我的祖国之唱响</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362158.html"  target="_blank" title="“花毯长卷”成热门“打卡地” 人们纷纷向祖国“花式表白”"><img  alt="“花毯长卷”成热门“打卡地” 人们纷纷向祖国“花式表白”" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/10/20191004201507rmIE.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362158.html" target="_blank" >“花毯长卷”成热门“打卡地” 人们纷纷向祖国“花式表白”</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362157.html"  target="_blank" title="“超人”阿消一一王善科的“逆行”"><img  alt="“超人”阿消一一王善科的“逆行”" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/10/20191004201431ipM.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362157.html" target="_blank" >“超人”阿消一一王善科的“逆行”</a></div>
+                <div class="clear"></div>
+			</li>	
+							
+	</ul>
+</div>
+</div>	
+
+
+
+
+			<!-- 直播海南-->		</div>
+					<div class="hn_tabscon hidden">
+				<!-- 国内开始1-->	
+					<div class="overflow">
+<div class="cell_3950_">
+    <ul class="clearfix">
+    										<li>
+			<a href="http://share.hnntv.cn/share/?_hgOutLink=special/specialDetail&id=114"  target="_blank" title="心连心 爱香港"><img  alt="心连心 爱香港" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/09/20190901153822xKw9.jpg" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://share.hnntv.cn/share/?_hgOutLink=special/specialDetail&id=114" target="_blank" >心连心 爱香港</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://tv.cctv.com/special/zzdls/index.shtml?spm=C96370.PsikHJQ1ICOX.Em32AuyOHUeL.4"  target="_blank" title="我们走在大路上"><img  alt="我们走在大路上" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/09/20190917160154GsAu.jpg" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://tv.cctv.com/special/zzdls/index.shtml?spm=C96370.PsikHJQ1ICOX.Em32AuyOHUeL.4" target="_blank" >我们走在大路上</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/st/gn/2019-10-05/362476.html"  target="_blank" title="铁部等部门助力国庆长假安全有序出行"><img  alt="铁部等部门助力国庆长假安全有序出行" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/10/20191005173033S7gs.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/st/gn/2019-10-05/362476.html" target="_blank" >铁部等部门助力国庆长假安全有序出行</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/st/gn/2019-10-05/362474.html"  target="_blank" title="在为祖国自豪中接续奋斗"><img  alt="在为祖国自豪中接续奋斗" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/10/20191005172444OEq.jpg" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/st/gn/2019-10-05/362474.html" target="_blank" >在为祖国自豪中接续奋斗</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/st/gn/2019-10-05/362463.html"  target="_blank" title="致70岁的您|70年，让我们这样向世界证明"><img  alt="致70岁的您|70年，让我们这样向世界证明" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/10/20191005172354clNc.jpg" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/st/gn/2019-10-05/362463.html" target="_blank" >致70岁的您|70年，让我们这样向世界证明</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://v.cctv.com/2019/10/05/VIDEvUJwB9LLY61YqpMsAtZe191005.shtml"  target="_blank" title="【70年70城】记住兰考！在这里，传承和弘扬焦裕禄精神"><img  alt="【70年70城】记住兰考！在这里，传承和弘扬焦裕禄精神" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/10/20191005172211ldQI.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://v.cctv.com/2019/10/05/VIDEvUJwB9LLY61YqpMsAtZe191005.shtml" target="_blank" >【70年70城】记住兰考！在这里，传承和弘扬焦裕禄精神</a></div>
+                <div class="clear"></div>
+			</li>	
+							
+	</ul>
+</div>
+</div>
+						
+						
+		
+<!-- 国内结束-->
+
+
+					</div>
+
+					<div class="hn_tabscon hidden">
+			<!-- 国际开始-->		
+			<div class="overflow">
+<div class="cell_3951_">
+    <ul class="clearfix">
+    										<li>
+			<a href="http://www.hnntv.cn/st/gj/2019-10-05/362453.html"  target="_blank" title="台风“米娜”吹袭韩国导致12人死 逾1500人疏散"><img  alt="台风“米娜”吹袭韩国导致12人死 逾1500人疏散" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/10/20191005170521pylG.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/st/gj/2019-10-05/362453.html" target="_blank" >台风“米娜”吹袭韩国导致12人死 逾1500人疏散</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/st/gj/2019-10-05/362451.html"  target="_blank" title="委内瑞拉拟明年翻番原油产量 增至日均200万桶"><img  alt="委内瑞拉拟明年翻番原油产量 增至日均200万桶" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/10/20191005170420zPdW.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/st/gj/2019-10-05/362451.html" target="_blank" >委内瑞拉拟明年翻番原油产量 增至日均200万桶</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/st/gj/2019-10-05/362449.html"  target="_blank" title="意大利医学院统考结果出炉 逾万考生投诉存在舞弊"><img  alt="意大利医学院统考结果出炉 逾万考生投诉存在舞弊" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/10/20191005170247RSMG.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/st/gj/2019-10-05/362449.html" target="_blank" >意大利医学院统考结果出炉 逾万考生投诉存在舞弊</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/st/gj/2019-10-05/362447.html"  target="_blank" title="白宫公布新规：移民签证申请者须证明有能力承担医保"><img  alt="白宫公布新规：移民签证申请者须证明有能力承担医保" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/10/20191005165920UwNx.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/st/gj/2019-10-05/362447.html" target="_blank" >白宫公布新规：移民签证申请者须证明有能力承担医保</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/st/gj/2019-10-05/362365.html"  target="_blank" title="中国民众在过去70年有了巨大的获得"><img  alt="中国民众在过去70年有了巨大的获得" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/10/20191005125554BBPi.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/st/gj/2019-10-05/362365.html" target="_blank" >中国民众在过去70年有了巨大的获得</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/st/gj/2019-10-05/362350.html"  target="_blank" title="2019中法投资对话启幕 探讨两国经贸合作新机遇"><img  alt="2019中法投资对话启幕 探讨两国经贸合作新机遇" src="http://imgs.hnntv.cn/material/news/img/250x142/2019/10/20191005102738nvnz.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/st/gj/2019-10-05/362350.html" target="_blank" >2019中法投资对话启幕 探讨两国经贸合作新机遇</a></div>
+                <div class="clear"></div>
+			</li>	
+							
+	</ul>
+</div>
+</div>
+						
+				<!-- 国际结束-->	
+				</div>
+					<div class="hn_tabscon hidden">
+				<!-- 海创开始-->		
+					<div class="overflow">
+<div class="cell_3952_">
+    <ul class="clearfix">
+    										<li>
+			<a href="http://www.hnntv.cn/st/qmtxc/mtbd/2019-09-27/358986.html"  target="_blank" title="朋友圈“精装修”产业链：花60元就能”环游世界“你怎么看？"><img  alt="朋友圈“精装修”产业链：花60元就能”环游世界“你怎么看？" src="http://imgs.hnntv.cn/material/livmedia/img/250x142/2019/09/5ee27920d959a3dc460e0aef1b6afe28.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/st/qmtxc/mtbd/2019-09-27/358986.html" target="_blank" >朋友圈“精装修”产业链：花60元就能”环游世界“你怎么看？</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/st/qmtxc/mtbd/2019-09-26/358360.html"  target="_blank" title="高校禁穿拖鞋进食堂 你怎么看？"><img  alt="高校禁穿拖鞋进食堂 你怎么看？" src="http://imgs.hnntv.cn/material/livmedia/img/250x142/2019/09/fa27f7bf3c0246e50ab5a67b673d90d6.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/st/qmtxc/mtbd/2019-09-26/358360.html" target="_blank" >高校禁穿拖鞋进食堂 你怎么看？</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/st/qmtxc/mtbd/2019-09-25/357578.html"  target="_blank" title="谣言粉碎机：自制豆浆泡沫过多 会影响健康？"><img  alt="谣言粉碎机：自制豆浆泡沫过多 会影响健康？" src="http://imgs.hnntv.cn/material/livmedia/img/250x142/2019/09/b10c93a40b37d5506696bae88ac30001.jpg" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/st/qmtxc/mtbd/2019-09-25/357578.html" target="_blank" >谣言粉碎机：自制豆浆泡沫过多 会影响健康？</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/st/qmtxc/mtbd/2019-09-25/357577.html"  target="_blank" title="乱扔包裹遭投诉！快递员辱骂客户 公司想赔100元了事"><img  alt="乱扔包裹遭投诉！快递员辱骂客户 公司想赔100元了事" src="http://imgs.hnntv.cn/material/livmedia/img/250x142/2019/09/3ee521c358d2784f36ac3f1fa8d1bfc7.png" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/st/qmtxc/mtbd/2019-09-25/357577.html" target="_blank" >乱扔包裹遭投诉！快递员辱骂客户 公司想赔100元了事</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/st/qmtxc/mtbd/2019-09-25/357576.html"  target="_blank" title="95后小伙带客户坐地铁 被老板骂“不带脑子”你怎么看？"><img  alt="95后小伙带客户坐地铁 被老板骂“不带脑子”你怎么看？" src="http://imgs.hnntv.cn/material/livmedia/img/250x142/2019/09/88d21cf63f76d3f27790eadf9df5c273.jpg" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/st/qmtxc/mtbd/2019-09-25/357576.html" target="_blank" >95后小伙带客户坐地铁 被老板骂“不带脑子”你怎么看？</a></div>
+                <div class="clear"></div>
+			</li>	
+											<li>
+			<a href="http://www.hnntv.cn/st/qmtxc/mtbd/2019-09-24/357029.html"  target="_blank" title="感动！特殊学院2000名新生用手语唱响国歌"><img  alt="感动！特殊学院2000名新生用手语唱响国歌" src="http://imgs.hnntv.cn/material/livmedia/img/250x142/2019/09/a60a1911f4c83245277ad6e846976957.jpg" height="142" width="250"></a>
+			<div class="focus-desc"><a href="http://www.hnntv.cn/st/qmtxc/mtbd/2019-09-24/357029.html" target="_blank" >感动！特殊学院2000名新生用手语唱响国歌</a></div>
+                <div class="clear"></div>
+			</li>	
+							
+	</ul>
+</div>
+</div>
+                   <!-- 海创结束-->
+                    </div>
+
+
+				</div>
+				<!-- 选项卡 -->
+				<script>
+				var $btn = $(".tabstit").find("li");
+				$btn.mouseover(function(){
+					$(this).css('background','#ff5e01').find("a").css('color','#FFf');
+					$(this).siblings().css('background','#fff').find("a").css('color','#666666');
+					var index=$btn.index(this);
+					$(".hn_tabscon").eq(index).removeClass("hidden").siblings(".hn_tabscon").addClass("hidden");
+				});
+				</script>
+                
+              
+             	              <!-- 栏目分类 -->
+             
+    <style>  .lm_tit{ height: 45px; background:url(http://tv.hnntv.cn/t/1/13/images/tiao.jpg) bottom no-repeat;} 
+	         .lm_tit h3{ letter-spacing:10px; font-size:20px; font-weight:normal;}</style>
+	         
+             
+             
+		<div class="left lmfl" style=" margin-top:10px;">
+			<!-- 社会 -->
+			<div class="sh overflow">
+				<div class="lm_tit pr">
+				<!-- 新闻栏目开始-->
+	<div class="cell_3954_">
+        		<h3 class="tl-header"><a href="http://www.hnntv.cn/video/News/" target="_blank" title="新闻">新闻</a></h3> 
+		<div class="tl-more"><a href="http://www.hnntv.cn/video/News/" target="_blank">更多+</a></div>		
+         		
+</div>
+<!-- 新闻栏目结束-->
+					<div class="lm_list pa">
+					
+					<!-- 新闻子栏目开始-->
+					<ul class="cell_3955_">
+                 <li>
+                 <a href="http://www.hnntv.cn/video/News/hnxwlb/" target="_blank" title="海南新闻联播">海南新闻联播</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/News/ssxw/" target="_blank" title="三沙新闻">三沙新闻</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/News/ztzmg/" target="_blank" title="直通自贸港">直通自贸港</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/News/nhzbs/" target="_blank" title="南海直播室">南海直播室</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/News/xwxs/" target="_blank" title="新闻1时间">新闻1时间</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/News/sf/" target="_blank" title="法治新海南">法治新海南</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/News/hpm/" target="_blank" title="海平面">海平面</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/News/kj1x/" target="_blank" title="科教新海南">科教新海南</a>
+           </li>
+          </ul>
+						
+	  
+
+	  
+	  
+	  <!-- 新闻子栏目结束-->
+	  
+					</div>
+				</div>
+				<div class="lm_con">
+		
+				
+				<!-- 新闻栏目内容开始-->
+				<div class="cell_3956_">
+    <div class="inner"  style="position: relative;">
+    	<div class="contenter"  style="position: absolute; left: 0px; width: 7580px;"> 
+						<div class="item">
+				<ul>
+												<li>
+						<a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362482.html" target="_blank" title="《新闻1时间》2019年10月05日（17：00）"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/2459ee939f3aac372f10fe0e6017d864.png" alt="《新闻1时间》2019年10月05日（17：00）" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362482.html" target="_blank" title="《新闻1时间》2019年10月05日（17：00）">《新闻1时间》2019年10月05日（17：00）</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362481.html" target="_blank" title="“夜游”给海口国庆长假旅游经济发展提供新动能"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/9976297bc9bd864bd8a1d49f7d81587e.jpg" alt="“夜游”给海口国庆长假旅游经济发展提供新动能" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362481.html" target="_blank" title="“夜游”给海口国庆长假旅游经济发展提供新动能">“夜游”给海口国庆长假旅游经济发展提供新动能</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362472.html" target="_blank" title="海口：外地游客点赞椰城交通新变化"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/16a884f6fcbd7a1a328cb623b9a5bd89.png" alt="海口：外地游客点赞椰城交通新变化" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362472.html" target="_blank" title="海口：外地游客点赞椰城交通新变化">海口：外地游客点赞椰城交通新变化</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362471.html" target="_blank" title="国庆假期：海南5日起迎返程高峰 交警部门提示守法驾驶"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/d3c9b5afb6da4052418578d4efa12a72.jpg" alt="国庆假期：海南5日起迎返程高峰 交警部门提示守法驾驶" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362471.html" target="_blank" title="国庆假期：海南5日起迎返程高峰 交警部门提示守法驾驶">国庆假期：海南5日起迎返程高峰 交警部门提示守法驾驶</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362470.html" target="_blank" title="国庆假期：多地迎客流高峰 旅游各显特色"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/b65fe175161d4cac0b482e739a036f6a.png" alt="国庆假期：多地迎客流高峰 旅游各显特色" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362470.html" target="_blank" title="国庆假期：多地迎客流高峰 旅游各显特色">国庆假期：多地迎客流高峰 旅游各显特色</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362469.html" target="_blank" title="国庆假期·出游：全国各景区客流平稳有序"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/628eb6bf02fcd9384fa217cc69c4993c.png" alt="国庆假期·出游：全国各景区客流平稳有序" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362469.html" target="_blank" title="国庆假期·出游：全国各景区客流平稳有序">国庆假期·出游：全国各景区客流平稳有序</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362468.html" target="_blank" title="辽宁本溪：枫叶进入最佳观赏期"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/54f3863b24552bcd6e7db9a295c2068f.jpg" alt="辽宁本溪：枫叶进入最佳观赏期" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362468.html" target="_blank" title="辽宁本溪：枫叶进入最佳观赏期">辽宁本溪：枫叶进入最佳观赏期</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362467.html" target="_blank" title="国庆假期 前四天全国景区共接待5.42亿人次"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/7ddeb3e9d73bf66eb7e89d1a09ea2874.png" alt="国庆假期 前四天全国景区共接待5.42亿人次" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362467.html" target="_blank" title="国庆假期 前四天全国景区共接待5.42亿人次">国庆假期 前四天全国景区共接待5.42亿人次</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362466.html" target="_blank" title="聚焦海南国际旅游消费年 乡村游引领旅游新风尚"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/d8a20c9c80bda8791496cc2c2d0d736f.png" alt="聚焦海南国际旅游消费年 乡村游引领旅游新风尚" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362466.html" target="_blank" title="聚焦海南国际旅游消费年 乡村游引领旅游新风尚">聚焦海南国际旅游消费年 乡村游引领旅游新风尚</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362465.html" target="_blank" title="2019年海南青巡赛：总决赛首轮结束 赛前唱国歌 6个红字为祖国庆生"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/1677c12ca69d1fa48fe927b9d34e627d.jpg" alt="2019年海南青巡赛：总决赛首轮结束 赛前唱国歌 6个红字为祖国庆生" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362465.html" target="_blank" title="2019年海南青巡赛：总决赛首轮结束 赛前唱国歌 6个红字为祖国庆生">2019年海南青巡赛：总决赛首轮结束 赛前唱国歌 6个红字为祖国庆生</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362464.html" target="_blank" title="盛典有我·群众游行背后的故事 演绎“东方雄狮”的功夫少年"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/61cacec384784d7631ae53780e7da96e.png" alt="盛典有我·群众游行背后的故事 演绎“东方雄狮”的功夫少年" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362464.html" target="_blank" title="盛典有我·群众游行背后的故事 演绎“东方雄狮”的功夫少年">盛典有我·群众游行背后的故事 演绎“东方雄狮”的功夫少年</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362438.html" target="_blank" title="《新闻1时间》2019年10月05日（15：00）"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/d80d38ba5849604af14b377182527a29.png" alt="《新闻1时间》2019年10月05日（15：00）" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362438.html" target="_blank" title="《新闻1时间》2019年10月05日（15：00）">《新闻1时间》2019年10月05日（15：00）</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362437.html" target="_blank" title="国庆假期：海口景区氛围喜庆 市民游客畅享休闲时光"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/e76be1d865f6661759c8cf47ead4ce41.png" alt="国庆假期：海口景区氛围喜庆 市民游客畅享休闲时光" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362437.html" target="_blank" title="国庆假期：海口景区氛围喜庆 市民游客畅享休闲时光">国庆假期：海口景区氛围喜庆 市民游客畅享休闲时光</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362436.html" target="_blank" title="国庆假期：海南各地精心准备“大餐” 旅游市场持续升温"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/53b4275ac49a6e82233a13d804fb1743.png" alt="国庆假期：海南各地精心准备“大餐” 旅游市场持续升温" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362436.html" target="_blank" title="国庆假期：海南各地精心准备“大餐” 旅游市场持续升温">国庆假期：海南各地精心准备“大餐” 旅游市场持续升温</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362433.html" target="_blank" title="国庆假期·出游 国庆黄金周过半 海南旅游市场热度攀升"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/6fdc2793453af98e17907058dc665322.png" alt="国庆假期·出游 国庆黄金周过半 海南旅游市场热度攀升" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/News/xwxs/2019-10-05/362433.html" target="_blank" title="国庆假期·出游 国庆黄金周过半 海南旅游市场热度攀升">国庆假期·出游 国庆黄金周过半 海南旅游市场热度攀升</a></p>
+					</li>
+				
+            				</ul>
+			</div>
+		</div>
+	</div>
+    <span class="btn carousel-prev"></span>
+	<span class="btn carousel-next"></span>
+</div>
+				
+				
+<!-- 新闻栏目内容结束-->
+
+
+
+				</div>
+			</div>
+				<div class="sh overflow">
+				<div class="lm_tit pr">
+				<!-- 民生栏目开始-->
+					<div class="cell_3958_">
+        		<h3 class="tl-header"><a href="http://www.hnntv.cn/video/ms/" target="_blank" title="民生">民生</a></h3> 
+		<div class="tl-more"><a href="http://www.hnntv.cn/video/ms/" target="_blank">更多+</a></div>		
+         		
+</div>
+<!-- 民生栏目结束-->
+
+
+					<div class="lm_list pa">
+					
+					<!-- 民生子栏目开始-->
+						<ul class="cell_3959_">
+                 <li>
+                 <a href="http://www.hnntv.cn/video/ms/zbhn/" target="_blank" title="直播海南">直播海南</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/ms/shb/" target="_blank" title="生活帮">生活帮</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/ms/lsnyjxs/" target="_blank" title="绿色农业进行时">绿色农业进行时</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/ms/cx365/" target="_blank" title="畅行365">畅行365</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/ms/lss/" target="_blank" title="律师说">律师说</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/ms/pfjc/" target="_blank" title="普法剧场">普法剧场</a>
+           </li>
+          </ul>
+	  
+	  <!-- 民生子栏目结束-->
+					</div>
+				</div>
+				<div class="lm_con">
+				<!-- 民生栏目内容开始-->
+					<div class="cell_3960_">
+    <div class="inner"  style="position: relative;">
+    	<div class="contenter"  style="position: absolute; left: 0px; width: 7580px;"> 
+						<div class="item">
+				<ul>
+												<li>
+						<a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362137.html" target="_blank" title="《直播海南》2019年10月04日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/8e8d75749d806312a2d113a7db93fb8c.png" alt="《直播海南》2019年10月04日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362137.html" target="_blank" title="《直播海南》2019年10月04日">《直播海南》2019年10月04日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362160.html" target="_blank" title="新中国成立70周年庆祝大会在海南引起热烈反响：感受辉煌成就 积聚奋进力量"><img src="http://imgs.hnntv.cn/material/news/img/204x115/2019/10/20191004201729LA0j.png" alt="新中国成立70周年庆祝大会在海南引起热烈反响：感受辉煌成就 积聚奋进力量" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362160.html" target="_blank" title="新中国成立70周年庆祝大会在海南引起热烈反响：感受辉煌成就 积聚奋进力量">新中国成立70周年庆祝大会在海南引起热烈反响：感受辉煌成就 积聚奋进力量</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362159.html" target="_blank" title="“美好新海南”号彩车亮相北京奥林匹克公园"><img src="http://imgs.hnntv.cn/material/news/img/204x115/2019/10/201910042015527ody.png" alt="“美好新海南”号彩车亮相北京奥林匹克公园" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362159.html" target="_blank" title="“美好新海南”号彩车亮相北京奥林匹克公园">“美好新海南”号彩车亮相北京奥林匹克公园</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362162.html" target="_blank" title="我的我的祖国之唱响"><img src="http://imgs.hnntv.cn/material/news/img/204x115/2019/10/2019100420105769cj.png" alt="我的我的祖国之唱响" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362162.html" target="_blank" title="我的我的祖国之唱响">我的我的祖国之唱响</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362158.html" target="_blank" title="“花毯长卷”成热门“打卡地” 人们纷纷向祖国“花式表白”"><img src="http://imgs.hnntv.cn/material/news/img/204x115/2019/10/20191004201507rmIE.png" alt="“花毯长卷”成热门“打卡地” 人们纷纷向祖国“花式表白”" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362158.html" target="_blank" title="“花毯长卷”成热门“打卡地” 人们纷纷向祖国“花式表白”">“花毯长卷”成热门“打卡地” 人们纷纷向祖国“花式表白”</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362157.html" target="_blank" title="“超人”阿消一一王善科的“逆行”"><img src="http://imgs.hnntv.cn/material/news/img/204x115/2019/10/20191004201431ipM.png" alt="“超人”阿消一一王善科的“逆行”" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362157.html" target="_blank" title="“超人”阿消一一王善科的“逆行”">“超人”阿消一一王善科的“逆行”</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362156.html" target="_blank" title="主播评论：他们一路“逆行”  只为时代的美好"><img src="http://imgs.hnntv.cn/material/news/img/204x115/2019/10/20191004201343ush9.jpg" alt="主播评论：他们一路“逆行”  只为时代的美好" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362156.html" target="_blank" title="主播评论：他们一路“逆行”  只为时代的美好">主播评论：他们一路“逆行”  只为时代的美好</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362155.html" target="_blank" title="国庆我在岗"><img src="http://imgs.hnntv.cn/material/news/img/204x115/2019/10/20191004201306K7gM.jpg" alt="国庆我在岗" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362155.html" target="_blank" title="国庆我在岗">国庆我在岗</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362154.html" target="_blank" title="家门口的公园：公园里的“文化行”"><img src="http://imgs.hnntv.cn/material/news/img/204x115/2019/10/20191004201140PN8o.png" alt="家门口的公园：公园里的“文化行”" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362154.html" target="_blank" title="家门口的公园：公园里的“文化行”">家门口的公园：公园里的“文化行”</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362153.html" target="_blank" title="博物馆内看琼剧 特色文化游客赞"><img src="http://imgs.hnntv.cn/material/news/img/204x115/2019/10/20191004200708eJjn.png" alt="博物馆内看琼剧 特色文化游客赞" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ms/zbhn/2019-10-04/362153.html" target="_blank" title="博物馆内看琼剧 特色文化游客赞">博物馆内看琼剧 特色文化游客赞</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ms/cx365/2019-10-04/362151.html" target="_blank" title="海口市区交通运行情况良好 各路段交通流量平稳"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/971857fd6b1c09fefc0fc7f4063dd6b5.png" alt="海口市区交通运行情况良好 各路段交通流量平稳" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ms/cx365/2019-10-04/362151.html" target="_blank" title="海口市区交通运行情况良好 各路段交通流量平稳">海口市区交通运行情况良好 各路段交通流量平稳</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ms/cx365/2019-10-04/362150.html" target="_blank" title="最美劝导员 · 琼海：钟运柏"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/12489b8cb3ce37b4fd628d7a9a9b0458.png" alt="最美劝导员 · 琼海：钟运柏" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ms/cx365/2019-10-04/362150.html" target="_blank" title="最美劝导员 · 琼海：钟运柏">最美劝导员 · 琼海：钟运柏</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ms/cx365/2019-10-04/362149.html" target="_blank" title="国庆特别策划：环岛高铁上的“异地恋”"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/6f537f04ae303c15430dc3b154e466b1.png" alt="国庆特别策划：环岛高铁上的“异地恋”" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ms/cx365/2019-10-04/362149.html" target="_blank" title="国庆特别策划：环岛高铁上的“异地恋”">国庆特别策划：环岛高铁上的“异地恋”</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ms/shb/2019-10-04/362148.html" target="_blank" title="我和我的祖国一一慢慢变“快”的幸福生活"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/23f2fa8d63679fc6fcf3f060cf068a43.png" alt="我和我的祖国一一慢慢变“快”的幸福生活" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ms/shb/2019-10-04/362148.html" target="_blank" title="我和我的祖国一一慢慢变“快”的幸福生活">我和我的祖国一一慢慢变“快”的幸福生活</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ms/shb/2019-10-04/362147.html" target="_blank" title="假期好去处一一“欢歌笑语”的白沙门公园"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/4ed1a768dab7a02f7a06bc3b1e417633.jpg" alt="假期好去处一一“欢歌笑语”的白沙门公园" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ms/shb/2019-10-04/362147.html" target="_blank" title="假期好去处一一“欢歌笑语”的白沙门公园">假期好去处一一“欢歌笑语”的白沙门公园</a></p>
+					</li>
+				
+            				</ul>
+			</div>
+		</div>
+	</div>
+    <span class="btn carousel-prev"></span>
+	<span class="btn carousel-next"></span>
+</div>
+
+<!-- 民生栏目内容结束-->
+				</div>
+			</div>
+			
+			<div class="sh overflow">
+				<div class="lm_tit pr">
+				
+				
+				<!-- 故事栏目开始-->
+					<div class="cell_3961_">
+        		<h3 class="tl-header"><a href="http://www.hnntv.cn/video/gs/" target="_blank" title="故事">故事</a></h3> 
+		<div class="tl-more"><a href="http://www.hnntv.cn/video/gs/" target="_blank">更多+</a></div>		
+         		
+</div><!-- 故事栏目结束-->
+					<div class="lm_list pa">
+					
+					
+					<!-- 故事子栏目开始-->
+						<ul class="cell_3962_">
+                 <li>
+                 <a href="http://www.hnntv.cn/video/gs/grszx/" target="_blank" title="光荣的追寻">光荣的追寻</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/gs/daaihn/" target="_blank" title="大爱海南">大爱海南</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/gs/hngs/" target="_blank" title="海南故事">海南故事</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/gs/ldyj/" target="_blank" title="绿岛人家">绿岛人家</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/gs/xiangqinji/" target="_blank" title="相亲记">相亲记</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/gs/dsjs/" target="_blank" title="对世界说">对世界说</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/gs/dhxg/" target="_blank" title="对话香港">对话香港</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/gs/zmaoyxz/" target="_blank" title="自贸有新招">自贸有新招</a>
+           </li>
+          </ul>
+	  
+	  <!-- 故事子栏目结束-->
+	  
+	  
+					</div>
+				</div>
+				<div class="lm_con">
+				
+				<!-- 故事子栏目内容开始-->
+					<div class="cell_3963_">
+    <div class="inner"  style="position: relative;">
+    	<div class="contenter"  style="position: absolute; left: 0px; width: 7580px;"> 
+						<div class="item">
+				<ul>
+												<li>
+						<a href="http://www.hnntv.cn/video/gs/xiangqinji/2019-10-01/360940.html" target="_blank" title="遇见老乡 遇上缘分"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/7a4a8c6ce8911bc719ced2ff5109c4ad.png" alt="遇见老乡 遇上缘分" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/gs/xiangqinji/2019-10-01/360940.html" target="_blank" title="遇见老乡 遇上缘分">遇见老乡 遇上缘分</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/gs/xiangqinji/2019-09-30/360476.html" target="_blank" title="我在秘密花园 等花开 等你来"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/fc3bca3c1a91e06a2648d198da08dd5c.jpg" alt="我在秘密花园 等花开 等你来" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/gs/xiangqinji/2019-09-30/360476.html" target="_blank" title="我在秘密花园 等花开 等你来">我在秘密花园 等花开 等你来</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/gs/hngs/2019-09-30/360470.html" target="_blank" title="《海南故事》2019年09月29日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/b29d53062d6a7aee7a6407865e70317a.jpg" alt="《海南故事》2019年09月29日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/gs/hngs/2019-09-30/360470.html" target="_blank" title="《海南故事》2019年09月29日">《海南故事》2019年09月29日</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/gs/hngs/2019-09-30/360469.html" target="_blank" title="望临高角缅怀革命先烈 传承红色基因"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/9655e0cd13b515013ee32d4e52443d32.jpg" alt="望临高角缅怀革命先烈 传承红色基因" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/gs/hngs/2019-09-30/360469.html" target="_blank" title="望临高角缅怀革命先烈 传承红色基因">望临高角缅怀革命先烈 传承红色基因</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/gs/hngs/2019-09-30/360468.html" target="_blank" title="探寻神秘的黎族古乐器 感受民族音乐延伸"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/b2727bcab6d9270436c412ee26500d2c.jpg" alt="探寻神秘的黎族古乐器 感受民族音乐延伸" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/gs/hngs/2019-09-30/360468.html" target="_blank" title="探寻神秘的黎族古乐器 感受民族音乐延伸">探寻神秘的黎族古乐器 感受民族音乐延伸</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/gs/grszx/grszx2/2019-09-29/360352.html" target="_blank" title="《光荣的追寻》2019年09月29日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/83d57adc2000c52fea71960ffd517251.png" alt="《光荣的追寻》2019年09月29日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/gs/grszx/grszx2/2019-09-29/360352.html" target="_blank" title="《光荣的追寻》2019年09月29日">《光荣的追寻》2019年09月29日</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/gs/zmaoyxz/2019-09-29/360347.html" target="_blank" title="《自贸有新招》2019年09月29日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/c4f98b0e1955a4c2584f1ea3ee6d4f6a.jpg" alt="《自贸有新招》2019年09月29日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/gs/zmaoyxz/2019-09-29/360347.html" target="_blank" title="《自贸有新招》2019年09月29日">《自贸有新招》2019年09月29日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/gs/xiangqinji/2019-09-28/359488.html" target="_blank" title="爱我 请再勇敢往前走"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/6a3563a9b07376e76254185a71793272.jpg" alt="爱我 请再勇敢往前走" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/gs/xiangqinji/2019-09-28/359488.html" target="_blank" title="爱我 请再勇敢往前走">爱我 请再勇敢往前走</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/gs/xiangqinji/2019-09-27/358890.html" target="_blank" title="我们的一见钟情 能否经得起考验"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/6254c6c3d9656262660c45984669a577.png" alt="我们的一见钟情 能否经得起考验" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/gs/xiangqinji/2019-09-27/358890.html" target="_blank" title="我们的一见钟情 能否经得起考验">我们的一见钟情 能否经得起考验</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/gs/xiangqinji/2019-09-24/356924.html" target="_blank" title="当“吃货”女孩遇上“美食”男孩"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/e67897a27198d8d9d2f029070bd7f36d.png" alt="当“吃货”女孩遇上“美食”男孩" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/gs/xiangqinji/2019-09-24/356924.html" target="_blank" title="当“吃货”女孩遇上“美食”男孩">当“吃货”女孩遇上“美食”男孩</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/gs/hngs/2019-09-23/356356.html" target="_blank" title="不认输的海南新农人 只为找到最优的黄金百香果"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/bdb82d708d7f384771861f1ef431b3a8.png" alt="不认输的海南新农人 只为找到最优的黄金百香果" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/gs/hngs/2019-09-23/356356.html" target="_blank" title="不认输的海南新农人 只为找到最优的黄金百香果">不认输的海南新农人 只为找到最优的黄金百香果</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/gs/hngs/2019-09-23/356355.html" target="_blank" title="用爱点亮“回归路”做戒毒人员的“娘家人”"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/db3134667aae2365a1dacda72432446e.jpg" alt="用爱点亮“回归路”做戒毒人员的“娘家人”" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/gs/hngs/2019-09-23/356355.html" target="_blank" title="用爱点亮“回归路”做戒毒人员的“娘家人”">用爱点亮“回归路”做戒毒人员的“娘家人”</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/gs/hngs/2019-09-23/356354.html" target="_blank" title="我们有梦的节拍 从音乐中找到真正的自己"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/7ffd0deeafc236f52569c7703a6995f3.jpg" alt="我们有梦的节拍 从音乐中找到真正的自己" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/gs/hngs/2019-09-23/356354.html" target="_blank" title="我们有梦的节拍 从音乐中找到真正的自己">我们有梦的节拍 从音乐中找到真正的自己</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/gs/hngs/2019-09-23/356350.html" target="_blank" title="《海南故事》2019年09月22日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/33ebc346d0bc425dc2011e1f757716d1.jpg" alt="《海南故事》2019年09月22日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/gs/hngs/2019-09-23/356350.html" target="_blank" title="《海南故事》2019年09月22日">《海南故事》2019年09月22日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/gs/grszx/grszx2/2019-09-22/356289.html" target="_blank" title="《光荣的追寻》2019年09月22日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/522157bc73eb1a8feede17d8b59cf398.png" alt="《光荣的追寻》2019年09月22日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/gs/grszx/grszx2/2019-09-22/356289.html" target="_blank" title="《光荣的追寻》2019年09月22日">《光荣的追寻》2019年09月22日</a></p>
+					</li>
+				
+            				</ul>
+			</div>
+		</div>
+	</div>
+    <span class="btn carousel-prev"></span>
+	<span class="btn carousel-next"></span>
+</div>
+<!-- 故事子栏目内容结束-->
+
+				</div>
+			</div>
+		
+			<div class="sh overflow">
+				<div class="lm_tit pr">
+				<!-- 旅游栏目开始-->
+				
+					<div class="cell_3964_">
+        		<h3 class="tl-header"><a href="http://www.hnntv.cn/video/ly/" target="_blank" title="旅游">旅游</a></h3> 
+		<div class="tl-more"><a href="http://www.hnntv.cn/video/ly/" target="_blank">更多+</a></div>		
+         		
+</div>
+<!-- 旅游栏目结束-->
+					<div class="lm_list pa">
+					<!-- 旅游子栏目开始-->
+						<ul class="cell_3965_">
+                 <li>
+                 <a href="http://www.hnntv.cn/video/ly/xz/" target="_blank" title="行者">行者</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/ly/tylybd/" target="_blank" title="中国体育旅游报道">中国体育旅游报道</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/ly/spwlq/" target="_blank" title="刷屏文旅圈">刷屏文旅圈</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/ly/BravoHainan/" target="_blank" title="BravoHainan">BravoHainan</a>
+           </li>
+          </ul>
+	  <!-- 旅游子栏目结束-->
+	  
+					</div>
+				</div>
+				<div class="lm_con">
+				<!-- 旅游栏目内容开始-->
+					<div class="cell_3966_">
+    <div class="inner"  style="position: relative;">
+    	<div class="contenter"  style="position: absolute; left: 0px; width: 7580px;"> 
+						<div class="item">
+				<ul>
+												<li>
+						<a href="http://www.hnntv.cn/video/ly/tylybd/2019-10-05/362309.html" target="_blank" title="《中国体育旅游报道》2019年10月04日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/e15f38a91e0a9e845879254d5458e35d.jpg" alt="《中国体育旅游报道》2019年10月04日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ly/tylybd/2019-10-05/362309.html" target="_blank" title="《中国体育旅游报道》2019年10月04日">《中国体育旅游报道》2019年10月04日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ly/spwlq/2019-10-05/362279.html" target="_blank" title="《刷屏文旅圈》2019年10月04日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/3233297c122e2effe172cb5b081d6038.jpg" alt="《刷屏文旅圈》2019年10月04日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ly/spwlq/2019-10-05/362279.html" target="_blank" title="《刷屏文旅圈》2019年10月04日">《刷屏文旅圈》2019年10月04日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ly/xz/2019-10-04/361950.html" target="_blank" title="《机甲大师 决战长安》"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/bb0274c9dad577b57674b003baa47676.jpg" alt="《机甲大师 决战长安》" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ly/xz/2019-10-04/361950.html" target="_blank" title="《机甲大师 决战长安》">《机甲大师 决战长安》</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ly/tylybd/2019-10-04/361946.html" target="_blank" title="《中国体育旅游报道》2019年10月03日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/f552cdd149a41121b1da01ce0c347a2c.jpg" alt="《中国体育旅游报道》2019年10月03日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ly/tylybd/2019-10-04/361946.html" target="_blank" title="《中国体育旅游报道》2019年10月03日">《中国体育旅游报道》2019年10月03日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ly/spwlq/2019-10-04/361936.html" target="_blank" title="《刷屏文旅圈》2019年10月03日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/ef6698597793af71f9cd648d4dd55ff5.jpg" alt="《刷屏文旅圈》2019年10月03日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ly/spwlq/2019-10-04/361936.html" target="_blank" title="《刷屏文旅圈》2019年10月03日">《刷屏文旅圈》2019年10月03日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ly/spwlq/2019-10-03/361683.html" target="_blank" title="《刷屏文旅圈》2019年10月02日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/287f1e0cc412d74c4dca46c575432449.jpg" alt="《刷屏文旅圈》2019年10月02日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ly/spwlq/2019-10-03/361683.html" target="_blank" title="《刷屏文旅圈》2019年10月02日">《刷屏文旅圈》2019年10月02日</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ly/tylybd/2019-10-03/361595.html" target="_blank" title="《中国体育旅游报道》2019年10月02日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/45ab15ed665cc967c7b59c453e885122.jpg" alt="《中国体育旅游报道》2019年10月02日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ly/tylybd/2019-10-03/361595.html" target="_blank" title="《中国体育旅游报道》2019年10月02日">《中国体育旅游报道》2019年10月02日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ly/xz/2019-10-03/361593.html" target="_blank" title="机甲大师·迷局之战"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/026c5e218b31c56459825326c7af8b6f.jpg" alt="机甲大师·迷局之战" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ly/xz/2019-10-03/361593.html" target="_blank" title="机甲大师·迷局之战">机甲大师·迷局之战</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ly/xz/2019-10-02/361314.html" target="_blank" title="机甲大师·光环之下"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/ab1a1af648af444267efc7a40f8b159d.png" alt="机甲大师·光环之下" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ly/xz/2019-10-02/361314.html" target="_blank" title="机甲大师·光环之下">机甲大师·光环之下</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ly/tylybd/2019-10-02/361312.html" target="_blank" title="《中国体育旅游报道》2019年10月01日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/0b1c2824a0a3c6c540d45bb120f42f89.png" alt="《中国体育旅游报道》2019年10月01日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ly/tylybd/2019-10-02/361312.html" target="_blank" title="《中国体育旅游报道》2019年10月01日">《中国体育旅游报道》2019年10月01日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ly/spwlq/2019-10-02/361304.html" target="_blank" title="《刷屏文旅圈》2019年10月01日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/e8dfdce9694a69e68f451ffd3e733692.png" alt="《刷屏文旅圈》2019年10月01日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ly/spwlq/2019-10-02/361304.html" target="_blank" title="《刷屏文旅圈》2019年10月01日">《刷屏文旅圈》2019年10月01日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ly/spwlq/2019-10-01/360956.html" target="_blank" title="《刷屏文旅圈》2019年09月30日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/6ab1a7a6e96e51cbd770953ead955358.jpg" alt="《刷屏文旅圈》2019年09月30日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ly/spwlq/2019-10-01/360956.html" target="_blank" title="《刷屏文旅圈》2019年09月30日">《刷屏文旅圈》2019年09月30日</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ly/xz/2019-10-01/360946.html" target="_blank" title="睡到世界尽头·利马之约"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/b81639805ed00702a129139355291d2b.jpg" alt="睡到世界尽头·利马之约" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ly/xz/2019-10-01/360946.html" target="_blank" title="睡到世界尽头·利马之约">睡到世界尽头·利马之约</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ly/tylybd/2019-10-01/360944.html" target="_blank" title="《中国体育旅游报道》2019年09月30日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/ef17b837ae2f8c039386af975797a8e6.jpg" alt="《中国体育旅游报道》2019年09月30日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ly/tylybd/2019-10-01/360944.html" target="_blank" title="《中国体育旅游报道》2019年09月30日">《中国体育旅游报道》2019年09月30日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/ly/tylybd/2019-09-29/360023.html" target="_blank" title="《中国体育旅游报道》2019年09月28日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/65e3a2764cbc8acb24b043d0665ef0b6.jpg" alt="《中国体育旅游报道》2019年09月28日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/ly/tylybd/2019-09-29/360023.html" target="_blank" title="《中国体育旅游报道》2019年09月28日">《中国体育旅游报道》2019年09月28日</a></p>
+					</li>
+				
+            				</ul>
+			</div>
+		</div>
+	</div>
+    <span class="btn carousel-prev"></span>
+	<span class="btn carousel-next"></span>
+</div>
+<!-- 旅游栏目内容结束-->
+
+				</div>
+			</div>
+		
+			<div class="sh overflow">
+				<div class="lm_tit pr">
+				<!-- 纪实栏目开始-->
+				<div class="cell_3967_">
+        		<h3 class="tl-header"><a href="http://www.hnntv.cn/video/jishi/" target="_blank" title="纪实">纪实</a></h3> 
+		<div class="tl-more"><a href="http://www.hnntv.cn/video/jishi/" target="_blank">更多+</a></div>		
+         		
+</div><!-- 纪实栏目结束-->
+
+					<div class="lm_list pa">
+					
+					<!-- 纪实子栏目开始-->
+						<ul class="cell_3968_">
+                 <li>
+                 <a href="http://www.hnntv.cn/video/jishi/hndsj/" target="_blank" title="海南岛纪事">海南岛纪事</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/jishi/jlzg/" target="_blank" title="解密时间">解密时间</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/jishi/dsdrw/" target="_blank" title="巡航祖宗海">巡航祖宗海</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/jishi/zmkjr/" target="_blank" title="最美科技人">最美科技人</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/jishi/chcf/" target="_blank" title="从海出发">从海出发</a>
+           </li>
+          </ul>
+	  <!-- 纪实子栏目结束-->
+					</div>
+				</div>
+				<div class="lm_con">
+				
+				<!-- 纪实栏目内容开始-->
+						<div class="cell_3969_">
+    <div class="inner"  style="position: relative;">
+    	<div class="contenter"  style="position: absolute; left: 0px; width: 7580px;"> 
+						<div class="item">
+				<ul>
+												<li>
+						<a href="http://www.hnntv.cn/video/jishi/jiluzhongguo/2019-10-05/362311.html" target="_blank" title="颠覆视觉的体验"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/4f1c0df114db12b8c2bc27232c1aa988.jpg" alt="颠覆视觉的体验" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/jishi/jiluzhongguo/2019-10-05/362311.html" target="_blank" title="颠覆视觉的体验">颠覆视觉的体验</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/jishi/jiluzhongguo/2019-10-04/361952.html" target="_blank" title="进化方舟"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/5173ead4ab8dd74a30ffbe04e2e3cc38.jpg" alt="进化方舟" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/jishi/jiluzhongguo/2019-10-04/361952.html" target="_blank" title="进化方舟">进化方舟</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/jishi/hndsj/2019-10-02/361293.html" target="_blank" title="解放海南（上）"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/6087ee7973ec150efe634c12a884812a.png" alt="解放海南（上）" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/jishi/hndsj/2019-10-02/361293.html" target="_blank" title="解放海南（上）">解放海南（上）</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/jishi/zmkjr/2019-09-30/360460.html" target="_blank" title="因为热爱 所以执着——韩刚"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/d199b806366df673959cc0ec3262206d.jpg" alt="因为热爱 所以执着——韩刚" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/jishi/zmkjr/2019-09-30/360460.html" target="_blank" title="因为热爱 所以执着——韩刚">因为热爱 所以执着——韩刚</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/jishi/chcf/2019-09-28/359945.html" target="_blank" title="在海南 学本领"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/101f34613072e3d51aeb5234fe4b58b6.png" alt="在海南 学本领" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/jishi/chcf/2019-09-28/359945.html" target="_blank" title="在海南 学本领">在海南 学本领</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/jishi/jlzg/2019-09-27/358853.html" target="_blank" title="瞿秋白"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/724add3461c5026a5ed74dad18b7d443.png" alt="瞿秋白" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/jishi/jlzg/2019-09-27/358853.html" target="_blank" title="瞿秋白">瞿秋白</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/jishi/jiluzhongguo/2019-09-26/358253.html" target="_blank" title="马庄农民有乐团"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/81a177d4f2d61bbf4eb37bf358706583.png" alt="马庄农民有乐团" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/jishi/jiluzhongguo/2019-09-26/358253.html" target="_blank" title="马庄农民有乐团">马庄农民有乐团</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/jishi/dsdrw/2019-09-26/358206.html" target="_blank" title="周士辉 滩涂筑梦 守护乡愁"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/6c9d6a6d861e68c57f477bc2a148dc44.png" alt="周士辉 滩涂筑梦 守护乡愁" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/jishi/dsdrw/2019-09-26/358206.html" target="_blank" title="周士辉 滩涂筑梦 守护乡愁">周士辉 滩涂筑梦 守护乡愁</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/jishi/hndsj/2019-09-25/357616.html" target="_blank" title="我在海南好创业"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/3f7cb194b182dc77ef4932c77e8bca24.png" alt="我在海南好创业" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/jishi/hndsj/2019-09-25/357616.html" target="_blank" title="我在海南好创业">我在海南好创业</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/jishi/jiluzhongguo/2019-09-25/357395.html" target="_blank" title="幸存者"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/7fec7922d5ca7f321930a7cb0edaa902.png" alt="幸存者" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/jishi/jiluzhongguo/2019-09-25/357395.html" target="_blank" title="幸存者">幸存者</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/jishi/jiluzhongguo/2019-09-24/356961.html" target="_blank" title="梦行水上"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/a243bee5081eba260c8c26d3b24639bd.png" alt="梦行水上" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/jishi/jiluzhongguo/2019-09-24/356961.html" target="_blank" title="梦行水上">梦行水上</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/jishi/chcf/2019-09-21/355890.html" target="_blank" title="洋水果新传"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/b736f44d9a5ae5b1d482610ad660f952.png" alt="洋水果新传" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/jishi/chcf/2019-09-21/355890.html" target="_blank" title="洋水果新传">洋水果新传</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/jishi/jiluzhongguo/2019-09-21/355617.html" target="_blank" title="纪录中国_微·观 高空任务【二更】"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/1f6171fbe2b072c774ba40f01960d2a1.png" alt="纪录中国_微·观 高空任务【二更】" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/jishi/jiluzhongguo/2019-09-21/355617.html" target="_blank" title="纪录中国_微·观 高空任务【二更】">纪录中国_微·观 高空任务【二更】</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/jishi/jlzg/2019-09-20/355077.html" target="_blank" title="红色恋歌·张太雷"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/6c72479c8cd81e3f536081011dbe975a.png" alt="红色恋歌·张太雷" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/jishi/jlzg/2019-09-20/355077.html" target="_blank" title="红色恋歌·张太雷">红色恋歌·张太雷</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/jishi/jiluzhongguo/2019-09-19/354639.html" target="_blank" title="无锡会议1979"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/81d171a9120336cf95a49810c9dbe45e.png" alt="无锡会议1979" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/jishi/jiluzhongguo/2019-09-19/354639.html" target="_blank" title="无锡会议1979">无锡会议1979</a></p>
+					</li>
+				
+            				</ul>
+			</div>
+		</div>
+	</div>
+    <span class="btn carousel-prev"></span>
+	<span class="btn carousel-next"></span>
+</div>
+
+<!-- 纪实栏目内容结束-->
+				</div>
+			</div>
+			<!-- 生活 -->
+			<div class="sh overflow">
+				<div class="lm_tit pr">
+				<!-- 生活栏目开始-->
+						<div class="cell_3970_">
+        		<h3 class="tl-header"><a href="http://www.hnntv.cn/video/life/" target="_blank" title="生活">生活</a></h3> 
+		<div class="tl-more"><a href="http://www.hnntv.cn/video/life/" target="_blank">更多+</a></div>		
+         		
+</div><!-- 生活栏目结束-->
+					<div class="lm_list pa">
+					
+					<!-- 生活子栏目开始-->
+                    <ul class="cell_3971_">
+                 <li>
+                 <a href="http://www.hnntv.cn/video/life/qwsj/" target="_blank" title="群文视界">群文视界</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/life/d1ss/" target="_blank" title="第1时尚">第1时尚</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/life/mlqjr/" target="_blank" title="美丽俏佳人">美丽俏佳人</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/life/myksj/" target="_blank" title="美眼看世界">美眼看世界</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/life/thsh/" target="_blank" title="艇会生活">艇会生活</a>
+           </li>
+          </ul>
+	  <!-- 生活子栏目结束-->
+											</div>
+				</div>
+				<div class="lm_con">
+				<!-- 生活栏目内容开始-->
+						<div class="cell_3972_">
+    <div class="inner"  style="position: relative;">
+    	<div class="contenter"  style="position: absolute; left: 0px; width: 7580px;"> 
+						<div class="item">
+				<ul>
+												<li>
+						<a href="http://www.hnntv.cn/video/life/mlqjr/2019-10-05/362355.html" target="_blank" title="《美丽俏佳人》 购物车备货指南"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/a7ab58a15c8489ff3a071b40f72af8c2.jpg" alt="《美丽俏佳人》 购物车备货指南" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/life/mlqjr/2019-10-05/362355.html" target="_blank" title="《美丽俏佳人》 购物车备货指南">《美丽俏佳人》 购物车备货指南</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/life/myksj/2019-10-05/362294.html" target="_blank" title="《美眼看世界》2019年10月04日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/bc552048c5aa49ecf1cacb1e2ea6cee1.jpg" alt="《美眼看世界》2019年10月04日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/life/myksj/2019-10-05/362294.html" target="_blank" title="《美眼看世界》2019年10月04日">《美眼看世界》2019年10月04日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/life/2019-10-05/362292.html" target="_blank" title="科普一分钟：便携收纳式救生圈"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/6c879ef36ecf86d3b94cb6dad32ecf10.jpg" alt="科普一分钟：便携收纳式救生圈" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/life/2019-10-05/362292.html" target="_blank" title="科普一分钟：便携收纳式救生圈">科普一分钟：便携收纳式救生圈</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/life/2019-10-04/361931.html" target="_blank" title="科普一分钟：3D打印人造器官的新方法"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/ddb0e889b032b449e7c4e552f442e119.jpg" alt="科普一分钟：3D打印人造器官的新方法" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/life/2019-10-04/361931.html" target="_blank" title="科普一分钟：3D打印人造器官的新方法">科普一分钟：3D打印人造器官的新方法</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/life/myksj/2019-10-04/361918.html" target="_blank" title="《美眼看世界》2019年10月03日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/a03b8c58eafd3a1f667bfb3d166f594a.jpg" alt="《美眼看世界》2019年10月03日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/life/myksj/2019-10-04/361918.html" target="_blank" title="《美眼看世界》2019年10月03日">《美眼看世界》2019年10月03日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/life/myksj/2019-10-03/361687.html" target="_blank" title="《美眼看世界》2019年10月02日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/8942964ab6f1e188d2ebec850f935724.jpg" alt="《美眼看世界》2019年10月02日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/life/myksj/2019-10-03/361687.html" target="_blank" title="《美眼看世界》2019年10月02日">《美眼看世界》2019年10月02日</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/life/2019-10-03/361677.html" target="_blank" title="科普一分钟：高比能快充锂离子电池技术"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/51187c8d74caa0609659aaa808d75694.jpg" alt="科普一分钟：高比能快充锂离子电池技术" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/life/2019-10-03/361677.html" target="_blank" title="科普一分钟：高比能快充锂离子电池技术">科普一分钟：高比能快充锂离子电池技术</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/life/2019-10-02/361295.html" target="_blank" title="科普一分钟 登革热的种类有哪些？"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/a097afb395045151c11488157ad95d22.jpg" alt="科普一分钟 登革热的种类有哪些？" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/life/2019-10-02/361295.html" target="_blank" title="科普一分钟 登革热的种类有哪些？">科普一分钟 登革热的种类有哪些？</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/life/myksj/2019-10-02/361291.html" target="_blank" title="《美眼看世界》2019年10月01日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/0a06325cae71beea67392c2e89474b44.png" alt="《美眼看世界》2019年10月01日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/life/myksj/2019-10-02/361291.html" target="_blank" title="《美眼看世界》2019年10月01日">《美眼看世界》2019年10月01日</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/life/2019-10-01/360960.html" target="_blank" title="科普一分钟:舌头也要注意清洁"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/800944efe551e18ae19f4cd50f2ded7f.jpg" alt="科普一分钟:舌头也要注意清洁" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/life/2019-10-01/360960.html" target="_blank" title="科普一分钟:舌头也要注意清洁">科普一分钟:舌头也要注意清洁</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/life/myksj/2019-10-01/360927.html" target="_blank" title="《美眼看世界》2019年09月30日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/38429b76181dd15d5e8085070042567c.jpg" alt="《美眼看世界》2019年09月30日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/life/myksj/2019-10-01/360927.html" target="_blank" title="《美眼看世界》2019年09月30日">《美眼看世界》2019年09月30日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/life/d1ss/2019-09-30/360472.html" target="_blank" title="红毯之上 女明星只有穿礼服裙才能博人眼球"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/69813c01d806009946877d8c6a0f5f2a.jpg" alt="红毯之上 女明星只有穿礼服裙才能博人眼球" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/life/d1ss/2019-09-30/360472.html" target="_blank" title="红毯之上 女明星只有穿礼服裙才能博人眼球">红毯之上 女明星只有穿礼服裙才能博人眼球</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/life/myksj/2019-09-30/360466.html" target="_blank" title="《美眼看世界》2019年09月29日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/10669d1203bc622af0c749db1f90e20c.jpg" alt="《美眼看世界》2019年09月29日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/life/myksj/2019-09-30/360466.html" target="_blank" title="《美眼看世界》2019年09月29日">《美眼看世界》2019年09月29日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/life/2019-09-30/360464.html" target="_blank" title="科普一分钟：眼球内部的压力"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/7407ebaaaf9af9b2b5ad9a0a3b7567da.jpg" alt="科普一分钟：眼球内部的压力" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/life/2019-09-30/360464.html" target="_blank" title="科普一分钟：眼球内部的压力">科普一分钟：眼球内部的压力</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/life/dysc/2019-09-29/360031.html" target="_blank" title="中国艺术70年人物 袁熙坤"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/23005448a6c071cc6229b4fb86892b4e.jpg" alt="中国艺术70年人物 袁熙坤" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/life/dysc/2019-09-29/360031.html" target="_blank" title="中国艺术70年人物 袁熙坤">中国艺术70年人物 袁熙坤</a></p>
+					</li>
+				
+            				</ul>
+			</div>
+		</div>
+	</div>
+    <span class="btn carousel-prev"></span>
+	<span class="btn carousel-next"></span>
+</div>
+<!-- 生活栏目内容结束-->
+		
+
+
+		</div>
+			</div>
+			
+			<div class="sh overflow">
+				<div class="lm_tit pr">
+				<!-- 综艺栏目开始-->
+						<div class="cell_3973_">
+        		<h3 class="tl-header"><a href="http://www.hnntv.cn/video/variety/" target="_blank" title="综艺">综艺</a></h3> 
+		<div class="tl-more"><a href="http://www.hnntv.cn/video/variety/" target="_blank">更多+</a></div>		
+         		
+</div>
+<!-- 综艺栏目结束-->
+					<div class="lm_list pa">
+					<!-- 综艺子栏目开始-->
+						<ul class="cell_3974_">
+                 <li>
+                 <a href="http://www.hnntv.cn/video/variety/ylyy/" target="_blank" title="一乐英语">一乐英语</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/variety/mx/" target="_blank" title="梦想学院">梦想学院</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/variety/hnf/" target="_blank" title="遇见海南美">遇见海南美</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/variety/ofsco/" target="_blank" title="风尚潮">风尚潮</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/variety/kkel/" target="_blank" title="开课啦">开课啦</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/variety/kfl/" target="_blank" title="开饭了">开饭了</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/variety/qju/" target="_blank" title="琼剧">琼剧</a>
+           </li>
+          </ul>
+	  <!-- 综艺子栏目结束-->
+			
+			</div>
+				</div>
+				<div class="lm_con">
+				<!-- 综艺栏目内容开始-->
+						<div class="cell_3975_">
+    <div class="inner"  style="position: relative;">
+    	<div class="contenter"  style="position: absolute; left: 0px; width: 7580px;"> 
+						<div class="item">
+				<ul>
+												<li>
+						<a href="http://www.hnntv.cn/video/variety/ylyy/2019-10-05/362304.html" target="_blank" title="《一乐英语》2019年10月04日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/f9649c7d85365d4c5caf6333987bbdb5.jpg" alt="《一乐英语》2019年10月04日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/variety/ylyy/2019-10-05/362304.html" target="_blank" title="《一乐英语》2019年10月04日">《一乐英语》2019年10月04日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/variety/hnf/2019-10-05/362290.html" target="_blank" title="《遇见海南美》2019年10月04日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/ca58ab7d7a6102d3e0a96dee9cb0f668.jpg" alt="《遇见海南美》2019年10月04日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/variety/hnf/2019-10-05/362290.html" target="_blank" title="《遇见海南美》2019年10月04日">《遇见海南美》2019年10月04日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/variety/kfl/2019-10-05/362277.html" target="_blank" title="《开饭了》2019年10月04日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/198a957e5d744c2dec533762c453b559.jpg" alt="《开饭了》2019年10月04日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/variety/kfl/2019-10-05/362277.html" target="_blank" title="《开饭了》2019年10月04日">《开饭了》2019年10月04日</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/variety/ofsco/2019-10-04/362119.html" target="_blank" title="《风尚潮》2019年10月04日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/f71be570dd90d70013b567716f016378.png" alt="《风尚潮》2019年10月04日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/variety/ofsco/2019-10-04/362119.html" target="_blank" title="《风尚潮》2019年10月04日">《风尚潮》2019年10月04日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/variety/hnf/2019-10-04/361941.html" target="_blank" title="《遇见海南美》2019年10月03日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/7aaad561f833e957a15e803f74d3873d.jpg" alt="《遇见海南美》2019年10月03日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/variety/hnf/2019-10-04/361941.html" target="_blank" title="《遇见海南美》2019年10月03日">《遇见海南美》2019年10月03日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/variety/kfl/2019-10-04/361940.html" target="_blank" title="《开饭了》2019年10月03日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/e8bcfee0b42d299185d43d4bf57a3c54.jpg" alt="《开饭了》2019年10月03日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/variety/kfl/2019-10-04/361940.html" target="_blank" title="《开饭了》2019年10月03日">《开饭了》2019年10月03日</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/variety/ylyy/2019-10-04/361914.html" target="_blank" title="《一乐英语》2019年10月03日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/e12c04e2d1d73b87c898f2a3fe98c6a0.jpg" alt="《一乐英语》2019年10月03日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/variety/ylyy/2019-10-04/361914.html" target="_blank" title="《一乐英语》2019年10月03日">《一乐英语》2019年10月03日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/variety/ofsco/2019-10-03/361753.html" target="_blank" title="《风尚潮》2019年10月03日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/7c776e3fbb27a22f02684ba1abef0c54.png" alt="《风尚潮》2019年10月03日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/variety/ofsco/2019-10-03/361753.html" target="_blank" title="《风尚潮》2019年10月03日">《风尚潮》2019年10月03日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/variety/kfl/2019-10-03/361681.html" target="_blank" title="《开饭了》2019年10月02日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/051d21e1d39e6cc1cd5c6314ff34be34.jpg" alt="《开饭了》2019年10月02日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/variety/kfl/2019-10-03/361681.html" target="_blank" title="《开饭了》2019年10月02日">《开饭了》2019年10月02日</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/variety/hnf/2019-10-03/361577.html" target="_blank" title="《遇见海南美》2019年10月02日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/d70a4c7c57f8c7c3fc9c99203dd8faae.jpg" alt="《遇见海南美》2019年10月02日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/variety/hnf/2019-10-03/361577.html" target="_blank" title="《遇见海南美》2019年10月02日">《遇见海南美》2019年10月02日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/variety/ylyy/2019-10-03/361575.html" target="_blank" title="《一乐英语》2019年10月02日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/250b7207bbd1036bd83ba75a4dc4f7dc.png" alt="《一乐英语》2019年10月02日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/variety/ylyy/2019-10-03/361575.html" target="_blank" title="《一乐英语》2019年10月02日">《一乐英语》2019年10月02日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/variety/ofsco/2019-10-02/361494.html" target="_blank" title="《风尚潮》2019年10月02日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/2aa16921bc4614679fd6a066c6871139.png" alt="《风尚潮》2019年10月02日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/variety/ofsco/2019-10-02/361494.html" target="_blank" title="《风尚潮》2019年10月02日">《风尚潮》2019年10月02日</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/variety/hnf/2019-10-02/361307.html" target="_blank" title="《遇见海南美》2019年10月01日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/e685317112ceb5d58fbef5ca10ed533a.png" alt="《遇见海南美》2019年10月01日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/variety/hnf/2019-10-02/361307.html" target="_blank" title="《遇见海南美》2019年10月01日">《遇见海南美》2019年10月01日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/variety/kfl/2019-10-02/361306.html" target="_blank" title="《开饭了》2019年10月01日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/45dd64622dad403218b395275dd9b722.png" alt="《开饭了》2019年10月01日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/variety/kfl/2019-10-02/361306.html" target="_blank" title="《开饭了》2019年10月01日">《开饭了》2019年10月01日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/variety/ylyy/2019-10-02/361278.html" target="_blank" title="《一乐英语》2019年10月01日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/dc6060852ba037fc4dafbc918f8db269.jpg" alt="《一乐英语》2019年10月01日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/variety/ylyy/2019-10-02/361278.html" target="_blank" title="《一乐英语》2019年10月01日">《一乐英语》2019年10月01日</a></p>
+					</li>
+				
+            				</ul>
+			</div>
+		</div>
+	</div>
+    <span class="btn carousel-prev"></span>
+	<span class="btn carousel-next"></span>
+</div>
+		
+		<!-- 综艺栏目内容结束-->
+		</div>
+			</div>
+			
+			<div class="sh overflow">
+				<div class="lm_tit pr">
+				<!-- 体育栏目开始-->
+			<div class="cell_3976_">
+        		<h3 class="tl-header"><a href="http://www.hnntv.cn/video/sports/" target="_blank" title="体育">体育</a></h3> 
+		<div class="tl-more"><a href="http://www.hnntv.cn/video/sports/" target="_blank">更多+</a></div>		
+         		
+</div>
+<!-- 体育栏目结束-->
+					<div class="lm_list pa">
+					<!-- 体育子栏目开始-->
+						<ul class="cell_3977_">
+                 <li>
+                 <a href="http://www.hnntv.cn/video/sports/klhd/" target="_blank" title="快乐海钓">快乐海钓</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/sports/jpzg/" target="_blank" title="健跑中国">健跑中国</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/sports/wsgf/" target="_blank" title="卫视高尔夫">卫视高尔夫</a>
+           </li>
+                 <li>
+                 <a href="http://www.hnntv.cn/video/sports/yjddi/" target="_blank" title="一竞到底">一竞到底</a>
+           </li>
+          </ul>
+	  <!-- 体育子栏目结束-->
+	  
+	  
+					</div>
+				</div>
+				<div class="lm_con">
+				
+				<!-- 体育栏目内容开始-->
+						<div class="cell_3978_">
+    <div class="inner"  style="position: relative;">
+    	<div class="contenter"  style="position: absolute; left: 0px; width: 7580px;"> 
+						<div class="item">
+				<ul>
+												<li>
+						<a href="http://www.hnntv.cn/video/sports/wsgf/2019-10-05/362354.html" target="_blank" title="《卫视高尔夫》2019年10月04日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/d613266f23dd02186d2069f7c88cc266.jpg" alt="《卫视高尔夫》2019年10月04日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/sports/wsgf/2019-10-05/362354.html" target="_blank" title="《卫视高尔夫》2019年10月04日">《卫视高尔夫》2019年10月04日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/sports/jpzg/2019-10-05/362313.html" target="_blank" title="《健跑中国》2019年10月04日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/ba79182f82e31bb10267f05ad8b4308c.jpg" alt="《健跑中国》2019年10月04日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/sports/jpzg/2019-10-05/362313.html" target="_blank" title="《健跑中国》2019年10月04日">《健跑中国》2019年10月04日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/sports/wsgf/2019-10-04/361967.html" target="_blank" title="《卫视高尔夫》2019年10月03日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/c927e9d9049ac37ee461864b239a41d4.jpg" alt="《卫视高尔夫》2019年10月03日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/sports/wsgf/2019-10-04/361967.html" target="_blank" title="《卫视高尔夫》2019年10月03日">《卫视高尔夫》2019年10月03日</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/sports/wsgf/2019-10-03/361598.html" target="_blank" title="《卫视高尔夫》2019年10月02日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/483acce82297cfe8e68636af3ae928db.jpg" alt="《卫视高尔夫》2019年10月02日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/sports/wsgf/2019-10-03/361598.html" target="_blank" title="《卫视高尔夫》2019年10月02日">《卫视高尔夫》2019年10月02日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/sports/yjddi/2019-10-01/360954.html" target="_blank" title="《一竞到底》2019年09月30日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/70a170bf73b282eea5757d21808c6af0.jpg" alt="《一竞到底》2019年09月30日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/sports/yjddi/2019-10-01/360954.html" target="_blank" title="《一竞到底》2019年09月30日">《一竞到底》2019年09月30日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/sports/wsgf/2019-10-01/360951.html" target="_blank" title="《卫视高尔夫》2019年09月30日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/10/f5e736dd97fe58c5939b47529e4d04f7.jpg" alt="《卫视高尔夫》2019年09月30日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/sports/wsgf/2019-10-01/360951.html" target="_blank" title="《卫视高尔夫》2019年09月30日">《卫视高尔夫》2019年09月30日</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/sports/yjddi/2019-09-30/360475.html" target="_blank" title="《一竞到底》2019年09月29日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/121774a9d0c1d38ae02995f83ec28b73.jpg" alt="《一竞到底》2019年09月29日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/sports/yjddi/2019-09-30/360475.html" target="_blank" title="《一竞到底》2019年09月29日">《一竞到底》2019年09月29日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/sports/klhd/2019-09-29/360345.html" target="_blank" title="《快乐海钓》2019年09月29日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/87e502411f5ed943ce41fa2e048c9af2.png" alt="《快乐海钓》2019年09月29日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/sports/klhd/2019-09-29/360345.html" target="_blank" title="《快乐海钓》2019年09月29日">《快乐海钓》2019年09月29日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/sports/wsgf/2019-09-28/359552.html" target="_blank" title="《卫视高尔夫》2019年09月27日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/9274cb99bf4519b193fab3b6f894df9d.jpg" alt="《卫视高尔夫》2019年09月27日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/sports/wsgf/2019-09-28/359552.html" target="_blank" title="《卫视高尔夫》2019年09月27日">《卫视高尔夫》2019年09月27日</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/sports/wsgf/2019-09-27/358917.html" target="_blank" title="《卫视高尔夫》2019年09月26日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/969ed3ca70585263f484bbb93e657de4.jpg" alt="《卫视高尔夫》2019年09月26日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/sports/wsgf/2019-09-27/358917.html" target="_blank" title="《卫视高尔夫》2019年09月26日">《卫视高尔夫》2019年09月26日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/sports/jpzg/2019-09-27/358900.html" target="_blank" title="《健跑中国》2019年09月26日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/c31e58a638b6874fdfc27561450408b1.png" alt="《健跑中国》2019年09月26日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/sports/jpzg/2019-09-27/358900.html" target="_blank" title="《健跑中国》2019年09月26日">《健跑中国》2019年09月26日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/sports/yjddi/2019-09-27/358841.html" target="_blank" title="《一竞到底》2019年09月26日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/cafdfe2b6a9891452529ff5950589c45.png" alt="《一竞到底》2019年09月26日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/sports/yjddi/2019-09-27/358841.html" target="_blank" title="《一竞到底》2019年09月26日">《一竞到底》2019年09月26日</a></p>
+					</li>
+							</ul>
+			</div><div class="item"><ul>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/sports/wsgf/2019-09-26/358244.html" target="_blank" title="《卫视高尔夫》2019年09月25日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/53ed623298c54c6312e4f6f9cd557162.jpg" alt="《卫视高尔夫》2019年09月25日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/sports/wsgf/2019-09-26/358244.html" target="_blank" title="《卫视高尔夫》2019年09月25日">《卫视高尔夫》2019年09月25日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/sports/yjddi/2019-09-26/358196.html" target="_blank" title="《一竞到底》2019年09月25日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/4756b6415cb38fcd3fbf495d3f4e3633.png" alt="《一竞到底》2019年09月25日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/sports/yjddi/2019-09-26/358196.html" target="_blank" title="《一竞到底》2019年09月25日">《一竞到底》2019年09月25日</a></p>
+					</li>
+				
+            									<li>
+						<a href="http://www.hnntv.cn/video/sports/yjddi/2019-09-25/357615.html" target="_blank" title="《一竞到底》2019年09月24日"><img src="http://imgs.hnntv.cn/material/livmedia/img/204x115/2019/09/048b67808eb94bca7bba44abbcb3810d.png" alt="《一竞到底》2019年09月24日" height="115" width="204" /></a>
+						<p><a href="http://www.hnntv.cn/video/sports/yjddi/2019-09-25/357615.html" target="_blank" title="《一竞到底》2019年09月24日">《一竞到底》2019年09月24日</a></p>
+					</li>
+				
+            				</ul>
+			</div>
+		</div>
+	</div>
+    <span class="btn carousel-prev"></span>
+	<span class="btn carousel-next"></span>
+</div>
+<!-- 体育栏目内容结束-->
+
+
+				</div>
+			</div>
+		</div>   
+                
+     
+                
+			</div>
+            
+            
+        <!--右-->
+        
+			<div class="right hotr">
+			<div class="fscene overflow" style=" height:290px;">
+			
+			
+				<ul class="tabslist overflow" style=" height:65px;" >
+						<li class="cur">
+							<div class="cell_3136_">
+            	<h3 class="tl-header" ><a  class="mtit"  href="http://www.hnntv.cn/wtlm/tdzhnbfqc/" target="_blank" title="不负青春">不负青春</a></h3> 
+				
+         		
+</div>
+						</li>
+						
+						
+						<li>
+							<div class="cell_3140_">
+            	
+				
+         		<h3 class="tl-header" ><a  class="mtit"  href="http://www.hnntv.cn/st/hc/" target="_blank" title="海视原创">海视原创</a></h3> 
+</div>
+						</li>
+						
+						
+						<li>
+														<div class="cell_3141_">
+        		<h3 class="tl-header"><a class="mtit" href="http://www.hnntv.cn/st/hszb/" target="_blank" title="海视直播">海视直播</a></h3> 
+</div>
+
+						</li>
+                        <div class="clear"></div>
+					</ul>
+					
+					
+					
+					
+					
+					
+					
+						
+					<!-- 不负青春-->	
+					
+					<div class="tabscon">
+			
+    	<div class="clearfix aut">
+<div class="cell_4245_ clearfix">
+	<a href="http://www.hnntv.cn/wtlm/tdzhnbfqc/wqjb/2019-10-04/362000.html"  target="_blank" class="itb-img"><img width="61" height="60" src="http://imgs.hnntv.cn/material/livmedia/img/61x60/2019/10/fbf86a2c098779f879a0c84bbf241a62.jpg">
+	       </a>
+    <div class="itb-txt">
+        		<p><a href="http://www.hnntv.cn/wtlm/tdzhnbfqc/wqjb/2019-10-04/362000.html" target="_blank" class="itb-title">奋斗在海南 不负青春 | 十·一特辑 中国老机长韩树铭的“蓝天不了情”</a></p>
+	</div>
+</div>
+<div class="cell_4245_ clearfix">
+	<a href="http://www.hnntv.cn/wtlm/tdzhnbfqc/wqjb/2019-09-27/359546.html"  target="_blank" class="itb-img"><img width="61" height="60" src="http://imgs.hnntv.cn/material/livmedia/img/61x60/2019/09/f1ad0c456ded4642678bbdd7af8c5675.png">
+	       </a>
+    <div class="itb-txt">
+        		<p><a href="http://www.hnntv.cn/wtlm/tdzhnbfqc/wqjb/2019-09-27/359546.html" target="_blank" class="itb-title">奋斗在海南 不负青春 | 十·一特辑《我和我的祖国》</a></p>
+	</div>
+</div>
+<div class="cell_4245_ clearfix">
+	<a href="http://www.hnntv.cn/wtlm/tdzhnbfqc/wqjb/2019-09-20/355156.html"  target="_blank" class="itb-img"><img width="61" height="60" src="http://imgs.hnntv.cn/material/news/img/61x60/2019/09/20190920084407Rmsg.png">
+	       </a>
+    <div class="itb-txt">
+        		<p><a href="http://www.hnntv.cn/wtlm/tdzhnbfqc/wqjb/2019-09-20/355156.html" target="_blank" class="itb-title">奋斗在海南 不负青春|王颖：不忘初心守天涯  牢记使命再出发</a></p>
+	</div>
+</div>
+</div>
+
+					</div>
+					
+					
+		<!-- 不负青春-->			
+					
+					
+					
+					
+					
+						<!-- 海视原创-->
+					<div class="tabscon hidden">
+				
+<div class="overflow">
+<div class="cell_3979_">
+		<ul class="clearfix">	
+				
+            			<li>
+				<a href="http://www.hnntv.cn/st/hszb/2019-06-14/307275.html" target="_blank"  title="人人享有安全血液"><img alt="人人享有安全血液" src="http://imgs.hnntv.cn/material/news/img/383x60/2019/06/20190617114724L9k6.jpg" width="383" height="60"></a>
+				<p><a href="http://www.hnntv.cn/st/hszb/2019-06-14/307275.html" target="_blank"  title="人人享有安全血液" style="color:#000;"></a></p>
+			</li>	
+				
+		</ul>
+</div>
+</div>
+					    	<div class="clearfix aut">
+<div class="cell_3980_ clearfix">
+	<a href="http://www.hnntv.cn/st/hc/2019-10-05/362282.html"  target="_blank" class="itb-img"><img width="61" height="60" src="http://imgs.hnntv.cn/material/livmedia/img/61x60/2019/10/7778891e682d487d0ff2c065eddd7e64.jpg">
+	       </a>
+    <div class="itb-txt">
+        		<p><a href="http://www.hnntv.cn/st/hc/2019-10-05/362282.html" target="_blank" class="itb-title">AI播报|海口灵桂路二期改造项目获批</a></p>
+	</div>
+</div>
+<div class="cell_3980_ clearfix">
+	<a href="http://www.hnntv.cn/st/hc/2019-10-04/362422.html"  target="_blank" class="itb-img"><img width="61" height="60" src="http://imgs.hnntv.cn/material/livmedia/img/61x60/2019/10/e7f3b3bda98501c4824c923b536540cf.png">
+	       </a>
+    <div class="itb-txt">
+        		<p><a href="http://www.hnntv.cn/st/hc/2019-10-04/362422.html" target="_blank" class="itb-title">《歌唱祖国•全民K歌》网台小伙伴出手了</a></p>
+	</div>
+</div>
+</div>
+					</div>
+					
+		<!-- 海视原创结束-->			
+					
+					
+					
+					
+					
+					<!-- 海视直播开始-->
+					<div class="tabscon hidden">
+						    	<div class="clearfix aut">
+<div class="cell_3981_ clearfix">
+	<a href="http://www.hnntv.cn/st/hszb/2019-10-04/362066.html"  target="_blank" class="itb-img"><img width="61" height="60" src="http://imgs.hnntv.cn/material/livmedia/img/61x60/2019/10/dc623ae0ec42246b2a11e32690cd74ee.png">
+	       </a>
+    <div class="itb-txt">
+        		<p><a href="http://www.hnntv.cn/st/hszb/2019-10-04/362066.html" target="_blank" class="itb-title">回看：一路花开 且歌且行 海南省博物馆“十一”特别节目</a></p>
+	</div>
+</div>
+<div class="cell_3981_ clearfix">
+	<a href="http://www.hnntv.cn/st/hszb/2019-09-30/360449.html"  target="_blank" class="itb-img"><img width="61" height="60" src="http://imgs.hnntv.cn/material/news/img/61x60/2019/09/20190930093317dpvu.png">
+	       </a>
+    <div class="itb-txt">
+        		<p><a href="http://www.hnntv.cn/st/hszb/2019-09-30/360449.html" target="_blank" class="itb-title">回看：《海南经济特区律师条例》10月1日正式实施  海南司法厅正在解读</a></p>
+	</div>
+</div>
+<div class="cell_3981_ clearfix">
+	<a href="http://hnntv.tw.live.hoge.cn/share/0s7IeCHZUOJrdQ4Nhg.shtml?_preview=ar08qrA_1569741352"  target="_blank" class="itb-img"><img width="61" height="60" src="http://imgs.hnntv.cn/material/news/img/61x60/2019/09/20190929182720NahO.jpg">
+	       </a>
+    <div class="itb-txt">
+        		<p><a href="http://hnntv.tw.live.hoge.cn/share/0s7IeCHZUOJrdQ4Nhg.shtml?_preview=ar08qrA_1569741352" target="_blank" class="itb-title">回看：海南省“壮丽70年 奋斗新时代”系列主题新闻第十场发布会</a></p>
+	</div>
+</div>
+</div>
+                     </div>
+					<!-- 海视直播结束-->
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				</div>
+				
+				<div class="jpzy mt15 overflow">
+					<!--举报广告位--> 
+             <div class="ggw4">     
+      <!--  -->
+	  <iframe scrolling="no" width="388" height="41" frameborder="0" src="http://www.hnntv.cn/st/folder762/folder574/index.html"></iframe>
+  </div>
+  
+					
+				</div>
+                <div class="jpzy mt15 overflow">
+					<!--举报广告位--> 
+            <div class="ggw4">
+              <iframe scrolling="no" width="388" height="41" frameborder="0" src="http://www.hnntv.cn/st/folder762/folder837/"></iframe>    
+      <!--<div class="cell_3984_">
+    <ul class="slide-content">
+							        		<li><a href="http://www.hnntv.cn/wzzt/hnwlpyzl/index.html" target="_blank" title="打击网络谣言 净化网络环境"><img src="http://imgs.hnntv.cn/material/news/img/388x41/2018/07/20180731101856HNZv.jpg" alt="打击网络谣言 净化网络环境" height="41" width="388" /><span class="focus-overlay"></span><div class="focus-info"><p class="focus-title"><a href="http://www.hnntv.cn/wzzt/hnwlpyzl/index.html" target="_blank">打击网络谣言 净化网络环境</a></p></div></li>
+</ul>
+    	<div class="ctrl-btn">
+		<a class="ctrl-prev" target="_blank"><em></em></a>
+		<a class="ctrl-next" target="_blank"><em></em></a>
+	</div>
+    </div>       --> 
+  </div>
+  
+					
+				</div>
+				             <div class="jpzy mt15 overflow">
+					<!--举报广告位--> 
+            <div class="ggw4">
+    
+      <div class="cell_3984_">
+    <ul class="slide-content">
+							        		<li><a href="http://www.hnntv.cn/wzzt/hnwlpyzl/index.html" target="_blank" title="打击网络谣言 净化网络环境"><img src="http://imgs.hnntv.cn/material/news/img/388x41/2018/07/20180731101856HNZv.jpg" alt="打击网络谣言 净化网络环境" height="41" width="388" /><span class="focus-overlay"></span><div class="focus-info"><p class="focus-title"><a href="http://www.hnntv.cn/wzzt/hnwlpyzl/index.html" target="_blank">打击网络谣言 净化网络环境</a></p></div></li>
+</ul>
+    	<div class="ctrl-btn">
+		<a class="ctrl-prev" target="_blank"><em></em></a>
+		<a class="ctrl-next" target="_blank"><em></em></a>
+	</div>
+    </div>       
+  </div>
+  
+					
+				</div>
+                
+                
+                
+                <div class="right lmr" style=" margin-top:0px;">
+			
+			
+			<!-- 专题 -->
+			<div class="thnews overflow" style=" margin-top:25px; ">
+				<div class="lm_tit" style=" margin-bottom:15px;">
+				<!-- 专题导航开始-->
+					<div class="cell_3160_">
+            	<h3 class="tl-header"><a href="http://www.hnntv.cn/st/zt/" target="_blank" title="专题">专题</a></h3> 
+		<div class="tl-more"><a href="http://www.hnntv.cn/st/zt/" target="_blank">更多+</a></div>		
+         		
+</div>
+<!-- 专题导航结束-->
+
+				</div>
+<style>
+.zhuanti li img{ width:388px; height:130px; } 
+.zhuanti li{ height:145px;}
+</style>	
+<!-- 专题开始-->			
+        <div class="zhuanti">
+        <ul>
+
+             
+      <li><a href="http://www.hnntv.cn/wzzt/gczgqmkg/"> <img src="http://imgs.hnntv.cn/material/news/img/389x130/2019/09/20190929083038Wk38.jpg" width="389" height="130"><h2></h2></a> </li>
+    
+      <li><a href="http://www.hnntv.cn/wzzt/7thmd/"> <img src="http://imgs.hnntv.cn/material/news/img/389x130/2019/09/20190919122116D8Te.jpg" width="389" height="130"><h2></h2></a> </li>
+    
+      <li><a href="http://www.hnntv.cn/wzzt/xx413jh/index.html"> <img src="http://imgs.hnntv.cn/material/news/img/389x130/2019/04/20190413211047Rybs.jpg" width="389" height="130"><h2></h2></a> </li>
+    
+      <li><a href="http://www.hnntv.cn/wtlm/cxzcwx/index.html"> <img src="http://imgs.hnntv.cn/material/news/img/389x130/2019/08/20190815162154MKJG.png" width="389" height="130"><h2></h2></a> </li>
+    
+      <li><a href="http://www.hnntv.cn/wzzt/saohs/index.html"> <img src="http://imgs.hnntv.cn/material/news/img/389x130/2019/06/20190603215435zSEH.png" width="389" height="130"><h2></h2></a> </li>
+    
+      <li><a href="http://www.hnntv.cn/wzzt/tpzyxtv/"> <img src="http://imgs.hnntv.cn/material/news/img/389x130/2017/10/20171026193111NjUM.png" width="389" height="130"><h2></h2></a> </li>
+    
+      <li><a href="http://www.hnntv.cn/wzzt/lxyzds/"> <img src="http://imgs.hnntv.cn/material/news/img/389x130/2017/10/20171017102605BLjj.jpg" width="389" height="130"><h2></h2></a> </li>
+    
+      <li><a href="http://www.hnntv.cn/wzzt/2019qglh/"> <img src="http://imgs.hnntv.cn/material/news/img/389x130/2019/03/20190325133730Ks90.jpg" width="389" height="130"><h2></h2></a> </li>
+    
+      <li><a href="http://www.hnntv.cn/wzzt/zhuix/"> <img src="http://imgs.hnntv.cn/material/news/img/389x130/2018/11/201811291327405z4I.jpg" width="389" height="130"><h2></h2></a> </li>
+    
+      <li><a href="http://www.hnntv.cn/wzzt/jjdytpgjz/"> <img src="http://imgs.hnntv.cn/material/news/img/389x130/2018/09/20180907112609XIiv.jpg" width="389" height="130"><h2></h2></a> </li>
+    
+        </ul>
+        </div>  
+        
+
+<!-- 专题开始-->			
+        <div class="zhuanti1">
+        <ul>
+      
+             
+      <li> <img src="http://imgs.hnntv.cn/material/news/img/380x160/2019/05/20190510144850dwkE.jpg" width="380" height="160"></li>
+    
+        </ul>
+        </div> 
+<!-- 专题结束-->		
+                
+                
+                
+			</div>
+			<!-- 海南广电信息 -->
+            
+<style>/* .scon ul li{ background: url(http://tv.hnntv.cn/t/1/13/images/d.jpg) left center no-repeat; line-height:32px;}*/</style>            
+            
+			<div class="img_news " style=" margin-top:10px; height:auto;">
+				<div class="lm_tit" style=" margin-bottom:0px;">
+				<!-- 海南广电信息导航开始-->
+					<div class="cell_3160_">
+            	<h3 class="tl-header" style=" letter-spacing:2px;"><a href="http://www.hnntv.cn/" target="_blank" title="热点新闻排行">24小时热点新闻排行</a></h3> 
+			
+         		
+</div>
+<!-- 海南广电信息导航结束 -->
+
+				</div>
+				<div class="scon" style=" margin-top:0px;">
+					<div>
+					
+					<!-- 海南广电信息内容开始 -->
+					<script type="text/javascript" src="http://tv.hnntv.cn/t/jscell/54/1_0_0_0_23986.php"></script>
+		<!-- 海南广电信息内容结束 -->
+		
+		
+		
+		</div>
+                    
+                    
+				</div>
+			</div>
+			
+		
+		
+		
+		<div class="img_news " style=" margin-top:0px; height:auto;">
+				<div class="lm_tit" style=" margin-bottom:0px;">
+				<!-- 海南广电信息导航开始-->
+					<div class="cell_3160_">
+            	<h3 class="tl-header" style=" letter-spacing:2px;"><a href="http://www.hnntv.cn/" target="_blank" title="热点新闻排行">一周热点新闻排行</a></h3>          		
+</div>
+<!-- 海南广电信息导航结束 -->
+				</div>
+				<div class="scon" style=" margin-top:0px;">
+					<div>
+					
+					<!-- 海南广电信息内容开始 -->
+<script type="text/javascript" src="http://tv.hnntv.cn/t/jscell/4f/1_0_0_0_23987.php"></script>
+		<!-- 海南广电信息内容结束 -->
+		</div>     
+				</div>
+			</div>   
+		
+		
+			
+			
+			
+            
+		</div>
+                
+			</div>
+		</div>
+		
+		
+		
+		<div class="clear"></div>
+	</div>
+	
+	
+    
+    
+</div>
+
+<div class="adlf">
+<div id="gdadl" style="position:absolute;left:-730px;TOP:0px;"></div>
+<div id="gdadr" style="position:absolute;right:-730px;TOP:0px;"></div>
+</div>
+
+
+
+<script type="text/javascript">// 多行浮动居中
+    $(document).ready(function(){
+        $(".fline:last").hide();
+	});
+	
+
+$(".cell_3116_ li:last").css("border-right","none");
+$(".cell_3116_ li:first").css("background","#ff5e01");
+$(".cell_3116_ li:first a").css("color","#fff");
+/*var demo = document.getElementById("demo");
+var demo1 = document.getElementById("demo1");
+var demo2 = document.getElementById("demo2");
+demo2.innerHTML=document.getElementById("demo1").innerHTML;
+function Marquee(){
+if(demo.scrollLeft-demo2.offsetWidth>=0){
+ demo.scrollLeft-=demo1.offsetWidth;
+}
+else{
+ demo.scrollLeft++;
+}
+}
+var myvar=setInterval(Marquee,30);
+demo.onmouseout=function (){myvar=setInterval(Marquee,30);}
+demo.onmouseover=function(){clearInterval(myvar);};*/
+
+
+	
+
+
+	
+	
+</script>
+
+   
+   <style>
+.kuanghuia{border:1px solid #CCC}
+#phtitl .blue14,#phtitl .blue14 a{color:#0b519f;line-height:33px; font-size:14px}
+#phtitl .blue14{height:33px;width:290px;background:#eee}
+.tagContent { DISPLAY: none;}
+#tagContent DIV.selectTag {DISPLAY: block}
+#tags LI {FLOAT: left; LIST-STYLE-TYPE: none; width:50%; HEIGHT: 28px; text-align:center; line-height:28px;}
+#tags LI A{color:#000; font-size:14px; font-family:"微软雅黑"}
+#tags LI.selectTag {BACKGROUND-POSITION: left top; POSITION: relative; HEIGHT: 33px; background:#FFF; border-bottom:0px;}
+#tags LI.selectTag A {BACKGROUND-POSITION: right top;  LINE-HEIGHT: 33px; HEIGHT: 33px; font-family:"微软雅黑"; color:#9c0f0f; font-size:14px}
+#tagContent0{border-left:1px solid #e4e4e4}
+#tagContent{width:100%; overflow:hidden; background:url() no-repeat 8px 14px; text-align:left}
+#tagContent ul{margin-top:11px}
+#tagContent li{ line-height:26px; text-indent:22px; font-size:12px; border-bottom:dotted #CCC 1px; width:93%; margin-left:8px; overflow:hidden; height:26px}
+
+
+
+#footer{ margin-top:0px; padding-top:0; background-color:#ccc; height:150px; width:1200px; margin:0px auto;}
+#footer_pic{ margin:0 auto; background-color:#0e4c92; repeat-x; height:40px;}
+#hezuolianmeng{ background-color:#E6E6E6; repeat-x; height:33px;}
+#hezuolianmeng_c{ width:1200px; margin:0 auto; overflow:hidden;}
+#hezuolianmeng ul {
+	font-size: 16px;
+	margin-left:20px;
+	margin-bottom: 0px;
+	margin-top:5px;
+	color:#FFF;
+}
+#hezuolianmeng ul li {
+	float: left;
+	margin-left: 13px;
+	padding-right: 12px; 
+	line-height:30px;
+}
+#hezuolianmeng ul li a {
+	color: #000;
+	height: 32px;
+	width: auto;
+}
+#hezuolianmeng ul li a:hover {
+
+	color: #ff5e01;
+}
+#guanyuwom{ height:30px; width:630px; margin-top:15px; margin-left:auto; margin-right:auto;}
+#guanyuwom ul {
+	font-size: 13px;
+	margin-left: 230px;
+	margin-bottom: 0px;
+}
+
+#guanyuwom ul li {
+	float: left; color:#FFF; 
+	margin-left: 5px;
+	padding-right: 5px;
+}
+#guanyuwom ul li a {
+	font-size: 16px;
+	color:#fff;
+	height: 32px;
+	width: auto;
+}
+#guanyuwom ul li a:hover {
+	
+	color: #f0ff00;
+}
+#banquan{ width:1200px; margin-left:auto; margin-right:auto; margin-top:20px;}
+#banquan_l{float:left; width:750px; overflow:hidden; height:100px; line-height:28px;}
+#banquan_r{float:right; height:50px; margin-top:35px;}
+#banquan_l p,#banquan_l p a {
+	color: #fff;
+/*	line-height: 2;*/
+}
+#banquan_r a img {
+
+
+
+	margin-right: 12px;
+	margin-left: 12px;
+}
+
+
+.gdtv_topmenu0,.gdtv_topmenu,.gtm_l{ background:#ff5e01; color:#ff5e01; } 
+    .color{ background: #e1e1e1;}
+    #footer{background: #e1e1e1;} 
+#hezuolianmeng{background: #ff5e01; }   
+    #hezuolianmeng_c ul li a{color:#FFFFFF;} 
+      #hezuolianmeng_c ul li a:hover{color:#FFF4BC;} 
+    #guanyuwom ul li a {color:#5b5b5b;} 
+    #guanyuwom ul li a:hover {color: #5b5b5b;}    
+    #banquan_l p,#banquan_l p a {color: #5b5b5b;}
+    .cell_1956_ .submit{background: #ff5e01;} 
+    .gdtv_con .article-toolbar {border-bottom: 2px solid #ff5e01;}
+</style>
+
+
+
+<div class="color" style=" width:100%; height:250px; ">
+ <div id="hezuolianmeng" style="height:42px; width:100%; border-top:# 1px solid;">
+    <div id="hezuolianmeng_c" style="height:42px; width:514px; margin:0 auto;background:#ff5e0l;">
+      <ul>
+        <li> <a href="http://www.hainanpc.net/" target="_blank">海南人大网</a></li>
+         <li><a href="http://www.cntv.cn/" target="_blank">央视网</a></li>
+        <li> <a href="http://hainan.sina.com/" target="_blank">新浪海南</a></li>
+        <li> <a href="http://www.cac.gov.cn/" target="_blank">中国网信网</a></li>
+        <li> <a href="http://wenchang.hainan.gov.cn/" target="_blank">文昌市政府网</a></li>
+      </ul>
+    </div>
+  </div>
+<div id="footer">
+  
+  
+<!--  <div id="footer_pic"><img src="http://tv.hnntv.cn/t/1/13/images/20131212/footer_pic.jpg" /></div>--> 
+
+
+
+
+
+ <div id="guanyuwom">
+    <ul>
+      <li><a href="http://www.hnntv.cn/" target="_blank">关于我们  | </a></li>
+      <li><a href="http://www.hnntv.cn/" target="_blank">联系我们  </a></li>
+        </ul>
+  </div>
+  <div id="banquan">
+  
+  <div id="banquan_l"  style=" height:130px; width:860px;">
+      <p>Copyright 2019 海南网络广播电视台  版权所有 电话：0898-66801570<br />互联网新闻信息服务许可证：46120170002
+           增值电信业务经营许可证编号：琼B2-20190408    信息网络传播视听节目许可证号：2105091<br />
+        本网法律顾问：海南上哲律师事务所  违法和不良信息举报电话：(0898)6683 0029<br> </p>
+       <p> 
+        <a style="display:inline-block;text-decoration:none;height:20px;line-height:18px;">备案号</a>
+        <a  href="http://www.miibeian.gov.cn/" target="_blank">琼ICP备10001411号</a>
+        
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=46010602000181" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+      
+        
+<img src="http://www.hnntv.cn/imageszt/gonganbeian.png" style="float:left;"/>
+
+<span style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 0px; color:#5b5b5b;">琼公网安备 46010602000181号</span></a>
+		
+		</p>
+		<!-- <p style="float:left;"><a href="http://www.hnntv.cn/st/folder762/folder837/2017-12-29/89341.html" target="_blank">     海南网络广播电视台 举报受理和处置管理办法</a>
+         </p>-->
+    </div>
+
+    
+    
+    <div id="banquan_r"> <a href="http://net.china.com.cn/index.htm" target="_blank"><img src="http://imgs.hnntv.cn/material/news/img/2017/09/20170912131414Ld4Z.jpg" /></a><a href="http://www.haikou.cyberpolice.cn/" target="_blank"><img src="http://imgs.hnntv.cn/material/news/img/2017/09/201709121314143mxT.jpg" /></a></div>
+  </div>
+</div>
+
+
+    </div>
+ 
+</div>
+
+ 
+</div>
+ 
+ 
+     
+     <div style="display:none "> 
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d39c4384b33adf1c30e7cea54026f4c2";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+ <script type="text/javascript" src="http://tajs.qq.com/stats?sId=63875122" charset="UTF-8"></script> 
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?8955a909087a790f49c6a5d033867ec5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script src="https://s9.cnzz.com/z_stat.php?id=5719580&web_id=5719580" language="JavaScript"></script>
+    </div>
+
+
+
+
+<div style="width:1px;height:1px;overflow:hidden;">
+			<div id="m2odatamap" data-id="145467" data-rid="261129" data-appuniqueid="news" data-moduleuniqueid="news" data-columnid="127"></div>	
+                <span class="article-view">查看数：<em id="m2oclicks" data-id="145467" data-app="news" data-mod="news" data-column="127">0</em></span>
+			</div>
+
+<script type="text/javascript">
+/*m2o clicks count start*/
+var jqm2oclick = $('#m2oclicks');
+$.ajax({
+    url : "/m2o/click.php",
+    data : {id  : jqm2oclick.data('id'),  app_uniqueid : jqm2oclick.data('app') ,  module_uniqueid: jqm2oclick.data('mod') ,column_id: jqm2oclick.data('column') , rec : 1},
+    timeout : 5000,
+    success : function(html){
+      var _htmlstart  = html.indexOf('>'),
+          _htmlend = html.indexOf('</');
+      jqm2oclick.html(html.substring( (_htmlstart+1), _htmlend));
+    }
+});
+/*m2o clicks count end*/
+</script>
+<!--微信自定义分享接口开始-->
+         <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+               <input id="wx-share-title" type="hidden" value="海南网络广播电视台" />
+      <input id="wx-share-desc" type="hidden" value="海南网络广播电视台" />
+      <input id="wx-share-cfss" type="hidden" value="海南网络广播电视台" />
+      <input id="wx-share-img" type="hidden" value="http://tv.hnntv.cn/t/1/9/images/20170726104641Z7y7.jpg" />
+      <input id="wx-share-link" type="hidden" value="" />
+      <input id="wx-share-type" type="hidden" value="link" />
+      <input id="wx-share-dataUrl" type="hidden" value="" />
+                 
+ <script type="text/javascript" >
+ var _url = encodeURIComponent(location.href.split('#')[0]);
+            var wxjssdkurl = 'http://wxjssdk2.hogesoft.com/index.php?site_id=188&url=' + _url;
+            $.getScript(wxjssdkurl, function (){});
+</script>
+<!--微信自定义分享接口结束-->
+
+<script type="text/javascript">$(".cell_3940_ .search-select h5").toggle(function(){
+    	$(this).siblings(".search-select-item").removeClass("hidden");
+	},function(){
+		$(this).siblings(".search-select-item").addClass("hidden");
+});
+$(".cell_3940_ .search-select-item li").click(function(){
+		$(this).parent().addClass("hidden");
+		$(this).parents('.search-select').find('h5').html($(this).html());
+		$(this).parents('.search-select').find('input[name=searchtype]').val($(this).data('value'));
+});
+$(".cell_3940_").submit(function(){
+	if($.trim($(this).find('input[name=search_text]').val())=="" || $.trim($(this).find('input[name=search_text]').val())==$(this).find('input[name=search_text]').get(0).defaultValue){
+		$(this).find('input[name=search_text]').focus();
+		return false;			
+	}
+});
+$(".cell_4230_").switchable({
+        putTriggers: 'appendTo',
+		panels: 'li',
+		effect: 'scrollLeft',
+		easing: 'ease-in-out',
+		end2end: true,
+		autoplay: true,
+		prev: $(".cell_4230_ .ctrl-prev"),
+		next: $('.cell_4230_ .ctrl-next'),
+		interval: 5});
+
+    $("..cell_3956_ .inner").switchable({
+    	triggers: false,
+		panels: '.item',
+		effect: 'scrollLeft',
+		easing: 'ease-in-out',
+		end2end: true,
+		prev: $(".cell_3956_").parent().find(".carousel-prev"),
+		next: $(".cell_3956_").parent().find('.carousel-next')
+	});
+	
+    $(".item").each(function(){
+        $(this).find("li").last().css('margin-right','0');
+    });
+    $("..cell_3960_ .inner").switchable({
+    	triggers: false,
+		panels: '.item',
+		effect: 'scrollLeft',
+		easing: 'ease-in-out',
+		end2end: true,
+		prev: $(".cell_3960_").parent().find(".carousel-prev"),
+		next: $(".cell_3960_").parent().find('.carousel-next')
+	});
+	
+    $(".item").each(function(){
+        $(this).find("li").last().css('margin-right','0');
+    });
+    $("..cell_3963_ .inner").switchable({
+    	triggers: false,
+		panels: '.item',
+		effect: 'scrollLeft',
+		easing: 'ease-in-out',
+		end2end: true,
+		prev: $(".cell_3963_").parent().find(".carousel-prev"),
+		next: $(".cell_3963_").parent().find('.carousel-next')
+	});
+	
+    $(".item").each(function(){
+        $(this).find("li").last().css('margin-right','0');
+    });
+    $("..cell_3966_ .inner").switchable({
+    	triggers: false,
+		panels: '.item',
+		effect: 'scrollLeft',
+		easing: 'ease-in-out',
+		end2end: true,
+		prev: $(".cell_3966_").parent().find(".carousel-prev"),
+		next: $(".cell_3966_").parent().find('.carousel-next')
+	});
+	
+    $(".item").each(function(){
+        $(this).find("li").last().css('margin-right','0');
+    });
+    $("..cell_3969_ .inner").switchable({
+    	triggers: false,
+		panels: '.item',
+		effect: 'scrollLeft',
+		easing: 'ease-in-out',
+		end2end: true,
+		prev: $(".cell_3969_").parent().find(".carousel-prev"),
+		next: $(".cell_3969_").parent().find('.carousel-next')
+	});
+	
+    $(".item").each(function(){
+        $(this).find("li").last().css('margin-right','0');
+    });
+    $("..cell_3972_ .inner").switchable({
+    	triggers: false,
+		panels: '.item',
+		effect: 'scrollLeft',
+		easing: 'ease-in-out',
+		end2end: true,
+		prev: $(".cell_3972_").parent().find(".carousel-prev"),
+		next: $(".cell_3972_").parent().find('.carousel-next')
+	});
+	
+    $(".item").each(function(){
+        $(this).find("li").last().css('margin-right','0');
+    });
+    $("..cell_3975_ .inner").switchable({
+    	triggers: false,
+		panels: '.item',
+		effect: 'scrollLeft',
+		easing: 'ease-in-out',
+		end2end: true,
+		prev: $(".cell_3975_").parent().find(".carousel-prev"),
+		next: $(".cell_3975_").parent().find('.carousel-next')
+	});
+	
+    $(".item").each(function(){
+        $(this).find("li").last().css('margin-right','0');
+    });
+    $("..cell_3978_ .inner").switchable({
+    	triggers: false,
+		panels: '.item',
+		effect: 'scrollLeft',
+		easing: 'ease-in-out',
+		end2end: true,
+		prev: $(".cell_3978_").parent().find(".carousel-prev"),
+		next: $(".cell_3978_").parent().find('.carousel-next')
+	});
+	
+    $(".item").each(function(){
+        $(this).find("li").last().css('margin-right','0');
+    });
+$(".cell_3984_").switchable({
+        putTriggers: 'appendTo',
+    	panels: 'li',
+		effect: 'scrollLeft',
+		easing: 'ease-in-out',
+		end2end: true,
+		autoplay: true,
+		prev: $(".cell_3984_.ctrl-prev"),
+		next: $('.cell_3984_ .ctrl-next'),
+		interval: 5});
+  
+</script>
+<script src="http://stat.cloud.hoge.cn/js/webpv/?site_id=188" language="javascript"></script></body></html>

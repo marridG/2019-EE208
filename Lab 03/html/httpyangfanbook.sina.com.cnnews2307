@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>为爱而走&#183;爱在春天
+_新闻 _扬帆计划</title>
+  <link rel="stylesheet" type="text/css" href="/css/basev4.2.css?1" />
+  <!--[if IE 6]>
+  <script type="text/javascript" src="/js/jq.png.js" ></script>
+  <script type="text/javascript">DD_belatedPNG.fix('.turnleft,.turnright,.bookli,.quickjz,.bang,.bookintro');</script>
+  <![endif]-->
+  <link rel="stylesheet" type="text/css" href="/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="/css/jq.plugin.css" />
+  <script src="/js/jq.js" type="text/javascript"></script>
+  <script type="text/javascript" src="/js/jq.ui.base.js"></script>
+  <script src="/js/jq.blockui.js" type="text/javascript"></script>
+  <script src="/js/jq.sinassoconfig.js" type="text/javascript"></script>
+
+    <script src="/js/jq.unobtrusive-ajax.js" type="text/javascript"></script>
+    <script src="/js/jq.validate.js" type="text/javascript"></script>
+    <script src="/js/jq.validate.unobtrusive.js" type="text/javascript"></script>
+
+      
+    <link rel="stylesheet" href="http://sjs0.sinajs.cn/video/snake_video/css/pages/common.css?v=1.0.0.5" />
+    <link rel="stylesheet" href="http://sjs0.sinajs.cn/video/snake_video/css/pages/playuser.css?v=1.0.0.5" />
+    <script type="text/javascript">
+        var vId = 0;
+        var $SCOPE = {};
+        // 视频
+        $SCOPE['video'] = {
+            channel: 'vblog',
+            cid: '',
+            epgid: '',
+            vid: vId,
+            hd_vid: '0',
+            sid: '101402031',
+            uid: '1274469185',
+            categoryId: '1',
+            pid: '478',
+            tid: '',
+            pic: 'http://p1.v.iask.com/525/514/101402031_2.jpg',
+            actlogActive: 1,
+            url: window.location.href,
+            title: '体育晨报-玩航模学知识 山区孩子放飞梦想',
+            resolution: 0,
+            isWide: 0,
+            swfOutsideUrl: 'http://you.video.sina.com.cn/api/sinawebApi/outplayrefer.php/vid=101402031_1274469185_a0+xGicxCjbK+l1lHz2stqlF+6xCpv2xhGu2vFagIwdYXQmYJMXNb9wH4S3WAs9B8HoLHcwydP4n0x0vaKlZ/s.swf',
+            videoData: {
+                ipad_vid: '101402101',
+                class_code: '0'
+            },
+            newsid: '101402031',
+            ad_state: '1',
+            videoStyle: 2,
+            index: 1,
+            comment_state: 0,
+            AllCount: 0
+        };
+        // 其它
+        $SCOPE['jsPath'] = 'http://sjs3.sinajs.cn/video/snake_video/js/';
+        $SCOPE['cssPath'] = 'http://sjs0.sinajs.cn/video/snake_video/css/';
+        $SCOPE['jsVersion'] = '1.0.0.15';
+        $SCOPE['cssVersion'] = '1.0.0.5';
+        $SCOPE['hotVideoUrl'] = 'http://platform.sina.com.cn/top_news/top?app_key=1841630516&top_channel=v&top_type=day&top_cat=bkzpx&top_time=today&top_show_num=10&top_order=DESC&show_video_info=1';
+        // 模块
+        var $widget = [];
+        // suda 日志
+        $SCOPE['sudaData'] = {
+            code: "1421"
+        };
+  
+    </script>
+    
+
+  <script src="https://i.sso.sina.com.cn/js/ssologin.js" type="text/javascript"></script>
+  <script src="/js/jq.mixed.js" type="text/javascript"></script>
+  <script type="text/javascript" src="/js/jq.jcarousellite.js"></script>
+  <script src="/js/jq.yangfan.js" type="text/javascript"></script>
+  
+<!-- SUDA_CODE_START -->
+<script type='text/javascript' charset="utf-8">
+  (function () {
+
+    var doc = document,
+  wa = doc.createElement('script'),
+  s = doc.getElementsByTagName('script')[0];
+    wa.type = 'text/javascript';
+    wa.charset = 'utf-8';
+    wa.async = true;
+    wa.src = 'https://www.sinaimg.cn/unipro/pub/suda_s_v851c.js';
+    s.parentNode.insertBefore(wa, s);
+  })(); 
+
+</script>
+<!-- SUDA_CODE_END -->
+
+<script>
+
+var g_bAutoLogin = (0 == 1);
+function onload() {
+
+  var element_video = document.getElementById("video_show");
+  var element_container = document.getElementById("container");
+  if ( element_container != null ){
+    element_container.style.display = 'block';
+  }
+
+  if ((typeof(g_bAutoLogin) == "undefined")) {
+    return;
+  }
+  if (!g_bAutoLogin) {
+    return;
+  }
+  var url = "/user/sinassocallback?framelogin=1&callback=parent.sinaSSOController.feedBackUrlCallBack&sudaref=yangfanbook.sina.com.cn&retcode=0";
+  api(url, '1');
+}
+
+function reloadPage()
+{
+  window.location.href = window.location.href;
+}
+
+function sleep(millis, callback) {
+  setTimeout(function(){ callback(); }, millis);
+}
+
+function api(a, params){
+  //console.log('api: '+a+' '+params);
+  var xmlhttp;
+  if (window.XMLHttpRequest)
+  {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp = new XMLHttpRequest();
+  }
+  else
+  {
+    // code for IE6, IE5
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function()
+  {
+    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+      var s = xmlhttp.responseText;
+      //console.log(s);
+      if (params == '1') {
+        //alert("will do second ajax request");
+        api("/user/sinassoverify", '2');
+      } else {
+        //alert("2nd response="+s);
+      }
+
+    } else {
+      //alert();
+      //console.log('api readyState:'+xmlhttp.readyState);
+      //console.log('api status:'+xmlhttp.status);
+    }
+  }
+  var url = a;
+  //console.log(url);
+  xmlhttp.open("GET", url, true);
+  xmlhttp.send();
+  //console.log('http request sent');
+}
+
+</script>
+ 
+</head>
+<body> 
+
+
+    
+
+
+<style>
+    .yf-topbar-bd div {
+        margin: 0;
+        padding: 0
+    }
+
+    .yf-topbar-bd ul {
+        list-style: none;
+        margin: 0;
+        padding: 0
+    }
+
+    .yf-topbar-bd a {
+        text-decoration: none
+    }
+
+    .yf-topbar {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 41px;
+        z-index: 20000;
+        background-color: #13181e
+    }
+
+    .yf-topbar-bd {
+        width: 1200px;
+        margin: auto;
+        height: 40px;
+        position: relative
+    }
+
+        .yf-topbar-bd::before {
+            content: "";
+            display: table;
+            line-height: 0
+        }
+
+        .yf-topbar-bd::after {
+            clear: both
+        }
+
+        .yf-topbar-bd .yf-topbar-linkbox {
+            float: left
+        }
+
+    .yf-topbar-logo {
+        width: 100px;
+        height: 25px;
+        margin-top: 8px;
+        margin-right: 20px;
+        background-repeat: no-repeat;
+        background-color: green;
+        white-space: nowrap;
+        overflow: hidden
+    }
+
+    .yf-topbar-logo {
+        float: left
+    }
+
+    .yf-topbar-guest {
+        float: right
+    }
+
+    .login-split {
+        float: left;
+        width: 0;
+        height: 12px;
+        margin-top: 14px;
+        border-left: 1px solid #0591c0
+    }
+
+    .yf-topbar-login {
+        padding: 0 14px;
+        font-weight: 500;
+        color: #0591c0
+    }
+
+    .yf-topbar-login {
+        height: 41px;
+        line-height: 41px
+    }
+
+    .yf-topbar-login {
+        float: left
+    }
+
+    .yf-topbar-register {
+        padding: 0 14px;
+        font-weight: 500;
+        color: #0591c0
+    }
+
+    .yf-topbar-register {
+        height: 41px;
+        line-height: 41px
+    }
+
+    .yf-topbar-register {
+        float: left
+    }
+
+    .g-nav-tab {
+        height: 41px;
+        float: left
+    }
+
+        .g-nav-tab::before {
+            content: "";
+            display: table;
+            line-height: 0
+        }
+
+        .g-nav-tab::after {
+            clear: both
+        }
+
+    .g-nav-item {
+        position: relative;
+        float: left;
+        height: 41px;
+        line-height: 41px;
+        border: 0;
+        font-size: 12px;
+        margin-right: 18px;
+        z-index: 10
+    }
+
+        .g-nav-item title {
+            display: block;
+            line-height: 41px
+        }
+
+        .g-nav-item a {
+            color: #0591c0;
+            font-weight: 500;
+        }
+
+            .g-nav-item a:link {
+                color: #0591c0 !important;
+            }
+
+            .g-nav-item a:visited {
+                color: #0591c0 !important;
+            }
+
+        .g-nav-item a {
+            color: #0591c0;
+            font-weight: 500;
+        }
+
+        .g-nav-item p {
+            color: #0591c0;
+            font-weight: 500;
+            margin: 0;
+            padding: 0
+        }
+</style>
+
+<html xmlns:wb="http://open.weibo.com/wb">
+<body>
+
+
+    
+    <script>
+       $(function(){
+        /*页面强转开始*/
+        var tmpTag = 'https:' == document.location.protocol ? false : true;
+        if(tmpTag){
+        window.location='https://yangfanbook.sina.com.cn/';
+        }
+        /*页面强转结束*/
+        })
+
+    //    isLogin();
+    //function timer(){
+    //    var t = (new Date(2018, 9, 9, 0, 0, 0)) - (new Date());
+    //    var d = parseInt(t / 1000 / 60 / 60 / 24 , 10);
+    //    var h = parseInt(t / 1000 / 60 / 60 % 24 , 10);
+    //    var m = parseInt(t / 1000 / 60 % 60, 10);
+    //    var s = parseInt(t / 1000 % 60, 10);
+    //    d = checkTime(d);
+    //    h = checkTime(h);
+    //    m = checkTime(m);
+    //    s = checkTime(s);
+    //    setInterval("timer()",1000);
+    //    document.getElementById("timer").innerHTML = d+"天" + h+"小时" + m+"分"+s+"秒";
+    //}
+    //function checkTime(i){
+    //    if(i < 10)
+    //    {
+    //        i = "0" + i;
+    //    }
+    //    return i;
+    //}
+    //timer();
+    function islogin() {
+        var login = 'False';
+        var ssoinfo = sinaSSOController.getSinaCookie();
+        if (ssoinfo == null)
+        {
+            alert("请登录后再进行捐赠！");
+            return false;
+        }
+        return true;
+    }
+    </script>
+    
+    
+    <div class="topbg">
+        <div class="top">
+            <div class="logo">
+                <a href="http://www.sygoc.org.cn/" target="_blank" title="思源工程">
+                    <img src="/image/sylogo.jpg" alt="思源工程" />
+                </a>&nbsp;<a href="http://blog.sina.com.cn/yangfanjihua"
+                             target="_blank" title="扬帆计划"><img src="/image/yflogo.jpg" alt="扬帆计划" /></a>
+            </div>
+            <div class="about">
+                <a href="http://gongyi.sina.com.cn/" title="新浪公益" target="_blank">
+                    <img src="/image/gylogo.jpg" alt="新浪公益" />
+                </a>&nbsp;<a href="http://book.sina.com.cn/"
+                             title="新浪读书" target="_blank"><img src="/image/dslogo.jpg" alt="新浪读书" /></a><a href="http://weibo.com/yangfanjihua"
+                                                                                                           class="yfwb" target="_blank"><img src="/image/wbbg.jpg" alt="扬帆微博" />扬帆微博</a>
+                <a href="/about" class="text" target="_blank">关于扬帆</a>
+            </div>
+        </div>
+    </div>
+    <div class="menubg">
+        <div class="menucot">
+            <ul class="menu">
+                <li class="indexa on"><a href="/">首 页</a></li>
+                <li class="indexa la">
+                    <strong><a href="/school/mapgaode">受助学校</a></strong>
+                    <ul>
+                        <li><a href="/user/recommendschool">推荐学校</a></li>
+                        <li><a href="/about/flow">申请流程</a></li>
+                    </ul>
+                </li>
+                <li class="indexa la">
+                    <strong><a href="/book/list">扬帆图书</a></strong>
+                    <ul>
+                        <li><a href="/user/recommendbook">推荐图书</a></li>
+                        <li><a href="/book/list">图书列表</a></li>
+                        <li><a href="/news/list/6">发书记录</a></li>
+                        <li><a href="http://blog.sina.com.cn/yangfanjihua">图书反馈</a></li>
+                    </ul>
+                </li>
+                <li class="indexa la">
+                    <strong><a href="/news/list/8">志愿活动</a></strong>
+                    <ul>
+                        <li><a href="/user/bevolunteer">申请志愿者</a></li>
+                        <li><a href="/user/VisitApply">回访活动</a></li>
+                        <li><a href="/group">扬帆项目组</a></li>
+                    </ul>
+                </li>
+                <li class="indexa la">
+                    <strong style="padding-right:15px;">爱心1+1</strong>
+                    <ul>
+                        <li><a href="/activity/6">掌阅图书馆</a></li>
+                        <li><a href="/activity/1">爱的N次方</a></li>
+                        <li><a href="/activity/3">梦想起飞</a></li>
+                        <li><a href="/activity/5">爱心加磅</a></li>
+                    </ul>
+                </li>
+                <li class="indexa la">
+                    <strong><a href="/donate" onclick="return islogin();">我要捐赠</a></strong>
+                    <ul>
+                        <li><a href="/cart" style="margin: 0; padding: 0;">我的捐赠车</a></li>
+                        <li><a href="/donate" onclick="return islogin();">直接捐款</a></li>
+                        <li><a href="/donate" onclick="return islogin();">在线捐书</a></li>
+                        <li><a href="/donate" onclick="return islogin();">汇款捐赠</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="counts login menu">
+                <span style="display:none">
+                    <wb:login-button type="7,5" onlogin="login" onlogout="logout">登录按钮</wb:login-button>
+                </span>
+                <span id="usernamesp">
+
+                    <a id="user_login_btn">登录</a>
+                </span>
+               
+                <span>
+                    <a href="http://login.sina.com.cn/signup/signup.php?entry=gongyi&r=http://yangfanbook.sina.com.cn"
+                       target="_blank" class="reg">注册</a>
+                </span>
+                
+            </div>
+        </div>
+    </div>
+    <div id="logindiv" class="DefaultStickyWin" style="width: 370px; display: none">
+        <div class="toplogin" style="cursor: move;">
+            <div class="top_ul">
+            </div>
+            <div class="top_ur">
+                <div id="closebutton" class="closeButton button">
+                </div>
+                <h1 class="caption dragHandle" style="width: 320px;">
+                    登录
+                </h1>
+            </div>
+        </div>
+        <div class="middle">
+            <div style="padding: 0 30px 8px 0">
+                <div style="margin: 0pt auto 5px;">
+                </div>
+                <div style="min-height: 50px;" id="iqwer_gen_1306229931929">
+                    <div class="IqwerWindow">
+                        <form class="validation" method="post">
+                            <table cellspacing="0" cellpadding="5">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            新浪通行证
+                                        </td>
+                                        <td>
+                                            <input id="txtUserName" type="text" style="width: 238px" name="username" class="validate['required','length[3,40]']"
+                                                   autocomplete="off">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            密码
+                                        </td>
+                                        <td>
+                                            <input id="txtPassword" type="password" style="width: 238px" name="password" class="validate['required','length[6,-1]']"
+                                                   onkeydown="fnTrapKD('btnLogin',event)">
+                                        </td>
+                                    </tr>
+                                    <tr id="verifycode" style="display: none">
+                                        <td>
+                                            验证码
+                                        </td>
+                                        <td style="text-align: left">
+                                            <input type="text" class="text" id="pincode" onkeydown="fnTrapKD('btnLogin',event)">
+                                            <img id="verifyimg" src="" style="height: 28px" />
+                                        </td>
+                                    </tr>
+                                    <tr id="vsnfcode" style="display: none">
+                                        <td>
+                                            微盾码
+                                        </td>
+                                        <td style="text-align: left">
+                                            <input type="text" class="text" id="vsncode" onkeydown="fnTrapKD('btnLogin',event)">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <input type="hidden" value="/mine" name="url">
+                                            <a target="_blank" href="http://login.sina.com.cn/signup/signup.php">马上注册</a>
+                                            
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="closeBody" style="display: block;">
+            <div class="closeButtons">
+                <input type="button" id="btnLogin" value="登录" class="ok button">
+                <input type="button" value="取消" class="cancel button" id="cancelbtn">
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="bottom_ll">
+            </div>
+            <div class="bottom_lr">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+  <div id="container" class="containerclear">
+<div style="padding-top:10px;cursor:pointer"><a href="http://yangfanbook.sina.com.cn/app/get" target="_blank"><img src="http://yangfanbook.sina.com.cn/image/app/yfzs_ad.png"/></a></div>
+    <div class="news-detail">
+        <div id="news-left" class="news-detail-l">
+            <div class="news-detail-l-lt clearfix">
+                <div class="news-detail-l-lt-l1">
+                </div>
+                <div class="news-detail-l-lt-l2">
+                    -- 正文</div>
+            </div>
+            <div class="news-detail-l-lc">
+                <div class="newstitle">为爱而走&#183;爱在春天</div>
+                <div class="author">
+                    <span>作者：扬帆计划</span> <span>时间：2018/3/26 18:28:47</span>
+                </div>
+
+
+            
+             <script type="text/javascript">
+                 window.SVKFlashUtil = function (a, b) { var c = {}, d = "undefined", e = a.navagator, d = "undefined", f = "object", g = "Shockwave Flash", h = "ShockwaveFlash.ShockwaveFlash", i = "application/x-shockwave-flash", j = "SWFObjectExprInst", k = "onreadystatechange", e = navigator, l = !1, m = function () { var c = typeof b.getElementById != d && typeof b.getElementsByTagName != d && typeof b.createElement != d, j = e.userAgent.toLowerCase(), k = e.platform.toLowerCase(), m = k ? /win/.test(k) : /win/.test(j), n = k ? /mac/.test(k) : /mac/.test(j), o = /webkit/.test(j) ? parseFloat(j.replace(/^.*webkit\/(\d+(\.\d+)?).*$/, "$1")) : !1, p = !1, q = [0, 0, 0], r = null; if (typeof e.plugins != d && typeof e.plugins[g] == f) { r = e.plugins[g].description; if (r && (typeof e.mimeTypes == d || !e.mimeTypes[i] || !!e.mimeTypes[i].enabledPlugin)) { l = !0; p = !1; r = r.replace(/^.*\s+(\S+\s+\S+$)/, "$1"); q[0] = parseInt(r.replace(/^(.*)\..*$/, "$1"), 10); q[1] = parseInt(r.replace(/^.*\.(.*)\s.*$/, "$1"), 10); q[2] = /[a-zA-Z]/.test(r) ? parseInt(r.replace(/^.*[a-zA-Z]+(.*)$/, "$1"), 10) : 0 } } else if (typeof a.ActiveXObject != d) try { var s = new ActiveXObject(h); if (s) { r = s.GetVariable("$version"); if (r) { p = !0; r = r.split(" ")[1].split(","); q = [parseInt(r[0], 10), parseInt(r[1], 10), parseInt(r[2], 10)] } } } catch (t) { } return { w3: c, pv: q, wk: o, ie: p, win: m, mac: n} } (), n = function (a, b) { if (m.ie && m.win) { var c = "", b = b || {}; for (var d in a) a[d] != Object.prototype[d] && (d.toLowerCase() == "data" ? b.movie = a[d] : d.toLowerCase() == "styleclass" ? c += ' class="' + a[d] + '"' : d.toLowerCase() != "classid" && (c += " " + d + '="' + a[d] + '"')); var e = ""; for (var f in b) b[f] != Object.prototype[f] && (e += '<param name="' + f + '" value="' + b[f] + '" />'); return '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"' + c + ">" + e + "</object>" } var g = '<embed pluginspage="http://www.macromedia.com/go/getflashplayer" type="' + i + '" '; for (var d in a) a[d] != Object.prototype[d] && (d.toLowerCase() == "data" ? g += 'src="' + a[d] + '" ' : d.toLowerCase() == "styleclass" ? g += ' class="' + a[d] + '" ' : d.toLowerCase() != "classid" && (g += " " + d + '="' + a[d] + '" ')); for (var h in b) g += h + '="' + b[h] + '" '; g += "/>"; return g }, o = function (a, b, c) { var d, e = {}; b = b || {}; for (d in a) { e[d] = a[d]; b[d] != null && (c ? a.hasOwnProperty[d] && (e[d] = b[d]) : e[d] = b[d]) } return e }; c.getFlashHTML = function (a) { var b = { url: "", id: "vPlayer", width: 640, height: 480, flashvars: {}, params: { allowNetworking: "all", allowScriptAccess: "always", wmode: "transparent", allowFullScreen: "true", quality: "high", bgcolor: "#000000" }, attributes: {} }; b = o(b, a); var c = {}, d = {}; c.data = b.url; c.width = b.width + ""; c.height = b.height + ""; c.id = b.id; for (var e in b.attributes) c[e] = b.attributes[e]; for (var e in b.params) d[e] = b.params[e]; d.flashvars = ""; for (var e in b.flashvars) d.flashvars ? d.flashvars += "&" + e + "=" + b.flashvars[e] : d.flashvars = e + "=" + b.flashvars[e]; return n(c, d) }; c.isSupport = function () { }; c.isSupportVersion = function (a) { }; return c } (window, document);
+                 FlashCallJS = function (a) { var b = {}; b.flashInitCompleted = function () { }; b.playCompleted = function () { }; window.getBackupURL = function () { return $SCOPE.video.backupURL }; b.focusloop = function () { }; b.playFirstVideo = function () { }; b.collection = function () { }; b.getComment = function () { }; b.completed_cookie = function () { }; b.nextPlay = function () { }; b.lightOff = function () { }; b.lightOn = function () { }; b.toWide = function () { }; b.toNarrow = function () { }; b.SinaBokePlayer_o = window.SinaBokePlayer_o || {}; b.SinaBokePlayer_o.setPlayerSize || (b.SinaBokePlayer_o.setPlayerSize = function (a, b) { window.setPlayerSize(a, b) }); b.setPlayerSize = function () { }; var c = function (a, b, c) { a[c] = function () { var a = c + "__state"; b[a] || (b[a] = []); b[a].push({ args: arguments, date: new Date }) } }; b.setFactoryValue = function () { }; for (var d in b) c(a, b, d); window.qualityFactroy = { setValue: function (a, b) { window.setFactoryValue(a, b) } }; return b } (window);
+                 (function (a, b) { var c = a.$Config; if (!c) throw "config is null"; var d = b.getElementById("myflashBox"); d.innerHTML = SVKFlashUtil.getFlashHTML(c) })(window, document);
+             </script>
+             <!--相关链接-->
+              <script type="text/javascript" src="http://sjs3.sinajs.cn/video/snake_video/js/core.js?v=1.0.0.15"></script>
+              <script type="text/javascript" src="http://sjs2.sinajs.cn/video/snake_video/js/pages/play/pPlay.js?v=1.0.0.15"></script>
+
+
+
+                <div class="content" style="font-size: 14px">
+                    <p style="text-align: center;"><img src="/image/upload/201803271f1a795f-79b1-4f0a-be20-c1023e716b65.jpg" align="middle" width="640" alt="" /><br /></p><p>　</p>
+                </div>
+            </div>
+            <div id="comment">
+<style>
+    .item-c>fieldset
+    {                   
+        border: 1px solid #ddd;
+        padding: 0 1.4em 1.4em 1.4em;
+        margin: 0 0 1.5em 0;
+
+    }
+</style>
+
+<div class="IqwerComponent">
+    <div class="ComponentTarget_comment">
+        <div class="comment" id="commentlist">
+            <div class="title">
+                <h2>评论板</h2>
+            </div>
+            <div class="list">
+                        暂无评论
+
+                <div class="ComponentPager page">
+                    
+<!-- Pager Section --> 
+
+                </div>
+            </div>
+
+                    <div align="center">您还没有登录，<a id="comment_login_btn" style="color:#F36100">马上登录</a></div>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function CommentSuccess(e) {
+        $("#commentform input").removeAttr("readonly");
+        $("#commentsubmit").removeAttr("disabled");
+        if (e.Success) {
+            $.post("/news/" + e.TargetID + "?pc=1", function (data) { $('#commentlist').html(data); }); return false;
+            $("#commentmsg").html(e.Message);
+        } else {
+            $("#commentmsg").html(e.Message);
+        }
+    }
+    function CommentBegin(e) {
+        if ($("#Content").val().length < 5 || $("#Content").val().length > 200) {
+            alert("请输入5～200个字符，谢谢"); return false;
+        }
+        if ($(".content").val().indexOf(":") >= 0) {///用户是回复评论。
+            if ($(".content").val().split(':')[1].length < 0) {
+                alert("请输入你要评论的内容");
+                return false;
+            }
+        }
+        if ($("#Content").val().indexOf("alert") >= 0 || $("#Content").val().indexOf("iframe") >= 0) {
+            alert("输入内容不合法");
+            return false;
+        }
+        //过滤掉html标签
+        var strContent = $("#Content").val();
+        var re = /<\/?[^>]*>/g;
+        if (re.exec(strContent)) {
+            alert("输入内容包含页面标签");
+            return false;
+        }
+
+        $("#commentform input").attr("readonly", true);
+        $("#commentsubmit").attr("disabled", "disabled");
+        $("#commentmsg").html("");
+    }
+    $(function () {
+        $(".reply").click(function () {
+            var username = $(this).parent().children(":eq(0)").text(); ///获取回复的用户名
+            var content = $(this).parent().next().text(); //获取评论内容
+            $("#ParentId").val($(this).attr("cid")); //获取评论父ID
+            $(".content1").val("[Quete]》" + username + "：[/Quete]" + content + "＞");
+            username = username.replace(/ /g, '').replace(/[\r\n]/g, '');
+            $(".content").val("回复" + username + ":\r\n");
+            setFocus(document.getElementById("Content"));
+        });
+    });
+
+    function myFocus(sel, start, end) {
+        if (sel.setSelectionRange) {
+            sel.focus();
+            sel.setSelectionRange(start, end);
+        }
+        else if (sel.createTextRange) {
+            var range = sel.createTextRange();
+            range.collapse(true);
+            range.moveEnd('character', end);
+            range.moveStart('character', start);
+            range.select();
+        }
+    }
+    function setFocus(sel) {
+        length = sel.value.length;
+        myFocus(sel, length, length);
+    }
+</script>
+
+             
+            </div>
+        </div>
+        <div id="news-right" class="news-detail-r">
+            <div class="news-detail-r-rt">
+                <div class="tl">
+                    扬帆计划新闻</div>
+                <div class="tr">
+                    <a href="/news/list">更多</a></div>
+                <div class="clear">
+                </div>
+            </div>
+            <div class="news-detail-r-rc">
+                <ul class="clearfix">
+                                <li><a href="/news/2991" target="_blank" title="攀升(IPASON)电脑携手新浪扬帆公益基金走进江西修水县田仑小学">攀升(IPASON)电脑携手新浪扬..</a></li>
+                                <li><a href="/news/2990" target="_blank" title="天使爸英语俱乐部：益点益滴，让阅读陪伴孩子快乐童年">天使爸英语俱乐部：益点益滴，..</a></li>
+                                <li><a href="https://gongyi.bbs.taobao.com/detail.html?postId=9316359" target="_blank" title="【公益宝贝】扬帆捐书计划2019年8月捐赠反馈">【公益宝贝】扬帆捐书计划2019..</a></li>
+                                <li><a href="/news/2988" target="_blank" title="2019年09月19日发货明细第701批发货（参与99项目筹款的学校第一次发货）">2019年09月19日发货明细第70..</a></li>
+                                <li><a href="/news/2987" target="_blank" title="测试宋艳姐">测试宋艳姐</a></li>
+                                <li><a href="/news/2986" target="_blank" title="扬帆班夏令营 | 用科技的力量埋下栋梁的种子，让梦想扬帆远航">扬帆班夏令营 | 用科技的力量..</a></li>
+                                <li><a href="/news/2985" target="_blank" title="江苏成长营 | 成长营里探索真知，感悟美好，我们来日方长，下一站再见！">江苏成长营 | 成长营里探索真..</a></li>
+                                <li><a href="/news/2984" target="_blank" title="湖南十三地州站点成立，齐聚长沙共飞翔">湖南十三地州站点成立，齐聚长..</a></li>
+                                <li><a href="/news/2983" target="_blank" title="踏上人类滑雪起源地，支持禾木儿童传承运动梦想">踏上人类滑雪起源地，支持禾木..</a></li>
+                                <li><a href="/news/2982" target="_blank" title="“关爱留守儿童 助力乡村振兴”桃园镇中小学暑期社会实践成长营正式开营">“关爱留守儿童 助力乡村振兴..</a></li>
+                                <li><a href="/news/2981" target="_blank" title="《我们都带刺-奇尼和小伙伴》奇尼扬帆艺术课堂公益游学暨演出活动在北京正式举办">《我们都带刺-奇尼和小伙伴》奇..</a></li>
+                                <li><a href="https://gongyi.bbs.taobao.com/detail.html?spm=a210m.7763730.0.0.1ffb34506c8Xps&amp;postId=9284266" target="_blank" title="【公益宝贝】扬帆捐书计划2019年7月捐赠反馈">【公益宝贝】扬帆捐书计划2019..</a></li>
+                                <li><a href="/news/2979" target="_blank" title="韩沐伯">韩沐伯</a></li>
+                                <li><a href="/news/2978" target="_blank" title="2019年08月17日发货明细   第671批">2019年08月17日发货明细   第..</a></li>
+                                <li><a href="https://m.weibo.cn/5493968139/4405515406561705" target="_blank" title="刘宇宁">刘宇宁</a></li>
+                                <li><a href="/news/2976" target="_blank" title="留守儿童艺术课堂：让艺术，为孩子们的未来插上梦想的翅膀">留守儿童艺术课堂：让艺术，为..</a></li>
+                                <li><a href="/news/2975" target="_blank" title="2019RED 英树&#183;扬帆e+公益夏令营｜公益，让无限的美好在这里遇见">2019RED 英树&#183;扬帆e+公益夏令..</a></li>
+                                <li><a href="/news/2974" target="_blank" title="攀枝花扬帆班回访 | 当梦初见，我们更加坚定了一个信念......">攀枝花扬帆班回访 | 当梦初见..</a></li>
+                                <li><a href="/news/2973" target="_blank" title="阿里巴巴公益一行到江西玉山对扬帆计划项目学校考察">阿里巴巴公益一行到江西玉山..</a></li>
+                                <li><a href="/news/2972" target="_blank" title="思源方舟&#183;安全小黄帽 | I&#39;m here，我在这儿">思源方舟&#183;安全小黄帽 | I&#39;m ..</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+
+  <div id="footer" class="clearfix">
+    <div class="nav">
+        <a href="/home">扬帆首页</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/about">关于扬帆</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="/news/list">最新动态</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/school/list">受助学校</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/donate" onclick="return islogin();">我要捐赠</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a
+            href="/event">志愿者活动</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/myyangfan">我的扬帆</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp; <a href="/group">扬帆项目组</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a
+            href="/help">使用帮助</a>
+    </div>
+    <div class="process">
+        <ul class="item1">
+            <li><strong><a href="/school/list" target="_blank">捐书</a></strong></li>
+            <li>选择学校</li>
+            <li>选择图书</li>
+            <li>捐赠</li>
+        </ul>
+        <ul class="item2">
+            <li><strong><a href="/donate" onclick="return islogin();" target="_blank">捐款</a></strong></li>
+            <li>选择学校</li>
+            <li>捐赠</li>
+        </ul>
+        <ul class="item3">
+            <li><strong>捐旧书</strong></li>
+            <li>查找学校</li>
+            <li>主动联系</li>
+            <li>自助邮寄</li>
+        </ul>
+        <ul class="item4">
+            <li><strong><a href="/user/recommendschool" target="_blank">推荐受助学校</a></strong></li>
+            <li>联系项目组</li>
+            <li>项目批准</li>
+        </ul>
+        <ul class="item6">
+            <li><strong><a href="/user/bevolunteer" target="_blank">成为扬帆志愿者</a></strong></li>
+            <li>首页报名参加</li>
+            <li>项目组审批通过</li>
+        </ul>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="copyright">
+        <p>
+            联系电话：010-58982364,58982494</p>
+        <p>
+            Copyright (c) 2007-2011 扬帆计划 Corporation, All Rights Reserved</p>
+        <p>
+            版权所有 中华思源工程扶贫基金会 -- 扬帆计划</p>
+    </div>
+</div>
+<div id="floatTools" class="servicediv" style="top:102px;">
+    <div class="floatL">
+        <a style="display: block;" id="aFloatTools_Show" class="btnOpen" title="查看在线客服" href="javascript:void(0);">
+            展开</a> <a style="display: none;" id="aFloatTools_Hide" class="btnCtn" title="关闭在线客服"
+                href="javascript:void(0);">收缩</a>
+    </div>
+    <div style="display: none;" id="divFloatToolsView" class="floatR">
+        <div class="tp">
+        </div>
+        <div class="cn">
+            <ul>
+                <li class="top">
+                    <h3 class="titZx">
+                        在线咨询</h3>
+                </li>
+                <li><span class="icoZx">在线咨询</span> </li>
+                <li style="padding-left: 18px"><a href="tencent://message/?uin=1507642703">
+                    <img src="/image/qqonline.gif" border="0"></a> </li>
+                <li style="padding-left: 25px"><a target="_blank" href="http://weibo.com/yangfanjihua">
+                    <img border="0" src="/image/sina.ico" alt="有事点这里" />客服(私信)</a></li>
+                
+                
+            </ul>
+            <!-- <ul class="webZx">
+                    <li class="webZx-in"><a href="/help" target="_blank" style="float: left;">
+                        <img src="myqqser_files/right_float_web.png" border="0px"></a> </li>
+                </ul>-->
+            <ul>
+                <li>
+                    <h3 class="titDh">
+                        电话咨询</h3>
+                </li>
+                <li><span class="icoTl">010-58982364</span> </li>
+                <li><span class="icoTl">58982494</span> </li>
+            </ul>
+        </div>
+    </div>
+</div>
+ 
+    
+
+
+ 
+</body>
+</html>

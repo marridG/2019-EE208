@@ -1,0 +1,229 @@
+/* 左侧首屏css start */
+body{font:12px/20px "Hiragino Sans GB","Microsoft Yahei","STHeiti Light",SimSun,Arial,sans-serif}
+.top-banner{margin-top:20px}
+.top-banner .tb-left{float:left;width:1000px;height:90px}
+.top-banner .tb-right{float:right;width:220px;height:90px;background:#F8F8F8;border:1px solid #D9D9D9}
+.tb-right .app-logo{float: left;padding: 6px 32px;}
+.tb-right .app-code{float: left;padding: 8px 0;}
+.main-title{font-size:38px;color:#4D4F53;line-height:38px;padding:40px 0}
+.top-bar-wrap{height:64px}
+.top-bar{height:64px;border:1px solid #e5e5e5;border-width:1px 0;width:100%;background:#fff}
+.top-bar-inner{width: 1240px;margin: 0 auto;}
+.top-bar-fixed{position:fixed;top:0;z-index:100;background: #F8F8F8;box-shadow: 0 2px 4px #ACACAC;left: 0px;}
+/*吸顶标题*/
+.top-bar-inner .second-title{display: none;font-size: 20px;line-height: 64px;float: left;width: 600px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;font-weight: bold;color:#4D4F53;}
+.top-bar-fixed .second-title{display: block;}
+.top-bar-fixed .date-source{display: none;}
+.date-source{float:left;line-height:16px;padding:24px 0}
+.date-source .date{font-size:16px;color:#888}
+.date-source .source{font-size:16px;color:#e94740;padding-left: 12px;}
+.date-source .source:visited{color:#e94740;text-decoration:none}
+.date-source .source:hover{color:#e94740;text-decoration:none}
+.page-tools{float:right;padding-top:23px}
+.tool-icon{height:18px;float:left;border-left:1px solid #e5e5e5;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none}
+.tool-icon a{display:block;width:66px;height:30px;background-image: url(http://i2.sinaimg.cn/qc/2017/1107/tool_icons01.png);background-image: -webkit-image-set(url(http://i2.sinaimg.cn/qc/2017/1107/tool_icons01.png) 1x,url(http://i0.sinaimg.cn/qc/2017/1107/tool_icons012x.png) 2x);background-repeat: no-repeat;text-indent:-999em;margin-top:-6px;background-position: -999rem 0;}
+.tool-icon.first{border-left:0}
+.tool-des-fs a{background-position:20px 1px}
+.tool-des-fs a:hover{background-position:20px -49px;}
+/*.tool-des-fs .bounceFromTop{background-position:20px -49px}*/
+.tool-des-fs a.disable{background-position:20px -99px}
+.tool-ins-fs a{background-position:-45px 1px}
+.tool-ins-fs a:hover{background-position:-45px -49px;}
+.tool-ins-fs a.disable{background-position:-45px -99px}
+.tool-fav a{background-position:-113px 1px}
+.tool-fav a:hover{background-position:-113px -49px;}
+.tool-fav .favorited{background-position:-113px -49px;}
+.tool-wb a{background-position:-180px 1px}
+.tool-wb a:hover{background-position:-180px -49px;}
+.tool-wx a{background-position:-247px 1px}
+.tool-wx a:hover{background-position:-247px -49px;}
+.tool-share a{background-position:-313px 1px}
+.tool-share a:hover{background-position:-313px -49px;}
+/*
+.tool-cmt a{background-position:-376px 2px;float:left;padding-left: 66px;line-height: 30px;text-indent: 0;text-decoration: none;}
+.tool-cmt a:visited{color: #e94740;text-decoration: none;}
+.tool-cmt a:hover{text-decoration: none;color: #FA536F;}
+.tool-cmt .num{font-size:24px;color:#e94740;}
+*/
+.tool-cmt a{float:left;padding-left: 66px;line-height: 30px;text-indent: 0;text-decoration: none;background-image: url(//n.sinaimg.cn/finance/page/ent/images/0108_zyc_cmtIcon.png);background-image: -webkit-image-set(url(//n.sinaimg.cn/finance/page/ent/images/0108_zyc_cmtIcon.png) 1x,url(//n.sinaimg.cn/finance/page/ent/images/0108_zyc_cmtIcon2x.png) 2x);background-position: 20px 5px;}/*0107*/
+.tool-cmt a:visited{color: #EE231B;text-decoration: none;}/*0107*/
+.tool-cmt a:hover{text-decoration: none;color: #EE231B;}/*0107*/
+.tool-cmt .num{font-size:24px;color:#EE231B;}/*0107*/
+.page-tools{position: relative;}
+.share-more-list{position: absolute;top: 45px;left: 335px;box-shadow: 0 2px 4px #eaeaea;background: #fff;}
+.share-more-list .tool-icon{height: 38px;border-left: 0px;float: none;}
+.share-more-list .tool-icon a{padding-left: 59px;width: 73px;text-indent: 0;line-height: 38px;font-size: 14px;margin-top: 0;height: 38px;color: #979797;}
+.share-more-list .tool-icon a:visited{text-decoration: none;color: #979797;}
+.share-more-list .tool-icon a:hover{text-decoration: none;background-color: #F7F8F9;color: #979797;}
+.share-more-list .tool-share-qq a{background-position: -388px -45px;}
+.share-more-list .tool-share-qqzone a{background-position: -388px -93px;}
+/*我的收藏*/
+.my-favor{float: right;padding: 0 19px;line-height: 45px;height: 45px;}
+.my-favor a{font-size: 14px;}
+.my-favor:visited{}
+.my-favor:hover{}
+.my-favor i{background-image: url(//n.sinaimg.cn/finance/page/ent/images/0908_zyc_icons.png);
+    background-image: -webkit-image-set(url(//n.sinaimg.cn/finance/page/ent/images/0908_zyc_icons.png) 1x,url(//n.sinaimg.cn/finance/page/ent/images/0908_zyc_icons2x.png) 2x);
+    background-repeat: no-repeat;background-position: -137px -105px;display: inline-block;width: 20px;height: 20px;vertical-align: -4px;margin-right: 5px;}
+.my-favor:hover i{background-position: -202px -105px ;}
+.main-content{margin:0 auto;width:1240px}
+.path-search{margin-top:20px;height:36px}
+.path-search .path{float:left}
+.path .channel-logo{float:left; width: 139px; height: 36px; background-image: url(//n.sinaimg.cn/finance/page/ent/images/sina_ent_2017logo.png); background-image: -webkit-image-set(url(//n.sinaimg.cn/finance/page/ent/images/sina_ent_2017logo.png) 1x,url(//n.sinaimg.cn/finance/page/ent/images/sina_ent_2017logo2x.png) 2x); background-repeat: no-repeat;}
+.path .channel-path{float:left;font-size:14px;line-height:20px;margin-top:12px;margin-left:11px}
+.path .channel-path a{color: #333;}
+.path .channel-path a:visited{color: #333;}
+.path .channel-path a:hover{color: #FA536F;}
+.path .channel-logo img{display:block;width:140px}
+.article-content{margin-top:20px}
+.article p a{border-bottom: 1px solid #999;}
+.article-content-left{width:880px;margin-right:40px;float:left;}
+.article-content-right{width:320px;float: right;}
+.article{font-size:18px;letter-spacing:1px;line-height:32px}
+.article > p{margin-bottom:30px;}
+.article-content-left .top-ad{margin-bottom:30px;overflow: hidden;width: 880px;}
+.article-content-left figure{margin:0;}
+.article-content-left .img_wrapper{text-align:center}
+.article-content-left .img_wrapper img {display: block; margin: 0 auto; }
+.article-content-left .img_descr{line-height:20px;padding:6px 0;font-size:12px;margin:5px auto;display:inline-block;display:-moz-inline-stack;zoom:1;text-align:left;font-weight:bold;}
+.article-content-left .wt_article_link{color:#FA536F;}
+.article-content .quotation{position:relative;margin-bottom:30px}
+.quotation .icon{background-image: url(http://i2.sinaimg.cn/qc/2017/1107/tool_icons01.png);background-image: -webkit-image-set(url(http://i2.sinaimg.cn/qc/2017/1107/tool_icons01.png) 1x,url(http://i0.sinaimg.cn/qc/2017/1107/tool_icons012x.png) 2x);background-repeat: no-repeat;width:28px;height:24px}
+.quotation .quotation-right{background-position:-333px -100px;position:absolute;bottom:0;right:0}
+.quotation .quotation-left{background-position:-268px -100px;position:absolute;top:0;left:0}
+.quotation p{padding-left:38px;font-size:16px;color:#4D4F53;letter-spacing:1px;line-height:28px}
+/*字体控制*/
+.article-20 .article{font-size:20px;line-height: 36px;}
+.article-16 .article{font-size:16px;line-height: 30px;}
+.article-16 .quotation p{font-size: 14px;line-height: 26px;}
+.article-20 .quotation p{font-size: 18px;line-height: 32px;}
+/*正文底部*/
+.article-bottom .keywords{float:left;font-size: 16px;}
+.article-bottom .btns{float:right}
+.article-bottom .keywords a{color:#fa536f;padding-right: 10px;}
+.article-bottom .keywords a:visited{color:#fa536f;text-decoration: none;}
+.article-bottom .keywords a{color:#eb1b3e;text-decoration: none;}
+.article-bottom .btn-icon{background:url(//n.sinaimg.cn/finance/page/ent/images/0828_zyc_main_icons.png) -999em -999em no-repeat;float:left;width:63px;height:34px;border:1px solid #d7d7d7;margin-left:28px;line-height:34px;padding-left:45px;font-size:14px;transition-duration:0.3s;}
+.article-bottom .btn-icon:hover{background-color:#e94740;color:#fff;text-decoration:none;border:1px solid #fa536f}
+.article-bottom .btn-print{background-position:10px -694px}
+.article-bottom .btn-print:hover{background-position:10px -774px}
+.article-bottom .btn-feedback{background-position:-159px -696px}
+.article-bottom .btn-feedback:hover{background-position:-159px -776px}
+.show_author{text-align:right;}
+/*吸顶广告css*/
+.com-fixed{position: fixed;top: 0;}
+.com-fixed-02{top:70px;}
+/*css 动画*/
+.imgS:hover {
+    -webkit-transition: -webkit-transform 0.3s ease;
+    -moz-transition: -moz-transform 0.3s ease;
+    -ms-transition: -ms-transform 0.3s ease;
+    transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+}
+.ani{
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+.infinite { animation-iteration-count: infinite !important }
+.scaleIns { animation-name: scaleIns }
+@keyframes scaleIns {0%{transform: scale(1); opacity: 0; } 50%{transform: scale(1.2); opacity: 1; } 100%{transform: scale(1); opacity: 1; } }
+.scaleDes { animation-name: scaleDes }
+@keyframes scaleDes {0%{transform: scale(1); opacity: 0; } 50%{transform: scale(0.8); opacity: 1; } 100%{transform: scale(1); opacity: 1; } }
+.bounceFromTop { animation-name: bounceFromTop } @keyframes bounceFromTop {0%, 25%, 55%, 85%, 100% {animation-timing-function: ease-out; transform: translate3d(0, 0, 0); } 41%, 44% {animation-timing-function: ease-in; transform: translate3d(0, -8px, 0) scale3d(1, 1.2, 1); } 70% {animation-timing-function: ease-in; transform: translate3d(0, -2px, 0); } 90% { transform: translate3d(0, -1px, 0) } }
+.flipY { animation-name: flipY; }
+@keyframes flipY {
+    from {
+        transform: perspective(600px) rotateY(-180deg);
+        opacity: 0;
+    }
+    to { transform: perspective(600px) rotateY(-360deg) }
+}
+.fadeInTop { animation-name: fadeInTop }
+@keyframes fadeInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to { opacity: 1 }
+}
+
+.fadeInBottom { animation-name: fadeInBottom }
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to { opacity: 1 }
+}
+.fadeOutTop { animation-name: fadeOutTop }
+@keyframes fadeOutTop {
+    from { opacity: 1 }
+    to {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+.fadeOutBottom { animation-name: fadeOutBottom }
+@keyframes fadeOutBottom {
+    from { opacity: 1 }
+    to {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+/*loading logo*/
+.loadinglogo{ animation: loadinglogo infinite 1.5s ease-in-out }
+@keyframes loadinglogo {
+    50% { transform: translateY(15px) }
+}
+.loading-logo{background-image: url(//n.sinaimg.cn/finance/page/ent/images/sinaLogo1x.png);background-image: -webkit-image-set(url(//n.sinaimg.cn/finance/page/ent/images/sinaLogo1x.png) 1x,url(//n.sinaimg.cn/finance/page/ent/images/sinaLogo2x.png) 2x);background-repeat: no-repeat;margin: 0 auto;width: 80px;margin-top: 30px;padding-top:36px;font-size:14px;color:#333;background-position:center 0;text-align:center;}
+@keyframes pulse {from {transform: scale3d(1, 1, 1); opacity: 0.3;} 50% {transform: scale3d(1.3, 1.3, 1.3);opacity: 1; } to {transform: scale3d(1, 1, 1); opacity: 0.3;} }
+.pulse {
+    animation-name: pulse;animation-duration: 1.2s;
+}
+/*css 动画 end */
+/*右侧浮层*/
+.page-right-bar{position: fixed;width: 65px;bottom: 250px;left: 50%;margin-left: 630px;}
+.right-bar-btn{display: block;width: 65px;height: 65px;background: url(http://i3.sinaimg.cn/qc/2017/1107/tool_icons02.png) 0 0 no-repeat;text-indent: -999em;margin-bottom: 12px;}
+.right-bar-btn.btn-home{background-position: 0 0;position: relative;}
+.right-bar-btn.btn-home:hover{background-position: -65px 0;}
+.right-bar-btn.btn-related{background-position: 0 -77px;}
+.right-bar-btn.btn-related:hover{background-position: -65px -77px;}
+.right-bar-btn.btn-survey{background-position: 0 -154px;}
+.right-bar-btn.btn-survey:hover{background-position: -65px -154px;}
+.right-bar-btn.btn-toTop{background-position: 0 -231px;}
+.right-bar-btn.btn-toTop:hover{background-position: -65px -231px;}
+.btn-home i{display: block;width: 6px;height: 6px;border-radius: 50%;position: absolute;top: 10px;right: 20px;line-height: 0px;font-size: 0px;background: #e94740;}
+.page-right-bar .fadeOut{opacity: 0;}
+/*调查居中*/
+.servey_content_body{width:640px;margin:0 auto;}
+/*微博列表样式兼容*/
+.weibo-list .weibo-list-meta .weibo-list-meta-r{display:none!important;}
+.weibo-list .weibo-list-source{display:none!important;}
+
+.global-head .wrap{width:1240px;}
+/*1000px*/
+@media screen and (min-width:768px) and (max-width:1480px){
+    .sina-header-inner{width:1000px}
+    .global-head .wrap{width:1000px;}
+    .top-bar-inner{width: 1000px;}
+    .main-content{width:1000px}
+    .article-content-left{width:640px}
+    .top-banner .tb-right{display: none;}
+    .article-content-left .top-ad{width: 640px;}
+    .page-right-bar{margin-left: 420px;}
+    .right-bar-btn.btn-home{background-position: -130px 0;}
+    .right-bar-btn.btn-home:hover{background-position: -195px 0;}
+    .right-bar-btn.btn-related{background-position: -130px -77px;}
+    .right-bar-btn.btn-related:hover{background-position: -195px -77px;}
+    .right-bar-btn.btn-survey{background-position: -130px -154px;}
+    .right-bar-btn.btn-survey:hover{background-position: -195px -154px;}
+    .right-bar-btn.btn-toTop{background-position: -130px -231px;}
+    .right-bar-btn.btn-toTop:hover{background-position: -195px -231px;}
+
+    .top-bar-inner .second-title{font-size: 18px;width: 400px;}
+}
+/* 左侧首屏css end */

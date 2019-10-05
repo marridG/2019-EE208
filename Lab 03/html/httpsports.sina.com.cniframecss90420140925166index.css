@@ -1,0 +1,378 @@
+@charset "gb2312";
+html,body,h1,h2,h3,h4,h5,h6,p,blockquote,ul,li,input,dl,dt,dd{margin:0;padding:0;}
+html,body{color:#333;}
+ul,li{list-style:none outside;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+label,input,select,img{vertical-align:middle;background:none;border:none;outline:none;margin:0;padding:0;}
+input:focus,input:active{border:none;outline:none;}
+a{text-decoration:none;}
+cite,code,i,em{font-style:normal;}
+html,body{font-size:12px;font-family:"Microsoft YaHei","微软雅黑","SimSun","宋体","Arial";}
+img{vertical-align:bottom;border:none;}
+
+a{outline:none;}
+a,a:link,a:visited{text-decoration:none;color:#333;}
+a:hover,a:active,a:focus{text-decoration:none;color:#228fdd;}
+
+.clearfix{zoom:1;}
+.clearfix:after{display:block;content:'.';clear:both;height:0;font-size:0;line-height:0;overflow:hidden;}
+
+.wrap{position:relative;width:1000px;margin:0 auto;}
+
+/* 内外边距值 */
+.mrg_r_5{margin-right:5px;}
+.mrg_b_30{margin-bottom:30px;}
+.mrg_b_10{margin-bottom:10px;}
+.mrg_b_20{margin-bottom:20px;}
+.mrg_b_25{margin-bottom:25px;}
+.mrg_r_8{margin-right:8px;}
+
+.main_wrapper{width:100%;padding:61px 0 30px;background-color:#f3f5f7;background-repeat:no-repeat;background-position:center 61px;}
+.main_wrapper_0{background-image:url(http://i1.sinaimg.cn/ty/2014_premierleague/bg0.jpg);}
+.main_wrapper_1{background-image:url(http://i2.sinaimg.cn/ty/2014_premierleague/bg1.jpg);}
+.main_wrapper_2{background-image:url(http://i3.sinaimg.cn/ty/2014_premierleague/bg2.jpg);}
+/* 导航 begin */
+.navs{width:100%;height:83px;}
+.nav_lt_wrap{position:relative;float:left;z-index:1000;}
+.nav_lt{float:left;}
+.nav_rt{float:right;}
+.nav_lt a,.nav_rt a,.nav_lt a:visited,.nav_rt a:visited{float:left;line-height:83px;font-size:24px;text-align:center;color:#333;}
+.nav_lt a:hover,.nav_rt a:hover,.nav_lt a:active,.nav_rt a:active,.nav_lt a:focus,.nav_rt a:focus,.nav_lt a.team_hvr{color:#546285;}
+.nav_lt a{width:90px;}
+.nav_rt a{width:90px;}
+.nav_lt a.team{position:relative;z-index:10;}
+.arr{position:absolute;width:8px;height:4px;background:url(http://i0.sinaimg.cn/ty/2014_premierleague/icons.png) no-repeat 0 -156px;font-size:0;-webkit-transition:all 200ms;-moz-transition:all 200ms;transition:all 200ms;}
+.nav_lt a.team .arr{right:8px;top:40px;}
+.nav_lt a.team_hvr .arr,.nav_lt a.team:hover .arr,.nav_lt a.team:active .arr,.nav_lt a.team:focus .arr{background-position:0 -162px;}
+
+.team_list{z-index:2000;width:1000px;margin:0 auto;overflow:hidden;zoom:1;background:#fff;}
+.team_list a{float:left;width:100px;line-height:26px;padding:10px 0;cursor:pointer;background:#fff;}
+.team_list a i{vertical-align:middle;display:inline-block;width:26px;height:26px;margin:0 5px;background:url(http://i3.sinaimg.cn/ty/2014_premierleague/team_small_icon.png) no-repeat;}
+.team_list a i.tmicon_1{background-position:0 0;} /* 曼联 */
+.team_list a i.tmicon_2{background-position:0 -26px;} /* 切尔西 */
+.team_list a i.tmicon_3{background-position:0 -52px;} /* 阿森纳 */
+.team_list a i.tmicon_4{background-position:0 -78px;} /* 曼城 */
+.team_list a i.tmicon_5{background-position:0 -104px;} /* 利物浦 */
+.team_list a i.tmicon_6{background-position:0 -130px;} /* 热刺 */
+.team_list a i.tmicon_7{background-position:0 -156px;} /* 埃弗顿 */
+.team_list a i.tmicon_8{background-position:0 -182px;} /* 南安普敦 */
+.team_list a i.tmicon_9{background-position:0 -208px;} /* 纽卡斯尔 */
+.team_list a i.tmicon_10{background-position:0 -234px;} /* 斯托克城 */
+.team_list a i.tmicon_11{background-position:0 -260px;} /* 西汉姆联 */
+.team_list a i.tmicon_12{background-position:0 -286px;} /* 胡尔城 */
+.team_list a i.tmicon_13{background-position:0 -312px;} /* 阿斯顿维拉 */
+.team_list a i.tmicon_14{background-position:0 -338px;} /* 斯旺西 */
+.team_list a i.tmicon_15{background-position:0 -364px;} /* 西布罗姆维奇 */
+.team_list a i.tmicon_16{background-position:0 -390px;} /* 皇家巡游者 */
+.team_list a i.tmicon_17{background-position:0 -416px;} /* 桑德兰 */
+.team_list a i.tmicon_18{background-position:0 -442px;} /* 水晶宫 */
+.team_list a i.tmicon_19{background-position:0 -468px;} /* 莱斯特 */
+.team_list a i.tmicon_20{background-position:0 -494px;} /* 伯恩利 */
+.team_list a span{vertical-align:middle;display:inline-block;width:60px;font-size:12px;color:#5d5d5d;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;-o-text-overflow:ellipsis;}
+.team_list a:hover span,.team_list a:active span，.team_list a:focus span{color:#3a679e;}
+
+.team_list_1{display:none;position:absolute;left:0;top:63px;z-index:2000;width:1000px;overflow:hidden;zoom:1;background:#fff;border-top:1px solid #d4dee6;border-left:1px solid #d4dee6;
+-webkit-box-shadow:1px 2px 1px rgba(0,0,0,0.2),-1px 1px 1px rgba(0,0,0,0.2);-moz-box-shadow:1px 2px 1px rgba(0,0,0,0.2),-1px 1px 1px rgba(0,0,0,0.2);box-shadow:1px 2px 1px rgba(0,0,0,0.2),-1px 1px 1px rgba(0,0,0,0.2);}
+.team_list_1 a{float:left;width:99px;border:1px solid #d4dee6;padding-top:10px;border-width:0 1px 1px 0;cursor:pointer;background:#fff;}
+.team_list_1 a i{display:block;width:50px;height:50px;margin:0 auto;background:url(http://i3.sinaimg.cn/ty/2014_premierleague/team_icon.png) no-repeat;}
+.team_list_1 a i.tmicon_1{background-position:0 0;} /* 曼联 */
+.team_list_1 a i.tmicon_2{background-position:0 -80px;} /* 切尔西 */
+.team_list_1 a i.tmicon_3{background-position:0 -160px;} /* 阿森纳 */
+.team_list_1 a i.tmicon_4{background-position:0 -240px;} /* 曼城 */
+.team_list_1 a i.tmicon_5{background-position:0 -320px;} /* 利物浦 */
+.team_list_1 a i.tmicon_6{background-position:0 -400px;} /* 热刺 */
+.team_list_1 a i.tmicon_7{background-position:0 -480px;} /* 埃弗顿 */
+.team_list_1 a i.tmicon_8{background-position:0 -560px;} /* 南安普敦 */
+.team_list_1 a i.tmicon_9{background-position:0 -640px;} /* 纽卡斯尔 */
+.team_list_1 a i.tmicon_10{border-right:0;background-position:0 -720px;} /* 斯托克城 */
+.team_list_1 a i.tmicon_11{background-position:0 -800px;} /* 西汉姆联 */
+.team_list_1 a i.tmicon_12{background-position:0 -880px;} /* 胡尔城 */
+.team_list_1 a i.tmicon_13{background-position:0 -960px;} /* 阿斯顿维拉 */
+.team_list_1 a i.tmicon_14{background-position:0 -1040px;} /* 斯旺西 */
+.team_list_1 a i.tmicon_15{background-position:0 -1120px;} /* 西布罗姆维奇 */
+.team_list_1 a i.tmicon_16{background-position:0 -1200px;} /* 皇家巡游者 */
+.team_list_1 a i.tmicon_17{background-position:0 -1280px;} /* 桑德兰 */
+.team_list_1 a i.tmicon_18{background-position:0 -1360px;} /* 水晶宫 */
+.team_list_1 a i.tmicon_19{background-position:0 -1440px;} /* 莱斯特 */
+.team_list_1 a i.tmicon_20{border-right:0;background-position:0 -1520px;} /* 伯恩利 */
+.team_list_1 a span{cursor:pointer;display:block;width:100%;line-height:32px;font-size:12px;color:#5d5d5d;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;-o-text-overflow:ellipsis;text-align:center;}
+.team_list_1 a:hover span,.team_list a:active span，.team_list a:focus span{color:#4771b6;}
+
+/* 导航 end */
+/* 赛程 begin */
+.contest{margin-bottom:30px;border-right:1px solid #d4dee6;border-bottom:1px solid #d4dee6;background:#fafafa;}
+.contest_list li{float:left;width:79px;padding:6px 10px;border-left:1px solid #d4dee6;border-top-width:2px;border-top-style:solid;font-size:14px;}
+.contest_list li.cst_over{border-top-color:#5d5d5d;}
+.contest_list li.cst_on{border-top-color:#f54258;}
+.contest_list li.cst_will{border-top-color:#546285;}
+.contest_list li.cst_last{width:78px;}
+.contest_list li p{line-height:16px;padding:4px 0;white-space: nowrap;overflow: hidden;}
+.cst_time{font-family:"Arial";font-size:14px;color:#5d5d5d;}
+.contest_list li p.cst_link{height:16px;overflow:hidden;}
+.cst_team{display:block;cursor:pointer;}
+.cst_team p{overflow:hidden;zoom:1;}
+.cst_team p span{float:left;width:65px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;color:#546285 !important;}
+.cst_team p em{float:right;color:#5d5d5d !important;font-family:"Arial";}
+.cst_link a,.cst_link a:visited{font-size:12px;color:#5d5d5d;}
+.cst_link a:hover,.cst_link a:active,.cst_link a:focus{color:#175c98;}
+.contest_list li.cst_over .cst_time{color:#999;}
+.contest_list li.cst_on .cst_team span{color:#175c98;}
+/* 赛程 end */
+.cont_sec{}
+.sec_left{float:left;width:660px;}
+.sec_right{float:right;width:300px;}
+/* 焦点图 begin */
+.contBox{overflow:hidden;zoom:1;}
+.mod-focus-img{z-index:100;overflow:hidden;zoom:1;position:relative;width:660px;height:405px;margin-bottom:30px;}
+.slide_box{position:relative;width:660px;height:405px;}
+.banner_list{position:absolute;left:0;top:0;overflow:hidden;zoom:1;width:3300px;height:405px;}
+.banner_list .item{float:left;width:660px;}
+.banner_list .item h3{height:30px;line-height:30px;margin-bottom:15px;text-indent:2em;}
+.banner_list .item h3 a{color:#25366e;font-size:24px;font-weight:bold;}
+.banner_list .item h3 a:visited{color:#546285;}
+.banner_list .item h3 a:hover,.banner_list .item h3 a:active,.banner_list .item h3 a:focus{color:#f54258;}
+.banner_img{position:relative;}
+.banner_dots{position:absolute;right:10px;bottom:10px;}
+.banner_dots li{position:relative;width:56px;height:56px;border:2px solid #cdcece;margin-top:10px;background:#fff;-webkit-border-radius:30px;-moz-border-radius:30px;border-radius:30px;cursor:pointer;}
+.banner_dots li i{display:none;position:absolute;left:-10px;top:25px;width:0;height:0;border:5px solid #fff;border-color:transparent #fff transparent transparent;_border-color:tomato #fff tomato tomato;_filter:chroma(color=tomato);font-size:0;}
+.banner_dots li.current{border-color:#fff;}
+.banner_dots li.current i{display:block;}
+.banner_dots li img{-webkit-border-radius:28px;-moz-border-radius:28px;border-radius:28px;}
+.ico-play-d{background: url("http://i1.sinaimg.cn/ty/2014_premierleague/btn_play.png") no-repeat;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=scale, src='http://i1.sinaimg.cn/ty/2014_premierleague/btn_play.png');_background:none;cursor:pointer;display:block;width:69px;height:69px;text-indent:-9999em;overflow:hidden;zoom:1;position:absolute;bottom:50px;left:50px;}
+.ico-play-d:hover{background:url("http://i0.sinaimg.cn/ty/2014_premierleague/btn_play_hover.png") no-repeat;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=scale, src='http://i0.sinaimg.cn/ty/2014_premierleague/btn_play_hover.png');_background:none;}
+
+.mod-focus-player{position:absolute;left:0;bottom:0;width:660px;height:360px;background:#eee;z-index:1000;display:none;}
+
+.mod-focus-img .close{position: absolute;top:0;right:0;z-index:99999;}
+.mod-focus-img .close, .mod-focus-img .close:link,.mod-focus-img .close:visited{display:block;text-indent: -9999em;width: 24px;height: 23px;cursor: pointer;margin-right:2px;background: url(http://i1.sinaimg.cn/ty/2014_premierleague/focus_close.png) no-repeat;}
+.mod-focus-img .close:hover{opacity: 0.7;-moz-opacity: 0.7;filter:alpha(opacity=70);}
+
+.mod-focus-img .close, .mod-focus-img .close:link,.mod-focus-img .close:visited{display:block;text-indent: -9999em;width: 24px;height: 23px;cursor: pointer;margin-right:2px;background: url(http://i1.sinaimg.cn/ty/2014_premierleague/focus_close.png) no-repeat;}
+.mod-focus-img .close:hover{opacity: 0.7;-moz-opacity: 0.7;filter:alpha(opacity=70);}
+/* 焦点图 end */
+/* 精彩视频 begin */
+.sec_blk{}
+.sec_blk .sec_blk_top{position:relative;margin-bottom:15px;}
+.sec_blk_more,.sec_blk_more:visited{position:absolute;right:0;top:5px;padding-left:20px;font-size:16px;background:url(http://i0.sinaimg.cn/ty/2014_premierleague/plus.png) no-repeat left center;color:#5d5d5d;}
+.sec_blk_more:hover,.sec_blk_more:active,.sec_blk_more:focus{color:#3a679e;background-image:url(http://i0.sinaimg.cn/ty/2014_premierleague/plus_on.png);}
+.sec_blk_title,.sec_blk_title:visited,.sec_blk_title:hover,.sec_blk_title:active,.sec_blk_title:focus{height:30px;line-height:30px;font-size:24px;color:#000;}
+.wond_list li{height:24px;margin-bottom:8px;width:300px;overflow:hidden;}
+.wond_list a{display:inline-block;line-height:24px;padding-left:28px;background:url(http://i3.sinaimg.cn/ty/2014_premierleague/video_icon.png) no-repeat left center;font-size:14px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;color:#000;}
+.wond_list a:visited{color:#5d5d5d;}
+.wond_list a:hover,.wond_list a:active,.wond_list a:focus{color:#3a679e;}
+.vd_blk{position:relative;width:300px;height:200px;}
+.vd_blk a{display:block;width:300px;height:200px;}
+.vd_play{position:absolute;left:15px;bottom:40px;width:40px;height:40px;background:url(http://i0.sinaimg.cn/ty/2014_premierleague/icons.png) no-repeat 0 -1px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=scale, src='http://i0.sinaimg.cn/ty/2014_premierleague/icons.png');_background:none;}
+.vd_blk a:hover .vd_play,.vd_blk a:active .vd_play,.vd_blk a:focus .vd_play{background-position:0 -43px;}
+.vd_blk a:hover .vd_title,.vd_blk a:active .vd_title,.vd_blk a:focus .vd_title{text-decoration:none;color:#fff;}
+/* 精彩视频 end */
+/* 榜单区块 begin */
+.ranking{margin-bottom:20px;}
+.rk_tabs{margin-bottom:15px;}
+.rk_tabs span{cursor:pointer;margin-right:20px;font-size:24px;color:#5d5d5d;}
+.rk_tabs span.rk_tabs_on{color:#000;}
+.rk_cont{position:relative;background:#fff;}
+.scorer_rank{display:none;}
+.rk_arr{position:absolute;top:-20px;width:0;height:0;border:10px solid #d9dde5;border-color:transparent transparent #d9dde5;_border-color:tomato tomato #d9dde5;_filter:chroma(color=tomato);font-size:0;}
+.jf_rank .rk_arr{left:25px;}
+.scorer_rank .rk_arr{left:118px;}
+.rk_list{border-top:1px solid #d9dde5;text-align:center;font-size:14px;}
+.rk_list ul{display:none;}
+.rk_list ul.rk_list_show{display:block;}
+.rk_list li{overflow:hidden;zoom:1;height:45px;line-height:45px;color:#000;}
+.rk_list li.rk_list_title{height:35px;line-height:35px;color:#5d5d5d;}
+.rk_list li label,.rk_list li span{float:left;}
+.rk_order{width:55px;padding-left:1px;border-left:1px solid #d9dde5;}
+.jf_team{width:130px;}
+.jf_count{width:56px;}
+.sc_team{width:186px;color:#d4dee6;}
+.sc_team em{color:#5d5d5d;}
+.rk_result{width:56px;border-right:1px solid #d9dde5;}
+.rk_list li span.jf_team a{color:#546285;}
+.rk_list li.hvr span.jf_team a{color:#546285;}
+.rk_list li span.jf_team img{vertical-align:middle;width:26px;height:26px;margin-right:9px;}
+.rk_list li span.rk_order,.rk_list li span.jf_count,.rk_list li span.rk_result{color:#000;font-family:"Arial";font-size:16px;}
+.rk_list li.hvr{background:#edf1f5;}
+.rk_list li.hvr .rk_order{border-left:2px solid #546285;padding-left:0;color:#546285;}
+.rk_list li span.sc_team a{color:#546285;}
+.rk_list li span.jf_team a:visited,.rk_list li span.sc_team a:visited{color:#546285;}
+.rk_list li span.jf_team a:hover,.rk_list li span.jf_team a:focus,.rk_list li span.sc_team a:hover,.rk_list li span.sc_team a:focus{color:#f54258;}
+.rk_more{display:block;height:35px;border:1px solid #d4dee6;border-width:0 1px 1px;text-align:center;background:#f9f5e5;}
+.rk_more i{display:inline-block;vertical-align:middle;width:12px;height:12px;margin-right:8px;background:url(http://i0.sinaimg.cn/ty/2014_premierleague/plus.png) no-repeat;font-size:0;}
+.rk_more span{display:inline-block;vertical-align:middle;line-height:35px;color:#5d5d5d;}
+.rk_more:hover i,.rk_more:active i,.rk_more:focus i{background-image:url(http://i0.sinaimg.cn/ty/2014_premierleague/plus_on.png);}
+.rk_more:hover span,.rk_more:active span,.rk_more:focus span{color:#546285;}
+/* 榜单区块 end */
+/* 深度阅读 begin */
+.article_blk a{display:block;}
+.article_title,.article_blk a:visited .article_title{overflow:hidden;line-height:35px;text-align:center;font-size:14px;color:#000;text-overflow:ellipsis;-o-text-overflow:ellipsis;white-space:nowrap;}
+.article_blk a:hover .article_title,.article_blk a:focus .article_title,.article_blk a:active .article_title{color:#4771b6;}
+/* 深度阅读 end */
+/* 博客评论 begin */
+.blog_blk{position:relative;margin-bottom:25px;}
+.blog_blk a{display:block;width:300px;height:150px;position:relative;}
+.vd_title{position:absolute;left:0;bottom:0;width:280px;height:30px;line-height:30px;padding:0 10px;color:#e4e4e4;font-size:14px;background:rgba(0,0,0,0.5);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#55000000',endColorstr='#55000000')\9;}
+.blog_blk a:hover .vd_title,.blog_blk a:active .vd_title,.blog_blk a:focus .vd_title{text-decoration:none;color:#fff;}
+.cmt_blk{_overflow:hidden;margin:0 0 40px 4px;border-left:1px solid #d9dde5;}
+/* 评论1-6条单独样式 begin */
+.cmt_blk_1{height:0px;}
+.cmt_blk_2{height:30px;}
+.cmt_blk_3{height:60px;}
+.cmt_blk_4{height:90px;}
+.cmt_blk_5{height:120px;}
+.cmt_blk_6{height:150px;}
+/* 评论1-6条单独样式 end */
+.cmt_blk ul{position:relative;left:-4px;top:-15px;}
+.cmt_blk li{height:30px;line-height:30px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;}
+.cmt_blk li a{padding-left:20px;background:url(http://i3.sinaimg.cn/ty/2014_premierleague/dot.png) no-repeat left center;color:#000;font-size:14px;}
+.cmt_blk li a:visited{color:#5e5e5e;}
+.cmt_blk li a:hover,.cmt_blk li a:active,.cmt_blk li a:focus{color:#3a679e;}
+/* 博客评论 end */
+
+/* 比赛区块 begin */
+.match_blk{margin-bottom:30px;border:1px solid #d9dde5;background:#fff;}
+.match_blk_lt{float:left;width:169px;padding-left:9px;border-right:1px solid #d9dde5;background:#edf0f5;}
+.match_status{height:30px;margin:15px 0 10px;}
+.match_status i{visibility:hidden;display:inline-block;vertical-align:middle;width:21px;height:20px;margin-right:10px;background:url(http://i0.sinaimg.cn/ty/2014_premierleague/icons.png) no-repeat;}
+.match_over i{visibility:visible;background-position:0 -85px;}
+.match_on i{visibility:visible;background-position:0 -108px;}
+.match_will i{visibility:visible;background-position:0 -131px;}
+.match_status label{display:inline-block;vertical-align:middle;line-height:30px;font-size:20px;font-weight:bold;color:#5d5d5d;}
+.match_on label{color:#f54258;}
+.match_info{margin-bottom:25px;font-size:14px;color:#5d5d5d;}
+.match_time{margin-right:3px;font-family:"Arial";}
+.match_name{font-family:"宋体";}
+.match_teams{overflow:hidden;zoom:1;}
+.match_team{float:left;width:75px;text-align:center;}
+.match_team img{width:50px;height:50px;}
+.mt_team_name{cursor:default;overflow:hidden;width:75px;line-height:40px;font-size:14px;color:#546285;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;}
+.mt_team_score{cursor:default;line-height:50px;margin-bottom:10px;font-size:48px;font-weight:bold;font-family:"Arial";}
+.mt_team_score_red{color:#f46374;}
+.mt_team_score_gray{color:#5d5d5d;}
+.match_links{width:160px;margin-bottom:20px;text-align:center;}
+.match_links a,.match_links a:visited{display:inline-block;vertical-align:middle;height:24px;line-height:24px;margin-right:1px;padding:0 6px;background:#546285;color:#fff;}
+.match_links a:hover,.match_links a:active,.match_links a:focus{background:#637090;}
+.match_links a.live{font-size:13px;}
+.match_list{}
+.match_list li{width:158px;height:30px;line-height:30px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;font-size:14px;}
+.match_list li a{color:#333 !important;}
+.match_blk_rt{margin-left:200px;}
+.match_blk_rt a:visited{color:#5d5d5d;}
+.match_blk_rt a:hover,.match_blk_rt a:active,.match_blk_rt a:focus{color:#4771b6;}
+.match_rt_title{height:30px;line-height:30px;margin:12px 0 10px;font-size:20px;}
+.match_rt_title a{color:#25366e;}
+.match_rt_title a:visited,.match_rt_sub_title a:visited{color:#546285;}
+.match_rt_title a:hover,.match_rt_title a:active,.match_rt_title a:focus,.match_rt_sub_title a:hover,.match_rt_sub_title a:active,.match_rt_sub_title a:focus{color:#f54258;}
+.vd_link_b{padding-left:40px;background:url(http://i0.sinaimg.cn/ty/2014_premierleague/video_icon1.png) no-repeat left center;}
+.img_link_b{padding-left:33px;background:url(http://i1.sinaimg.cn/ty/2014_premierleague/img_icon.png) no-repeat left center;}
+.match_rt_sub_title{height:24px;line-height:24px;margin-bottom:20px;font-size:14px;color:#d9dde5;}
+.match_rt_sub_title a{color:#25366e;}
+.title_blue a{color:#25366e;}
+.vd_link{padding-left:28px;background:url(http://i3.sinaimg.cn/ty/2014_premierleague/video_icon.png) no-repeat left center;}
+.match_news_list li{overflow:hidden;height:33px;line-height:33px;padding-left:9px;font-size:16px;background:url(http://i0.sinaimg.cn/ty/2014_premierleague/dot1.png) no-repeat left center;}
+.match_news_list li a{color:#000;}
+.match_news_list li a.match_list_more{margin-left:8px;padding:0 2px;border:1px solid #d4dee6;font-size:12px;color:#5d5d5d;background:#fff;}
+.match_news_list a.match_list_more:visited,.match_news_list a.match_list_more:hover,.match_news_list a.match_list_more:active,.match_news_list a.match_list_more:focus{color:#546285;}
+.mt_ad{margin:0 0 5px -10px;}
+/* 比赛区块 end */
+
+/* 广告区块 begin */
+.w_ad{margin-bottom:20px;}
+/* 广告区块 end */
+
+/* 投票调查 begin */
+.survey_sec_title{margin-bottom:8px;padding-left:20px;background:url(http://i2.sinaimg.cn/ty/2014_premierleague/survey_icon.png) no-repeat left center;font-size:14px;}
+.ans_list{margin:0 0 10px 22px;}
+.ans_list li input,.ans_list li label{display:inline-block;vertical-align:middle;}
+.ans_list li input{margin-right:10px;}
+.ans_list li label{line-height:28px;font-size:14px;}
+.oprt_btns{margin-left:22px;}
+.oprt_btn,a.oprt_btn{cursor:pointer;display:inline-block;vertical-align:middle;width:60px;height:21px;line-height:21px;border-radius:2px;background:#f29149;text-align:center;color:#fff;}
+.oprt_btn:hover,.oprt_btn:active,.oprt_btn:focus,.oprt_btn_hvr{border:1px solid #e3e3e3;background:#fff;color:#f29149;}
+.cmt_btn{width:58px;margin-right:10px;}
+.check_rst{width:61px;}
+a.check_rst:hover,a.check_rst:active,a.check_rst:focus{width:59px;height:19px;line-height:19px;}
+/* 投票调查 end */
+
+/* 日历 begin */
+.dv_date a:visited{color:#3a679e;}
+.dv_date a:hover,.sinaCal .selected{background-image:url(http://i3.sinaimg.cn/ty/2014_premierleague/sinaCal.png);color:#3a679e !important;}
+.sinaCal .preMonth,.sinaCal .nextMonth{background-image:url(http://i3.sinaimg.cn/ty/2014_premierleague/small_arrow.png);}
+.sinaCal{width:300px;}
+.dvt_cont select{padding:2px 5px;}
+.sinaCal .dv_title{border-bottom:1px solid #d9dde5;}
+.sinaCal .dv_day{width:294px;}
+.sinaCal .dv_day dd{width:42px;height:40px;line-height:40px;}
+.sinaCal td{width:42px;}
+.dv_date a{display:inline-block;width:32px;}
+/* 日历 end */
+
+/*footer部分*/
+.footer { text-align:center;padding:20px 0; border-top:solid 2px #c7c7c7; line-height:28px; color:#525356;}
+.footer a:link, .footer a:visited{color:#525356}
+.footer a:hover{color:#c00}
+
+/*feed流tab区块 begin*/
+.feed-card-tabs{height:90px;background:#fff;_height:46px;border-color:#d9dde5;}
+.feed-card-tab-firstTab, .feed-card-tab-tabContainer, .feed-card-tab-lastTab{height:90px;_height:47px;}
+.feed-card-tabs .feed-card-tab-tabi{padding:0 5px;}
+.feed-card-tabs .feed-card-tab-tabi[data-lid]{background:red;line-height:30px;padding:60px 12px 0 12px;border:1px solid #fff;border-width:0 1px;font-size:12px;background:url(http://i3.sinaimg.cn/ty/2014_premierleague/team_icon.png) no-repeat;overflow:hidden;text-overflow:ellipsis;-o-text-overflow:ellipsis;}
+.feed-card-tab-firstTab .feed-card-tab-tabi[data-lid]{border-left-width:0;padding:60px 8px 0 9px;}
+.feed-card-tabs .feed-card-tab-tabi-selected[data-lid]{border-bottom:0;color:#f54258;border-color:#d9dde5;}
+.feed-card-tabs .feed-card-tab-tabi[data-lid='489']{background-position:center -1590px;} /* 英超 */
+.feed-card-tabs .feed-card-tab-tabi[data-lid='490']{background-position:center 10px;} /* 曼联 */
+.feed-card-tabs .feed-card-tab-tabi[data-lid='491']{background-position:center -70px;} /* 切尔西 */
+.feed-card-tabs .feed-card-tab-tabi[data-lid='492']{background-position:center -150px;} /* 阿森纳 */
+.feed-card-tabs .feed-card-tab-tabi[data-lid='494']{background-position:center -230px;} /* 曼城 */
+.feed-card-tabs .feed-card-tab-tabi[data-lid='493']{background-position:center -310px;} /* 利物浦 */
+.feed-card-tabs .feed-card-tab-tabi[data-lid='495']{background-position:center -390px;} /* 热刺 */
+.feed-card-tabs .feed-card-tab-tabi[data-lid='504']{background-position:center -470px;} /* 埃弗顿 */
+.feed-card-tabs .feed-card-tab-tabi[data-lid='502']{background-position:center -550px;} /* 南安普敦 */
+.feed-card-tabs .feed-card-tab-tabi[data-lid='497']{background-position:center -630px;} /* 纽卡斯尔 */
+.feed-card-tabs .feed-card-tab-tabi[data-lid='500']{background-position:center -710px;} /* 斯托克城 */
+.feed-card-tabs .feed-card-tab-tabi[data-lid='498']{background-position:center -790px;} /* 西汉姆联 */
+.feed-card-tabs .feed-card-tab-tabi[data-lid='506']{background-position:center -870px;} /* 胡尔城 */
+.feed-card-tabs .feed-card-tab-tabi[data-lid='496']{background-position:center -950px;} /* 阿斯顿维拉 */
+.feed-card-tabs .feed-card-tab-tabi[data-lid='503']{background-position:center -1030px;} /* 斯旺西 */
+.feed-card-tabs .feed-card-tab-tabi[data-lid='499']{background-position:center -1110px;} /* 西布罗姆维奇 */
+.feed-card-tabs .feed-card-tab-tabi[data-lid='501']{background-position:center -1190px;} /* 皇家巡游者 */
+.feed-card-tabs .feed-card-tab-tabi[data-lid='505']{background-position:center -1270px;} /* 桑德兰 */
+.feed-card-tabs .feed-card-tab-tabi[data-lid='507']{background-position:center -1350px;} /* 水晶宫 */
+.feed-card-tabs .feed-card-tab-tabi[data-lid='509']{background-position:center -1430px;} /* 莱斯特 */
+.feed-card-tabs .feed-card-tab-tabi[data-lid='508']{background-position:center -1510px;} /* 伯恩利 */
+.feed-card-tab-more{*padding-bottom:12px;_padding-bottom:0;}
+.feed-card-tab-more span[data-lid]{width:67px;height:26px;padding:0 0 0 42px;margin:12px 0;line-height:26px;text-align:left;background:url(http://i3.sinaimg.cn/ty/2014_premierleague/team_small_icon.png) no-repeat;font-size:12px;}
+.feed-card-tab-more span[data-lid='490']{background-position:9px 0;} /* 曼联 */
+.feed-card-tab-more span[data-lid='491']{background-position:9px -26px;} /* 切尔西 */
+.feed-card-tab-more span[data-lid='492']{background-position:9px -52px;} /* 阿森纳 */
+.feed-card-tab-more span[data-lid='494']{background-position:9px -78px;} /* 曼城 */
+.feed-card-tab-more span[data-lid='493']{background-position:9px -104px;} /* 利物浦 */
+.feed-card-tab-more span[data-lid='495']{background-position:9px -130px;} /* 热刺 */
+.feed-card-tab-more span[data-lid='504']{background-position:9px -156px;} /* 埃弗顿 */
+.feed-card-tab-more span[data-lid='502']{background-position:9px -182px;} /* 南安普敦 */
+.feed-card-tab-more span[data-lid='497']{background-position:9px -208px;} /* 纽卡斯尔 */
+.feed-card-tab-more span[data-lid='500']{background-position:9px -234px;} /* 斯托克城 */
+.feed-card-tab-more span[data-lid='498']{background-position:9px -260px;} /* 西汉姆联 */
+.feed-card-tab-more span[data-lid='506']{background-position:9px -286px;} /* 胡尔城 */
+.feed-card-tab-more span[data-lid='496']{background-position:9px -312px;} /* 阿斯顿维拉 */
+.feed-card-tab-more span[data-lid='503']{background-position:9px -338px;} /* 斯旺西 */
+.feed-card-tab-more span[data-lid='499']{background-position:9px -364px;} /* 西布罗姆维奇 */
+.feed-card-tab-more span[data-lid='501']{background-position:9px -390px;} /* 皇家巡游者 */
+.feed-card-tab-more span[data-lid='505']{background-position:9px -416px;} /* 桑德兰 */
+.feed-card-tab-more span[data-lid='507']{background-position:9px -442px;} /* 水晶宫 */
+.feed-card-tab-more span[data-lid='509']{background-position:9px -468px;} /* 莱斯特 */
+.feed-card-tab-more span[data-lid='508']{background-position:9px -494px;} /* 伯恩利 */
+.feed-card-tab-more-trigger{width:9px;padding-left:0;_padding-left:10px;height:90px;_height:45px;line-height:0;font-size:0;border-left:1px solid #d9dde5;_border-left:0;}
+.feed-card-tab-more-trigger i{top:38px;_top:15px;right:7px;_right:10px;height:7px;_height:16px;font-size:0;background:url(http://i1.sinaimg.cn/ty/2014_premierleague/arr_1.png) no-repeat;_background:url("http://i1.sinaimg.cn/IT/deco/2014/0724/tabIcons2.png") no-repeat 0 -403px;}
+.feed-card-tab-more-trigger:hover i{background-position: 0 0;_background-position: 0 -503px;}
+.feed-card-tab-more-trigger-open i,.feed-card-tab-more-trigger-open:hover i{background-position: 0 -8px;_background-position: 0 -603px;}
+.feed-card-login-close, .feed-card-icon, .feed-card-list li, .feed-card-wb a{background-image:url(http://i2.sinaimg.cn/ty/2014_premierleague/commonIcons5.png);}
+.feed-card-page .pagebox_num_nonce{background:#546285;border-color:#546285;}
+.feed-card-page a{border-color:#d9dde5;background-color:#fff;}
+.feed-card-page a:hover{background-color:#fbfbfb;border-color:#eee0ba;color:#546285;}
+/*feed流tab区块 end*/
+.rk_more,
+.article_blk a,
+.blog_blk a,
+.vd_blk a{cursor:pointer;}
+.cmt_blk li a{display:block;}

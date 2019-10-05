@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content=""/>
+    <meta name="apple-touch-fullscreen" content="YES" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta http-equiv="x-rim-auto-match" content="none" />
+    <meta name="renderer" content="webkit" />
+    <link href="//proc1.erp.sina.com.cn/common/images/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <link type="text/css" rel="stylesheet" href="https://trade.xincai.com/protected/www/static/lib/css/style.css">
+    <link type="text/css" rel="stylesheet" href="https://trade.xincai.com/protected/www/static/lib/css/contest.css">
+    <script type="text/javascript" charset="utf-8" src="https://trade.xincai.com/protected/www/static/lib/js/lib.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="http://i.sso.sina.com.cn/js/ssologin.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://trade.xincai.com/protected/www/static/modules/public.js"></script>
+    <script type="text/javascript" charset="utf-8" src="https://trade.xincai.com/protected/www/static/modules/plugins.js"></script>
+    <script type="text/javascript" src="https://trade.xincai.com/protected/www/static/lib/js/echarts.js"></script>
+    <script type="text/javascript" src="//www.sinaimg.cn/cj/licaishi/js/Bridge/0.2.0/LcsBridge.js" charset="utf-8"></script>
+    <title>新浪实盘基金大赛</title>
+    <meta name="keywords" content="基金，基金组合，基金大赛，新浪仓石，仓石基金，新浪基金，新浪财经，新浪，新浪理财师，基金公司，券商，银行，投顾，基金经理，理财经理，客户经理，理财达人，比赛，调仓，收益，收益率，业绩，投资规模，基金产品，
+    P2P，金融从业，金融从业资格，基金开户，基金实盘，基金交易，基金买卖，基金理财，申购，赎回，私房宝，现金宝，货币基金，股票型基金，债券型基金，混合型基金，货币型基金，股票，A股，美股，期货，黄金，美股，ETF，LOF" />
+    <meta name="description" content="2016年首届新浪养基大赛于2016年9月26日正式开赛。大赛分为专业组和大众组，其中专业组需要有金融从业资质的用户方可报名参与，选手可来自基金公司，券商，银行等金融机构的从业人员，可以是投资顾问，理财经理，基金顾问，银行经理，客户经理。大众组参赛条件不限。大赛选手可参与不同风险偏好组别的评比，分别是激进组，平衡组，稳健组。选手创建基金投资组合，持仓保持在2支基金以上，购买系统中在销的公募基金产品，可以是股票型基金，债券型基金，混合型基金，货币型基金，指数基金，ETF连接基金。平台在售的基金公司包括：景顺长城，天弘，招商，南方，易方达，嘉实，博时，国泰，前海开源，中融，东兴证券，山西证券，中信建投，泓德，中加，华商，华泰，柏瑞，汇添富，信诚，中邮。公募基金作为一种资产配置产品，信息透明，运作规范，相对于 P2P、股票，外汇，期货等投资品种，风险收益预期更明确。新浪基金组合大赛将每月进行一次评选，从基金组合收益率，基金跟投人数，基金跟投金额等方面为用户进行评选。 最终的大赛评选，将会从收益，跟投人数，跟投金额，影响力等多个方面选出年度优秀的基金投资理财师，同时选出年度最受信赖的基金产品和最受信任的基金公司。获奖选手还将收获新浪独家颁发的基金大赛获奖荣誉证书，证明参赛的业绩成绩，有机会成为新浪理财师平台的签约理财师，更有机会成为新浪财经直播平台的签约网红，人气，名气，财气三丰收。" />
+    <script>
+        var TOTAL_VARS = {
+            API_DOMAIN : "http://fund.sina.com.cn/competition/2016/api/"
+        };
+        var USER_BIND_STATUS = {
+           wx_unionid : '',
+           s_uid : '',
+           is_bind_wb : '0',
+           is_wb_has_bind_wx : '0'
+        };
+    </script>
+    </head>
+    <body>
+        <div id="header-root" class="header">
+            <div class="top-nav">
+                <div class="container">
+                    <h2 class="left">
+                        <div class="icon app">
+                            <a href="http://finance.sina.com.cn/licaishi/web_landing.shtml" target="_blank"><span class="phone"></span><span class="txt">手机参赛</span></a>
+                            <div class="layer wx">
+                                <div class="l-inner">
+                                    <a href="http://finance.sina.com.cn/licaishi/web_landing.shtml" target="_blank"><img src="http://www.sinaimg.cn/cj/licaishi/image/qr_code/1446177221.png"></a>
+                                </div>
+                                <span>扫描下载理财师<br>手机客户端</span>
+                            </div>
+                        </div>
+                        <div class="tel">客服电话 010-60619607</div>
+                    </h2>
+                    <ul class="right">
+                        <li id="userItem" style="display: none;"></li>
+                        <li id="loginItem" style="display: none;"><a href="javascript:;" id="login_btn" class="a-red">[登录]</a></li>
+                        <li><a href="http://trade.xincai.com/web/promote/?from=fundcompetition" target="_blank">新浪仓石</a></li>
+                        <li><a href="http://licaishi.sina.com.cn/?from=fundcompetition" target="_blank" class="red">新浪理财师</a></li>
+                        <li><a href="http://finance.sina.com.cn/fund/?from=fundcompetition" target="_blank">新浪基金</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contest-header">
+                <div class="container">
+                    <a class="btn-menu" data-event="btnMenu" href="javascript:;"></a>
+                    <ul class="header-list">
+                                                <li class="active"><a href="/competition/2016/web/index">首页</a></li>
+                                                                        <li><a href="/competition/2016/web/rules">大赛规则</a></li>
+                                                                        <li><a href="/competition/2016/web/ranking">大赛榜单</a></li>
+                                                <li class="bar"><a href="/competition/2016/web/index?apply=1&draw=1" class="btn">报名</a></li>
+                                                <li><a href="/competition/2016/web/hot">热销基金</a></li>
+                                                                        <li><a href="/competition/2016/web/prize_page">每日抽奖</a></li>
+                                                                        <li><a href="/competition/2016/web/myCom">我的大赛</a></li>
+                                                <!--<li class="minShow"><a href="/competition/2016/web/invite">邀请好友</a></li>-->
+                        <li class="minShow  "><a href="/competition/2016/web/news">大赛动态</a></li>
+                        <li class="minShow" data-init="clientRemove" data-event="downClient"><a href="javascript:;">下载理财师APP</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--header end-->
+        <script>
+    var USER_STATUS = {
+            //是否是客户端打开
+            IS_CLIENT: '0',
+            //是否登录
+            IS_LOGIN : '0',
+            // G_TYPES:'1',//1:专业组 2：大众组
+            G_TYPES :'',//1:专业组 2：大众组
+            //参赛的状态
+            // '-4'=>array(-4,'未报名'),
+            // '-1'=>array(-1,'删除'),
+            // '-2'=>array(-2,'退赛'),
+            // '-3'=>array(-3,'报名失败'),
+            // '0'=>array(0,'申请'),
+            // '1'=>array(1,'审核中'),
+            // '2'=>array(2,'报名成功'),
+            COMPETITION : '-5',
+
+            //是否仓石开户
+            IS_OPEN_ACCOUNT : '0',
+
+            //是否理财师
+            IS_PLANNER : '0',
+            //是否可升级为专业组
+            CAN_UPDATE : '1',
+            //购买组合状态
+            JOIN_FLG : '0',
+            //组合id
+            COM_ID : ""
+    };
+</script>
+<script>
+
+    var WX_SHARE_DATA = {
+
+        timeline: {
+            title : '邀您偷看新浪基金牛人实盘大赛，分分钟学会选基金，每天还能抽iPhone 7！', // 分享描述
+            desc  : '邀您偷看新浪基金牛人实盘大赛，分分钟学会选基金，每天还能抽iPhone 7！', // 分享描述
+            link  : document.location.href,
+            imgUrl: 'http://n.sinaimg.cn/finance/90ce3a26/20160914/XiaoLangRen.png' // 分享图标
+        },
+
+        appMessage: {
+            title : '福利来啦，新浪送你基金理财秘笈！', // 分享标题
+            desc  : '邀您偷看基金牛人实盘大赛，分分钟学会选基金，每天还能抽iPhone 7！', // 分享描述
+            link  : document.location.href,
+            imgUrl: 'http://n.sinaimg.cn/finance/90ce3a26/20160914/XiaoLangRen.png' // 分享图标
+        }
+    };
+</script>
+<!--main content start-->
+<div class="contest-container">
+    <div class="contest-banner" style="background-image: url('https://trade.xincai.com/protected/www/static/lib/img/contest/hb_bg.jpg');">
+        <div class="contest-wrap" style="position: relative;">
+            <div class="competition-img">
+                <img src="https://trade.xincai.com/protected/www/static/lib/img/contest/hb_1.png" alt="">
+                <a class="btn btn-red" href="/competition/2016/web/myCom">查看比赛成绩</a>
+                <!---->
+                <!--<div class="btn btn-red" id="competition" data-event="competition">我要参赛</div>-->
+                <!---->
+            </div>
+            <div class="competition-video">
+                <div class="title">大赛动态<a href="/competition/2016/web/news" class="more">查看更多></a></div>
+                <div class="video-box">
+                    <a href="http://licaishi.sina.com.cn/view/591190?ind_id=2?from=fundcompetition" target="_blank"><img src="https://trade.xincai.com/protected/www/static/lib/img/contest/new.png" alt=""><span>新浪基金实盘赛圆满收官 聪明选组合轻松少赔多赚</span></a>
+                </div>
+                <!--<div class="video-box">-->
+                    <!--<div class="live-btn" style="background-image: url('http://n.sinaimg.cn/finance/c156141e/20160621/HuZhiWei.jpg')">-->
+                        <!--<i class="icon" data-event="livePlay"></i>-->
+                    <!--</div>-->
+                    <!--<div class="live-box" id="liveBox" data-liveid="87" data-title="新浪养基大赛" data-time="10月31日9时" data-link="http://client.xincai.com/">-->
+                    <!--</div>-->
+                <!--</div>-->
+                <div class="news-list">
+                    <ul>
+                        <li><a href="http://licaishi.sina.com.cn/view/575471?ind_id=2?from=fundcompetition" target="_blank">基金牛人乱市中稳中求进 4个月赚5.07%</a> <span>04.27</span></li>
+                        <li><a href="http://licaishi.sina.com.cn/view/575048?ind_id=2?from=fundcompetition" target="_blank">过去一年业绩非常好的基金经理 发新基金…</a> <span>04.26</span></li>
+                        <li><a href="http://licaishi.sina.com.cn/view/573456?ind_id=2?from=fundcompetition" target="_blank">如果做了这件事 过去半年你已赚到10.38…</a> <span>04.20</span></li>
+                        <li>
+                            <a href="http://www.gtfund.com/" target="_blank" class="bar red">国泰基金首席赞助大赛</a>
+                            <a href="http://www.phfund.com.cn" target="_blank" class="bar red">鹏华基金赞助基金大赛</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contest-pk">
+        <div class="contest-wrap">
+            <div class="contest-topic">
+                <div class="topic-box bg-white"><span>我和红人来PK</span></div>
+            </div>
+            <div class="box">
+                <div class="pk-modal">
+                                        <div class="info info_2">
+                        <div class="pk-h2">新浪首届全民养基大赛火热进行中</div>
+                        <div class="pk-h3">报名大赛，与红人同场PK、赢取万元奖金</div>
+                        <div class="group">
+                            <a href="javascript:;" data-event="signUp" data-sign="1" class="btn">报名专业组</a>
+                            <a href="javascript:;" data-event="signUp" data-sign="2" class="btn">报名大众组</a>
+                        </div>
+                    </div>
+                                    </div>
+                <div class="pk-chart" id="chartEarnWrap"></div>
+            </div>
+        </div>
+    </div>
+    <div class="contest-lists">
+        <div class="contest-wrap">
+            <div class="contest-rank">
+                <div class="contest-topic">
+                    <div class="topic-box bg-white"><span>大赛榜单</span></div>
+                </div>
+                <div class="rank-head">
+                    <div class="tab">
+                        <span class="active" data-event="rankHomeTab" data-type="0" data-code="0">总收益榜</span>
+                        <span data-event="rankHomeTab" data-type="1" data-code="1">总影响力榜</span>
+                        <span data-event="rankHomeTab" data-type="2">总稳健榜</span>
+                    </div>
+                    <span class="time">大赛截止日期：2017-06-15</span>
+                    <!--<a href="#" class="more">查看更多></a>-->
+                </div>
+                <div class="rank-wrap" id="rankHomeList"></div>
+            </div>
+
+            <div class="contest-lecai" id="lecai">
+                <div class="contest-topic">
+                    <div class="topic-box bg-white"><span>乐猜</span></div>
+                </div>
+                <div class="lecai-wrap">
+                    <div class="cai">
+                        <div class="caigroup" id="caiGroup">
+                            <span data-event="caibtn"></span>
+                            <span data-event="caibtn"></span>
+                        </div>
+                        <iframe id="iframepage" marginheight="0" marginwidth="0" scrolling="no" src="http://cai.sina.com.cn/view/pc/plugin.php?flag=2&id=1"></iframe>
+                    </div>
+                    <div class="recommend">
+                        <div class="title">推荐组合</div>
+                        <div class="box">
+                            <div class="item">
+                                <h3>
+                                    <a href="/competition/2016/web/Redirect2xincai?type=com&com_id=333">
+                                        老乐攻守平衡优选组合                                    </a>
+                                </h3>
+                                <p>运行天数：189天</p>
+                                <div class="earn">
+                                    <span>累计收益率</span>
+                                    <span class="num red">8.77%</span>
+                                </div>
+                                <div class="opt">
+                                    <a href="javascript:;"><img src="https://tva4.sinaimg.cn/crop.0.0.180.180.50/49e003a4jw1e8qgp5bmzyj2050050aa8.jpg?KID=imgbed,tva&Expires=1570288910&ssig=AUz3I0eqBU" alt="">&nbsp;裴毅</a>
+                                                                        <span>超人气红人</span>
+                                                                    </div>
+                            </div>
+                            <div class="item">
+                                <h3>
+                                    <a href="/competition/2016/web/Redirect2xincai?type=com&com_id=338">
+
+                                    天下大势                                    </a>
+                                </h3>
+                                <p>运行天数：190天</p>
+                                <div class="earn">
+                                    <span>累计收益率</span>
+                                    <span class="num green">-2.59%</span>
+                                </div>
+                                <div class="opt">
+                                    <a href="javascript:;"><img src="https://tvax1.sinaimg.cn/crop.0.0.512.512.50/754c3df1ly8g5ufic9ezsj20e80e8aab.jpg?KID=imgbed,tva&Expires=1570288910&ssig=eYuS1Znham" alt="">杨定果</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contest-ad">
+        <div class="contest-wrap">
+            <a href="http://www.gtfund.com/" target="_blank"><img src="https://trade.xincai.com/protected/www/static/lib/img/contest/guotai.jpg" alt=""></a>
+        </div>
+    </div>
+
+    <div class="contest-recommend">
+        <div class="contest-wrap">
+            <div class="contest-topic">
+                <div class="topic-box bg-gray"><span>基金公司组合</span></div>
+            </div>
+            <div class="box">
+                                <div class="cell">
+                    <div class="item">
+                        <h3><a href="/competition/2016/web/Redirect2xincai?type=com&com_id=410">国泰锐祥</a></h3>
+                        <p>运行天数：181天</p>
+                        <div class="earn">
+                            <span>累计收益率</span>
+                            <span class="num red">11.14%</span>
+                        </div>
+                        <div class="opt">
+                            <a href="javascript:;"><img src="http://trade.xincai.com/protected/www/static/lib/img/contest/ic_logo1.png" alt="">国泰基金</a>
+                        </div>
+                    </div>
+                </div>
+                                <div class="cell">
+                    <div class="item">
+                        <h3><a href="/competition/2016/web/Redirect2xincai?type=com&com_id=385">国泰创赢</a></h3>
+                        <p>运行天数：187天</p>
+                        <div class="earn">
+                            <span>累计收益率</span>
+                            <span class="num red">5.13%</span>
+                        </div>
+                        <div class="opt">
+                            <a href="javascript:;"><img src="http://trade.xincai.com/protected/www/static/lib/img/contest/ic_logo1.png" alt="">国泰基金</a>
+                        </div>
+                    </div>
+                </div>
+                                <div class="cell">
+                    <div class="item">
+                        <h3><a href="/competition/2016/web/Redirect2xincai?type=com&com_id=384">国泰创势</a></h3>
+                        <p>运行天数：187天</p>
+                        <div class="earn">
+                            <span>累计收益率</span>
+                            <span class="num red">4.33%</span>
+                        </div>
+                        <div class="opt">
+                            <a href="javascript:;"><img src="http://trade.xincai.com/protected/www/static/lib/img/contest/ic_logo1.png" alt="">国泰基金</a>
+                        </div>
+                    </div>
+                </div>
+                                <div class="cell">
+                    <div class="item">
+                        <h3><a href="/competition/2016/web/Redirect2xincai?type=com&com_id=383">国泰锐利</a></h3>
+                        <p>运行天数：186天</p>
+                        <div class="earn">
+                            <span>累计收益率</span>
+                            <span class="num red">4.12%</span>
+                        </div>
+                        <div class="opt">
+                            <a href="javascript:;"><img src="http://trade.xincai.com/protected/www/static/lib/img/contest/ic_logo1.png" alt="">国泰基金</a>
+                        </div>
+                    </div>
+                </div>
+                                <div class="cell">
+                    <div class="item">
+                        <h3><a href="/competition/2016/web/Redirect2xincai?type=com&com_id=395">国泰锐和</a></h3>
+                        <p>运行天数：184天</p>
+                        <div class="earn">
+                            <span>累计收益率</span>
+                            <span class="num red">2.58%</span>
+                        </div>
+                        <div class="opt">
+                            <a href="javascript:;"><img src="http://trade.xincai.com/protected/www/static/lib/img/contest/ic_logo1.png" alt="">国泰基金</a>
+                        </div>
+                    </div>
+                </div>
+                                <div class="cell">
+                    <div class="item">
+                        <h3><a href="/competition/2016/web/Redirect2xincai?type=com&com_id=405">国泰锐灵</a></h3>
+                        <p>运行天数：183天</p>
+                        <div class="earn">
+                            <span>累计收益率</span>
+                            <span class="num green">-0.40%</span>
+                        </div>
+                        <div class="opt">
+                            <a href="javascript:;"><img src="http://trade.xincai.com/protected/www/static/lib/img/contest/ic_logo1.png" alt="">国泰基金</a>
+                        </div>
+                    </div>
+                </div>
+                            </div>
+        </div>
+    </div>
+    <div class="contest-ad">
+        <div class="contest-wrap">
+            <a href="http://www.phfund.com.cn" target="_blank"><img src="https://trade.xincai.com/protected/www/static/lib/img/contest/penghua.jpg" alt=""></a>
+        </div>
+    </div>
+    <div class="contest-how">
+        <div class="contest-wrap">
+            <div class="contest-topic">
+                <div class="topic-box bg-white"><span>如何玩转基金红人大赛</span></div>
+            </div>
+            <div class="box">
+                <div class="cell">
+                    <div class="item">
+                        <img src="https://trade.xincai.com/protected/www/static/lib/img/contest/h2_1.png" alt="">
+                        <p><b>报名参赛</b>创建自己的基金组合，跟超人气网红、资深投顾同场PK，收获超高人气和丰厚奖金<img src="https://trade.xincai.com/protected/www/static/lib/img/contest/fixtit.png" class="showFix" data-event="showFix" alt=""></p>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="item">
+                        <img src="https://trade.xincai.com/protected/www/static/lib/img/contest/h2_2.png" alt="">
+                        <p><b>跟投基金组合。</b>大赛汇集基金公司专业研究中心推出的精选组合、专业投顾组合、超人气网红组合，一键跟投便可坐收渔翁之利</p>
+                    </div>
+                </div>
+                <div class="cell">
+                    <div class="item">
+                        <img src="https://trade.xincai.com/protected/www/static/lib/img/contest/h2_3.png" alt="">
+                        <p>参与“<b>乐猜</b>”，猜测基金事件、参赛名人、组合相关话题结果，在游戏中了解更多基金知识、获得丰厚奖励。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contest-bm" id="contestBm">
+        <div class="contest-wrap">
+            <div class="contest-topic">
+                <div class="topic-box bg-red"><span>基金大赛报名</span></div>
+            </div>
+            <div class="box">
+                <div class="cell">
+                    <div class="item" data-event="signEnd" data-sign="1">
+                        <img src="https://trade.xincai.com/protected/www/static/lib/img/contest/pic_1.jpg" alt="">
+                        <div class="text">
+                            <h2>专业组</h2>
+                            <p>拥有金融从业资质，彰显专业实力</p>
+                            <a class="btn" href="javascript:;">报名专业组</a>
+                        </div>
+                                                                                            </div>
+                </div>
+                <div class="cell">
+                    <div class="item" data-event="signEnd" data-sign="2">
+                        <img src="https://trade.xincai.com/protected/www/static/lib/img/contest/pic_2.jpg" alt="">
+                        <div class="text">
+                            <h2>大众组</h2>
+                            <p>零门槛，打造自己的FOF基金组合</p>
+                            <a class="btn" href="javascript:;">报名大众组</a>
+                        </div>
+                                            </div>
+                </div>
+            </div>
+            <div class="info">
+                <h2>参赛细则</h2>
+                <p>1. 用户开通新浪基金账户，完成报名。一个基金账户只能报名一组比赛，不能同时参加专业组和大众组的比赛。</p>
+                <p>2. 专业组报名需通过金融从业资质审核后，才能参与专业组比赛， 未通过资质审核的用户可一键报名参加大众组比赛。</p>
+                <p>3. 本次大赛为实盘基金组合比赛，专业组参赛的实盘资金不少于1万元，大众组参赛的实盘资金不少于5000元。</p>
+                <p>更多详细信息请查看 <a href="/competition/2016/web/rules">大赛规则></a></p>
+            </div>
+        </div>
+    </div>
+    <div class="contest-time">
+        <div class="contest-wrap">
+            <div class="contest-topic">
+                <div class="topic-box bg-white"><span>基金大赛时间</span></div>
+            </div>
+            <div class="box">
+                <div class="item"> <!--  data-event="competition" -->
+                    <div class="icons"><i class="icon-bm" data-event="competition"></i><span></span></div>
+                    <span class="name">开始报名</span>
+                    <span class="time">2016.09.01</span>
+                </div>
+                <div class="item">
+                    <div class="icons"><i class="icon-ks"></i><span></span></div>
+                    <span class="name">正式开赛</span>
+                    <span class="time">2016.12.16</span>
+                </div>
+                <div class="item">
+                    <div class="icons"><i class="icon-rw"></i><span></span></div>
+                    <span class="name">月度评选</span>
+                    <span class="time">2016.12-2017.06</span>
+                </div>
+                <div class="item">
+                    <div class="icons"><i class="icon-pm"></i><span></span></div>
+                    <span class="name">总成绩揭晓</span>
+                    <span class="time">2017.06</span>
+                </div>
+                <div class="item">
+                    <div class="icons"><i class="icon-bj"></i><span></span></div>
+                    <span class="name">颁奖典礼</span>
+                    <span class="time">2017.06</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contest-partner">
+        <div class="contest-wrap">
+            <div class="contest-topic">
+                <div class="topic-box bg-gray"><span>合作伙伴</span></div>
+            </div>
+            <div class="box">
+                <div class="cell"><img src="https://trade.xincai.com/protected/www/static/lib/img/contest/c_logo1.png" alt=""></div>
+                <div class="cell"><img src="https://trade.xincai.com/protected/www/static/lib/img/contest/c_logo3.png" alt=""></div>
+                <div class="cell"><img src="https://trade.xincai.com/protected/www/static/lib/img/contest/c_logo2.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="fixedImage" id="fixedImage" data-event="hideFix">
+    <div class="container">
+        <img src="https://trade.xincai.com/protected/www/static/lib/img/contest/fixedImgMax.png" alt="" class="fixedImgMax">
+        <img src="https://trade.xincai.com/protected/www/static/lib/img/contest/fixedImgMin.png" alt="" class="fixedImgMin">
+        <div class="btn" data-event="hideFix">知道了</div>
+    </div>
+    <div class="fixedLay"></div>
+</div>
+<!--main content end-->        <!--footer start-->
+        <div class="footer" id="footer-root">
+            <div class="container">
+                <ul class="footer-nav">
+                    <li><a href="https://trade.xincai.com/web/aboutus" class="a-gray" target="_blank">关于我们</a></li>
+                    <!--<li><a href="http://licaishi.sina.com.cn/static/aboutus.html" class="a-gray" target="_blank">关于新浪理财师</a></li>-->
+                    <li><a href="https://trade.xincai.com/web/aboutus" class="a-gray" target="_blank">联系我们</a></li>
+                    <li><a href="https://trade.xincai.com/web/laws" class="a-gray" target="_blank">法律法规</a></li>
+                    <li><a href="http://finance.sina.com.cn/money/fund/2010/2.html" class="a-gray" target="_blank">基础知识</a></li>
+                    <li><a href="https://trade.xincai.com/web/help" class="a-gray" target="_blank">帮助中心</a></li>
+                    <li><a href="http://weibo.com/cangshiinvest" target="_blank" class="a-gray">官方微博</a></li>
+                </ul>
+                <p>基金投资协议 <span><a href="https://trade.xincai.com/web/license/2" target="_blank" class="a-red">《开户协议》</a></span>、<span><a href="https://trade.xincai.com/web/license/1" class="a-red" target="_blank">《投资人权益须知》</a></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="big">投资有风险，入市需谨慎！</span></p>
+                <p style="margin-top: 30px">Copyright ©1996-2016 SINA Corporation, All Rights Reserved</p>
+                <p>新浪公司&nbsp;&nbsp;&nbsp;&nbsp; 版权所有</p>
+            </div>
+        </div>
+        <!--footer end-->
+        <script type="text/javascript" charset="utf-8" src="https://trade.xincai.com/protected/www/static/modules/weixinShare.js"></script>
+        <script type="text/javascript" charset="utf-8" src="https://trade.xincai.com/protected/www/static/modules/contest.js"></script>
+        <script type="text/javascript" charset="utf-8" src="http://www.sinaimg.cn/unipro/pub/suda_s_v851c.js"></script>
+        <script>
+            require('contest');
+            var weixinShare = require('weixinShare');
+            weixinShare.build();
+        </script>
+    </body>
+</html>

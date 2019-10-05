@@ -1,0 +1,1873 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>星盘_免费在线占星命盘查询分析_新浪星座_新浪网</title>
+	<meta http-equiv="Content-Disposition" content="attachment;">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="keywords" content="星盘,命盘,在线星盘,占星盘,本命盘">
+	<meta name="description" content="新浪星盘,好用的免费在线占星命盘,提供本命盘,双人盘,推运盘,生理曲线,双人比较盘,组合中点盘,时空中点盘,三限盘,次限盘,太阳弧,运行盘等全面的星盘查询分析。">
+	<link rel="stylesheet" href="/css/product/common2.css">
+	<link rel="stylesheet" href="/css/product/swe-index.css?v=1.0.0">
+    <link rel="stylesheet" href="/css/product/fortuneResult.css">
+	<style type="text/css">
+		#force-down{
+			display: none;
+		}
+
+	</style>
+	<script type="text/javascript" src='http://product.astro.sina.com.cn/js/jquery-1.9.1.min.js'></script>
+</head>
+<body>
+	<div class="top-bar-wrap">
+	<div class="top-bar">
+		<div class="top-bar-l">
+			<a href="http://astro.sina.com.cn/">新浪星座</a>
+			&#62;
+			<a href="/index">星座收费测算平台</a>
+		</div>
+		<div class="top-bar-r">
+			<a href="http://sina.com.cn" target="_blank">新浪首页</a>
+		</div>
+	</div>
+</div>
+
+<style type="text/css">
+	@media only screen and (max-width: 1000px) {
+		#force-down{
+			display: block;
+		}
+		#QRcode{
+			display: none;
+		}
+	}
+	.QRcode{
+		float: left;
+		margin-left: 6px;
+	}
+	.QRcode img{
+		float: left;
+		width: 80px;
+		height: 80px;
+	}
+	.tit-wrap{
+		margin-top: 20px;
+	    float: left;
+	    text-align: center;
+	    margin-left: 8px;
+	}
+	.tit-wrap .tit{
+		font-size: 16px;
+		font-weight: normal;
+	}
+	.tit-wrap .text{
+		font-size: 12px;
+	}
+	.button{
+		cursor: pointer;
+	}
+</style>
+<div class="head-wrap">
+	<div class="head clearfix">
+		<div class="head-l">
+			<div id="loggedIn" class="clearfix" style="display:none">
+			</div>
+			<div id="notLoggedIn" style="display:none">
+				<div class="user-avatar">
+					<img src="/images/product/avatar-default.png" alt="">
+					<a href='javascript:;' id="imgLogin" class="img-wrap"></a>
+				</div>
+				<div class="user-login">
+					<div class="clearfix">
+						<p class="login-p1">未登录</p>
+						<p class="login-p2">立刻登录，参加免费测试！</p>
+					</div>
+					<div class="login-wrap clearfix">
+						<div class="login" id="login">登录</div>
+                        <a href="https://login.sina.com.cn/signup/signup.php?entry=astro" target="_blank" class="register">注册</a></div>
+				</div>
+			</div>
+		</div>
+		<div class="QRcode" id="QRcode">
+			<img src="/images/QRcode.png">
+			<div class="tit-wrap">
+				<h3 class="tit">精准运势·权威解盘</h3>
+				<div class="text">扫描下载星座APP，随时看</div>
+			</div>
+		</div>
+		<div class="head-r clearfix">
+						<a href="/" class="link" target="_blank">算命占卜</a>
+						
+			<div class="search">
+				<div class="s-input">
+					<a href="javascript:;" data-post="0" class="s-type">产品筛选<i>K</i></a>
+					<input type="text" placeholder="请输入关键字&#8203" value=""/>
+					<a class="s-submit" href="javascript:;">A</a>
+				</div>
+				<ul class="s-list">
+					<li class="li-1"><a data-index="0" class="a-1">全部</a></li>
+					<li><a data-index="1" class="a-1">免费</a></li>
+					<li><a data-index="2" class="a-1">收费</a></li>
+					<li class="li-1"><a data-index="3" class="a-1">促销</a></li>
+					<li><a data-index="4">命运</a></li>
+					<li><a data-index="5" data-open>婚恋</a></li>
+					<li><a data-index="6" data-open>事业</a></li>
+					<li><a data-index="7">工作</a></li>
+					<li class="li-1"><a data-index="8">财运</a></li>
+					<li><a data-index="9">占星类测算</a></li>
+					<li><a data-index="10">紫微类测算</a></li>
+					<li><a data-index="11">八字类测算</a></li>
+					<li><a data-index="12">其他占卜</a></li>
+				</ul>
+			</div>
+			<div class="link-phone">
+				<span class="lp-span">l</span>
+				<ul class="lp-ul">
+					<li class="lp-li">
+						<a href="/swe" target="_blank">占星命盘</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+	<div class="main-wrap">
+		<div class="main clearfix">
+			<div class="main-l">
+				<div class="item">
+					<a class="selected" href="javascript:;" id="sub_1_1">本命盘</a>
+				</div>
+				<div class="item">双人盘</div>
+				<ul class="items">
+					<li class="item"><a href="javascript:;" id="sub_2_1">比较盘</a></li>
+					<li class="item"><a href="javascript:;" id="sub_2_2">组合中点盘</a></li>
+					<li class="item"><a href="javascript:;" id="sub_2_3">时空中点盘</a></li>
+				</ul>
+				<div class="item">推运盘</div>
+				<ul class="items">
+					<li class="item"><a href="javascript:;" id="sub_3_1">三限盘</a></li>
+					<li class="item"><a href="javascript:;" id="sub_3_2">次限盘</a></li>
+					<li class="item"><a href="javascript:;" id="sub_3_3">太阳弧</a></li>
+					<li class="item"><a href="javascript:;" id="sub_3_4">行运盘</a></li>
+				</ul>
+				<div class="item">
+					<a href="javascript:;" id="sub_4_1">生理曲线</a>
+				</div>
+				<div class="code">
+					<img src="http://qr.weibo.cn/inf/gen?api_key=c6a4b46b90da7ae6b9355cb986421f3c&amp;data=http%3A%2F%2Fproduct.astro.sina.com.cn%2Fswe&amp;datetime=1570276492&amp;level=Q&amp;size=280&amp;title=Qrcode&amp;type=url&amp;sign=d629cc1ff51f028d87c6ef654b938ffb" alt="" class="img-code">
+				</div>
+				<span class="text-code">（扫进手机，随时看）</span>
+			</div>
+			<div class="main-r">
+				<span class="title" id="formTitle">本命盘</span>
+				<div class="form clearfix" data-post="0" id="form_1_1">
+					<div class="form1">
+						<div class="form-item">
+							<span class="label">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span>
+							<input type="text" class="form-text m-resize1 u-name" name="name">
+							<!-- <input placeholder="" limit="10" type="text" class="form-text u-name"
+							name="query[nickname]" value=""> -->
+							<a href="javascript:;" class="archives-handler" >从档案馆选取资料</a>
+							<div class="archives clearfix"></div>
+							<style type="text/css">
+								.archives-handler {
+								    font-size: 14px;
+								    font-size: 1.4rem;
+								    color: #da5151;
+								    vertical-align: middle;
+								    padding-left: 10px;
+								}
+								@media only screen and (max-width: 800px){
+									.archives {
+									    width: 72%;
+									}
+								}
+
+								@media only screen and (max-width: 1000px){
+									.archives {
+									    width: 75%;
+									}
+								}
+
+								.archives {
+								    display: none;
+								    width: 400px;
+								    padding: 5px 5px 5px 0;
+								    max-height: 150px;
+								    overflow-y: scroll;
+								    overflow-x: hidden;
+								    background-color: #fff;
+								    margin-top: 5px;
+								    font-size: 1.3rem;
+								}
+								.archives span {
+								    float: left;
+								    width: 70px;
+								    overflow: hidden;
+								    text-overflow: ellipsis;
+								    margin-left: 5px;
+								    height: 30px;
+								    color: #666;
+								    text-align: center;
+								    line-height: 30px;
+								    cursor: pointer;
+								}
+								.archives span:hover {
+								  background-color: #f35a5a;
+								  color: #fff;
+								}
+							</style>
+
+						</div>
+						<div class="form-item">
+							<span class="label">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</span>
+							<span class="form-radio" name="sex" data-post="">
+								<a href="javascript:;" data-status="1" data-value="male">b</a>男&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:;" data-status="1" data-value="female">B</a>女
+							</span>
+						</div>
+						<div class="form-item">
+							<span class="label">地理范围：</span>
+							<span class="form-radio" name="geo" data-post="">
+								<a href="javascript:;" data-status="1" data-value="China">b</a>中国&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:;" data-status="1" data-value="world">B</a>世界
+							</span>
+						</div>
+						<div class="form-item">
+							<span class="label">出&nbsp;生&nbsp;&nbsp;地：</span>
+							<span class="form-select local-select" data-post="">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+							<span class="form-select m-resize2" data-post="">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+							<span class="form-select m-resize3" name="city" data-post="" style="display:none">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+						</div>
+						<div class="form-item">
+							<span class="label">经&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度：</span>
+							<span class="form-select" name="longitude1" data-post="">
+								<a href="javascript:;" data-index="116"><i>K</i></a>
+								<span class="select-list">
+									<script>
+									for(var i=0;i<181;i++){
+										document.write('<a class="select-item" data-i="'+i+'" data-v="'+i+'">'+i+'&#176;</a>');
+									}
+									</script>
+								</span>
+							</span>
+							<span class="form-select m-resize2" name="longitude2" data-post="">
+								<a href="javascript:;" data-index="28"><i>K</i></a>
+								<span class="select-list">
+								<script>
+								for(var i=0;i<60;i++){
+									document.write('<a class="select-item" data-i="'+i+'" data-v="'+i+'">'+i+'&#39;</a>');
+								}
+								</script>
+								</span>
+							</span>
+							<span class="form-select m-resize3" name="longitude3" data-post="">
+								<a href="javascript:;" data-index="0"><i>K</i></a>
+								<span class="select-list">
+									<a class="select-item" data-i="0" data-v="E">E</a>
+									<a class="select-item" data-i="1" data-v="W">W</a>
+								</span>
+							</span>
+						</div>
+						<div class="form-item">
+							<span class="label">纬&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度：</span>
+							<span class="form-select" name="latitude1" data-post="">
+								<a href="javascript:;" data-index="39"><i>K</i></a>
+								<span class="select-list">
+									<script>
+									for(var i=0;i<91;i++){
+										document.write('<a class="select-item" data-i="'+i+'" data-v="'+i+'">'+i+'&#176;</a>');
+									}
+									</script>
+								</span>
+							</span>
+							<span class="form-select m-resize2" name="latitude2" data-post="">
+								<a href="javascript:;" data-index="55"><i>K</i></a>
+								<span class="select-list">
+								<script>
+								for(var i=0;i<60;i++){
+									document.write('<a class="select-item" data-i="'+i+'" data-v="'+i+'">'+i+'&#39;</a>');
+								}
+								</script>
+								</span>
+							</span>
+							<span class="form-select m-resize3" name="latitude3" data-post="">
+								<a href="javascript:;" data-index="0"><i>K</i></a>
+								<span class="select-list">
+									<a class="select-item" data-i="0" data-v="N">N</a>
+									<a class="select-item" data-i="1" data-v="S">S</a>
+								</span>
+							</span>
+						</div>
+						<div class="form-item">
+							<span class="label">时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区：</span>
+							<span class="form-select long-select" name="zone" data-post="">
+								<a href="javascript:;" data-index="12"><i>K</i></a>
+								<span class="select-list">
+									<a class="select-item" data-i="0" data-v="0">0 Greenwich, England</a>
+									<a class="select-item" data-i="1" data-v="1">-1 Mid Europe/Africa</a>
+									<a class="select-item" data-i="2" data-v="2">-2 E Europe, E Central Africa</a>
+									<a class="select-item" data-i="3" data-v="3">-3 Moscow, Mid-East, E Africa</a>
+									<a class="select-item" data-i="4" data-v="3.5">-3.5 Iran</a>
+									<a class="select-item" data-i="5" data-v="4">-4 NW Caspian Sea</a>
+									<a class="select-item" data-i="6" data-v="4.5">-4.5 Afghanistan</a>
+									<a class="select-item" data-i="7" data-v="5">-5 Ural Mountains, Russia</a>
+									<a class="select-item" data-i="8" data-v="5.5">-5.5 India</a>
+									<a class="select-item" data-i="9" data-v="6">-6 Almaty (Alma ATA), Russia</a>
+									<a class="select-item" data-i="10" data-v="6.5">-6.5 Burma</a>
+									<a class="select-item" data-i="11" data-v="7">-7 W Mongolia</a>
+									<a class="select-item" data-i="12" data-v="8">-8 中国, 香港, 台湾</a>
+									<a class="select-item" data-i="13" data-v="9">-9 Japan</a>
+									<a class="select-item" data-i="14" data-v="9.5">-9.5 Mid Australia</a>
+									<a class="select-item" data-i="15" data-v="10">-10 Eastern Russia, Sydney, Australia</a>
+									<a class="select-item" data-i="16" data-v="11">-11 Kamchatskiy, E Russia</a>
+									<a class="select-item" data-i="17" data-v="12">-12 International Date Line</a>
+									<a class="select-item" data-i="18" data-v="-1">1 SE Greenland</a>
+									<a class="select-item" data-i="19" data-v="-2">2 Atlantic Ocean</a>
+									<a class="select-item" data-i="20" data-v="-3">3 Greenland Time</a>
+									<a class="select-item" data-i="21" data-v="-3.5">3.5 Newfoundland Time</a>
+									<a class="select-item" data-i="22" data-v="-4">4 Atlantic Time</a>
+									<a class="select-item" data-i="23" data-v="-5">5 Eastern Standard Time</a>
+									<a class="select-item" data-i="24" data-v="-6">6 Central Standard Time</a>
+									<a class="select-item" data-i="25" data-v="-7">7 Mountain Standard Time</a>
+									<a class="select-item" data-i="26" data-v="-8">8 Pacific Standard Time</a>
+									<a class="select-item" data-i="27" data-v="-9">9 Alaska Time</a>
+									<a class="select-item" data-i="28" data-v="-10">10 Hawaii</a>
+									<a class="select-item" data-i="29" data-v="-11">11 Pacific Ocean</a>
+									<a class="select-item" data-i="30" data-v="-12">12 International Date Line</a>
+								</span>
+							</span>
+						</div>
+						<div class="form-item special-item">
+							<span class="label">出生时间：</span>
+							<span class="form-select date-select" name="year" data-post="">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+							<span class="form-select m-resize2" name="month" data-post="">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+							<span class="form-select m-resize3" name="day" data-post="">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+
+						</div>
+						<div class="form-item">
+							<span class="label"></span>
+							<span class="form-select m-resize hour-select" name="hour" data-post="">
+								<a href="javascript:;" data-index="0"><i>K</i></a>
+								<span class="select-list">
+									<script>
+									for(var i=0;i<24;i++){
+										document.write('<a class="select-item" data-i="'+i+'" data-v="'+i+'">'+i+'时</a>');
+									}
+									</script>
+								</span>
+							</span>
+							<span class="form-select m-resize2 minute-select" name="minute" data-post="">
+								<a href="javascript:;" data-index="0"><i>K</i></a>
+								<span class="select-list">
+									<script>
+									for(var i=0;i<60;i++){
+										document.write('<a class="select-item" data-i="'+i+'" data-v="'+i+'">'+i+'分</a>');
+									}
+									</script>
+								</span>
+							</span>
+						</div>
+						<div class="form-item">
+							<span class="label"></span>
+							<span class="form-check" name="summer" data-post="">
+								<a href="javascript:;" data-status="0">D</a>是否夏令时
+							</span>
+						</div>
+					</div>
+					<div class="form-btn">
+						<input type="button" class="form-button" name="submit" value="确定"/>
+						<span class="warning-text">请填写姓名</span>
+					</div>
+				</div>
+				<div class="form clearfix" data-post="21" id="form_2_1">
+					<div class="form1">
+						<div class="form-item">
+							<span class="label">姓&nbsp;名&nbsp;&nbsp;一：</span>
+							<input type="text" class="form-text m-resize1 u-name" name="M[name]">
+							<a href="javascript:;" class="archives-handler" >从档案馆选取资料</a>
+							<div class="archives clearfix"></div>
+						</div>
+						<div class="form-item">
+							<span class="label">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</span>
+							<span class="form-radio" name="M[sex] sex" data-post="">
+								<a href="javascript:;" data-status="1" data-value="male">b</a>男&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:;" data-status="1" data-value="female">B</a>女
+							</span>
+						</div>
+						<div class="form-item">
+							<span class="label">地理范围：</span>
+							<span class="form-radio" name="M[geo]" data-post="">
+								<a href="javascript:;" data-status="1" data-value="China">b</a>中国&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:;" data-status="1" data-value="world">B</a>世界
+							</span>
+						</div>
+						<div class="form-item">
+							<span class="label">出&nbsp;生&nbsp;&nbsp;地：</span>
+							<span class="form-select local-select" data-post="">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+							<span class="form-select m-resize2" data-post="">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+							<span class="form-select m-resize3" name="M[city]" data-post="" style="display:none">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+						</div>
+						<div class="form-item">
+							<span class="label">经&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度：</span>
+							<span class="form-select" name="M[longitude1]" data-post="">
+								<a href="javascript:;" data-index="116"><i>K</i></a>
+								<span class="select-list">
+									<script>
+									for(var i=0;i<181;i++){
+										document.write('<a class="select-item" data-i="'+i+'" data-v="'+i+'">'+i+'&#176;</a>');
+									}
+									</script>
+								</span>
+							</span>
+							<span class="form-select m-resize2" name="M[longitude2]" data-post="">
+								<a href="javascript:;" data-index="28"><i>K</i></a>
+								<span class="select-list">
+								<script>
+								for(var i=0;i<60;i++){
+									document.write('<a class="select-item" data-i="'+i+'" data-v="'+i+'">'+i+'&#39;</a>');
+								}
+								</script>
+								</span>
+							</span>
+							<span class="form-select m-resize3" name="M[longitude3]" data-post="">
+								<a href="javascript:;" data-index="0"><i>K</i></a>
+								<span class="select-list">
+									<a class="select-item" data-i="0" data-v="E">E</a>
+									<a class="select-item" data-i="1" data-v="W">W</a>
+								</span>
+							</span>
+						</div>
+						<div class="form-item">
+							<span class="label">纬&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度：</span>
+							<span class="form-select" name="M[latitude1]" data-post="">
+								<a href="javascript:;" data-index="39"><i>K</i></a>
+								<span class="select-list">
+									<script>
+									for(var i=0;i<91;i++){
+										document.write('<a class="select-item" data-i="'+i+'" data-v="'+i+'">'+i+'&#176;</a>');
+									}
+									</script>
+								</span>
+							</span>
+							<span class="form-select m-resize2" name="M[latitude2]" data-post="">
+								<a href="javascript:;" data-index="55"><i>K</i></a>
+								<span class="select-list">
+								<script>
+								for(var i=0;i<60;i++){
+									document.write('<a class="select-item" data-i="'+i+'" data-v="'+i+'">'+i+'&#39;</a>');
+								}
+								</script>
+								</span>
+							</span>
+							<span class="form-select m-resize3" name="M[latitude3]" data-post="">
+								<a href="javascript:;" data-index="0"><i>K</i></a>
+								<span class="select-list">
+									<a class="select-item" data-i="0" data-v="N">N</a>
+									<a class="select-item" data-i="1" data-v="S">S</a>
+								</span>
+							</span>
+						</div>
+						<div class="form-item">
+							<span class="label">时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区：</span>
+							<span class="form-select long-select" name="M[zone]" data-post="">
+								<a href="javascript:;" data-index="12"><i>K</i></a>
+								<span class="select-list">
+									<a class="select-item" data-i="0" data-v="0">0 Greenwich, England</a>
+									<a class="select-item" data-i="1" data-v="1">-1 Mid Europe/Africa</a>
+									<a class="select-item" data-i="2" data-v="2">-2 E Europe, E Central Africa</a>
+									<a class="select-item" data-i="3" data-v="3">-3 Moscow, Mid-East, E Africa</a>
+									<a class="select-item" data-i="4" data-v="3.5">-3.5 Iran</a>
+									<a class="select-item" data-i="5" data-v="4">-4 NW Caspian Sea</a>
+									<a class="select-item" data-i="6" data-v="4.5">-4.5 Afghanistan</a>
+									<a class="select-item" data-i="7" data-v="5">-5 Ural Mountains, Russia</a>
+									<a class="select-item" data-i="8" data-v="5.5">-5.5 India</a>
+									<a class="select-item" data-i="9" data-v="6">-6 Almaty (Alma ATA), Russia</a>
+									<a class="select-item" data-i="10" data-v="6.5">-6.5 Burma</a>
+									<a class="select-item" data-i="11" data-v="7">-7 W Mongolia</a>
+									<a class="select-item" data-i="12" data-v="8">-8 中国, 香港, 台湾</a>
+									<a class="select-item" data-i="13" data-v="9">-9 Japan</a>
+									<a class="select-item" data-i="14" data-v="9.5">-9.5 Mid Australia</a>
+									<a class="select-item" data-i="15" data-v="10">-10 Eastern Russia, Sydney, Australia</a>
+									<a class="select-item" data-i="16" data-v="11">-11 Kamchatskiy, E Russia</a>
+									<a class="select-item" data-i="17" data-v="12">-12 International Date Line</a>
+									<a class="select-item" data-i="18" data-v="-1">1 SE Greenland</a>
+									<a class="select-item" data-i="19" data-v="-2">2 Atlantic Ocean</a>
+									<a class="select-item" data-i="20" data-v="-3">3 Greenland Time</a>
+									<a class="select-item" data-i="21" data-v="-3.5">3.5 Newfoundland Time</a>
+									<a class="select-item" data-i="22" data-v="-4">4 Atlantic Time</a>
+									<a class="select-item" data-i="23" data-v="-5">5 Eastern Standard Time</a>
+									<a class="select-item" data-i="24" data-v="-6">6 Central Standard Time</a>
+									<a class="select-item" data-i="25" data-v="-7">7 Mountain Standard Time</a>
+									<a class="select-item" data-i="26" data-v="-8">8 Pacific Standard Time</a>
+									<a class="select-item" data-i="27" data-v="-9">9 Alaska Time</a>
+									<a class="select-item" data-i="28" data-v="-10">10 Hawaii</a>
+									<a class="select-item" data-i="29" data-v="-11">11 Pacific Ocean</a>
+									<a class="select-item" data-i="30" data-v="-12">12 International Date Line</a>
+								</span>
+							</span>
+						</div>
+						<div class="form-item special-item">
+							<span class="label">出生时间：</span>
+							<span class="form-select date-select" name="M[year]" data-post="">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+							<span class="form-select m-resize2" name="M[month]" data-post="">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+							<span class="form-select m-resize3" name="M[day]" data-post="">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+
+						</div>
+						<div class="form-item">
+							<span class="label"></span>
+							<span class="form-select m-resize hour-select" name="M[hour]" data-post="">
+								<a href="javascript:;" data-index="0"><i>K</i></a>
+								<span class="select-list">
+									<script>
+									for(var i=0;i<24;i++){
+										document.write('<a class="select-item" data-i="'+i+'" data-v="'+i+'">'+i+'时</a>');
+									}
+									</script>
+								</span>
+							</span>
+							<span class="form-select m-resize2 minute-select" name="M[minute]" data-post="">
+								<a href="javascript:;" data-index="0"><i>K</i></a>
+								<span class="select-list">
+									<script>
+									for(var i=0;i<60;i++){
+										document.write('<a class="select-item" data-i="'+i+'" data-v="'+i+'">'+i+'分</a>');
+									}
+									</script>
+								</span>
+							</span>
+						</div>
+						<div class="form-item">
+							<span class="label"></span>
+							<span class="form-check" name="M[summer]" data-post="">
+								<a href="javascript:;" data-status="0">D</a>是否夏令时
+							</span>
+						</div>
+					</div>
+					<div class="form2">
+						<div class="form-item">
+							<span class="label">姓&nbsp;名&nbsp;&nbsp;二：</span>
+							<input type="text" class="form-text m-resize1 u-name" name="N[name]">
+							<a href="javascript:;" class="archives-handler" >从档案馆选取资料</a>
+							<div class="archives clearfix"></div>
+						</div>
+						<div class="form-item">
+							<span class="label">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</span>
+							<span class="form-radio" name="N[sex] sex" data-post="">
+								<a href="javascript:;" data-status="1" data-value="male">b</a>男&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:;" data-status="1" data-value="female">B</a>女
+							</span>
+						</div>
+						<div class="form-item">
+							<span class="label">地理范围：</span>
+							<span class="form-radio" name="N[geo]" data-post="">
+								<a href="javascript:;" data-status="1" data-value="China">b</a>中国&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:;" data-status="1" data-value="world">B</a>世界
+							</span>
+						</div>
+						<div class="form-item">
+							<span class="label">出&nbsp;生&nbsp;&nbsp;地：</span>
+							<span class="form-select local-select" data-post="">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+							<span class="form-select m-resize2" data-post="">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+							<span class="form-select m-resize3" name="N[city]" data-post="" style="display:none">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+						</div>
+						<div class="form-item">
+							<span class="label">经&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度：</span>
+							<span class="form-select" name="N[longitude1]" data-post="">
+								<a href="javascript:;" data-index="116"><i>K</i></a>
+								<span class="select-list">
+									<script>
+									for(var i=0;i<181;i++){
+										document.write('<a class="select-item" data-i="'+i+'" data-v="'+i+'">'+i+'&#176;</a>');
+									}
+									</script>
+								</span>
+							</span>
+							<span class="form-select m-resize2" name="N[longitude2]" data-post="">
+								<a href="javascript:;" data-index="28"><i>K</i></a>
+								<span class="select-list">
+								<script>
+								for(var i=0;i<60;i++){
+									document.write('<a class="select-item" data-i="'+i+'" data-v="'+i+'">'+i+'&#39;</a>');
+								}
+								</script>
+								</span>
+							</span>
+							<span class="form-select m-resize3" name="N[longitude3]" data-post="">
+								<a href="javascript:;" data-index="0"><i>K</i></a>
+								<span class="select-list">
+									<a class="select-item" data-i="0" data-v="E">E</a>
+									<a class="select-item" data-i="1" data-v="W">W</a>
+								</span>
+							</span>
+						</div>
+						<div class="form-item">
+							<span class="label">纬&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度：</span>
+							<span class="form-select" name="N[latitude1]" data-post="">
+								<a href="javascript:;" data-index="39"><i>K</i></a>
+								<span class="select-list">
+									<script>
+									for(var i=0;i<91;i++){
+										document.write('<a class="select-item" data-i="'+i+'" data-v="'+i+'">'+i+'&#176;</a>');
+									}
+									</script>
+								</span>
+							</span>
+							<span class="form-select m-resize2" name="N[latitude2]" data-post="">
+								<a href="javascript:;" data-index="55"><i>K</i></a>
+								<span class="select-list">
+								<script>
+								for(var i=0;i<60;i++){
+									document.write('<a class="select-item" data-i="'+i+'" data-v="'+i+'">'+i+'&#39;</a>');
+								}
+								</script>
+								</span>
+							</span>
+							<span class="form-select m-resize3" name="N[latitude3]" data-post="">
+								<a href="javascript:;" data-index="0"><i>K</i></a>
+								<span class="select-list">
+									<a class="select-item" data-i="0" data-v="N">N</a>
+									<a class="select-item" data-i="1" data-v="S">S</a>
+								</span>
+							</span>
+						</div>
+						<div class="form-item">
+							<span class="label">时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区：</span>
+							<span class="form-select long-select" name="N[zone]" data-post="">
+								<a href="javascript:;" data-index="12"><i>K</i></a>
+								<span class="select-list">
+									<a class="select-item" data-i="0" data-v="0">0 Greenwich, England</a>
+									<a class="select-item" data-i="1" data-v="1">-1 Mid Europe/Africa</a>
+									<a class="select-item" data-i="2" data-v="2">-2 E Europe, E Central Africa</a>
+									<a class="select-item" data-i="3" data-v="3">-3 Moscow, Mid-East, E Africa</a>
+									<a class="select-item" data-i="4" data-v="3.5">-3.5 Iran</a>
+									<a class="select-item" data-i="5" data-v="4">-4 NW Caspian Sea</a>
+									<a class="select-item" data-i="6" data-v="4.5">-4.5 Afghanistan</a>
+									<a class="select-item" data-i="7" data-v="5">-5 Ural Mountains, Russia</a>
+									<a class="select-item" data-i="8" data-v="5.5">-5.5 India</a>
+									<a class="select-item" data-i="9" data-v="6">-6 Almaty (Alma ATA), Russia</a>
+									<a class="select-item" data-i="10" data-v="6.5">-6.5 Burma</a>
+									<a class="select-item" data-i="11" data-v="7">-7 W Mongolia</a>
+									<a class="select-item" data-i="12" data-v="8">-8 中国, 香港, 台湾</a>
+									<a class="select-item" data-i="13" data-v="9">-9 Japan</a>
+									<a class="select-item" data-i="14" data-v="9.5">-9.5 Mid Australia</a>
+									<a class="select-item" data-i="15" data-v="10">-10 Eastern Russia, Sydney, Australia</a>
+									<a class="select-item" data-i="16" data-v="11">-11 Kamchatskiy, E Russia</a>
+									<a class="select-item" data-i="17" data-v="12">-12 International Date Line</a>
+									<a class="select-item" data-i="18" data-v="-1">1 SE Greenland</a>
+									<a class="select-item" data-i="19" data-v="-2">2 Atlantic Ocean</a>
+									<a class="select-item" data-i="20" data-v="-3">3 Greenland Time</a>
+									<a class="select-item" data-i="21" data-v="-3.5">3.5 Newfoundland Time</a>
+									<a class="select-item" data-i="22" data-v="-4">4 Atlantic Time</a>
+									<a class="select-item" data-i="23" data-v="-5">5 Eastern Standard Time</a>
+									<a class="select-item" data-i="24" data-v="-6">6 Central Standard Time</a>
+									<a class="select-item" data-i="25" data-v="-7">7 Mountain Standard Time</a>
+									<a class="select-item" data-i="26" data-v="-8">8 Pacific Standard Time</a>
+									<a class="select-item" data-i="27" data-v="-9">9 Alaska Time</a>
+									<a class="select-item" data-i="28" data-v="-10">10 Hawaii</a>
+									<a class="select-item" data-i="29" data-v="-11">11 Pacific Ocean</a>
+									<a class="select-item" data-i="30" data-v="-12">12 International Date Line</a>
+								</span>
+							</span>
+						</div>
+						<div class="form-item special-item">
+							<span class="label">出生时间：</span>
+							<span class="form-select date-select" name="N[year]" data-post="">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+							<span class="form-select m-resize2" name="N[month]" data-post="">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+							<span class="form-select m-resize3" name="N[day]" data-post="">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+
+						</div>
+						<div class="form-item">
+							<span class="label"></span>
+							<span class="form-select m-resize hour-select" name="N[hour]" data-post="">
+								<a href="javascript:;" data-index="0"><i>K</i></a>
+								<span class="select-list">
+									<script>
+									for(var i=0;i<24;i++){
+										document.write('<a class="select-item" data-i="'+i+'" data-v="'+i+'">'+i+'时</a>');
+									}
+									</script>
+								</span>
+							</span>
+							<span class="form-select m-resize2 minute-select" name="N[minute]" data-post="">
+								<a href="javascript:;" data-index="0"><i>K</i></a>
+								<span class="select-list">
+									<script>
+									for(var i=0;i<60;i++){
+										document.write('<a class="select-item" data-i="'+i+'" data-v="'+i+'">'+i+'分</a>');
+									}
+									</script>
+								</span>
+							</span>
+						</div>
+						<div class="form-item">
+							<span class="label"></span>
+							<span class="form-check" name="N[summer]" data-post="">
+								<a href="javascript:;" data-status="0">D</a>是否夏令时
+							</span>
+						</div>
+					</div>
+					<div class="form-btn">
+						<input type="button" class="form-button" name="submit" value="确定"/>
+						<span class="warning-text">请填写姓名</span>
+					</div>
+				</div>
+				<div class="form clearfix" data-post="31" id="form_3_1">
+					<div class="form1">
+						<div class="form-item">
+							<span class="label">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span>
+							<input type="text" class="form-text m-resize1 u-name" name="name">
+							<a href="javascript:;" class="archives-handler" >从档案馆选取资料</a>
+							<div class="archives clearfix"></div>
+						</div>
+						<div class="form-item">
+							<span class="label">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</span>
+							<span class="form-radio" name="sex" data-post="">
+								<a href="javascript:;" data-status="1" data-value="male">b</a>男&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:;" data-status="1" data-value="female">B</a>女
+							</span>
+						</div>
+						<div class="form-item">
+							<span class="label">地理范围：</span>
+							<span class="form-radio" name="geo" data-post="">
+								<a href="javascript:;" data-status="1" data-value="China">b</a>中国&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:;" data-status="1" data-value="world">B</a>世界
+							</span>
+						</div>
+						<div class="form-item">
+							<span class="label">出&nbsp;生&nbsp;&nbsp;地：</span>
+							<span class="form-select local-select" data-post="">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+							<span class="form-select m-resize2" data-post="">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+							<span class="form-select m-resize3" name="city" data-post="" style="display:none">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+						</div>
+						<div class="form-item">
+							<span class="label">经&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度：</span>
+							<span class="form-select" name="longitude1" data-post="">
+								<a href="javascript:;" data-index="116"><i>K</i></a>
+								<span class="select-list">
+									<script>
+									for(var i=0;i<181;i++){
+										document.write('<a class="select-item" data-i="'+i+'" data-v="'+i+'">'+i+'&#176;</a>');
+									}
+									</script>
+								</span>
+							</span>
+							<span class="form-select m-resize2" name="longitude2" data-post="">
+								<a href="javascript:;" data-index="28"><i>K</i></a>
+								<span class="select-list">
+								<script>
+								for(var i=0;i<60;i++){
+									document.write('<a class="select-item" data-i="'+i+'" data-v="'+i+'">'+i+'&#39;</a>');
+								}
+								</script>
+								</span>
+							</span>
+							<span class="form-select m-resize3" name="longitude3" data-post="">
+								<a href="javascript:;" data-index="0"><i>K</i></a>
+								<span class="select-list">
+									<a class="select-item" data-i="0" data-v="E">E</a>
+									<a class="select-item" data-i="1" data-v="W">W</a>
+								</span>
+							</span>
+						</div>
+						<div class="form-item">
+							<span class="label">纬&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度：</span>
+							<span class="form-select" name="latitude1" data-post="">
+								<a href="javascript:;" data-index="39"><i>K</i></a>
+								<span class="select-list">
+									<script>
+									for(var i=0;i<91;i++){
+										document.write('<a class="select-item" data-i="'+i+'" data-v="'+i+'">'+i+'&#176;</a>');
+									}
+									</script>
+								</span>
+							</span>
+							<span class="form-select m-resize2" name="latitude2" data-post="">
+								<a href="javascript:;" data-index="55"><i>K</i></a>
+								<span class="select-list">
+								<script>
+								for(var i=0;i<60;i++){
+									document.write('<a class="select-item" data-i="'+i+'" data-v="'+i+'">'+i+'&#39;</a>');
+								}
+								</script>
+								</span>
+							</span>
+							<span class="form-select m-resize3" name="latitude3" data-post="">
+								<a href="javascript:;" data-index="0"><i>K</i></a>
+								<span class="select-list">
+									<a class="select-item" data-i="0" data-v="N">N</a>
+									<a class="select-item" data-i="1" data-v="S">S</a>
+								</span>
+							</span>
+						</div>
+						<div class="form-item">
+							<span class="label">时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区：</span>
+							<span class="form-select long-select" name="zone" data-post="">
+								<a href="javascript:;" data-index="12"><i>K</i></a>
+								<span class="select-list">
+									<a class="select-item" data-i="0" data-v="0">0 Greenwich, England</a>
+									<a class="select-item" data-i="1" data-v="1">-1 Mid Europe/Africa</a>
+									<a class="select-item" data-i="2" data-v="2">-2 E Europe, E Central Africa</a>
+									<a class="select-item" data-i="3" data-v="3">-3 Moscow, Mid-East, E Africa</a>
+									<a class="select-item" data-i="4" data-v="3.5">-3.5 Iran</a>
+									<a class="select-item" data-i="5" data-v="4">-4 NW Caspian Sea</a>
+									<a class="select-item" data-i="6" data-v="4.5">-4.5 Afghanistan</a>
+									<a class="select-item" data-i="7" data-v="5">-5 Ural Mountains, Russia</a>
+									<a class="select-item" data-i="8" data-v="5.5">-5.5 India</a>
+									<a class="select-item" data-i="9" data-v="6">-6 Almaty (Alma ATA), Russia</a>
+									<a class="select-item" data-i="10" data-v="6.5">-6.5 Burma</a>
+									<a class="select-item" data-i="11" data-v="7">-7 W Mongolia</a>
+									<a class="select-item" data-i="12" data-v="8">-8 中国, 香港, 台湾</a>
+									<a class="select-item" data-i="13" data-v="9">-9 Japan</a>
+									<a class="select-item" data-i="14" data-v="9.5">-9.5 Mid Australia</a>
+									<a class="select-item" data-i="15" data-v="10">-10 Eastern Russia, Sydney, Australia</a>
+									<a class="select-item" data-i="16" data-v="11">-11 Kamchatskiy, E Russia</a>
+									<a class="select-item" data-i="17" data-v="12">-12 International Date Line</a>
+									<a class="select-item" data-i="18" data-v="-1">1 SE Greenland</a>
+									<a class="select-item" data-i="19" data-v="-2">2 Atlantic Ocean</a>
+									<a class="select-item" data-i="20" data-v="-3">3 Greenland Time</a>
+									<a class="select-item" data-i="21" data-v="-3.5">3.5 Newfoundland Time</a>
+									<a class="select-item" data-i="22" data-v="-4">4 Atlantic Time</a>
+									<a class="select-item" data-i="23" data-v="-5">5 Eastern Standard Time</a>
+									<a class="select-item" data-i="24" data-v="-6">6 Central Standard Time</a>
+									<a class="select-item" data-i="25" data-v="-7">7 Mountain Standard Time</a>
+									<a class="select-item" data-i="26" data-v="-8">8 Pacific Standard Time</a>
+									<a class="select-item" data-i="27" data-v="-9">9 Alaska Time</a>
+									<a class="select-item" data-i="28" data-v="-10">10 Hawaii</a>
+									<a class="select-item" data-i="29" data-v="-11">11 Pacific Ocean</a>
+									<a class="select-item" data-i="30" data-v="-12">12 International Date Line</a>
+								</span>
+							</span>
+						</div>
+						<div class="form-item special-item">
+							<span class="label">出生时间：</span>
+							<span class="form-select date-select" name="year" data-post="">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+							<span class="form-select m-resize2" name="month" data-post="">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+							<span class="form-select m-resize3" name="day" data-post="">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+						</div>
+						<div class="form-item">
+							<span class="label"></span>
+							<span class="form-select m-resize hour-select" name="hour" data-post="">
+								<a href="javascript:;" data-index="0"><i>K</i></a>
+								<span class="select-list">
+									<script>
+									for(var i=0;i<24;i++){
+										document.write('<a class="select-item" data-i="'+i+'" data-v="'+i+'">'+i+'时</a>');
+									}
+									</script>
+								</span>
+							</span>
+							<span class="form-select m-resize2 minute-select" name="minute" data-post="">
+								<a href="javascript:;" data-index="0"><i>K</i></a>
+								<span class="select-list">
+									<script>
+									for(var i=0;i<60;i++){
+										document.write('<a class="select-item" data-i="'+i+'" data-v="'+i+'">'+i+'分</a>');
+									}
+									</script>
+								</span>
+							</span>
+						</div>
+						<div class="form-item">
+							<span class="label"></span>
+							<span class="form-check" name="summer" data-post="">
+								<a href="javascript:;" data-status="0">D</a>是否夏令时
+							</span>
+						</div>
+						<div class="form-item">
+							<span class="label">推运时间：</span>
+							<span class="form-select date-select" name="O[year]" data-post="">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+							<span class="form-select m-resize2" name="O[month]" data-post="">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+							<span class="form-select m-resize3" name="O[day]" data-post="">
+								<a href="javascript:;" data-index=""><i>K</i></a>
+								<span class="select-list">
+								</span>
+							</span>
+						</div>
+					</div>
+					<div class="form-btn">
+						<input type="button" class="form-button" name="submit" value="确定"/>
+						<span class="warning-text">请填写姓名</span>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+    <div class="p-list clearfix">
+                        <div class="p-title-wrap">
+                <h3 class="p-title dib">精算你的现在和未来：</h3>
+                <a href="http://product.astro.sina.com.cn/" target="_blank" class="p-more dib">更多>></a>
+            </div>
+                        <div class="p-item-small p5 p3">
+                <div class="circle-wrap">
+                    <a href="http://product.astro.sina.com.cn/?top=1125" data-index="0" class="p-circle mpulse" style="background-color:#a52187" target="_blank">
+                        <img src="http://storage.product.astro.sina.com.cn/APP/6/1125/logo.png" alt=""/>
+                        <span class="cover"></span>
+                    </a>
+                </div>
+                <span>你该继续等下去吗</span>
+            </div>
+                        <div class="p-item-small p5 p3">
+                <div class="circle-wrap">
+                    <a href="http://product.astro.sina.com.cn/?top=1090" data-index="1" class="p-circle " style="background-color:#a61c00" target="_blank">
+                        <img src="http://storage.product.astro.sina.com.cn/APP/15/1090/logo.png" alt=""/>
+                        <span class="cover"></span>
+                    </a>
+                </div>
+                <span>真命伴侣何时出现</span>
+            </div>
+                        <div class="p-item-small p5 p3">
+                <div class="circle-wrap">
+                    <a href="http://product.astro.sina.com.cn/?top=1108" data-index="2" class="p-circle " style="background-color:#f5bb40" target="_blank">
+                        <img src="http://storage.product.astro.sina.com.cn/APP/6/1108/logo.png" alt=""/>
+                        <span class="cover"></span>
+                    </a>
+                </div>
+                <span>他心中所属之人是你吗</span>
+            </div>
+                        <div class="p-item-small p5 p2">
+                <div class="circle-wrap">
+                    <a href="http://product.astro.sina.com.cn/?top=1093" data-index="3" class="p-circle " style="background-color:#4631b1" target="_blank">
+                        <img src="http://storage.product.astro.sina.com.cn/APP/6/1093/logo.png" alt=""/>
+                        <span class="cover"></span>
+                    </a>
+                </div>
+                <span>卢恩符文-窥探他的真心</span>
+            </div>
+                        <div class="p-item-small p5 p2">
+                <div class="circle-wrap">
+                    <a href="http://product.astro.sina.com.cn/?top=1061" data-index="4" class="p-circle " style="background-color:#9cac72" target="_blank">
+                        <img src="http://storage.product.astro.sina.com.cn/APP/6/1061/logo.png" alt=""/>
+                        <span class="cover"></span>
+                    </a>
+                </div>
+                <span>五行八字命运精批</span>
+            </div>
+                            </div>
+    	<div class="down" id="force-down">
+	    <div class='down-app' style="max-width: 1000px;">
+	        <div class="icon"><img src="http://n.sinaimg.cn/astro/client/images/pages/icon.png"></div>
+	        <div class="txt"><span class='txt1'>新浪星座</span><span class="txt2">·最权威的星座</span></div>
+	        <div class="button" id="downloadAPP"><span>下载客户端</span></div>
+	    </div>
+	</div>
+	<div id="shadow" class="shadow">
+	    <div class="arrow"><img src="http://n.sinaimg.cn/astro/client/images/pages/arrow.png"></div>
+	    <p>戳右上角，在浏览器中打开~</p>
+	</div>
+    	<div class="footer-wrap">
+    <div class="footer">
+    	<p><a href="http://comment5.news.sina.com.cn/comment/skin/feedback.html?channel=ly&newsid=23" target="_blank">意见反馈留言板</a>|<span class="footer-span">电话：4000520066</span>|<span class="footer-span">欢迎指正</span></p>
+        <p><a href="http://corp.sina.com.cn/chn/" target="_blank">新浪简介</a>|<a href="http://corp.sina.com.cn/eng/" target="_blank">About Sina</a>|<a href="http://emarketing.sina.com.cn/" target="_blank">广告服务</a>|<a href="http://www.sina.com.cn/contactus.html" target="_blank">联系我们</a>|<a href="http://corp.sina.com.cn/chn/sina_job.html" target="_blank">招聘信息</a>|<a href="http://www.sina.com.cn/intro/lawfirm.shtml" target="_blank">网站律师</a>|<a href="http://english.sina.com/" target="_blank">SINA English</a>|<a href="https://login.sina.com.cn/signup/signup.php" target="_blank">通行证注册</a>|<a href="http://help.sina.com.cn/" target="_blank">产品答疑</a></p>
+		<p>Copyright <span style="font-family:arial;">&copy; </span><span id='CopyrightD'></span> SINA Corporation, All Rights Reserved</p>
+        <p>新浪公司 <a href="http://www.sina.com.cn/intro/copyright.shtml" target="_blank">版权所有</a></p>
+    </div>
+</div>
+<script>
+var myDate = new Date();
+document.getElementById("CopyrightD").innerHTML="1996-"+myDate.getFullYear();
+</script>
+<div id="ssoHidden" style="display:none"></div>
+<script src="/js/product/lib/sea.js"></script>
+<script src="/js/product/lib/sea.config.js"></script>
+<script type="text/template" id="loggedInTemplate">
+<div class="user-avatar" >
+	<a href="/home/" target="_blank">
+		<img src="<%=res.avatar_large %>" alt="">
+	</a>
+	<a class="img-wrap" href="/home/" target="_blank"></a>
+</div>
+<div class="user-info">
+	<span>
+	<a href="/home/" target="_blank"><%=res.name %>&nbsp&nbsp</a>
+	</span>
+		<a href="javascript:;" id="logout">(退出)</a>
+    	<br/>
+	<a class="user-btn2" href="/home">查询消费记录</a>
+	<a class="user-btn1" href="/home/copy">管理个人档案</a>
+</div>
+</script>
+<script type="text/javascript">
+	var rootUrl = "http://product.astro.sina.com.cn";
+	var signinUrl = "";
+	var logoutUrl = "";
+	var userInfo = '';
+	seajs.use(['network','underscore','utils','outlogin_layer'],function(net,und,uti){
+		var loggedIn = document.getElementById('loggedIn'),
+			notLoggedIn = document.getElementById('notLoggedIn'),
+			loginBtn = document.getElementById('login'),
+			loginImg = document.getElementById('imgLogin');
+
+		// for sina.com.cn
+		var loginLayer = window.SINA_OUTLOGIN_LAYER;
+		var initMark = false;
+		if (loginLayer && !userInfo){
+			var STK = loginLayer.STK;
+			STK.Ready(function(){
+				if(!loginLayer.isLogin()){
+					uti.byId('notLoggedIn').style.display = '';
+					initMark = true;
+				}
+
+				STK.addEvent(loginBtn,"click",function(){
+					if(uti.isMobile()){
+						window.open('https://passport.sina.cn/signin/signin?entry=wapsso&vt=4&r=&revalid=1','_self');
+					}else{
+						loginLayer.show();
+					}
+				});
+				STK.addEvent(loginImg,"click",function(){
+					if(uti.isMobile()){
+						window.open('https://passport.sina.cn/signin/signin?entry=wapsso&vt=4&r=&revalid=1','_self');
+					}else{
+						loginLayer.show();
+					}
+				});
+				STK.addEvent(loggedIn,'click',function(e){
+					var e = e || window.event;
+					var src = e.target || e.srcElement;
+					if (src && src.id === 'logout'){
+						if (e.stopPropagation){
+							e.stopPropagation();
+						}else{
+							e.cancelBubble=true;
+						}
+						loginLayer.logout();
+					}
+				});
+
+				
+				loginLayer.set('sso',{
+					entry : 'astro'
+				}).set('extra',{
+					css:'http://i.sso.sina.com.cn/css/outlogin/v1/outlogin_skin_finance.css'
+				}).set('plugin',{
+					parentNode:document.body,
+					position:'custom'
+				}).set('styles',{
+					top :'150px',
+					left :'50%',
+					marginLeft:'-240px'
+				}).register('login_success', function(){
+					if (!initMark){
+						notLoggedIn.style.display = 'none';
+                        loggedIn.style.display = '';
+                        net.getUserInfo(null,function(d){
+                        	var loggedInTemplate=_.template(document.getElementById('loggedInTemplate').innerHTML);
+                        	if(d.status === 0){
+	                        	uti.emptyHtml(loggedIn).innerHTML = loggedInTemplate({res:d.data});
+                        	}else{
+                        		SINA_OUTLOGIN_LAYER.getWeiboInfo({
+		                        	onSuccess : function(res){
+		                        		uti.emptyHtml(loggedIn).innerHTML = loggedInTemplate({res:res.data});
+		                        	}
+		                        });
+                        	}
+                        });
+                        initMark = true;
+					}else{
+						setTimeout(function(){//防止ie死锁
+							window.location.reload();
+						},100);
+					}
+				}).register('logout_success', function(){
+                	if(!initMark){
+                		notLoggedIn.style.display = '';
+                    	loggedIn.style.display = 'none';
+                    	initMark = true;
+                	}else{
+                		setTimeout(function(){//防止ie死锁
+							window.location.reload();
+						},100);
+                	}
+				}).init();
+			});
+		}
+
+		// for sina.cn
+		if (userInfo) {
+			uti.addEvent([loginBtn, loginImg], "click", function(){
+				window.open(signinUrl,'_self');
+			});
+			uti.addEvent(loggedIn,'click',function(e){
+				var e = e || window.event;
+				var src = e.target || e.srcElement;
+				if (src && src.id === 'logout'){
+					if (e.stopPropagation){
+						e.stopPropagation();
+					}else{
+						e.cancelBubble=true;
+					}
+					window.open(logoutUrl,'_self');
+				}
+			});
+
+			if (userInfo === '1'){
+				notLoggedIn.style.display = 'none';
+                loggedIn.style.display = '';
+                net.getUserInfo(null,function(d){
+                	var loggedInTemplate=_.template(document.getElementById('loggedInTemplate').innerHTML);
+                	if(d.status === 0){
+                    	uti.emptyHtml(loggedIn).innerHTML = loggedInTemplate({res:d.data});
+                	}
+                });
+	        } else {
+	        	notLoggedIn.style.display = '';
+                loggedIn.style.display = 'none';
+	        }
+		}
+
+		/* search */
+		var searchHandler = uti.byClass('s-type',null,'a')[0],
+			serchInput = uti.nextElementSibling(searchHandler),
+			searchSubmit = uti.nextElementSibling(serchInput),
+			searchList = uti.byClass('s-list',null,'ul')[0],
+			searchShowStatus = false,
+			searchTag = typeof searchIndex === 'undefined' ? 0: searchIndex;
+
+		//init
+		var str = uti.elementChildren(uti.elementChildren(searchList)[searchTag])[0].innerHTML;
+		searchHandler.innerHTML = str + '<i>K</i>';
+		searchHandler.setAttribute('data-post',searchTag);
+		serchInput.value = typeof searchStr === 'undefined' ? '' : searchStr;
+
+		// placeHodlder for ie8 and lower versions
+		new uti.placeHolder();
+
+		//define
+		function hideSearchList(){
+			searchList.style.display = 'none';
+			searchShowStatus = false;
+			uti.removeEvent(document,'click',null);
+		}
+		function showSearchList(){
+			hideLinkList();
+			searchList.style.display = 'block';
+			searchShowStatus = true;
+		}
+		function searchOpen(){
+			var searchValue = serchInput.value.replace(/(^\s*)|(\s*$)/g, "");
+			searchValue = searchValue === serchInput.getAttribute('placeholder') ? '' : searchValue;
+			var openUrl = rootUrl+'/?tag='+ searchTag + '&words=' + searchValue;
+			window.open(openUrl,'_blank');
+		}
+		uti.addEvent(searchHandler,'click',function(e){
+			var e = e || window.event;
+			if (searchShowStatus){
+				hideSearchList();
+			}else{
+				uti.addEvent(document,'click',function(){
+					hideSearchList();
+				});
+				showSearchList();
+				if(e.stopPropagation){
+					e.stopPropagation();
+				}else{
+					e.cancelBubble = true;
+				}
+			}
+		});
+		uti.addEvent(searchList,'click',function(e){
+			var e = e || window.event;
+			var src = e.target || e.srcElement;
+			if (src && src.nodeName.toUpperCase() === 'A'){
+				var str = src.innerHTML;
+				var index = src.getAttribute('data-index');
+
+				searchTag = +index;
+				searchHandler.innerHTML = str + '<i>K</i>';
+				searchHandler.setAttribute('data-post',index);
+
+				if (src.getAttribute('data-open') != null) {
+					searchOpen();
+				}
+
+				hideSearchList();
+			}
+		});
+		uti.addEvent(searchSubmit,'click',function(){
+			// if(serchInput.value.replace(/(^\s*)|(\s*$)/g, "")){
+			// 	searchOpen();
+			// }
+			searchOpen();
+		});
+		uti.addEvent(serchInput,'keyup',function(e){
+			var e = e || window.event;
+			var src = e.target || e.srcElement;
+			// if(e.keyCode === 13 && src.value.replace(/(^\s*)|(\s*$)/g, "")){
+			// 	searchOpen();
+			// }
+			if(e.keyCode === 13){
+				searchOpen();
+			}
+		});
+
+		//phone link
+		var linkHandler = uti.byClass('lp-span',null,'span')[0],
+			linkList = uti.nextElementSibling(linkHandler),
+			linkShowStatus = false;
+		function hideLinkList(){
+			uti.removeClass(linkHandler,'active');
+			linkList.style.display = 'none';
+			linkShowStatus = false;
+			uti.removeEvent(document,'click',null);
+		}
+		function showLinkList(){
+			hideSearchList();
+			uti.addClass(linkHandler,'active');
+			linkList.style.display = 'block';
+			linkShowStatus = true;
+		}
+		uti.addEvent(linkHandler,'click',function(e){
+			var e = e || window.event;
+			if (linkShowStatus){
+				hideLinkList();
+			}else{
+				uti.addEvent(document,'click',function(){
+					hideLinkList();
+				});
+				showLinkList();
+				if(e.stopPropagation){
+					e.stopPropagation();
+				}else{
+					e.cancelBubble = true;
+				}
+			}
+		});
+
+		//debug for body width 100% in IE8
+		var isIE = uti.isIE();
+		if (isIE && isIE < 9){
+			var db = document.body,
+				dde = document.documentElement,
+				bw = 1260;//main width
+			function adjustBodyWidth(){
+				db.style.width = dde.clientWidth > bw ? "100%" : bw + 'px';
+			}
+
+			function throttle(method, context) {
+				clearTimeout(method.tId);
+				method.tId = setTimeout(function(){
+					method.call(context);
+				},100);
+			}
+
+			window.onresize = function(){
+				throttle(adjustBodyWidth);
+			}
+
+			adjustBodyWidth();
+		}
+	});
+</script>
+
+	<script type="text/javascript">
+	    var apk = 'http://storage.product.astro.sina.com.cn/app/package/SinaAstro-release_633_202_1.7.3_release-ebb0803a3c7aeee892b5a60c6ad63c6d.apk';
+	</script>
+	<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/js/product/fortuneResult.js"></script>
+	<script type="text/javascript">
+	seajs.use(['network','utils','form'], function(net,u,f) {
+		var formTitle = document.getElementById('formTitle');
+		var	formWrap = u.byId('form_1_1');
+		var mark0 = 0,mark1=0,mark2=0;
+		new u.subShow(
+			['sub_1_1','sub_2_1','sub_2_2','sub_2_3','sub_3_1','sub_3_2','sub_3_3','sub_3_4','sub_4_1'],
+			['form_1_1','form_2_1','form_2_1','form_2_1','form_3_1','form_3_1','form_3_1','form_3_1','form_1_1'],
+			function(i){
+				switch(i){
+					case 0 :
+						formTitle.innerHTML='本命盘';
+						u.byId('form_1_1').setAttribute('data-post','0');
+						mark0++;
+						if (mark0<2) {
+							formWrap = u.byId('form_1_1');
+							exe(formWrap);
+						}
+
+						break;
+					case 1 :
+						formTitle.innerHTML='比较盘<span style="font-size:12px;font-size:1.2rem;color:#666;padding-left:7px;">PS:对调姓名获得不同解读</span>';
+						u.byId('form_2_1').setAttribute('data-post','21');
+						mark1++;
+						if (mark1<2) {
+							formWrap = u.byId('form_2_1');
+							exe(formWrap);
+						}
+
+						break;
+					case 2 :
+						formTitle.innerHTML='组合中点盘';
+						u.byId('form_2_1').setAttribute('data-post','22');
+						mark1++;
+						if (mark1<2) {
+							formWrap = u.byId('form_2_1');
+							exe(formWrap);
+						}
+						break;
+					case 3 :
+						formTitle.innerHTML='时空中点盘';
+						u.byId('form_2_1').setAttribute('data-post','23');
+						mark1++;
+						if (mark1<2) {
+							formWrap = u.byId('form_2_1');
+							exe(formWrap);
+						}
+						break;
+					case 4 :
+						formTitle.innerHTML='三限盘';
+						u.byId('form_3_1').setAttribute('data-post','31');
+						mark2++;
+						if (mark2<2) {
+							formWrap = u.byId('form_3_1');
+							exe(formWrap);
+						}
+
+						break;
+					case 5 :
+						formTitle.innerHTML='次限盘';
+						u.byId('form_3_1').setAttribute('data-post','32');
+						mark2++;
+						if (mark2<2) {
+							formWrap = u.byId('form_3_1');
+							exe(formWrap);
+						}
+						break;
+					case 6 :
+						formTitle.innerHTML='太阳弧';
+						u.byId('form_3_1').setAttribute('data-post','33');
+						mark2++;
+						if (mark2<2) {
+							formWrap = u.byId('form_3_1');
+							exe(formWrap);
+						}
+						break;
+					case 7 :
+						formTitle.innerHTML='行运盘';
+						u.byId('form_3_1').setAttribute('data-post','34');
+						mark2++;
+						if (mark2<2) {
+							formWrap = u.byId('form_3_1');
+							exe(formWrap);
+						}
+						break;
+					case 8 :
+						formTitle.innerHTML='生理曲线';
+						u.byId('form_1_1').setAttribute('data-post','1');
+						mark0++;
+						if (mark0<2) {
+							formWrap = u.byId('form_1_1');
+							exe(formWrap);
+						}
+						break;
+				}
+				document.body.scrollTop = 0;
+			},
+			+window.location.hash.replace('#','') ? +window.location.hash.replace('#','') : 0
+		);
+		function initForm() {
+			// init form
+			var formRadio = new f.formRadio('form-radio'),
+				dateSelectArr = [],
+				localSelectArr = [];
+			new f.formCheck('form-check');
+			var formSelectList = new f.formSelect('form-select');
+			var thisDate = new Date();
+			var formatDate = thisDate.getFullYear() + '-' + (thisDate.getMonth() + 1) + '-' + thisDate.getDate();
+			var formatDate2 = (thisDate.getFullYear() - 20) + '-' + (thisDate.getMonth() + 1) + '-' + thisDate.getDate();
+			var i,_i,localSelectArr1 = [0,15,30,45,60,75,90,177];
+			var i,_i,localSelectArr1 = [0,15,30];
+			for (_i = 0, _len = localSelectArr1.length; _i < _len; _i++) {
+			  	i = localSelectArr1[_i];
+			  	new f.localSelect({
+					self : formSelectList,
+					index : i,
+					code : 'CH010100'
+				});
+			  	new f.dateSelect({
+					self : formSelectList,
+					index : i+10,
+					begin : 1910,
+					end : 2040,
+					date : formatDate2,
+					before : false
+				});
+			}
+
+
+			var j,_j,localSelectArr2 = [105,123,141,159];
+			var j,_j,localSelectArr2 = [45];
+			for (_j = 0, _len = localSelectArr2.length; _j < _len; _j++) {
+			  	j = localSelectArr2[_j];
+			  	new f.localSelect({
+					self : formSelectList,
+					index : j,
+					code : 'CH010100'
+				});
+			  	new f.dateSelect({
+					self : formSelectList,
+					index : j+10,
+					begin : 1910,
+					end : 2040,
+					date : formatDate2,
+					before : false
+				});
+				new f.dateSelect({
+					self : formSelectList,
+					index : j+15,
+					begin : 1950,
+					end : 2040,
+					date : formatDate,
+					before : false
+				});
+			}
+			// for (var k = 1; k < 25; k=k+2) {
+			for (var k = 1; k < 9; k=k+2) {
+			  	(function(k){
+				  	var switchBlock1 = u.nextElementSibling(formRadio.el[k].parentNode);
+				  	var switchBlock2 = u.nextElementSibling(switchBlock1);
+				  	var switchBlock3 = u.nextElementSibling(switchBlock2);
+				  	switchBlock2.style.display = 'none';
+					switchBlock3.style.display = 'none';
+				  	formRadio.data[k].callBack = function(i){
+						if(i===0){
+							switchBlock1.style.display = '';
+							switchBlock2.style.display = 'none';
+							switchBlock3.style.display = 'none';
+						}else{
+							switchBlock1.style.display = 'none';
+							switchBlock2.style.display = '';
+							switchBlock3.style.display = '';
+						}
+					}
+				})(k)
+			}
+		}
+
+
+		function exe(formWrap) {
+			var formRadio = new f.formRadio('form-radio');
+			// formRadio.trigger(0,0);
+			// var uName = u.byClass('u-name',formWrap,'input');
+			// for(var n=0;n<uName.length;n++){
+			// 	uName[n].value = '';
+			// }
+			//get date-select's and local-select's index
+			var dateIndexArr = [],
+				hourIndexArr = [],
+				minuteIndexArr = [],
+				chinesetimeIndexArr = [],
+				formRadioArr = [],
+				localIndexArr = [],
+				form1 = u.byClass('form1',formWrap)[0],
+				form2 = u.byClass('form2',formWrap)[0],
+	            form3 = u.byClass('form3',formWrap)[0],
+				//formArr = form1 ? form2 ? [form1,form2] : [form1] : [],
+	            formArr = form1 ? (form2 ?( form3? [form1,form2,form3] : [form1,form2] ): [form1]) : [],
+				loopTimes = formArr.length;
+
+			for (var i=0;i<loopTimes;i++){
+				var _selectList = formArr[i] ? u.byClass('form-select',formArr[i],'span') : null;
+				var formRadioList = formArr[i] ? new f.formRadio('form-radio',0,formArr[i]) : null;
+				new f.formCheck('form-check',formArr[i]);
+
+				if(_selectList){
+					var dateReg = new RegExp("(^|\\s)date-select($|\\s)"),
+						hourReg = new RegExp("(^|\\s)hour-select($|\\s)"),
+						minuteReg = new RegExp("(^|\\s)minute-select($|\\s)"),
+						chinesetimeReg = new RegExp("(^|\\s)chinesetime-select($|\\s)"),
+						localReg = new RegExp("(^|\\s)local-select($|\\s)"),
+						_dateIndexArr = [],
+						_hourIndexArr = [],
+						_minuteIndexArr = [],
+						_chinesetimeIndexArr = [],
+						_localIndexArr = [];
+					for (var j=0,len=_selectList.length;j<len;j++){
+						var className = _selectList[j].className,
+							reg = null;
+						switch (true){
+							case dateReg.test(className):
+								_dateIndexArr.push(j);break;
+							case hourReg.test(className):
+								_hourIndexArr.push(j);break;
+							case minuteReg.test(className):
+								_minuteIndexArr.push(j);break;
+							case chinesetimeReg.test(className):
+								_chinesetimeIndexArr.push(j);break;
+							case localReg.test(className):
+								_localIndexArr.push(j);break;
+						}
+					}
+
+					dateIndexArr.push(_dateIndexArr);
+					hourIndexArr.push(_hourIndexArr);
+					minuteIndexArr.push(_minuteIndexArr);
+					chinesetimeIndexArr.push(_chinesetimeIndexArr);
+					localIndexArr.push(_localIndexArr);
+					formRadioArr.push(formRadioList);
+				}
+			}
+
+			//init form
+			var	formSelectArr = [],
+				dateSelectArr = [],
+				localSelectArr = [],
+				thisDate = new Date(),
+				formatDate = (thisDate.getFullYear()- 20) + '-' + (thisDate.getMonth() + 1) + '-' + thisDate.getDate();
+
+			for (var _i=0;_i<loopTimes;_i++){
+				var formSelect = formArr[_i] ? new f.formSelect('form-select',formArr[_i]) : null;
+				formSelectArr.push(formSelect);
+				for(var _j=0,_len2=dateIndexArr[_i].length;_j<_len2;_j++){
+					dateSelectArr.push(new f.dateSelect({
+						self : formSelect,
+						index : dateIndexArr[_i][_j],
+						begin : 1910,
+						end : 2040,
+						date : formatDate,
+						before : false
+					}));
+				}
+				for(var _j=0,_len2=localIndexArr[_i].length;_j<_len2;_j++){
+					localSelectArr.push(new f.localSelect({
+						self : formSelect,
+						index : localIndexArr[_i][_j],
+						code : 'CH010100'
+					}));
+				}
+
+			}
+			for (var k = 1; k < 9; k=k+2) {
+			  	(function(k){
+				  	var switchBlock1 = u.nextElementSibling(formRadio.el[k].parentNode);
+				  	var switchBlock2 = u.nextElementSibling(switchBlock1);
+				  	var switchBlock3 = u.nextElementSibling(switchBlock2);
+				  	switchBlock2.style.display = 'none';
+					switchBlock3.style.display = 'none';
+				  	formRadio.data[k].callBack = function(i){
+						if(i===0){
+							switchBlock1.style.display = '';
+							switchBlock2.style.display = 'none';
+							switchBlock3.style.display = 'none';
+						}else{
+							switchBlock1.style.display = 'none';
+							switchBlock2.style.display = '';
+							switchBlock3.style.display = '';
+						}
+					}
+				})(k)
+			}
+
+			//create archives
+			var usersInfo = null,
+				hasGetUserInfo = false;
+			var loginLayer = window.SINA_OUTLOGIN_LAYER;
+			var userInfo = '';
+			function Archives(el,objIndex){
+				this.objIndex = objIndex;
+				this.handler = el;
+				this.list = el ? u.nextElementSibling(el) : null;
+				this.uForm = u.parent(el,'form');
+				this.uName = u.byClass('u-name',this.uForm,'input')[objIndex];
+				this.uLastName = u.byClass('u-lastname',this.uForm,'input')[0];
+				this.uFirstName = u.byClass('u-firstname',this.uForm,'input')[0];
+				this.uWarning = u.byClass('warning-text',this.uForm,'span')[0];
+				this.showStatus = false;
+				this.init();
+			}
+			Archives.prototype.init = function(){
+				var that = this;
+
+				function render(data){
+					var fragment = document.createDocumentFragment(),len = len=data.length;
+					if(!len){that.handler.style.display = 'none';}
+					for(var i=0;i<len;i++){
+						var newNode = document.createElement('span');
+						newNode.setAttribute('data-index',i);
+						newNode.setAttribute('title',data[i].show_name);
+						newNode.innerHTML = data[i].show_name;
+						fragment.appendChild(newNode);
+					}
+					u.emptyHtml(that.list).appendChild(fragment);
+				}
+				if(!hasGetUserInfo){
+					hasGetUserInfo = true;
+					net.getCopyInfo('',function(d){
+						if(d.status === 0){
+							usersInfo = d.data;
+							render(usersInfo);
+						}
+					});
+				}else{
+					var infoInterval = setInterval(function(){
+						if(usersInfo){
+							render(usersInfo);
+							clearInterval(infoInterval);
+						}
+					},100);
+				}
+				u.addEvent(this.handler,'click',function(){
+					if (loginLayer && !usersInfo) {
+						if(u.isMobile()){
+							window.open('https://passport.sina.cn/signin/signin?entry=wapsso&vt=4&r=&revalid=1','_self');
+						}else{
+							loginLayer.show();
+						}
+					} else {
+						if (!that.showStatus){
+							that.show();
+						}else{
+							that.hide();
+						}
+					}
+
+				});
+				u.addEvent(this.list,'click',function(e){
+					var e = e || window.event;
+					var src = e.target || e.srcElement;
+					if(src && src.nodeName.toUpperCase() === 'SPAN'){
+						that.selectInfo(+src.getAttribute('data-index'));
+						that.hide();
+					}
+				});
+			}
+			Archives.prototype.updateNode = function(data,index){
+				var that = this,
+					existNode = u.byAtrName('data-index',index,that.list,'span')[0];
+				that.handler.style.display = '';
+
+				if (existNode){
+					existNode.title = data.show_name;
+					existNode.innerHTML = data.show_name;
+				}else{
+					var newNode = document.createElement('span');
+					newNode.setAttribute('data-index',index);
+					newNode.setAttribute('title',data.show_name);
+					newNode.innerHTML = data.show_name;
+					that.list.appendChild(newNode);
+				}
+			}
+			Archives.prototype.show = function(){
+				this.list.style.display = 'block';
+				this.showStatus = true;
+			}
+			Archives.prototype.hide = function(){
+				this.list.style.display = 'none';
+				this.showStatus = false;
+			}
+			Archives.prototype.selectInfo = function(index){
+
+				var data = usersInfo[index],
+					formIndex = this.objIndex,
+					hour = data.birthtime && data.birthtime.slice(0,2),
+					minute = data.birthtime && data.birthtime.slice(3,5),
+					hourIndex = +hour,
+					formRadio = formRadioArr[this.objIndex],
+					minuteIndex = +minute,
+					chineseTimeIndex = hourIndex === 23 ? 0 : Math.ceil(hourIndex/2),
+					thisDate = new Date(),
+					formatDate = thisDate.getFullYear() + '-' + (thisDate.getMonth() + 1) + '-' + thisDate.getDate();
+				this.uForm.setAttribute('data-id',data.id);
+				if(this.uName){
+					this.uName.value = data.show_name;
+				}
+				if(this.uLastName){
+					this.uLastName.value = data.last_name;
+				}
+				if(this.uFirstName){
+					this.uFirstName.value = data.first_name;
+				}
+				if(chinesetimeIndexArr[formIndex].length){
+					formSelectArr[formIndex].trigger(chinesetimeIndexArr[formIndex][0],chineseTimeIndex);
+				}else if(hourIndexArr[formIndex].length){
+					formSelectArr[formIndex].trigger(hourIndexArr[formIndex][0],hourIndex);
+					formSelectArr[formIndex].trigger(minuteIndexArr[formIndex][0],minuteIndex);
+				}
+				if (formRadio.el.length && data.gender){
+					if(+data.gender){
+						formRadio.trigger(0,1);
+					}else{
+						formRadio.trigger(0,0);
+					}
+				}
+				while(localSelectArr.length>0){
+					var ls=localSelectArr.pop();
+					delete ls;
+				}
+				while(dateSelectArr.length>0){
+					var ds = dateSelectArr.pop();
+					delete ds;
+				}
+
+				for(var _i=0,_len=dateIndexArr[formIndex].length;_i<_len;_i++){
+					dateSelectArr.push(new f.dateSelect({
+						self : formSelectArr[formIndex],
+						index : dateIndexArr[formIndex][_i],
+						begin : 1910,
+						end : 2040,
+						date : data.birtharray[0] != 0 ? data.birthday : formatDate,
+						before : false
+					}));
+				}
+				for(var _i=0,_len=localIndexArr[formIndex].length;_i<_len;_i++){
+					localSelectArr.push(new f.localSelect({
+						self : formSelectArr[formIndex],
+						index : localIndexArr[formIndex][_i],
+						code : data.loc_code || 'CH010100'
+					}));
+				}
+				if(this.uWarning){
+					this.uWarning.innerHTML = '';
+				}
+
+			}
+
+			var archives = u.byClass('archives-handler',formWrap,'a'),
+				archiveObjArr = [];
+			for (var i=0,len=archives.length;i<len;i++){
+				archiveObjArr.push(new Archives(archives[i],i));
+			}
+		}
+		new f.formPost('form','http://product.astro.sina.com.cn/swe/result','');
+	});
+
+	//平台、设备和操作系统
+	var system ={
+		win : false,
+		mac : false,
+		xll : false
+	};
+	//检测平台
+	var p = navigator.platform;
+	system.win = p.indexOf("Win") == 0;
+	system.mac = p.indexOf("Mac") == 0;
+	system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+	//跳转语句
+	if(system.win||system.mac||system.xll){
+ 		document.getElementById('downloadAPP').onclick=function () {
+ 	 		location.href='http://product.astro.sina.com.cn/share/download';
+ 		}
+	}else{
+		document.getElementById('force-down').style.display='block';
+		document.getElementById('QRcode').style.display='none';
+	}
+	</script>
+<!-- SUDA_CODE_START DAGGER --> 
+<script type="text/javascript" src="//www.sinaimg.cn/unipro/pub/suda_s_v851c.js"></script>
+<noScript> 
+<div style='position:absolute;top:0;left:0;width:0;height:0;visibility:hidden'><img width=0 height=0 src='//beacon.sina.com.cn/a.gif?noScript' border='0' alt='' /></div> 
+</noScript> 
+<!-- SUDA_CODE_END DAGGER -->
+<!-- DMP_CODE_START DAGGER --> 
+<script type="text/javascript">
+(function(d, s, id) {
+    var n = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    s = d.createElement(s);
+    s.id = id;
+    s.setAttribute('charset', 'utf-8');
+    s.src = '//d' + Math.floor(0 + Math.random() * (8 - 0 + 1)) + '.sina.com.cn/litong/zhitou/sinaads/src/spec/sinaads_ck.js';
+    n.parentNode.insertBefore(s, n);
+})(document, 'script', 'sinaads-ck-script');
+</script>
+<!-- DMP_CODE_END DAGGER -->
+</body>
+</html>

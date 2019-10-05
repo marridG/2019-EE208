@@ -1,0 +1,408 @@
+/*  公用部分  */
+body{background:#d1daf9; min-width:1200px;}
+/*  头图  */
+.container{overflow:hidden;}
+.part1-wrap{width:100%; height:847px; margin:0 auto; overflow:hidden;}
+.part1{width:100%; height:100%; background:url(https://n.sinaimg.cn/games/moyupc20190904/header.jpg) no-repeat center top;}
+.part1-container{width:1200px; height:100%; margin:0 auto; position:relative;}
+.part1 .logo{-webkit-animation-delay:0.4s;animation-delay:0.4s; width:152px; height:114px; position:absolute; left:-12px; top:35px; background:url(https://n.sinaimg.cn/games/moyupc20190904/logo.png) no-repeat center top;}
+.part1 .slogan-ch{-webkit-animation-delay:1s;animation-delay:1s; width:909px; height:507px; background:url(https://n.sinaimg.cn/games/moyupc20190904/slogan.png) no-repeat; position:absolute; left:-73px; top:254px;}
+/*  视频  */
+/*
+.video-container{width:100%; height:681px; background:url(https://n.sinaimg.cn/games/moyu20190621/bg1.jpg) no-repeat center top;}
+.video-inner{width:1200px; height:100%; margin:0 auto; position:relative; overflow:hidden;}
+.video-inner .txt1{font-size:24px; line-height:30px; color:#fecf38; text-align:right;}
+.video-inner .txt .num{color:#ffffff;}
+.video-inner .video-ul{width:1210px; margin:52px 0 0 0;}
+.video-inner .video-ul li{width:234px; height:415px; float:left; margin:0 8px 0 0; position:relative; overflow:hidden;}
+.video-inner .video-ul li img{ transition:all 0.5s;}
+.video-inner .video-ul li:hover img{-webkit-transform:scale(1.1);transform:scale(1.1);}
+.video-inner .video-ul li .shadow{width:100%; height:100%; background:rgba(0,0,0,0.7); position:absolute; left:0; top:0; text-align:center;}
+.video-ul li .shadow .time{font-size:24px; line-height:30px; color:#fecf38; margin:146px 0 28px 0;}
+.video-ul li .shadow .txt{font-size:20px; line-height:30px; color:#ffffff;}
+.video-ul li.open .shadow{display:none;}
+.video-ul li.open .btn-video{width:96px; height:96px; background:url(https://n.sinaimg.cn/games/moyu20190621/css_sprites.png) no-repeat; background-position:-318px -10px; position:absolute; left:50%; top:50%; margin-left:-48px; margin-top:-48px;}
+*/
+/*  下载 注册  */
+.part2{width:100%; height:789px; background:url(https://n.sinaimg.cn/games/moyupc20190904/bg1.jpg) no-repeat center top;}
+.part2-container{width:1200px; height:100%; margin:0 auto; padding:111px 0 0 0; position:relative; overflow:hidden;}
+.register-container{height:586px;}
+.register-container .require-card,.register-container .download-game{width:385px; float:left; position:relative;}
+.register-container .register{width:385px; margin:0 23px 0 22px; position:relative; float:left; height:100%; padding:10px 0 0 0; box-sizing:border-box;}
+.btn-require-card,.btn-download{width:290px; height:71px; background:url(https://n.sinaimg.cn/games/moyupc20190904/css_sprites.png) no-repeat; display:block; margin:469px 0 0 47px;}
+.btn-require-card{background-position:-10px -10px;}
+.btn-download{-webkit-animation-delay:1.2s;animation-delay:1.2s; background-position:-10px -101px;}
+.register-container .num{text-align:center; font-size:15px; line-height:30px; color:#fff;}
+.register-container .num span{color:#fb4861;}
+.download-game .tab-ul{width:100%; overflow:hidden;}
+.download-game .tab-ul li{width:50%; height:92px; float:left; text-align:center; background:#a32f1f;}
+.download-game .tab-ul li.active{border-top:2px solid #a32f1f; background:#682920; box-sizing:border-box;}
+.tab-ul li .txt{font-size:20px; line-height:30px; color:#ffdcd6; margin:12px 0 7px 0;}
+.tab-ul li .txt2{font-size:28px; line-height:30px; color:#ffdd65;}
+.part2 .libao-container{width:100%; height:367px; overflow:hidden;}
+.part2 .libao-container .libao-con{display:none;}
+.part2 .libao-ul{margin:16px 0 0 20px;}
+.part2 .libao-ul li{width:117px; height:114px; float:left;}
+.libao-ul li .img-wrap{width:80px; height:80px; background:#831b0c; border-radius:6px; position:relative; margin:0 auto;}
+.libao-ul li .img-wrap img{position:absolute; left:50%; top:50%; -webkit-transform:translate(-50%,-50%); transform:translate(-50%,-50%);}
+.libao-ul li .txt{font-size:14px; line-height:30px; color:#ffdcd6; text-align:center;}
+
+
+
+/*  微博转发  */
+.title{display:block; margin:0 auto;}
+.part3{width:100%; height:606px; background:url(https://n.sinaimg.cn/games/moyupc20190904/bg2.jpg) no-repeat center top;}
+.part3-container{width:1200px; height:100%; margin:0 auto; position:relative;}
+.part3 .txt{font-size:16px; line-height:20px; color:#7188ff; margin:27px 0 20px 0;}
+.part3 .artical{width:1200px; height:179px; border-radius:10px; background:#a3beff; box-sizing:border-box; border:1px solid #e7e7f8; padding:35px 60px 20px 49px; font-size:15px; line-height:24px; color:#ffffff;}
+.send-weibo-con{width:1205px; margin:26px 0 0 0;}
+.send-weibo-con .txt1{font-size:16px; line-height:26px; font-weight:bold; color:#824b4e; margin:-4px 0 18px 0;}
+.send-weibo-con .inputs-con{width:100%; height:59px; margin:24px 0 0 0; box-sizing:border-box; background:url(https://n.sinaimg.cn/games/moyupc20190904/search.png) no-repeat left center;}
+.send-weibo-con .inputs-con input{width:639px; height:35px; line-height:35px; margin:11px 0 0 0; padding:0 16px; box-sizing:border-box; border:none; float:left; background:none; font-size:15px; color:#ebecff;}
+.send-weibo-con .inputs-con .search,.send-weibo-con .inputs-con .change{width:135px; height:35px; line-height:35px; background:#5279e5; border-radius:10px; margin:11px 10px 0 0; color:#fff; float:left; font-size:15px; text-align:center;}
+.imgUl{width:1224px; height:115px;}
+.imgUl li{width:115px; height:115px; border-radius:5px; overflow:hidden; float:left; margin:0px 20px 0px 0; position:relative;}
+.imgUl li img{width:100%;}
+.imgUl li input{position:absolute; right:0; bottom:0;}
+.part3 .btn-send-weibo{display:block; float:left; width:252px; height:59px; line-height:58px;text-shadow: 0px 2px 3px rgba(236, 161, 1, 0.68); text-align:center; font-size:16px; color:#fff; margin:0 0 0 20px; background:url(https://n.sinaimg.cn/games/moyupc20190904/css_sprites.png) no-repeat; background-position:-10px -192px;}
+.part3 .num{text-align:right; font-size:16px; line-height:20px; color:#7188ff; margin:12px 80px 0 0;}
+.part3 .num span{color:#fb4861;}
+
+
+/*  抽奖  */
+.part4{width:100%; height:591px; background:url(https://n.sinaimg.cn/games/moyupc20190904/bg3.jpg) no-repeat center top;}
+.part4-container{width:1248px; height:100%; background:url("https://n.sinaimg.cn/games/moyupc20190904/bg-prize.png") no-repeat 0px 93px; margin:0 auto; position:relative; overflow:hidden;}
+.prize-container .img-erweima{float:left; width:134px; margin:0 34px 0 46px;}
+.prize-container .btn-shuoming{float:left;}
+.prize-container .btn-confirm{width:282px; height:59px; font-size:18px; line-height:59px; color:#fff; font-weight:bold; margin:0px 0 26px 0; text-align:center; display:block;}
+.prize-container .txt2{width:275px; font-size:15px; line-height:26px; color:#fff;}
+.prize-container{margin:75px 0 0 0; overflow:hidden;}
+.prize-container .txt-wrap{overflow:hidden;}
+.active-rules-con{width:538px; height:431px; margin:0 0 0 24px; float:left; box-sizing:border-box;}
+.rules-con .total-chance{font-size:14px; line-height:30px; color:#ffffff;}
+.rules-con .total-chance span{color:#f85153; padding:0 3px;}
+.active-rules-con .chance{font-size:14px; line-height:30px; color:#ffffff;}
+.prize-container .rules-con{padding:0px 22px 0 46px;}
+.active-rules-con .active-rules-tit{font-size:18px; line-height:26px; color:#fff; margin:0px 0 3px 0;}
+.prize-con{width:654px; height:431px; float:left;}
+.active-rules-con .active-rules li{font-size:14px; line-height:28px; color:#fff;}
+.prize-container .txt1{width:451px; height:45px; line-height:45px; border:none; background:none; font-size:15px; color:#ffffff; text-indent:18px; margin:25px 0 19px 46px;}
+.prize-container input::-webkit-input-placeholder{
+  color:#fff;
+}
+.prize-con li p{line-height:35px;}
+
+
+
+/*********通用底部CSS开始*********/
+#Gtrail {width:100%; min-width:980px; height:63px; padding:60px 0 180px; background:url(https://n.sinaimg.cn/games/moyupc20190904/footer.jpg) no-repeat center top; font-family:"微软雅黑"; overflow:hidden;}
+#Gtrail #ZWTrail { width:980px; margin:0px auto; font-size:14px; color:rgba(94,131,231,0.74); line-height:16px; text-align:center; }
+#Gtrail #ZWTrail a,#Gtrail #ZWTrail a:visited { color:rgba(94,131,231,0.74); text-decoration:none; }
+#Gtrail #ZWTrail a:hover { color:rgba(94,131,231,0.74); text-decoration:none; }
+/*********通用底部CSS结束*********/
+
+/*  悬浮窗  */
+
+.float-right-hot{z-index:9999; width:150px; height:394px; background:url(https://n.sinaimg.cn/games/moyupc20190904/slide.png) no-repeat center; position:fixed; left:50%; margin-left:644px; top:50%; margin-top:-212px;}
+.slides{margin:44px 0 0 0;}
+.slides li{width:100%; height:60px; line-height:60px; font-size:18px; text-align:center;}
+.slides li a{display:block; color:#fff;}
+.btn-top{width:150px; height:109px; position:absolute; left:0; bottom:0;}
+/***弹窗****/
+.btn-mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 9999;
+  display: none;
+}
+.dialog-messages .btn-mask-content{
+  width: 618px;
+  height: 708px;
+  background:url(https://n.sinaimg.cn/games/moyupc20190904/dialog1.png) no-repeat center top;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left:-309px;
+  margin-top:-354px;
+}
+.dialog-messages .txt1{text-align:center; font-size:45px; line-height:45px; color:#ffffff; margin:135px 0 23px 0;}
+.dialog-messages .txt-message{text-align:center; font-size:21px; line-height:21px; color:#5683ff; margin:0px 0 47px 0;}
+.dialog-messages .messages{overflow:hidden;}
+.dialog-messages .messages li{padding:0 0 0 95px; margin:0 0 16px 0;}
+.dialog-messages .messages .name{float:left; font-size:24px; color:#5683ff; line-height:46px; margin:0 25px 0 0;}
+.dialog-messages .messages input{width:351px; height:46px; border:none; background:none; box-sizing:border-box; padding:0 10px 0; font-size:22px; color:#fff;}
+.dialog-messages .btn-submit{display:block; margin:41px auto 0; width:398px; height:86px; font-size:30px; line-height:86px; text-align:center; color:#77322a;}
+.btn-mask-content .close{cursor:pointer; width:43px; height:43px; position:absolute; right:-77px; top:0; background:url(https://n.sinaimg.cn/games/moyu20190621/css_sprites.png) no-repeat center; background-position:-76px -291px;}
+.dialog-messages .txt2{font-size:16px; line-height:26px; color:#ffccff; text-align:center;}
+.dialog-no-prize .btn-mask-content{
+  width: 618px;
+  height: 577px;
+  background:url(https://n.sinaimg.cn/games/moyupc20190904/dialog2.png) no-repeat center top;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left:-309px;
+  margin-top:-288px;
+}
+/*
+.dialog-no-prize .gift-txt{
+  font-size:24px;
+  line-height:24px;
+  text-align:center;
+  color:#ff645c;
+  margin:44px 0 25px 0;
+}
+.dialog-no-prize .btn-submit-no{display:block; margin:0 auto; width:204px; height:62px;}
+*/
+
+
+
+.dialog-gift .btn-mask-content{
+  width: 618px;
+  height: 577px;
+  background:url(https://n.sinaimg.cn/games/moyupc20190904/dialog3.png) no-repeat center top;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left:-309px;
+  margin-top:-288px;
+}
+.dialog-gift .gift-num{
+  width:383px;
+  height:70px;
+  line-height:70px;
+  font-size:25px;
+  color:#fff;
+  text-align:center;
+  margin:209px auto 108px;
+}
+.dialog-gift .gift-tip {
+  width:378px;
+  height:86px;
+  line-height:86px;
+  display:block;
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  margin:0 auto;
+}
+
+
+
+/**************动画****************/
+
+.rotateInfi {
+  -webkit-animation:rotateInfi 3s linear infinite;
+       animation:rotateInfi 3s linear infinite;
+}
+@-webkit-keyframes rotateInfi {
+  0%{
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  15%{
+    opacity:0.4;
+  }
+  20%{
+    opacity:1;
+  }
+  30%{
+    opacity:1;
+  }
+  35%{
+    opacity:0.4;
+  }
+  40%{
+    opacity:0.4;
+  }
+  50%{
+    opacity:1;
+  }
+  60%{
+    opacity:1;
+  }
+  100%{
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+  }
+}
+@keyframes rotateInfi {
+  0%{
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  15%{
+    opacity:0.4;
+  }
+  20%{
+    opacity:1;
+  }
+  30%{
+    opacity:1;
+  }
+  35%{
+    opacity:0.4;
+  }
+  40%{
+    opacity:0.4;
+  }
+  50%{
+    opacity:1;
+  }
+  60%{
+    opacity:1;
+  }
+  100%{
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+  }
+}
+.flash {
+  -webkit-animation:flash 6s linear infinite;
+       animation:flash 6s linear infinite;
+
+}
+
+@-webkit-keyframes flash {
+  0%,40%,to {
+    opacity: 1
+  }
+  20% {
+    opacity: 0.3
+  }
+}
+
+@keyframes flash {
+  0%,40%,to {
+    opacity: 1
+  }
+  20% {
+    opacity: 0.3
+  }
+}
+
+@-webkit-keyframes slideInLeft {
+  0% {
+    -webkit-transform: translate3d(-500%,0,0);
+            transform: translate3d(-500%,0,0);
+    visibility: visible
+  }
+
+  to {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0)
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    -webkit-transform: translate3d(-500%,0,0);
+            transform: translate3d(-500%,0,0);
+    visibility: visible
+  }
+
+  to {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0)
+  }
+}
+.animated1{-webkit-animation-duration:3s;animation-duration:3s;}
+@-webkit-keyframes shake {
+  0%,33% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0)
+  }
+
+  3%,12%,18%,24%,30% {
+    -webkit-transform: translate3d(-10px,0,0);
+            transform: translate3d(-10px,0,0)
+  }
+
+  9%,15%,21%,27% {
+    -webkit-transform: translate3d(10px,0,0);
+            transform: translate3d(10px,0,0)
+  }
+}
+@keyframes shake {
+  0%,33% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0)
+  }
+
+  3%,12%,18%,24%,30% {
+    -webkit-transform: translate3d(-10px,0,0);
+            transform: translate3d(-10px,0,0)
+  }
+
+  9%,15%,21%,27% {
+    -webkit-transform: translate3d(10px,0,0);
+            transform: translate3d(10px,0,0)
+  }
+}
+@-webkit-keyframes bounce {
+  0%,20%,53%,80%,to {
+    -webkit-animation-timing-function: cubic-bezier(.215,.61,.355,1);
+    animation-timing-function: cubic-bezier(.215,.61,.355,1);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+
+  40%,43% {
+    -webkit-animation-timing-function: cubic-bezier(.755,.05,.855,.06);
+    animation-timing-function: cubic-bezier(.755,.05,.855,.06);
+    -webkit-transform: translate3d(0,-30px,0);
+    transform: translate3d(0,-30px,0)
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(.755,.05,.855,.06);
+    animation-timing-function: cubic-bezier(.755,.05,.855,.06);
+    -webkit-transform: translate3d(0,-15px,0);
+    transform: translate3d(0,-15px,0)
+  }
+
+  90% {
+    -webkit-transform: translate3d(0,-4px,0);
+    transform: translate3d(0,-4px,0)
+  }
+}
+
+@keyframes bounce {
+  0%,20%,53%,80%,to {
+    -webkit-animation-timing-function: cubic-bezier(.215,.61,.355,1);
+    animation-timing-function: cubic-bezier(.215,.61,.355,1);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+  }
+
+  40%,43% {
+    -webkit-animation-timing-function: cubic-bezier(.755,.05,.855,.06);
+    animation-timing-function: cubic-bezier(.755,.05,.855,.06);
+    -webkit-transform: translate3d(0,-30px,0);
+    transform: translate3d(0,-30px,0)
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(.755,.05,.855,.06);
+    animation-timing-function: cubic-bezier(.755,.05,.855,.06);
+    -webkit-transform: translate3d(0,-15px,0);
+    transform: translate3d(0,-15px,0)
+  }
+
+  90% {
+    -webkit-transform: translate3d(0,-4px,0);
+    transform: translate3d(0,-4px,0)
+  }
+}
+.bounce {
+  -webkit-animation:bounce 1s linear both;
+  animation:bounce 1s linear both;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom
+}

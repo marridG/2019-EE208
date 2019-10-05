@@ -1,0 +1,283 @@
+
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta name = "format-detection" content = "telephone=no"><script>//dp预览时需要填的参数（域名） 
+        var global_host = {
+            host : "",
+            path : ""
+        }
+        // 判断文章类型
+        var global_type = {
+            article:"article",
+            gallery:"gallery"
+        }
+        // 如不明白 随时沟通
+        var hosts = {
+            'go-test-cs1806.huanqiu.com': 'go.cse3pl8tdbi.huanqiu.com',
+            'go.huanqiu.com': 'go.cse3pl8tdbi.huanqiu.com',
+            'go.cse3pl8tdbi.huanqiu.com': 'go.cse3pl8tdbi.huanqiu.com',
+            'fashion.huanqiu.com': 'fashion.cse3pl8tdbi.huanqiu.com',
+            'fashion.cse3pl8tdbi.huanqiu.com': 'fashion.cse3pl8tdbi.huanqiu.com',
+            'capital.huanqiu.com': 'capital.cse3pl8tdbi.huanqiu.com',
+            'capital.cse3pl8tdbi.huanqiu.com': 'capital.cse3pl8tdbi.huanqiu.com',
+            'movie.huanqiu.com': 'movie.cse3pl8tdbi.huanqiu.com',
+            'movie.cse3pl8tdbi.huanqiu.com': 'movie.cse3pl8tdbi.huanqiu.com',
+            'finance.huanqiu.com': 'finance.cse3pl8tdbi.huanqiu.com',
+            'finance.cse3pl8tdbi.huanqiu.com': 'finance.cse3pl8tdbi.huanqiu.com',
+            'hope.huanqiu.com': 'hope.cse3pl8tdbi.huanqiu.com',
+            'hope.cse3pl8tdbi.huanqiu.com': 'hope.cse3pl8tdbi.huanqiu.com',
+            'cul.huanqiu.com': 'cul.cse3pl8tdbi.huanqiu.com',
+            'cul.cse3pl8tdbi.huanqiu.com': 'cul.cse3pl8tdbi.huanqiu.com',
+            'tech.huanqiu.com': 'tech.cse3pl8tdbi.huanqiu.com',
+            'tech.cse3pl8tdbi.huanqiu.com': 'tech.cse3pl8tdbi.huanqiu.com',
+            'game.huanqiu.com': 'game.cse3pl8tdbi.huanqiu.com',
+            'game.cse3pl8tdbi.huanqiu.com': 'game.cse3pl8tdbi.huanqiu.com',
+            'anquan.huanqiu.com': 'anquan.cse3pl8tdbi.huanqiu.com',
+            'smart.huanqiu.com': 'smart.cse3pl8tdbi.huanqiu.com',
+            'smart.cse3pl8tdbi.huanqiu.com': 'smart.cse3pl8tdbi.huanqiu.com',
+            'anquan.cse3pl8tdbi.huanqiu.com': 'anquan.cse3pl8tdbi.huanqiu.com',
+            'city.huanqiu.com': 'city.cse3pl8tdbi.huanqiu.com',
+            'city.cse3pl8tdbi.huanqiu.com': 'city.cse3pl8tdbi.huanqiu.com',
+            'health.huanqiu.com': 'health.cse3pl8tdbi.huanqiu.com',
+            'health.cse3pl8tdbi.huanqiu.com': 'health.cse3pl8tdbi.huanqiu.com',
+            'lx.huanqiu.com': 'lx.cse3pl8tdbi.huanqiu.com',
+            'lx.cse3pl8tdbi.huanqiu.com': 'lx.cse3pl8tdbi.huanqiu.com',
+            'auto.huanqiu.com': 'auto.cse3pl8tdbi.huanqiu.com',
+            'auto.cse3pl8tdbi.huanqiu.com': 'auto.cse3pl8tdbi.huanqiu.com',
+            'luxury.huanqiu.com': 'luxury.cse3pl8tdbi.huanqiu.com',
+            'luxury.cse3pl8tdbi.huanqiu.com': 'luxury.cse3pl8tdbi.huanqiu.com',
+            'quality.huanqiu.com': 'quality.cse3pl8tdbi.huanqiu.com',
+            'quality.cse3pl8tdbi.huanqiu.com': 'quality.cse3pl8tdbi.huanqiu.com',
+            'zhiku.huanqiu.com': 'zhiku.cse3pl8tdbi.huanqiu.com',
+            'zhiku.cse3pl8tdbi.huanqiu.com': 'zhiku.cse3pl8tdbi.huanqiu.com',
+            'uav.huanqiu.com': 'uav.cse3pl8tdbi.huanqiu.com',
+            'uav.cse3pl8tdbi.huanqiu.com': 'uav.cse3pl8tdbi.huanqiu.com',
+            'women.huanqiu.com': 'women.cse3pl8tdbi.huanqiu.com',
+            'women.cse3pl8tdbi.huanqiu.com': 'women.cse3pl8tdbi.huanqiu.com',
+            'art.huanqiu.com': 'art.cse3pl8tdbi.huanqiu.com',
+            'art.cse3pl8tdbi.huanqiu.com': 'art.cse3pl8tdbi.huanqiu.com',
+            'bigdata.huanqiu.com': 'bigdata.cse3pl8tdbi.huanqiu.com',
+            'bigdata.cse3pl8tdbi.huanqiu.com': 'bigdata.cse3pl8tdbi.huanqiu.com',
+            'ski.huanqiu.com': 'ski.cse3pl8tdbi.huanqiu.com',
+            'ski.cse3pl8tdbi.huanqiu.com': 'ski.cse3pl8tdbi.huanqiu.com',
+            'sports.huanqiu.com': 'sports.cse3pl8tdbi.huanqiu.com',
+            'sports.cse3pl8tdbi.huanqiu.com': 'sports.cse3pl8tdbi.huanqiu.com',
+            'biz.huanqiu.com': 'biz.cse3pl8tdbi.huanqiu.com',
+            'biz.cse3pl8tdbi.huanqiu.com': 'biz.cse3pl8tdbi.huanqiu.com',
+            'ent.huanqiu.com': 'ent.cse3pl8tdbi.huanqiu.com',
+            'ent.cse3pl8tdbi.huanqiu.com': 'ent.cse3pl8tdbi.huanqiu.com',
+            'gteu.huanqiu.com': 'gteu.cse3pl8tdbi.huanqiu.com',
+            'gteu.cse3pl8tdbi.huanqiu.com': 'gteu.cse3pl8tdbi.huanqiu.com',
+            'look.huanqiu.com': 'look.cse3pl8tdbi.huanqiu.com',
+            'look.cse3pl8tdbi.huanqiu.com': 'look.cse3pl8tdbi.huanqiu.com',
+            'world.huanqiu.com': 'world.cse3pl8tdbi.huanqiu.com',
+            'world.cse3pl8tdbi.huanqiu.com': 'world.cse3pl8tdbi.huanqiu.com',
+            'china.huanqiu.com': 'china.cse3pl8tdbi.huanqiu.com',
+            'china.cse3pl8tdbi.huanqiu.com': 'china.cse3pl8tdbi.huanqiu.com',
+            'mil.huanqiu.com': 'mil.cse3pl8tdbi.huanqiu.com',
+            'mil.cse3pl8tdbi.huanqiu.com': 'mil.cse3pl8tdbi.huanqiu.com',
+            'society.huanqiu.com': 'society.cse3pl8tdbi.huanqiu.com',
+            'society.cse3pl8tdbi.huanqiu.com': 'society.cse3pl8tdbi.huanqiu.com',
+            'v.huanqiu.com': 'v.cse3pl8tdbi.huanqiu.com',
+            'v.cse3pl8tdbi.huanqiu.com': 'v.cse3pl8tdbi.huanqiu.com',
+            'oversea.huanqiu.com': 'oversea.cse3pl8tdbi.huanqiu.com',
+            'oversea.cse3pl8tdbi.huanqiu.com': 'oversea.cse3pl8tdbi.huanqiu.com',
+            'taiwan.huanqiu.com': 'taiwan.cse3pl8tdbi.huanqiu.com',
+            'taiwan.cse3pl8tdbi.huanqiu.com': 'taiwan.cse3pl8tdbi.huanqiu.com',
+            'opinion.huanqiu.com': 'opinion.cse3pl8tdbi.huanqiu.com',
+            'opinion.cse3pl8tdbi.huanqiu.com': 'opinion.cse3pl8tdbi.huanqiu.com',
+            'corp.huanqiu.com': 'corp.cse3pl8tdbi.huanqiu.com',
+            'corp.cse3pl8tdbi.huanqiu.com': 'corp.cse3pl8tdbi.huanqiu.com',
+            'scroll.huanqiu.com': 'scroll.cse3pl8tdbi.huanqiu.com',
+            'scroll.cse3pl8tdbi.huanqiu.com': 'scroll.cse3pl8tdbi.huanqiu.com',
+            'house.huanqiu.com': 'house.cse3pl8tdbi.huanqiu.com',
+            'house.cse3pl8tdbi.huanqiu.com': 'house.cse3pl8tdbi.huanqiu.com'
+        }
+        // 区分稿件归属问题前端处理
+        var channel = {
+            'go-test-cs1806.huanqiu.com': '/e3pmh1tuv',
+            'go.huanqiu.com': '/e3pmh1tuv',
+            'go.cse3pl8tdbi.huanqiu.com': '/e3pmh1tuv',
+            'fashion.huanqiu.com': '/e3pn4vu2g',
+            'fashion.cse3pl8tdbi.huanqiu.com': '/e3pn4vu2g',
+            'capital.huanqiu.com': '/e5d59phvs',
+            'capital.cse3pl8tdbi.huanqiu.com': '/e5d59phvs',
+            'movie.huanqiu.com': '/e5ipl1avc',
+            'movie.cse3pl8tdbi.huanqiu.com': '/e5ipl1avc',
+            'art.huanqiu.com': '/e3pokdnam',
+            'art.cse3pl8tdbi.huanqiu.com': '/e3pokdnam',
+            'women.huanqiu.com': '/e5annnavo',
+            'women.cse3pl8tdbi.huanqiu.com': '/e5annnavo',
+            'ent.huanqiu.com': '/e3pmh1jtb',
+            'ent.cse3pl8tdbi.huanqiu.com': '/e3pmh1jtb',
+            'ski.huanqiu.com': '/e3pn63cna',
+            'ski.cse3pl8tdbi.huanqiu.com': '/e3pn63cna',
+            'sports.huanqiu.com': '/e3pmh3jvm',
+            'sports.cse3pl8tdbi.huanqiu.com': '/e3pmh3jvm',
+            'bigdata.huanqiu.com': '/e3pn606hg',
+            'bigdata.cse3pl8tdbi.huanqiu.com': '/e3pn606hg',
+            'gteu.huanqiu.com': '/e3pn7ff0v',
+            'gteu.cse3pl8tdbi.huanqiu.com': '/e3pn7ff0v',
+            'biz.huanqiu.com': '/e3pmh1rv3',
+            'biz.cse3pl8tdbi.huanqiu.com': '/e3pmh1rv3',
+            'v.huanqiu.com': '/e3pmh2fmu',
+            'v.cse3pl8tdbi.huanqiu.com': '/e3pmh2fmu',
+            'finance.huanqiu.com': '/e3pmh1hmp',
+            'finance.cse3pl8tdbi.huanqiu.com': '/e3pmh1hmp',
+            'tech.huanqiu.com': '/e3pmh164r',
+            'tech.cse3pl8tdbi.huanqiu.com': '/e3pmh164r',
+            'hope.huanqiu.com': '/e3pmh4858',
+            'hope.cse3pl8tdbi.huanqiu.com': '/e3pmh4858',
+            'game.huanqiu.com': '/e3pn52oi7',
+            'game.cse3pl8tdbi.huanqiu.com': '/e3pn52oi7',
+            'smart.huanqiu.com': '/e3pmh140m',
+            'smart.cse3pl8tdbi.huanqiu.com': '/e3pmh140m',
+            'cul.huanqiu.com': '/e3pn677q4',
+            'cul.cse3pl8tdbi.huanqiu.com': '/e3pn677q4',
+            'health.huanqiu.com': '/e3pmt7dq2',
+            'health.cse3pl8tdbi.huanqiu.com': '/e3pmt7dq2',
+            'auto.huanqiu.com': '/e3pmh24qk',
+            'auto.cse3pl8tdbi.huanqiu.com': '/e3pmh24qk',
+            'lx.huanqiu.com': '/e3pmh20mi',
+            'lx.cse3pl8tdbi.huanqiu.com': '/e3pmh20mi',
+            'luxury.huanqiu.com': '/e3pn6189k',
+            'luxury.cse3pl8tdbi.huanqiu.com': '/e3pn6189k',
+            'city.huanqiu.com': '/e3pmh1nv4',
+            'city.cse3pl8tdbi.huanqiu.com': '/e3pmh1nv4',
+            'quality.huanqiu.com': '/e3pmh1m0l',
+            'quality.cse3pl8tdbi.huanqiu.com': '/e3pmh1m0l',
+            'zhiku.huanqiu.com': '/e3pn61tat',
+            'zhiku.cse3pl8tdbi.huanqiu.com': '/e3pn61tat',
+            'anquan.huanqiu.com': '/e3pn61f78',
+            'anquan.cse3pl8tdbi.huanqiu.com': '/e3pn61f78',
+            'china.huanqiu.com': '/e3pmh1nnq',
+            'china.cse3pl8tdbi.huanqiu.com': '/e3pmh1nnq',
+            'world.huanqiu.com': '/e3pmh22ph',
+            'world.cse3pl8tdbi.huanqiu.com': '/e3pmh22ph',
+            'mil.huanqiu.com': '/e3pmh1dm8',
+            'mil.cse3pl8tdbi.huanqiu.com': '/e3pmh1dm8',
+            'society.huanqiu.com': '/e3pmh19vt',
+            'society.cse3pl8tdbi.huanqiu.com': '/e3pmh19vt',
+            'taiwan.huanqiu.com': '/e3pmh1fmg',
+            'taiwan.cse3pl8tdbi.huanqiu.com': '/e3pmh1fmg',
+            'opinion.huanqiu.com': '/e3pmub6h5',
+            'opinion.cse3pl8tdbi.huanqiu.com': '/e3pmub6h5',
+            'oversea.huanqiu.com': '/e3pmt7bdh',
+            'oversea.cse3pl8tdbi.huanqiu.com': '/e3pmt7bdh',
+            'look.huanqiu.com': '/e3pn4q8sp',
+            'look.cse3pl8tdbi.huanqiu.com': '/e3pn4q8sp',
+            'uav.huanqiu.com': '/e3pn5tffs',
+            'uav.cse3pl8tdbi.huanqiu.com': '/e3pn5tffs',
+            'aero.huanqiu.com': '/e3pn7fl9r',
+            'aero.cse3pl8tdbi.huanqiu.com': '/e3pn7fl9r',
+            'scroll.huanqiu.com': '/e3pmh1rv3',
+            'scroll.cse3pl8tdbi.huanqiu.com': '/e3pmh1rv3',
+            'house.huanqiu.com': '/e8nf57tcn',
+            'house.cse3pl8tdbi.huanqiu.com': '/e8nf57tcn'
+        }
+        function getURL0(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = decodeURIComponent(window.location.search).substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        }
+        // 判断是dp环境
+        if(global_host.host != ''&&global_host.path != ''&&getURL0('dp_debug') == 1){
+            window.host = 'https://' + global_host.host;
+            window.host1 = '//' + global_host.path;
+        }else{
+            window.host = '//' + window.location.host;
+            window.host1 = '//' + hosts[window.location.host] + window.location.pathname;
+        }</script><meta name="keywords" id='meta-k' content="["风险","高血压","孕期","心脏疾病"]"/><meta name="description"  content="一项美国研究表明，孕妇在妊娠期患上高血压会增加日后复发的风险，还会增加诸如高胆固醇，糖尿病及心脏疾病这些高危疾病的风险。" /><title>孕期高血压易增加日后复发与心脏疾病风险</title><script type="text/javascript">// 	var article = {
+    //         aid : "9CaKrnKa7CH",
+    //         ext_phpcmsv9aid : "12422635",
+    //         title : "孕期高血压易增加日后复发与心脏疾病风险",
+    //         author :[],
+    //         keyboarder :{"email":"shaqiong@huanqiu.com","name":"沙琼"},
+    //         source :{"name":"环球网","url":""},
+    //         keywords :["风险","高血压","孕期","心脏疾病"],
+    //         ctime : "1530770940000",
+    //         ext_displaytime: "1530770940000",
+    //         ext_defertime:"",
+    //         catnode : "/e3pmt7dq2/e3pn50ich",
+    //         ext_serious : "1",
+    //         ext_relation:[],
+    //         addltype:"normal",
+    //         hosts1:"https://capital.huanqiu.com",
+    //         hosts2:"https://movie.huanqiu.com"
+    //     };
+        var cs_article = "{\"lang\":\"zh-Hans\",\"step\":\"ju9hny73\",\"cover\":\"\\/\\/himg2.huanqiucdn.cn\\/attachment2010\\/2018\\/0705\\/14\\/10\\/20180705021045288.jpg\",\"ctime\":1530770940000,\"title\":\"\\u5b55\\u671f\\u9ad8\\u8840\\u538b\\u6613\\u589e\\u52a0\\u65e5\\u540e\\u590d\\u53d1\\u4e0e\\u5fc3\\u810f\\u75be\\u75c5\\u98ce\\u9669\",\"utime\":1530771054000,\"vflag\":1,\"author\":[],\"source\":{\"name\":\"\\u73af\\u7403\\u7f51\",\"url\":\"\"},\"catnode\":\"\\/e3pmt7dq2\\/e3pn50ich\",\"content\":\"<article><section data-type=\\\"rtext\\\"><p><img src=\\\"\\/\\/himg2.huanqiucdn.cn\\/attachment2010\\/2018\\/0705\\/14\\/10\\/20180705021045288.jpg\\\"\\/><\\/p><p>\\u3010\\u73af\\u7403\\u7f51\\u7efc\\u5408\\u62a5\\u9053\\u3011\\u636e\\u5916\\u5a927\\u67082\\u65e5\\u62a5\\u9053\\uff0c\\u8fd1\\u65e5\\uff0c\\u4e00\\u9879\\u7f8e\\u56fd\\u7814\\u7a76\\u8868\\u660e\\uff0c\\u5b55\\u5987\\u5728\\u598a\\u5a20\\u671f\\u60a3\\u4e0a\\u9ad8\\u8840\\u538b\\u4f1a\\u589e\\u52a0\\u65e5\\u540e\\u590d\\u53d1\\u7684\\u98ce\\u9669\\uff0c\\u9664\\u6b64\\u4e4b\\u5916\\uff0c\\u8fd8\\u4f1a\\u589e\\u52a0\\u8bf8\\u5982\\u9ad8\\u80c6\\u56fa\\u9187\\uff0c\\u7cd6\\u5c3f\\u75c5\\u53ca\\u5fc3\\u810f\\u75be\\u75c5\\u8fd9\\u4e9b\\u9ad8\\u5371\\u75be\\u75c5\\u7684\\u98ce\\u9669\\u3002<\\/p><p>\\u5b55\\u671f\\u9ad8\\u8840\\u538b\\u4e34\\u5e8a\\u8868\\u73b0\\u5e38\\u51fa\\u73b0\\u5b50\\u75eb\\u524d\\u671f\\u548c\\u598a\\u5a20\\u9ad8\\u8840\\u538b\\u8fd9\\u4e24\\u79cd\\u5f62\\u5f0f\\u3002\\u636e\\u5148\\u524d\\u7814\\u7a76\\u8868\\u660e\\uff0c\\u5b55\\u671f\\u9ad8\\u8840\\u538b\\u75c7\\u72b6\\u5c06\\u589e\\u52a0\\u65e5\\u540e\\u51fa\\u73b0\\u5fc3\\u810f\\u75be\\u75c5\\u7684\\u98ce\\u9669\\uff0c\\u800c\\u6700\\u65b0\\u7684\\u7814\\u7a76\\u8fdb\\u4e00\\u6b65\\u660e\\u786e\\u4e86\\u54ea\\u7c7b\\u5b55\\u5987\\u4f1a\\u5bb9\\u6613\\u60a3\\u6709\\u598a\\u5a20\\u9ad8\\u8840\\u538b\\u3002<\\/p><p>\\u7814\\u7a76\\u4eba\\u5458\\u9488\\u5bf9\\u57281964\\u52302008\\u5e74\\u9996\\u6b21\\u751f\\u80b2\\u76845.9\\u4e07\\u5987\\u5973\\u8fdb\\u884c\\u8c03\\u67e5\\u7814\\u7a76\\uff0c\\u8fd9\\u4e9b\\u7814\\u7a76\\u5bf9\\u8c61\\u5e73\\u5747\\u751f\\u80b2\\u5e74\\u9f84\\u4e3a27\\u5c81\\u3002\\u5176\\u4e2d 2.9% \\u7684\\u5b55\\u5987\\u60a3\\u6709\\u598a\\u5a20\\u9ad8\\u8840\\u538b\\uff0c6.3%\\u60a3\\u6709\\u5b50\\u75eb\\u524d\\u671f\\uff0c\\u800c\\u5b50\\u75eb\\u524d\\u671f\\u4e5f\\u662f\\u598a\\u5a20\\u9ad8\\u8840\\u538b\\u4e2d\\u8f83\\u4e3a\\u4e25\\u91cd\\u7684\\u7c7b\\u578b \\u3002<\\/p><p>\\u76f8\\u8f83\\u4e8e\\u598a\\u5a20\\u671f\\u8840\\u538b\\u6b63\\u5e38\\u7684\\u5b55\\u5987\\uff0c\\u60a3\\u6709\\u598a\\u5a20\\u671f\\u9ad8\\u8840\\u538b\\u7684\\u5b55\\u5987\\u5728\\u65e5\\u540e\\u7684\\u751f\\u6d3b\\u4e2d\\u518d\\u6b21\\u60a3\\u9ad8\\u8840\\u538b\\u7684\\u98ce\\u9669\\u53ef\\u80fd\\u589e\\u52a0\\u4e24\\u500d\\uff0c\\u800c\\u60a3\\u6709\\u5b50\\u75eb\\u524d\\u671f\\u7684\\u5b55\\u5987\\u5c06\\u5728\\u65e5\\u540e\\u518d\\u6b21\\u51fa\\u73b0\\u7684\\u98ce\\u9669\\u589e\\u52a0\\u4e00\\u500d\\u591a\\u3002<\\/p><p>\\u60a3\\u6709\\u598a\\u5a20\\u9ad8\\u8840\\u538b\\u7684\\u5973\\u6027\\u5c06\\u670965%\\u7684\\u53ef\\u80fd\\u6027\\u4f1a\\u60a3\\u6709\\u7cd6\\u5c3f\\u75c5\\uff0c36%\\u7684\\u53ef\\u80fd\\u6027\\u60a3\\u6709\\u9ad8\\u80c6\\u56fa\\u9187\\u3002\\u800c\\u60a3\\u6709\\u5b50\\u75eb\\u524d\\u671f\\u7684\\u5b55\\u5987\\u5c06\\u5728\\u65e5\\u540e\\u670975%\\u60a3\\u6709\\u7cd6\\u5c3f\\u75c5\\u7684\\u98ce\\u9669\\u4ee5\\u53ca31%\\u60a3\\u6709\\u9ad8\\u80c6\\u56fa\\u9187\\u7684\\u53ef\\u80fd\\u3002(\\u5b9e\\u4e60\\u7f16\\u8bd1\\uff1a\\u5f90\\u5fc3\\u96e8 \\u5ba1\\u7a3f\\uff1a\\u5218\\u6d0b)<\\/p><\\/section><\\/article>\",\"summary\":\"\\u4e00\\u9879\\u7f8e\\u56fd\\u7814\\u7a76\\u8868\\u660e\\uff0c\\u5b55\\u5987\\u5728\\u598a\\u5a20\\u671f\\u60a3\\u4e0a\\u9ad8\\u8840\\u538b\\u4f1a\\u589e\\u52a0\\u65e5\\u540e\\u590d\\u53d1\\u7684\\u98ce\\u9669\\uff0c\\u8fd8\\u4f1a\\u589e\\u52a0\\u8bf8\\u5982\\u9ad8\\u80c6\\u56fa\\u9187\\uff0c\\u7cd6\\u5c3f\\u75c5\\u53ca\\u5fc3\\u810f\\u75be\\u75c5\\u8fd9\\u4e9b\\u9ad8\\u5371\\u75be\\u75c5\\u7684\\u98ce\\u9669\\u3002\",\"verdead\":false,\"addltype\":\"normal\",\"keywords\":[\"\\u98ce\\u9669\",\"\\u9ad8\\u8840\\u538b\",\"\\u5b55\\u671f\",\"\\u5fc3\\u810f\\u75be\\u75c5\"],\"subtitle\":\"\\u5b55\\u671f\\u9ad8\\u8840\\u538b\\u6613\\u589e\\u52a0\\u5fc3\\u810f\\u75c5\\u98ce\\u9669\",\"typedata\":null,\"copyright\":{\"name\":\"\\u6388\\u6743\\u8f6c\\u8f7d\",\"url\":\"\"},\"isdeleted\":false,\"fingermark\":\"\",\"keyboarder\":{\"email\":\"shaqiong@huanqiu.com\",\"name\":\"\\u6c99\\u743c\"},\"editor\":{\"email\":\"shaqiong@huanqiu.com\",\"name\":\"\\u6c99\\u743c\"},\"tags\":[],\"ext-cms\":\"{\\\"id\\\":\\\"12422635\\\",\\\"catid\\\":\\\"998\\\",\\\"typeid\\\":\\\"0\\\",\\\"style\\\":\\\"\\\",\\\"thumb\\\":\\\"http:\\\\\\/\\\\\\/c.huanqiu.com\\\\\\/attachment2010\\\\\\/2018\\\\\\/0705\\\\\\/14\\\\\\/10\\\\\\/20180705021045288.jpg\\\",\\\"posids\\\":\\\"0\\\",\\\"url\\\":\\\"http:\\\\\\/\\\\\\/health.huanqiu.com\\\\\\/baby\\\\\\/2018-07\\\\\\/12422635.html\\\",\\\"listorder\\\":\\\"0\\\",\\\"status\\\":\\\"99\\\",\\\"sysadd\\\":\\\"1\\\",\\\"islink\\\":\\\"0\\\",\\\"username\\\":\\\"shaqiong\\\",\\\"inputtime\\\":\\\"1530770940\\\",\\\"inputtime_human\\\":\\\"20180705\\\",\\\"updatetime\\\":\\\"1530771054\\\",\\\"weight\\\":\\\"50\\\",\\\"author\\\":\\\"\\\",\\\"bytj\\\":\\\"1\\\",\\\"relpic\\\":\\\"0\\\",\\\"bqy_id\\\":\\\"\\\",\\\"readpoint\\\":\\\"0\\\",\\\"groupids_view\\\":\\\"\\\",\\\"paginationtype\\\":\\\"0\\\",\\\"maxcharperpage\\\":\\\"10000\\\",\\\"template\\\":\\\"\\\",\\\"paytype\\\":\\\"0\\\",\\\"relation\\\":\\\"\\\",\\\"voteid\\\":\\\"0\\\",\\\"allow_comment\\\":\\\"1\\\",\\\"copyfrom\\\":\\\"\\\\u73af\\\\u7403\\\\u7f51|0\\\",\\\"relationspecial\\\":\\\"\\\",\\\"haina\\\":\\\"0\\\",\\\"t_pic\\\":\\\"1\\\",\\\"yurl\\\":\\\"\\\",\\\"jingpin\\\":\\\",,\\\"}\",\"ext-cmsurl\":\"http:\\/\\/health.huanqiu.com\\/baby\\/2018-07\\/12422635.html\",\"ext-serious\":1,\"ext-weight\":50,\"ext-medianame\":\"\",\"ext-realname\":\"\\u6c99\\u743c\",\"ext-displaytime\":1530770940000,\"ext-xtime\":1530770940000,\"ext-phpcmsv9aid\":12422635,\"ext-CommentStatus\":true,\"ext-relation\":null,\"state\":5,\"aid\":\"9CaKrnKa7CH\",\"ver\":\"7gc70s6o\",\"flow\":\"fjtr0dbdq\",\"fingerprint\":{\"s3\":\"1b98\",\"s0\":\"181a\",\"s1\":\"8638\",\"s2\":\"1e25\"}}";
+        //console.log(JSON.parse(cs_article));
+        var article = JSON.parse(cs_article),
+            article_custom = {
+                    hosts1:"https://capital.huanqiu.com",
+                    hosts2:"https://movie.huanqiu.com"
+            };
+        var articleMore={
+            more1:"",
+            more2:"",
+            more3:"",
+            more4:"",
+            more5:""
+        };
+        window.onload = function(){
+            $('#meta-k').attr('content', article.keywords.join(','));
+        }
+        function getURL0(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = decodeURIComponent(window.location.search).substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        }
+        // 如果是图集字段出现在普通详情页并且不是预览环境跳转
+        // if(article.addltype == 'gallery' && getURL0('dp_debug') != 1){
+        //     window.location.href="/error/404";
+        // }
+        
+        // 判断文章节点
+        if(article.addltype == 'gallery'||article.catnode.indexOf(channel[window.location.host]) == -1){
+            // 判断环境
+            if(window.location.host == 'cs1806.solution9.net'||getURL0('dp_debug') == 1){
+            }else{
+                window.location.href="/error/404";
+            }
+        }</script><!--Ad Survey 广告加载基础代码--><script type="text/javascript" src="https://ipengtai.huanqiu.com/resource/js/base_mobile2.js"></script><link rel="stylesheet" type="text/css" href="//rs1.huanqiucdn.cn/dp/api/assets?dp_csid=cse3pl8tdbi&dp_instanceid=dpe3plc9q0n&dp_commit=d54f1818054e9b1fbc923b02a7741234f2da062a&dp_path=/layouts/global/global.css,layouts/go_article/go_article.css,controls/go_article_nav/go_article_nav.css,controls/go1_article_content/go1_article_content.css">
+<link href="//himg2.huanqiu.com/statics/images/favicon1.ico" rel="shortcut icon" /></head><body><!-- S 导航--><div class="topIndex" id="header-wrap"><div id="top-ad-wrap" style="display:none;"><div class="onPadding"><div class="topAd_01"><!-- Ad Survey 广告位代码  文章页-顶通--><script type="text/javascript">AD_SURVEY_Add_AdPos("7003383");</script></div></div></div><div class="hdTop"><div class="navClick"></div><div class="navTopSec"><div class="nav-container"><a href="//www.huanqiu.com" target="_self" class="nav-logo"></a><i class="l-line"></i><div class="nav-section"><div class="nav-section-submenu"><!--<a href="#" target="_blank">国际</a><i>›</i><a href="#" target="_blank">国际新闻</a><i>›</i><a href="#" target="_blank">独家</a>--></div><div class="nav-section-article-title"></div></div><form id="search-form" class="search-form" action="" name="headerSearch"><div class="search-form-fields"><input class="search-input" type="text" placeholder="请输入..."><input type="button" class="search-submit-button" value="»"></div><div class="search-button" id="search-button"></div></form><div class="nav-menu" id="menu"></div></div></div><div class="navFlyout"><div class="nav-flyout-container"><div class="nav-flyout-menu-item s-hight"><div class="nav-flyout-menu-item-title"><h3>时政2<span>&</span>博览</h3><h4>Politics<span>&</span>Look</h4></div><ul class="nav-flyout-menu-item-list"><li><a href="#" target="_blank"><span class="name-cn">国际</span><span class="name-en">World</span></a></li><li><a href="#" target="_blank"><span class="name-cn">军事</span><span class="name-en">China</span></a></li><li><a href="#" target="_blank"><span class="name-cn">国内</span><span class="name-en">Military</span></a></li><li><a href="#" target="_blank"><span class="name-cn">台湾</span><span class="name-en">Taiwan</span></a></li><li><a href="#" target="_blank"><span class="name-cn">社会</span><span class="name-en">Society</span></a></li><li><a href="#" target="_blank"><span class="name-cn">博览</span><span class="name-en">Look</span></a></li></ul></div><div class="nav-flyout-menu-item s-hight"><div class="nav-flyout-menu-item-title"><h3>财经<span>&</span>科技</h3><h4>Finance<span>&</span>Technology</h4></div><ul class="nav-flyout-menu-item-list long"><li><a href="#" target="_blank"><span class="name-cn">财经</span><span class="name-en">Financial</span></a></li><li><a href="#" target="_blank"><span class="name-cn">一带一路</span><span class="name-en">Belt and Road</span></a></li><li><a href="#" target="_blank"><span class="name-cn">财观察</span><span class="name-en">Observation</span></a></li><li><a href="#" target="_blank"><span class="name-cn">科技</span><span class="name-en">Technology</span></a></li></ul></div><div class="nav-flyout-menu-item s-hight"><div class="nav-flyout-menu-item-title"><h3>汽车<span>&</span>数码</h3><h4>Auto<span>&</span>Digital</h4></div><ul class="nav-flyout-menu-item-list long3"><li><a href="#" target="_blank"><span class="name-cn">汽车</span><span class="name-en">Auto</span></a></li><li><a href="#" target="_blank"><span class="name-cn">智能</span><span class="name-en">Smart</span></a></li><li><a href="#" target="_blank"><span class="name-cn">数码</span><span class="name-en">Digital</span></a></li><li><a href="#" target="_blank"><span class="name-cn">无人机</span><span class="name-en">UVA</span></a></li><li><a href="#" target="_blank"><span class="name-cn">游戏</span><span class="name-en">Game</span></a></li></ul></div><div class="nav-flyout-menu-item"><div class="nav-flyout-menu-item-title"><h3>生活</h3><h4>Life News</h4></div><ul class="nav-flyout-menu-item-list"><li><a href="#" target="_blank"><span class="name-cn">旅游</span><span class="name-en">Tourism</span></a></li><li><a href="#" target="_blank"><span class="name-cn">健康</span><span class="name-en">Hearth</span></a></li><li><a href="#" target="_blank"><span class="name-cn">教育</span><span class="name-en">Education</span></a></li><li><a href="#" target="_blank"><span class="name-cn">质量</span><span class="name-en">Quality</span></a></li><li><a href="#" target="_blank"><span class="name-cn">体育</span><span class="name-en">Sports</span></a></li><li><a href="#" target="_blank"><span class="name-cn">跑步</span><span class="name-en">Run</span></a></li><li><a href="#" target="_blank"><span class="name-cn">滑雪</span><span class="name-en">Skiing</span></a></li></ul></div><div class="nav-flyout-menu-item"><div class="nav-flyout-menu-item-title"><h3>风尚</h3><h4>Fashion News</h4></div><ul class="nav-flyout-menu-item-list"><li><a href="#" target="_blank"><span class="name-cn">娱乐</span><span class="name-en">Entertainment</span></a></li><li><a href="#" target="_blank"><span class="name-cn">时尚</span><span class="name-en">Fashion</span></a></li><li><a href="#" target="_blank"><span class="name-cn">艺术</span><span class="name-en">Art</span></a></li><li><a href="#" target="_blank"><span class="name-cn">品鉴</span><span class="name-en">Luxury</span></a></li><li><a href="#" target="_blank"><span class="name-cn">文化</span><span class="name-en">Culture</span></a></li><li><a href="#" target="_blank"><span class="name-cn">公益</span><span class="name-en">Commonweal</span></a></li></ul></div><div class="nav-flyout-menu-item"><div class="nav-flyout-menu-item-title"><h3>特色<span>&</span>产品</h3><h4>Featured<span>&</span>Products</h4></div><ul class="nav-flyout-menu-item-list long2"><li><a href="#" target="_blank"><span class="name-cn">环球社评</span><span class="name-en">Editorial</span></a></li><li><a href="#" target="_blank"><span class="name-cn">海外看中国</span><span class="name-en">Oversee</span></a></li><li><a href="#" target="_blank"><span class="name-cn">环球 TIME</span><span class="name-en"></span></a></li><li><a href="#" target="_blank"><span class="name-cn">环游号</span><span class="name-en"></span></a></li></ul></div><div class="nav-flyout-menu-item"><div class="nav-flyout-menu-item-title"><h3>环球时报</h3><h4>Newspaper Products</h4></div><ul class="nav-flyout-menu-item-list"><li><a href="#" target="_blank"><p>版权数据库</p></a></li><li><a href="#" target="_blank"><p>生命时报</p></a></li><li><a href="#" target="_blank"><p>品牌活动</p></a></li><li><a href="#" target="_blank"><p>环球旅游周刊</p></a></li><li><a href="#" target="_blank"><p>环球时报公基金会</p></a></li><li><a href="#" target="_blank"><p>讽刺与幽默</p></a></li><li><a href="#" target="_blank"><p>舆情中心</p></a></li><li><a href="#" target="_blank"><p>Global Times</p></a></li></ul></div><div class="nav-flyout-menu-item"><div class="nav-flyout-menu-item-title"><h3>合作</h3><h4>Cooperation</h4></div><ul class="nav-flyout-menu-item-list long3"><li><a href="#" target="_blank"><span class="name-cn">商协会</span><span class="name-en">Chamber</span></a></li><li><a href="#" target="_blank"><span class="name-cn">大数据</span><span class="name-en">Bigdatat</span></a></li><li><a href="#" target="_blank"><span class="name-cn">商业</span><span class="name-en">Business</span></a></li><li><a href="#" target="_blank"><span class="name-cn">城市</span><span class="name-en">City</span></a></li></ul></div></div></div></div></div><!-- E 导航--><!-- 内容部分 --><div class="all-con"><div class="container"><div class="kong"></div><!-- 标题、信息部分 --><div class="t-container"><div class="t-container-title"><h3>孕期高血压易增加日后复发与心脏疾病风险</h3></div><div class="t-container-metadata"><div class="metadata-info"><p><span class="source">来源：<em></em></span><span class="author">作者：<em></em></span></p><p class="time"></p></div><div class="bshare-custom icon-medium-plus metadata-share"><div class="bsPromo bsPromo2"></div><ul><li><a id="l-edit2" class="talk talk-v"><span></span></a></li><li><a title="分享到微信" class="wechat bshare-weixin" href="javascript:void(0);"></a></li><li><a title="分享到新浪微博" class="weibo bshare-sinaminiblog" href="javascript:void(0);"></a></li><li><a title="分享到QQ好友" class="qq bshare-qqim" href="javascript:void(0);"></a></li></ul></div><script type="text/javascript" charset="utf-8" src="https://t1.huanqiucdn.cn/cs/share/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="//static.bshare.cn/b/bshareC0.js"></script></div></div><div class="b-container"><!-- 文章内容部分（左侧） --><div class="l-container"><!--详情页内容区--><div class="l-con clear"><article><section data-type="rtext"><p><img src="//himg2.huanqiucdn.cn/attachment2010/2018/0705/14/10/20180705021045288.jpg"/></p><p>【环球网综合报道】据外媒7月2日报道，近日，一项美国研究表明，孕妇在妊娠期患上高血压会增加日后复发的风险，除此之外，还会增加诸如高胆固醇，糖尿病及心脏疾病这些高危疾病的风险。</p><p>孕期高血压临床表现常出现子痫前期和妊娠高血压这两种形式。据先前研究表明，孕期高血压症状将增加日后出现心脏疾病的风险，而最新的研究进一步明确了哪类孕妇会容易患有妊娠高血压。</p><div id="content-ad"><!-- Ad Survey 广告位代码  文章内页画中画08--><script type="text/javascript">AD_SURVEY_Add_AdPos("7004636");</script></div><p>研究人员针对在1964到2008年首次生育的5.9万妇女进行调查研究，这些研究对象平均生育年龄为27岁。其中 2.9% 的孕妇患有妊娠高血压，6.3%患有子痫前期，而子痫前期也是妊娠高血压中较为严重的类型 。</p><p>相较于妊娠期血压正常的孕妇，患有妊娠期高血压的孕妇在日后的生活中再次患高血压的风险可能增加两倍，而患有子痫前期的孕妇将在日后再次出现的风险增加一倍多。</p><p>患有妊娠高血压的女性将有65%的可能性会患有糖尿病，36%的可能性患有高胆固醇。而患有子痫前期的孕妇将在日后有75%患有糖尿病的风险以及31%患有高胆固醇的可能。(实习编译：徐心雨 审稿：刘洋)</p></section></article><!--<div id="content-ad">--><!--Ad Survey 广告位代码  文章页内嵌画中画--><!--<script type="text/javascript">AD_SURVEY_Add_AdPos("7004636");</script>--><!--</div>--></div><div class="l-edit" id="l-edit"><div class="l-sign"><a href="mailto:jubao@huanqiu.com" ><i class="icon-sign"></i>举报</a><a href="#" id="comment"><i class="icon-comment"></i>我也说两句</a><p class="edit-peo"></p></div><p class="edit-info"></p></div><!-- 相关新闻 --><div class="l-aboutNews"><h3><span></span>相关新闻</h3><ul></ul></div></div><!-- /文章内容部分（左侧） --><!-- 相关部分（右侧） --><div class="r-container"><div class="r-small-l"><div class="r-aboutNews s-box"></div><div class="ad_250"><!-- Ad Survey 广告位代码  文章页画中画01--><script type="text/javascript">AD_SURVEY_Add_AdPos("7003385");</script></div><!--环球时事--><div class="r-hqNews s-box"><h3><span></span>环球时事<a href="//world.huanqiu.com" class="more" target="_blank"></a></h3><ul class="r-hqNews-ul"><li><a href="//world.huanqiu.com/article/9CaKrnKn8nN" target="_blank" dataLink="" class="outside-Link"><p class="oBold">美人计？！北约士兵在交友软件上被骗约会，不料成了信息试验“小白鼠”</p><!--<span>1570277160000</span>--></a></li><li><a href="//world.huanqiu.com/article/9CaKrnKn8lm" target="_blank" dataLink="" class="outside-Link"><p>孟晚舟：无论天涯海角我们的心永远和祖国在一起</p><!--<span>1570274640000</span>--></a></li><li><a href="//world.huanqiu.com/article/9CaKrnKn8lk" target="_blank" dataLink="" class="outside-Link"><p>波音和巴西航空工业公司结盟恐妨碍竞争？欧盟调查</p><!--<span>1570273800000</span>--></a></li><li><a href="//mil.huanqiu.com/article/7QwlOyHF9Ic" target="_blank" dataLink="" class="outside-Link"><p>美通用动力竞标新装甲车取代美布拉德利战车</p><!--<span>1570245688098</span>--></a></li><li><a href="//mil.huanqiu.com/article/7QwfX0h8EKI" target="_blank" dataLink="" class="outside-Link"><p>印承认印巴空战中米17被己方击落 因未开敌我识别</p><!--<span>1570240764748</span>--></a></li><li><a href="//oversea.huanqiu.com/article/9CaKrnKn5nn" target="_blank" dataLink="" class="outside-Link"><p>美财政部：当前没有阻止中企在美上市计划</p><!--<span>1569825720000</span>--></a></li></ul><ul class="r-hqNews-ul"><li><a href="//china.huanqiu.com/article/9CaKrnKn8jm" target="_blank" dataLink="" class="outside-Link"><p class="oBold">港警凌晨通报昨夜乱局，香港今天几乎半城停摆</p><!--<span>1570271160000</span>--></a></li><li><a href="//china.huanqiu.com/article/9CaKrnKn8eV" target="_blank" dataLink="" class="outside-Link"><p>林郑月娥发表电视讲话谴责暴力，形容香港昨晚“度过黑暗的一夜”</p><!--<span>1570262220000</span>--></a></li><li><a href="//society.huanqiu.com/article/9CaKrnKn84n" target="_blank" dataLink="" class="outside-Link"><p>西湖音乐喷泉引游客竞相打卡：现场提前三小时坐满</p><!--<span>1570244040000</span>--></a></li><li><a href="//society.huanqiu.com/article/9CaKrnKn82D" target="_blank" dataLink="" class="outside-Link"><p>消防男友国庆不放假，女护士“上门”求婚</p><!--<span>1570240380000</span>--></a></li><li><a href="//opinion.huanqiu.com/article/9CaKrnKn7HV" target="_blank" dataLink="" class="outside-Link"><p>社评：香港通过《禁蒙面法》，击中暴力的七寸</p><!--<span>1570178160000</span>--></a></li><li><a href="//taiwan.huanqiu.com/article/9CaKrnKn0Bd" target="_blank" dataLink="" class="outside-Link"><p>国台办：会邀请台湾同胞共襄盛举，参与国庆期间几场重要活动</p><!--<span>1569380040000</span>--></a></li></ul></div><div class="ad_250"><!-- Ad Survey 广告位代码  文章页画中画02--><script type="text/javascript">AD_SURVEY_Add_AdPos("7003386");</script></div><!--环球业界--><div class="r-hqIndustry s-box"><h3><span></span>环球业界<a href="//finance.huanqiu.com" class="more" target="_blank"></a></h3><div class="hqIndustry-pic"><div class="pic-item right"><a href="//finance.huanqiu.com/article/9CaKrnKmZI8" target="_blank" dataLink="" class="outside-Link"><div class="pic-item-block"><img src="//himg2.huanqiucdn.cn/attachment2010/2019/0924/12/25/20190924122521914.png" title="被资本热捧的RPA，踩在财税管理智能化风口" alt=""></div><p><span>RPA踩在财税管理智能化风口</span></p></a></div><div class="pic-item"><a href="//tech.huanqiu.com/gallery/9CaKrnQhWZW" target="_blank" dataLink="" class="outside-Link"><div class="pic-item-block"><img src="https://rs1.huanqiucdn.cn/dp/api/images//Qb60RxcOi5SKAuE0QBnnGG16.jpg" title="体验火星生活" alt=""></div><p><span>体验火星生活</span></p></a></div></div><ul><li><a href="//finance.huanqiu.com/article/7Qw8Dp5VEKk" target="_blank" dataLink="" class="outside-Link">今年国庆最会花钱的人是他们？</a></li><li><a href="//finance.huanqiu.com/article/7Qw8xFixLgI" target="_blank" dataLink="" class="outside-Link">国庆前4天实现国内旅游收入4526.3亿，增长8.58%</a></li><li><a href="//tech.huanqiu.com/gallery/9CaKrnQhWZU" target="_blank" dataLink="" class="outside-Link">组图：澳洲一酒吧调试出发光鸡尾酒</a></li><li><a href="//tech.huanqiu.com/gallery/9CaKrnQhWZV" target="_blank" dataLink="" class="outside-Link">5G自动微公交将率先在浙江乌镇“起跑”</a></li><li><a href="//tech.huanqiu.com/article/9CaKrnKn2xU" target="_blank" dataLink="" class="outside-Link">外媒对比四大旗舰夜景：Mate 30 Pro胜出</a></li></ul></div><div class="ad_250"><!-- Ad Survey 广告位代码  文章页画中画03--><script type="text/javascript">AD_SURVEY_Add_AdPos("7003387");</script></div><!--环球时尚--><div class="r-hqFashion s-box"><h3><span></span>环球风尚<a href="//fashion.huanqiu.com" class="more" target="_blank"></a></h3><ul><li class="right"><a href="//ent.huanqiu.com/article/9CaKrnKn7mc" target="_blank" dataLink="" class="outside-Link"><div class="pic-item"><img src="//himg2.huanqiucdn.cn/attachment2010/2019/1004/20191004072535736.png?w=260" alt="baby背帆布袋买菜 妆容精致菜场变秀场"></div><p>baby背帆布袋买菜</p></a></li><li><a href="//fashion.huanqiu.com/gallery/7QmJLBmOphe" target="_blank" dataLink="" class="outside-Link"><div class="pic-item"><img src="https://rs1.huanqiucdn.cn/dp/api/images/imageDir/910f59d2219a116d55b89daa42d796a2u5.jpg?w=260" alt="秦海璐秋季身着长裙，更显知性美！"></div><p>秦海璐</p></a></li><li class="right"><a href="//luxury.huanqiu.com/article/9CaKrnKn4mT" target="_blank" dataLink="" class="outside-Link"><div class="pic-item"><img src="//himg2.huanqiucdn.cn/attachment2010/2019/0929/20190929111626177.jpeg?w=260" alt="经典时计，华夏情长  瑞士高级制表品牌宝珀Blancpain的中国情缘"></div><p>Blancpain的中国情缘</p></a></li><li><a href="///article/" target="_blank" dataLink="http://lx.huanqiu.com/lxnews/2019-07/15225738.html" class="outside-Link"><div class="pic-item"><img src="//himg2.huanqiu.com/attachment2010/2019/0731/09/14/20190731091411276.jpg?w=260" alt="丁书媛：永远保持“求知欲”"></div><p>丁书媛：永远保持“求知欲”</p></a></li></ul></div></div><div class="r-small-r"><div class="ad_250"><!-- Ad Survey 广告位代码  文章页画中画04--><script type="text/javascript">AD_SURVEY_Add_AdPos("7003388");</script></div><!--环球产经--><div class="r-hqIndustry s-box"><h3><span></span>环球产经<a href="//lx.huanqiu.com" class="more" target="_blank"></a></h3><div class="hqIndustry-pic"><div class="pic-item right"><a href="//auto.huanqiu.com/article/7QnUytqMseI" target="_blank" dataLink="" class="outside-Link"><div class="pic-item-block"><img src="https://rs1.huanqiucdn.cn/dp/api/images/imageDir/09c4df488ed8eb51cc3309ce5baeeea3u5.jpg" title="预售价18万元起 广汽本田全新SUV皓影发布" alt=""></div><p><span>广汽本田全新SUV皓影发布</span></p></a></div><div class="pic-item"><a href="//health.huanqiu.com/article/9CaKrnKmQBQ" target="_blank" dataLink="" class="outside-Link"><div class="pic-item-block"><img src="//himg2.huanqiucdn.cn/attachment2010/2019/0916/10/23/20190916102314980.jpg" title="寄望新品提振业绩 济川药业消字号产品却涉嫌虚假宣传" alt=""></div><p><span>济川药业涉嫌虚假宣传</span></p></a></div></div><ul class="hqcj-dis"><li><a href="//lx.huanqiu.com/article/9CaKrnKn4uD" target="_blank" dataLink="" class="outside-Link">英国逾四分之一中学生请补习教师</a></li><li><a href="//health.huanqiu.com/article/9CaKrnKmROO" target="_blank" dataLink="" class="outside-Link">致癌物质减少其他危害增加 揭开电子烟的真面目</a></li><li><a href="//auto.huanqiu.com/article/7QnUytqMseI" target="_blank" dataLink="" class="outside-Link">预售价18万元起 广汽本田全新SUV皓影发布</a></li><li><a href="//quality.huanqiu.com/article/7Q2P3389HpK" target="_blank" dataLink="" class="outside-Link">大众汽车在澳大利亚“排放门”新进展：大众与澳车主和解或赔1.27亿澳元</a></li><li><a href="//city.huanqiu.com/article/9CaKrnKmSdA" target="_blank" dataLink="" class="outside-Link">想让消费者买单，“人造肉们”还差得很远</a></li></ul></div><!--体育·旅游--><div class="r-hqFashion s-box"><h3><span></span>体育·旅游</h3><ul><li class="right"><a href="//sports.huanqiu.com/gallery/9CaKrnQhWSU" target="_blank" dataLink="" class="outside-Link"><div class="pic-item"><img src="//himg2.huanqiucdn.cn/attachment2010/2019/0925/09/55/20190925095529656.jpg?w=260" alt="西甲：巴萨2-1比利亚雷亚尔 梅西又伤了"></div><p>巴萨2-1比利亚雷亚尔</p></a></li><li><a href="//sports.huanqiu.com/gallery/9CaKrnQhWSR" target="_blank" dataLink="" class="outside-Link"><div class="pic-item"><img src="//himg2.huanqiucdn.cn/attachment2010/2019/0925/09/38/20190925093819498.jpg?w=260" alt="国奥集结 新帅郝伟走马上任"></div><p>新帅郝伟走马上任</p></a></li><li class="right"><a href="//go.huanqiu.com/article/7Qo3PMrDFDO" target="_blank" dataLink="" class="outside-Link"><div class="pic-item"><img src="https://rs1.huanqiucdn.cn/dp/api/images/imageDir/0688a9b3f898441c37153204cc1ae9d8u5.jpg?w=260" alt="图集丨走进荷兰“海牙小人国”"></div><p>图集丨走进荷兰“海牙小人国”</p></a></li><li><a href="//go.huanqiu.com/article/7Qo3c4r9HAQ" target="_blank" dataLink="" class="outside-Link"><div class="pic-item"><img src="https://rs1.huanqiucdn.cn/dp/api/images/imageDir/59bc97ad0920f82ab2181a1221e64723u5.jpg?w=260" alt="故宫和北京动物园假期将开摆渡专线"></div><p>故宫和北京动物园假期将开摆渡专线</p></a></li></ul></div><div class="ad_250"><!-- Ad Survey 广告位代码  文章页画中画05--><script type="text/javascript">AD_SURVEY_Add_AdPos("7004638");</script></div><!--环球商城--><div class="r-hqFashion s-box"><h3><span></span>环球商城<a href="http://www.worldmall365.com" class="more" target="_blank"></a></h3><ul><li class="right"><a href="https://h5.youzan.com/v2/feature/10txkqrq6" target="_blank"><div class="pic-item"><img src="//rs1.huanqiucdn.cn/dp/api/images//Co9Gq068dToXaPWeA5d6135r.jpg" alt="使命召唤14-二战"></div><p>使命召唤14-二战</p></a></li><li><a href="https://h5.youzan.com/v2/goods/2oiyrmbhyz5v8" target="_blank"><div class="pic-item"><img src="//rs1.huanqiucdn.cn/dp/api/images//IrbDpHE0oVkpIe7ebeWM9-O_.jpg" alt="轻巧 高亮 USB便捷充"></div><p>轻巧 高亮 USB便捷充</p></a></li><li class="right"><a href="https://h5.youzan.com/v2/feature/5GKw9uf8L3" target="_blank"><div class="pic-item"><img src="//rs1.huanqiucdn.cn/dp/api/images//JIwEgkM96gmalV2bBwX29Mk2.jpg" alt="点击免费领取大红包"></div><p>点击免费领取大红包</p></a></li><li><a href="https://h5.youzan.com/v2/showcase/goods?alias=1ydvxtwx4uo90" target="_blank"><div class="pic-item"><img src="//rs1.huanqiucdn.cn/dp/api/images//BcPc_sCxlcQ0CTovk1G4ncGi.jpg" alt="春夏新品穿梭者抓绒套"></div><p>春夏新品穿梭者抓绒套</p></a></li></ul></div><div class="ad_250"><!-- Ad Survey 广告位代码  文章页画中画06--><script type="text/javascript">AD_SURVEY_Add_AdPos("7004639");</script></div><div class="sPosition"></div></div><!-- 接下来浮窗部分 --><div class="r-hqNext" id="winNext"><div class="r-hqNext-ad"><div class="close-ad"></div><div class="r-hqNext-adM"><!-- Ad Survey 广告位代码  文章页-右下浮窗--><script type="text/javascript">AD_SURVEY_Add_AdPos("7004637");</script></div></div><h3>接下来</h3><ul></ul></div><!-- /接下来浮窗部分 --></div><!-- /相关部分（右侧） --><!-- 推荐阅读 --><div class="l_c l_b" id="newsWrap"><h2 class="lc_hd"><strong>推荐阅读</strong></h2><div class="lc_bd"><div id="news"></div><a href="javascript:void(0);" class="lb_btn"></a></div></div></div><!-- /标题、信息部分 --></div></div><!-- S 对联广告位--><div class="fixAd_01 adCon"><!-- Ad Survey 广告位代码  文章页对联--><script type="text/javascript">AD_SURVEY_Add_AdPos("7003389");</script><!--<cs-element data-src="elements/go_article_fixAd/go_article_fixAd"></cs-element>--></div><!-- E 对联广告位--><!-- S 尾部--><!--<cs-control data-src="controls/go_footer/go_footer"></cs-control>--><!-- E 尾部--><!-- 分享 --><div id="wechat-summary" style="display:none">一项美国研究表明，孕妇在妊娠期患上高血压会增加日后复发的风险，还会增加诸如高胆固醇，糖尿病及心脏疾病这些高危疾病的风险。</div><!-- 微信分享 begin --><script type="text/javascript">var summary = document.getElementById("wechat-summary").innerHTML;
+    var weChatShare = {"title" : "孕期高血压易增加日后复发与心脏疾病风险",    // 分享标题,建议主标题一行 18个字符以内
+        "desc"  : summary,    // 分享描述，建议描述最多两行 36个字符以内
+        "imgUrl"   : 'https://t1.huanqiucdn.cn/c561e1b3080f2a4adb05dde8b40c660a.png', // 分享图标,200*200
+        "link" : window.location.href}</script><!-- 微信分享 end --><!-- 分享 --><!-- 统计代码 --><script type="text/javascript">var _report = _report || [];
+    _report.push(['_setAccount', 'webGYj6Xe3q91jcs3']);
+
+    _report.push(['_setCustomVar', 1, 'custom1', '9CaKrnKa7CH']);
+    _report.push(['_setCustomVar', 2, 'custom2', '孕期高血压易增加日后复发与心脏疾病风险']);
+    _report.push(['_setCustomVar', 3, 'custom3', '']);
+    _report.push(['_setCustomVar', 4, 'custom4', '{"name":"环球网","url":""}']);
+    _report.push(['_setCustomVar', 5, 'custom5', '']);
+    _report.push(['_setCustomVar', 6, 'custom6', '[]']);
+    _report.push(['_setCustomVar', 7, 'custom7', '{"email":"shaqiong@huanqiu.com","name":"沙琼"}']);
+    _report.push(['_setCustomVar', 8, 'custom8', '']);
+
+    (function() {
+        var report = document.createElement("script");
+        report.src = "https://analysis-reporting.develenv.com/report.js?id=858d45e1f01f24b9ae02e83792a3ce3c";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(report, s);
+    })();
+    // 百度推送
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+    // 百度统计 
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F1fc983b4c305d209e7e05d96e713939f' type='text/javascript'%3E%3C/script%3E"));
+    // cnzz 统计
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none' id='cnzz_stat_icon_1000010102'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000010102' type='text/javascript'%3E%3C/script%3E"));</script><!-- /end 统计代码 --><script type="text/javascript" src="//rs1.huanqiucdn.cn/dp/api/assets?dp_csid=cse3pl8tdbi&dp_instanceid=dpe3plc9q0n&dp_commit=d54f1818054e9b1fbc923b02a7741234f2da062a&dp_path=layouts/global/jquery1.9.1.js,layouts/go_article/go_article.js,controls/global_control/global_control.js,controls/go_article_nav/go_article_nav.js,controls/go1_article_content/go1_article_content.js,controls/share/wechat-1.0.0.js,controls/share/weixin-1.0.0.js"></script></body></html>

@@ -1,0 +1,541 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>_新浪外汇_新浪财经_新浪网</title>
+
+<meta name="keywords" content="新浪,财经,外汇,经济数据,,">
+<meta name="description" content="新浪外汇提供最全面的全球各国经济数据，及时的更新数据，直观的走势图表，全面的历史回顾。">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link rel="stylesheet" href="//www.sinaimg.cn/cj/css/forex_style_1.css" type="text/css" media="all"  />
+</head>
+
+<script type="text/javascript"> var countryname="美国"; var eventname="ISM制造业指数"; var cname="美国"; var ename="ISM制造业指数"; var flag="mg";</script>
+<body>
+<div class="wrap">
+<!-- 标准二级导航_财经 begin -->
+
+
+<div>
+<div class="secondaryHeader">
+	<div class="sHBorder">
+		<div class="sHLogo"><span>
+		
+		<a target="_blank" href="http://finance.sina.com.cn/forex/index.shtml"><img border="0" alt="新浪财经外汇" src="//i3.sinaimg.cn/cj/pic/newLogo/logo_home_fin_waihui.gif"/></a>
+		
+		</span></div>
+
+		<div class="sHLinks"><a href="http://finance.sina.com.cn/">财经首页</a>&nbsp;|&nbsp;<a href="http://www.sina.com.cn/">新浪首页</a>&nbsp;|&nbsp;<a href="http://news.sina.com.cn/guide/">新浪导航</a></div>
+
+	</div>
+</div>
+</div>
+<!-- 标准二级导航_财经 end -->
+<style type="text/css">
+.Nav {width:950px; margin-top:5px; height:29px; background:url('//i0.sinaimg.cn/cj/news/2008/0818/images/back_x.gif') 0 -30px repeat-x; color:#fff; overflow:hidden; line-height:29px;}
+.Nav ul li {float:left; padding:0 24px 0 24px;}
+.Nav ul li.Line {background:url('//i0.sinaimg.cn/cj/news/2008/0818/images/back_x.gif') 0 -60px no-repeat; width:2px; height:29px; padding:0px 4px;}
+.Nav ul li.LineA {background:url('//i0.sinaimg.cn/cj/news/2008/0818/images/back_x.gif') 0 -120px no-repeat; width:2px; height:29px; padding:0px 4px;}
+.Nav ul li.First {background:url('//i0.sinaimg.cn/cj/news/2008/0818/images/back_x.gif') 0 -90px repeat-x; padding:0 10px 0px 15px; height:29px;}
+.Nav a:link,.Nav a:visited{color:#fff; text-decoration:none;}
+.Nav a:hover,.Nav a:active{color:#fff;text-decoration:underline;}
+.DataFrom{float:right;margin-right:10px;}
+.DataFrom a:link,.DataFrom a:visited{color:#666; text-decoration:none;}
+.DataFrom a:hover,.DataFrom a:active{color:#666;text-decoration:underline;}
+</style>
+<div style="text-align:left;">
+	<div class="Nav">
+		<ul>
+		  <li class="First"><a href="http://finance.sina.com.cn/forex/" target="_blank">首页</a></li>
+			<li class="LineA"/>
+			<li><a href="http://finance.sina.com.cn" target="_blank">财经</a></li>
+			<li><a href="http://finance.sina.com.cn/money/index.shtml" target="_blank">理财</a></li>
+			<li><a href="http://finance.sina.com.cn/stock/usstock/index.shtml" target="_blank">美股</a></li>
+			<li><a href="http://finance.sina.com.cn/forex/index.shtml" target="_blank">外汇</a></li>
+			<li><a href="http://finance.sina.com.cn/nmetal/index.shtml" target="_blank">黄金</a></li>
+			<li><a href="http://finance.sina.com.cn/futuremarket/index.shtml" target="_blank">期货</a></li>
+			<li class="Line"/>
+			<li><a href="http://finance.sina.com.cn/money/globalindex/index.shtml" target="_blank">环球股指</a></li>
+			<li><a href="http://finance.sina.com.cn/money/globalindex/hf.shtml" target="_blank">环球商品</a></li>
+			<li><a href="http://finance.sina.com.cn/money/globalindex/ibor.shtml" target="_blank">主要货币拆借利率</a></li>
+			<li><a href="http://vip.stock.finance.sina.com.cn/forex/view/vDailyFX_More.php">经济数据</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="time_row">
+	<div class="t_content"><span class="DataFrom"><a href="http://www.fx678.com/" target="_blank">该数据由汇通财经提供</a></span>
+		<div style="display: none">北京时间 <span id="spanTimeBeiJing">--:--:--</span> 伦敦时间 <span id="spanTimeLondon">--:--:--</span> 纽约时间 <span id="spanTimeNewYork">--:--:--</span> 悉尼时间 <span id="spanTimeSydney">--:--:--</span>
+		</div>
+	</div>
+	<script type="text/javascript" src="//finance.sina.com.cn/globaltimezone.js"></script>
+	<script type="text/javascript">
+		new function () {
+			this._arrayStringPlace = ["BeiJing", "London", "NewYork", "Sydney"];
+			this._arrayIntPlace = [0, getGlobalTimezone("UK"), getGlobalTimezone("US"), getGlobalTimezone("AU")];
+			this._date = null;
+			this._arrayElementPlace = [];
+			this._intThreadHq = -1;
+			this._bind = function (__functionBind, __argumentsBind) {
+				var __this = this;
+				return function () {
+					var __arguments = null;
+					if (typeof __argumentsBind != "undefined") {
+						for (var i = 0; i < arguments.length; i++) {
+							__argumentsBind.push(arguments[i]);
+						}
+						__arguments = __argumentsBind;
+					}
+					else {
+						__arguments = arguments;
+					}
+					return __functionBind.apply(__this, __arguments);
+				};
+			};
+			this._fill = function () {
+				this._date = new Date(this._date.getTime() + 1000);
+				for (var i in this._arrayIntPlace) {
+					var __date = new Date(this._date.getTime() + this._arrayIntPlace[i] * 3600000);
+					this._arrayElementPlace[i].innerHTML = __date.toString().match(/\d{2}:\d{2}:\d{2}/)[0];
+				}
+			};
+			this.boot = function () {
+				for (var i = 0; i < this._arrayStringPlace.length; i++) {
+					this._arrayElementPlace.push(document.getElementById("spanTime" + this._arrayStringPlace[i]));
+				}
+				var __elementScript = document.createElement("script");
+				__elementScript.type = "text/javascript";
+				__elementScript._functionCallback = this._bind(function () {
+					if ("StandardBJTime" in window) {
+						this._date = new Date(window["StandardBJTime"] * 1000);
+						if (this._intThreadHq != -1) {
+							clearInterval(this._intThreadHq);
+						}
+						this._fill();
+						this._intThreadHq = setInterval(this._bind(this._fill), 1000);
+					}
+				});
+				__elementScript[document.all ? "onreadystatechange" : "onload"] = function () {
+					if (document.all && this.readyState != "loaded" && this.readyState != "complete") {return;}
+					this._functionCallback();
+					this._functionCallback = null;
+					this[document.all ? "onreadystatechange" : "onload"] = null;
+					this.parentNode.removeChild(this);
+				};
+				document.getElementsByTagName("head")[0].appendChild(__elementScript);
+				return this;
+			};
+		}().boot();
+	</script>
+	<div class="t_foot"></div>
+</div>
+<div class="main">
+	<div class="left_nav">
+		<h2>
+			<div class="ic"><div class="ic_ln"></div></div>
+			<div>外汇数据查询</div>
+		</h2>
+		<div class="list" id="divMenu">
+			<dl><dt><span></span><div class="ic"><div class=""></div></div><div>中国</div></dt><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=贸易帐-美元计价" onclick="return changeme('中国','贸易帐-美元计价','')">贸易帐-美元计价</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=贸易帐-人民币计价" onclick="return changeme('中国','贸易帐-人民币计价','')">贸易帐-人民币计价</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=CPI月率" onclick="return changeme('中国','CPI月率','')">CPI月率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=CPI年率" onclick="return changeme('中国','CPI年率','')">CPI年率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=新增人民币贷款" onclick="return changeme('中国','新增人民币贷款','')">新增人民币贷款</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=社会融资规模" onclick="return changeme('中国','社会融资规模','')">社会融资规模</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=社会消费品零售总额月率" onclick="return changeme('中国','社会消费品零售总额月率','')">社会消费品零售总额月率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=社会消费品零售总额年率" onclick="return changeme('中国','社会消费品零售总额年率','')">社会消费品零售总额年率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=社会消费品零售总额年率-YTD" onclick="return changeme('中国','社会消费品零售总额年率-YTD','')">社会消费品零售总额年率-YTD</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=实际外商直接投资" onclick="return changeme('中国','实际外商直接投资','')">实际外商直接投资</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=实际外商直接投资年率" onclick="return changeme('中国','实际外商直接投资年率','')">实际外商直接投资年率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=实际外商直接投资年率-YTD" onclick="return changeme('中国','实际外商直接投资年率-YTD','')">实际外商直接投资年率-YTD</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=GDP年率" onclick="return changeme('中国','GDP年率','')">GDP年率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=GDP年率-YTD" onclick="return changeme('中国','GDP年率-YTD','')">GDP年率-YTD</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=GDP季率" onclick="return changeme('中国','GDP季率','')">GDP季率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=GDP总量" onclick="return changeme('中国','GDP总量','')">GDP总量</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=外汇储备" onclick="return changeme('中国','外汇储备','')">外汇储备</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=M0货币供应年率" onclick="return changeme('中国','M0货币供应年率','')">M0货币供应年率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=M1货币供应年率" onclick="return changeme('中国','M1货币供应年率','')">M1货币供应年率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=M2货币供应年率" onclick="return changeme('中国','M2货币供应年率','')">M2货币供应年率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=PPI年率" onclick="return changeme('中国','PPI年率','')">PPI年率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=Swift人民币在全球支付中占比" onclick="return changeme('中国','Swift人民币在全球支付中占比','')">Swift人民币在全球支付中占比</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=财新制造业PMI" onclick="return changeme('中国','财新制造业PMI','')">财新制造业PMI</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=财新服务业PMI" onclick="return changeme('中国','财新服务业PMI','')">财新服务业PMI</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=财新综合PMI" onclick="return changeme('中国','财新综合PMI','')">财新综合PMI</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=城镇固定资产投资月率" onclick="return changeme('中国','城镇固定资产投资月率','')">城镇固定资产投资月率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=城镇固定资产投资年率-YTD" onclick="return changeme('中国','城镇固定资产投资年率-YTD','')">城镇固定资产投资年率-YTD</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=出口年率-美元计价" onclick="return changeme('中国','出口年率-美元计价','')">出口年率-美元计价</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=出口年率-人民币计价" onclick="return changeme('中国','出口年率-人民币计价','')">出口年率-人民币计价</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=出口总额-美元计价" onclick="return changeme('中国','出口总额-美元计价','')">出口总额-美元计价</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=出口总额-人民币计价" onclick="return changeme('中国','出口总额-人民币计价','')">出口总额-人民币计价</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=官方制造业PMI" onclick="return changeme('中国','官方制造业PMI','')">官方制造业PMI</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=官方非制造业PMI" onclick="return changeme('中国','官方非制造业PMI','')">官方非制造业PMI</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=规模以上工业增加值月率" onclick="return changeme('中国','规模以上工业增加值月率','')">规模以上工业增加值月率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=规模以上工业增加值年率" onclick="return changeme('中国','规模以上工业增加值年率','')">规模以上工业增加值年率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=规模以上工业增加值年率-YTD" onclick="return changeme('中国','规模以上工业增加值年率-YTD','')">规模以上工业增加值年率-YTD</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=规模以上工业企业利润" onclick="return changeme('中国','规模以上工业企业利润','')">规模以上工业企业利润</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=规模以上工业企业利润-YTD" onclick="return changeme('中国','规模以上工业企业利润-YTD','')">规模以上工业企业利润-YTD</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=规模以上工业企业利润年率" onclick="return changeme('中国','规模以上工业企业利润年率','')">规模以上工业企业利润年率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=规模以上工业企业利润年率-YTD" onclick="return changeme('中国','规模以上工业企业利润年率-YTD','')">规模以上工业企业利润年率-YTD</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=进口年率-美元计价" onclick="return changeme('中国','进口年率-美元计价','')">进口年率-美元计价</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=进口年率-人民币计价" onclick="return changeme('中国','进口年率-人民币计价','')">进口年率-人民币计价</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=进口总额-美元计价" onclick="return changeme('中国','进口总额-美元计价','')">进口总额-美元计价</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=中国&event=进口总额-人民币计价" onclick="return changeme('中国','进口总额-人民币计价','')">进口总额-人民币计价</a></dd></dl><dl class="active"><dt><span></span><div class="ic"><div class="mg"></div></div><div>美国</div></dt><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=美国&event=贸易帐" onclick="return changeme('美国','贸易帐','mg')">贸易帐</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=美国&event=失业率" onclick="return changeme('美国','失业率','mg')">失业率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=美国&event=核心零售销售月率" onclick="return changeme('美国','核心零售销售月率','mg')">核心零售销售月率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=美国&event=零售销售月率" onclick="return changeme('美国','零售销售月率','mg')">零售销售月率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=美国&event=耐用品订单月率" onclick="return changeme('美国','耐用品订单月率','mg')">耐用品订单月率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=美国&event=ISM制造业PMI" onclick="return changeme('美国','ISM制造业PMI','mg')">ISM制造业PMI</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=美国&event=实际收入月率" onclick="return changeme('美国','实际收入月率','mg')">实际收入月率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=美国&event=实际收入年率" onclick="return changeme('美国','实际收入年率','mg')">实际收入年率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=美国&event=Markit制造业PMI" onclick="return changeme('美国','Markit制造业PMI','mg')">Markit制造业PMI</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=美国&event=新屋开工年化总数" onclick="return changeme('美国','新屋开工年化总数','mg')">新屋开工年化总数</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=美国&event=PPI月率" onclick="return changeme('美国','PPI月率','mg')">PPI月率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=美国&event=PPI年率" onclick="return changeme('美国','PPI年率','mg')">PPI年率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=美国&event=进口物价指数月率" onclick="return changeme('美国','进口物价指数月率','mg')">进口物价指数月率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=美国&event=进口物价指数年率" onclick="return changeme('美国','进口物价指数年率','mg')">进口物价指数年率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=美国&event=出口物价指数月率" onclick="return changeme('美国','出口物价指数月率','mg')">出口物价指数月率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=美国&event=出口物价指数年率" onclick="return changeme('美国','出口物价指数年率','mg')">出口物价指数年率</a></dd></dl><dl><dt><span></span><div class="ic"><div class="dg"></div></div><div>德国</div></dt><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=德国&event=Ifo商业景气指数" onclick="return changeme('德国','Ifo商业景气指数','dg')">Ifo商业景气指数</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=德国&event=实际零售销售月率" onclick="return changeme('德国','实际零售销售月率','dg')">实际零售销售月率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=德国&event=实际零售销售年率" onclick="return changeme('德国','实际零售销售年率','dg')">实际零售销售年率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=德国&event=ZEW经济景气指数" onclick="return changeme('德国','ZEW经济景气指数','dg')">ZEW经济景气指数</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=德国&event=Markit制造业PMI" onclick="return changeme('德国','Markit制造业PMI','dg')">Markit制造业PMI</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=德国&event=PPI月率" onclick="return changeme('德国','PPI月率','dg')">PPI月率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=德国&event=PPI年率" onclick="return changeme('德国','PPI年率','dg')">PPI年率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=德国&event=进口物价指数月率" onclick="return changeme('德国','进口物价指数月率','dg')">进口物价指数月率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=德国&event=进口物价指数年率" onclick="return changeme('德国','进口物价指数年率','dg')">进口物价指数年率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=德国&event=出口物价指数月率" onclick="return changeme('德国','出口物价指数月率','dg')">出口物价指数月率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=德国&event=出口物价指数年率" onclick="return changeme('德国','出口物价指数年率','dg')">出口物价指数年率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=德国&event=CPI月率" onclick="return changeme('德国','CPI月率','dg')">CPI月率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=德国&event=CPI年率" onclick="return changeme('德国','CPI年率','dg')">CPI年率</a></dd></dl><dl><dt><span></span><div class="ic"><div class="rs"></div></div><div>瑞士</div></dt><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=瑞士&event=贸易帐" onclick="return changeme('瑞士','贸易帐','rs')">贸易帐</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=瑞士&event=GDP季率" onclick="return changeme('瑞士','GDP季率','rs')">GDP季率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=瑞士&event=GDP年率" onclick="return changeme('瑞士','GDP年率','rs')">GDP年率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=瑞士&event=消费者信心指数" onclick="return changeme('瑞士','消费者信心指数','rs')">消费者信心指数</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=瑞士&event=外汇储备" onclick="return changeme('瑞士','外汇储备','rs')">外汇储备</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=瑞士&event=工业产出年率" onclick="return changeme('瑞士','工业产出年率','rs')">工业产出年率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=瑞士&event=CPI月率" onclick="return changeme('瑞士','CPI月率','rs')">CPI月率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=瑞士&event=CPI年率" onclick="return changeme('瑞士','CPI年率','rs')">CPI年率</a></dd></dl><dl><dt><span></span><div class="ic"><div class="rb"></div></div><div>日本</div></dt><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=日本&event=失业率" onclick="return changeme('日本','失业率','rb')">失业率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=日本&event=领先指标终值" onclick="return changeme('日本','领先指标终值','rb')">领先指标终值</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=日本&event=新屋开工年化总数" onclick="return changeme('日本','新屋开工年化总数','rb')">新屋开工年化总数</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=日本&event=PPI月率" onclick="return changeme('日本','PPI月率','rb')">PPI月率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=日本&event=PPI年率" onclick="return changeme('日本','PPI年率','rb')">PPI年率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=日本&event=外汇储备" onclick="return changeme('日本','外汇储备','rb')">外汇储备</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=日本&event=贸易帐" onclick="return changeme('日本','贸易帐','rb')">贸易帐</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=日本&event=全国CPI月率" onclick="return changeme('日本','全国CPI月率','rb')">全国CPI月率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=日本&event=全国CPI年率" onclick="return changeme('日本','全国CPI年率','rb')">全国CPI年率</a></dd></dl><dl><dt><span></span><div class="ic"><div class="yg"></div></div><div>英国</div></dt><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=英国&event=失业率" onclick="return changeme('英国','失业率','yg')">失业率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=英国&event=Markit制造业PMI" onclick="return changeme('英国','Markit制造业PMI','yg')">Markit制造业PMI</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=英国&event=工业产出年率" onclick="return changeme('英国','工业产出年率','yg')">工业产出年率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=英国&event=GDP季率" onclick="return changeme('英国','GDP季率','yg')">GDP季率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=英国&event=GDP年率" onclick="return changeme('英国','GDP年率','yg')">GDP年率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=英国&event=外汇储备" onclick="return changeme('英国','外汇储备','yg')">外汇储备</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=英国&event=CPI月率" onclick="return changeme('英国','CPI月率','yg')">CPI月率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=英国&event=CPI年率" onclick="return changeme('英国','CPI年率','yg')">CPI年率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=英国&event=核心CPI月率" onclick="return changeme('英国','核心CPI月率','yg')">核心CPI月率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=英国&event=核心CPI年率" onclick="return changeme('英国','核心CPI年率','yg')">核心CPI年率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=英国&event=央行基准利率" onclick="return changeme('英国','央行基准利率','yg')">央行基准利率</a></dd></dl><dl><dt><span></span><div class="ic"><div class="jnd"></div></div><div>加拿大</div></dt><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=加拿大&event=新屋开工" onclick="return changeme('加拿大','新屋开工','jnd')">新屋开工</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=加拿大&event=失业率" onclick="return changeme('加拿大','失业率','jnd')">失业率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=加拿大&event=贸易帐(亿加元)" onclick="return changeme('加拿大','贸易帐(亿加元)','jnd')">贸易帐(亿加元)</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=加拿大&event=零售销售月率(%)" onclick="return changeme('加拿大','零售销售月率(%)','jnd')">零售销售月率(%)</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=加拿大&event=Markit制造业PMI" onclick="return changeme('加拿大','Markit制造业PMI','jnd')">Markit制造业PMI</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=加拿大&event=贸易帐" onclick="return changeme('加拿大','贸易帐','jnd')">贸易帐</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=加拿大&event=核心零售销售月率" onclick="return changeme('加拿大','核心零售销售月率','jnd')">核心零售销售月率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=加拿大&event=核心CPI月率" onclick="return changeme('加拿大','核心CPI月率','jnd')">核心CPI月率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=加拿大&event=核心CPI年率" onclick="return changeme('加拿大','核心CPI年率','jnd')">核心CPI年率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=加拿大&event=央行基准利率" onclick="return changeme('加拿大','央行基准利率','jnd')">央行基准利率</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=加拿大&event=消费者物价指数" onclick="return changeme('加拿大','消费者物价指数','jnd')">消费者物价指数</a></dd><dd>·<a href="http://money.finance.sina.com.cn/forex/view/vDailyFX_Detail.php?country=加拿大&event=CPI年率" onclick="return changeme('加拿大','CPI年率','jnd')">CPI年率</a></dd></dl>		</div>
+		<script type="text/javascript">
+			(function () {
+				var __collectionItem = document.getElementById("divMenu").childNodes;
+				var __arrayItem = [];
+				for (var i = 0; i < __collectionItem.length; i++){
+					if (__collectionItem[i].nodeType == 1) {
+						__arrayItem.push(__collectionItem[i]);
+						__collectionItem[i].childNodes[0].onclick = function () {
+							for (var j in __arrayItem) {
+								__arrayItem[j].className = __arrayItem[j] == this.parentNode && this.parentNode.className != "active" ? "active" : "";
+							}
+						};
+					}
+				}
+			})();
+		</script>
+	</div>
+
+				<div class="right_main">
+					<h2 id="h2Current">
+						<span class="more">公布日期：<!-- % print(data["data"]["fromto"]["dateto"]); % --> <!-- % print(data["data"]["latest"]["time"]); % --></span>
+						<div class="ic"><div $$class="$data['flag']$"></div></div>
+						<div><!-- % print(data["country"]); % --> - <!-- % print(data["event"]); % --></div>
+					</h2>
+					<div class="hq_wrap">
+						<div class="data_wrap" id="divLatest">
+							<ul>
+								<li>现值：<!-- % print(data["data"]["latest"]["ifr_actual"]); % --></li>
+								<li>前值：<!-- % print(data["data"]["latest"]["previous"]); % --></li>
+								<li>预测值：<!-- % print(data["data"]["latest"]["median"]); % --></li>
+							</ul>
+						</div>
+						<div class="blue_md">
+							<div class="bm_1">
+								<div class="bm_2">
+									<div class="img_wrap" id="sinaforex"></div>
+									<div id="divRelate">
+										<!-- %
+										if (data["data"]["relate"] != null) {
+										% -->
+										<form>
+										<ul style="margin:5px auto 0px auto; width:640px;">
+											<!-- %
+											for (var i in data["data"]["relate"]) {
+											% -->
+											<li style="float:left; line-height:20px; height:20px; width:108px; padding-left:20px;"><label><input type="checkbox" name="checkboxRealte" onclick="return changeus(this);" $$value="$data['data']['relate'][i]['country']$" /><!-- % print(data["data"]["relate"][i]["country"]); % --></label></li>
+											<!-- %
+											}
+											% -->
+											<li style="clear:both; font-size:0px; line-height:0px; height:0px;"></li>
+										</ul>
+										</form>
+										<!-- %
+										}
+										% -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<h2>
+						<span class="calendar_wrap"><form id="formSearch" onsubmit="return false;">按公布日期查询：<input type="text" class="cl_input" id="inputCalendarFrom" name="dataFrom" value="-" /> 到 <input type="text" class="cl_input" id="inputCalendarTo" name="dataTo" value="-" /> <input type="submit" value="查询" /></form></span>
+						<div class="date ic"><div class="date history"></div></div>
+						<div class="date">历史数据</div>
+					</h2>
+					<div class="tbl_wrap">
+						<div id="divList">
+							<table>
+								<thead>
+									<tr>
+										<td>时期</td>
+										<td>预测值</td>
+										<td>前值</td>
+										<td>现值</td>
+										<th>重要级别</th>
+										<th>公布日期</th>
+									</tr>
+								</thead>
+								<tbody>
+									<!-- %
+									for (var i in data) {
+									% -->
+									<tr>
+										<td><!-- % print(data[i]["period"]); % --></td>
+										<td><!-- % print(data[i]["median"]); % --></td>
+										<td><!-- % print(data[i]["previous"]); % --></td>
+										<td><!-- % print(data[i]["ifr_actual"]); % --></td>
+										<th>
+											<div>
+												<!-- %
+													switch (data[i]["importance"]) {
+														case "H":
+															print('<h3></h3><h3></h3><h3></h3>');
+															break;
+														case "M":
+															print('<h3></h3><h3></h3><h4></h4>');
+															break;
+														case "L":
+															print('<h3></h3><h4></h4><h4></h4>');
+															break;
+														default:
+															print('<h4></h4><h4></h4><h4></h4>');
+															break;
+													}
+												% -->
+											</div>
+										</th>
+										<th><!-- % print(data[i]["date"]); % -->&nbsp;<!-- % print(data[i]["time"]); % --></th>
+									</tr>
+									<!-- %
+									}
+									% -->
+								</tbody>
+							</table>
+						</div>
+						<div class="pages" id="divPages">
+							<!-- %
+								if (data["max"] != 1) {
+									if (data["now"] == 1) {
+							% -->
+									<span>上一页</span>
+								<!-- % } else { % -->
+									<a href="#" $$onclick="return gotoPage($data['now']$ - 1);">上一页</a>
+								<!-- % } % -->
+								<!-- %
+									for (var i = 0; i < data["max"]; i++) {
+										if (i + 1 == data["now"]) {
+								% -->
+										<span><!-- % print(i + 1); % --></span>
+								<!-- %
+										}
+										else {
+								% -->
+										<a href="#" $$onclick="return gotoPage($i$ + 1);"><!-- % print(i + 1); % --></a>
+								<!-- %
+										}
+									}
+								% -->
+								<!-- % if (data["now"] == data["max"]) { % -->
+									<span>下一页</span>
+								<!-- % } else { % -->
+									<a href="#" $$onclick="return gotoPage($data['now']$ + 1);">下一页</a>
+							<!-- %
+									}
+								}
+							% -->
+						</div>
+					</div>
+				</div>
+
+				<script type="text/javascript" src="//n.sinaimg.cn/finance/fusioncharts/v3_4_0/fusioncharts.js?1"></script>
+				<script type="text/javascript" src="//n.sinaimg.cn/finance/fusioncharts/v3_4_0/fusioncharts.charts.js"></script>
+				<script type="text/javascript" src="//finance.sina.com.cn/forex/h5/chart/chart.js"></script>
+				<script type="text/javascript" src="//www.sinaimg.cn/cj/financewidget/js/Calendar_1.0.1.js"></script>
+				<script type="text/javascript">
+					new function () {
+						this._get = function (__stringId) {
+							return document.getElementById(__stringId);
+						};
+						this._replace = function (__stringHtmlTemplate, __objectData, __objectConfigurationCustom) {
+							var __random = function () {
+								return (new Date()).getTime() + Math.random().toString().replace("0.", "");
+							};
+							var __objectConfiguration = {
+								"name": "SINAHTMLTEMPLATEENGINE",
+								"begin": "<" + "!-- %",
+								"end": "% --" + ">",
+								"tag": /\$([^\$]+)\$/g,
+								"prefix": [/(\s)\$\$([\w]+=)/g, "$1$2"],
+								"object": {},
+								"print": "print",
+								"data": "data"
+							};
+							if (typeof __objectConfigurationCustom != "undefined" && __objectConfigurationCustom != null) {
+								for (var i in __objectConfigurationCustom) {
+									__objectConfiguration[i] = __objectConfigurationCustom[i];
+								}
+							}
+							try {
+								var __stringContainerId = __objectConfiguration["name"];
+								if (!(__stringContainerId in window)) {
+									window[__stringContainerId] = {};
+								}
+								var __stringContainerName = 'window["' + __stringContainerId + '"]';
+								var __objectContainer = window[__stringContainerId];
+								var __stringHtmlId = "HTML_" + __random();
+								__objectContainer[__stringHtmlId] = [];
+								var __stringDataId = "DATA_" + __random();
+								__objectContainer[__stringDataId] = __objectData;
+								var __stringObjectId = "OBJECT_" + __random();
+								__objectContainer[__stringObjectId] = __objectConfiguration["object"];
+								
+								var __stringBegin = __objectConfiguration["begin"];
+								var __stringEnd = __objectConfiguration["end"];
+								var __stringPrint = __objectConfiguration["print"];
+								var __arrayCommand = [__stringEnd, __stringHtmlTemplate.replace(new RegExp(__stringBegin.replace(/\s+/g, "\\s*"), "gm"), __stringBegin).replace(new RegExp(__stringEnd.replace(/\s+/g, "\\s*"), "gm"), __stringEnd), __stringBegin].join("").split(__stringEnd);
+								for (var i in __arrayCommand) {
+									var __arraySplit = __arrayCommand[i].split(__stringBegin);
+									__arrayCommand[i] = __stringPrint + '("' + __arraySplit[0].replace(/"/g, '\\"').replace(/[\r\n]/g, '\\\n').replace(__objectConfiguration["prefix"][0], __objectConfiguration["prefix"][1]).replace(__objectConfiguration["tag"], '" + $1 + "') + '");' + (1 in __arraySplit ? __arraySplit[1] : "");
+								}
+								eval('(function (' + __objectConfiguration["data"] + ') {' + __arrayCommand.join("").replace(new RegExp("\\b" + __stringPrint + "\\b", "g"), __stringContainerName + '["' + __stringHtmlId + '"].push') + '}).call(' + __stringContainerName + '["' + __stringObjectId + '"], ' + __stringContainerName + '["' + __stringDataId + '"]);');
+								var __stringHtmlEval = window[__stringContainerId][__stringHtmlId].join("");
+								window[__stringContainerId][__stringHtmlId] = null;
+								delete window[__stringContainerId][__stringHtmlId];
+								window[__stringContainerId][__stringDataId] = null;
+								delete window[__stringContainerId][__stringDataId];
+								return __stringHtmlEval;
+							}
+							catch (e) {
+								throw e;
+								return "";
+							}
+						};
+						this._bind = function (__functionBind, __argumentsBind) {
+							var __this = this;
+							return function () {
+								var __arguments = null;
+								if (typeof __argumentsBind != "undefined") {
+									for (var i = 0; i < arguments.length; i++) {
+										__argumentsBind.push(arguments[i]);
+									}
+									__arguments = __argumentsBind;
+								}
+								else {
+									__arguments = arguments;
+								}
+								return __functionBind.apply(__this, __arguments);
+							};
+						};
+						this._rcall = function (__stringServicePath, __stringMethod, __functionCallback, __objectArgument) {
+							var __stringArgument = __objectArgument ? __objectArgument : "";
+							var __stringCallbackId = "CALLBACK_" + (new Date()).getTime() + Math.random().toString().replace("0.", "");
+							var __stringCallbackObject = "SINAREMOTECALLCALLBACK";
+							if (!(__stringCallbackObject in window)) {
+								window[__stringCallbackObject] = {};
+							}
+							window[__stringCallbackObject][__stringCallbackId] = typeof __functionCallback == "undefined" ? (function () {}) : __functionCallback;
+							switch (typeof __objectArgument) {
+								case "object":
+									var __arrayArgument = [];
+									for (var i in __objectArgument) {
+										__arrayArgument.push(i + "=" + __objectArgument[i]);
+									}
+									__stringArgument = __arrayArgument.length == 0 ? "" : "?" + __arrayArgument.join("&");
+									break;
+								case "string":
+									__stringArgument = "?" + __objectArgument;
+									break;
+								default:
+									break;
+							}
+							var __elementScript = document.createElement("script");
+							__elementScript.type = "text/javascript";
+							__elementScript[document.all ? "onreadystatechange" : "onload"] = function () {
+								if (document.all && this.readyState != "loaded" && this.readyState != "complete") {return;}
+								delete window[__stringCallbackObject][__stringCallbackId];
+								this[document.all ? "onreadystatechange" : "onload"] = null;
+								this.parentNode.removeChild(this);
+							};
+							__elementScript.src = __stringServicePath + "/" + __stringCallbackObject + "." + __stringCallbackId + "/" + __stringMethod + __stringArgument;
+							document.getElementsByTagName("head")[0].appendChild(__elementScript);
+						};
+						this._fill = function (__element, __stringValue, __stringAttribute) {
+							__stringAttribute = typeof __stringAttribute == "undefined" ? "innerHTML" : __stringAttribute;
+							if (__element[__stringAttribute] != __stringValue) {
+								__element[__stringAttribute] = __stringValue;
+							}
+						};
+						this._aevent = function (__elementTarget, __stringType, __functionEvent) {
+							if (window.addEventListener) {
+								__elementTarget.addEventListener(__stringType, __functionEvent, false);
+							} else if (window.attachEvent) {
+								__elementTarget.attachEvent("on" + __stringType, __functionEvent);
+							}
+						};
+						this._change = function (__stringCountry, __stringEvent, __stringFlag) {
+							document.title = document.title.replace(/[^_]*(.*)/, __stringCountry + __stringEvent + "$1");
+							this._objectData["country"] = __stringCountry;
+							this._objectData["event"] = __stringEvent;
+							this._objectData["flag"] = __stringFlag;
+							this._stringCompare = "";
+							//~  location.hash = "country=" + __stringCountry + "&event" + __stringEvent;
+							this._rcall(this._stringServicePath, "FusionChart_Service.getCountryEventRecord", this._bind(function (__object) {
+								this._objectData["data"] = __object;
+								this._fill(this._elementCurrent, this._replace(this._stringTemplateCurrent, this._objectData));
+								this._fill(this._elementLatest, this._replace(this._stringTemplateLatest, this._objectData));
+								this._fill(this._elementRelate, this._replace(this._stringTemplateRelate, this._objectData));
+								this._get("inputCalendarFrom").value = __object["fromto"]["datefrom"];
+								this._get("inputCalendarTo").value = __object["fromto"]["dateto"];
+								this._submit();
+							}), {
+								"country": __stringCountry,
+								"event": __stringEvent
+							});
+							return false;
+						};
+						this._getList = function () {
+							this._rcall(this._stringServicePath, "FusionChart_Service.getForexChartInfo", this._bind(function (__object) {
+								this._fill(this._elementList, this._replace(this._stringTemplateList, __object["data"]));
+								this._fill(this._elementPages, this._replace(this._stringTemplatePages, {
+									"max": Math.ceil(__object["count"] / this._numberPerPage),
+									"now": this._numberPage
+								}));
+							}), {
+								"country": this._objectData["country"],
+								"event": this._objectData["event"],
+								"datefrom": this._stringDateFrom,
+								"dateto": this._stringDateTo,
+								"allinfo": "1",
+								"npp": this._numberPerPage,
+								"page": this._numberPage
+							});
+						};
+						this._gotoPage = function (__numberPage) {
+							this._numberPage = __numberPage;
+							this._getList();
+							return false;
+						};
+						this._submit = function () {
+							this._stringDateFrom = this._formSearch["dataFrom"].value;
+							this._stringDateTo = this._formSearch["dataTo"].value;
+							this._numberPage = 1;
+							this._getList();
+							drawflash(this._objectData["country"] + this._stringCompare, this._objectData["event"], this._stringDateFrom, this._stringDateTo);
+							return false;
+						};
+						this._compare = function (__elementCountry) {
+							var __objectCheckbox = __elementCountry.form[__elementCountry.name];
+							var __arrayCountryEx = [];
+							if ("length" in __objectCheckbox) {
+								for (var i = 0; i < __objectCheckbox.length; i++) {
+									if (__objectCheckbox[i].checked) {
+										__arrayCountryEx.push(__objectCheckbox[i].value);
+									}
+								}
+							}
+							else {
+								if (__objectCheckbox.checked) {
+									__arrayCountryEx.push(__objectCheckbox.value);
+								}
+							}
+							this._stringCompare = __arrayCountryEx.length > 0 ? "a," + __arrayCountryEx.join("a,") : "";
+							drawflash(this._objectData["country"] + this._stringCompare, this._objectData["event"], this._stringDateFrom, this._stringDateTo);
+						};
+						this._initialize = function () {
+							this._stringServicePath = "//money.finance.sina.com.cn/forex/api/jsonp.php";
+							this._elementCurrent = this._get("h2Current");
+							this._stringTemplateCurrent = this._elementCurrent.innerHTML;
+							this._elementLatest = this._get("divLatest");
+							this._stringTemplateLatest = this._elementLatest.innerHTML;
+							this._elementList = this._get("divList");
+							this._stringTemplateList = this._elementList.innerHTML;
+							this._elementPages = this._get("divPages");
+							this._stringTemplatePages = this._elementPages.innerHTML;
+							this._elementRelate = this._get("divRelate");
+							this._stringTemplateRelate = this._elementRelate.innerHTML;
+							this._stringCompare = "";
+							this._numberPage = 1;
+							this._numberPerPage = 20;
+							this._stringDateFrom = "";
+							this._stringDateTo = "";
+							this._stringDateFromLast = "";
+							this._stringDateToLast = "";
+							this._objectData = {};
+							new Calendar("inputCalendarFrom");
+							new Calendar("inputCalendarTo");
+							window["changeme"] = this._bind(this._change);
+							window["changeus"] = this._bind(this._compare);
+							window["gotoPage"] = this._bind(this._gotoPage);
+							this._formSearch = this._get("formSearch");
+							this._aevent(this._formSearch, "submit", this._bind(this._submit));
+						};
+						this._initialize.apply(this, arguments);
+					}();
+          changeme(countryname, eventname, flag);
+	</script>
+	<div class="clear"></div>
+</div>
+
+<style type="text/css">
+#footer{width:950px; text-align:center; line-height:21px; font-size:12px;margin-top:20px;color:#333;margin-left:auto;margin-right:auto;}
+</style>
+<!-- SUDA_CODE_START --> 
+<script type="text/javascript" src="//www.sinaimg.cn/unipro/pub/suda_s_v851c.js"></script> 
+<script type="text/javascript" > 
+_S_pSt(_S_PID_); 
+</script>
+<!-- SUDA_CODE_END --> 
+
+<div id="footer">
+　客户服务热线：4000520066　欢迎批评指正<br>
+<a target="_blank" href="http://tech.sina.com.cn/focus/sinahelp.shtml">常见问题解答</a> 
+ <a target="_blank" href="http://net.china.cn/chinese/index.htm">互联网违法和不良信息举报</a>
+ <a target="_blank" href="https://gu.sina.cn/pc/feedback/">新浪财经意见反馈留言板</a>
+ <br><br><a href="http://corp.sina.com.cn/chn/">新浪简介</a> | <a href="http://corp.sina.com.cn/eng/">About Sina</a> | <a href="http://emarketing.sina.com.cn/">广告服务</a> | <a href="http://www.sina.com.cn/contactus.html">联系我们</a> | <a href="http://corp.sina.com.cn/chn/sina_job.html">招聘信息</a> | <a href="http://www.sina.com.cn/intro/lawfirm.shtml">网站律师</a> | <a href="http://english.sina.com">SINA English</a> | <a href="http://members.sina.com.cn/apply/">通行证注册</a> | <a href="http://help.sina.com.cn/">产品答疑</a><br><br>新浪公司　<a target="_blank" href="http://www.sina.com.cn/intro/copyright.shtml">版权所有</a>
+</div>
+
+
+
+<!-- warp结束 -->
+</div>
+</body>
+</html>

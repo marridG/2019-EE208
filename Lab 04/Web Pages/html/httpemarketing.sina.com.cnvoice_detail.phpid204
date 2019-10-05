@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<head>
+	<link rel="icon" type="image/x-icon" href="http://www.sina.com.cn/favicon.ico">
+	<meta http-equiv="Content-type" content="text/html; charset=gb2312" />
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0">
+	<title>纷繁时代，价值当道</title>
+	<link type="text/css" rel="stylesheet" href="http://cs.sina.com.cn/minisite/css2014/base.css"/>
+	<link type="text/css" rel="stylesheet" href="http://all.vic.sina.com.cn/201604emarketing/theme/basic.css">
+	<link type="text/css" rel="stylesheet" href="http://all.vic.sina.com.cn/201604emarketing/theme/layout.css">
+</head>
+<body>
+<style>
+.weibo_btn,
+.weixin_btn,
+.feedback,
+.qr_code,
+.re_up{ background:url(http://all.vic.sina.com.cn/201604emarketing/img/img.png) no-repeat; width:58px; height:58px; display:block;}
+.re_up a{ display:block}
+.body_right{ position:fixed; right:7%; bottom:5%; width:58px; height:300px; z-index:20;}
+
+.body_right .weibo_btn{ background-position:0 0; margin-bottom:2px}
+.body_right .weibo_btn:hover{ background-position:0 -72px}
+.body_right .weixin_btn{ background-position:-62px -4px; margin-top:4px}
+.body_right .weixin_btn:hover{ background-position:-62px -76px}
+.body_right .feedback{ background-position:0 -142px}
+.body_right .qr_code{ background-position:-62px -146px;}
+.body_right .re_up{ background-position:0 -202px; top:130px; top:50px}
+
+.body_right .icon1{ top:0; left:0; width:58px; height:58px;  cursor:pointer}
+.body_right .feedback_text{ width:408px; height:334px; left:-408px; top:-120px; background:url(http://all.vic.sina.com.cn/201604emarketing/img/ab.png) no-repeat; display:none}
+.body_right .feedback_text .close{ float:right; width:22px; height:22px; cursor:pointer; top:18px; right:30px}
+.body_right .feedback_text .fback{ width:330px; height:170px; margin:52px 0 0 33px; display:block;}
+.body_right .feedback_text em{ color:#f00; float:left;}
+.body_right .feedback_text textarea{ width:315px; height:165px; resize: none;}
+.body_right .feedback_text .phone_txt{ width:315px; height:35px; display:block; margin:10px 0 0 40px}
+.body_right .feedback_text .phone_txt input{ width:315px; height:30px;}
+.body_right .feedback_text .sub_btn{ width:115px; height:40px; background:#3ca5f6; text-align:center; line-height:40px; color:#fff; display:block; margin:15px 0 0 41px; cursor:pointer}
+.body_right .feedback_text .sub_btn a{display:block}
+.body_right .icon2{ margin-top:5px; left:0; width:58px; height:58px;}
+.body_right .icon2 .qr_code{ top:0; width:58px; height:58px;}
+.body_right .qr_code_text{ background:url(http://all.vic.sina.com.cn/201604emarketing/img/icon2.png) no-repeat; width:398px; height:150px; left:-398px; top:-50px;  display:none}
+</style>
+<!--<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>-->
+	<div class="body_right">
+    	<!--<span class="weibo_btn"><wb:share-button addition="simple" type="button" language="zh_cn"></wb:share-button></span>-->
+    	<div class="icon1 pr">
+        	<span class="feedback pa"></span>
+            <div class="feedback_text pa">
+
+			<form action="feedback_opt.php" method="post" name="myfrm" id="myfrm" target="hiddfrm">
+
+            	<span class="close pa"><img src="http://all.vic.sina.com.cn/201604emarketing/img/close.jpg"></span>
+                <span class="fback"><em>*</em><textarea placeholder="请输入反馈，我们将不断为您改进" name="feedback_desc" id="feedback_desc" ></textarea></span>
+                <span class="phone_txt"><input type="text" placeholder="请输入手机或邮箱" name="contact_info" id="contact_info"  ></span>
+                <span class="sub_btn"><a href="javascript:void(0);" onclick="javascript:checkfrm();">提交</a></span>
+				<input type="hidden" name="act" value="add" />
+
+			</form>
+            </div>
+        </div>
+        <div class="icon2 pr">
+        	<span class="qr_code pa"></span>
+            <div class="qr_code_text pa"></div>
+            <a href="#" class="re_up pa"></a>
+        </div>
+    </div>
+
+<script src="http://all.vic.sina.com.cn/201604emarketing/jquery.js"></script>
+<script>
+$(document).ready(function() {
+    $('.feedback').click(function(){
+		$('.feedback_text').show();
+	});
+	$('.feedback_text .close').click(function(){
+		$('.feedback_text').hide();
+	})
+	 $('.qr_code').mouseenter(function(){
+		$('.qr_code_text').show();
+	});
+	$('.qr_code').mouseleave(function(){
+		$('.qr_code_text').hide();
+	})
+});
+function checkfrm(){
+$("#myfrm").submit();
+}
+</script>
+<iframe width="0" height="0" name="hiddfrm" id="hiddfrm" frameborder="0" scrolling="no" style="display:none"></iframe>	<div id="wrap">
+		<style>
+.dropDownmenu{ width:100px; height:155px; border:1px solid #999; border-top:none; top:77px; left:593px; z-index:100; box-shadow:1px 1px 2px #ccc; text-align:center; background:#F9F9F9; display:none}
+.dropDownmenu a{ color:#000; margin:5px auto 0; text-align:center; width:90px; height:30px; line-height:30px; display:block; border:1px solid #ccc; color:#666; font-size:13px; background:#F9F9F9;}
+.dropDownmenu a:hover{ background:#F93; color:#fff;}
+</style>
+<script src="http://all.vic.sina.com.cn/201604emarketing/jquery.js"></script>
+<script>
+$(document).ready(function(e) {
+    $('.item4').mouseenter(function(){
+		$('.dropDownmenu').show();
+	});
+	$('.dropDownmenu').mouseleave(function(){
+		$('.dropDownmenu').hide();
+	});
+	$('.item1,.item2,.item3,.item6').mouseenter(function(){
+		$('.dropDownmenu').hide();
+	});
+});
+</script>
+<div id="header">
+			<div class="in pr">
+				<img src="http://all.vic.sina.com.cn/201604emarketing/img/logo.jpg" class="logo" />
+				<ul class="menu-list" style="overflow:inherit">
+					<li class="item1 "><a href="index.php">首页</a></li>
+                    <li class="item4 pr cur"><a href="voice.php">新浪声音</a></li>
+					<li class="item2 "><a href="product_new.php">产品盒子</a></li>
+					<li class="item3 "><a href="case.php">营销案例</a></li>					
+					<!--<li class="item5 "><a href="ad.php">广告投放</a></li>-->
+					<li class="item6 "><a href="contact.php">联系我们</a></li>
+				</ul>
+                <div class="dropDownmenu pa">
+                    <a href="voice.php?t=1" class="a1">高层声音</a>
+                    <a href="voice.php?t=3" class="a2">新浪活动</a>
+                    <a href="voice.php?t=5" class="a3">广告主声音</a>
+                    <a href="voice.php?t=7" class="a4">数据观察</a>
+                </div>
+			</div>
+		</div>
+		<div id="main">
+			<div class="in">
+				<h3 class="tit-voice">高层声音</h3>
+				<h3 class="tit-v-con tc">纷繁时代，价值当道</h3>
+				<section class="case-detail">
+					<p class="MsoPlainText" align="center" style="text-align:left;">
+	<span style="text-indent:21pt;"> 传输和传播并不相同，本身是有非常大的区别的。</span> 
+</p>
+<p class="MsoPlainText" style="text-indent:21.0pt;">
+	<span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	随着媒介技术的不断变革，信息的传输效率也随着不断提升，但“传播效率”并未因此有质的飞越，尤其在移动互联高度发达的今天，大众传播更是面临十分复杂的局面——海量的碎片化信息让用户面临更多选择的困惑，没有底线的假新闻花了用户更多时间去辨别真伪，单一的算法推荐变相制造信息茧房限制了用户的视野。可以说，低效的传播正在杀死用户的时间，束缚用户的心智。<span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	<img src="http://video.vic.sina.com.cn/allvic/0d/5a/77527.jpg" alt="" /> 
+</p>
+<p class="MsoNormal" align="center" style="text-align:left;">
+	<span style="text-indent:21pt;">在如此纷繁的移动互联时代，对于传播效率的衡量，新浪有一个公式：传播效率</span><span style="text-indent:21pt;">=</span><span style="text-indent:21pt;">传输效率×内容效率。在当今，所有信息的推送、分发，在技术层面、传输效率层面的本质差别已经不大。如此，内容效率就成了传播效率的决定变量，内容效率将真正决定最终的传播效率有多高，且将是互联网红利消退的当下，争夺存量用户的关键所在。</span> 
+</p>
+<p class="MsoPlainText" style="text-indent:21.0pt;">
+	什么是有效率的内容？<span></span> 
+</p>
+<p class="MsoPlainText" style="text-indent:21.0pt;">
+	新浪认为，有效率的内容一定要满足三个特征：真实可信、需求满足，伦理责任。真实可信不用说了。所谓需求满足，是指有价值的内容应该满足用户对于功能实用性的诉求或者消费、娱乐、精神上的诉求。而伦理责任是指有效率的内容一定要尊崇伦理道德、尊崇社会的基本价值观，给用户正向内容的鼓励。<span></span> 
+</p>
+<p class="MsoPlainText">
+	<img src="http://video.vic.sina.com.cn/allvic/3f/29/60745.jpg" alt="" /> 
+</p>
+<p class="MsoPlainText" style="text-indent:21.0pt;">
+	因此，新浪核心的价值观，就是追求极致内容的价值观。因此，新浪核心的价值观，就是追求极致内容的价值观。而新浪则从四个独有能力来打造自身的“内容效率”：<span></span> 
+</p>
+<p class="MsoNormal">
+	<img src="http://video.vic.sina.com.cn/allvic/45/ec/66738.jpg" alt="" /> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	第一，媒体公信力。新浪内容公信力和新闻的公信力不用赘述，在二十年的发展过程中无论哪一次重大的历史时刻新浪都第一时间参与到其中，去做见证、去做经历、去做传播。
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	第二，平台贯通力。新浪和其他的一些分发平台或内容平台最不一样的地方在于新浪新闻和微博平台之间的互补互通。两个平台的用户类型丰富，覆盖的使用场景维度更多，让新浪的内容有更多的用户画像依据，这就有利于新闻内容和广告内容触达地更广泛、更深入。<span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	第三，智能洞察力。人工与智能融合，新浪分四个步骤，让内容到用户路径变得更明晰。首先，内容池集合新浪、微博及新浪看点的全部内容。紧接着，通过人工智能对数据池进行大数据智能分析及人群特征聚焦，再结合机器算法及人工把控进行内容的过滤与筛选，最后对不同的终端、不同的用户进行推送。总结来说，就是新浪不断将人工与智能融合，在确保内容品质的前提下，让机器将最好的内容推送给最适合的人。<span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	第四，用户聚合力。智能分发择优投放，精准满足用户即时兴趣。新浪客户端有一个其他内容分发平台所不具备的优势。从一开始新浪客户端就打通了新浪和微博双平台的内容、数据和账号体系，这使得新浪客户端不仅有庞大的内容数据和用户数据，更有用户即时兴趣、动态化场景、网状知识图谱和社交关系等独特数据。而正因为通过和微博在内容、数据、用户和媒体账号上的充分打通，新浪能够捕捉到用户的即时兴趣，而不仅仅是简单的长期兴趣，这是新浪智能分发的独特优势所在。
+</p>
+<p class="MsoPlainText" style="text-indent:21.0pt;">
+	可以说，通过四个优势的整合，新浪一直致力于打破对于价值内容和对于社交内容封闭的状况，尽可能融合这两者之间互补的状态，并且达到最优的对用户价值的满足。<span></span> 
+</p>
+<p class="MsoPlainText" style="text-indent:21.0pt;">
+	这里要特别强调一下新浪平台和微博的打通，对于新浪移动分发和传播的两点载体意义：
+</p>
+<p class="MsoPlainText" style="text-indent:21.0pt;">
+	<img src="http://video.vic.sina.com.cn/allvic/81/1c/84188.jpg" alt="" /> 
+</p>
+<p class="MsoPlainText" align="center" style="text-align:left;">
+	<span style="text-indent:21pt;">第一是用户维度属性。新浪阅读属性有</span><span style="text-indent:21pt;">167</span><span style="text-indent:21pt;">种，在微博社交层面的属性更加多元、更加发散，有将近</span><span style="text-indent:21pt;">821</span><span style="text-indent:21pt;">种。两种相加有将近</span><span style="text-indent:21pt;">1000</span><span style="text-indent:21pt;">种的用户维度数据，并且还在不断迭代、优化、挖掘过程中。其能够使得新浪移动的内容传播、内容分发更加高效、更加贴近用户需求，以及真实价值诉求目标。</span> 
+</p>
+<p class="MsoPlainText" style="text-indent:21.0pt;">
+	<span></span> 
+</p>
+<p class="MsoPlainText">
+	<img src="http://video.vic.sina.com.cn/allvic/9e/f3/16788.jpg" alt="" /> 
+</p>
+<p class="MsoPlainText" style="text-indent:21.0pt;">
+	第二，树状思维是传统的机器算法的逻辑思维方法，而对于新浪移动来说，运用的是更加发散、更加贴近用户需求的网状思维。<span></span> 
+</p>
+<p class="MsoPlainText">
+	<img src="http://video.vic.sina.com.cn/allvic/8a/53/51597.jpg" alt="" /> 
+</p>
+<p class="MsoNormal" style="text-indent:21.0pt;">
+	QuestMobile数据显示，目前新浪新闻客户端用户消费水平全网最高，达到64%。而新浪新闻客户端的IOS用户量占比高达34%，也是全网第一。从群体画像看，新浪网客户端用户年龄普遍在<span>25</span>岁以上，以职场成熟群体为主，中高消费能力达到<span>65%</span>，一二线用户量将近<span>50%</span>，这些在全网都是领先的。
+</p>
+<p class="MsoPlainText">
+	<img src="http://video.vic.sina.com.cn/allvic/35/45/29406.jpg" alt="" /> 
+</p>
+<p class="MsoPlainText" style="text-indent:21.0pt;">
+	大家不要觉得，消费者都用<span>App</span>。在三四线城市，还有大量<span>wap</span>端的用户群体。所谓的<span>wap</span>端用户是指那些不喜欢用<span>app</span>打开新闻，而是通过手机浏览器或网址导航进行新闻浏览的群体。目前，手机新浪网的日均用户量、日均浏览次数一直处于领跑优势，单<span>2018</span>年<span>7</span>月的日均浏览次数就超<span>1.3</span>亿。从人群画像看，三四线城市的用户是手机新浪网的长期铁粉。他们不是小镇青年，相反是小镇青年的另外一面。数据显示，<span>80%</span>在<span>30</span>岁以上，<span>67%</span>是本科以上，<span>68%</span>在三四线城市的国企、事业单位或者合资企业里面。可以说，手机新浪网的用户是小镇上的或者是小城里重要的高端消费人群。<span></span> 
+</p>
+<p class="MsoPlainText" style="text-indent:21.0pt;">
+	总结来看，手机客户端对以及手机新浪网依托自身的价值内容，聚拢了从一线到四线城市的“价值用户”，
+可以满足不同品牌企业对于渠道精准与渠道下沉的不同营销满足。而随着高价值用户的聚拢，让新浪依然成为名人、明星、意见领袖发声的首选平台，也是社会热点引爆的重要平台。<span></span> 
+</p>
+<p class="MsoPlainText">
+	<img src="http://video.vic.sina.com.cn/allvic/77/9f/52020.jpg" alt="" /> 
+</p>
+<p class="MsoPlainText" style="text-indent:21.0pt;">
+	除了庞大的生态流量，新浪数据的核心——中央数据仓库会吸纳第一方的广告主数据，同时会接受第三方不同应用场景数据。包括电商层面、应用层面、<span>O2O</span>销售层面、娱乐层面、社交层面等，所有数据可以反哺到中央数据系统，用以打造前景的数据图谱，帮助企业、品牌在售前建立内容洞察、人群洞察，在售后建立行为数据洞察和社会的追踪洞察，并不断循环、迭代、累积，以形成强大的学习能力，最终给不同行业的品牌主提供即时性的解决方案。<span></span> 
+</p>
+<p class="MsoPlainText">
+	<img src="http://video.vic.sina.com.cn/allvic/d3/48/10193.jpg" alt="" /> 
+</p>
+<p class="MsoPlainText" style="text-indent:21.0pt;">
+	新浪营销工具体系两个最重要的基本点：跨域通、链路通。<span></span> 
+</p>
+<p class="MsoPlainText" style="text-indent:21.0pt;">
+	跨域通会接纳不同的应用场景资源，并将所有资源流量汇聚到整体新浪资源流量池里。之后再通过链路通，接纳不同资源数据的<span>KPI</span>，反哺回市场营销的数字营销工具层面，把资源、数据与新浪的全景数据平台结合，满足品牌主的不同营销需求。<span></span> 
+</p>
+<p class="MsoPlainText" style="text-indent:21.0pt;">
+	结合所述，新浪移动的核心价值观是成就用户，而不要消费用户。只有真正成就用户诉求，成就用户对于极致内容、价值内容的极致诉求，才能持续打造自身的媒体价值。
+</p>
+				</section>
+			</div>
+		</div>
+	</div>
+	<style>
+.mar_l{ margin-left:90px}
+.col3{ float:left; width:89px; height:89px; margin-left:35px; border:1px solid #fff}
+.col img{width: 89px;height: 89px;}
+
+</style>
+	<div class="subfoot">
+		<div class="in">
+			<!--
+			<div class="col fl">
+				<h5>产品与服务</h5>
+				<a href="product.php" target="_blank">品牌营销</a><br />
+				<a href="product.php?id=9" target="_blank">效果营销</a><br />
+				<a href="case.php" target="_blank">营销案例</a><br />
+			</div>
+			<div class="col fl">
+				<h5>新浪声音</h5>
+				<a href="voice.php" target="_blank">高层声音</a><br />
+				<a href="voice.php?t=3" target="_blank">新浪活动</a><br />
+				<a href="voice.php?t=5" target="_blank">广告主声音</a><br />
+				<a href="voice.php?t=7" target="_blank">数据观察</a><br />
+			</div>
+			-->
+			<div class="col col2 fl mar_l">
+				<h5>广告咨询</h5>
+				<p>
+					咨询电话：4008-812-813<br />
+					周一到周五9：00-18：00<br />
+					邮箱：<a href="javascript:void(0);">ads@staff.sina.com.cn</a><br />
+					在线咨询：<a href="http://weibo.com/sinaemarketing" class="weibo" target="_blank"><i></i>@新浪广告</a>
+				</p>
+			</div>
+
+			<div class="col fl"  style="width:125px">
+				<h5><a href="http://weibo.com/mediainsight" target="_blank">新浪微洞察微博</a></h5>
+				<img src="http://all.vic.sina.com.cn/201604emarketing/img/img_qrcode_3.jpg" />
+			</div>
+			
+			<div class="col fr" style="width:250px">
+				<h5>营销新说公众号</h5>
+				<img src="http://d1.sina.com.cn/minisite/img_qrcode_4.jpg" style="float:left" />
+                <img src="http://all.vic.sina.com.cn/201604emarketing/img/img_qrcode.jpg" class="col3"/>
+			</div>
+			
+			<div class="col fr" style="width:125px">
+				<h5>新浪广告微博 </h5>
+				<img src="http://d1.sina.com.cn/minisite/img_qrcode_4.jpg" style="float:left" />              
+			</div>
+			<div class="col fr" style="width:150px">
+				<h5>新浪营销大学公众号 </h5>
+				<img src="http://d1.sina.com.cn/minisite/img_qrcode_5.jpg" style="float:left" />             
+			</div>
+
+		</div>
+    </div>
+    <div class="subfoot2">Copyright &copy;1996-2016 SINA Corporation, All Rights Reserved</div>
+
+	<a class="pf" id="goTop"><img src="http://all.vic.sina.com.cn/201604emarketing/img/gotop.jpg" /></a>
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63887727-8', 'auto');
+  ga('send', 'pageview');
+
+</script>	<script src="http://all.vic.sina.com.cn/201604emarketing/jquery.js"></script>
+	<script src="http://all.vic.sina.com.cn/201604emarketing/js/_base.js"></script>
+	<script type="text/javascript">
+	<!--
+		new SimpleImgShow();topinit();
+		$('.brand span').click(function(e){
+			$('.bdetail')[$('.bdetail').hasClass('dn')?'removeClass':'addClass']('dn');
+			e.stopPropagation();
+		})
+		$(document).click(function(){
+			$('.bdetail').addClass('dn');
+		})
+	//-->
+	</script>
+</body>
+</html>

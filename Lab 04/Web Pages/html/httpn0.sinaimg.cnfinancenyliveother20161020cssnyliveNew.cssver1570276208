@@ -1,0 +1,288 @@
+/*通用部分*/
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img{margin:0;padding:0;}
+fieldset,img{border:none;}
+address,caption,cite,code,dfn,th,var{font-style:normal; font-weight:normal;}
+ul,ol{list-style:none;}
+select,input{vertical-align:middle;}
+select,input,textarea{font-size:12px;margin:0;}
+table{border-collapse:collapse;}
+body{background:#fff;color:#333;font:12px/22px 'Microsoft Yahei','微软雅黑','Simsun','宋体','Arial';}
+/* 页面通用部分 */
+.clearfix:after{content:".";display:block;height:0;visibility:hidden;clear:both;}
+.clearfix{zoom:1;}
+.clearit{clear:both;height:0;font-size:0;overflow:hidden;}
+
+body{overflow-x: hidden}
+/*----tags----*/
+.tags{line-height: 20px;padding:0 10px;color:#fff;text-align: center;font-size: 12px;background-color: #646464;}
+.tags.tags-orange{background-color: #fea406;}
+.tags.tags-blue{background-color: #0698fe;}
+.tags.tags-red{background-color: #e94740;}
+.tags.tags-default{background-color: #646464;}
+/*---- ny-btn ----*/
+.ny-btn{display: inline-block;padding:0 10px;font-size:16px;min-width:30px;line-height: 30px;border-radius:5px;text-align: center;cursor: pointer;}
+.ny-btn-red{background-color: #f44c3a;color:#fff;}
+.ny-btn-red:hover{background-color: #c33d2e;color:#fff;}
+.ny-btn.disabled{background-color: #646464;color:#fff;}
+
+.m-nywrap{position: absolute;width:1000px;top:90px;left:50%;margin-left:-500px;z-index:1000;color:#333;font:12px/22px 'Microsoft Yahei','微软雅黑','Simsun','宋体','Arial'!important;}
+.m-nywrap a{color:#fff;text-decoration:none;}
+.m-nywrap a:visited{color:#fff;}
+.m-nywrap a:hover,
+.m-nywrap a:active,
+.m-nywrap a:link,
+.m-nywrap a:focus{color:#fff;text-decoration:underline;}
+
+.m-ny-mask{position: absolute;display: none;width: 1000px;height:800px;opacity: 0.9;filter: alpha(opacity=90);background: #fff}
+.m-money .m-ny-mask{width: 1240px;left:-120px;}
+.m-nylive{z-index: 100;position: absolute;left: 1020px;width: 1000px; background-color:#fff;opacity: 0;filter: alpha(opacity=0);transition: all .5s linear;}
+.m-nylive-active{left: 0;opacity: 1;filter: alpha(opacity=100)}
+.m-nylive-hover{opacity: .3;filter: alpha(opacity=30)}
+
+.m-nywrap.m-nywrap-950 {margin-left: -475px;}
+
+.m-nywrap.m-futuremarket{top:90px;}
+.m-nywrap.m-nmetal{top:186px;}
+.m-nywrap.m-forex{top:120px;}
+.m-nywrap.m-bond{top:80px;}
+.m-nywrap.m-money{top:315px;}
+.m-nywrap.m-bank{top:165px;}
+.m-nywrap.m-insurance{top:80px;}
+.m-nywrap.m-trust{top:130px;}
+
+.m-nywrap-950 .m-ny-mask{width: 950px;}
+.m-nywrap-950 .m-nylive{left: 970px;width: 950px;}
+.m-nywrap-950 .m-nylive-active{left: 0;opacity: 1;filter: alpha(opacity=100)}
+
+.ny-item-more-icon{display: block;position: absolute;top: 50%;right: -48px;margin-top:-24px;width:28px;height: 48px;background: url(../images/ny_icons.png) no-repeat; background-position: -2px -264px;}
+.ny-item-more-icon:hover{background-position: -32px -264px;}
+/*通向直播台*/
+.m-nylive-right{display: none;position: absolute;z-index: 105;left: 1020px;width: 1000px;height: 800px;cursor: pointer;}
+.m-nylive-right .m-nylive-rmask{position: absolute;width: 1000px;height: 800px;pointer-events:none;background: #fff;opacity: 0;filter: alpha(opacity=100) }
+.m-nylive-right .m-nylive-rmask-hover{opacity: 0;filter: alpha(opacity=0)}
+.m-nylive-right .m-nylive-goicon{display: block;position: absolute;top: 320px;width: 108px;height: 115px;background: url(../images/ny_icons.png) no-repeat;background-position: -2px -50px;}
+.m-nylive-right:hover .m-nylive-goicon{background-position:-112px -50px }
+.m-nylive-left{display: none;position: absolute;z-index: 105;left:-120px;width: 120px;height: 800px;cursor: pointer}
+.m-nylive-left:hover .m-nylive-backicon{background-position: -111px -167px;}
+.m-nylive-left .m-nylive-backicon{display: block;position: absolute;top: 50%;margin-top:-48px;width: 107px;height: 95px;background: url(../images/ny_icons.png) no-repeat;background-position: -2px -167px;}
+.m-nylive-right .m-nylive-goimgbox{position:absolute;top:150px;width:108px;height: 243px;overflow:hidden;}
+.m-nylive-right .m-nylive-closeicon{position: absolute;top: 0;right:0;z-index:107;width: 40px;height: 20px;background: #e94740;color: #fff;text-align: center;line-height: 20px;}
+.m-nylive-right .m-nylive-goimg .m-nylive-goimgbox{display: inline-block}
+.m-nylive-right .m-nylive-goimg .m-nylive-goimgbox:before{content:'';position:absolute;width:20px;height:520px;margin-top:-240px;margin-left:-30px;overflow:hidden;z-index:106;
+background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(255, 255, 255, 0)));
+background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+-webkit-transform: skewX(-25deg);
+-moz-transform: skewX(-25deg);}
+.m-nylive-right .m-nylive-goimg img{width: 108px;}
+.m-nylive-right:hover .m-nylive-goimg .m-nylive-goimgbox:before {
+-webkit-animation:aniBlink 1.3s ease-out forwards;
+-moz-animation:aniBlink 1.3s ease-out forwards;
+-o-animation:aniBlink 1.3s ease-out forwards;
+animation:aniBlink 1.3s ease-out forwards
+}
+
+.m-nywrap-950 .m-nylive-right{left: 970px;width: 950px;}
+.m-nywrap-950 .m-nylive-right .m-nylive-rmask{width: 950px;}
+
+/*左侧直播列表*/
+.m-ny-list{float: left;width: 277px;height: 800px;background-color: #e94740;}
+.m-ny-list .m-ny-list-tt{height: 53px;line-height: 53px;font-size: 18px;text-align: center}
+.m-ny-list .m-ny-list-tt .m-ny-logo{width:80px;height: 53px;display: inline-block;background: url(../images/logo.png) center center no-repeat;}
+.m-ny-list a{display: block;color: #fff;}
+.m-ny-list a:visited ,
+.m-ny-list a:hover ,
+.m-ny-list a:active ,
+.m-ny-list a:link ,
+.m-ny-list a:focus {color: #fff}
+.m-ny-list a:hover{text-decoration: none;}
+.m-ny-list .m-ny-icon{display: inline-block;vertical-align: middle;margin: 0 5px 2px 0;width: 42px;height: 28px;background: url(../images/ny_icons.png) no-repeat -136px -2px;}
+.m-ny-list .m-ny-list-nav{position:relative;padding:0 20px 3px 20px ;border-bottom: 1px solid #d83029;}
+.m-ny-list .m-ny-list-nav li{float:left;padding: 0 15px;width: 88px;text-align: center;color:#fff;font-size: 14px;line-height: 36px;cursor: pointer;}
+.m-ny-list .m-ny-list-nav span{position: absolute;display: block;left:35px;width: 88px;height: 2px;background: #fff;transition:left .3s}
+.m-ny-list .m-ny-list-nav .active{font-weight: 600}
+.m-ny-list .m-ny-list-box{position: relative;width: 277px;height: 707px;overflow: hidden;}
+.m-ny-list .m-ny-list-boxul{position:absolute;width: 554px;left: 0;transition:left .3s;}
+.m-ny-list .m-ny-list-boxli{width: 277px;height:707px;float: left;}
+.m-ny-list .m-ny-list-lblk{width: 20px;height:707px;border-right: 3px solid #d83029}
+.m-ny-list .m-ny-list-items{position: absolute;top: 0;left: 12px;padding-top: 10px;}
+.m-ny-list .ny-list-item{width: 247px;height: 81px;margin-bottom: 10px;border: 1px solid #d83029;background-color: #ee514b;transition: background-color 0.5s}
+.m-ny-list .ny-list-item:hover{background-color: #f37b57}
+.m-ny-list .ny-list-item a{padding: 15px 0;}
+.m-ny-list .ny-list-item-left{float: left;width: 50px;height: 50px;margin-left: 10px;;border-radius: 50%;overflow: hidden;background:#fff url(../images/ny_loading.gif) center center no-repeat}
+.m-ny-list .ny-list-item-left img{width: 50px;}
+.m-ny-list .ny-list-item-right{margin-left: 70px;font-size: 14px;line-height: 18px;}
+.m-ny-list .ny-list-item-rtt{margin-top: 10px;width: 140px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.m-ny-list .ny-list-item-rtime{float: right;margin-right: 14px}
+.m-ny-list .ny-itemtime-icon{display: inline-block;vertical-align: middle;margin: 0 10px 2px 0;width: 16px; height: 16px;background: url(../images/ny_icons.png) no-repeat;background-position: -51px -2px;}
+.m-ny-list .ny-list-ranklist{padding: 3px 13px;}
+.m-ny-list .ny-list-rank{position: relative;width: 247px;height: 86px;margin-top: 10px;border: 1px solid #d9312a;background: #ee514b}
+.m-ny-list .ny-list-rank a{display: block;color: #fff!important;padding: 14px 0;text-decoration: none!important;}
+.m-ny-list .ny-list-rank a:visited ,
+.m-ny-list .ny-list-rank a:hover ,
+.m-ny-list .ny-list-rank a:active ,
+.m-ny-list .ny-list-rank a:link ,
+.m-ny-list .ny-list-rank a:focus {color: #fff!important}
+.m-ny-list .ny-list-rank-num{display: block;position: absolute;top:28px;left:0;width: 42px; height:24px;background: #ee514b;line-height: 24px;text-align: center;font-size:14px;}
+.m-ny-list .ny-list-rank-left{float: left;width: 50px;height: 50px;margin:3px 0 0 50px;;border-radius: 50%;overflow: hidden;background:#fff url(../images/ny_loading.gif) center center no-repeat}
+.m-ny-list .ny-list-rank-left img{width:50px;}
+.m-ny-list .ny-list-rank-right{margin-left: 110px;font-size: 14px;line-height: 16px;}
+.m-ny-list .ny-list-rank-right .ny-list-rank-tt{margin-top: 4px;font-size: 12px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.m-ny-list .ranktop{background: #f37b57}
+.m-ny-list .ranktop .ny-list-rank-num{background: #e94740;left:-1px}
+
+.m-nywrap-950 .m-ny-list .m-ny-list-nav li,
+.m-nywrap-950 .m-ny-list .m-ny-list-nav span{width: 75px;}
+.m-nywrap-950 .m-ny-list .m-ny-list-boxul{width: 500px;}
+.m-nywrap-950 .m-ny-list,
+.m-nywrap-950 .m-ny-list .m-ny-list-box,
+.m-nywrap-950 .m-ny-list .m-ny-list-boxli{width: 250px;}
+.m-nywrap-950 .m-ny-list .ny-list-item,
+.m-nywrap-950 .m-ny-list .ny-list-rank{width: 220px;}
+/*问答*/
+
+.m-ny-list .ny-list-quest{position: absolute;top: 0;left: 12px;padding-top: 14px;}
+.m-ny-list .ny-quest-item{position:relative;width: 247px;padding-top:26px;margin-bottom: 10px;border: 1px solid #d83029;background-color: #f37b57;transition: background-color 0.5s}
+.m-ny-list .ny-quest-item .tags{position:absolute;left: 0;top:4px;}
+.m-ny-list .ny-quest-item .text{padding:0 10px 0 35px;margin-top:6px;height:36px;color: #fff;position: relative;font-size: 13px;line-height: 18px;}
+.m-ny-list .ny-quest-item .text a:visited {color: #fff!important;}
+.m-ny-list .ny-quest-item .text a:hover ,
+.m-ny-list .ny-quest-item .text a:active ,
+.m-ny-list .ny-quest-item .text a:link ,
+.m-ny-list .ny-quest-item .text a:focus {color: #fff!important;text-decoration: none!important;}
+.m-ny-list .ny-quest-item .text a:hover{text-decoration: underline!important;color: #fff!important;}
+
+.m-ny-list .ny-quest-item .text .icon{position: absolute;left:5px;width: 24px;height: 24px;display: inline-block;background-image: url("../images/ny_icons.png");background-repeat: no-repeat;}
+.m-ny-list .ny-quest-item .text .icon.icon-ask{background-position: -190px 0;}
+.m-ny-list .ny-quest-item .text .icon.icon-answer{background-position: -220px 0;}
+.m-ny-list .ny-quest-item .text .more{display: inline;color: #4661b5;font-size: 12px;float:none;margin-left: 2px;}
+.m-ny-list .ny-quest-item .text .more:hover{text-decoration: underline;}
+.m-ny-list .ny-quest-item .text a.more:visited ,
+.m-ny-list .ny-quest-item .text a.more:hover ,
+.m-ny-list .ny-quest-item .text a.more:active ,
+.m-ny-list .ny-quest-item .text a.more:link ,
+.m-ny-list .ny-quest-item .text a.more:focus {color: #4661b5!important;}
+
+.m-ny-list .ny-quest-item .option{padding:5px 10px;margin-top:8px;line-height: 28px;background-color: #fff;position:relative;}
+.m-ny-list .ny-quest-item .option .name{color:#4661b5;display: inline;margin-right: 5px;}
+.m-ny-list .ny-quest-item .option .name img{width: 28px;height: 28px;vertical-align:middle;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px;margin-right: 8px;display: inline;}
+.m-ny-list .ny-quest-item .option span{color:#333;}
+.m-ny-list .ny-quest-item .option .time{position:absolute;right:14px;top:5px;}
+
+.m-nywrap-950 .m-ny-list .ny-list-quest{left:11px;}
+.m-nywrap-950 .m-ny-list .ny-quest-item{width: 226px;}
+.m-nywrap-950 .m-ny-list .ny-quest-item .text{padding:0 8px 0 35px;}
+
+/*直播内容*/
+.m-ny-main{margin-left: 279px;width: 721px;}
+.m-nywrap-950 .m-ny-main{margin-left: 252px;width: 700px;}
+/*明星主播*/
+.m-ny-star{margin-bottom: 20px;}
+.m-ny-star ul{height: 267px;}
+.m-ny-star .ny-star-item{float: left;position: relative;width:162px;height: 267px;margin-left: 13px;overflow: hidden;transition: width .3s;}
+.m-nywrap-950 .m-ny-star .ny-star-item{margin-left: 6px;}
+.m-ny-star .js-ny-star-active{width: 356px;}
+.m-ny-star .ny-star-item a{display: block;width: 100%;height: 100%;background: url(../images/ny_loading.gif) center center no-repeat; }
+.m-ny-star .ny-star-user{position: absolute;display: block;left: 8px;top: 193px;height: 31px;padding: 0 8px;background:#e94740;color: #fff;line-height: 31px;text-align: center;font-size: 22px;}
+.m-ny-star .ny-star-time{position: absolute;display: block;left: 8px;top: 227px;width: 145px;height: 31px;background: #4661b5;color: #fff;line-height: 31px;text-align: center;font-size: 16px;}
+.m-ny-star .ny-startime-icon{display: inline-block;vertical-align: middle;margin: 0 10px 2px 0;width:17px;height: 17px;background: url(../images/ny_icons.png) no-repeat;background-position: -68px -2px; }
+.m-ny-star .ny-star-tags{
+    position: absolute;
+    top:10px;
+    left:0;
+}
+.m-ny-star .ny-star-tags .tags{
+    display: block;
+    margin-top: 7px;
+}
+.m-ny-star .ny-star-title{opacity:0;position:absolute;top:78px;left:118px;width:6em;font-size: 36px;line-height: 42px;padding:4px 0;color:#fff;border-top:1px solid #fff;border-bottom:1px solid #fff;transition: opacity 0.5s}
+.m-ny-star .ny-star-item:nth-child(2) .ny-star-title{width: 5em;left:154px;}
+.m-ny-star .ny-star-item:nth-child(3) .ny-star-title{width: 8em;font-size: 26px;}
+.m-ny-star .js-ny-star-active .ny-star-title{opacity: 1;}
+.m-ny-star .ny-star-info{position:absolute;left:0;bottom:0;right:0;padding:14px 16px;background-color: rgba(0,0,0,.5);color:#fff;}
+.m-ny-star .ny-star-info .name{font-size: 18px;line-height: 28px;}
+.m-ny-star .ny-star-info .name:hover{text-decoration: underline;}
+.m-ny-star .ny-star-info p{font-size: 14px;line-height: 22px;max-width:130px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.m-ny-star .js-ny-star-active .ny-star-info p{max-width: 180px;}
+.m-ny-star .ny-star-info .ny-btn{width:90px;position: absolute;left:212px;top:22px;}
+.m-ny-star .js-ny-star-active .ny-star-info p{max-width: 180px;}
+
+/*重点推荐*/
+.m-ny-recommend{position: relative;margin-bottom: 20px;height: 200px;padding-left: 4px;}
+.m-ny-recommend .item{width: 230px;height:200px;float:left;text-align:left;margin-left: 9px;position: relative;overflow: hidden}
+
+.m-nywrap-950 .m-ny-recommend{padding-left: 2px;}
+.m-nywrap-950 .m-ny-recommend .item{width: 228px;margin-left: 4px;}
+
+.m-ny-recommend .item a{display:block;height: 100%;background:#fff url(../images/ny_loading.gif) center center no-repeat;}
+.m-ny-recommend .item img{min-width: 100%;min-height: 100%;}
+.m-ny-recommend .item .tags{position: absolute;left:0;top:12px;}
+.m-ny-recommend .item .info{position:absolute;left: 0;bottom: 0;right: 0;color:#fff;background-color: rgba(0,0,0,.5);padding:5px 10px 6px;}
+.m-ny-recommend .item .info .name{line-height: 22px;font-size: 16px;}
+.m-ny-recommend .item .info .name:hover{text-decoration: underline!important;}
+.m-ny-recommend .item .info p{line-height: 18px;font-size: 14px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.m-ny-recommend .item .info .ny-btn{position: absolute;right: 7px;top:11px;width: 53px;}
+
+/*最近回答*/
+.m-ny-answer{position:relative;padding-left: 32px;}
+.m-ny-answer .ny-answer-title{width: 20px;height: 268px;border-left:1px solid #df4f47;position:absolute;left:23px;top: 0;}
+.m-ny-answer .ny-answer-title span{position: absolute;left: -10px;top: 50%;margin-top:-3.2em;line-height:1.1em;text-align:center;padding:1em 0;background-color:#fff;display: block;width: 20px;font-size: 18px;color: #333}
+.m-ny-answer .ny-answer-info .item{position:relative;width: 324px;height: 123px;text-align:left;background-color:#fff;border:1px solid #d2d2d2;float:left;margin-left:16px;margin-bottom:18px;border-radius:5px;}
+.m-nywrap-950 .m-ny-answer .ny-answer-info .item{width: 318px;margin-left:12px;}
+.m-ny-answer .ny-answer-info .item .ny-btn{position:absolute;right:14px;top:11px;line-height: 26px;width: 30px;font-size: 14px;}
+.m-ny-answer .ny-answer-info .item > a{position: absolute;left: 11px;top:32px;display:block;width: 60px;height: 60px;border-radius:30px;overflow: hidden;background:#fff url(../images/ny_loading.gif) center center no-repeat}
+.m-ny-answer .ny-answer-info .item img{width: 100%;height: 100%;border-radius:30px;}
+.m-ny-answer .ny-answer-info .item .info{padding:25px 0 0 82px;}
+.m-ny-answer .ny-answer-info .item .title a:visited {color: #333!important;}
+.m-ny-answer .ny-answer-info .item .title a:hover ,
+.m-ny-answer .ny-answer-info .item .title a:active ,
+.m-ny-answer .ny-answer-info .item .title a:link ,
+.m-ny-answer .ny-answer-info .item .title a:focus {color: #333!important;text-decoration: none!important;}
+.m-ny-answer .ny-answer-info .item .title a:hover{text-decoration: underline!important;}
+
+.m-ny-answer .ny-answer-info .item .info .title .name{font-size: 16px;font-weight: bold}
+.m-ny-answer .ny-answer-info .item .info .title .company{font-size: 14px;}
+.m-ny-answer .ny-answer-info .item .info p{line-height: 24px;}
+
+/*动画*/
+@keyframes aniBlink {
+from {
+margin-top:-240px;
+margin-left:-108px;
+}
+to {
+    margin-top:0px;
+    margin-left:108px;
+}
+}
+@-webkit-keyframes aniBlink {
+from {
+margin-top:-240px;
+margin-left:-108px;
+}
+to {
+    margin-top:0px;
+    margin-left:108px;
+}
+}
+@-moz-keyframes aniBlink {
+from {
+margin-top:-240px;
+margin-left:-108px;
+}
+to {
+    margin-top:0px;
+    margin-left:108px;
+}
+}
+@-o-keyframes aniBlink {
+from {
+margin-top:-240px;
+margin-left:-108px;
+}
+to {
+    margin-top:0px;
+    margin-left:108px;
+}
+}

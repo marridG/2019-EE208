@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
+    <link href="/gamedj/static/css/reset.css?version=201611161124" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="/gamedj/static/css/index.css?version=201611161124"/>
+    <script src="http://n.sinaimg.cn/game/homepage/js/jquery.min.js"></script>
+    <script src="http://games.sina.com.cn/307/2014/7/jquery.inview.min.js"></script>
+    <title>业内游戏引擎纷纷支持光追，RTX赋能游戏未来-新浪电竞_电竞赛事_直播报道_新浪电子竞技</title>
+    <meta name="keywords" content="RTX,光追,游戏引擎,NVIDIA,电子竞技,DOTA2,英雄联盟,lol,炉石传说,CSGO,赛事报道,直播手游电竞,新浪网" />
+    <meta name="description" content="新浪电竞汇聚国内外电子竞技资讯报道,综合英雄联盟、DOTA2、炉石传说、绝地求生：大逃杀、CSGO、守望先锋等各类竞技游戏电竞赛事新闻、视频直播、战报点评。" />
+</head>
+<body>
+<div id="Ghead">
+    <!--顶部导航包括登录验证开始  依赖于jquery  -->
+    <link type="text/css" rel="stylesheet" href="/gamedj/static/css/dj_strandwhitetop.css?version=201611161124"/>
+    <script src="http://dj.sina.com.cn/gamedj/static/js/gameheader.js?version=201811161122" type="text/javascript" charset="utf-8"></script>
+    <script src="http://i.sso.sina.com.cn/js/ssologin.js?version=201811161122" type="text/javascript" charset="utf-8"></script>
+    <!--顶部导航包括登录验证开始  依赖于jquery -->
+</div>
+
+<!--head-->
+<header>
+    <div class="head_con">
+        <a href="/"><img class="logo" src="/gamedj/static/images/wdj_new/logo.png" /></a>
+        <nav>
+            <ul>
+                <li ><a href="/" target="_blank">电竞首页</a></li>
+                <li class="current"><a href="/information" target="_blank" >游戏资讯</a></li>
+                <li ><a href="/live" target="_blank" >直播聚合</a></li>
+                <li ><a href="/video" target="_blank" >游戏视频</a></li>
+                <li><a href="http://games.sina.com.cn/lol/" target="_blank" >英雄联盟</a></li>
+                <li><a href="http://games.sina.com.cn/dota2/" target="_blank" >DOTA2</a></li>
+                <!--<li><a href="http://txdj.dj.sina.com.cn" target="_blank">腾讯专区</a></li>-->
+            </ul>
+                            <span class="float_sign" style="left: 126px;"></span>
+                    </nav>
+        <div class="search">
+            <form id="formid" name="cheadSearchForm" method="get" action="/search" target="_blank">
+                <input type="text" placeholder="输入查询信息" name="keywords">
+                <div class="search_btn" onClick="search_form_submit();"></div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function search_form_submit(){
+            $("#formid").submit();
+        }
+    </script>
+</header>
+<link rel="stylesheet" type="text/css" href="http://news.sina.com.cn/css/87/20140926/comment.3.css">
+<style type="text/css">
+    .img_wrapper img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+<style type="text/css">
+    .sina-comment-form .ft .login input{height:24px;}
+/* page */
+.page_more { width: 100%; margin-top: 40px; overflow: hidden; }
+.pageZone { padding-top: 0; overflow: hidden; text-align: center; }
+.pageZone span { width: 38px; height: 38px; line-height: 38px; text-align: center; color: #474747; text-decoration: none; margin-right: 5px; font-size: 16px; cursor: pointer; display: inline-block; background: #f6f6f6; }
+.pageZone span a { color: #414141; text-decoration: none; }
+.pageZone span:hover { background: #3480f2; color: #fff; text-decoration: none; }
+.pageZone .Disabled { width: 85px; }
+.pageZone span.Disabled:hover { background: #f6f6f6; }
+.pageZone .Disabled a { display: inline-block; width: 85px; color: #aeaeae; }
+.pageZone .Disabled a:hover { color: #aeaeae; }
+.pageZone .next { width: 85px; }
+.pageZone .next a { display: inline-block; width: 85px; }
+.pageZone span.isNow { background: #3480f2; color: #FFFFFF; }
+.pageZone span.isNow a { color: #FFFFFF !important; }
+.pageZone span.dot { border: none; }
+.pageZone span a { display: inline-block; width: 38px; height: 38px; }
+.pageZone span a:hover { color: #fff; text-decoration: none; }
+/*图集*/
+.hdFigureWrap{margin: 20px auto 0;}
+.clearfix:after{content:".";display:block;height:0;visibility:hidden;clear:both}.clearfix{zoom:1}
+</style>
+<script>
+        var NowColumn = $('.top_nav .active');
+        $(function(){
+            $(document).on('mouseover','.top_nav_list',function(e){
+                $(this).addClass('hover').siblings().removeClass('hover');
+            }).on('mouseout','.top_nav_list',function(e){
+                $(this).removeClass('hover');
+            })
+
+            $('.two_nav').width($(window).width());
+
+            $('.top_nav_list').hover(function(){
+                var _this=$(this);
+                AutoNav(_this,$('.head_top'))
+            },function(){
+                $('.two_nav').hide();
+            })
+
+        })
+</script>
+<script src="http://ent.sina.com.cn/js/470/20130123/comment.js" charset="gb2312"></script>
+
+<script language='javascript' src='http://games.sina.com.cn/307/2014/5/yibu.js'></script>
+<script type="text/javascript">
+    //js地址
+    var ARTICLE_JSS = {
+        jq:'http://i0.sinaimg.cn/dy/js/jquery/jquery-1.7.2.min.js',
+        sab:'http://ent.sina.com.cn/js/470/20130205/sab.js',
+        sinalib:'http://news.sina.com.cn/js/87/20110714/205/sinalib.js',
+        subshow:'http://i3.sinaimg.cn/ty/sinaui/subshow/subshow2012070701.min.js',
+        weiboAll:'http://news.sina.com.cn/js/268/2011/1110/16/weibo-all.js',
+        sdfigure:'http://ent.sina.com.cn/js/470/20121129/sdfigure_v2.js',
+        hdfigure:'http://news.sina.com.cn/js/87/20121218/hdfigure_v2.js',
+        sinflash:'http://i1.sinaimg.cn/home/sinaflash.js',
+        weiboCard:'http://ent.sina.com.cn/js/20120914/weibocard.js',
+        guess:'http://ent.sina.com.cn/js/470/20130205/guess.js',
+        allcont:'http://fashion.sina.com.cn/js/4/20130912/icontent/allcontent_new.js',
+        shareOnWeibo:'http://news.sina.com.cn/js/87/20111011/227/shareonweibo.js',
+        weiboCard2013:'http://tech.sina.com.cn/js/717/20131127/content/weibocard2013.js',
+        wbUsersRec:'http://news.sina.com.cn/js/87/20140623/wbUsesRec.js'
+    };
+
+    //余下全文
+    jsLoader(ARTICLE_JSS.jq)
+            .jsLoader(ARTICLE_JSS.sinalib)
+            .jsLoader({url:ARTICLE_JSS.allcont,charset:'gbk'})
+
+</script>
+
+<!-- 社交化微博组件 -->
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<div class="acticle_content">
+    <div class="acticle_container clear">
+        <div class="top_left">
+            <div class="acticle_nav">
+                <ul class="bdsharebuttonbox aticleShare" data-tag="share_1">
+                    <li><a href="javascript:void(0)" class="weibo" data-cmd="tsina"></a></li>
+                    <li><a href="javascript:void(0)" class="weixin"  data-cmd="weixin"></a></li>
+                    <li><a href="javascript:void(0)" class="qzone"  data-cmd="qzone"></a></li>
+                    <li><a href="#SI_FormList1" class="comment"></a></li>
+                </ul>
+                <div class="weixinpop" style="display: none;width: 120px; height: 120px; box-shadow:rgb(0, 0, 0) 0px 0px 15px -6px;left: 70px;top: 37px;"><div class="t" style="left: -4px; top: 50px;  transform: rotate(-90deg); -webkit-transform: rotate(-90deg);"></div> <img style="width: 96px; height: 96px; margin-top: 12px;" src="http://bshare.optimix.asia/barCode?site=weixin&amp;url=http://dj.sina.com.cn/article/icezzrq9401915.shtml#weibo_comment"></div>
+            </div>
+            <div class="acticle_main">
+                <div class="acticle_top">
+                    <div class="breadcrumb">
+                        <a target="_blank" href="/">新浪电竞</a><i> &gt; </i>
+                        <a target="_blank" href="/information">资讯列表</a>
+                        <i> &gt; </i>正文页
+                    </div>
+                    <h1>业内游戏引擎纷纷支持光追，RTX赋能游戏未来</h1>
+                    <div class="txtdetail">
+                        <span class="timer">2019-09-30 15:18</span><span class="Author">作者：新浪电竞</span><span class="from">来源：网络</span>
+                    </div>
+                </div>
+
+                <div class="acticle_body">
+                    <div id="artibody">
+                        <p style="text-align: left;">　　近期在日本举办的CEDEC游戏开发者大会上，《最终幻想》系列开发商SE旗下知名工作室LP（Luminous Productions）通过名为《Back Stage》的Demo首次展示了夜光引擎的实时光线追踪效果，这是继unity，虚幻4（Unreal Engine 4）与《剑网3》自研引擎等知名游戏引擎支持光线追踪之后，又一游戏引擎宣布加入光追阵营，也是 NVIDIA RTX 光追技术基于游戏底层开发的进一步扩张。随着夜光引擎等游戏引擎对光追的支持，将有更多的光追游戏诞生，NVIDIA 正逐步在游戏界以RTX实时光线追踪技术为核心建立起一个完整的生态系统。</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/97973/crawl/108/w550h358/20190930/cbb3-ifffquq3894879.png" alt="RTX 2080 SUPER"><span class="img_descr">RTX 2080 SUPER</span></div>
+<p style="text-align: left;">　　在SE展示的Demo中，通过 NVIDIA 的RTX实时光线追踪技术，呈现了栩栩如生的人物细节与材质纹理，打造了一个近乎真实的游戏场景。LP工作室负责人表示：“在RTX技术的推动下，我们离努力打造美丽的，逼真的游戏又近了一步”。</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/97973/crawl/36/w550h286/20190930/e5cb-ifffquq3894964.png" alt="夜光引擎Demo演示实时光线追踪"><span class="img_descr">夜光引擎Demo演示实时光线追踪</span></div>
+<p style="text-align: left;">　　<strong>RTX</strong><strong>光</strong><strong>追</strong><strong>技术</strong><strong>改变游戏的发开方式</strong></p>
+<p style="text-align: left;">　　游戏业内对于RTX实时光线追踪技术的运用已经慢慢普及开来。在游戏业内已有unity，虚幻4（Unreal Engine 4）等最顶尖的开发引擎对RTX光追支持，包括国内西山居《剑网3》的自研引擎也都加入RTX光追阵营。</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/97973/crawl/47/w550h297/20190930/cfc3-ifffquq3895147.png" alt="《剑网3》在光线追踪下呈现的效果"><span class="img_descr">《剑网3》在光线追踪下呈现的效果</span></div>
+<p style="text-align: left;">　　相比传统的实现游戏光线追踪技术，RTX实时光线追踪技术解决了开发上的不少难题。在以往游戏中，要实现光线追踪效果是应用了传统的光栅化渲染，需要开发者做出大量的3D建模并提前预置光线效果，这对于开发者来说无疑是一个繁重的工作量并且达到的视觉效果也不尽人意。而RTX实时光线追踪技术则是寻找场景中的光源，对场景中的物体进行实时渲染，减少了开发者的工作量，并呈现更逼真的画面效果。</p>
+<p style="text-align: left;">　　在RTX光线追踪技术的加持下，游戏开发更加便捷，在提升游戏的表现效果同时减少开发者的工作量，促使更多的精力集中在游戏本身，从根源上解放开发者的生产力。</p>
+<p style="text-align: left;">　　<strong>R</strong><strong>TX</strong><strong>光追引领</strong><strong>游戏未来</strong></p>
+<p style="text-align: left;">　　随着夜光引擎等知名游戏引擎的加入，更多的游戏也开始纷纷投入RTX光线追踪阵营，也进一步表明如今RTX实时光线追踪技术成为游戏业内最受追捧的技术，它正在逐渐改变游戏业内的开发方式，引领游戏未来。</p>
+<p style="text-align: left;">　　如在今年的德国科隆游戏展上，多款光追游戏大作惊艳亮相，包括目前全球最受欢迎的《我的世界》通过光线追踪迎来重生，《control》应用RTX光线追踪技术带来更好的游戏体验，还有倍受玩家期待的《赛博朋克 2077》、《使命召唤：现代战争》等游戏大作也纷纷将支持RTX实时光线追踪。</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/97973/crawl/57/w550h307/20190930/c3f5-ifffquq3895204.png" alt="开启RTX光线追踪下的《我的世界》"><span class="img_descr">开启RTX光线追踪下的《我的世界》</span></div>
+<p style="text-align: left;">　　并且光追这把火也烧到了国内游戏界，除了我们熟知的西山居《剑网3》外，腾讯NExT工作室新作科幻FPS游戏《重生边缘》与国内个人团队开发的动作FPS游戏《光明记忆：无限》也纷纷支持光线追踪，加入光线追踪的生态之中。</p>
+<div class="img_wrapper"><img src="http://n.sinaimg.cn/97973/crawl/58/w550h308/20190930/9f1f-ifffquq3895254.png" alt="《重生边缘》RTX光线追踪演示"><span class="img_descr">《重生边缘》RTX光线追踪演示</span></div>
+<p style="text-align: left;">　　由此可以察觉，光线追踪已经成为未来游戏的一个主流。RTX光线追踪不仅在游戏开发上，在游戏表现效果上，也同样是一个质的飞跃，它将帮助开发者更有效率的开发游戏，带给玩家更为真实的游戏体验。</p>
+<p style="text-align: left;">　　如今 NVIDIA RTX光线追踪已经形成一个完成的生态系统，包括行业标准的应用编程接口，一系列主流的、个人的游戏引擎的支持，以及来自最大开发者的、最受期待的游戏。在未来，可以预见的是将有更多的游戏与开发者加入到RTX光线追踪生态圈，NVIDIA 的RTX光线追踪技术将是未来游戏行业的领导者。</p>
+                    </div>
+                                    </div>
+                <div class="recommend">
+                    <h3><i></i>相关推荐</h3>
+                    <div class="recommend_con">
+                                                    <div class="pictrue">
+                                <a href="http://weibo.com/sinaesports">
+                                    <img src="http://n.sinaimg.cn/games/20161110/XGf--fxxsmif2660901.jpg" />
+                                    <div class="mask"></div>
+                                   
+                                </a>
+                            </div>
+                                                                            <div class="recommend_list">
+                                <ul>
+                                                                            <li><i></i><a href="/article/icezzrq9401372.shtml" target="_blank">《Control》表现惊艳业界，RTX已成3A新标准</a></li>
+                                                                            <li><i></i><a href="/article/icezzrq6995756.shtml" target="_blank">在宿舍也要畅享光追，RTX 2060笔记本极致游戏体验</a></li>
+                                                                            <li><i></i><a href="/article/icezueu7203974.shtml" target="_blank">校园娱乐首选，宿舍开黑就选RTX笔记本</a></li>
+                                                                            <li><i></i><a href="/article/icezueu6954845.shtml" target="_blank">精彩校园，创意无限，RTX 20系游戏本体验极速创作</a></li>
+                                                                            <li><i></i><a href="/article/icezueu6823730.shtml" target="_blank">摆脱笨重！飘逸持久的RTX笔记本带来不一样的感受</a></li>
+                                                                    </ul>
+                            </div>
+                                            </div>
+                </div>
+                <!--<div class="sina-comment-wrap" id="SI_FormList1"></div>
+                <script src="http://i.sso.sina.com.cn/js/ssologin.js" charset="utf-8"></script>-->
+				<div class="sina-comment-wrap" id="SI_FormList1"></div>
+				<script src="http://i.sso.sina.com.cn/js/outlogin_layer.js" charset="utf-8"></script>
+                <script src="http://news.sina.com.cn/js/87/20140926/comment.3.min.js"></script>
+                <!--<script>
+                    ;(function(exports){
+                        var $ = exports.___sinacMNT___;
+                        var FormList11 = new $.cmnt.FormList('SI_FormList1',{
+                            // 频道
+                            channel:'yx',
+                            // 新闻id
+                            newsid:'comos-icezzrq9401915',
+                            parent:'',
+                            // 编码，默认为gbk,可使用utf-8,一般和页面编码一致
+                            encoding:'utf-8'
+                        },{
+                            // 频道
+                            channel: 'yx',
+                            // 新闻id
+                            newsid:'comos-icezzrq9401915',
+                            // 评论类型，单条新闻为0（如正文页评论），多条新闻为1（如高清图评论）
+                            group: 0,
+                            // 编码，默认为gbk,可使用utf-8,一般和页面编码一致
+                            encoding:'utf-8',
+                            // 第几张开始加载，默认为1
+                            page: 1,
+                            // 每次显示条数，默认为20
+                            pageSize: 20,
+                            // 隐藏评论列表
+                            hideList:0,
+                            // 最新评论默认显示条数
+                            hotPageNum:5,
+                            // 最新评论默认显示条数
+                            firstPageNum:5,
+                            // 可点击最新评论正文“更多评论”按钮次数,达到该次数后，显示“查看更多评论”链接，再点击则跳转
+                            clickMoreTimes:3,
+                            // 加载完成回调，可在回调中获取评论数等评论数据
+                            loaded:function(self){
+                                // console.log(self);
+                            }
+                        },{});
+                    })(window);
+                </script>-->
+				<script>
+					;(function(exports){
+						var $ = exports.___sinacMNT___;
+						// 保持和页面编码一致，gbk或utf-8
+						$.cmnt.config.encoding = 'utf-8';
+						var FormList1 = new $.cmnt.FormList('SI_FormList1',{
+							// 频道编号
+							channel:'yx',
+							// 新闻id
+							newsid:'comos-icezzrq9401915',
+							// 默认为空
+							parent:''
+						},{
+							channel: 'yx',
+							// 新闻id
+							newsid:'comos-icezzrq9401915',
+							// 默认为0，多条新闻（图片）集合的评论为1
+							group: 0,
+							// 开始页数，默认为1
+							page: 1,
+							// 每页评论条数
+							pageSize: 20,
+							// 最大楼层
+							maxFloor:1,
+							 // 隐藏评论列表，只显示评论框
+							hideList:0
+							// // 最新评论默认显示条数
+							// hotPageNum:5,
+							// // 最新评论默认显示条数
+							// firstPageNum:5,
+							// // 可点击最新评论正文“更多评论”按钮次数,达到该次数后，显示“查看更多评论”链接，再点击则跳转
+							// clickMoreTimes:3
+						},{});
+					})(window);
+				</script>
+            </div>
+        </div>
+        <div class="top_right">
+            <div class="Ad_slots">
+    <a href="http://dj.sina.com.cn/search?keywords=lpl" target="_blank"><img src="http://n.sinaimg.cn/games/590/w340h250/20190529/89ef-hxsrwwq5214736.png"></a>
+</div>
+
+                            <!--热门资讯-->
+                <div class="Hot_news">
+                    <div class="module_title clear">
+                        <h2>
+                            <p class="chinese">热门资讯</p>
+                            <p class="english">HOT NEWS</p>
+                            <span class="mark_line"></span>
+                        </h2>
+                    </div>
+                    <div class="Hot_news_list">
+                        <ul>
+                                                                                                <li><i class="te">1</i><a href="/article/icezuev0092358.shtml">MDL成都Major中国区海选赛落下帷幕</a></li>
+                                                                                                                                <li><i class="te">2</i><a href="/article/icezzrr0133054.shtml">虎牙S9《电竞大实话》相约总决赛，群星璀璨！</a></li>
+                                                                                                                                <li><i class="te">3</i><a href="/article/icezueu9802566.shtml">MDL成都Major各大赛区预选赛直邀名单公布！</a></li>
+                                                                                                                                <li><i>4</i><a href="/article/icezzrq9843101.shtml">星际巅峰对决国庆再燃！中国区四大种子蓄势待发</a></li>
+                                                                                                                                <li><i>5</i><a href="/article/icezueu9801090.shtml">北境电竞嘉年华：激扬青春，书写唐山全新篇章</a></li>
+                                                                                                                                <li><i>6</i><a href="/article/icezzrq9441893.shtml">2019首届中国移动电子竞技大赛湖北省高校赛收官</a></li>
+                                                                                                                                <li><i>7</i><a href="/article/icezueu9387630.shtml">点金手模式：TI冠军落败，主播队赢得欧洲区冠军</a></li>
+                                                                                                                                <li><i>8</i><a href="/article/icezueu9379640.shtml">潮人推荐 国庆来创智汇邂逅俄罗斯“国民偶像”！</a></li>
+                                                                                                                                <li><i>9</i><a href="/article/icezueu9360171.shtml">云南与腾讯发布首个省级文旅IP形象“云南云”</a></li>
+                                                                                                                                <li><i>10</i><a href="/article/icezzrq9401915.shtml">业内游戏引擎纷纷支持光追，RTX赋能游戏未来</a></li>
+                                                                                    </ul>
+                    </div>
+                </div>
+                            <!--热门视频-->
+    <div class="Hot_videos">
+        <div class="module_title clear">
+            <h2>
+                <p class="chinese">热门视频</p>
+                <p class="english">HOT VIDEOS</p>
+                <span class="mark_line"></span>
+            </h2>
+        </div>
+        <div class="Hot_videos_list">
+                                    <div class="video_list">
+                <div class="article_pic">
+                    <a href="http://games.sina.com.cn/news/yw/2019-09-20/esports-iicezzrq7226171.shtml" target="_blank"><img src="http://n.sinaimg.cn/games/639/w400h239/20190920/a7bb-iewtemz6536681.jpg" style="opacity: 1;"><i class="video_btn"></i></a>
+                </div>
+                <p class="article_title"><a href="http://games.sina.com.cn/news/yw/2019-09-20/esports-iicezzrq7226171.shtml" target="_blank">全新永恒之森系列灵动而至！阿狸新皮肤来啦！</a></p>
+            </div>
+                                    <div class="video_list">
+                <div class="article_pic">
+                    <a href="http://games.sina.com.cn/news/yw/2019-09-11/esports-iicezueu5007304.shtml" target="_blank"><img src="http://n.sinaimg.cn/games/639/w400h239/20190911/7b63-iekuaqt8475794.png" style="opacity: 1;"><i class="video_btn"></i></a>
+                </div>
+                <p class="article_title"><a href="http://games.sina.com.cn/news/yw/2019-09-11/esports-iicezueu5007304.shtml" target="_blank">新将来袭《英雄联盟》公布5款新皮肤特效演示</a></p>
+            </div>
+                                    <div class="video_list">
+                <div class="article_pic">
+                    <a href="http://games.sina.com.cn/news/yw/2019-08-25/esports-ihytcitn1815205.shtml" target="_blank"><img src="http://n.sinaimg.cn/games/639/w400h239/20190825/cbed-icqznhc1073546.png" style="opacity: 1;"><i class="video_btn"></i></a>
+                </div>
+                <p class="article_title"><a href="http://games.sina.com.cn/news/yw/2019-08-25/esports-ihytcitn1815205.shtml" target="_blank">TI10举办地公布——A队主场瑞典斯德哥尔摩</a></p>
+            </div>
+                                    <div class="video_list">
+                <div class="article_pic">
+                    <a href="http://games.sina.com.cn/news/yw/2019-08-22/esports-ihytcitn1115904.shtml" target="_blank"><img src="http://n.sinaimg.cn/games/639/w400h239/20190822/3ed9-icqznfz5475421.jpg" style="opacity: 1;"><i class="video_btn"></i></a>
+                </div>
+                <p class="article_title"><a href="http://games.sina.com.cn/news/yw/2019-08-22/esports-ihytcitn1115904.shtml" target="_blank">“为何而战”？LPL夏季赛季后赛宣传片热血出炉</a></p>
+            </div>
+                    </div>
+    </div>
+    
+                <!--原创推荐-->
+    <div class="Original">
+        <div class="module_title clear">
+            <h2>
+                <p class="chinese">原创推荐</p>
+                <p class="english">Original</p>
+                <span class="mark_line"></span>
+            </h2>
+        </div>
+        <div class="Original_con">
+            <div class="Original_b">
+                <div class="pictrue">
+                    <a href="http://dj.sina.com.cn/article/fyvtmxc7495502.shtml" target="_blank">
+                        <img src="http://n.sinaimg.cn/games/507/w330h177/20180409/HC2r-fyvtmxe4832082.png">
+                        <div class="mask"></div>
+                        <p>成千上万名设计师制作不一样的英雄联盟</p>
+                    </a>
+                </div>
+            </div>
+                                    <div class="Original_s">
+                <div class="pictrue">
+                    <a href="http://games.sina.com.cn/news/sd/2019-09-28/esports-iicezueu8931521.shtml" target="_blank"><img src="http://n.sinaimg.cn/games/639/w400h239/20190928/81b4-ifffqup5715065.jpg"></a>
+                </div>
+                <p class="article_title"><a href="/article/icezueu8931521.shtml" target="_blank">梦想成为电竞选手的韩国少年们</a></p>
+                <p class="time">2019-09-28 13:17:51</p>
+            </div>
+                                                <div class="Original_s">
+                <div class="pictrue">
+                    <a href="http://games.sina.com.cn/news/sd/2019-09-16/esports-iicezueu6048488.shtml" target="_blank"><img src="http://n.sinaimg.cn/games/639/w400h239/20190916/6b88-ietnfsp3610244.jpg"></a>
+                </div>
+                <p class="article_title"><a href="/article/icezueu6048488.shtml" target="_blank">在新加坡的比赛中，我和选手聊了聊文莱电竞行业</a></p>
+                <p class="time">2019-09-16 09:25:08</p>
+            </div>
+                                                        </div>
+    </div>
+    
+            <div class="Ad_slots">
+    <a href="http://dj.sina.com.cn/esports/wegl2019.shtml" target="_blank"><img src="http://n.sinaimg.cn/games/590/w340h250/20190710/522d-hzrevpz6730010.jpg"></a>
+</div>
+
+        </div>
+    </div>
+</div>
+<script>
+    var pagecount = 0;
+    function changePage(page){
+        page = page ? parseInt(page) : 1;
+        $.ajax({
+            type: 'GET',
+            dataType: 'json',
+            cache : false,
+            url:"/ajax_fun/get_content_news/icezzrq9401915/"+page,
+            success:function(msg){
+                if(msg && msg.status == "succ"){
+                    var leng = msg.num;
+                    var pre = page -1;
+                    var preDis = pre?'next':'Disabled';
+                    var preClick = pre?' onclick = "changePage('+pre+')"':'';
+                    var pagenum = '<div class="page_more"><div class="pageZone"><span title="上一页" class="'+preDis+'" data-page="'+pre+'"><a href="javascript:void(0);"'+preClick+' data-page="'+pre+'">上一页</a></span>';
+                    var isNow = '';
+                    var pageclick = '';
+                    for(var i =1;i<=leng;i++){
+                        if(i == page){
+                            isNow = "isNow";
+                            pageclick = '';
+                        }else{
+                            isNow = 'jump';
+                            pageclick = ' onclick="changePage('+i+')"';
+                        }
+                        pagenum += '<span title="'+i+'" class="'+isNow+'" data-page="'+i+'"><a href="javascript:void(0);"'+pageclick+' data-page="'+i+'">'+i+'</a></span>';
+                    };
+                    var next = page + 1;
+                    var nextDis = page >= leng?'Disabled':'jump';
+                    var nextClick = page >= leng?'':' onclick = "changePage('+next+')"';
+                    pagenum += '<span title="下一页" class="next '+nextDis+'" data-page="'+next+'"><a href="javascript:void(0);"'+nextClick+' data-page="'+next+'">下一页</a></span></div></div>';
+                    if(msg.list){
+                        $("#artibody").html(msg.list);
+                        $(".page1").html(pagenum);
+                    }
+                    document.body.scrollTop =150;
+                }
+            }
+        });
+    };
+    //左侧按钮
+    var nav_top = $('.acticle_nav').offset().top;
+    $(window).scroll(function() {
+        var s_top = $(window).scrollTop();
+        if(s_top >= nav_top - 20){
+            $('.acticle_nav').css({'position':'fixed' , 'top' : 20,})
+        }else {
+            $('.acticle_nav').removeAttr('style')
+        }
+    });
+    //右侧 浮动 
+     (function(){
+        var RightTop = $('.top_right').offset().top;
+        $(window).scroll(function() {
+            var LeftTop = $('.top_left').offset().top;
+            var Leftheight = $('.top_left').height();
+            var RightHeight = $('.top_right').height();
+            var WindowHeight = $(window).height();
+            var ScrollTop = $(window).scrollTop();
+            if(Leftheight>RightHeight){
+                if(ScrollTop>=RightTop+RightHeight-WindowHeight){
+                if(ScrollTop<=LeftTop+Leftheight-WindowHeight){
+                    $('.top_right').addClass('rfixed');
+                    $('.top_right').removeClass('rfixed2');
+                }else if(ScrollTop>LeftTop+Leftheight-WindowHeight) {
+                    $('.top_right').addClass('rfixed2');
+                }
+                }else{
+                    $('.top_right').removeClass('rfixed rfixed2');
+                }
+            }
+
+        })
+    })();
+    //weixinpop
+    $(document).on('click','.aticleShare a',function (e) {
+        if($(this).attr('data-cmd')=='weixin'){
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        var pos = $(this).offset();
+        var _this = $(this)
+        var href = $.trim(window.location.href);
+        console.log(href);
+        //使用了外部接口
+        $(".weixinpop").show();
+        //$('.weixinpop').css({left:pos.left+60, top:pos.top-40}).show();
+    });
+    //点击空白处消失
+    $(document).click(function (e) {
+        $('.weixinpop').hide();
+    });
+</script>
+<!-- end 添加js -->
+<!--footer-->
+<div class="foot1" style="position: relative">
+    <div class="foot1_con">
+                <div class="Friend_link">
+            <p class="title">友情链接</p>
+                                            <ul class="link_list link_list1">
+                    <li>
+                        <a href="http://games.sina.com.cn/" target="_blank">新浪游戏</a>
+                    </li>
+                </ul>
+                                            <ul class="link_list link_list1">
+                    <li>
+                        <a href="http://kan.sina.com.cn/" target="_blank">看游戏</a>
+                    </li>
+                </ul>
+                                            <ul class="link_list link_list1">
+                    <li>
+                        <a href="http://sports.sina.com.cn/" target="_blank">新浪体育</a>
+                    </li>
+                </ul>
+                                            <ul class="link_list link_list2">
+                    <li>
+                        <a href="http://games.sina.com.cn/vg/" target="_blank">电玩游戏</a>
+                    </li>
+                </ul>
+                                            <ul class="link_list link_list2">
+                    <li>
+                        <a href="http://games.sina.com.cn/z/wow/indexpage.shtml" target="_blank">魔兽世界</a>
+                    </li>
+                </ul>
+                                            <ul class="link_list link_list2">
+                    <li>
+                        <a href="http://k.18183.com/" target="_blank">K电竞</a>
+                    </li>
+                </ul>
+                                            <ul class="link_list link_list3">
+                    <li>
+                        <a href="http://lol.dj.sina.com.cn/" target="_blank">英雄联盟</a>
+                    </li>
+                </ul>
+                                            <ul class="link_list link_list3">
+                    <li>
+                        <a href="http://dota2.dj.sina.com.cn/" target="_blank">DOTA2</a>
+                    </li>
+                </ul>
+                                            <ul class="link_list link_list3">
+                    <li>
+                        <a href="http://www.huomao.com" target="_blank">火猫直播</a>
+                    </li>
+                </ul>
+                                            <ul class="link_list link_list3">
+                    <li>
+                        <a href="http://www.famulei.com/" target="_blank">伐木累</a>
+                    </li>
+                </ul>
+                                                                                                                                                                                    </div>
+                <div class="Official_weixin">
+            <p class="title">官方微信</p>
+            <div class="QR">
+                <img src="http://n.sinaimg.cn/games/55d1b789/20190709/chonglang.png" />
+                <p>网上冲浪记事官方微信</p>
+            </div>
+        </div>
+        <div class="Share_contact">
+            <p class="title">分享联系</p>
+            <div class="share">
+                <a title="分享到新浪微博" href="http://weibo.com/sinaesports?refer_flag=1001030101_&is_hot=1" class="share_btn weibo" target="_blank"></a>
+                <a title="分享到微信" href="javascript:void(0);" id="foot_weixin" class="share_btn weixin"></a>
+                <a href="http://connect.qq.com/widget/shareqq/index.html?url=http://dj.sina.com.cn&title=新浪电竞-专业电竞媒体-赛事直播报道-新浪电子竞技&description=新浪电竞是国内专业电竞门户网站,综合英雄联盟、DOTA2、炉石传说、魔兽争霸、CSGO、守望先锋等各类竞技游戏电竞赛事资讯报道、视频直播、战报点评。&charset=utf-8;" target="_blank" data-cmd="more" class="share_btn mshare"></a>
+            </div>
+            <p class="mailbox"><i></i> <a title="发送邮箱" href="Mailto:yys@dj.sina.cn" style="color:#808080">yys@dj.sina.cn </a></p>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('#foot_weixin').click(function(e){
+                $('.foot1').append(' <div class="weixinpop" style="top: 210px;left: 50%;margin-left: 260px;"><div class="t"></div><img src="http://bshare.optimix.asia/barCode?site=weixin&amp;url=http://dj.sina.com.cn/article/fxxsmif3134363.shtml">用微信扫描二维码<br>分享至微信朋友圈</div>')
+                e.stopPropagation();
+            })
+        })
+    </script>
+</div>
+<footer>
+    <p class="firstLine"><a href="javascript:void(0);">新浪简介</a><span class="interval">|</span><a href="javascript:void(0);">About Sina</a><span class="interval">|</span><a href="javascript:void(0);">网站地图</a><span class="interval">|</span><a href="javascript:void(0);">广告服务</a><span class="interval">|</span><a href="javascript:void(0);">联系我们</a><span class="interval">|</span><a href="javascript:void(0);">招聘信息</a><span class="interval">|</span><a href="javascript:void(0);">网站律师</a><span class="interval">|</span><a href="javascript:void(0);">SINA English</a><span class="interval">|</span><a href="javascript:void(0);">通行证注册</a><span class="interval">|</span><a href="javascript:void(0);">产品答疑</a></p>
+    <p>Copyright © 1996-2016 SINA Corporation, All Rights Reserved</p>
+    <p>新浪公司 版权所有</p>
+</footer>
+
+<!--右边按钮-->
+<div class="right_btn">
+    <a class="weixin" href="javascript:void(0);"><i></i></a>
+    <a class="totop" href="javascript:void(0);"><i></i></a>
+    <img class="QR" src="/gamedj/static/images/wdj_new/right_qr.png" />
+</div>
+<script src="/gamedj/static/js/jquery.easing.js?version=201811161122"></script>
+<script src="/gamedj/static/js/public.js?version=201811161122"></script>
+
+<script>
+    //赛程切换
+    (function () {
+        var $Tag = $(".Schedule_tag").find("li");
+        var $con = $(".Schedule_con");
+        var $float_Sign = $(".Schedule_float_sign");
+        changeTag($Tag, $con, "current", "click", function ($tag,index) {
+            $float_Sign.stop().animate({
+                "left": $tag.position().left - 1 ,
+                "width": $tag.width() + 2,
+            },{duration:300,easing: "easeOutBack"})
+            if($con.eq(index).find('.scroll_con').length == 0){
+                Wscroll($con.eq(index))
+            }
+        })
+    })();
+    
+    //视频切换
+    (function () {
+        var $Tag = $(".Hot_videos_tag").find("a");
+        var $con = $(".Hot_videos_con");
+        var $float_Sign = $(".videos_float_sign");
+        changeTag($Tag, $con, "current", "click", function ($tag) {
+            $float_Sign.stop().animate({
+                "left": $tag.position().left - 1 ,
+                "width": $tag.width(),
+            },{duration:300,easing: "easeOutBack"});
+            $con.removeClass("video_cur");
+            //var index = $(".Hot_videos_tag .current").index($Tag)
+            var index = $Tag.index($(".Hot_videos_tag .current"));
+            $con.eq(index).addClass("video_cur");
+        })
+    })();
+    //深度报道
+    (function () {
+        var $Tag = $(".detailed_list");
+        changeTag($Tag, null, "active", "hover")
+    })();
+    /*资讯图片延迟加载*/
+   /*
+    $('.E_sports_news img[data-src]').live('inview', function(event, isVisible) {
+        if (!isVisible) {
+            return;
+        }
+        var _this = $(this);
+        _this.load(function() {
+            _this.css({opacity: 1});
+            console.log("come in");
+        });
+        _this.attr('src', _this.attr('data-src'));
+
+        _this.removeAttr('data-src');
+    });*/
+    
+    /*延时加载页面图片*/
+    $('.E_sports_news img[data-src]').live('inview', function(event, isVisible) {
+      if (!isVisible) {return;}
+      var img = $(this);
+      // Show a smooth animation
+      img.css('opacity', 0);
+      img.attr('src',"");
+      img.load(function() { img.animate({ opacity: 1 }, 500); });
+      // Change src
+      img.attr('src', img.attr('data-src'));
+      // Remove it from live event selector
+      img.removeAttr('data-src');
+    });
+   
+
+    //首页热门专题
+    $('.Popular_topics').live('inview', function(event, isVisible) {
+        if (!isVisible) {
+            return;
+        }
+        $(this).find('.Popular_topics_list').addClass('enlarge')
+    });
+
+    
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?1ec76ed58610652c8364bc543c6f2c9f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!-- SUDA_CODE_START -->
+<script type="text/javascript" charset="utf-8" src="http://mjs.sinaimg.cn/wap/public/suda/201611031750/suda_log.min.js"></script>
+<!-- SUDA_CODE_END -->
+</body>
+</html>
+
+

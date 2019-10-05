@@ -5,7 +5,6 @@ import string
 import re
 import urlparse
 import os
-from ctypes.wintypes import MAX_PATH
 # import urllib
 import sys
 import shutil  # to clear non-empty folders
@@ -16,30 +15,26 @@ from Ex3_1_Bloom_Filter_class import BloomFilter
 
 # global variables
 # [control - for users]
-THREAD_NUM = 10
+THREAD_NUM = 40
 FINAL_SUBMISSION = False
+MAX_PATH = 200
 # ********** CHECK BEFORE UPLOAD !!! **********
 # [status]
 DEBUG_MODE = False
 # [features]
-SHOW_LOGS = True
+SHOW_LOGS = False
 SHOW_REPORT = True
 SHOW_TIME = True
-GRAPH_REQUIRED = True
-SHOW_GRAPH = True
+GRAPH_REQUIRED = False
+SHOW_GRAPH = False
 ALWAYS_CLEAR = True
 # MAX_FILE_NAME_LENGTH = 200
-ADVANCED_ELEMENT_MATCH = 0
+ADVANCED_ELEMENT_MATCH = 1
 # version control - (1)delete downloaded files (2)clear log file
-VERSION_CONTROL = True
-# ********** ALSO CHECK THE LAST FEW LINES !!! **********
+VERSION_CONTROL = False
 
-# control to increase speed or avoid ambiguity
-if not GRAPH_REQUIRED or THREAD_NUM >= 3 or G_max_page > 10:
-    # SHOW_GRAPH = False  # warning: defined above without usage
-    SHOW_GRAPH = False and not SHOW_GRAPH  # to avoid warning
-if THREAD_NUM > 10:
-    SHOW_LOGS = False
+
+# ********** ALSO CHECK THE LAST FEW LINES !!! **********
 
 
 def crawl(in_seed, in_max_page, in_max_depth):
@@ -309,8 +304,22 @@ G_crawled_max_depth_thread = [0] * THREAD_NUM
 #   made by different threads on a global variable
 varLock = threading.Lock()
 
+# control to increase speed or avoid ambiguity
+if not GRAPH_REQUIRED or THREAD_NUM >= 3 or G_max_page > 10:
+    # SHOW_GRAPH = False  # warning: defined above without usage
+    SHOW_GRAPH = False and not SHOW_GRAPH  # to avoid warning
+if THREAD_NUM > 10:
+    SHOW_LOGS = False
+
 if not FINAL_SUBMISSION:
-    crawl("http://www.sjtu.edu.cn", 500, 5)
+    # crawl("http://www.sjtu.edu.cn", 200, 2)
+
+    if __name__ == '__main__':
+        trm_seed = sys.argv[1]
+        trm_max_page = int(sys.argv[2])
+        trm_max_depth = int(sys.argv[3])
+
+        crawl(trm_seed, trm_max_page, trm_max_depth)
 else:
     DEBUG_MODE = False
     SHOW_LOGS = True
