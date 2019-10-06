@@ -32,8 +32,6 @@ ALWAYS_CLEAR = True
 ADVANCED_ELEMENT_MATCH = 1
 # version control - (1)delete downloaded files (2)clear log file
 VERSION_CONTROL = False
-
-
 # ********** ALSO CHECK THE LAST FEW LINES !!! **********
 
 
