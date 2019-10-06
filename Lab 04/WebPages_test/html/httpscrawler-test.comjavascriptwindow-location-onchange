@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+  <html>
+  <head><title>javascript:window.location onchange</title></head>
+  <body>
+  <span>Change language or region:</span>
+  <select onchange="var href=this[this.selectedIndex].value;if(href!=''){window.location.href=href};">
+  <option selected value="/javascript/window-location-onchange/en/">English</option>
+  <option value="/javascript/window-location-onchange/es/">Español</otion>
+  <option value="/javascript/window-location-onchange/fr/">Français</otion>
+  <option value="/javascript/window-location-onchange/it/">Italiano</option>
+  </select>
+  </body>
+  </html>

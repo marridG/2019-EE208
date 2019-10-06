@@ -15,14 +15,14 @@ from Ex3_1_Bloom_Filter_class import BloomFilter
 
 # global variables
 # [control - for users]
-THREAD_NUM = 40
+THREAD_NUM = 10
 FINAL_SUBMISSION = False
 MAX_PATH = 200
 # ********** CHECK BEFORE UPLOAD !!! **********
 # [status]
 DEBUG_MODE = False
 # [features]
-SHOW_LOGS = False
+SHOW_LOGS = True
 SHOW_REPORT = True
 SHOW_TIME = True
 GRAPH_REQUIRED = False
@@ -232,6 +232,10 @@ def get_page(page):
 def get_all_links(content, page_url):
     links = set()  # initialize the set to store all the links on the page
     if ADVANCED_ELEMENT_MATCH:
+        """
+        Pure .html:
+        re.finditer("href=\".*?.html\"",page)
+        """
         url_iterator = re.finditer("href=\".*?\"", content)
         for i in url_iterator:
             this_link = i.group().split('"')[1]
@@ -310,14 +314,14 @@ if THREAD_NUM > 10:
     SHOW_LOGS = False
 
 if not FINAL_SUBMISSION:
-    # crawl("http://www.sjtu.edu.cn", 200, 2)
+    crawl("https://crawler-test.com/", 200, 2)
 
-    if __name__ == '__main__':
-        trm_seed = sys.argv[1]
-        trm_max_page = int(sys.argv[2])
-        trm_max_depth = int(sys.argv[3])
-
-        crawl(trm_seed, trm_max_page, trm_max_depth)
+    # if __name__ == '__main__':
+    #     trm_seed = sys.argv[1]
+    #     trm_max_page = int(sys.argv[2])
+    #     trm_max_depth = int(sys.argv[3])
+    #
+    #     crawl(trm_seed, trm_max_page, trm_max_depth)
 else:
     DEBUG_MODE = False
     SHOW_LOGS = True
