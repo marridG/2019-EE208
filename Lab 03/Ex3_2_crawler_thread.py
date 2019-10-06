@@ -314,7 +314,7 @@ if THREAD_NUM > 10:
     SHOW_LOGS = False
 
 if not FINAL_SUBMISSION:
-    crawl("https://crawler-test.com/", 200, 2)
+    crawl("http://www.globaltimes.cn/", 10, 2)
 
     # if __name__ == '__main__':
     #     trm_seed = sys.argv[1]

@@ -2,10 +2,10 @@
 
 INDEX_DIR = "IndexFiles.index"
 # User defined
-DEBUG_MODE = False
-ONLY_HTML = True
-WEB_PAGE_INDEX_PATH = "Web Pages/index.txt"
-WEB_PAGES_PATH = "Web Pages/html"
+DEBUG_MODE = True
+ONLY_HTML = False
+WEB_PAGE_INDEX_PATH = "WebPages_test_English/index.txt"
+WEB_PAGES_PATH = "WebPages_test_English/html"
 
 import sys, os, lucene, threading, time
 from datetime import datetime
@@ -19,6 +19,7 @@ from org.apache.lucene.store import SimpleFSDirectory
 from org.apache.lucene.util import Version
 
 import nltk, re
+from bs4 import BeautifulSoup
 
 """
 This class is loosely based on the Lucene (java implementation) demo class 
@@ -54,9 +55,12 @@ class IndexFiles(object):
 
         store = SimpleFSDirectory(File(storeDir))
         analyzer = LimitTokenCountAnalyzer(analyzer, 1048576)
+
         config = IndexWriterConfig(Version.LUCENE_CURRENT, analyzer)
         config.setOpenMode(IndexWriterConfig.OpenMode.CREATE)
+        # print "init done"
         writer = IndexWriter(store, config)
+        # print "init 2 done"
 
         self.indexDocs(root, writer)
         ticker = Ticker()
@@ -93,43 +97,54 @@ class IndexFiles(object):
                 try:
                     path = os.path.join(root, filename)
                     with open(path, 'r') as file:
-                        '''
-                        file = open(path)
-                        contents = unicode(file.read(), 'gbk')
-                        file.close()
-                        '''
-                        contents_temp = unicode(file.read(), 'gbk')
+                        contents_raw = file.read()
                     # filter the title of the web page
-                    title_iter = re.finditer("<title>.*</title>", contents_temp)
+                    title_iter = re.finditer("<title>.*</title>", contents_raw)
                     title = ""
                     for i in title_iter:
                         title = i.group().split('<title>')[-1].split("</title>")[0]
                         if title:
                             break
-                    # filter out the tags on the html
-                    contents = nltk.clean_html(contents_temp)
+                    # filter out the tags on the html and encode
+                    # contents = unicode(nltk.clean_html(contents_raw), 'gbk')
+                    # NotImplementedError: To remove HTML markup, use BeautifulSoup's get_text() function
+                    # Refer to: https://blog.csdn.net/Baozoudemelon/article/details/83269740
+                    # contents = unicode(BeautifulSoup(contents_raw, features="html.parser").get_text(), 'gbk')
+                    contents_text = BeautifulSoup(contents_raw, features="html.parser").get_text()
+                    try:
+                        contents = unicode(contents_text, 'ascii')
+                    except:
+                        if DEBUG_MODE:
+                            print "\t*** Already Unicode ***"
+                        contents = contents_text
                     # get the original url from the <dict> and omit error cases
                     url_original = get_url_of_file_name(filename)
                     if not url_original:
                         continue
 
+                    print "\t", filename
+                    print "\t", root
+                    print "\t", title
+                    print "\t", url_original
+                    print "====================="
+
                     doc = Document()
                     doc.add(Field("name", filename,
-                                  lucene.Field.Store.YES,
-                                  lucene.Field.Index.NOT_ANALYZED))
+                                  Field.Store.YES,
+                                  Field.Index.NOT_ANALYZED))
                     doc.add(Field("path", root,
-                                  lucene.Field.Store.YES,
-                                  lucene.Field.Index.NOT_ANALYZED))
+                                  Field.Store.YES,
+                                  Field.Index.NOT_ANALYZED))
                     doc.add(Field("title", title,
-                                  lucene.Field.Store.YES,
-                                  lucene.Field.Index.ANALYZED))
+                                  Field.Store.YES,
+                                  Field.Index.ANALYZED))
                     doc.add(Field("url", url_original,
-                                  lucene.Field.Store.YES,
-                                  lucene.Field.Index.NOT_ANALYZED))
+                                  Field.Store.YES,
+                                  Field.Index.NOT_ANALYZED))
                     if len(contents) > 0:
                         doc.add(Field("contents", contents,
-                                      lucene.Field.Store.NO,
-                                      lucene.Field.Index.ANALYZED))
+                                      Field.Store.NO,
+                                      Field.Index.ANALYZED))
                     else:
                         print "warning: no content in %s" % filename
                     writer.addDocument(doc)
@@ -150,7 +165,7 @@ def initiate_web_page_data():
                 continue
 
             url_file_name = line.split('\t')
-            file_name = url_file_name[1]
+            file_name = url_file_name[1][:-1]  # remove '\n' in the end
             url = url_file_name[0]
             file_name_url_corre[file_name] = url
 
@@ -173,6 +188,9 @@ if __name__ == '__main__':
         print IndexFiles.__doc__
         sys.exit(1)
     """
+    initiate_web_page_data()
+    # if DEBUG_MODE:
+    #     print file_name_url_corre
     lucene.initVM(vmargs=['-Djava.awt.headless=true'])
     print 'lucene', lucene.VERSION
     start = datetime.now()
@@ -183,8 +201,9 @@ if __name__ == '__main__':
                    StandardAnalyzer(Version.LUCENE_CURRENT))
                    """
         analyzer = StandardAnalyzer(Version.LUCENE_CURRENT)
-        initiate_web_page_data()
-        IndexFiles('Web Pages/html', "index", analyzer)
+        if DEBUG_MODE:
+            print "analyzer set"
+        IndexFiles(WEB_PAGES_PATH, "index", analyzer)
         end = datetime.now()
         print end - start
     except Exception, e:
