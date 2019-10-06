@@ -4,8 +4,12 @@ INDEX_DIR = "IndexFiles.index"
 # User defined
 DEBUG_MODE = True
 ONLY_HTML = False
-WEB_PAGE_INDEX_PATH = "WebPages_test_English/index.txt"
-WEB_PAGES_PATH = "WebPages_test_English/html"
+# English
+# WEB_PAGE_INDEX_PATH = "WebPages_test_English/index.txt"
+# WEB_PAGES_PATH = "WebPages_test_English/html"
+# Chinese
+WEB_PAGE_INDEX_PATH = "WebPages_test_Chinese/index.txt"
+WEB_PAGES_PATH = "WebPages_test_Chinese/html"
 
 import sys, os, lucene, threading, time
 from datetime import datetime
@@ -112,14 +116,16 @@ class IndexFiles(object):
                     # contents = unicode(BeautifulSoup(contents_raw, features="html.parser").get_text(), 'gbk')
                     contents_text = BeautifulSoup(contents_raw, features="html.parser").get_text()
                     try:
-                        contents = unicode(contents_text, 'ascii')
+                        contents = unicode(contents_text)
                     except:
                         if DEBUG_MODE:
                             print "\t*** Already Unicode ***"
                         contents = contents_text
                     # get the original url from the <dict> and omit error cases
                     url_original = get_url_of_file_name(filename)
-                    if not url_original:
+                    if not url_original or not title:
+                        if DEBUG_MODE:
+                            print "\t*** NOT INFORMATIVE PAGE ***\n====================="
                         continue
 
                     print "\t", filename
