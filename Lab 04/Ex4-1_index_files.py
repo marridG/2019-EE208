@@ -5,12 +5,17 @@ INDEX_DIR = "IndexFiles.index"
 DEBUG_MODE = True
 FILTER_OUT_SCRIPTS = True
 FILTER_OUT_PICS = True
-# English
+# Paths
+WEB_PAGE_INDEX_PATH = "Web Pages/index.txt"
+WEB_PAGES_PATH = "Web Pages/html"
+# ARGUMENTS FOR TESTS
+# # English Test
 # WEB_PAGE_INDEX_PATH = "WebPages_test_English/index.txt"
 # WEB_PAGES_PATH = "WebPages_test_English/html"
-# Chinese
-WEB_PAGE_INDEX_PATH = "WebPages_test_Chinese/index.txt"
-WEB_PAGES_PATH = "WebPages_test_Chinese/html"
+# # Chinese Test
+# WEB_PAGE_INDEX_PATH = "WebPages_test_Chinese/index.txt"
+# WEB_PAGES_PATH = "WebPages_test_Chinese/html"
+
 
 import sys, os, lucene, threading, time
 from datetime import datetime

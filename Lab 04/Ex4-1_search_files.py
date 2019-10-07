@@ -36,6 +36,7 @@ def run(searcher, analyzer):
         #### print command
         command = " ".join(jieba.cut(command))
         if command == '':
+            print "=== [ QUIT ] ==="
             return
 
         print
@@ -45,9 +46,14 @@ def run(searcher, analyzer):
         scoreDocs = searcher.search(query, 50).scoreDocs
         print "%s total matching documents." % len(scoreDocs)
 
-        for scoreDoc in scoreDocs:
+        for idx, scoreDoc in enumerate(scoreDocs):
             doc = searcher.doc(scoreDoc.doc)
-            print 'path:', doc.get("path"), 'name:', doc.get("name")
+            print "-- #", str(idx + 1),"--"
+            print '\ttitle:\t', doc.get("title")
+            print '\turl:\t', doc.get("url")
+            print '\tpath:\t', doc.get("path")
+            print '\tname:\t', doc.get("name")
+            print
 
 
 if __name__ == '__main__':
