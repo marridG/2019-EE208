@@ -3,7 +3,8 @@
 INDEX_DIR = "IndexFiles.index"
 # User defined
 DEBUG_MODE = True
-ONLY_HTML = False
+FILTER_OUT_SCRIPTS = True
+FILTER_OUT_PICS = True
 # English
 # WEB_PAGE_INDEX_PATH = "WebPages_test_English/index.txt"
 # WEB_PAGES_PATH = "WebPages_test_English/html"
@@ -24,6 +25,7 @@ from org.apache.lucene.util import Version
 
 import nltk, re
 from bs4 import BeautifulSoup
+import jieba
 
 """
 This class is loosely based on the Lucene (java implementation) demo class 
@@ -92,9 +94,12 @@ class IndexFiles(object):
 
         for root, dirnames, filenames in os.walk(root):
             for filename in filenames:
-                # if not filename.endswith('.txt'):
-                if ONLY_HTML:
-                    if not filename.endswith('.html'):
+                if FILTER_OUT_SCRIPTS:
+                    if filename.endswith('.css') or filename.endswith('.js'):
+                        continue
+                if FILTER_OUT_PICS:
+                    if filename.endswith('.png') or filename.endswith('.jpg') or filename.endswith(
+                            '.gif') or filename.endswith('.jpeg'):
                         continue
                 if DEBUG_MODE:
                     print "adding", filename
@@ -113,26 +118,34 @@ class IndexFiles(object):
                     # contents = unicode(nltk.clean_html(contents_raw), 'gbk')
                     # NotImplementedError: To remove HTML markup, use BeautifulSoup's get_text() function
                     # Refer to: https://blog.csdn.net/Baozoudemelon/article/details/83269740
-                    # contents = unicode(BeautifulSoup(contents_raw, features="html.parser").get_text(), 'gbk')
                     contents_text = BeautifulSoup(contents_raw, features="html.parser").get_text()
+                    # print type(contents_text)     # unicode
+                    # analyze the contents using jieba
+                    contents_text = " ".join(jieba.cut(contents_text))
+                    # print type(contents_text)     # unicode
                     try:
                         contents = unicode(contents_text)
                     except:
                         if DEBUG_MODE:
                             print "\t*** Already Unicode ***"
                         contents = contents_text
+                    # replace all the '\n' in the text
+                    contents=contents.replace('\n',"")
                     # get the original url from the <dict> and omit error cases
                     url_original = get_url_of_file_name(filename)
                     if not url_original or not title:
                         if DEBUG_MODE:
                             print "\t*** NOT INFORMATIVE PAGE ***\n====================="
                         continue
-
-                    print "\t", filename
-                    print "\t", root
-                    print "\t", title
-                    print "\t", url_original
-                    print "====================="
+                    '''
+                    if DEBUG_MODE:
+                        print "\t", filename
+                        print "\t", root
+                        print "\t", title
+                        print "\t", url_original
+                        print contents
+                        print "====================="
+                    '''
 
                     doc = Document()
                     doc.add(Field("name", filename,
