@@ -139,8 +139,10 @@ class IndexFiles(object):
                     # get the original url from the <dict> and omit error cases
                     url_original = get_url_of_file_name(filename)
                     if not url_original or not title:
+                        '''
                         if DEBUG_MODE:
                             print "\t*** NOT INFORMATIVE PAGE ***\n====================="
+                        '''
                         continue
                     '''
                     if DEBUG_MODE:
