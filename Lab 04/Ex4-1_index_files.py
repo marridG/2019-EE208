@@ -2,20 +2,21 @@
 
 INDEX_DIR = "IndexFiles.index"
 # User defined
-DEBUG_MODE = True
+SHOW_LOGS = True  # False
+DEBUG_MODE = False
 FILTER_OUT_SCRIPTS = True
 FILTER_OUT_PICS = True
+ADVANCED_ENCODING = True
+# Encodings List: for a less advanced encoding method
+ENCODINGS = ["ascii", "utf-8", "utf-16", "gb2312", "URL", "base64", "BIG5", "GBK", "GB18030"]
 # Paths
-WEB_PAGE_INDEX_PATH = "Web Pages/index.txt"
-WEB_PAGES_PATH = "Web Pages/html"
-# ARGUMENTS FOR TESTS
+WEB_PAGE_PREFIX = "Web Pages/"
 # # English Test
-# WEB_PAGE_INDEX_PATH = "WebPages_test_English/index.txt"
-# WEB_PAGES_PATH = "WebPages_test_English/html"
+# WEB_PAGE_PREFIX = "WebPages_test_English/"
 # # Chinese Test
-# WEB_PAGE_INDEX_PATH = "WebPages_test_Chinese/index.txt"
-# WEB_PAGES_PATH = "WebPages_test_Chinese/html"
-
+# WEB_PAGE_PREFIX = "WebPages_test_Chinese/"
+WEB_PAGE_INDEX_PATH = WEB_PAGE_PREFIX + "index.txt"
+WEB_PAGES_PATH = WEB_PAGE_PREFIX + "html/"
 
 import sys, os, lucene, threading, time
 from datetime import datetime
@@ -106,12 +107,17 @@ class IndexFiles(object):
                     if filename.endswith('.png') or filename.endswith('.jpg') or filename.endswith(
                             '.gif') or filename.endswith('.jpeg'):
                         continue
-                if DEBUG_MODE:
+                if SHOW_LOGS:
                     print "adding", filename
                 try:
                     path = os.path.join(root, filename)
                     with open(path, 'r') as file:
                         contents_raw = file.read()
+                    # encode to unicode
+                    contents_raw = encode_to_unicode(contents_raw)
+                    if not contents_raw:
+                        print "Encode Error"
+                        continue
                     # filter the title of the web page
                     title_iter = re.finditer("<title>.*</title>", contents_raw)
                     title = ""
@@ -119,23 +125,15 @@ class IndexFiles(object):
                         title = i.group().split('<title>')[-1].split("</title>")[0]
                         if title:
                             break
-                    # filter out the tags on the html and encode
+                    # filter out the tags on the html
                     # contents = unicode(nltk.clean_html(contents_raw), 'gbk')
                     # NotImplementedError: To remove HTML markup, use BeautifulSoup's get_text() function
                     # Refer to: https://blog.csdn.net/Baozoudemelon/article/details/83269740
                     contents_text = BeautifulSoup(contents_raw, features="html.parser").get_text()
-                    # print type(contents_text)     # unicode
-                    # analyze the contents using jieba
+                    # analyze the contents using "jieba"
                     contents_text = " ".join(jieba.cut(contents_text))
-                    # print type(contents_text)     # unicode
-                    try:
-                        contents = unicode(contents_text)
-                    except:
-                        if DEBUG_MODE:
-                            print "\t*** Already Unicode ***"
-                        contents = contents_text
                     # replace all the '\n' in the text
-                    contents=contents.replace('\n',"")
+                    contents = contents_text.replace('\n', "")
                     # get the original url from the <dict> and omit error cases
                     url_original = get_url_of_file_name(filename)
                     if not url_original or not title:
@@ -144,6 +142,7 @@ class IndexFiles(object):
                             print "\t*** NOT INFORMATIVE PAGE ***\n====================="
                         '''
                         continue
+
                     '''
                     if DEBUG_MODE:
                         print "\t", filename
@@ -206,6 +205,50 @@ def get_url_of_file_name(file_name):
         if DEBUG_MODE:
             print "\t RETURN NO URL: SOURCE ENCODE ERROR"
         return None
+
+
+def encode_to_unicode(contents_raw):
+    if ADVANCED_ENCODING:
+        charset_iter = re.finditer("<meta.*charset=\"\\S*?\">", contents_raw)
+        charset = None
+        for i in charset_iter:
+            try:
+                charset = i.group().split("\"")[1]
+                if charset:
+                    break
+            except:
+                pass
+        if charset:
+            try:
+                contents = unicode(contents_raw, charset)
+            except:
+                pass
+            else:
+                if DEBUG_MODE:
+                    print "\t*** ", charset, "--> Unicode ***"
+                return contents
+
+    # less advanced encoding method
+    encode_success = False
+    for encoding in ENCODINGS:
+        try:
+            contents = unicode(contents_raw, encoding)
+        except:
+            pass
+            # if DEBUG_MODE:
+            #     print "\t*** Failed:", encoding, "\t--> Unicode ***"
+        else:
+            encode_success = True
+            if DEBUG_MODE:
+                print "\t*** ", encoding, "--> Unicode ***"
+            break
+
+    if not encode_success:
+        contents = contents_raw
+        if DEBUG_MODE:
+            print "\t*** Already Unicode ***"
+
+    return contents
 
 
 if __name__ == '__main__':
