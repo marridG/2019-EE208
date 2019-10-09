@@ -1,0 +1,230 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>首页</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="css/style.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+</head>
+<body>
+
+
+
+
+
+<div class="head">
+	<div class="head-first max-wrap">
+		<a href="/" style="font-size: 26px; color: rgba(178, 3, 52, 0.72);"><img src="/images/logo_1.png" alt="" style="height: 65px; vertical-align: sub;"></a>
+		<div class="head-func">
+			<div class="func-box">
+				<span class="func-wrap"><a class="func-items" target="_blank" href="/manager/oauth_login.html">办公入口</a></span>
+				<span class="now-date"> 2019年10月09日</span>
+			</div>
+			
+		</div>
+	</div>
+	<div class="nav-box">
+		<ul class="nav max-wrap clearfix">
+			<li>
+				<a href="/">
+					<i class="nav-icon home icon"></i>
+					网站首页
+				</a>
+			</li>
+			<li>
+				<a href="/info.html">
+					<i class="nav-icon icon news-nav"></i>
+					信访资讯
+				</a>
+			</li>	
+			<li>
+				<a href="/agree.html">
+					<i class="nav-icon icon pub-info"></i>
+					信访须知
+				</a>
+			</li>	
+			<li>
+				<a href="/news.html">
+					<i class="nav-icon icon focus"></i>
+					热点关注
+				</a>
+			</li>	
+			<li>
+				<a href="/policy.html">
+					<i class="nav-icon icon zhengc"></i>
+					政策法规
+				</a>
+			</li>
+			<li>
+				<a href="/profile.html">
+					<i class="nav-icon icon user"></i>
+					用户中心
+				</a>
+			</li>		
+		</ul>
+	</div>	
+</div>
+
+
+<div class="body max-wrap">
+	<div class="l-r-part index-part1 clearfix">
+		<div class="l news-banner">
+			<ul class="news-lb">
+				
+			</ul>
+
+			<!-- <p class="ctr-banner"><span class="act"></span><span></span><span></span></p> -->
+		</div>
+		<div class="r index-news login-box" style="width: 364px; padding: 0px 33px; ">
+			<div class="in-box" >
+				<div class="in-box-title">
+					<p class="in-title">用户登录</p>
+					<span class="other-info">无账号，马上<a class="" href="/register.html">注册</a></span>
+				</div>
+				<form method="post" action="/login.html">
+				<ul class="form-box">
+					<li class="load-item">
+						<input class="icon load-user input-focus" placeholder="请输入用户名" type="text" name="username" id="input_username" value="" />
+						<span class="error" id="username_error"></span>
+					</li>
+					<li class="load-item">
+						<input class="icon load-password input-focus" placeholder="请输入密码" type="password" name="password" id="input_password">	
+						<span class="error" id="password_error"></span>
+					</li>
+					<li class="load-item">
+						<input class="icon input-yzcode load-yzcode input-focus" type="text" name="code" id="input_code" placeholder="输入验证码" ><a class="yz-code" >
+							<img src="/captcha.html?v=0" onclick="this.src='/captcha.html?v='+Math.random()">	
+							<span class="error" id="yzcode_error"></span>
+						</a>
+					</li>
+				</ul>
+				</form>
+				
+				<p class="load-btn-box">
+					<input type="button" class="load-btn" value="登录">
+				</p>
+				<div class="other-login">
+					<a class="" href="/oauth_login.html">使用校内账号登录</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div style="padding: 30px 0; background-color: #f0f0f0">
+		<div class="index-pub-info-box clearfix">
+			<div class="info-box l index-pub-info">
+				<div class="info-title">
+					<h3 class="title-name">信访资讯</h3>
+					<a href="/info.html" class="more">MORE</a>
+				</div>
+				<div class="info-items">
+					<ul class="news-items">
+						
+					</ul>
+				</div>
+			</div>
+			<div class="info-box l index-pub-info">
+				<div class="info-title">
+					<h3 class="title-name">信访须知</h3>
+					<a href="/agree.html" class="more">MORE</a>
+				</div>
+				<div class="info-items">
+					1、为确保您的来信得到及时妥善处理，请您先行注册，并完善您的基本信息。如系受他人委托代为发送信件的，请在信件内容中注明，并留下委托方的基本信息，以备核实。我们将保证您的个人信息不会被泄露。
+				</div>
+			</div>
+			<div class="info-box l index-pub-info">
+				<div class="info-title">
+					<h3 class="title-name">政策法规</h3>
+					<a href="/policy.html" class="more">MORE</a>
+				</div>
+				<div class="info-items">
+					<ul class="news-items">
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+</div>
+
+
+
+<div class="footer">
+	<div class="footer-con max-wrap">
+		<p class="footer-nav">
+			<span style="color:#fff">友情链接: &nbsp;</span>
+			
+			
+		</p>
+		<p class="footer-info">
+			 <span>沪ICP备xxxxx号</span>
+			 <span> ©2017 上海交通大学 版权所有</span>
+		</p>
+	</div>
+	
+</div>
+<script type="text/javascript">
+var nowIndex = 0,
+	canMove  = true;
+$(function(){
+	
+	slideShow();
+	
+});
+
+
+</script>
+
+<script type="text/javascript">
+$(function(){
+	var isDisable = false;
+	$(".load-btn").on("click", function(){
+		if(isDisable){
+			return ;
+		}
+		$(".error").hide();
+		
+		
+		if(!$("#input_username").val()){
+			$("#username_error").text("请输入用户名").show();
+			return ;
+		}
+		if(!/^[a-zA-Z0-9]{6,20}$/.test($("#input_username").val())){
+			$("#username_error").text("用户名格式不正确").show();
+			return ;
+		}
+		
+		if(!$("#input_password").val()){
+			$("#password_error").text("请输入密码").show();
+			return ;
+		}
+		if(!/^.{6,20}$/.test($("#input_password").val())){
+			$("#password_error").text("密码格式不正确").show();
+			return ;
+		}
+
+		if(!$("#input_code").val()){
+			$("#yzcode_error").text("请输入验证码").show();
+			return ;
+		}
+		
+		isDisable = true;
+		
+		$("form")[0].submit();
+	});
+	
+	$(".form-box input").on("keypress", function(e){
+		if(e.keyCode == 13){
+			$(".load-btn").trigger("click");
+		}
+	})
+});
+</script>
+</body>
+</html>

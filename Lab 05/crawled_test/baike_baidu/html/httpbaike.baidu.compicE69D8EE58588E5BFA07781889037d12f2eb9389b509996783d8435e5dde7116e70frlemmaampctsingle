@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!--STATUS OK-->
+<html>
+
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="referrer" content="always" />
+<meta name="description" content="李先忠（1909.01~2010.02）">
+<title>李先忠图片_百度百科</title>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="icon" sizes="any" mask href="//www.baidu.com/img/baidu.svg">
+
+<meta name="keywords" content="李先忠 李先忠_图片 百度百科 百科 baike 词条图片">
+<meta name="image" content="https://bkssl.bdimg.com/cms/static/baike.png">
+<meta itemprop="image" content="https://bkssl.bdimg.com/cms/static/baike.png">
+
+<!--[if lte IE 9]>
+<script>
+    (function() {
+      var e = "abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(","),
+        i = e.length;
+      while (i--) {
+        document.createElement(e[i]);
+      }
+
+      window.console = window.console || {};
+      var f = ['log', 'info', 'warning', 'error', 'clear'];
+      var l = f.length;
+      while(l--) {
+        window.console[f[l]] = function () {};
+      }
+    })();
+  </script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-common/pkg/wiki-common-base_9a9fb54.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-common/widget/component/userbar-n/userbar-n_2890903.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-common/widget/lib/larkplayer/larkplayer_981c735.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-common/widget/lib/webuploader/webuploader_08d9db4.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-album/pkg/wiki-album-picture_bca8f93.css"/>    
+</head>
+<body class="w-small">
+
+
+<script>
+        var imageResize = function(event) {
+            var picture = document.getElementById('imgPicture');
+            var parent = document.getElementById('picture');
+            var pHeight = document.body.clientHeight - 102;
+            parent.style.height = pHeight + 'px';
+            var rWidth = picture.width,
+                rHeight = picture.height,
+                pWidth = parent.offsetWidth;
+
+                var rateW = rWidth / pWidth,
+                    rateH = rHeight / pHeight;
+                var w = rWidth,
+                    h = rHeight;
+
+                if (rateW > 1 || rateH > 1) {
+                    if (rateW > rateH) {
+                        w = pWidth;
+                        h = rHeight / rateW;
+                    } else {
+                        h = pHeight;
+                        w = rWidth / rateH;
+                    }
+                }
+                        
+            picture.style.width = w + 'px';
+            picture.style.height = h + 'px';
+            picture.style.marginTop = (pHeight - h) / 2 + 'px';
+            picture.style.visibility = 'visible';
+        };
+
+        // 以下代码的功能是：在页面加载前，判断url中的对应值是否等于hash值，如不等，则改变url重新加载
+        // 添加代码原因：
+        //     1) 之前的代码逻辑是：url会具体指定到某张图片，前端在｀切换相册｀时，使用ajax获取数据，并不断更新hash值，但当用户
+        //        ｀刷新页面｀或｀点击返回词条按钮｀然后再｀点击浏览器后退键｀时，uri中的url和hash值不同，源代码会出现bug,导致
+        //        '上／下一图册'，'向上／下箭头'点击无效（具体原因请view代码）
+        //     2) hash值的使用无意义，页面刷新后并不能让用户回到之前访问的图片/图册
+        // 故作此修改。
+        // 个人认为比较合适的解决方法是：
+        //     1）图册页的图片数据是后端同步打过来的。在词条页面中，图册url不要具体到某张图片，到图册即可，由前端使用hash值加上
+        //        smarty的方法来控制具体到哪张图片，在切换图册时，刷新浏览器，改变url。
+        //     2) 图册页不需要同步的图片数据，全部由前端根据uri利用ajax获取。
+        // COMMENT BY YUHUI
+
+
+        //在此处不知道怎么使用require，所以自己写了一个将hash值转换为对象的函数
+        //另外，在 wiki-common:widget/util/url.js 下有url相关函数
+        //eg: hashStr = '#aid=19973219&pic=f7' => hashObj = {aid: '19973219', pic: 'f7'};
+        //COMMENT BY YUHUI
+        function makeHashIntoObj (hashStr) {
+            if (hashStr[0] === '#') {
+                hashStr = hashStr.substr(1);
+            }
+            var hashObj = {};
+            var hashArr = hashStr.split('&');
+            var tempArr = [];
+            for (var i = 0; i < hashArr.length; i++) {
+                tempArr = hashArr[i].split('=');
+                hashObj[tempArr[0]] = tempArr[1];
+            }
+            return hashObj;
+        }
+        // locationArr = ['', 'pic', $lemmaTitle, $newLemmaId, albumId, picSign];
+        var locationArr = window.location.pathname.split('/');
+        var hashObj = makeHashIntoObj(window.location.hash);
+        var picSign = locationArr[locationArr.length - 1];
+        var albumId = locationArr[locationArr.length - 2];
+        var picSignInHash = hashObj['pic'];
+        var albumIdInHash = hashObj['aid'];
+        if (!!picSignInHash && !!albumIdInHash && !!picSign && !!albumId) {
+            if (picSign != picSignInHash || albumId != albumIdInHash) {
+                locationArr[locationArr.length - 1] = picSignInHash;
+                locationArr[locationArr.length - 2] = albumIdInHash;
+                window.location.pathname = locationArr.join('/');
+            }
+        }
+    </script>
+
+
+<div id="picture-dialog" class="picture-dialog">
+<div class="header">
+<a class="logo" target="_blank" href="/">
+<span class="cmn-baike-logo white"><em class="cmn-icon cmn-icons cmn-icons_logo-bai"></em><em class="cmn-icon cmn-icons cmn-icons_logo-du"></em><em class="cmn-icon cmn-icons cmn-icons_logo-baike"></em></span>
+</a>
+<div class="breadcrumb">
+<a target="_blank" class="album-name" href="/pic/%E6%9D%8E%E5%85%88%E5%BF%A0/7781889">李先忠图册</a>&nbsp;>&nbsp;<span class="album-desc">词条图片</span>
+</div>
+<div style="clear: both"></div>
+</div>
+<div class="thumbnail" style="z-index: 2; width: 80px; top: 50%; margin-top: -204px; right: 12.5%; margin-right: -80px">
+<div class="pic-slider">
+<div class="prev-pic"></div>
+<div class="pic-scroller">
+<div class="pic-list">
+
+<a class="pic-item selected" title="李先忠（1909.01~2010.02）" data-index="0" data-sign="37d12f2eb9389b509996783d8435e5dde7116e70" href="/pic/%E6%9D%8E%E5%85%88%E5%BF%A0/7781889/0/37d12f2eb9389b509996783d8435e5dde7116e70">
+<img src="https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/h%3D160/sign=bd375b7b6a600c33ef79dace2a4d5134/37d12f2eb9389b509996783d8435e5dde7116e70.jpg" alt="李先忠（1909.01~2010.02）" style="display: block;width:80px;height:96px;top:0px;left:0px;">
+<div class="seleced-cover"></div>
+</a>
+
+<a class="pic-item " title="" data-index="1" data-sign="42166d224f4a20a496c057e39c529822720ed03c" href="/pic/%E6%9D%8E%E5%85%88%E5%BF%A0/7781889/0/42166d224f4a20a496c057e39c529822720ed03c">
+<img src="https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/h%3D160/sign=3b27e9514fa98226a7c12f21ba83b97a/42166d224f4a20a496c057e39c529822720ed03c.jpg" alt="" style="display: block;width:80px;height:102px;top:0px;left:0px;">
+</a>
+</div>
+</div>
+<div class="next-pic"></div>
+</div>
+</div>
+<div class="picture-wrap">
+
+<div id="picture" class="picture" style="left:14.5%; top:62px; width:71%; height:600px">
+<img id="imgPicture" src="https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=f12b3370060828387c00d446d9f0c264/37d12f2eb9389b509996783d8435e5dde7116e70.jpg" onload="imageResize()" style="visibility:hidden"/>
+<div id="picture-msg-tip" class="msg-tip yahei" style="display:none">
+<a class="close"></a>
+<span class="msg-tip-text"></span>
+</div>
+</div>
+</div>
+<div class="picture-footer yahei">
+<div class="footer-wrap" style="width:1000px; left:50%; margin-left:-500px">
+<div class="description">
+<span class="number">
+<span style="color:#b9bbbf">1</span>/<span style="color:#427cb8">2</span>
+</span>
+<span class="text">李先忠（1909.01~2010.02）</span>
+</div>
+<a class="tool-button doubt j-doubt-link" target="_blank" href="/wikiui/doubt?lemmaId=7781889&picUrl=https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%253Dbaike80%252C5%252C5%252C80%252C26/sign%3Df12b3370060828387c00d446d9f0c264/37d12f2eb9389b509996783d8435e5dde7116e70.jpg" nslog-type="10300106">质疑</a>
+<a class="tool-button info">信息</a>
+
+<a class="tool-button origin" target="_blanck" href="https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=f12b3370060828387c00d446d9f0c264/37d12f2eb9389b509996783d8435e5dde7116e70.jpg">原图</a>
+<div class="info-panel">
+<div class="image-size">
+<span>图片尺寸</span>
+<span class="size">409X494</span>
+</div>
+<div class="album-info">
+<span class="from-text">来自</span>
+<span class="album-text">
+<a class="lemma-name" target="_blank" href="/item/%E6%9D%8E%E5%85%88%E5%BF%A0/7781889">
+李先忠词条</a>-<a class="album-name" target="_blank" href="/pic/%E6%9D%8E%E5%85%88%E5%BF%A0/7781889">词条图片</a>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+    //科学百科任务的词条所有提交,需要自动审核对其做忽略处理. 所以删除图片/绿色通道等规则也不适用于这类词条, 所以把它置顶处理
+    <script>
+      window['__abbaidu_2020_subidgetf'] = function () {
+          var subid = 01000000;
+          return subid;
+      };
+    </script>
+<script async src="https://dlswbr.baidu.com/heicha/mw/abclite-2020-s.js"></script>
+
+</body><script type="text/javascript" src="https://bkssl.bdimg.com/static/wiki-common/js/mod_4302fe0.js"></script>
+<script type="text/javascript" src="https://bkssl.bdimg.com/static/wiki-common/pkg/wiki-common-base_0ce23c8.js"></script>
+<script type="text/javascript" src="https://bkssl.bdimg.com/static/wiki-album/pkg/wiki-album-picture_458b528.js"></script>
+<script type="text/javascript">!function(){        var $ = require('wiki-common:widget/lib/jquery/jquery.js'),
+            urlExt = require('wiki-common:widget/util/url.js'),
+            nslog = require("wiki-common:widget/component/nslog/nslog.js"),
+            PictureDialog = require('wiki-album:widget/picture/pictureDialog/pictureDialog.js');
+        
+        // 百科质疑，增加质疑入口--当前页面链接
+        // var doubtLink = $('.j-doubt-link').attr('href') + '&albumUrl=' + window.location.href;
+        // $('.j-doubt-link').attr('href', doubtLink);
+
+
+        var hash = window.location.hash.substr(1);
+        var albumId = urlExt.getQuery('aid', hash);
+        var pictureSign = urlExt.getQuery('pic', hash);
+        var useHash = !!albumId && albumId != '' && !!pictureSign && pictureSign != '';
+        albumId = useHash ? albumId : '0';
+        pictureSign = useHash ? pictureSign : '37d12f2eb9389b509996783d8435e5dde7116e70';
+
+        var pageAlbumId = "0";
+        var pagePicSign = "37d12f2eb9389b509996783d8435e5dde7116e70";
+
+        var useHash = (!!albumId && albumId != "") && (!!pictureSign && pictureSign != "" && pictureSign != pagePicSign);
+        if (useHash) {
+                            window.location.href = '/pic/%E6%9D%8E%E5%85%88%E5%BF%A0/7781889/' +albumId+ '/' + pictureSign;
+                    }
+
+        PictureDialog.getInstance().show({
+            albums: [{"desc":"\u8bcd\u6761\u56fe\u7247","coverpic":"37d12f2eb9389b509996783d8435e5dde7116e70","coverwidth":409,"coverheight":494,"pictures":[{"desc":"\u674e\u5148\u5fe0\uff081909.01~2010.02\uff09","width":409,"height":494,"owner":"_Love_\u5728","src":"37d12f2eb9389b509996783d8435e5dde7116e70","picId":5900162262,"type":{"view":220,"albumview":200,"oriWithWater":495,"litterImage":200,"authModule":150,"view_new":209,"view_card":268},"sizes":{"220":{"url":"https:\/\/gss2.bdstatic.com\/-fo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D220\/sign=027e856b359b033b2888fbd825cf3620\/37d12f2eb9389b509996783d8435e5dde7116e70.jpg","width":182,"height":220,"size":220},"200":{"url":"https:\/\/gss2.bdstatic.com\/-fo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D200\/sign=027e856b359b033b2888fbda25cf3620\/37d12f2eb9389b509996783d8435e5dde7116e70.jpg","width":165,"height":200,"size":200},"495":{"url":"https:\/\/gss2.bdstatic.com\/-fo3dSag_xI4khGkpoWK1HF6hhy\/baike\/c0%3Dbaike80%2C5%2C5%2C80%2C26\/sign=f12b3370060828387c00d446d9f0c264\/37d12f2eb9389b509996783d8435e5dde7116e70.jpg","width":409,"height":494,"size":495},"150":{"url":"https:\/\/gss2.bdstatic.com\/-fo3dSag_xI4khGkpoWK1HF6hhy\/baike\/h%3D160\/sign=bd375b7b6a600c33ef79dace2a4d5134\/37d12f2eb9389b509996783d8435e5dde7116e70.jpg","width":132,"height":160,"size":150},"209":{"url":"https:\/\/gss2.bdstatic.com\/-fo3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D209\/sign=e37e6b03113853438ccf8021aa12b01f\/37d12f2eb9389b509996783d8435e5dde7116e70.jpg","width":209,"height":252,"size":209},"268":{"url":"https:\/\/gss2.bdstatic.com\/-fo3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D268\/sign=3f049875c75c1038247ec9c48a10931c\/37d12f2eb9389b509996783d8435e5dde7116e70.jpg","width":268,"height":323,"size":268}},"aid":0,"albumDesc":"\u8bcd\u6761\u56fe\u7247","index":1},{"desc":"","width":454,"height":578,"owner":"","src":"42166d224f4a20a496c057e39c529822720ed03c","picId":51881370576,"type":{"view":220,"albumview":160,"oriWithWater":579,"litterImage":200,"authModule":150,"view_new":209,"view_card":268},"sizes":{"220":{"url":"https:\/\/gss0.bdstatic.com\/94o3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D220\/sign=e9f1ed0fbc51f819f5250448eab54a76\/42166d224f4a20a496c057e39c529822720ed03c.jpg","width":172,"height":220,"size":220},"160":{"url":"https:\/\/gss0.bdstatic.com\/94o3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D160\/sign=28fad80c3a7adab43dd01f45bbd5b36b\/42166d224f4a20a496c057e39c529822720ed03c.jpg","width":160,"height":203,"size":160},"579":{"url":"https:\/\/gss0.bdstatic.com\/94o3dSag_xI4khGkpoWK1HF6hhy\/baike\/c0%3Dbaike80%2C5%2C5%2C80%2C26\/sign=2ce0cc51da88d43fe4a499a01c77b97e\/42166d224f4a20a496c057e39c529822720ed03c.jpg","width":454,"height":578,"size":579},"200":{"url":"https:\/\/gss0.bdstatic.com\/94o3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D200\/sign=e9f1ed0fbc51f819f525044aeab54a76\/42166d224f4a20a496c057e39c529822720ed03c.jpg","width":157,"height":200,"size":200},"150":{"url":"https:\/\/gss0.bdstatic.com\/94o3dSag_xI4khGkpoWK1HF6hhy\/baike\/h%3D160\/sign=3b27e9514fa98226a7c12f21ba83b97a\/42166d224f4a20a496c057e39c529822720ed03c.jpg","width":125,"height":160,"size":150},"209":{"url":"https:\/\/gss0.bdstatic.com\/94o3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D209\/sign=5735796b922f07085f052d00d025b865\/42166d224f4a20a496c057e39c529822720ed03c.jpg","width":209,"height":266,"size":209},"268":{"url":"https:\/\/gss0.bdstatic.com\/94o3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D268\/sign=7168d9c22b7f9e2f70351a0e2731e962\/42166d224f4a20a496c057e39c529822720ed03c.jpg","width":268,"height":341,"size":268}},"aid":0,"albumDesc":"\u8bcd\u6761\u56fe\u7247","index":2}],"coverurl":"https:\/\/gss2.bdstatic.com\/-fo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=027e856b359b033b2888fbd325cf3620\/37d12f2eb9389b509996783d8435e5dde7116e70.jpg","total":2,"sign":0}],
+            lemmaId: '3021888',
+            subLemmaId: '8887065',
+            lemmaTitle: '李先忠',
+            newLemmaId: '7781889',
+            versionId: '',
+            commitId: '',
+            albumId: albumId,
+            picPageType: '0',
+            pictureSign: pictureSign,
+            lemmaName: '李先忠',
+            crumbClick: function() {
+                nslog(10000201);
+            },
+            pictureChanged: function(albumId, picSign) {
+                window.location.hash = 'aid=' + albumId + '&pic=' + picSign;
+                // 百科质疑入口变化逻辑
+                var doubtLink = '/wikiui/doubt?lemmaId='+ '7781889'
+                    + '&fr=albumPicture'
+                    + '&picUrl=' + $('.picture-footer .origin').attr('href')
+                    + '&albumUrl=' + window.location.origin + window.location.pathname;
+
+                $('.j-doubt-link').attr('href', doubtLink);
+            }
+        });    }();
+!function(){      require('wiki-common:widget/component/psLink/psLink');
+    }();</script></html>

@@ -1,0 +1,702 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="keywords" content="杀毒,QQ管家,腾讯电脑管家,电脑管家,修复漏洞,软件管理,权限雷达,权限管理,杀毒软件,安全软件,防护软件"/>
+	<meta name="description" content="腾讯电脑管家官网网站，提供正版电脑管家软件下载，最大的安全云库，全新的杀毒引擎，深度清理电脑垃圾，为电脑重回巅峰状态，更有账号宝专版，10倍提升QQ防盗号能力。"/>
+	<title>一键杀毒_盗号保护_垃圾清理_软件管理-腾讯电脑管家官网</title>
+	<link rel="canonical" href="http://guanjia.qq.com/" />
+	<link rel="stylesheet" href="assets/css/style-v13.css?t=20181220">
+	<script charset="utf-8">
+    // 内联脚本在这里放置
+    !function(e,r){"object"==typeof exports&&"undefined"!=typeof module?r(exports):"function"==typeof define&&define.amd?define(["exports"],r):r(e.emonitor={})}(this,function(e){"use strict";var r=Object.prototype.toString,t=Object.prototype.hasOwnProperty,n=function(e){return"[object Array]"===r.call(e)},o=function(e){return"[object Object]"===r.call(e)},i=function(e){return"string"==typeof e},a=function(e){return"function"==typeof e},s=function(e,r){return t.call(e,r)},c=function(e){if(!e)return{};var r=document.createElement("a");return r.href=e,{host:r.host,path:r.pathname,hostname:r.hostname,protocol:r.protocol.slice(0,-1)}},d={duration:"delay",name:"resurl",type:"type"},u=["css","script","img","video","audio"],p=["cdn","cgi"],l=["s_path","s_uuid","s_traceid","s_guid","s_appid","s_vuserid","hc_pgv_pvid","s_omgid","err_desc"],m=(function(){function e(e){this.value=e}function r(r){function t(o,i){try{var a=r[o](i),s=a.value;s instanceof e?Promise.resolve(s.value).then(function(e){t("next",e)},function(e){t("throw",e)}):n(a.done?"return":"normal",a.value)}catch(e){n("throw",e)}}function n(e,r){switch(e){case"return":o.resolve({value:r,done:!0});break;case"throw":o.reject(r);break;default:o.resolve({value:r,done:!1})}(o=o.next)?t(o.key,o.arg):i=null}var o,i;this._invoke=function(e,r){return new Promise(function(n,a){var s={key:e,arg:r,resolve:n,reject:a,next:null};i?i=i.next=s:(o=i=s,t(e,r))})},"function"!=typeof r.return&&(this.return=void 0)}"function"==typeof Symbol&&Symbol.asyncIterator&&(r.prototype[Symbol.asyncIterator]=function(){return this}),r.prototype.next=function(e){return this._invoke("next",e)},r.prototype.throw=function(e){return this._invoke("throw",e)},r.prototype.return=function(e){return this._invoke("return",e)}}(),function(e,r){if(!(e instanceof r))throw new TypeError("Cannot call a class as a function")}),f=function(){function e(e,r){for(var t=0;t<r.length;t++){var n=r[t];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(r,t,n){return t&&e(r.prototype,t),n&&e(r,n),r}}(),h=Object.assign||function(e){for(var r=1;r<arguments.length;r++){var t=arguments[r];for(var n in t)Object.prototype.hasOwnProperty.call(t,n)&&(e[n]=t[n])}return e},v=function(){},g=function(e){var r=e.name,t=e.url,n=void 0===t?window.location.href:t;r=r.replace(/[\[\]]/g,"\\$&");var o=new RegExp("[?&]"+r+"(=([^&#]*)|&|#|$)").exec(n);return o&&o[2]?decodeURIComponent(o[2].replace(/\+/g," ")):""},y=function(e){for(var r=encodeURIComponent(e)+"=",t=document.cookie.split(";"),n=0;n<t.length;n++){for(var o=t[n];" "===o.charAt(0);)o=o.substring(1,o.length);if(0===o.indexOf(r))return decodeURIComponent(o.substring(r.length,o.length))}return null},w=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:1;return Math.random()<=e},_=function(e,r,t){var n=null;return function(){for(var o=arguments.length,i=Array(o),a=0;a<o;a++)i[a]=arguments[a];var s=this;clearTimeout(n),n=setTimeout(function(){e.apply(s,i),"function"==typeof t&&t()},r)}},b=function(e){var r=[];for(var t in e)r.push(encodeURIComponent(t)+"="+encodeURIComponent(e[t]));return r.join("&")},S=function(e){var r=e.baseUrl,t=e.data,n=e.method,o=void 0===n?"GET":n;if("GET"===o){var i=new Image;i.onerror=function(){i=null},i.onload=function(){i=null},i.src=r+"&"+b(t)}else if("POST"===o)try{var a=null;(a=window.XMLHttpRequest?new XMLHttpRequest:new ActiveXObject("Microsoft.XMLHTTP")).open("POST",r,!0),a.setRequestHeader("Content-type","application/x-www-form-urlencoded"),a.send(b(t))}catch(e){console.warn("xmlhttp error",e)}},x=function(e){var r=[];return n(e)&&e.forEach(function(e){var t={};for(var n in e)if(d[n]&&(t[d[n]]=e[n],"resurl"===d[n])){var o=c(e[n]),i=o.hostname,a=o.path;t.reshost=i,t.respath=a,t.httpcode=200}r.push(t)}),r},E=function(e){var r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},t={},n=[];if(o(r))for(var i in r)-1!==l.indexOf(String(i))?(t[i]=r[i],n.push(i)):console.warn(i,"could not be modify.");return h({},e,t)},k=function(){var e="";try{if(e=window.localStorage.getItem("emonitor.hc_pgv_pvid"))return e;var r=(new Date).getTime();return e="ek"+[r,Math.floor(r*Math.random()*Math.random()).toString().slice(-5)].join(""),window.localStorage.setItem("emonitor.hc_pgv_pvid",e),e}catch(r){return console.warn("emonitor.hc_pgv_pvid get error",r),e}},T=function(e,r){var t=arguments.length>2&&void 0!==arguments[2]?arguments[2]:"",n=void 0;return String(r).split(".").forEach(function(r){try{n=void 0!==n?n[r]:e[r]}catch(e){n=void 0}}),void 0===n?t:n},M=function(e){var r=e.data,t=void 0===r?{}:r,a=e.path,s=void 0===a?"":a,c=void 0;if(o(t)){if(i(s))return T(t,s,"");if(n(s))return s.forEach(function(e){if(""!==T(t,e,""))return c=T(t,e),!1;c=""}),c}return""},O=function(e){var r=(arguments.length>1&&void 0!==arguments[1]?arguments[1]:{})||{},t=r.code,n=r.msg,i={};if(o(e))i=e;else try{i=JSON.parse(e)}catch(e){i={}}return{bizcode:M({data:i,path:t}),bizmsg:M({data:i,path:n})}},j=function(e){var r="";if(!i(e))return console.warn("name is not string"),r;try{return 0===(r=g({name:e})).length&&(r=y(e)||""),r}catch(e){return console.error("Automatically get the value of the corresponding name from the url or cookie "+e),r}},C=navigator.userAgent,Q=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:C,r="unknown",t="unknown",n="unknown",o="unknown",i="unknown",a=e.toLowerCase();if(a.indexOf("windows")>-1?i="windows":a.indexOf("linux")>-1?i="linux":a.indexOf("mac")>-1&&(i="mac"),window.opera)o=window.opera.version(),t=window.opera.version(),n="opera";else if(/AppleWebKit\/(\S+)/.test(e))if(o=RegExp.$1,n="webkit",/Chrome\/(\S+)/.test(e))t=RegExp.$1,r="chrome";else if(/Version\/(\S+)/.test(e))t=RegExp.$1,r="safari";else{var s=parseFloat(o);t=s<100?1:s<312?1.2:s<412?1.3:2,r="safari"}else/KHTML\/(\S+)/.test(e)||/Konqueror\/([^;]+)/.test(e)?(o=RegExp.$1,t=RegExp.$1,n="khtml",r="konq"):/rv:([^\)]+)\) Gecko\/\d{8}/.test(e)?(o=RegExp.$1,n="gecko",/Firefox\/(\S+)/.test(e)&&(t=RegExp.$1,r="firefox")):/MSIE ([^;]+)/.test(e)&&(o=RegExp.$1,t=RegExp.$1,n="ie",r="ie");return{machine:"PC",name:r,version:t,engineVer:o,engine:n,machineSys:i}},L=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:C,r=Q(e),t=r.machineSys,n={mac:"mac"===t,version:r.engineVer,name:t},o={},i={iphone:e.match(/(iphone)\s(os\s)?([\d_]+)/i),ipad:e.match(/(ipad).*\s([\d_]+)/i),ipod:e.match(/(ipod).*\s([\d_]+)/i),android:e.match(/(android)\s([\d\.]+)/i),windows:e.match(/Windows(\s+\w+)?\s+?(\d+\.\d+)/)};i.ipod&&(n.ios=!0,n.ipod=!0,n.version=i.ipod[2].replace(/_/g,"."),n.name="ipod"),i.ipad&&(n.ios=!0,n.ipad=!0,n.version=i.ipad[2].replace(/_/g,"."),n.name="ipad"),i.iphone&&(n.iphone=!0,n.ios=!0,n.version=i.iphone[3].replace(/_/g,"."),n.name="iphone"),i.android&&(n.android=!0,n.version=i.android[2],n.name="android"),i.windows&&(n.windows=!0,n.version=i.windows[2],n.name="windows");var a={IE:e.match(/; msie\b|; trident\b|\bedge\//i),WeChat:e.match(/MicroMessenger\/((\d+)\.(\d+))\.(\d+)/)||e.match(/MicroMessenger\/((\d+)\.(\d+))/),MQQClient:!e.match(/QQReader/)&&e.match(/QQ\/(\d+\.\d+)/i)||e.match(/V1_AND_SQ_([\d\.]+)/),MQQReader:e.match(/QQReader/i),QQvideo:!e.match(/TADChid/)&&e.match(/QQLiveBrowser\/([\d.]+)/),QQHDvideo:e.match(/QQLiveHDBrowser\/([\d.]+)/),TBSSDK:e.match(/MQQBrowser\/(\d+\.\d+)/i)&&e.match(/MSDK\/(\d+\.\d+)/),MQQBrowser:e.match(/MQQBrowser\/(\d+\.\d+)/i),UCBrowser:e.match(/ucbrowser\/(\d+\.\d+)/i),Qzone:e.match(/Qzone\/[\w\d\_]*(\d\.\d)[\.\w\d\_]*/i),Weibo:e.match(/Weibo/i),qqnews:e.match(/qqnews\/(\d+\.\d+\.\d+)/i),QQLiveBroadcast:e.match(/QQLiveBroadcast/i),kuserAgentibao:e.match(/qnreading\/(\d+\.\d+\.\d+)/i),liebao:e.match(/LieBaoFast\/(\d+\.\d+\.\d+)/i),baiduboxapp:e.match(/baiduboxapp\/(\d+\.\d+\.\d+)/i),IEMobile:e.match(/IEMobile(\/|\s+)(\d+\.\d+)/)||e.match(/WPDesktop/),douban:e.match(/com\.douban\.frodo\/(\d+\.\d+\.\d+)/i),MiuiBrowser:e.match(/MiuiBrowser\/(\d+\.\d+)/i),BingPreview:e.match(/BingPreview\/(\d+\.)/i),TADChid:e.match(/TADChid\/(\d+)/i),Chrome:n.ios?e.match(/CriOS\/(\d+\.\d+)/):e.match(/Chrome\/(\d+\.\d+)/),Safari:e.match(/Safari\/(\d+\.\d+)/),sukan:e.match(/synopsis/i)};if(a.MQQReader)o.MQQReader=!0,o.version=1,o.name="MQQReader";else if(a.IEMobile)o.IEMobile=!0,o.version=1,o.name="IEMobile";else for(var s in a)if(a[s]){o[s]=!0,o.version=a[s][1]||0,o.name=s;break}return{browser:o,os:n}},R=!1,q=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},r=e.name,t=e.type;try{if(!window.performance&&!window.performance.getEntries)return console.warn("prerformance is not supported"),[];var n=performance.getEntries(),o=[];if(!n&&!n.length)return o;try{n.forEach(function(e){var r={name:e.name,time_redirect:e.redirectEnd-e.redirectStart,time_dns:e.domainLookupEnd-e.domainLookupStart,time_requestTime:e.responseEnd-e.requestStart,time_tcp:e.connectEnd-e.connectStart,type:e.initiatorType,starttime:Math.floor(e.startTime),entryType:e.entryType,duration:Math.floor(e.duration)||0,decodedBodySize:e.decodedBodySize||0,nextHopProtocol:e.nextHopProtocol,json_entries:JSON.stringify(e)};o.push(r)})}catch(e){console.error("get resourceTiming err::::",e)}return r?o.filter(function(e){return e.name===r})[0]:t?o.filter(function(e){return e.type===t}):o}catch(e){return console.warn("get performance happen error"),[]}},A={SCRIPT:"script",LINK:"link",IMG:"img",AUDIO:"audio",VIDEO:"video",FETCH:"fetch",AJAX:"ajax",PROMISE:"promise"},I=function(){var e=(new Date).getTime();return window.performance&&window.performance.now&&(e=window.performance.now()),e},N=function(e){var r={type:"",url:"",code:"",isErr:!1,source:e};if(!o(e))return r;if(s(e,"err_type")){r.type=e.err_type;try{if(e.err_desc){var t=JSON.parse(e.err_desc);r.url=t.url||t.fileName||e.s_url}else r.url=e.s_url}catch(t){r.url=e.s_url,console.warn(t)}r.isErr=!0}else s(e,"cgiurl")?(r.type="cgi",r.url=e.cgiurl,r.code=e.httpcode):s(e,"resurl")?(r.type="cdn",r.url=e.resurl,r.code=e.httpcode):s(e,"time_domready")?(r.type="pagepf",r.url=e.s_url,r.code=200):s(e,"json_entries")?(r.type="slowlog",r.url=e.s_url,r.code=200):s(e,"log")&&(r.type="flowlog",r.url=e.s_url,r.code=200);return r},U=function(){function e(r){var t=r.options,n=void 0===t?{}:t,o=r.baseUrl,i=void 0===o?"":o,a=r.sampling,s=void 0===a?1:a,c=r.delay,d=void 0===c?2e3:c,u=r.name,p=r.params,l=void 0===p?[]:p,f=r.cgi,h=void 0===f?{}:f,v=r.ptag,g=r.onBeforeSend,y=r.debug,w=r.logs,_=void 0===w?{}:w;m(this,e),this.options=n,this.errorList=[],this.baseUrl=i,this.sampling=s,this.params=l,this.dealy=d,this.name=u,this.cgiOptions=h,this.ptag=v,this.onBeforeSend=g,this.debug=y,this.logs=_}return f(e,[{key:"init",value:function(){try{this.proxyAjax(),this.proxyError(),this.proxyConsole(),this.proxyFetch(),this.injectOptions()}catch(e){this.send({err_msg:"emonitor init happen error",err_stack:""+e,err_type:"jserror",err_function:"emonitor init func"})}}},{key:"injectOptions",value:function(){var e=this;e.params.forEach(function(r){e.options[r]=g({name:r})}),"string"==typeof e.options.qq&&e.options.qq.length>0&&(e.options.openid="")}},{key:"proxyConsole",value:function(){var e=this;if("undefined"!=typeof console&&"function"==typeof console.error){var r=console.error;console.error=function(){for(var t=arguments.length,n=Array(t),o=0;o<t;o++)n[o]=arguments[o];r.apply(window.console,n),e.send({err_msg:n.join(","),level:"error",err_type:"console"})}}}},{key:"log",value:function(){var e=this,r=e.logs||{},t=r.baseUrl,n=r.sampling,i=void 0===n?1:n;if(t){for(var a={level:"",log:""},s=arguments.length,c=Array(s),d=0;d<s;d++)c[d]=arguments[d];c.length>1?a={level:c[0],log:c[1]}:o(c[0])?a=c[0]:console.warn("log params is empty"),Math.random()<=i&&e.send(h({},a),!1,t)}}},{key:"reportCgi",value:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},r=this,t=r.cgiOptions||{},n=t.baseUrl,o=t.sampling,i=void 0===o?1:o;if(n){var a=e.cgiurl,s=c(a),d=s.host,u=s.path;Math.random()<=i&&r.send(h({cgipath:u,cgihost:d,bizcode_server:""},e),!1,n)}}},{key:"proxyAjax",value:function(){var e=Object.create(null),r=this,t=(new Date).getTime(),n=null,o=null,i=function(e,i){o=I();try{var a={},s=e&&(e.currentTarget||e.target),c=s.emonitorAjaxURL,d=s?{currentStatus:s.status,cgiurl:c||s.responseURL}:{},u=d.currentStatus,p=void 0===u?"":u,l=d.cgiurl,m=void 0===l?"":l,f=-1!==["","text"].indexOf(s.responseType)?s.responseText||null:null;if("timeout"===String(i))return a={err_msg:"ajax请求错误",err_stack:"错误码:"+p,level:"error",err_type:A.AJAX,err_code:p,err_desc:JSON.stringify({fileName:m,category:"ajax",text:"ajax request timeout",status:p})},r.errorList.push(a),r.send(h({},a)),void(a={});var v=O(f,r.cgiOptions),g=v.bizcode,y=v.bizmsg;try{r.reportCgi({cgiurl:m,delay:Math.round(Math.max(o-t,0)),httpcode:p,bizcode:g,bizmsg:y,starttime:n})}catch(e){console.warn(e)}"number"==typeof p&&(p<200||p>=300)&&(a={err_msg:"ajax请求错误",err_stack:"错误码:"+p,level:"error",err_type:A.AJAX,err_code:p,err_desc:JSON.stringify({fileName:m,category:"ajax",text:s.statusText,status:p})},r.errorList.push(a),r.send(h({},a)),a={})}catch(e){console.error("Ajax handleEvent "+e)}};e.send=XMLHttpRequest.prototype.send,e.open=XMLHttpRequest.prototype.open,XMLHttpRequest.prototype.open=function(r,t){var n=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];e.open.apply(this,[r,t,n]),this.emonitorAjaxURL=t},XMLHttpRequest.prototype.send=function(r){n=(new Date).getTime(),t=I();var o=this.onloadend,a=this.ontimeout;this.onloadend=function(e){i(e),"function"==typeof o&&o.apply(this,arguments)},this.ontimeout=function(e){i(e,"timeout"),"function"==typeof a&&a.apply(this,arguments)},e.send.apply(this,[r])}}},{key:"proxyFetch",value:function(){var e=this;if(window.fetch){var r=window.fetch;window.fetch=function(){for(var t=arguments.length,n=Array(t),o=0;o<t;o++)n[o]=arguments[o];var i=(new Date).getTime(),a=I(),s=a;return r.apply(null,n).then(function(r){var t=r.clone();s=I(),r.ok||""===r.url||e.send({err_msg:"fetch not ok",err_type:A.FETCH,err_code:r.status,err_desc:JSON.stringify({type:"error",fileName:n[0],options:n[1],category:"fetch"})});var o="",c="";if(r.ok){try{if(-1!==(r.headers?r.headers.get("content-type"):"").indexOf("application/json")){var d=O(t.json());o=d.bizcode,c=d.bizmsg}}catch(e){o="",c=""}try{e.reportCgi({cgiurl:n[0],delay:Math.round(Math.max(s-a,0)),httpcode:r.status,bizcode:o,bizmsg:c,starttime:i})}catch(e){console.warn(e)}}return r}).catch(function(r){e.send({err_msg:"fetch not ok",err_stack:""+r,err_type:A.FETCH,err_desc:JSON.stringify({type:"error",fileName:n[0],options:n[1],category:"fetch"})})})}}}},{key:"proxyError",value:function(){var e=this,r=arguments,t=this;window.addEventListener("error",function(e){var r=e.target?e.target:e.srcElement;if(r!==window&&r.nodeName&&A[r.nodeName.toUpperCase()]){var n={err_msg:r.localName+" is load error",err_stack:"resource is not found",err_type:""+r.localName,err_desc:JSON.stringify({tagName:r.localName,type:e.type,fileName:r.currentSrc||r.src||r.href,category:"resource"}),timestamps:(new Date).getTime()};t.errorList.push(n),t.send(h({},n))}},!0);var n=window.onerror;window.onerror=function(o,i,a,s,c){if("Script error."===o&&!i)return!1;var d={};return setTimeout(function(){var e=s||window.event&&window.event.errorCharacter||0;(d=c&&c.stack?{err_msg:o,err_stack:c.stack,err_type:"jserror"}:{err_msg:o,err_stack:"",err_type:"jserror"}).err_desc=JSON.stringify({url:t.URL,fileName:i,category:"javascript",line:a,col:e}),t.errorList.push(h({},d)),t.send(h({},d))},0),"function"==typeof n?n.apply(e,r):!t.debug},window.addEventListener("unhandledrejection",function(e){var r={err_msg:e.reason,err_type:A.PROMISE,err_desc:JSON.stringify({url:location.href,category:"promise"}),err_stack:"promise is error"};t.errorList.push(r),t.send(r),e.preventDefault()},!0)}},{key:"config",value:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};for(var r in e)-1!==["baseUrl","params","options","sampling","delay","name","cgi"].indexOf(String(r))&&(this[r]=e[r]);return this}},{key:"send",value:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},r=arguments.length>1&&void 0!==arguments[1]&&arguments[1],t=arguments[2],n=this,i=(n.cgiOptions||{}).btrace,s=void 0!==i&&i,d=e.err_type,u=void 0===d?"console":d;if(w(n.sampling)){var l="jserror"===u?300:n.delay,m=_(S,l,function(){n.errorList=[]}),f=c(location.href),v=f.host,g=f.path,y=f.protocol,b=L(navigator.userAgent),x=b.browser,T=b.os,M=h({},this.options,e,{timestamps:(new Date).getTime(),_dc:Math.random(),dtime:(new Date).getTime(),hh_ua:navigator.userAgent,hh_uav:x.version,hh_ref:document.referrer,hc_pgv_pvid:k(),s_url:location.href,s_host:v,s_path:g,s_protocol:y,s_browser:x.name,s_os:T.name,s_qq:j("qq"),s_openid:j("openid"),s_app:n.name,s_ptag:n.ptag}),O=n.onBeforeSend;if(a(O))try{var C=N(M),Q=O(C);if("boolean"==typeof Q&&!Q)return;if(-1!==p.indexOf(C.type)&&"btrace.qq.com"===c(C.url).hostname&&!s)return;o(Q)&&(M=E(M,Q))}catch(e){console.warn(e)}m({baseUrl:t||n.baseUrl,data:M,method:r?"POST":"GET"})}}}]),e}();e.create=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},r=e.options,t=void 0===r?{}:r,n=e.cgi,o=void 0===n?{sampling:1,baseUrl:""}:n,i=e.logs,a=void 0===i?{sampling:1,baseUrl:""}:i,s=e.baseUrl,c=e.delay,d=void 0===c?2e3:c,u=e.sampling,p=void 0===u?1:u,l=e.name,m=void 0===l?"unknown":l,f=e.params,h=void 0===f?[]:f,g=e.ptag,y=void 0===g?"":g,w=e.debug,_=void 0!==w&&w,b=e.onBeforeSend,S=new U({options:t,baseUrl:s,params:h,delay:d,name:m,sampling:p,cgi:o,ptag:y,debug:_,onBeforeSend:void 0===b?v:b,logs:a});return S.init(),S},e.getRcTiming=q,e.getPfTiming=function(){try{var e=window.performance||window.webkitPerformance||window.msPerformance||window.mozPerformance;if(void 0===e)return!1;var r=e.timing,t={};return t.time_response=r.responseStart-r.requestStart,t.time_firstpaint=r.responseEnd-r.responseStart,t.time_domready=r.domContentLoadedEventStart-r.responseEnd,t.time_readyStart=r.fetchStart-r.navigationStart,t.time_redirectTime=r.redirectEnd-r.redirectStart,t.time_appcacheTime=r.domainLookupStart-r.fetchStart,t.time_dns=r.domainLookupEnd-r.domainLookupStart,t.time_tcp=r.connectEnd-r.connectStart,t.time_requestTime=r.responseEnd-r.requestStart,t.time_initDomTreeTime=r.domInteractive-r.responseEnd,t.time_loadEventTime=r.loadEventEnd-r.loadEventStart,t.time6=r.domLoading-r.fetchStart,t.time_whiteScreen=r.domLoading-r.fetchStart,t.time7=r.loadEventEnd-r.fetchStart,t.time_firstScreenTime=r.loadEventEnd-r.fetchStart,t.time_parseDomTree=r.domComplete-r.domInteractive,t.time8="",t}catch(e){return console.warn("err",e),{}}},e.getCdnTiming=function(){var e={};return u.forEach(function(r){e[r]=x(q({type:r}))}),e},e.getSysInfo=L,e.getUrlParam=g,e.getCookie=y,e.injectVconsole=function(){try{var e=document.createElement("script"),r=function(){R||(R=new window.VConsole)};e.src="https://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/3.0.0/vconsole.min.js",e.async=!0,e.charset="utf-8",e.onload=r,e.onreadystatechange=function(){"complete"===this.readyState&&r()},document.getElementsByTagName("head")[0].appendChild(e)}catch(e){console.error("vConsole script load err")}},Object.defineProperty(e,"__esModule",{value:!0})});
+</script>
+<script charset="utf-8">
+    var isTimingReported = false;
+    var _MAXTIMEOUT = 10000;
+    var nativeToString = Object.prototype.toString;
+    var bossInfo = {
+        page: '//btrace.qq.com/kvcollect?BossId=6529&Pwd=1714580587', //页面质量上报
+        error: '//btrace.qq.com/kvcollect?BossId=6527&Pwd=1102151080', // 页面错误上报
+        slowlog: '//btrace.qq.com/kvcollect?BossId=6523&Pwd=1202531240', //慢日志上报
+        cgi: '//btrace.qq.com/kvcollect?BossId=6528&Pwd=96045012', // cgi上报
+        resource: '//btrace.qq.com/kvcollect?BossId=6958&Pwd=1123576360', // 素材质量上报
+        flowlog: '//btrace.qq.com/kvcollect?BossId=6526&Pwd=878966364', // 流水日志上报
+    };
+    var emonitorIns = emonitor.create({
+        baseUrl: bossInfo.error,
+        name: 'gjmain',
+        onBeforeSend: function(data) {
+            // 在数据上报前调用 可以用作数据过滤，
+            // (1)仅有return false 不上报数据；(2)当返回object对象，支持修改's_path', 's_traceid', 's_guid', 'hc_pgv_pvid', 's_omgid','err_desc';
+            // data.type 上报类型 console，link，script，ajax，fetch，promise，img，audio，video，cgi
+            // data.url 请求链接
+            // data.code 请求状态，默认为空
+            // data.isErr 是否是异常上报
+            // data.source 上报的原始数据
+            // 应用场景: 日志管理, 白名单等
+            // console.log('report data::::', data);
+            // 简单的全日志存储方案
+            // 通过返回对象，修改特定上报字段。生产环境，按需使用!。
+            // return { s_path: '/test', s_traceid: '1111'}
+            // return { err_desc: 'test'};
+        },
+        // debug: true, 开发环境开启debug=true，window.onerror捕获的错误会展示在控制台
+        cgi: {
+            baseUrl: bossInfo.cgi,
+            sampling: 1, // 默认采样率 可根据实际情况调整
+            code: 'ret',
+            msg: ['info'],
+        },
+        logs: {
+            baseUrl: bossInfo.flowlog,
+        },
+    });
+    function doCdnReport() {
+        var emRcInfo = emonitor.getCdnTiming();
+        for (var emRc in emRcInfo) {
+            if (emRcInfo[emRc].length > 0) {
+                emRcInfo[emRc].forEach(function(re) {
+                    emonitorIns
+                        .config({
+                            baseUrl: bossInfo.resource
+                        })
+                        .send(re);
+                });
+            }
+        }
+    }
+    setTimeout(function() {
+        // 慢日志上报
+        if (!isTimingReported) {
+            var _resources = emonitor.getRcTiming();
+            try {
+                if (nativeToString.call(_resources) === '[object Array]') {
+                    var _resourcesLen = _resources.length;
+                    var _jsonEntries = [];
+                    for (var _i = 0; _i < _resourcesLen; _i++) {
+                        _jsonEntries.push(
+                            _resources[_i].starttime +
+                            '|' +
+                            _resources[_i].duration +
+                            '|' +
+                            _resources[_i].name
+                        );
+                    }
+                    emonitorIns
+                        .config({
+                            baseUrl: bossInfo.slowlog
+                        })
+                        .send(
+                            {
+                                json_entries: JSON.stringify(_jsonEntries)
+                            },
+                            true,
+                        );
+                    emonitorIns.config({
+                        baseUrl: bossInfo.error
+                    });
+                }
+            } catch (err) {
+                console.warn('emonitorIns send', err);
+            }
+        }
+    }, _MAXTIMEOUT);
+    window.addEventListener(
+        'load',
+        function() {
+            setTimeout(function() {
+                if (!isTimingReported) {
+                    if (typeof onLoad === 'function') {
+                        onLoad();
+                    } else {
+                        emonitorIns
+                            .config({
+                                baseUrl: bossInfo.page
+                            })
+                            .send(emonitor.getPfTiming());
+                        doCdnReport();
+                        emonitorIns.config({
+                            baseUrl: bossInfo.error
+                        });
+                    }
+                    isTimingReported = true;
+                }
+            }, 0);
+        },
+        false,
+    );
+    console.warn('emonitor')
+    emonitorIns.log({
+        level: 'info',
+        log: 'emonitor supprt flow log',
+    });
+    emonitorIns.log('warn', 'warn emonitor supprt flow log');
+</script>
+</head>
+<body pageIndex="1">
+
+
+<h1>电脑管家</h1>
+<h2>电脑管家 Beta版</h2>
+<h2>电脑管家（帐号宝专版）</h2>
+<h2>游戏升级加速，即开即玩不等待</h2>
+<style>
+	#header {height:70px;width:100%;background:#FFF;position: relative;z-index:999999; border-bottom:1px solid #EEE; margin-bottom:15px;}
+	#header .top_in {width:1200px; height:70px; margin:0 auto; position:relative;}
+	.logo {width:205px; height:40px; float:left; margin-top:15px; position:relative;}
+
+	#header #nav {display:inline; float:left; margin-left:50px;}
+	#header #nav li {display:block; float:left; height:70px; position:relative;}
+	#header ul li a {display:block; float:left; height:70px; line-height:70px; color:#333; font-size:16px; padding:0 18px 0 18px; position:relative; border-left:1px solid #EEE;}
+	#header #nav li a:hover {color:#2771fa; text-decoration:none;}
+	#header #nav li a:hover i {border-color:#2771fa #fff #fff;}
+	#header #nav li a.mutl {padding:0 33px 0 22px;}
+	#header #nav li a.last {border-right:1px solid #EEE;}
+	#header #nav li a i {position:absolute;right:15px;top:33px;width:0;height:0;font-size:0;line-height:0;border-width:4px;border-style:solid;border-color:#333 #fff #fff;-moz-transition:-moz-transform .2s ease-in;-webkit-transition:-webkit-transform .2s ease-in;-o-transition:-o-transform .2s ease-in;transition:transform .2s ease-in;-moz-transform:rotate(0);-webkit-transform:rotate(0);-o-transform:rotate(0);transform:rotate(0)}
+	#header #nav li a:hover i { -moz-transform:rotate(180deg); -moz-transform-origin:50% 30%; -webkit-transform:rotate(180deg); -webkit-transform-origin:50% 30%;-o-transform:rotate(180deg); -o-transform-origin:50% 30%; transform:rotate(180deg); transform-origin:50% 30%; filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);}
+	#header #nav ul {position:absolute; display:none; top:70px; left:0; margin-left:0; border:1px solid #EEE;clear: both;background: #fff;}
+	#header #nav ul li {text-align:center; display:block; float:none; background:#FFF; height:30px; float:left;}
+	#header #nav ul li.nobg {background:none;}
+	#header #nav ul li a {color:#555; font-size:12px; width:74px; height:30px; line-height:30px; display:block; text-align:left; border:none;}
+	#header #nav .top-nav-li li a{padding:0 22px 0 22px; width: auto;}
+	#header #nav ul li a:hover {text-decoration:none; color:#2771fa;}
+	#header #navline {height:3px; width:70px; background:#2771fa; position:absolute; top:0; left:255px; z-index:9;}
+	.top_tool {float:right; margin-top:10px; width:301px;}
+	.top_tool .tlink {float:left; margin-left:20px; width:48px; height:48px; background:url(//guanjia.qq.com/assets/images/main/ic_block.png) no-repeat;}
+	.top_tool a.mobile {background-position:-48px 0;}
+	.top_tool a.mobile:hover {background-position:-48px -48px;}
+	.top_tool a.qiye {background:url(//guanjia.qq.com/assets/images/main/ic_qiye.png) no-repeat;background-position:0 0;}
+	.top_tool a.qiye:hover {background:url(//guanjia.qq.com/assets/images/main/ic_qiye.png) no-repeat;background-position:0 -48px;}
+	.top_tool a.mac {background-position:0 0;}
+	.top_tool a.mac:hover {background-position:0 -48px;}
+	.top_tool a.global {background-position:-96px 0;}
+	.top_tool a.global:hover {background-position:-96px -48px;}
+
+	#nologin {width:40px; height:40px; line-height:40px; text-align:right; float:right;}
+	#nologin a {color:#2771fa;}
+	#logined {float:right; position:relative; display:none;}
+	#logined .face {padding:4px; margin-left:25px; float:right;}
+	#logined .nick {overflow:hidden;}
+	#logined .user_info {position:absolute; width:172px; min-height:50px; height:auto; padding:5px 10px; background:#FFF; border:1px solid #343434; top:55px; right:0; display:none; font-size:12px;}
+	#logined .user_info .arow {position:absolute; top:-8px; right:17px; width:15px; height:8px; background:url(//guanjia.qq.com/assets/images/main/arow1.png) no-repeat;}
+	#logined .logout {float:right; color:#2771fa;}
+	#iconElm,#safeElm {display:inline-block; width:16px; height:16px;}
+	#iconElm,#safeElm,#safejb {display:block; width:16px; height:17px; margin:8px 10px 0 0; float:left; background:url(//pc1.gtimg.com/pcmgr/user/img/icon2.png) no-repeat;}
+	#header .icon_on {background:url(//pc1.gtimg.com/img/logo_v8_16.png) 0 0 no-repeat;}
+	#header .icon_off {background:url(//pc1.gtimg.com/img/logo_v8_16.png) -16px 0 no-repeat}
+	#header .safejb {background:url(//pc1.gtimg.com/pcmgr/user/img/7/jb.png) 0 1px no-repeat; line-height:18px; padding-left:20px; width:40px; color:#373737;}
+	#header .safe_lv1 {background-position:0 -28px;}
+	#header .safe_lv2 {background-position:0 -57px;}
+	#header .safe_lv3 {background-position:0 -86px;}
+	#header .safe_lv4 {background-position:0 -115px;}
+	#header .safe_lv5 {background-position:0 -144px;}
+	#header .safe_lv6 {background-position:0 -173px;}
+	#header .safe_lv7 {background-position:0 -199px;}
+	#header .safe_lv8 {background-position:0 -225px;}
+	#header .safe_lv9 {background-position:0 -252px;}
+	#header .safe_lv10 {background-position:0 -279px;}
+	#loginframe {display:none;height:379px;overflow:hidden;width:552px; position: relative;}
+	#loginframe .close {position: absolute; top: 0; right: 10px; font-size: 24px; cursor: pointer;}
+	#loginframe .close:hover {text-decoration: none;}
+
+	#header #nav .li-list-item{height: auto;position: relative;float: left;width: 128px;margin: 20px 0;}
+	#header #nav .li-list-item:after{content: '';position: absolute;background: #eee;width: 1px;height: 100%; right:0;}
+	#header #nav .li-list-item:last-child:after{content: '';width: 0;}
+	#header #nav .ul-list-item{position: relative;top:0;border: none;display: block;}
+	#header #nav .ul-list-item .list-item-title {padding-left:21px;line-height: 16px; height: 16px; display:inline-block; color:#000;cursor: pointer;margin-bottom: 10px;}
+	#header #nav .ul-list-item .list-item-title a{padding:0; color:#000;cursor: pointer;font-size: 14px;height: 16px;line-height: 16px;}
+	#header #nav .ul-list-item .list-item-title a:hover{color: #2771fa;}
+	/*#header #nav .ul-list-item:hover .list-item-title{color: #2771fa;}*/
+	.ul-list-item a.new:after{
+		content:url(//pc1.gtimg.com/guanjia/images/91/11/9111497145ba907878b3c572c2fd5a24.png);
+		position: absolute;
+		right: -10px; top: 0;
+		width: 31px;height: 20px;z-index:99;
+	}
+	.ul-list-item a.hot:after{
+		content:url(//pc1.gtimg.com/guanjia/images/81/d3/81d3bab9b56f0632a3da9da945f2884d.png);
+		position: absolute;
+		right: -10px; top: 0;
+		width: 31px;height: 20px;z-index:99;
+	}
+
+</style>
+<div id="header" class="">
+	<div id="nav_v10" class="top_in">
+		<a class="logo" href="http://guanjia.qq.com/" title="" data-stats="new_main.guanjialogo"><img src="//guanjia.qq.com/assets/images/main/logo_2.png" alt="腾讯电脑管家" class=""></a>
+		<div id="navline" class=""></div>
+		<ul id="nav" class="">
+			<li class="top-nav-li"><a data-stats="new_main.nav1" href="http://guanjia.qq.com/" class="">首页</a></li>
+			<li class="top-nav-li"><a data-stats="new_main.nav2" href="http://guanjia.qq.com/product/home/v12/" class="mutl">产品介绍<i></i></a><!-- style="padding: 0 20px" -->
+				<ul style="width: 640px;" class="publish-sort ui-sortable" id="cpjs-ul">
+					<li class="li-list-item">
+						<ul class="ul-list-item publish-sort ui-sortable">
+							<li class="list-item-title"><a href="//guanjia.qq.com/product/home/v12/?tab=1" data-stats="new_main.aqfh" class="">安全防护</a></li>
+							<li><a href="//guanjia.qq.com/product/home/v12/?tab=1&amp;mod=t_sytj" data-stats="new_main.sytj" class="">首页体检</a></li>
+							<li><a href="//guanjia.qq.com/product/home/v12/?tab=1&amp;mod=t_zdfy" data-stats="new_main.zdfy" class="">主动防御</a></li>
+							<li><a href="//guanjia.qq.com/product/home/v12/?tab=1&amp;mod=t_bdcs" data-stats="new_main.bdcs" class="">病毒查杀</a></li>
+							<li><a href="//guanjia.qq.com/product/home/v12/?tab=1&amp;mod=t_ldxf" data-stats="new_main.ldxf" class="">漏洞修复</a></li>
+							
+							<li class="" style="position: relative; left: 0px; top: 0px;"><a href="//guanjia.qq.com/product/home/v12/?tab=1&amp;mod=t_lsbd" data-stats="new_main.lsbd" class="">勒索病毒防御</a></li><li><a href="//guanjia.qq.com/product/home/v12/?tab=1&amp;mod=t_xtjjx" data-stats="new_main.xtjjiux" class="">系统急救箱</a></li><li><a href="//guanjia.qq.com/product/home/v12/?tab=1&amp;mod=t_zhbh" data-stats="new_main.zhbh" class="">帐号保护</a></li><li><a href="//guanjia.qq.com/product/home/v12/?tab=1&amp;mod=t_qesh" data-stats="new_main.qesh" class="new">企鹅守护</a></li>
+
+
+
+						</ul>
+					</li>
+					<li class="li-list-item">
+						<ul class="ul-list-item publish-sort ui-sortable">
+							<li class="list-item-title"><a href="//guanjia.qq.com/product/home/v12/?tab=2" data-stats="new_main.qljs" class="">清理加速</a></li>
+							<li><a href="//guanjia.qq.com/product/home/v12/?tab=2&amp;mod=t_ljql" data-stats="new_main.ljql" class="">垃圾清理</a></li>
+							<li><a href="//guanjia.qq.com/product/home/v12/?tab=2&amp;mod=t_dnjs" data-stats="new_main.dnjs" class="">电脑加速</a></li>
+							<li><a href="//guanjia.qq.com/product/home/v12/?tab=2&amp;mod=t_xtpss" data-stats="new_main.xtpss" class="">系统盘瘦身</a></li>
+							<li><a href="//guanjia.qq.com/product/home/v12/?tab=2&amp;mod=t_xhj" data-stats="new_main.xhj" class="">小火箭加速</a></li>
+							<li><a href="//guanjia.qq.com/product/home/v12/?tab=2&amp;mod=t_djjs" data-stats="new_main.djjs" class="">等级加速</a></li>
+
+
+
+
+						</ul>
+					</li>
+					<li class="li-list-item">
+						<ul class="ul-list-item publish-sort ui-sortable">
+							<li class="list-item-title"><a href="//guanjia.qq.com/product/home/v12/?tab=3" data-stats="new_main.rjgli" class="">软件管理</a></li>
+							<li><a href="//guanjia.qq.com/product/home/v12/?tab=3&amp;mod=t_qxld" data-stats="new_main.qxld" class="new">权限雷达</a></li>
+							<li class="" style="position: relative; left: 0px; top: 0px;"><a href="//guanjia.qq.com/product/home/v12/?tab=3&amp;mod=t_rjxz" data-stats="new_main.rjxiaz" class="">软件下载</a></li><li class="" style="position: relative; left: 0px; top: 0px;"><a href="//guanjia.qq.com/product/home/v12/?tab=3&amp;mod=t_rjxiezai" data-stats="new_main.rjxiez" class="">软件卸载</a></li>
+							
+							<li><a href="//guanjia.qq.com/product/home/v12/?tab=3&amp;mod=t_gjbk" data-stats="new_main.gjbk" class="">工具宝库</a></li>
+
+
+
+
+
+						</ul>
+					</li>
+					<li class="li-list-item">
+						<ul class="ul-list-item publish-sort ui-sortable">
+							<li class="list-item-title"><a href="//guanjia.qq.com/product/home/v12/?tab=4" data-stats="new_main.yxzs" class="">游戏助手</a></li>
+							<li><a href="//guanjia.qq.com/product/home/v12/?tab=4&amp;mod=t_yxjs" data-stats="new_main.yxjs" class="">游戏加速</a></li>
+							<li><a href="//guanjia.qq.com/product/home/v12/?tab=4&amp;mod=t_syzs" data-stats="new_main.syzs" class="">手游助手</a></li>
+							<li><a href="//guanjia.qq.com/product/home/v12/?tab=4&amp;mod=t_jsq" data-stats="new_main.wyjsq" class="">网游加速器</a></li>
+
+
+
+
+
+
+						</ul>
+					</li>
+
+					<li class="li-list-item">
+						<ul class="ul-list-item publish-sort ui-sortable">
+							<li class="list-item-title"><a href="//guanjia.qq.com/product/home/v12/?tab=5" data-stats="new_main.bgzs" class="">办公助手</a></li>
+							<li><a href="//guanjia.qq.com/product/home/v12/?tab=5&amp;mod=t_zmzl" data-stats="new_main.zmzl" class="">桌面整理</a></li>
+							<li><a href="//guanjia.qq.com/product/home/v12/?tab=5&amp;mod=t_mjbz" data-stats="new_main.mjbz" class="">魔镜壁纸</a></li>
+							<li><a href="//guanjia.qq.com/product/home/v12/?tab=5&amp;mod=t_zjwd" data-stats="new_main.zjwd" class="">最近文档</a></li>
+
+
+
+
+
+
+						</ul>
+					</li><li class="li-list-item" id="cpjs-tog-li" style="display: none;">
+					<ul class="ul-list-item publish-sort ui-sortable">
+						<li class="list-item-title"><a href="//guanjia.qq.com/product/home/v12/?tab=6" data-stats="new_main.aqfh" class="">安全防护</a></li>
+						<li><a href="http://guanjia.qq.com/product/defense/" data-stats="new_main.aqfh" class="">安全防护</a></li>
+						<li><a href="http://guanjia.qq.com/product/manage/" data-stats="new_main.glxl" class="">管理效率</a></li>
+						<li><a href="http://guanjia.qq.com/product/speedup/introduce/" data-stats="new_main.dnjs" class="">电脑加速</a></li>
+						<li><a href="http://guanjia.qq.com/product/speedup/game/?ADTAG=web.gj_index.daohang_yxjs" data-stats="new_main.yxjs" class="">游戏加速</a></li>
+						<li><a href="http://guanjia.qq.com/speed.html" data-stats="new_main.djjs">等级加速</a></li>
+						<li><a href="http://guanjia.qq.com/product/zhb/safe/" data-stats="new_main.zhbh">帐号保护</a></li>
+						<li><a href="http://guanjia.qq.com/product/gameassitant/?ADTAG=web.gj_index.daohang_dnjx" data-stats="new_main.syzs" class="">手游助手</a></li>
+						<li><a href="http://guanjia.qq.com/product/zmzl/" data-stats="new_main.zmzl" class="">桌面整理</a></li>
+						<li><a href="http://guanjia.qq.com/product/zjwd/" data-stats="new_main.zjwd" class="">最近文档</a></li>
+					</ul>
+				</li>
+
+					<!-- <li><a href="http://guanjia.qq.com/product/yxhz/">游戏盒子</a></li> -->
+				</ul>
+			</li>
+			<li class="top-nav-li"><a data-stats="new_main.nav4" href="http://guanjia.qq.com/news/n0/" class="mutl">安全资讯<i></i></a>
+				<ul class="publish-sort ui-sortable">
+					
+<li><a href="https://guanjia.qq.com/news/n0/?ADTAG=media.innerenter.aqrd" data-stats="new_main.dh_aqrd" class="">安全热点</a></li><li class="" style="position: relative; left: 0px; top: 0px;"><a href="http://guanjia.qq.com/special/s0/" data-stats="new_main.dh_aqzt" class="">安全专题</a></li>
+					<li><a href="http://guanjia.qq.com/about/events/" data-stats="new_main.dh_gjdsj" class="">管家大事记</a></li>
+					<li><a href="http://slab.qq.com/?ADTAG=refer.flag.from.gjwebonline" target="_blank" rel="nofollow" data-stats="new_main.dh_lhsys" class="">联合实验室</a></li>
+				</ul>
+			</li>
+			<li class="top-nav-li"><a data-stats="new_main.nav6" href="http://guanjia.qq.com/online_server/" class="mutl">在线安全<i></i></a>
+				<ul class="publish-sort ui-sortable">
+					<li class="" style="position: relative; left: 0px; top: 0px;"><a href="https://guanjia.qq.com/online_server/?ADTAG=media.innerenter.aqgj" data-stats="new_main.dh_aqgj" class="">安全工具</a></li><li><a href="http://guanjia.qq.com/web_clinic/" data-stats="new_main.dh_dnzs" class="">电脑诊所</a></li>
+					<!--<li><a href="/learn/">安全学院</a></li>-->
+					<li><a href="http://guanjia.qq.com/online_server/lj/" data-stats="new_main.dh_ssjb" class="">申诉举报</a></li>
+					<li><a href="http://guanjia.qq.com/online_server/txwz/" data-stats="new_main.dh_zpxx" class="">诈骗信息查询</a></li>
+					<li><a href="http://guanjia.qq.com/online_server/webindex.html" data-stats="new_main.dh_wzaq" class="">网站安全检测</a></li>
+					<li><a href="http://guanjia.qq.com/online_server/pwd_safe.html" data-stats="new_main.dh_mmaq" class="">密码安全检测</a></li>
+					<li><a href="http://110.qq.com" target="_blank" rel="nofollow" data-stats="new_main.dh_aqfwpt" class="">帐号安全查询</a></li>
+					<!--<li><a href="/online_server/account.html">Gmail检测 </a></li>-->
+				</ul>
+			</li>
+			<li class="top-nav-li"><a data-stats="new_main.nav3" href="http://guanjia.qq.com/user/" class="mutl">活动中心<i class=""></i></a>
+				<ul class="publish-sort ui-sortable">
+					<li class="" style="position: relative; left: 0px; top: 0px;"><a href="https://guanjia.qq.com/user/?ADTAG=media.innerenter.gjtq" data-stats="new_main.dh_gjtq" class="">管家特权</a></li><li><a href="http://guanjia.qq.com/user/gift.html" data-stats="new_main.dh_dhlb" class="">兑换礼包</a></li>
+					<li><a href="http://guanjia.qq.com/user/earn.html" data-stats="new_main.dh_aqjb" class="">赚安全金币</a></li>
+					<li><a href="http://guanjia.qq.com/user/subject.html" data-stats="new_main.dh_zthd" class="">专题活动</a></li>
+				</ul>
+			</li>
+			<li class="top-nav-li"><a data-stats="new_main.nav5" href="http://bbs.guanjia.qq.com" target="_blank" class="last">论坛</a></li>
+		</ul>
+		<div class="top_tool">
+			<a class="tlink qiye" data-stats="new_main.qiye" href="https://s.tencent.com/?ADTAG=media.innerenter.gj.top&amp;utm_source=%E7%AE%A1%E5%AE%B6%E5%AE%98%E7%BD%91%E5%A4%B4%E9%83%A8%E5%AF%BC%E8%88%AA&amp;utm_medium=text&amp;utm_campaign=%E5%B9%BF%E5%91%8A%E8%90%A5%E9%94%80" target="_blank" rel="nofollow"></a>
+			<a class="tlink mobile" data-stats="new_main.mobile" href="http://m.qq.com/?ADTAG=media.innerenter.gj.top" target="_blank" rel="nofollow"></a>
+			<a class="tlink mac" data-stats="new_main.mac" href="https://lemon.qq.com/?ADTAG=media.innerenter.gj.top" target="_blank" rel="nofollow"></a>
+			<!-- <a class="tlink global" data-stats="new_main.global" href="http://www.pcmgr-global.com/?ADTAG=media.innerenter.gj.top" target="_blank"></a> -->
+			<div class="nologin" id="nologin"><a href="#" id="mgr_nav_login" class="">登录</a></div>
+			<div id="logined">
+				<a class="face" href="http://guanjia.qq.com/user/"><img id="face" onerror="this.src='//guanjia.qq.com/assets/images/main/header.png'" src="//guanjia.qq.com/assets/images/main/header.png" width="40" height="40"></a>
+				<div class="user_info">
+					<div class="arow"></div>
+					<div class="nick"><a class="logout" href="#" id="mgr_nav_logout">[退出]</a><span>你好,</span><a id="login_nickname" href="http://guanjia.qq.com/user/?ADTAG=pcmgr_official.top.icon.name"></a></div>
+					<a id="iconElm" class="icon_off" href="http://guanjia.qq.com/user/?ADTAG=pcmgr_official.top.icon.guan"></a>
+					<a id="safeElm" class="safe_lv0" href="http://guanjia.qq.com/user/level.html?ADTAG=pcmgr_official.top.icon.safe"></a>
+					<a id="safejb" class="safejb" href="http://guanjia.qq.com/user/earn.html?ADTAG=pcmgr_official.top.icon.gold"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+ 
+
+<div class="main_wrap">
+
+	
+	<div class="banner_wrap" style="">
+			<div id="banner" class="banner" style="height: 922.866px; display: block;">
+				<p class="banner-download" style="right:auto;left:52%;top:61%;">
+					<a href="https://pm.myapp.com/invc/xfspeed/qqpcmgr/download/QQPCDownload1600.exe" style="margin-left:0;" class="banner_download png24" data-stats="new_main.gjdownload_1600"></a>
+
+					<span class=""><em style="font-style:normal;" class="">最新正式版：V13.3</em> &nbsp;&nbsp;<a data-stats="new_main.more_info" href="https://guanjia.qq.com/product/update.html?ADTAG=web.gj_index.banner_ckxq" title="电脑管家勒索病毒防御" target="_blank" class="">查看详情</a> &nbsp;&nbsp;<a data-stats="new_main.beta" href="https://pm.myapp.com/invc/xfspeed/qqpcmgr/download/QQPCDownload140042.exe" title="" target="_blank" class="">最新体验版</a></span><span class="">
+
+			</span>
+				</p>
+				<ul class="ui-sortable publish-slider publish-copy">
+					<li style="z-index: 1; opacity: 0.998842;" class="on"><img src="//s.pc.qq.com/guanjia/images/f1/3b/f13b8de1adc0b1c98723598fcfcef680.jpg" class=""><p class="title">电脑管家 V13.3</p><p id="more-features" class="" style=""><br><span class="">全新视觉改版，探寻科技与未来的纯粹之美，净心守护您的电脑安全。
+</span><br><span class="">&nbsp;</span></p><p style="bottom: 46%;" class=""></p></li><li style="z-index: 1; opacity: 0.998842;" class=""><img src="//s.pc.qq.com/guanjia/images/d0/6b/d06b79df5abb19dae06f41b315dc3fcd.png" class=""><p class="title">电脑管家 V13.3</p><p id="more-features" class="" style=""><br><span class="">自主设置软件权限，拒绝软件烦人行为，专享纯净电脑体验。</span><br><span class="">&nbsp;</span></p><p style="bottom: 46%;" class=""></p></li><li style="z-index: 1; opacity: 0.998842;" class=""><img src="//s.pc.qq.com/guanjia/images/d5/44/d544f71fc82d0e1f0e08ad2e43b2d7dd.png" class=""><p class="title">电脑管家 V13.3</p><p id="more-features" class="" style=""><br><span class="">本次评选唯一获奖安全厂商，破互联网安全领域专利奖项纪录。</span><br><span class="">&nbsp;</span></p><p style="bottom: 46%;" class=""></p></li>
+
+
+
+					<!--
+				  <li style="z-index: 0;" class="">
+									  <img src="//pc1.gtimg.com/act/act/images/c3ea3592a0e208cb7093018fb668c976.png" class="publish-selected">
+									  <p class="title">电脑管家 V 12.3</p>
+									  <p style="bottom:56%" class="">荣获AV-C2016年度荣誉杀软！清除病毒测试中获金奖！连续5项A+!
+				  </p>
+				  <p style="bottom: 51%;" class="">
+				  </p>
+				  -->
+					<!--<div class="text"></div>-->
+					<!--				</li>-->
+
+
+
+
+				</ul>
+				<div class="b_dot" style="
+    bottom: 37px;
+    left: 50%;
+    margin-left: -37px;
+    position: absolute;
+    width: auto;
+    _bottom: 20px;
+">
+					<a href="javascript:void(0);" class="on"></a><a href="javascript:void(0);" class=""></a><a href="javascript:void(0);" class=""></a>
+
+
+
+					<!--
+				  <a class="" href="javascript:void(0);"></a>
+				  -->
+
+
+
+				</div></div>
+
+
+			
+
+		</div>
+	
+	
+	<div id="cert_blocks" class="">
+		<div class="cert_list">
+			<a href="http://guanjia.qq.com/about/certification.html#cert1" target="_blank" class=""><img src="//pc2.gtimg.com/guanjia/images/aa/ff/aaff3b5fd16791a8ff566f8ca26e4fc0.png" class=""></a>
+			<a href="http://guanjia.qq.com/about/certification.html#cert2" target="_blank" class=""><img src="//pc2.gtimg.com/guanjia/images/43/84/43845570e972e119addd7f2b5456f752.png" class=""></a>
+			<a href="http://guanjia.qq.com/about/certification.html#cert3" target="_blank" class="" title=""><img src="//pc2.gtimg.com/guanjia/images/36/81/368119ea79e3f0cb092a85b06ded3fc1.png" class=""></a>
+			<a href="http://guanjia.qq.com/about/certification.html#cert5" target="_blank" class="" title=""><img src="//pc2.gtimg.com/guanjia/images/2e/35/2e3528c622336b78a12ded50ae657b59.png" class=""></a>
+			<a href="http://guanjia.qq.com/about/certification.html#cert4" target="_blank" class="" title=""><img src="//pc2.gtimg.com/guanjia/images/9a/4f/9a4ffcf651d70d742cadd9b11bcd3fed.png" class=""></a>
+
+			<a target="_blank" href="http://guanjia.qq.com/about/certification.html#cert9" class="" title=""><img src="//pc2.gtimg.com/guanjia/images/2e/39/2e395197c1bda3fb3254bb322d068d5d.png" class=""></a>
+			<a href="http://guanjia.qq.com/about/certification.html#cert6" target="_blank" class="" title=""><img src="//pc2.gtimg.com/guanjia/images/58/70/58708806dbaf2d1f87cba072899eefa8.png" class=""></a>
+			<a target="_blank" href="http://guanjia.qq.com/about/certification.html#cert7" class="" title=""><img src="//pc2.gtimg.com/guanjia/images/c1/96/c196993dab8c5889335b83ac49a9e0c2.png" class=""></a>
+			<a target="_blank" href="http://guanjia.qq.com/about/certification.html#cert9" class="" title=""><img src="//pc2.gtimg.com/guanjia/images/0c/0a/0c0ac8b1d737849c98a22d99005ace15.png" class=""></a>
+			<a href="http://guanjia.qq.com/about/certification.html#cert8" target="_blank" class="" title=""><img src="//pc2.gtimg.com/guanjia/images/67/38/6738b6136a6e4e79b5176aaf06fa9553.png" class=""></a>
+		</div>
+		<div class="cert_txt">
+			 腾讯安全系列产品参与的国际认证与安全协会
+		</div>
+	</div>
+	
+
+	<div id="news_blocks">
+		<div class="news-block">
+			
+			<div class="news-title">安全热点</div>
+			<div class="news-image">
+				<a href="https://guanjia.qq.com/avast/305/index.html?ADTAG=innerenter.gj.xiao.safesmall" class="news-img-wrapper" title="" target="_blank" data-stats="new_main.news1_pic"><img src="//s.pc.qq.com/guanjia/images/32/e4/32e40f3163dbcf67cca8e082f9a4deef.jpg" alt="" class="">
+					<p class="">腾讯电脑管家荣获中国专利奖</p>
+				</a>
+			</div>
+			
+			<div class="news-list">
+	<ul>
+				<li><i></i><a href="/news/n2/2549.html" target="_blank" data-stats="new_main.news1_0">IE浏览器存高危漏洞 腾讯安全发布修复工具全面防御企业安全</a></li>
+				<li><i></i><a href="/news/n2/2541.html" target="_blank" data-stats="new_main.news1_1">腾讯发布《电信网络诈骗治理研究报告（2019上半年）》，揭秘网络诈骗七大新特征</a></li>
+				<li><i></i><a href="/news/n2/2540.html" target="_blank" data-stats="new_main.news1_2">腾讯、京东、快手、虎牙携手反诈，探讨网络平台诈骗治理经验</a></li>
+				<li><i></i><a href="/news/n2/2539.html" target="_blank" data-stats="new_main.news1_3">腾讯推出一键举报“微反诈小程序” 倡导用户加入反诈行动派 </a></li>
+			</ul>
+	<a href="https://guanjia.qq.com/news/n2/" target="_blank" class="more-news"  data-stats="new_main.news1_more">查看更多<i></i></a>
+</div>
+		</div>
+		<div class="news-block">
+			
+			<div class="news-title">病毒木马</div>
+			<div class="news-image">
+				<a href="http://guanjia.qq.com/avast/383/index.html?ADTAG=innerenter.gj_shouye" class="news-img-wrapper" data-stats="new_main.news2_pic" title="" target="_blank"><img src="//s.pc.qq.com/guanjia/images/71/5a/715ad167f20200224910543c3b2af700.jpg" alt="" class="">
+					<p class="">RDS漏洞风险升级，攻击代码被公布</p>
+				</a>
+			</div>
+			
+			<div class="news-list">
+	<ul>
+				<li><i></i><a href="/news/n5/2550.html" target="_blank" data-stats="new_main.news2_0">微软发布10月安全更新，修补多个核心组件，腾讯御界支持检测</a></li>
+				<li><i></i><a href="/news/n5/2548.html" target="_blank" data-stats="new_main.news2_1">CVE-2019-1367 | 脚本引擎内存损坏漏洞预警更新</a></li>
+				<li><i></i><a href="/news/n3/2547.html" target="_blank" data-stats="new_main.news2_2">“流量宝”利用漏洞传播紫狐病毒，中毒电脑被安装流氓软件</a></li>
+				<li><i></i><a href="/news/n3/2546.html" target="_blank" data-stats="new_main.news2_3">腾讯安全威胁感知系统截获网银大盗木马</a></li>
+			</ul>
+	<a href="https://guanjia.qq.com/news/n3/" target="_blank" class="more-news"  data-stats="new_main.news2_more">查看更多<i></i></a>
+</div>
+		</div>
+		
+		<div class="news-block">
+			<div class="news-title">最新活动</div>
+			<div class="news-image">
+				<a href="https://guanjia.qq.com/fangpian/index.html?ADTAG=innerenter.gj.shouye" class="news-img-wrapper" title="" target="_blank" data-stats="new_main.news3_pic"><img src="//pc1.gtimg.com/guanjia/images/7c/00/7c00be52544159a2db94c377dc375741.png" alt="" class="">
+					<p class="">管家来支招，陪你安全度过小长假</p>
+				</a>
+			</div>
+			<div class="news-list">
+				<ul class="publish-sort ui-sortable">
+					
+					<li class="" style="position: relative; left: 0px; top: 0px;"><i class=""></i><a href="https://guanjia.qq.com/act/cop/201908game/?ADTAG=media.innerenter.gj_user.gw" target="_blank" class="" data-stats="new_main.news3_0">电脑管家"头号玩家"福利活动</a></li><li class="" style="position: relative; left: 0px; top: 0px;"><i></i><a href="http://guanjia.qq.com/act/brand/201806wd/index.html?ADTAG=media.innerenter.gwshouye" target="_blank" class="" data-stats="new_main.news3_1">文档守护者3.0上线，青春无惧丢失</a></li><li class="" style="position: relative; left: 0px; top: 0px;"><i></i><a href="http://guanjia.qq.com/act/brand/201808yfx/?ADTAG=media.innerenter.gwshouye" target="_blank" class="" data-stats="new_main.news3_2">管家提示勿忽视，电脑安全有保障</a></li><li class="" style="position: relative; left: 0px; top: 0px;"><i></i><a href="https://guanjia.qq.com/product/wallpaper/?ADTAG=innerenter.gj.web" target="_blank" class="" data-stats="new_main.news3_3">非物质文化遗产——24节气壁纸全集</a></li>
+					
+					
+				</ul>
+				<a href="https://guanjia.qq.com/user/subject.html?tab=pinpai" target="_blank" class="more-news" data-stats="new_main.news3_more">查看更多<i class=""></i></a>
+			</div>
+		</div>
+		
+		
+		<div class="news-block">
+			<div class="news-title">产品动态</div>
+			<div class="news-image">
+				<a href="https://guanjia.qq.com/product/qxld/?ADTAG=media.innerenter.guanwang.banner" class="news-img-wrapper" data-stats="new_main.news4_pic" title="" target="_blank"><img src="//pc1.gtimg.com/guanjia/images/16/49/1649a73992c17e6567b99f8417dd33f7.png" alt="" class="">
+					<p class="">用权限雷达拒绝弹窗，眼不见心不烦</p>
+				</a>
+				<span class="news-desc-1" style="color: rgb(132, 132, 132);"></span>
+				<span class="news-desc-2"></span>
+				<a href="https://pm.myapp.com/invc/xfspeed/qqpcmgr/download/QQPCDownload1655.exe" class="news-download" data-stats="new_main.inner_download" style="
+    top: 79px!important;
+">下载体验</a>
+			</div>
+			<div class="news-list">
+				<ul class="publish-sort ui-sortable">
+					<li class="" style="position: relative; left: 0px; top: 0px;"><i></i><a href="https://guanjia.qq.com/product/win10update/?ADTAG=innerenter.web.index.banner" target="_blank" class="" data-stats="new_main.news4_1">Win10升级工具，全面优化升级体验</a></li><li class="" style="position: relative; left: 0px; top: 0px;"><i class=""></i><a href="https://guanjia.qq.com/avast/283/index.html?ADTAG=innerenter.web.index.banner" target="_blank" class="" data-stats="new_main.news4_2">管家急救盘使用指南</a></li><li class="" style="position: relative; left: 0px; top: 0px;"><i class=""></i><a href="https://bbs.guanjia.qq.com/thread-453301-1-1.html " target="_blank" class="" data-stats="new_main.news4_0">电脑管家12.14正式版下载入口</a></li><li class="" style="position: relative; left: 0px; top: 0px;"><i></i><a href="https://www.pcmgr-global.com/" target="_blank" class="" data-stats="new_main.news4_3">腾讯电脑管家英文版入口</a></li>
+					
+					
+					
+				</ul>
+				<a href="https://guanjia.qq.com/user/subject.html?tab=blog" target="_blank" class="more-news" data-stats="new_main.news4_more">查看更多<i class=""></i></a>
+			</div>
+		</div>
+		
+	</div>
+
+
+	
+	<div class="func-list">
+		<div class="func-title">
+			<i class=""></i>产品功能-安全防护
+		</div>
+		<div class="func-card">
+			<a href="//guanjia.qq.com/product/home/v12/?tab=1&amp;mod=t_sytj" target="_blank" data-stats="new_main.icon.sytj" title="">
+            <img src="//s.pc.qq.com/pc/images/df/6c/df6c6bf7b7561395de723286387af694.png" alt="" class="bg-icon">
+			<img src="//s.pc.qq.com/guanjia/images/1c/cf/1ccf3334e7a5092934e96fe0fb983bf9.png" alt="" class="func-icon">
+			<p class="func-name">首页体检</p>
+			<p class="func-desc">一键进行电脑全面检测，远离安全风险，轻松保持电脑健康</p>
+            </a>
+		</div>
+		<div class="func-card">
+			<a href="//guanjia.qq.com/product/home/v12/?tab=1&amp;mod=t_bdcs" target="_blank" data-stats="new_main.icon.bdcs" title="">
+			<img src="//s.pc.qq.com/pc/images/df/6c/df6c6bf7b7561395de723286387af694.png" alt="" class="bg-icon">
+			<img src="//s.pc.qq.com/guanjia/images/09/ec/09ec6123b95bae5a3d11c507bc84910e.png" alt="" class="func-icon">
+			<p class="func-name">病毒查杀</p>
+			<p class="func-desc">自研杀毒引擎，能力领先国际屡获国际评测认证，荣耀加冕</p>
+            </a>
+		</div>
+		<div class="func-card">
+			<a href="//guanjia.qq.com/product/home/v12/?tab=1&amp;mod=t_ldxf" target="_blank" data-stats="new_main.icon.ldxf" title="">
+			<img src="//s.pc.qq.com/pc/images/df/6c/df6c6bf7b7561395de723286387af694.png" alt="" class="bg-icon">
+			<img src="//s.pc.qq.com/guanjia/images/2a/35/2a357752d595b99014b4dcc14140bfc7.png" alt="" class="func-icon">
+			<p class="func-name">漏洞修复</p>
+			<p class="func-desc">专业检测系统漏洞，提供及时有效的修复方案</p>
+            </a>
+		</div>
+		<div class="func-card">
+			<a href="//guanjia.qq.com/product/home/v12/?tab=1&amp;mod=t_zdfy" target="_blank" data-stats="new_main.icon.zdfy" title="">
+			<img src="//s.pc.qq.com/pc/images/df/6c/df6c6bf7b7561395de723286387af694.png" alt="" class="bg-icon">
+			<img src="//s.pc.qq.com/guanjia/images/5f/53/5f539d53817ce276c76108a41a581fb3.png" alt="" class="func-icon">
+			<p class="func-name">主动防御</p>
+			<p class="func-desc">17层防护，全面监控系统风险，彻底拦截恶意攻击</p>
+            </a>
+		</div>
+		<div class="func-card">
+			<a href="//guanjia.qq.com/product/home/v12/?tab=1&amp;mod=t_lsbd" target="_blank" data-stats="new_main.icon.lsbd" title="">
+			<img src="//s.pc.qq.com/pc/images/df/6c/df6c6bf7b7561395de723286387af694.png" alt="" class="bg-icon">
+			<img src="//s.pc.qq.com/guanjia/images/18/ef/18ef31d701bf95f753a4c598f4e29258.png" alt="" class="func-icon">
+			<p class="func-name">勒索病毒防御</p>
+			<p class="func-desc">全网病毒监控，从源头拦截勒索病毒，保护用户电脑安全</p>
+            </a>
+		</div>
+		<div class="func-card">
+			<a href="//guanjia.qq.com/product/home/v12/?tab=1&amp;mod=t_xtjjx" target="_blank" data-stats="new_main.icon.xtjjx" title="">
+			<img src="//s.pc.qq.com/pc/images/df/6c/df6c6bf7b7561395de723286387af694.png" alt="" class="bg-icon">
+			<img src="//s.pc.qq.com/guanjia/images/2a/dc/2adc9d46e44a34b11eed146f48655831.png" alt="" class="func-icon">
+			<p class="func-name">系统急救箱</p>
+			<p class="func-desc">深入系统底层，全方位深度扫描，彻底查杀顽固病毒</p>
+            </a>
+		</div>
+		<div class="clear"></div>
+	</div>
+	
+	
+	<div class="func-list">
+		<div class="func-title">
+			<i></i>产品功能-管理效率
+		</div>
+		<div class="manage-card" rel="http://guanjia.qq.com/product/home/v12/#page3">
+            <a href="//guanjia.qq.com/product/home/v12/?tab=2&amp;mod=t_ljql" target="_blank" data-stats="new_main.icon.ljql" title="">
+			<img src="//s.pc.qq.com/pc/images/cd/a6/cda62fe1def57cb8c0fd40ab125007ee.png" alt="" class="bg-icon">
+			<img src="//s.pc.qq.com/pc/images/b1/1b/b11b689b9c7c1439e53d9f5dc5506c23.png" alt="" class="manage-icon">
+			<p class="manage-name">垃圾清理</p>
+			<p class="manage-desc">极致清理，流畅如新</p>
+            </a>
+		</div>
+		<div class="manage-card" rel="http://guanjia.qq.com/product/home/v12/#page4">
+            <a href="//guanjia.qq.com/product/home/v12/?tab=2&amp;mod=t_dnjs" target="_blank" data-stats="new_main.icon.dnjs" title="">        
+			<img src="//s.pc.qq.com/pc/images/cd/a6/cda62fe1def57cb8c0fd40ab125007ee.png" alt="" class="bg-icon">
+			<img src="//s.pc.qq.com/pc/images/36/e3/36e391ef0a353d803dacc29d21241c86.png" alt="" class="manage-icon">
+			<p class="manage-name">电脑加速</p>
+			<p class="manage-desc">一键加速，游戏快人一步</p>
+            </a>
+		</div>
+		<div class="manage-card" rel="http://guanjia.qq.com/product/home/v12/#page5">
+            <a href="//guanjia.qq.com/product/home/v12/?tab=3" target="_blank" data-stats="new_main.icon.rjgl" title="">                
+			<img src="//s.pc.qq.com/pc/images/cd/a6/cda62fe1def57cb8c0fd40ab125007ee.png" alt="" class="bg-icon">
+			<img src="//s.pc.qq.com/pc/images/7d/67/7d67c836de74819e23a7a578a72f4bb7.png" alt="" class="manage-icon">
+			<p class="manage-name">软件管理</p>
+			<p class="manage-desc">软件升级、卸载、拦截轻松搞定</p>
+            </a>
+		</div>
+		<div class="manage-card" rel="http://guanjia.qq.com/product/home/v12/#page6">
+            <a href="//guanjia.qq.com/product/home/v12/?tab=3&amp;mod=t_gjbk" target="_blank" data-stats="new_main.icon.gjx" title="">        
+			<img src="//s.pc.qq.com/pc/images/cd/a6/cda62fe1def57cb8c0fd40ab125007ee.png" alt="" class="bg-icon">
+			<img src="//s.pc.qq.com/pc/images/cb/c3/cbc32a995c04fb2b491b8788465b2681.png" alt="" class="manage-icon">
+			<p class="manage-name">工具箱</p>
+			<p class="manage-desc">集合众多电脑实用工具</p>
+            </a>
+		</div>
+		<div class="manage-card" rel="http://guanjia.qq.com/product/home/v12/#page7">
+            <a href="//guanjia.qq.com/product/home/v12/?tab=5&amp;mod=t_zmzl" target="_blank" data-stats="new_main.icon.zmzl" title="">        
+			<img src="//s.pc.qq.com/pc/images/cd/a6/cda62fe1def57cb8c0fd40ab125007ee.png" alt="" class="bg-icon">
+			<img src="//s.pc.qq.com/pc/images/89/30/89303c4d73a7c02a44dc6d40b7e8d7aa.png" alt="" class="manage-icon">
+			<p class="manage-name">桌面整理</p>
+			<p class="manage-desc">一键整理，桌面井井有条</p>
+            </a>
+		</div>
+		<div class="manage-card" rel="http://guanjia.qq.com/product/home/v12/#page8">
+            <a href="//guanjia.qq.com/product/home/v12/?tab=4&amp;mod=t_syzs" target="_blank" data-stats="new_main.icon.syzs" title="">        
+			<img src="//s.pc.qq.com/pc/images/cd/a6/cda62fe1def57cb8c0fd40ab125007ee.png" alt="" class="bg-icon">
+			<img src="//s.pc.qq.com/pc/images/99/d0/99d0eb1b2062c428c30a69ef93c5d88b.png" alt="" class="manage-icon">
+			<p class="manage-name">手游助手</p>
+			<p class="manage-desc">电脑玩手游，大屏更爽快</p>
+            </a>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	
+
+	
+
+	<div class="news zsnews">
+	<div class="title"><a title=" " href="http://guanjia.qq.com/web_clinic/?ADTAG=media.innerenter.gj.top" class=""><i></i>电脑诊所</a>
+	</div>
+	<ul class="ui-sortable">
+		        	<li class=""><a target="_blank" href="/web_clinic/s7/1705.html">【系统问题】管理软件的使用权限</a>
+                	<li class=""><a target="_blank" href="/web_clinic/s8/1708.html">【其他问题】更改屏幕上的颜色</a>
+                	<li class=""><a target="_blank" href="/web_clinic/s7/1732.html">【系统问题】资源管理器一直重启</a>
+                	<li class=""><a target="_blank" href="/web_clinic/s8/1731.html">【其他问题】excel 快速插入</a>
+                	<li class=""><a target="_blank" href="/web_clinic/s7/1730.html">【系统问题】新建菜单无新建word文档</a>
+                	<li class=""><a target="_blank" href="/web_clinic/s8/1729.html">【其他问题】照片应用故障</a>
+                	<li class=""><a target="_blank" href="/web_clinic/s7/1728.html">【系统问题】文件被占用无法操作</a>
+                	<li class=""><a target="_blank" href="/web_clinic/s7/1727.html">【系统问题】获取dump文件</a>
+        	
+		</ul>
+</div>
+
+	<div class="main-gray">
+		
+<div class="hzhb"><h3 class="">合作伙伴 </h3>
+		<ul class="ui-sortable">
+			<li class="on"><img loop="1" src="//pc1.gtimg.com/act/act/images/9740a782c4cfe45829470b91e6bb84b7.png" start="fileopen" class=""></li>
+			<li><img loop="1" src="//pc1.gtimg.com/act/act/images/694dbde5caf6786c077e67eb68a6a3ca.png" start="fileopen" class=""></li>
+			<li><img loop="1" src="//pc1.gtimg.com/act/act/images/655e0f14766f889645266aa0db92b80c.png" start="fileopen" class=""></li>
+			<li class="on"><img loop="1" src="//pc1.gtimg.com/act/act/images/b71cef3b66cb357a7bcefad72321bdf1.png" start="fileopen" class=""></li>
+			<li><img loop="1" src="//pc1.gtimg.com/act/act/images/e6dbc6ae846b876fbde6c722c9b8c3f0.png" start="fileopen" class=""></li>
+			<li><img loop="1" src="//s.pc.qq.com/pc/images/21/35/213530567d63b50a31796ec12205f0f1.png" start="fileopen" class=""></li>
+			<li class="on"><img loop="1" src="//pc1.gtimg.com/act/act/images/a23db98824d6f8873e70441c073a0dca.png" start="fileopen" class=""></li>
+			<li><img loop="1" src="//s.pc.qq.com/pc/images/26/d3/26d3457e3a6d9129bd3ff39c3d7d8722.png" start="fileopen" class=""></li><a href="http://guanjia.qq.com/market.html" target="_blank" class="">合作申请&gt;&gt;</a>
+		</ul>
+	</div>
+	
+
+	</div>
+
+
+</div>
+<script id="refer-conf">var __referConf__ = [{"adtag":"media.buy.baidu.79438","sid":79438,"norefer":true},{"adtag":"media.buy.baidu.1471","sid":1471,"norefer":true},{"adtag":"client.pcmgr.xiezaiwanliu","sid":1729,"norefer":true}]</script>
+<script src="//s.pc.qq.com/guanjia/js/tj.js"></script>
+<script type="text/javascript" src="assets/js/GjComm.js?_t=20190722"></script>
+<script type="text/javascript" src="assets/js/GjReferer.js?_t=20181025"></script>
+<script src="assets/js/index.js"></script>
+<!--[if IE 6]>
+<script>
+	alert('您的浏览器不能支持页面正常显示，建议您升级浏览器。\n升级方法：打开电脑管家--软件管理--升级')
+</script>
+<![endif]-->
+<script src="assets/js/baidutongji.js"></script>
+</body>
+</html>

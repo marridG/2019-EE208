@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>饮水思源</title>
+	<link rel="stylesheet" href="css/main.css" type="text/css" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/slides.min.jquery.js"></script>
+	<script type="text/javascript" src="js/jquery_cookie.js"></script>
+	<script type="text/javascript" src="js/autologin.js"></script>
+	<script type="text/javascript">
+		var entryPics = [
+			//进站图片上传至index目录，按以下格式在此处添加："图片名称/起始日期/结束日期/板面", 注意UTF-8编码
+			"1027outdoor.jpg/1027/1104/outdoor"];
+		
+		var today = new Date();
+		var year = today.getFullYear();
+		var mon = today.getMonth() + 1;
+		var day = today.getDate();
+		if (day < 10) day = "0" + day;
+		var sec = today.getSeconds();
+		var time = parseInt(mon.toString() + day.toString());
+		
+		var todayPics = [];
+		var todayUrls = [];
+		for (var i = 0; i < entryPics.length; i++) {
+			var pic = entryPics[i].split("/");
+			var picStart = parseInt(pic[1],10);
+			var picEnd = parseInt(pic[2],10);
+			if (picStart <= picEnd) {
+				if (picStart <= time && time <= picEnd) {
+					todayPics.push(pic[0]);
+					todayUrls.push("?index=bbsdoc,board," + pic[3] + ".html");
+				}
+			} else {
+				if (picStart <= time || time <= picEnd) {
+					todayPics.push(pic[0]);
+					todayUrls.push("?index=bbsdoc,board," + pic[3] + ".html");
+				}
+			}
+		}
+		
+		var startPic = 1;
+		//进站少于或等于2张时，添加2张默认进站
+		if (todayPics.length <= 1) {
+			todayPics.push("default1.jpg");
+			todayUrls.push("");
+			todayPics.push("default2.jpg");
+			todayUrls.push("");
+			todayPics.push("default3.jpg");
+			todayUrls.push("");
+		} else { startPic = sec%todayPics.length + 1; }
+		
+		
+		var picstr = '';
+		for (var i = 0; i < todayPics.length; i++) {
+			picstr += "<div><a href='/frame2.html" + todayUrls[i] + "'><img src='" + todayPics[i] + "' alt='entrypic' /></a></div>";
+		}
+		//临时加,适用于非板面地址, 如投票--ctll
+		
+		//picstr += "<div><a href='/bbsvote?board=sysop&opendate=1353861824'><img src='1211toupiao.jpg' alt='entrypic' /></a></div>";
+		
+		function submitForm() {
+			$('#Submit1').click();
+		}
+		function BindEnter(obj) {
+			if (!window.opera) {
+				if (obj.keyCode == 13) {
+					submitform_autologin();
+					obj.returnValue = false;
+				}
+			}
+		}
+
+
+		$(function() {
+			$('#slides_container').html(picstr);
+			$('#Text1').focus();
+			autologin_onload();
+			$('#slides').slides({
+				preload: true,
+				effect: 'fade',
+				crossfade: true,
+				fadeSpeed: 600,
+				preloadImage: 'img/loading.gif',
+				play: 6000,
+				pause: 2500,
+				hoverPause: true,
+				start: startPic
+			});
+		});
+	</script>
+	<script type="text/javascript">
+
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-25324980-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+	</script>
+
+</head>
+<body onkeydown="BindEnter(event)">
+	<div class="container">
+		<div class="frame"></div>
+		<div id="slides">
+			<div class="slides_container" id="slides_container"></div>
+		</div>
+		<div class="login">
+			<form action="/bbslogin" target="_top" method="post" name="form1" id="Form1" class="inline" >
+				<label for="Text1">账号:</label>
+				<input  type="text" name="id" maxlength="12" size="12" class="text" id="Text1" />
+				<label for="Password1">密码:</label>
+				<input type="password" name="pw" maxlength="12" size="8" class="password" id="Password1" />
+				<input type="checkbox" id="Checkbox1"/>
+				<label for="Checkbox1">记住密码</label>
+				<input type="submit" name="submit" class="button" value="login" id="Submit1" />
+			</form>
+			<ul class="inline" id="button_style">
+				<li><a href="javascript: submitform_autologin()">登录进站</a></li>
+				<li><a href="/bbslogin?id=guest">匿名登录</a></li>
+				<li><a href="/bbsreg" target="_blank">新用户注册</a></li>
+			</ul>
+		</div>
+		<div class="inlineblock">
+			<div class="info">
+				<div class="tip">
+					<div class="left">[ 站长提示 ]</div>
+					<ul class="inline">
+						<li><a href="telnet:bbs.sjtu.edu.cn">Telnet 登录</a>（下载<a target="_blank" href="/file/bbs/CTerm-3.3.52.zip"> Cterm  </a>或者<a target="_blank" href="/file/bbs/fterm-current.rar"> Fterm</a>）</li>
+						<li><a href="/file/bbs/telnet_help/telnet_help.htm"> Telnet 入门手册 </a></li>
+						<li><a href="bbsweb_review/index23.htm">水源Web进站回顾</a></li>
+					</ul>
+				</div>
+				<div class="tip">
+					<div class="left">[ 推荐链接 ]</div>
+					<ul class="inline">
+						<li><a href="http://www.sjtu.edu.cn/">上海交通大学</a></li>
+						<li><a href="/file/bbs/sywj1.pdf">水源文集 1</a></li>
+						<li><a href="/file/bbs/sywj2/Digest2.htm">水源文集 2</a></li>
+						<li><a href="/file/bbs/sywj3/Digest3.htm">水源文集 3</a></li>
+						<li><a href="/file/bbs/sywj4/Digest4.htm">水源文集 4</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="bottomline"></div>
+		<div class="footer">
+			SJTUBBS &copy; 1996-<script type="text/javascript">document.write(year);</script> <a href="mailto:bbs@sjtu.edu.cn">联系本站</a> 版权所有 上海交通大学BBS饮水思源站 沪ICP备020861
+		</div>
+	</div>
+</body>
+</html>
