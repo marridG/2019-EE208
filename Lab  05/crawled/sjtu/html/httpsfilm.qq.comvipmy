@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<!--[if lte IE 6 ]> <html class="ie ie6 lte_ie7 lte_ie8" lang="zh-CN"> <![endif]-->
+<!--[if IE 7 ]> <html class="ie ie7 lte_ie7 lte_ie8" lang="zh-CN"> <![endif]-->
+<!--[if IE 8 ]> <html class="ie ie8 lte_ie8" lang="zh-CN"> <![endif]-->
+<!--[if IE 9 ]> <html class="ie ie9" lang="zh-CN"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="zh-CN"> <!--<![endif]-->
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <base href="//v.qq.com">
+	<title>个人中心-腾讯视频VIP会员-腾讯视频</title>
+	<meta name="keywords" content="腾讯视频VIP会员,腾讯视频VIP,腾讯视频会员官网,腾讯视频会员,腾讯会员,好莱坞影院,超级影视SVIP,VIP会员,乡村爱情,因为遇见你,放开我北鼻,微微一笑很倾城,鬼吹灯,吐槽大会,王牌对王牌,全职高手" />
+	<meta name="description" content="腾讯视频VIP会员是腾讯视频推出的会员增值服务，畅享超过万部付费电影资源，24小时不限量享受高品质付费内容观看。囊括国内所有院线新媒体版权、好莱坞六大电影公司作品、HBO优质自制剧及原创电影、全球9大厂牌经典纪录片、国漫一线及上百场主流演唱会及音乐节直播。同时专享QQ图标点亮、蓝光1080P、缓存视频加速、明星弹幕及皮肤等产品特权，更有影视、游戏、生活、服务等10余项等级福利，定期举办线上线下丰富活动，为会员提供极致的娱乐体验。" />
+	<script>window.mobilePageUrl = '//film.qq.com/weixin/user_center.html'</script>
+    <script>
+	if ((/Android|webOS|iPhone|iPod|BlackBerry/i).test(navigator.userAgent)) {
+		var search = window.location.search;
+	    var i, l, parameters, param, toPc = false;
+	    if (search.length > 1) {
+	        search = search.substring(1);
+	        parameters = search.split('&');
+	        for (i = 0, l = parameters.length; i < l; i++) {
+	            param = parameters[i].split('=');
+	            if (param.length > 0 && param[0] === 'to_pc') {
+	                toPc = true;
+	            }
+	        }
+	    }
+
+		if (!toPc && window.mobilePageUrl) {
+			window.location.href = window.mobilePageUrl;
+		}
+    }
+</script>
+	<link rel="shortcut icon" href="//v.qq.com/favicon.ico" />
+	
+
+	<link rel="stylesheet" href="//vm.gtimg.cn/c/=/tencentvideo/vstyle/web/v4/style/base.css,user/user_base.css,user/user_vip.css" />
+	<link rel="stylesheet" href="http://vm.gtimg.cn/tencentvideo/vstyle/web/common/style/css/x_dialog.css" />
+	<style>
+		.site_container .hide_mod{position:absolute;width:0;height:0;overflow:hidden;padding:0;margin-bottom:0!important;zoom:1;visibility: hidden;}
+		.border_red{border-color: #c20!important;}
+		.btn_small:hover {
+			
+		}
+		.icon_fly{width:55px;position:fixed;right:20px;bottom:4px;z-index:100000000;text-align:center}
+	    .icon_fly_link{display:block;margin:0 auto;margin-bottom:22px}
+	    .icon_fly_link span{display:block;margin:0 auto;text-align:center;margin-top:6px}
+	    .icon_fly_link .icon_lg{width:30px;height:30px;display:block;border:12px solid #F2F2F2;background-color:#F2F2F2;border-radius:100%;overflow:hidden;color:#999}
+	    .icon_fly_link:hover .icon_lg{background-color:#fd9229;color:#fff!important;border-color:#fd9229}
+	    .lte_ie8 .icon_fly_link:hover .icon_backup,.lte_ie8 .icon_fly_link:hover .icon_backup_lg{background-position:0 -90px}
+	    .lte_ie8 .icon_fly_link:hover .icon_followqr,.lte_ie8 .icon_fly_link:hover .icon_followqr_lg{background-position:-31px -92px}
+	    .lte_ie8 .icon_fly_link:hover .icon_feedback,.lte_ie8 .icon_fly_link:hover .icon_feedback_lg{background-position:-60px -90px}
+	    .icon_fly_link:hover{color:#fd9229!important}
+	    .icon_fly_link:hover span{color:#fd9229}
+	    .icon_fly .qr_pic{position:fixed;display:block;width:84px;height:84px;padding:3px;background:#fff;right:92px;bottom:134px;border-radius:5px}
+	    .icon_fly .qr_pic:after{content:'';display:block;position:fixed;bottom:173px;right:87px;border-left:5px solid #fff;border-top:5px solid transparent;border-bottom:5px solid transparent}
+	    .icon_fly .qr_pic img{display:block;width:100%;height:100%}
+	</style>
+	
+	<script type="text/javascript">
+	try{
+		document.domain="qq.com";
+	}catch(e){}
+	
+	function picerr(obj,i){
+		obj.onerror=null;
+		obj.src="//imgcache.gtimg.cn/tencentvideo_v1/vstyle/web/v3/style/images/nopic/"+(i||1)+".jpg";
+	}
+	var d0 = new Date();
+	var timePoints=new Array();
+	function _sreport(){
+		if(Math.random()<0.1){
+			var s = [];
+			for(var i=0;i<timePoints.length;i++)
+			if(!!timePoints[i]){
+				s.push((i+1)+"="+(timePoints[i]-d0));
+			}
+			var url = "http://isdspeed.qq.com/cgi-bin/r.cgi?flag1=1422&flag2=202&flag3=23&"+s.join("&");
+			window._speed_img = new Image();
+			window._speed_img.src=url;
+		}
+	}
+	</script>
+</head>
+
+<body class="page_user_center">
+
+<!--头部 开始-->
+<div class="site_common_head">
+    <div class="site_head" id="new_vs_header">
+    <svg class="txp_svg_sprite txp_svg_sprite_head" display="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="svg_icon_vip_flat" viewBox="0 0 20 20">
+            <path d="M18.65 8.855l-3.507 3.798.572 5.185-.019.015c.009.054.033.104.033.16a.991.991 0 0 1-1.367.912l-.015.012L9.5 16.774l-4.805 2.115-.011-.007a.986.986 0 0 1-.448.118.992.992 0 0 1-.997-.986c0-.041.019-.076.023-.115l-.012-.009.188-1.626a20.747 20.747 0 0 0 2.1-.681l-.089.764L9.5 14.578l3.996 1.766-.456-4.417 2.979-3.099-1.231-.25c.444-.591.856-1.205 1.237-1.842l2.193.417.008.025c.44.102.774.475.774.942 0 .297-.14.554-.35.735zm-2.557-4.417C13.523 9.924 8.525 14 2.481 15.391a.978.978 0 0 1-.481.14 1 1 0 0 1-1-1c0-.473.335-.851.777-.955l-.009-.039a17.968 17.968 0 0 0 12.494-9.905.997.997 0 0 1 1.926.368c0 .156-.043.3-.107.432l.012.006zM9.5 4.059L7.365 7.932l-4.353.833 2.365 2.533c-.65.314-1.319.594-2.012.824L.352 8.857A.968.968 0 0 1 0 8.12c0-.443.3-.804.707-.928l.011-.044 5.333-.997 2.537-4.618h.041A.986.986 0 0 1 9.5 1c.378 0 .696.217.865.525h.038l1.954 3.552a16.898 16.898 0 0 1-1.316 1.822L9.5 4.059z"></path>
+        </symbol>
+        <symbol id="svg_icon_film_lg" viewBox="0 0 36 36">
+            <path d="M30 18.5a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0zm-6 0a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0zM18.5 7a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 8a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM7 18.5a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0zm6 0a1.5 1.5 0 1 0-2.999-.001A1.5 1.5 0 0 0 13 18.532zM147.586 9.641a1.476 1.476 0 0 1-1.133.547 1.5 1.5 0 0 1-1.5-1.5c0-.331.128-.621.31-.869l-.012-.009A12.442 12.442 0 0 0 31 18.5C31 11.596 25.403 6 18.5 6 11.596 6 6 11.596 6 18.5 6 25.403 11.596 31 18.5 31c.183 0 .36-.02.541-.027L19 31l.182.064c.105-.023.205-.064.318-.064h13a1.5 1.5 0 1 1 0 3h-13c-.07 0-.13-.031-.198-.04-.267.014-.531.04-.802.04C9.939 34 3 27.06 3 18.5S9.939 3 18.5 3C27.06 3 34 9.939 34 18.5c0 3.656-1.273 7.01-3.391 9.66l-.023-.019z"></path>
+        </symbol>
+        <symbol id="svg_icon_noad_lg" viewBox="0 0 36 36">
+            <path d="M30.699 28.046l-.01-.008c-.275.341-.678.572-1.15.572a1.5 1.5 0 0 1-1.5-1.499c0-.355.142-.667.348-.924l-.024-.019A12.411 12.411 0 0 0 31 18.515c0-6.896-5.597-12.487-12.5-12.487-1.772 0-3.45.383-4.976 1.051L26.82 29.887c.402.707.164 1.61-.534 2.018-.039.022-.082.023-.122.042A15.4 15.4 0 0 1 18.5 34C9.939 34 3 27.067 3 18.515c0-3.657 1.276-7.012 3.398-9.661.007-.007.011-.017.018-.024l.004-.005.001.001a1.5 1.5 0 0 1 2.553 1.066c0 .389-.157.735-.4 1.001l.023.022A12.41 12.41 0 0 0 6 18.515c0 6.896 5.596 12.487 12.5 12.487 1.772 0 3.449-.383 4.974-1.05L10.181 7.15a1.488 1.488 0 0 1 .534-2.018c.022-.013.047-.012.07-.024a15.408 15.408 0 0 1 7.716-2.078c8.56 0 15.5 6.933 15.5 15.484a15.402 15.402 0 0 1-3.302 9.532zM14 22.5a1.5 1.5 0 0 1-1.5 1.5h-.364l-.136.5a1.5 1.5 0 0 1-3 0l3-11c0-.201.042-.391.114-.565l5.136 8.813L18 24.5a1.5 1.5 0 0 1-3 0L13.5 19l-.569 2.087c.614.187 1.069.737 1.069 1.413zm6-6.621V13.5a1.5 1.5 0 0 1 1.5-1.5h4.432a1.49 1.49 0 0 1 1.332.842l.016-.01A11.933 11.933 0 0 1 29 19c0 2.258-.636 4.363-1.72 6.167l-2.57-1.542A8.947 8.947 0 0 0 26 19a8.89 8.89 0 0 0-.967-4H23v6.021l-3-5.142z"></path>
+        </symbol>
+        <symbol id="svg_icon_hd_lg" viewBox="0 0 36 36">
+            <path d="M28 32H8a5 5 0 0 1-5-5V9a5 5 0 0 1 5-5h20a5 5 0 0 1 5 5v18a5 5 0 0 1-5 5zm2-23a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V9zm-3.732 15.161a1.49 1.49 0 0 1-1.33.839 1.5 1.5 0 0 1-1.5-1.5c0-.326.125-.611.302-.856l-.03-.018A8.953 8.953 0 0 0 25 18a8.894 8.894 0 0 0-.967-4H22v9.5a1.5 1.5 0 1 1-3 0v-11a1.5 1.5 0 0 1 1.5-1.5h4.432a1.49 1.49 0 0 1 1.332.842l.016-.01A11.933 11.933 0 0 1 28 18c0 2.258-.636 4.363-1.721 6.167l-.011-.006zM15.5 25a1.5 1.5 0 0 1-1.5-1.5v-11a1.5 1.5 0 1 1 3 0v11a1.5 1.5 0 0 1-1.5 1.5zm-3.542-6H11v4.5a1.5 1.5 0 1 1-3 0v-11a1.5 1.5 0 1 1 3 0V16h.958a1.5 1.5 0 1 1 0 3z"></path>
+        </symbol>
+        <symbol id="svg_icon_message" viewBox="0 0 20 20">
+            <path d="M6 9.5a1.5 1.5 0 1 1 2.999-.001A1.5 1.5 0 0 1 6 9.5zm5 0a1.5 1.5 0 1 1 2.999-.001A1.5 1.5 0 0 1 11 9.5zm5.76 5.404a.98.98 0 0 1-.791.417 1 1 0 0 1-1-1 .98.98 0 0 1 .369-.758l-.025-.028A5.618 5.618 0 0 0 17 9.5C17 6.462 14.676 4 11.809 4H8.191C5.324 4 3 6.462 3 9.5S5.324 15 8.191 15h3.618c.065 0 .126-.018.191-.021v.014c.299-.018.604.076.833.305l1.835 1.835a1.084 1.084 0 1 1-1.534 1.534L11.466 17H8.242C4.242 17 1 13.642 1 9.5S4.242 2 8.242 2h3.517C15.758 2 19 5.358 19 9.5a7.59 7.59 0 0 1-2.24 5.404z"></path>
+        </symbol>
+        <symbol id="svg_icon_client" viewBox="0 0 20 20">
+            <path d="M16 15H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2zm0-10H4v8h12V5zM7 16h6a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2z"></path>
+        </symbol>
+        <symbol id="svg_icon_upload" viewBox="0 0 20 20">
+            <path d="M17.818 14.444A8.987 8.987 0 0 1 10 19c-3.241 0-6.063-1.725-7.648-4.294a.99.99 0 0 1-.316-.723 1 1 0 0 1 1-1c.383 0 .706.223.874.54l.058-.029C5.179 15.58 7.413 17 10 17c2.58 0 4.809-1.412 6.022-3.489l.043.021a.988.988 0 0 1 .865-.528 1 1 0 0 1 1 1 .957.957 0 0 1-.112.44zm-5.572-7.769L11 5.429V12a1 1 0 0 1-2 0V5.469L7.765 6.704a1.04 1.04 0 0 1-1.469-1.47l2.938-2.938c.211-.211.491-.303.767-.293.282-.015.568.076.784.292l2.92 2.92a1.033 1.033 0 0 1-1.459 1.46z"></path>
+        </symbol>
+        <symbol id="svg_icon_time" viewBox="0 0 20 20">
+            <path d="M10 12a1 1 0 0 1-1-1V6a1 1 0 0 1 2 0v4h2a1 1 0 0 1 0 2h-3zm7.911 2.253a.988.988 0 0 1-.949.747 1 1 0 0 1-1-1c0-.204.076-.382.18-.54l-.068-.042c.572-1.015.926-2.17.926-3.418a7 7 0 1 0-7 7c1.284 0 2.472-.371 3.507-.975l.022.04a.97.97 0 0 1 .471-.134 1 1 0 0 1 1 1c0 .37-.21.679-.508.852l.003.006c-.015.009-.032.015-.047.023-.032.017-.061.034-.095.047A8.924 8.924 0 0 1 10 19a9 9 0 0 1-9-9 9 9 0 0 1 18 0 8.931 8.931 0 0 1-1.089 4.253z"></path>
+        </symbol>
+        <symbol id="svg_icon_search" viewBox="0 0 20 20">
+            <path d="M18.704 18.704a1.04 1.04 0 0 1-1.47 0l-1.938-1.938a1.038 1.038 0 1 1 1.469-1.469l1.939 1.938a1.04 1.04 0 0 1 0 1.469zM9 17A8 8 0 1 1 9 1a8 8 0 0 1 0 16zM9 3a6 6 0 1 0 0 12A6 6 0 0 0 9 3z"></path>
+        </symbol>
+        <symbol id="svg_icon_menu_sm" viewBox="0 0 16 16">
+            <path d="M13 14h-3a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1zm0-7h-3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1zm-7 7H3a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1zm0-7H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1z"></path>
+        </symbol>
+        <symbol id="svg_icon_home_sm" viewBox="0 0 16 16">
+            <path d="M14.694 9.7c-.409.41-1.072.41-1.48 0L7.996 4.468 4.381 8.076c.024.01.042.028.065.04.08.041.154.089.22.148.031.028.057.06.085.092.05.059.092.122.128.19.018.036.037.068.051.105.04.106.068.219.069.34L5 8.998V13h5.969v-1.002c0-.551.447-.998.998-.998h.004c.551 0 .998.447.998.998v1.848c.008.052.031.099.031.154a1 1 0 0 1-1 1H3.998A.998.998 0 0 1 3 14.002V10H2a.996.996 0 0 1-.713-.301c-.002-.003-.005-.003-.007-.005a1.044 1.044 0 0 1 0-1.478l5.922-5.911a1.02 1.02 0 0 1 .42-.244c.382-.164.84-.093 1.151.219l5.921 5.936a1.05 1.05 0 0 1 0 1.484z"></path>
+        </symbol>
+        <symbol id="svg_icon_wechat" viewBox="0 0 20 20">
+            <path d="M13.4 7.6h.7c-.6-2.7-3.6-4.8-7.1-4.8-3.9 0-7 2.6-7 6 0 1.9 1.1 3.5 2.8 4.7l-.7 2.1 2.5-1.2c.9.2 1.6.4 2.5.4h.7c-.1-.5-.2-1-.2-1.5-.1-3.2 2.5-5.7 5.8-5.7zM9.7 5.7c.5 0 .9.3.9.9 0 .5-.3.9-.9.9-.5 0-1.1-.4-1.1-.9s.5-.9 1.1-.9zm-5 1.8c-.5 0-1.1-.4-1.1-.9s.5-.9 1.1-.9.9.3.9.9c0 .5-.3.9-.9.9z"></path><path  d="M19.8 13.1c0-2.8-2.8-5.1-6-5.1-3.3 0-6 2.3-6 5.1s2.6 5.1 6 5.1c.7 0 1.4-.2 2.1-.4l1.9 1.1-.5-1.8c1.5-1 2.5-2.4 2.5-4zm-7.9-.9c-.3 0-.7-.3-.7-.7 0-.3.4-.7.7-.7.5 0 .9.4.9.7 0 .4-.3.7-.9.7zm3.9 0c-.3 0-.7-.3-.7-.7 0-.3.4-.7.7-.7.5 0 .9.4.9.7 0 .4-.4.7-.9.7z"></path>
+        </symbol>
+        <symbol id="svg_icon_qq" viewBox="0 0 20 20">
+            <path d="M16.3 13.7c-.3.7-.7 1.3-1.2 1.8 1.1.3.8.9.8.9.5.3.5 2-2.3 2-1.8 0-2.6-.5-2.9-.9H10c-.3 0-.6 0-.9-.1-.3.3-1.1.9-2.9.9-2.7 0-2.7-1.7-2.2-2 0 0-.3-.6 1-.9-.5-.6-.9-1.2-1.2-2-1.1 2-1.7.7-1.6-.9.1-1.4 1.3-2.9 1.6-3.3V9c0-.3.1-.6.4-.9v-.2c0-.3.2-.6.4-.8V7c0-3 2.5-5.5 5.6-5.5S15.7 4 15.7 7v.3c.2.2.3.4.3.6v.2c.2.2.4.5.4.8 0 .2 0 .3-.1.5.3.4 1.5 1.9 1.6 3.3-.1 1.5-.6 2.8-1.6 1z"></path>
+        </symbol>
+        <symbol id="svg_icon_collect" viewBox="0 0 20 20">
+            <path d="M19 15h-2v2a1 1 0 0 1-2 0v-2h-2a1 1 0 0 1 0-2h2v-2a1 1 0 0 1 2 0v2h2a1 1 0 0 1 0 2zm-.067-7c0 .049-.021.091-.028.138-.004.021 0 .042-.004.063l-.008-.001a.986.986 0 0 1-.96.8 1 1 0 0 1-1-1c0-.054.022-.101.031-.153l-.019-.003c.184-.882.057-1.979-.881-2.927-.471-.476-1.418-.91-2.252-.91-1.427 0-2.266 1.172-3.131 1.802L9.496 6.894 8.287 5.828c-.594-.561-1.746-1.823-3.144-1.823-.834 0-1.679.316-2.253.897-1.31 1.323-1.105 3.318-.176 4.34l6.751 6.069.016-.015 1.153 1.037-.017.017a.985.985 0 0 1 .254.649 1 1 0 0 1-1 1 .988.988 0 0 1-.647-.252l-.005.004-.037-.033c-.008-.008-.017-.014-.024-.022l-7.65-6.781c-2.013-2.054-2.013-5.349-.03-7.373A5.074 5.074 0 0 1 5.131 2c1.383 0 2.681.548 3.655 1.543l.706.722.707-.722A5.072 5.072 0 0 1 13.853 2c1.383 0 2.681.548 3.654 1.543 1.17 1.195 1.624 2.831 1.413 4.389.001.024.013.044.013.068zm-9.441 9.994l-.033-.029h.065l-.032.029z"></path>
+        </symbol>
+        <symbol id="svg_icon_follow" viewBox="0 0 20 20">
+            <path d="M18.65 8.855l-2.583 2.797-.007-.006a.984.984 0 0 1-.747.354.992.992 0 1 1-.726-1.679l-.002-.001.01-.011.023-.024 1.401-1.457-4.416-.896L9.5 4.059 7.365 7.932l-4.353.833 2.952 3.161-.515 4.42L9.5 14.578l3.996 1.766L13.253 14h.028a1 1 0 0 1 2 0h.011l.423 3.838-.019.015c.009.054.033.104.033.16a.991.991 0 0 1-1.367.912l-.015.012L9.5 16.774l-4.805 2.115-.011-.007a.986.986 0 0 1-.448.118.992.992 0 0 1-.997-.986c0-.041.019-.076.023-.115l-.012-.009.605-5.236L.352 8.857A.97.97 0 0 1 0 8.12c0-.443.3-.804.707-.928l.011-.044 5.333-.997 2.537-4.618h.041A.986.986 0 0 1 9.5 1c.378 0 .696.217.865.525h.038l2.545 4.627 5.269 1.002.008.025c.441.101.775.474.775.941 0 .297-.14.554-.35.735z"></path>
+        </symbol>
+        <symbol id="svg_icon_user" viewBox="0 0 20 20">
+            <path d="M17.237 17.999a1 1 0 0 1-1 1 .981.981 0 0 1-.793-.421l-.012.009A6.986 6.986 0 0 0 10 16a6.983 6.983 0 0 0-5.455 2.618l-.02-.016a.982.982 0 0 1-.773.391 1 1 0 0 1-1-1c0-.24.096-.451.236-.623l-.003-.003.022-.024c.024-.027.044-.055.071-.079A8.97 8.97 0 0 1 10 14c2.8 0 5.292 1.286 6.942 3.292l.004.004c.028.034.06.063.086.097l-.014.01a.974.974 0 0 1 .219.596zM10 13a6 6 0 0 1 0-12 6 6 0 0 1 0 12zm0-10a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+        </symbol>
+        <symbol id="svg_icon_folder" viewBox="0 0 20 20">
+            <path d="M18 18H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v2h8a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1zM17 7H9a1 1 0 0 1-1-1V4H3v12h14V7zM5 13h1a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2zm4 0h2a1 1 0 0 1 0 2H9a1 1 0 0 1 0-2zm5 0h1a1 1 0 0 1 0 2h-1a1 1 0 0 1 0-2zm4-9h-6a1 1 0 0 1 0-2h6a1 1 0 0 1 0 2z"></path>
+        </symbol>
+        <symbol id="svg_icon_mark_new" viewBox="0 0 23 14">
+            <path d="M21 0H2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h19a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" fill="#fa5058"/><path d="M7 8H6v2h1v1h1V3H7v5zM4 4V3H3v8h1V6h1V4H4zm1 2v2h1V6H5zm4 5h5v-1h-4V7h4V6h-4V4h4V3H9v8zm6-8v7h1V3h-1zm3 8h1v-1h-1v1zm1-8v7h1V3h-1zm-2 1v6h1V4h-1zm-1 7h1v-1h-1v1z" fill="#fff"/>
+        </symbol>
+        <symbol id="svg_icon_notice_sm" viewBox="0 0 16 16">
+            <path d="M15 13c0 .552-.448 1-1 1h-4c0 1.104-.896 2-2 2s-2-.896-2-2h-4c-.552 0-1-.448-1-1 0-.191.068-.36.162-.512-.18-.318-.208-.717-.018-1.059l1.856-3.693v-1.736c0-2.426 1.728-4.445 4.02-4.901l-.02-.099c0-.552.448-1 1-1s1 .448 1 1l-.02.099c2.292.456 4.02 2.475 4.02 4.901v1.736l1.856 3.693c.191.342.162.741-.018 1.059.094.152.162.321.162.512zm-3.86-4.55c-.084-.143-.114-.296-.12-.45h-.02v-2c0-1.657-1.343-3-3-3s-3 1.343-3 3v2h-.02c-.006.154-.036.307-.12.45l-1.709 3.55h9.698l-1.709-3.55z"></path>
+        </symbol>
+        <symbol id="svg_icon_vcoin" viewBox="0 0 20 20">
+            <path d="M3 10c0-3.866 3.134-7 7-7s7 3.134 7 7-3.134 7-7 7-7-3.134-7-7zm-2 0c0 4.971 4.029 9 9 9s9-4.029 9-9-4.029-9-9-9-9 4.029-9 9zm12.609-1.562s.453-.938-.453-1.328c-.922-.313-1.156.515-1.156.515l-2 3.813-2-3.813s-.203-.844-1.156-.516c-.906.391-.453 1.329-.453 1.329l2.609 4.671s.281.734 1 .734l1-.734 2.609-4.671z"></path>
+        </symbol>
+        <symbol id="svg_icon_video_sm" viewBox="0 0 16 16">
+            <path d="M14 11a1 1 0 0 1-1-1V6a1 1 0 0 1 2 0v4a1 1 0 0 1-1 1zm-4 3H3a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2zm0-10H3v8h7V4zM5.5 8a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"></path>
+        </symbol>
+        <!-- 搜索框 start-->
+        <symbol id="svg_icon_search_hot" viewBox="0 0 20 20">
+            <path d="M16 6h-1c-.553 0-1 .447-1 1v12h3v-12c0-.553-.447-1-1-1zm-6-5h-1c-.552 0-1 .447-1 1v17h3v-17c0-.553-.448-1-1-1zm-6 9h-1c-.552 0-1 .447-1 1v8h3v-8c0-.553-.448-1-1-1z"></path>
+        </symbol>
+        <symbol id="svg_icon_trash_sm" viewBox="0 0 16 16">
+            <path d="M14 6H2a1 1 0 0 1 0-2h12a1 1 0 0 1 0 2zM9 3H7a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2zm-4 8V8a1 1 0 0 1 2 0v3a1 1 0 0 1-2 0zm4 0V8a1 1 0 0 1 2 0v3a1 1 0 0 1-2 0zM2 8a1 1 0 0 1 2 0V12.999h8V8a1 1 0 0 1 2 0V12.999a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-6-.004V8z"></path>
+        </symbol>
+        <symbol id="svg_icon_down_sm" viewBox="0 0 16 16">
+            <path d="M12.71 7.716L8.716 11.71a1.003 1.003 0 0 1-.716.295c-.259 0-.519-.097-.716-.295L3.289 7.716a1.01 1.01 0 0 1 1.427-1.427L8 9.573l3.284-3.284a1.01 1.01 0 1 1 1.426 1.427z"></path>
+        </symbol>
+        <symbol id="svg_icon_up_sm" viewBox="0 0 16 16">
+            <path d="M12.71 9.71a1.01 1.01 0 0 1-1.427 0L8 6.427 4.716 9.71a1.01 1.01 0 0 1-1.427-1.427l3.995-3.995c.197-.197.457-.295.716-.294.259-.001.518.097.716.295l3.994 3.995a1.008 1.008 0 0 1 0 1.426z"></path>
+        </symbol>
+        <symbol id="svg_icon_right_sm" width="16" height="16" viewBox="0 0 16 16">
+            <path d="M11.71 8.716L7.716 12.71a1.01 1.01 0 0 1-1.427-1.427L9.573 8 6.289 4.716a1.01 1.01 0 0 1 1.427-1.427l3.994 3.994c.198.198.296.458.295.717.001.259-.097.518-.295.716z"></path>
+        </symbol>
+        <symbol id="svg_icon_search_hot_sm" viewBox="0 0 16 16">
+            <path d="M14 7h-1c-.553 0-1 .447-1 1v7h3v-7c0-.553-.447-1-1-1zm-5-6h-1c-.552 0-1 .447-1 1v13h3v-13c0-.553-.447-1-1-1zm-5 4h-1c-.552 0-1 .447-1 1v9h3v-9c0-.553-.448-1-1-1z"></path>
+        </symbol>
+        <!-- 搜索框 end-->
+    </svg>
+    <div class="head_line"><div class="inner"></div></div>
+    <div class="head_inner">
+        <h1 class="site_logo"><a href="https://v.qq.com/" class="link_logo" _stat="new_vs_header:logo"><strong class="link_inner">腾讯视频</strong></a></h1>
+
+        <div class="site_channel">
+            <span class="channel_title"></span>
+            <div class="channel_area">
+                <a href="//v.qq.com" class="channel_home" _stat="new_vs_header:home"><i class="icon_sm icon_home_sm"><svg class="svg_icon svg_icon_home_sm" viewBox="0 0 16 16" width="16" height="16"><use class="txp_svg_symbol" xlink:href="#svg_icon_home_sm"></use></svg></i><span class="icon_text">首页</span></a>
+                <a href="javascript:;" class="channel_more" _stat="new_vs_header:more"><i class="icon_sm icon_menu_sm"><svg class="svg_icon svg_icon_menu_sm" viewBox="0 0 16 16" width="16" height="16"><use class="txp_svg_symbol" xlink:href="#svg_icon_menu_sm"></use></svg></i><span class="icon_text">频道</span></a>
+
+                <div class="nav_more_pop">
+                    <div class="nav_pop_inner">
+                        <i class="triangle_up"><i class="triangle_inner"></i></i>
+                        <div class="nav_pop_content">
+                            
+                              <a href="https://v.qq.com/channel/tv" class="link_nav" target="_blank" _stat="new_vs_header:pop_电视剧">电视剧</a>
+                            
+                              <a href="https://v.qq.com/channel/variety" class="link_nav" target="_blank" _stat="new_vs_header:pop_综艺">综艺</a>
+                            
+                              <a href="https://v.qq.com/channel/movie" class="link_nav" target="_blank" _stat="new_vs_header:pop_电影">电影</a>
+                            
+                              <a href="http://film.qq.com/" class="link_nav" target="_blank" _stat="new_vs_header:pop_VIP影院">VIP影院</a>
+                            
+                              <a href="https://v.qq.com/channel/cartoon" class="link_nav" target="_blank" _stat="new_vs_header:pop_动漫">动漫</a>
+                            
+                              <a href="https://v.qq.com/channel/child" class="link_nav" target="_blank" _stat="new_vs_header:pop_少儿">少儿</a>
+                            
+                              <a href="https://v.qq.com/channel/ent" class="link_nav" target="_blank" _stat="new_vs_header:pop_娱乐">娱乐</a>
+                            
+                              <a href="https://v.qq.com/channel/music" class="link_nav" target="_blank" _stat="new_vs_header:pop_音乐">音乐</a>
+                            
+                              <a href="https://v.qq.com/livemusic/" class="link_nav" target="_blank" _stat="new_vs_header:pop_演唱会">演唱会</a>
+                            
+                              <a href="https://v.qq.com/channel/usuk" class="link_nav" target="_blank" _stat="new_vs_header:pop_海外剧">海外剧</a>
+                            
+                              <a href="https://v.qq.com/channel/doco" class="link_nav" target="_blank" _stat="new_vs_header:pop_纪录片">纪录片</a>
+                            
+                              <a href="https://v.qq.com/channel/dv" class="link_nav" target="_blank" _stat="new_vs_header:pop_网络电影">网络电影</a>
+                            
+                              <a href="https://v.qq.com/channel/news" class="link_nav" target="_blank" _stat="new_vs_header:pop_新闻">新闻</a>
+                            
+                              <a href="http://v.qq.com/sports/" class="link_nav" target="_blank" _stat="new_vs_header:pop_体育">体育</a>
+                            
+                              <a href="http://sports.qq.com/nbavideo/" class="link_nav" target="_blank" _stat="new_vs_header:pop_NBA">NBA</a>
+                            
+                              <a href="https://v.qq.com/channel/fun" class="link_nav" target="_blank" _stat="new_vs_header:pop_搞笑">搞笑</a>
+                            
+                              <a href="http://v.qq.com/games/" class="link_nav" target="_blank" _stat="new_vs_header:pop_游戏">游戏</a>
+                            
+                              <a href="http://v.qq.com/videoplus/" class="link_nav" target="_blank" _stat="new_vs_header:pop_原创">原创</a>
+                            
+                              <a href="https://v.qq.com/channel/fashion" class="link_nav" target="_blank" _stat="new_vs_header:pop_时尚">时尚</a>
+                            
+                              <a href="https://v.qq.com/channel/life" class="link_nav" target="_blank" _stat="new_vs_header:pop_生活">生活</a>
+                            
+                              <a href="https://v.qq.com/channel/auto" class="link_nav" target="_blank" _stat="new_vs_header:pop_汽车">汽车</a>
+                            
+                              <a href="https://v.qq.com/channel/tech" class="link_nav" target="_blank" _stat="new_vs_header:pop_科技">科技</a>
+                            
+                              <a href="https://v.qq.com/channel/finance" class="link_nav" target="_blank" _stat="new_vs_header:pop_财经">财经</a>
+                            
+                              <a href="https://v.qq.com/channel/house" class="link_nav" target="_blank" _stat="new_vs_header:pop_房产">房产</a>
+                            
+                              <a href="http://v.qq.com/x/live/" class="link_nav" target="_blank" _stat="new_vs_header:pop_直播">直播</a>
+                            
+                              <a href="http://yingping.qq.com/?source=1" class="link_nav" target="_blank" _stat="new_vs_header:pop_影评">影评</a>
+                            
+                              <a href="https://v.qq.com/channel/knowledge" class="link_nav" target="_blank" _stat="new_vs_header:pop_知识">知识</a>
+                            
+                              <a href="https://v.qq.com/channel/baby" class="link_nav" target="_blank" _stat="new_vs_header:pop_育儿">育儿</a>
+                            
+                              <a href="https://v.qq.com/channel/travel" class="link_nav" target="_blank" _stat="new_vs_header:pop_旅游">旅游</a>
+                            
+                              <a href="https://v.qq.com/x/rank/" class="link_nav" target="_blank" _stat="new_vs_header:pop_热播榜">热播榜</a>
+                            
+                              <a href="https://v.qq.com/x/hotlist/search/?channel=555&source=common_nav_vs" class="link_nav" target="_blank" _stat="new_vs_header:pop_热搜榜">热搜榜</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mod_search">
+            <form id="searchForm" action="//v.qq.com/x/search/" method="get" target="_blank" class="search_form cf">
+                <!-- 顶部搜索框 开始 -->
+                <div class="search_inner">
+                    <label class="search_label" for="keywords">搜索关键词</label>
+                    <i class="icon icon_search"><svg class="svg_icon svg_icon_search" viewBox="0 0 20 20" width="20" height="20"><use  xlink:href="#svg_icon_search"></use></svg></i>
+                    <div class="search_keywords">
+                        <input type="text" name="q" id="keywords" class="search_input" placeholder="" autocomplete="off">
+                    </div>
+                    <input type="hidden" name="stag">
+                    <input type="hidden" name="smartbox_ab">
+                    <button class="search_btn" type="submit" _stat="new_vs_header:search"><span class="btn_inner">全网搜</span></button>
+                    <!-- <a class="btn_search_hot" href="https://v.qq.com/x/hotlist/search/?channel=555&source=common_nav_vs" target="_blank" _stat="new_vs_header:search_hotlist" title="全网热搜榜"><i class="icon icon_search_hot"><svg class="svg_icon svg_icon_search_hot" viewBox="0 0 20 20" width="20" height="20"><use xlink:href="#svg_icon_search_hot"></use></svg></i></a> -->
+                    <a class="btn_search_hot" href="https://v.qq.com/x/hotlist/search/?channel=555&source=common_nav_vs" target="_blank" _stat="new_vs_header:search_hotlist"><i class="icon_sm icon_search_hot_sm"><svg class="svg_icon" viewBox="0 0 16 16" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg_icon_search_hot_sm"></use></svg></i><i class="icon_search_hot_animation"></i><span class="btn_inner">热搜榜</span></a>
+                </div>
+                <!-- 顶部搜索框 结束 -->
+            </form>
+            <div class="mod_smartbox none" id="smartbox"> </div>
+        </div>
+        <!-- 快捷入口 开始 -->
+<div class="mod_quick cf">
+    <div class="quick_item quick_vip">
+        <a href="https://film.qq.com/" class="quick_link" target="_blank" _stat="顶部导航区:VIP" title="VIP频道">
+            
+            <i class="icon icon_vip_golden"><img src="//puui.qpic.cn/vupload/0/20190506_1557124625829_rf1s35fyzhs.png/0" alt="" class="icon_vip_pic"></i>
+            
+            <span class="quick_text">VIP</span>
+        </a>
+    </div>
+
+    <!-- 历史浮层 -->
+    <div class="quick_item quick_history" id="modHistory">
+        <a href="https://v.qq.com/biu/u/history" class="quick_link" target="_blank" _stat="顶部导航区:观看历史">
+        
+        <i class="icon icon_time"><svg class="svg_icon svg_icon_time" viewBox="0 0 20 20" width="20" height="20"><use xlink:href="#svg_icon_time"></use></svg></i>
+        
+        <span class="quick_text">看过</span></a>
+        <!-- 历史播放浮层 开始 -->
+        <link rel="stylesheet" href="//vm.gtimg.cn/tencentvideo/vstyle/web/v6/style/css/head_quick.css" />
+        <div class="mod_quick_pop mod_pop_history" id="history_pop">
+            <div class="quick_pop_tabs" id="quickPopTabs">
+                <button class="pop_tab current" id="btnQuickHistory" data-type="History">看过</button>
+                <button class="pop_tab" id="btnQuickFavs" data-type="Favs">收藏</button>
+                <button class="pop_tab" id="btnQuickSubs" data-type="Subs">订阅</button>
+            </div>
+            <div class="mod_quick_videolist mod_quick_videolist_history" id="modQuickHistory" _wind="columnname=顶部导航区&controlname=看过浮层"></div>
+            <div class="mod_quick_videolist mod_quick_videolist_favs none" id="modQuickFavs" _wind="columnname=顶部导航区&controlname=收藏浮层"></div>
+            <div class="mod_quick_videolist mod_quick_videolist_subs none" id="modQuickSubs" _wind="columnname=顶部导航区&controlname=订阅浮层"></div>
+            <a class="quick_pop_footer quick_pop_footer_disabled" href="#" id="quickHistoryFooterLink"></a>
+        </div>
+        <!-- 历史播放浮层 结束 -->
+    </div>
+
+    <!-- 上传 -->
+    <div class="quick_item quick_upload">
+        <a href="https://v.qq.com/u/upload.html" target="_blank" class="quick_link" _stat="顶部导航区:上传" title="上传">
+        
+        <i class="icon icon_upload"><svg class="svg_icon svg_icon_upload" viewBox="0 0 20 20" width="20" height="20"><use xlink:href="#svg_icon_upload"></use></svg></i>
+        
+      <span class="quick_text">上传</span></a>
+    </div>
+
+    <!-- pc客户端 -->
+    <div class="quick_item quick_client" id="pc_client">
+        <a href="https://node.video.qq.com/x/api/download_pc" _hot="顶部导航区:客户端" class="quick_link" _stat="顶部导航区:客户端">
+        
+        <i class="icon icon_client"><svg class="svg_icon svg_icon_client" viewBox="0 0 20 20" width="20" height="20"><use xlink:href="#svg_icon_client"></use></svg></i>
+        
+            <span class="quick_text">下载客户端</span>
+            <i class="triangle_up"><i class="triangle_inner"></i></i>
+            <span class="mark_events" style="display: none;">抢福利</span>
+        </a>
+
+        <div class="mod_quick_pop mod_pop_client">
+            <div class="pop_info_content pop_client_wrap _win">
+                <div class="pop_privilege_line hl">
+                    <i class="icon_sm icon_vip_flat_sm"><svg class="svg_icon svg_icon_vip_flat" viewBox="0 0 26 26" width="16" height="16"><g transform="translate(2 1)" fill="none" fill-rule="evenodd"><path d="M18.2.1l-6.8 12h-.1L4.5 0h-4C.3.1 0 .5.3.8l10.7 19c.2.4.7.4.9 0L22.6.8c.1-.3 0-.7-.5-.7h-3.9z" transform="translate(0 3.4)" fill="currentColor" stroke="#FFF" stroke-opacity=".8" stroke-width=".2"></path><path d="M0 0l5.9 10.4L11.8 0z" transform="translate(5.5 3.4)" fill="currentColor" opacity=".3"></path><path d="M1.7 6.2L6 4.3l4.2 1.9 1.6-2.8v-.6-1.3-1c0-.2-.2-.4-.5-.4H11L6 2.4h-.2L.8.1H.6C.3.1 0 .3 0 .6v2.8l1.6 2.8z" transform="translate(5.5)" fill="currentColor" stroke="#FFF" stroke-opacity=".8" stroke-width=".2"></path></g></svg></i>
+                    <span class="icon_text">签到抢VIP福利</span>
+                </div>
+                <div class="pop_privilege_line">
+                    <i class="icon_sm icon_lightning_sm"><svg class="svg_icon svg_icon_lightning" viewBox="0 0 16 16" width="16" height="16"><path d="M13.799 6.94a.422.422 0 0 0-.103-.076.406.406 0 0 0-.256-.094H9.419L10.77.678a.441.441 0 0 0 .002-.181.429.429 0 0 0-.121-.287.4.4 0 0 0-.582.003L2.198 8.459a.436.436 0 0 0-.119.333.452.452 0 0 0 .112.326.395.395 0 0 0 .299.135h4.152l-1.384 6a.443.443 0 0 0-.011.102.437.437 0 0 0 .102.436.405.405 0 0 0 .582-.003l7.871-8.245a.434.434 0 0 0-.003-.603z"></path></svg></i>
+                    <span class="icon_text">三倍流畅播放</span>
+                </div>
+                <div class="pop_privilege_line">
+                    <i class="icon icon_hd"><svg class="svg_icon svg_icon_hd" viewBox="0 0 20 20" width="20" height="20"><path d="M13.617 7.979h-1.44v5.042h1.431c.738 0 1.216-.171 1.594-.576.433-.459.657-1.152.657-1.999 0-.855-.207-1.494-.621-1.927-.37-.386-.837-.54-1.621-.54zM17.5 4.5h-15a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h15a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2zm-7.869 9.583H8.29c.054-.352.072-.631.072-1.162v-2.034H4.743v2.034c0 .522.018.793.072 1.162H3.473c.054-.343.072-.631.072-1.162V8.079c0-.531-.018-.811-.072-1.161h1.341a7.501 7.501 0 0 0-.071 1.152v1.737h3.619V8.079c0-.514-.018-.838-.072-1.161h1.341a7 7 0 0 0-.072 1.152v4.851c0 .523.018.783.072 1.162zm6.417-.783c-.576.54-1.297.783-2.359.783h-1.638c-.55 0-.774.009-1.144.026.054-.369.072-.647.072-1.188V8.06a7.67 7.67 0 0 0-.072-1.17c.36.018.576.027 1.144.027h1.629c1.125 0 1.854.233 2.431.792.657.621.999 1.558.999 2.728 0 1.224-.36 2.196-1.062 2.863z"></path></svg></i>
+                    <span class="icon_text">1080P蓝光画质</span>
+                </div>
+                <div class="pop_privilege_line">
+                    <i class="icon_sm icon_ahead_sm"><svg class="svg_icon svg_icon_ahead" viewBox="0 0 16 16" width="16" height="16"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm2 9.001H8.005a1.161 1.161 0 0 1-1.137-.534L5.153 6.639c-.315-.521-.128-1.187.419-1.487.546-.301 1.245-.122 1.561.398L8.619 8H10a1 1 0 0 1 0 2.001z"></path></svg></i>
+                    <span class="icon_text">新剧提前看</span>
+                </div>
+                <div class="pop_privilege_btns">
+                    <a href="javascript:;" class="btn_em">立即体验</a>
+                </div>
+            </div>
+            <div class="pop_info_content pop_client_wrap _mac">
+                <div class="pop_privilege_line hl">
+                    <i class="icon icon_hd"><svg class="svg_icon svg_icon_hd" viewBox="0 0 20 20" width="20" height="20"><path d="M13.617 7.979h-1.44v5.042h1.431c.738 0 1.216-.171 1.594-.576.433-.459.657-1.152.657-1.999 0-.855-.207-1.494-.621-1.927-.37-.386-.837-.54-1.621-.54z"></path><path d="M17.5 4.5h-15a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h15a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2zm-7.869 9.583H8.29c.054-.352.072-.631.072-1.162v-2.034H4.743v2.034c0 .522.018.793.072 1.162H3.473c.054-.343.072-.631.072-1.162V8.079c0-.531-.018-.811-.072-1.161h1.341a7.501 7.501 0 0 0-.071 1.152v1.737h3.619V8.079c0-.514-.018-.838-.072-1.161h1.341a7 7 0 0 0-.072 1.152v4.851c0 .523.018.783.072 1.162zm6.417-.783c-.576.54-1.297.783-2.359.783h-1.638c-.55 0-.774.009-1.144.026.054-.369.072-.647.072-1.188V8.06a7.67 7.67 0 0 0-.072-1.17c.36.018.576.027 1.144.027h1.629c1.125 0 1.854.233 2.431.792.657.621.999 1.558.999 2.728 0 1.224-.36 2.196-1.062 2.863z"></path></svg></i>
+                    <span class="icon_text">1080P蓝光画质</span>
+                </div>
+                <div class="pop_privilege_line">
+                    <i class="icon_sm icon_play_sm"><svg class="svg_icon svg_icon_play" viewBox="0 0 16 16" width="16" height="16"><path d="M10.83 8.31v.022l-4.08 2.539-.005.003-.048.03-.012-.005c-.073.051-.15.101-.246.101-.217 0-.376-.165-.413-.369l-.027-.011V5.461l.009-.005c0-.009-.009-.014-.009-.022 0-.24.197-.435.44-.435.096 0 .174.049.247.101l.031-.017 4.129 2.569v.016a.42.42 0 0 1 .153.317.418.418 0 0 1-.169.325zm3.493 2.604a.986.986 0 0 1-.948.742 1 1 0 0 1-1-1 .98.98 0 0 1 .094-.412l-.019-.01C12.79 9.559 13 8.807 13 8a5 5 0 1 0-5 5c.766 0 1.484-.186 2.133-.494l.013.03a.975.975 0 0 1 .417-.097 1 1 0 0 1 1 1 .987.987 0 0 1-.77.954A6.936 6.936 0 0 1 8 14.999a7 7 0 1 1 7-7c0 1.048-.261 2.024-.677 2.915z"></path></svg></i>
+                    <span class="icon_text">纯净式无框播放器</span>
+                </div>
+                <div class="pop_privilege_line">
+                    <i class="icon_sm icon_lightning_sm"><svg class="svg_icon svg_icon_lightning" viewBox="0 0 16 16" width="16" height="16"><path d="M13.799 6.94a.422.422 0 0 0-.103-.076.406.406 0 0 0-.256-.094H9.419L10.77.678a.441.441 0 0 0 .002-.181.429.429 0 0 0-.121-.287.4.4 0 0 0-.582.003L2.198 8.459a.436.436 0 0 0-.119.333.452.452 0 0 0 .112.326.395.395 0 0 0 .299.135h4.152l-1.384 6a.443.443 0 0 0-.011.102.437.437 0 0 0 .102.436.405.405 0 0 0 .582-.003l7.871-8.245a.434.434 0 0 0-.003-.603z"></path></svg></i>
+                    <span class="icon_text">三倍流畅播放</span>
+                </div>
+                <div class="pop_privilege_btns">
+                    <a href="javascript:;" class="btn_em">立即体验</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mod_quick_tips none mod_client_bubble">
+            <i class="quick_tips_triangle"></i>
+            <div class="quick_tips_inner">
+                <div class="quick_tips_content">
+                    <a class="tips_txt tips_txt_vip none tips_txt_0" href="//node.video.qq.com/x/api/download_pc" _hot="nav.download.bubble1" _stat="顶部导航区:pc_client_bubble1">
+                        <i class="icon_lg icon_vip_flat_lg"><svg class="svg_icon svg_icon_vip_flat" viewBox="0 0 26 26" width="26" height="26" style="	vertical-align: top; position: relative; top: 6px; margin-right: 5px;color: #ff5c38;width:26px;height:26px;"><g transform="translate(2 1)" fill="none" fill-rule="evenodd"><path d="M18.2.1l-6.8 12h-.1L4.5 0h-4C.3.1 0 .5.3.8l10.7 19c.2.4.7.4.9 0L22.6.8c.1-.3 0-.7-.5-.7h-3.9z" transform="translate(0 3.4)" fill="currentColor" stroke="#FFF" stroke-opacity=".8" stroke-width=".2"></path><path d="M0 0l5.9 10.4L11.8 0z" transform="translate(5.5 3.4)" fill="currentColor" opacity=".3"></path><path d="M1.7 6.2L6 4.3l4.2 1.9 1.6-2.8v-.6-1.3-1c0-.2-.2-.4-.5-.4H11L6 2.4h-.2L.8.1H.6C.3.1 0 .3 0 .6v2.8l1.6 2.8z" transform="translate(5.5)" fill="currentColor" stroke="#FFF" stroke-opacity=".8" stroke-width=".2"></path></g></svg></i>
+                        <span class="txt">PC客户端连续签到</span>
+                        <span class="txt_bold">7天抢福利</span>
+                        <span class="btn_close" _stat="顶部导航区:pc_client_close_bubble1">
+                             <i class="icon_sm icon_close_em_sm">
+                            <svg class="svg_icon svg_icon_close" viewBox="0 0 16 16" width="16" height="16"><use xlink:href="#svg_icon_close_em_sm"></use></svg>
+                            </i>
+                        </span>
+                    </a>
+                    <a class="tips_txt none tips_txt_1 tips_txt_mac_0" href="//node.video.qq.com/x/api/download_pc" _hot="nav.download.bubble2" _stat="顶部导航区:pc_client_bubble2">
+                        <i class="icon_lg icon_hd_lg"><svg class="svg_icon svg_icon_lg svg_icon_hdv" viewBox="0 0 36 36" width="36" height="36"><path d="M30.921 21.237c-.358 1.042-.869 1.885-1.533 2.529-.501.488-1.179.869-2.031 1.143-.638.202-1.491.303-2.559.303h-5.439v-14.317h5.283c1.191 0 2.1.091 2.725.273.84.248 1.559.687 2.158 1.318.599.632 1.055 1.405 1.367 2.319.313.915.469 2.043.469 3.384 0 1.18-.147 2.195-.44 3.048zm-2.841-5.723c-.195-.592-.469-1.055-.82-1.387s-.798-.557-1.338-.674c-.404-.091-1.195-.137-2.373-.137h-1.299v9.482h2.158c.807 0 1.39-.045 1.748-.137.469-.117.857-.315 1.167-.596.309-.28.562-.74.757-1.382.195-.641.293-1.515.293-2.622 0-1.104-.098-1.954-.293-2.547zm-14.147 3.438h-5.664v6.26h-2.891v-14.317h2.891v5.635h5.664v-5.635h2.891v14.316h-2.891v-6.259z"></path></svg></i>
+                        <span class="txt">PC客户端</span>
+                        <span class="txt_bold">免费蓝光播放</span>
+                        <span class="btn_close" _stat="顶部导航区:pc_client_close_bubble2">
+                            <i class="icon_sm icon_close_em_sm">
+                            <svg class="svg_icon svg_icon_close" viewBox="0 0 16 16" width="16" height="16"><use xlink:href="#svg_icon_close_em_sm"></use></svg>
+                            </i>
+                        </span>
+                    </a>
+                    <a class="tips_txt none tips_txt_2 tips_txt_mac_1" href="//node.video.qq.com/x/api/download_pc" _hot="nav.download.bubble3" _stat="顶部导航区:pc_client_bubble3">
+                        <i class="icon_lg icon_lightning_lg"><svg class="svg_icon svg_icon_lg svg_icon_lightning" viewBox="0 0 36 36" width="36" height="36"><path d="M22.118 5l-14.118 14.696h8.235l-2.353 11.304 14.118-14.696h-8.235l2.353-11.304z"></path></svg></i>
+                        <span class="txt">PC客户端</span>
+                        <span class="txt_bold">3倍流畅播放</span>
+                        <span class="btn_close" _stat="顶部导航区:pc_client_close_bubble3">
+                             <i class="icon_sm icon_close_em_sm">
+                            <svg class="svg_icon svg_icon_close" viewBox="0 0 16 16" width="16" height="16"><use xlink:href="#svg_icon_close_em_sm"></use></svg>
+                            </i>
+                        </span>
+                    </a>
+                    <a class="tips_txt none tips_txt_3" href="//node.video.qq.com/x/api/download_pc"  _hot="nav.download.bubble4" _stat="顶部导航区:pc_client_bubble4">
+                        <i class="icon_lg icon_chanting_lg"><svg class="svg_icon svg_icon_lg svg_icon_chanting" viewBox="0 0 36 36" width="36" height="36"><path d="M27.123 23.974c-.08.718-.639 1.284-1.344 1.284-.76 0-1.375-.647-1.375-1.445 0-.347.132-.653.326-.902l-.169-.119c1.055-1.456 1.688-3.267 1.688-5.238 0-4.787-3.693-8.667-8.25-8.667s-8.25 3.88-8.25 8.667c0 4.786 3.694 8.667 8.25 8.667.413 0 .815-.042 1.211-.104l.013.125.15-.032c.759 0 1.375.647 1.375 1.444 0 .798-.616 1.444-1.375 1.444-.123 0-.232-.042-.345-.073-.34.039-.678.085-1.028.085-6.075 0-11-5.173-11-11.555s4.925-11.556 11-11.556 11 5.173 11 11.556c-.001 2.381-.701 4.581-1.877 6.419zm-8.829-3.581l-.27-.053-.123-.06c-.129-.06-.247-.134-.353-.234l-.091-.103-.167-.19-2.746-4.974c-.371-.645-.151-1.468.492-1.84.643-.372 1.465-.151 1.836.493l2.276 4.123h2.883c.81 0 1.466.647 1.466 1.445 0 .797-.657 1.444-1.466 1.444h-3.483l-.254-.051z"></path></svg></i>
+                        <span class="txt">PC客户端</span>
+                        <span class="txt_bold">提前一小时追剧</span>
+                        <span class="btn_close" _stat="顶部导航区:pc_client_close_bubble4">
+                             <i class="icon_sm icon_close_em_sm">
+                            <svg class="svg_icon svg_icon_close" viewBox="0 0 16 16" width="16" height="16"><use xlink:href="#svg_icon_close_em_sm"></use></svg>
+                            </i>
+                        </span>
+                    </a>
+                    <a class="tips_txt none tips_txt_4" href="//node.video.qq.com/x/api/download_pc"  _hot="nav.download.bubble5" _stat="顶部导航区:pc_client_bubble5">
+                        <i class="icon_lg icon_download_lg"><svg class="svg_icon svg_icon_lg svg_icon_download" viewBox="0 0 36 36" width="36" height="36"><path d="M29.634 24.091l.027.012c-2.056 4.086-6.276 6.896-11.162 6.896-4.923 0-9.169-2.853-11.207-6.989l.022-.011c-.091-.192-.149-.4-.149-.625 0-.822.674-1.488 1.506-1.488.562 0 1.033.318 1.292.769l.012-.006c1.541 3.159 4.773 5.341 8.525 5.341 3.61 0 6.742-2.021 8.346-4.988.218-.555.757-.952 1.396-.952.832 0 1.506.667 1.506 1.488 0 .195-.043.381-.114.553zm-9.805-2.904c-.232.473-.726.813-1.329.813-.205 0-.393-.049-.569-.118l-.098-.043c-.136-.064-.258-.144-.365-.241l-.065-.043-.016-.023c-.099-.104-.183-.219-.245-.346l-3.75-3.732c-.569-.566-.569-1.484 0-2.051.569-.566 1.491-.566 2.06 0l1.559 1.551v-8.6c0-.753.666-1.364 1.488-1.364s1.488.611 1.488 1.364v8.579l1.528-1.521c.568-.565 1.489-.565 2.057 0s.568 1.482 0 2.047l-3.743 3.728z"></path></svg></i>
+                        <span class="txt">PC客户端</span>
+                        <span class="txt_bold">自动更新下载剧集</span>
+                        <span class="btn_close" _stat="顶部导航区:pc_client_close_bubble5">
+                             <i class="icon_sm icon_close_em_sm">
+                            <svg class="svg_icon svg_icon_close" viewBox="0 0 16 16" width="16" height="16"><use xlink:href="#svg_icon_close_em_sm"></use></svg>
+                            </i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="quick_item quick_user" id="mod_head_user">
+        <a href="http://v.qq.com/u/history/" class="quick_link _checklogin" id="mod_head_notice_trigger" target="_blank"  _stat="顶部导航区:头像">
+            <img class="quick_user_avatar" src="//puui.qpic.cn/vupload/0/common_avatar.png/0" data-type="avatar" data-avatarsize="40">
+			    <span class="account_type" data-type="account_type_logo">
+                    <i class="icon icon_qq __account_type_qq none"><svg class="svg_icon svg_icon_qq" viewBox="0 0 20 20" width="8" height="8"><path d="M16.3 13.7c-.3.7-.7 1.3-1.2 1.8 1.1.3.8.9.8.9.5.3.5 2-2.3 2-1.8 0-2.6-.5-2.9-.9H10c-.3 0-.6 0-.9-.1-.3.3-1.1.9-2.9.9-2.7 0-2.7-1.7-2.2-2 0 0-.3-.6 1-.9-.5-.6-.9-1.2-1.2-2-1.1 2-1.7.7-1.6-.9.1-1.4 1.3-2.9 1.6-3.3V9c0-.3.1-.6.4-.9v-.2c0-.3.2-.6.4-.8V7c0-3 2.5-5.5 5.6-5.5S15.7 4 15.7 7v.3c.2.2.3.4.3.6v.2c.2.2.4.5.4.8 0 .2 0 .3-.1.5.3.4 1.5 1.9 1.6 3.3-.1 1.5-.6 2.8-1.6 1z"></path></svg></i>
+                    <i class="icon icon_wechat __account_type_wx none"><svg class="svg_icon svg_icon_wechat" viewBox="0 0 20 20" width="8" height="8"><path d="M13.4 7.6h.7c-.6-2.7-3.6-4.8-7.1-4.8-3.9 0-7 2.6-7 6 0 1.9 1.1 3.5 2.8 4.7l-.7 2.1 2.5-1.2c.9.2 1.6.4 2.5.4h.7c-.1-.5-.2-1-.2-1.5-.1-3.2 2.5-5.7 5.8-5.7zM9.7 5.7c.5 0 .9.3.9.9 0 .5-.3.9-.9.9-.5 0-1.1-.4-1.1-.9s.5-.9 1.1-.9zm-5 1.8c-.5 0-1.1-.4-1.1-.9s.5-.9 1.1-.9.9.3.9.9c0 .5-.3.9-.9.9zM19.8 13.1c0-2.8-2.8-5.1-6-5.1-3.3 0-6 2.3-6 5.1s2.6 5.1 6 5.1c.7 0 1.4-.2 2.1-.4l1.9 1.1-.5-1.8c1.5-1 2.5-2.4 2.5-4zm-7.9-.9c-.3 0-.7-.3-.7-.7 0-.3.4-.7.7-.7.5 0 .9.4.9.7 0 .4-.3.7-.9.7zm3.9 0c-.3 0-.7-.3-.7-.7 0-.3.4-.7.7-.7.5 0 .9.4.9.7 0 .4-.4.7-.9.7z"></path></svg></i>
+                </span>
+                <img src="//puui.qpic.cn/vupload/0/common_blank.png/0" alt="" class="icon_vip_pic none" data-type="viplogo" width="15" />
+            <i class="triangle_up"><i class="triangle_inner"></i></i>
+        </a>
+
+        <!-- 用户信息浮层 开始 -->
+        <div class="mod_quick_pop mod_pop_user" id="mod_head_notice_pop" _stat="顶部导航区:头像浮层">
+            <div class="pop_info_content quick_pop_user">
+                <div class="quick_pop_user_hd">
+                    <span class="account_type __accout_type_name"></span>
+                    <a href="https://v.qq.com/biu/u/history" _stat="顶部导航区:头像浮层:昵称" class="user_name _nickname"></a>
+                    <a href="https://film.qq.com/vip/my/" class="link_vip_icon" _stat="顶部导航区:头像浮层:vipicon">
+                        <img src="//puui.qpic.cn/vupload/0/common_blank.png/0" alt="" class="icon_vip_pic none" data-type="viplogo" width="24" />
+                    </a>
+                    <a href="javascript:;" class="link_change" data-type="switchlogin" _stat="顶部导航区:头像浮层:切换账号" title="切换账号">切换</a>
+                    <a href="javascript:;" class="link_quit" data-type="logout" _stat="顶部导航区:头像浮层:退出"  title="退出">退出</a>
+                    <div class="quick_vip_meta" id="quick_user_vip" data-version='3'></div>
+                </div>
+                <div class="quick_pop_user_bd">
+                    <div class="quick_features cf">
+                        <a class="feature_item" href="http://v.qq.com/u/comment/" target="_blank" _hot="顶部导航区:头像浮层:user_message" _stat="顶部导航区:头像浮层:user_message">
+                            <i class="icon_feature icon_feature_comment"></i>
+                            <span class="icon_text" id="nav_user_message">评论消息</span>
+                        </a>
+                        <a class="feature_item" href="https://v.qq.com/biu/u/history" target="_blank" _hot="顶部导航区:头像浮层:user_history" _stat="顶部导航区:头像浮层:user_history">
+                            <i class="icon_feature icon_feature_cloud"></i>
+                            <span class="icon_text">云同步观看记录</span>
+                        </a>
+                        <a class="feature_item" href="https://v.qq.com/u/wallet/vbshop.html#tab=lottery" target="_blank" _hot="顶部导航区:头像浮层:user_lottery" _stat="顶部导航区:头像浮层:user_lottery">
+                            <i class="icon_feature icon_feature_lottery"></i>
+                            <span class="icon_text">免费抽奖</span>
+                        </a>
+                        <a class="feature_item _download_pc" href="//node.video.qq.com/x/api/download_pc" _hot="顶部导航区:头像浮层:download" _stat="顶部导航区:头像浮层:download">
+                            <i class="icon_feature icon_feature_client"></i>
+                            <span class="icon_text">用客户端看抢VIP</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--未登录会员账号 开始-->
+        <div class="mod_quick_pop mod_pop_user none" id="mod_notlogin_pop">
+            <div class="pop_info_content quick_pop_user">
+                <div class="quick_pop_user_hd">
+                    <span class="account_type">登录之后可以</span>
+                    <div class="quick_vip_meta">
+                        <span class="vip_now">开通VIP/超级影视VIP 看大片</span>
+                        <span class="vip_next">
+                            <a href="javascript:;" class="btn_vip_em __open_vip_notLogin" _stat="顶部导航区:头像浮层:开通vip" >开通</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="quick_pop_user_bd">
+                    <div class="quick_features cf">
+                        <a class="feature_item" href="http://v.qq.com/u/comment/" target="_blank" _hot="nav.user.message" _stat="顶部导航区:头像浮层:user_message">
+                            <i class="icon_feature icon_feature_comment"></i>
+                            <span class="icon_text">评论消息</span>
+                        </a>
+                        <a class="feature_item" href="https://v.qq.com/biu/u/history/" target="_blank" _hot="顶部导航区:头像浮层:user_history" _stat="顶部导航区:头像浮层:user_history">
+                            <i class="icon_feature icon_feature_cloud"></i>
+                            <span class="icon_text">云同步观看记录</span>
+                        </a>
+                        <a class="feature_item" href="https://v.qq.com/u/wallet/vbshop.html#tab=lottery" target="_blank" _hot="顶部导航区:头像浮层:user_lottery" _stat="顶部导航区:头像浮层:user_lottery">
+                            <i class="icon_feature icon_feature_lottery"></i>
+                            <span class="icon_text">免费抽奖</span>
+                        </a>
+                        <a class="feature_item _download_pc" href="//node.video.qq.com/x/api/download_pc" _hot="顶部导航区:头像浮层:download" _stat="顶部导航区:头像浮层:download">
+                            <i class="icon_feature icon_feature_client"></i>
+                            <span class="icon_text">用客户端看抢VIP</span>
+                        </a>
+                    </div>
+                    <div class="quick_pop_btn">
+                        <a href="javascript:;" _stat="顶部导航区:头像浮层:立即登录" class="btn_pop_link" data-type="login" data-boss="5">立即登录</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--未登录会员账号 结束-->
+        
+        <style>
+        .mod_quick .quick_user .quick_link .icon_vip_pic{
+            position: absolute;
+            bottom: 0;
+            left: 42px;
+            width: 15px;
+            height: 10px;
+            border-radius: 0;
+            background: none;
+        }
+        </style>
+        
+        <!-- 用户信息浮层 结束 -->
+    </div>
+</div>
+<!-- 快捷入口 结束 -->
+
+    </div>
+</div>
+
+
+</div>
+<!--头部 结束-->
+
+<div class="site_container container_main">
+	<div class="container_inner">
+		<div class="wrapper">
+		<!-- 导航栏 开始 -->
+            <script type="text/javascript">
+try{document.domain='qq.com'}catch(e){}
+</script>
+<div class="user_navigate" id="side_nav">
+  <svg class="txp_svg_sprite txp_svg_sprite_user_center" display="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- 左侧导航 -->
+    <symbol id="svg_icon_up_xs" viewBox="0 0 9 10">
+      <path d="M4.5 0l-4.5 5h3v3.5c0 .828.671 1.5 1.5 1.5.828 0 1.5-.672 1.5-1.5v-3.5h3l-4.5-5z" /></path>
+    </symbol>
+    <symbol id="svg_icon_wallet" viewBox="0 0 20 20">
+      <path d="M17 18H3a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2zm0-10h-6v1h1a1 1 0 1 1 0 2h-1v1h4a1 1 0 1 1 0 2h-5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h7V4H3v12h14V8z"></path>
+    </symbol>
+    <symbol id="svg_icon_film" viewBox="0 0 20 20">
+      <path d="M8 12.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM7.5 5a1.5 1.5 0 1 1 .001 2.999A1.5 1.5 0 0 1 7.5 5zM9 10a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm5 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM13.5 6a1.5 1.5 0 1 1 .001 2.999A1.5 1.5 0 0 1 13.5 6zm3.51 9.637l-.004-.003a.982.982 0 0 1-.756.366 1 1 0 0 1-1-1c0-.208.079-.392.188-.552l-.046-.035C16.382 13.206 17 11.683 17 10a7 7 0 1 0-7 7h8a1 1 0 1 1 0 2h-8a9 9 0 1 1 9-9 8.954 8.954 0 0 1-1.99 5.637z"></path>
+    </symbol>
+    <symbol id="svg_icon_shopcar" viewBox="0 0 20 20">
+      <path d="M14.002 9h-.004.002.002zm5.998-7c0 .552-.448 1-1 1s-1 .447-1 1l-1 8c0 1.657-1.343 3-3 3h-10c-.552 0-1-.447-1-1 0-.552.448-1 1-1h10c.552 0 1-.448 1-1l.75-6h-11.583l.667 4h8.166c.552 0 1 .447 1 1s-.448 1-1 1h-9c-.552 0-1-.448-1-1l-1-6c0-.552.448-1 1-1h13c0-1.657 1.343-3 3-3h.002-.002c.552 0 1 .448 1 1zm-15.5 14c.828 0 1.5.671 1.5 1.5 0 .828-.672 1.5-1.5 1.5-.829 0-1.5-.672-1.5-1.5 0-.829.671-1.5 1.5-1.5zm11 0c.829 0 1.5.671 1.5 1.5 0 .828-.671 1.5-1.5 1.5s-1.5-.672-1.5-1.5c0-.829.671-1.5 1.5-1.5z"></path>
+    </symbol>
+    <symbol id="svg_icon_router" viewBox="0 0 20 20">
+      <path d="M17 19H3a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2zm0-8H3v6h14v-6zM6 13a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm10-5a1 1 0 0 1-1-1V2a1 1 0 0 1 2 0v5a1 1 0 0 1-1 1z"></path>
+    </symbol>
+    <symbol id="svg_icon_notice" viewBox="0 0 20 20">
+      <path d="M19 15c0 .552-.448 1-1 1h-16c-.552 0-1-.448-1-1 0-.183.062-.344.147-.492-.164-.291-.189-.648-.007-.957l2.86-3.898v-2.653c0-2.654 1.735-4.88 4.124-5.671.276-.773 1.008-1.329 1.876-1.329s1.6.556 1.876 1.329c2.389.791 4.124 3.017 4.124 5.671v2.653l2.86 3.898c.182.309.157.667-.007.957.085.148.147.309.147.492zm-4.86-4.55c-.084-.143-.114-.296-.121-.45h-.019v-3c0-2.209-1.791-4-4-4s-4 1.791-4 4v3h-.02c-.006.154-.036.307-.12.45l-2.605 3.55h13.489l-2.604-3.55zm-4.14 7.55c.841 0 1.598-.348 2.143-.905l1.832.908c-.913 1.206-2.346 1.997-3.975 1.997-1.64 0-3.082-.8-3.994-2.02l1.823-.919c.547.576 1.315.939 2.171.939z"></path>
+    </symbol>
+    <symbol id="svg_icon_data" viewBox="0 0 20 20">
+      <path d="M19 10a9 9 0 1 1-9-9 1 1 0 0 1 1 1v7h7a1 1 0 0 1 1 1zm-9 1a1 1 0 0 1-1-1V3.101C5.612 3.589 3 6.476 3 10a7 7 0 0 0 7 7c3.523 0 6.41-2.612 6.899-6H10zm7.406-3a.997.997 0 0 1-.926-.633h-.002a7.006 7.006 0 0 0-3.865-3.852A.998.998 0 0 1 13 1.594c.126 0 .245.029.357.072l.004-.011a9.022 9.022 0 0 1 4.974 4.958l-.007.003A1 1 0 0 1 17.406 8z"></path>
+    </symbol>
+    <symbol id="svg_icon_revenue" viewBox="0 0 20 20">
+      <path d="M13.759 6.241c.344.344.344.901 0 1.246l-1.246 1.246c-.344.344-.901.344-1.246 0-.344-.344-.344-.902 0-1.246l1.246-1.246c.345-.345.903-.345 1.246 0zm-6.241 0l1.246 1.246c.344.344.344.901 0 1.246-.344.344-.902.344-1.246 0l-1.246-1.247c-.344-.344-.344-.902 0-1.246s.901-.344 1.246.001zm2.483 12.759h-.001c-.552 0-1-.448-1-1v-4h-2c-.552 0-1-.448-1-1s.448-1 1-1h2v-1h-2c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1s-.448 1-1 1h-2v1h2c.552 0 1 .448 1 1s-.448 1-1 1h-2v2.899c3.388-.489 6-3.376 6-6.899 0-3.866-3.134-7-7-7s-7 3.134-7 7c0 2.604 1.439 4.851 3.55 6.056l-.03.048c.282.177.48.476.48.834 0 .552-.448 1-1 1-.199 0-.375-.073-.53-.174l-.002.003c-2.67-1.562-4.468-4.451-4.468-7.767 0-4.971 4.029-9 9-9 4.97 0 9 4.03 9 9s-4.029 8.999-8.999 9z"></path>
+    </symbol>
+
+    <!-- 主体内容区域 -->
+    <symbol id="svg_icon_close_xs" viewBox="0 0 10 10">
+      <path d="M7 6h1v1h1v1h1v2h-2v-1h-1v-1h-1v-1h-2v1h-1v1h-1v1h-2v-2h1v-1h1v-1h1v-2h-1v-1h-1v-1h-1v-2h2v1h1v1h1v1h2v-1h1v-1h1v-1h2v2h-1v1h-1v1h-1v2z"
+      /></path>
+    </symbol>
+    <symbol id="svg_icon_close_sm" viewBox="0 0 16 16">
+      <path d="M15.01 14.303l-.707.707L8 8.707 1.697 15.01l-.707-.707L7.293 8 .99 1.697 1.697.99 8 7.293 14.303.99l.707.707L8.707 8l6.303 6.303z"></path>
+    </symbol>
+    <symbol id="svg_icon_right_sm" viewBox="0 0 16 16">
+      <path d="M11.71 8.716L7.716 12.71a1.01 1.01 0 0 1-1.427-1.427L9.573 8 6.289 4.716a1.01 1.01 0 0 1 1.427-1.427l3.994 3.994c.198.198.296.458.295.717.001.259-.097.518-.295.716z"></path>
+    </symbol>
+    <symbol id="svg_icon_time_sm" viewBox="0 0 16 16">
+      <path d="M8 10a1 1 0 0 1-1-1V6a1 1 0 1 1 2 0v2h1a1 1 0 0 1 0 2H8zm6.323.914a.986.986 0 0 1-.948.742 1 1 0 0 1-1-1 .98.98 0 0 1 .094-.412l-.019-.01C12.79 9.559 13 8.807 13 8a5 5 0 1 0-5 5c.766 0 1.484-.186 2.133-.494l.013.03a.975.975 0 0 1 .417-.097 1 1 0 0 1 1 1 .987.987 0 0 1-.77.954A6.936 6.936 0 0 1 8 14.999a7 7 0 1 1 7-7c0 1.048-.261 2.025-.677 2.915z"></path>
+    </symbol>
+    <symbol id="svg_icon_approve" viewBox="0 0 20 20" width="20" height="20">
+      <path d="M17.867 4.587c-.032-.23-.192-.424-.416-.503l-7.067-2.01c-.147-.051-.291-.074-.427-.074-.146 0-.283.026-.406.074l-7.067 2.01c-.224.079-.384.272-.416.503-.015.116-.378 2.873.363 6.023.44 1.872 1.182 3.493 2.203 4.817 1.265 1.64 2.955 2.82 5.025 3.509.094.038.193.064.304.064.093 0 .195-.019.312-.063 2.07-.688 3.761-1.869 5.025-3.509 1.021-1.324 1.762-2.945 2.203-4.817.742-3.151.38-5.908.364-6.024zm-2.289 5.814c-.35 1.512-.935 2.813-1.736 3.868-.961 1.264-2.244 2.182-3.856 2.742-1.592-.544-2.89-1.467-3.859-2.742-.802-1.055-1.277-1.804-1.651-3.409-.527-2.265-.472-4.487-.41-5.152l5.82-1.68.081-.027s-.513-1.001-.507-1.001c.009 0 .542 1.001.571 1.012l.052.017 5.82 1.68c.062.664.169 2.562-.325 4.692zm-2.926-2.198l-3.3 3.057-2.086-2.027c-.294-.286-.771-.286-1.065 0-.294.285-.294.749 0 1.035l2.611 2.536c.146.143.339.214.532.214.189 0 .378-.068.524-.207l3.833-3.559c.299-.28.307-.744.017-1.033-.29-.291-.767-.297-1.066-.016z"></path>
+    </symbol>
+    <symbol id="svg_icon_play" viewBox="0 0 20 20">
+      <path d="M13.494 10.384v.014l-4.639 2.921a.495.495 0 0 1-.842-.284l-.014-.005V7.093l.006-.003c0-.01-.006-.019-.006-.028a.5.5 0 0 1 .5-.5.49.49 0 0 1 .296.107l.02-.01 4.697 2.957v.011a.493.493 0 0 1 .174.373.49.49 0 0 1-.192.384zm4.417 3.868a.988.988 0 0 1-.949.748 1 1 0 0 1-1-1c0-.204.076-.382.18-.54l-.068-.042c.572-1.016.926-2.17.926-3.418a7 7 0 1 0-7 7c1.284 0 2.472-.371 3.507-.975l.022.039A.97.97 0 0 1 14 15.93a1 1 0 0 1 1 1c0 .37-.21.679-.508.853l.003.006c-.015.009-.032.015-.047.023-.032.016-.061.034-.095.047A8.924 8.924 0 0 1 10 19c-4.971 0-9-4.029-9-9s4.029-9 9-9a9 9 0 0 1 9 9 8.925 8.925 0 0 1-1.089 4.252z"></path>
+    </symbol>
+    <symbol id="svg_icon_video" viewBox="0 0 20 20">
+      <path d="M4 12.5c0-.829.671-1.5 1.5-1.5s1.5.671 1.5 1.5c0 .828-.671 1.5-1.5 1.5s-1.5-.672-1.5-1.5zm14.922 2.883l-.002.007-.034.104-.163.188-.026.03c-.076.073-.16.127-.253.171l-.087.043-.211.042-.146.032-.07-.014-.035-.007c-.262-.029-.489-.151-.65-.342l-3.774-2.769c-.467-.275-.628-.886-.358-1.362.27-.478.868-.641 1.335-.365l2.552 1.871v-6.023l-2.55 1.871c-.467.275-1.065.112-1.335-.365-.091-.16-.117-.333-.115-.505v-2.99h-10v10h10c.552 0 1 .448 1 1s-.448 1-1 1h-10c-1.104 0-2-.896-2-2v-10c0-1.104.896-2 2-2h10c1.104 0 2 .896 2 2v1.013l2.243-1.646c.164-.196.396-.322.665-.349l.019-.004.073-.014.154.031.201.041.092.046c.091.043.174.097.25.168l.025.029.165.191c.095.168.119.35.113.531v9.944c.002.136-.023.27-.078.402z"></path>
+    </symbol>
+    <symbol id="svg_icon_play_l" viewBox="0 0 50 50">
+      <path d="M20.841 34.412l-.011-.006a1.002 1.002 0 0 1-.553.186 1.057 1.057 0 0 1-1.043-1.069V17.437c0-.59.467-1.069 1.043-1.069.208 0 .391.078.553.186l.012-.007 12.308 8.017v.027c.293.189.498.508.498.889 0 .378-.203.694-.492.885v.019l-12.315 8.028zm24.029 4.007c-.003.007-.008.012-.011.018-.061.089-.113.183-.175.271l-.006-.004c-.273.371-.692.628-1.189.628a1.496 1.496 0 0 1-1.499-1.494c0-.298.11-.561.262-.794l-.037-.025A20.895 20.895 0 0 0 46.008 25c0-11.602-9.405-21.007-21.007-21.007C13.399 3.993 3.994 13.398 3.994 25c0 11.602 9.405 21.007 21.007 21.007 4.318 0 8.33-1.307 11.668-3.541l.023.034c.238-.158.507-.273.815-.273.828 0 1.499.669 1.499 1.494 0 .506-.268.931-.654 1.201l.009.013A23.886 23.886 0 0 1 25 48.999c-13.254 0-24-10.745-24-24C1 11.745 11.745 1 25 1s24 10.745 24 24a23.85 23.85 0 0 1-4.13 13.419z"></path>
+    </symbol>
+    <symbol id="svg_icon_collect_xl" viewBox="0 0 72 72">
+      <path d="M68.69 33.969A1.485 1.485 0 0 1 67.285 35a1.5 1.5 0 0 1-1.5-1.5c0-.312.118-.585.281-.826l-.019-.013c3.303-5.647 2.307-13.163-2.539-18.009C61.427 12.569 57.472 10 52.022 10c-7.544 0-11.148 4.445-14.016 7.182l-2.019 2.299-2.049-2.393C31.069 14.352 27.434 10 19.858 10c-4.979 0-8.373 1.95-11.351 4.661-5.965 5.42-5.838 15.379-.386 20.831l20.588 17.41-.05.028 8.798 7.379-.011.013c.289.273.474.654.474 1.083a1.5 1.5 0 0 1-1.5 1.5c-.369 0-.695-.148-.957-.369l-.011.012L6.584 38.223c-7.417-7.192-7.417-18.731-.109-25.82C10.058 8.921 14.84 7 19.933 7c5.096 0 9.876 1.919 13.465 5.403L36 14.931l2.603-2.527C42.189 8.919 46.97 7 52.066 7c5.095 0 9.876 1.919 13.462 5.404 6.008 5.832 7.041 14.663 3.162 21.565zM36 63.01l-.002-.001h.004L36 63.01zM47.5 51H57v-8.5a1.5 1.5 0 1 1 3 0V51h8.5a1.5 1.5 0 1 1 0 3H60v9.5a1.5 1.5 0 1 1-3 0V54h-9.5a1.5 1.5 0 1 1 0-3z"></path>
+    </symbol>
+    <symbol id="svg_icon_follow" viewBox="0 0 20 20">
+        <path d="M18.65 8.855l-2.583 2.797-.007-.006a.984.984 0 0 1-.747.354.992.992 0 1 1-.726-1.679l-.002-.001.01-.011.023-.024 1.401-1.457-4.416-.896L9.5 4.059 7.365 7.932l-4.353.833 2.952 3.161-.515 4.42L9.5 14.578l3.996 1.766L13.253 14h.028a1 1 0 0 1 2 0h.011l.423 3.838-.019.015c.009.054.033.104.033.16a.991.991 0 0 1-1.367.912l-.015.012L9.5 16.774l-4.805 2.115-.011-.007a.986.986 0 0 1-.448.118.992.992 0 0 1-.997-.986c0-.041.019-.076.023-.115l-.012-.009.605-5.236L.352 8.857A.97.97 0 0 1 0 8.12c0-.443.3-.804.707-.928l.011-.044 5.333-.997 2.537-4.618h.041A.986.986 0 0 1 9.5 1c.378 0 .696.217.865.525h.038l2.545 4.627 5.269 1.002.008.025c.441.101.775.474.775.941 0 .297-.14.554-.35.735z"></path>
+    </symbol>
+    <symbol id="svg_icon_follow_xl" viewBox="0 0 72 72">
+      <path d="M70.132 29.938l.002.008-.029.031-.029.031L57.32 43.534l-.041-.038a1.484 1.484 0 0 1-1.1.498 1.5 1.5 0 0 1-1.5-1.5c0-.453.211-.846.529-1.121l10.761-11.454-20.068-3.904L36 8.265l-9.901 17.789-20.068 3.864 13.951 14.807-2.547 20.299L36 56.158l18.564 8.827-1.902-15.372.034-.003c-.003-.04-.022-.073-.022-.113a1.5 1.5 0 0 1 1.5-1.5c.785 0 1.41.609 1.475 1.378l.001.007c.003.04.023.074.023.115 0 .009-.005.017-.006.026l2.225 17.666-.037.028c.015.085.051.163.051.252a1.5 1.5 0 0 1-1.5 1.5c-.246 0-.469-.073-.674-.178l-.031.022L36 59.636l-19.765 9.207-.021-.016a1.48 1.48 0 0 1-.62.142 1.5 1.5 0 0 1-1.5-1.5c0-.057.026-.105.032-.161l-.031-.023 2.708-21.5L1.925 30.01a1.491 1.491 0 0 1-.457-1.072c0-.771.59-1.383 1.338-1.467l.011-.033 21.317-4.067L34.682 4.375h.026c.257-.458.729-.781 1.292-.781s1.035.323 1.292.782h.026l10.546 18.995 21.468 4.096.011.034c.673.147 1.188.719 1.188 1.437 0 .388-.157.734-.399 1z"></path>
+    </symbol>
+    <symbol id="svg_icon_notice_xl" viewBox="0 0 72 72">
+      <path d="M65 54.5c0 .829-.671 1.5-1.5 1.5h-55c-.829 0-1.5-.671-1.5-1.5 0-.201.042-.391.114-.566-.138-.459-.089-.971.219-1.379l8.734-11.555h-.006c-.017-.335-.051-.667-.051-1.006v-14c0-10.031 7.389-18.313 17.014-19.755l-.024-.239c0-1.657 1.343-3 3-3s3 1.343 3 3l-.024.239c9.625 1.441 17.014 9.724 17.014 19.755v14c0 .34-.034.671-.051 1.006h-.006l8.733 11.555c.308.408.357.919.219 1.379.073.175.115.365.115.566zm-11.696-12.044c-.326-.431-.366-.979-.195-1.456h-.109v-15c0-9.389-7.611-17-17-17s-17 7.611-17 17v15h-.109c.171.478.131 1.025-.195 1.456l-7.969 10.544h50.546l-7.969-10.544zm-29.304 19.044c0-.829.671-1.5 1.5-1.5.711 0 1.279.505 1.433 1.169 1.979 2.905 5.287 4.831 9.067 4.831s7.087-1.926 9.067-4.831c.154-.664.722-1.169 1.433-1.169.829 0 1.5.671 1.5 1.5 0 .195-.043.378-.111.549l.142.084c-2.44 4.106-6.908 6.867-12.031 6.867s-9.591-2.761-12.031-6.867l.142-.084c-.068-.171-.111-.354-.111-.549z"></path>
+    </symbol>
+    <!-- v币商城 -->
+    <symbol id="svg_icon_vstore" viewBox="0 0 20 20">
+      <path d="M8.969 15.298c.167.507.502.744 1.005.71.535.034.871-.203 1.005-.71l1.859-4.818.05-.051c.067-.203.1-.371.1-.507-.033-.574-.369-.878-1.005-.913-.369 0-.636.22-.804.659l-1.206 3.703-1.205-3.703c-.134-.438-.402-.659-.804-.659-.603.034-.922.338-.955.913 0 .203.033.389.101.558l1.859 4.818zm-1.374-11.39l.251.032c.433 0 .828-.291.944-.732.193-.731.809-1.242 1.497-1.242.684 0 1.298.506 1.494 1.231.142.524.678.836 1.199.69.52-.142.828-.683.686-1.207-.426-1.578-1.816-2.68-3.379-2.68-1.574 0-2.966 1.112-3.386 2.705-.138.525.172 1.064.694 1.203zm9.405 1.092h-14c-.552 0-1 .448-1 1v13c0 .552.448 1 1 1h14c.552 0 1-.448 1-1v-13c0-.552-.448-1-1-1zm-1 13h-12v-11h12v11z"></path>
+    </symbol>
+    <symbol id="svg_icon_message" viewBox="0 0 20 20">
+      <path d="M6 9.5a1.5 1.5 0 1 1 2.999-.001A1.5 1.5 0 0 1 6 9.5zm5 0a1.5 1.5 0 1 1 2.999-.001A1.5 1.5 0 0 1 11 9.5zm5.76 5.404a.98.98 0 0 1-.791.417 1 1 0 0 1-1-1 .98.98 0 0 1 .369-.758l-.025-.028A5.618 5.618 0 0 0 17 9.5C17 6.462 14.676 4 11.809 4H8.191C5.324 4 3 6.462 3 9.5S5.324 15 8.191 15h3.618c.065 0 .126-.018.191-.021v.014c.299-.018.604.076.833.305l1.835 1.835a1.084 1.084 0 1 1-1.534 1.534L11.466 17H8.242C4.242 17 1 13.642 1 9.5S4.242 2 8.242 2h3.517C15.758 2 19 5.358 19 9.5a7.59 7.59 0 0 1-2.24 5.404z"></path>
+    </symbol>
+    <symbol id="svg_icon_folder" viewBox="0 0 20 20">
+      <path d="M18 18H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1zM17 7H3v9h14V7zM5 13h1a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2zm4 0h2a1 1 0 0 1 0 2H9a1 1 0 0 1 0-2zm5 0h1a1 1 0 0 1 0 2h-1a1 1 0 0 1 0-2zM9 4H3a1 1 0 0 1 0-2h6a1 1 0 1 1 0 2z"></path>
+    </symbol>
+    <symbol id="svg_icon_user" viewBox="0 0 20 20">
+      <path d="M17.237 17.999a1 1 0 0 1-1 1 .981.981 0 0 1-.793-.421l-.012.009A6.986 6.986 0 0 0 10 16a6.983 6.983 0 0 0-5.455 2.618l-.02-.016a.982.982 0 0 1-.773.391 1 1 0 0 1-1-1c0-.24.096-.451.236-.623l-.003-.003.022-.024c.024-.027.044-.055.071-.079A8.97 8.97 0 0 1 10 14c2.8 0 5.292 1.286 6.942 3.292l.004.004c.028.034.06.063.086.097l-.014.01a.974.974 0 0 1 .219.596zM10 13a6 6 0 0 1 0-12 6 6 0 0 1 0 12zm0-10a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+    </symbol>
+    <symbol id="svg_icon_task" viewBox="0 0 20 20">
+      <path d="M9 8.999h5c.552 0 1-.447 1-1 0-.552-.448-1-1-1h-5c-.552 0-1 .448-1 1 0 .553.447 1 1 1zm0 4h5c.552 0 1-.447 1-1 0-.552-.448-1-1-1h-5c-.552 0-1 .448-1 1 0 .553.447 1 1 1zm8-12h-14c-1.104 0-2 .896-2 2v14c0 1.104.896 2 2 2h14c1.104 0 2-.896 2-2v-14c0-1.104-.896-2-2-2zm0 16h-14v-14h14v14zm-11-7.999c.553 0 1-.448 1-1 0-.553-.447-1-1-1-.553 0-1 .447-1 1 0 .552.447 1 1 1zm0 4c.553 0 1-.448 1-1 0-.553-.447-1-1-1-.552 0-1 .447-1 1 0 .552.447 1 1 1z"></path>
+    </symbol>
+    <symbol id="svg_icon_vip_flat" viewBox="0 0 20 20">
+      <path d="M18.65 8.855l-3.507 3.798.572 5.185-.019.015c.009.054.033.104.033.16a.991.991 0 0 1-1.367.912l-.015.012L9.5 16.774l-4.805 2.115-.011-.007a.986.986 0 0 1-.448.118.992.992 0 0 1-.997-.986c0-.041.019-.076.023-.115l-.012-.009.188-1.626a20.747 20.747 0 0 0 2.1-.681l-.089.764L9.5 14.578l3.996 1.766-.456-4.417 2.979-3.099-1.231-.25c.444-.591.856-1.205 1.237-1.842l2.193.417.008.025c.44.102.774.475.774.942 0 .297-.14.554-.35.735zm-2.557-4.417C13.523 9.924 8.525 14 2.481 15.391a.978.978 0 0 1-.481.14 1 1 0 0 1-1-1c0-.473.335-.851.777-.955l-.009-.039a17.968 17.968 0 0 0 12.494-9.905.997.997 0 0 1 1.926.368c0 .156-.043.3-.107.432l.012.006zM9.5 4.059L7.365 7.932l-4.353.833 2.365 2.533c-.65.314-1.319.594-2.012.824L.352 8.857A.968.968 0 0 1 0 8.12c0-.443.3-.804.707-.928l.011-.044 5.333-.997 2.537-4.618h.041A.986.986 0 0 1 9.5 1c.378 0 .696.217.865.525h.038l1.954 3.552a16.898 16.898 0 0 1-1.316 1.822L9.5 4.059z"></path>
+    </symbol>
+    <symbol id="svg_icon_time" viewBox="0 0 20 20">
+      <path d="M10 12a1 1 0 0 1-1-1V6a1 1 0 0 1 2 0v4h2a1 1 0 0 1 0 2h-3zm7.911 2.253a.988.988 0 0 1-.949.747 1 1 0 0 1-1-1c0-.204.076-.382.18-.54l-.068-.042c.572-1.015.926-2.17.926-3.418a7 7 0 1 0-7 7c1.284 0 2.472-.371 3.507-.975l.022.04a.97.97 0 0 1 .471-.134 1 1 0 0 1 1 1c0 .37-.21.679-.508.852l.003.006c-.015.009-.032.015-.047.023-.032.017-.061.034-.095.047A8.924 8.924 0 0 1 10 19a9 9 0 0 1-9-9 9 9 0 0 1 18 0 8.931 8.931 0 0 1-1.089 4.253z"></path>
+    </symbol>
+    <symbol id="svg_icon_collect" viewBox="0 0 20 20">
+      <path d="M19 15h-2v2a1 1 0 0 1-2 0v-2h-2a1 1 0 0 1 0-2h2v-2a1 1 0 0 1 2 0v2h2a1 1 0 0 1 0 2zm-.067-7c0 .049-.021.091-.028.138-.004.021 0 .042-.004.063l-.008-.001a.986.986 0 0 1-.96.8 1 1 0 0 1-1-1c0-.054.022-.101.031-.153l-.019-.003c.184-.882.057-1.979-.881-2.927-.471-.476-1.418-.91-2.252-.91-1.427 0-2.266 1.172-3.131 1.802L9.496 6.894 8.287 5.828c-.594-.561-1.746-1.823-3.144-1.823-.834 0-1.679.316-2.253.897-1.31 1.323-1.105 3.318-.176 4.34l6.751 6.069.016-.015 1.153 1.037-.017.017a.985.985 0 0 1 .254.649 1 1 0 0 1-1 1 .988.988 0 0 1-.647-.252l-.005.004-.037-.033c-.008-.008-.017-.014-.024-.022l-7.65-6.781c-2.013-2.054-2.013-5.349-.03-7.373A5.074 5.074 0 0 1 5.131 2c1.383 0 2.681.548 3.655 1.543l.706.722.707-.722A5.072 5.072 0 0 1 13.853 2c1.383 0 2.681.548 3.654 1.543 1.17 1.195 1.624 2.831 1.413 4.389.001.024.013.044.013.068zm-9.441 9.994l-.033-.029h.065l-.032.029z"></path>
+    </symbol>
+    <symbol id="svg_icon_upload" viewBox="0 0 20 20">
+      <path d="M17.818 14.444A8.987 8.987 0 0 1 10 19c-3.241 0-6.063-1.725-7.648-4.294a.99.99 0 0 1-.316-.723 1 1 0 0 1 1-1c.383 0 .706.223.874.54l.058-.029C5.179 15.58 7.413 17 10 17c2.58 0 4.809-1.412 6.022-3.489l.043.021a.988.988 0 0 1 .865-.528 1 1 0 0 1 1 1 .957.957 0 0 1-.112.44zm-5.572-7.769L11 5.429V12a1 1 0 0 1-2 0V5.469L7.765 6.704a1.04 1.04 0 0 1-1.469-1.47l2.938-2.938c.211-.211.491-.303.767-.293.282-.015.568.076.784.292l2.92 2.92a1.033 1.033 0 0 1-1.459 1.46z"></path>
+    </symbol>
+    <!-- 明星社区-->
+    <symbol id="svg_icon_star" viewBox="0 0 20 20" width="20" height="20">
+      <path d="M19.968 8.221l-.027.083-.075.231-.064.063-.063.063-8.873 8.839-.04.047-.131.154-.15.137-.045.041-.117.041-.195.067-.188.014-.188-.014-.194-.067-.117-.041-.045-.041-.149-.137-.131-.154-.04-.047-8.874-8.838-.064-.064-.064-.063-.075-.231-.027-.083-.015-.221.015-.221.027-.083.075-.231 3-4.966.095-.111.104-.123c.076-.073.16-.126.252-.17l.04-.02c.168-.071.347-.105.529-.075h11.692c.182-.03.361.004.529.076l.04.021c.092.044.176.097.252.169l.105.124.094.11 3 4.966.075.231.027.083.015.22-.015.221zm-4.553-4.221h-10.83l-2.341 3.875 7.756 7.728 7.756-7.727-2.341-3.876zm-5.415 9.001l-.188-.014-.194-.067-.117-.041-.045-.041-.149-.137-.131-.154-.04-.047-4-3.966c-.278-.494-.115-1.128.364-1.413.479-.287 1.09-.117 1.366.379l3.134 3.106 3.134-3.106c.276-.495.888-.665 1.366-.379.478.286.642.919.366 1.414l-4 3.966-.04.047-.131.154-.15.137-.045.041-.117.041-.195.067-.188.013z"></path>
+    </symbol>
+    <symbol id="svg_icon_doki" viewBox="0 0 20 20" width="20" height="20">
+        <path d="M6.668 16.819l-5.345-5.605c-1.764-1.864-1.764-4.886 0-6.75 1.765-1.864 4.625-1.864 6.39 0l1.795 1.855.71.75 4.97 5.25.71.75-3.195 3.375-.355.375c-1.569 1.657-4.112 1.657-5.68 0zm6.308-3.674l-6.661-6.927c-1.059-1.113-2.692-1.191-3.648-.175-.956 1.015-.873 2.74.185 3.853l5.019 5.201c.907.953 2.307 1.021 3.127.15l1.978-2.102zm3.541-3.118c.996-1.056.937-2.825-.133-3.951-1.069-1.126-2.744-1.182-3.74-.126l-.988 1.003-1.439-1.385 1.085-1.105c1.764-1.864 4.625-1.864 6.39 0 1.764 1.864 1.764 4.886 0 6.75l-1.085 1.105-1.078-1.288.988-1.003z"></path>
+      </symbol>
+
+  </svg>
+
+  <!-- 用户信息侧 -->
+  <div class="user_info __user_info_side">
+    <!-- 头像 -->
+    <div class="navi_avatar navi_avater">
+      <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQIW2NkAAIAAAoAAggA9GkAAAAASUVORK5CYII='
+        alt="" class="__avatar" width="60" height="60" style="visibility: hidden;">
+      <span class="mask"></span>
+      <a href="javascript:;" class="option_toggle">
+<i class="icon icon_user">
+<svg class="svg_icon svg_icon_user" viewBox="0 0 20 20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg_icon_user"></use></svg>
+</i>
+<span class="inner">切换</span>
+</a>
+    </div>
+
+    <!-- 用户名 -->
+    <div class="user_name">
+      <a href="javascript:;" class="__nickname">&nbsp;</a>
+    </div>
+
+     <!--<div class="user_vcoin">
+      <a href="/u/wallet/vbshop.html">
+      <span class="user_vcoin_num" data-role="side_nav_vcoin">-</span>
+      <i class="icon_vcoin_sm"></i>
+     </a>
+    </div>-->
+
+    <!-- 成就 -->
+    <!-- <div class="achievement __achievement" style="visibility: hidden;">
+<a href="//v.qq.com/u/badge.html" class="icon_achievement">
+<img class="__achievement_icon">
+</a>
+<span class="desc __achievement_desc"></span>
+<i class="icon_xs icon_up_xs">
+<svg class="svg_icon svg_icon_up_xs" viewBox="0 0 9 10"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg_icon_up_xs"></use></svg>
+</i>
+</div> -->
+
+    <!-- 会员信息 -->
+    <div class="user_holly">
+      <a href='/u/hlw/hlw_index.html' class="icon_vip_link _icon_vip _new_vip" style="display: none;" _hot="uc.side.hlwicon">
+        <i class="icon_vip">
+        <em class="icon_vip_num"></em>
+        </i>
+      </a>
+      <span class="desc _vip_desc">开通VIP 大片抢先看</span>
+      <div class="desc none account-checker" style="line-height: 14px;"><span class="account-checker-type"></span> <span class="account-checker-nick" style="display: inline-block;max-width: 80px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;vertical-align: top;"></span> 是会员 <a href="javascript:;" data-type="switchlogin" style="color:#e3b54c">切换</a></div>
+      <a href="javascript:;" title="开通" class="btn_vip _vip_btn">开通</a>
+    </div>
+
+    <div class="user_level_detail _detail_svip">
+      <a href="#" class="icon_vip_link"><i class="icon_vip icon_svip"><i class="icon_vip_num"></i></i></a>
+      <span class="desc"></span>
+    </div>
+    <div class="user_level_detail _detail_vip">
+      <a href="#" class="icon_vip_link"><i class="icon_vip"><em class="icon_vip_num"></em></i></a>
+      <span class="desc"></span>
+    </div>
+  </div>
+
+
+<ul class="navigate_list">
+<!--
+<li class="item">
+  <a href="/u/wallet/vbtask.html" class="navi_inner"><i class="icon icon_task"><svg class="svg_icon" viewBox="0 0 20 20" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg_icon_task"></use></svg></i><span class="text">做任务赚V币</span></a>
+</li>
+-->
+<li class='item item_border'>
+  <a href="//film.qq.com/vip/my/index.html" class="navi_inner _vip_flat" _hot="uc.side._vip_flat"><i class="icon icon_vip_flat"><svg class="svg_icon svg_icon_vip_flat" viewBox="0 0 20 20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg_icon_vip_flat"></use></svg></i><span class="text">VIP会员</span></a>
+</li>
+
+<li class='item'>
+  <a href="/u/history" class="navi_inner _time" _hot="uc.side._time"><i class="icon icon_time"><svg class="svg_icon svg_icon_time" viewBox="0 0 20 20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg_icon_time"></use></svg></i><span class="text">观看历史</span></a>
+</li>
+
+<li class="item">
+  <a href="/u/doki.html" class="navi_inner _doki"><i class="icon icon_doki"><svg class="svg_icon" viewBox="0 0 20 20" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg_icon_doki"></use></svg></i><span class="text">我的doki明星</span></a>
+</li>
+
+<li class='item'>
+  <a href="/u/playlist.html" class="navi_inner _collect" _hot="uc.side._collect"><i class="icon icon_collect"><svg class="svg_icon svg_icon_collect" viewBox="0 0 20 20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg_icon_collect"></use></svg></i><span class="text">收藏</span><span class="icon_messpop" id="sidenav_notice_playlist" style="display:none;"></span></a>
+</li>
+
+<!--
+<li class='item '   >
+  <a href="/u/shoppingcart/" class="navi_inner _shopcar" _hot="uc.side._shopcar"><i class="icon icon_shopcar"><svg class="svg_icon svg_icon_shopcar" viewBox="0 0 20 20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg_icon_shopcar"></use></svg></i><span class="text">我的购物车</span></a>
+</li>
+<li class='item '   >
+  <a href="/u/ticket.html" class="navi_inner _film" _hot="uc.side._film"><i class="icon icon_film"><svg class="svg_icon svg_icon_film" viewBox="0 0 20 20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg_icon_film"></use></svg></i><span class="text">电影票</span></a>
+</li>
+-->
+
+<li class='item'>
+  <a href="/u/subscribe.html" class="navi_inner _follow" _hot="uc.side._follow"><i class="icon icon_follow"><svg class="svg_icon svg_icon_follow" viewBox="0 0 20 20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg_icon_follow"></use></svg></i><span class="text">订阅</span></a>
+</li>
+
+<li class="item">
+  <a href="/u/wallet/vbshop.html" class="navi_inner"><i class="icon icon_vstore"><svg class="svg_icon" viewBox="0 0 20 20" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg_icon_vstore"></use></svg></i><span class="text">商城</span></a>
+</li>
+
+<li class='item item_border'>
+  <a href="/u/comment/" class="navi_inner _message" _hot="uc.side._message"><i class="icon icon_message"><svg class="svg_icon svg_icon_message" viewBox="0 0 20 20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg_icon_message"></use></svg></i><span class="text">我的评论</span></a>
+</li>
+
+<li class='item'>
+  <a href="/u/message/" class="navi_inner _notice" _hot="uc.side._notice"><i class="icon icon_notice"><svg class="svg_icon svg_icon_notice" viewBox="0 0 20 20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg_icon_notice"></use></svg></i><span class="text">我的消息</span></a>
+</li>
+
+<li class='item'>
+  <a href="/u/upload.html" class="navi_inner _upload" _hot="uc.side._upload"><i class="icon icon_upload"><svg class="svg_icon svg_icon_upload" viewBox="0 0 20 20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg_icon_upload"></use></svg></i><span class="text">上传视频</span></a>
+</li>
+
+<li class='item'>
+  <a href="/u/videos" class="navi_inner _folder" _hot="uc.side._folder"><i class="icon icon_folder"><svg class="svg_icon svg_icon_folder" viewBox="0 0 20 20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg_icon_folder"></use></svg></i><span class="text">视频管理</span></a>
+</li>
+
+<li class='item'>
+  <a href="#" class="navi_inner _user" _hot="uc.side._user"><i class="icon icon_user"><svg class="svg_icon svg_icon_user" viewBox="0 0 20 20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg_icon_user"></use></svg></i><span class="text">个人频道</span></a>
+</li>
+
+<li class="item" role="realname-auth">
+  <a href="//v.qq.com/u/realname.html" class="navi_inner _realname"><i class="icon icon_approve"><svg class="svg_icon" viewBox="0 0 20 20" width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg_icon_approve"></use></svg></i><span class="text">实名认证</span></a>
+</li>
+
+<!-- <li class='item '   >
+  <a href="/u/routemanage/index.html" class="navi_inner _router" _hot="uc.side._router"><i class="icon icon_router"><svg class="svg_icon svg_icon_router" viewBox="0 0 20 20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg_icon_router"></use></svg></i><span class="text">企鹅路由</span></a>
+</li> -->
+
+<li class="item" id="fans_admin" style="display:none;">
+  <a href="//cp.doki.qq.com" target="_blank" class="navi_inner" _hot="uc.side._fans"><i class="icon icon_star"><svg class="svg_icon" viewBox="0 0 20 20" width="20" height="20"><use xlink:href="#svg_icon_star"></use></svg></i><span class="text">明星社区</span></a>
+</li>
+
+
+  </ul>
+</div>
+<script>
+  window.NAV_ROUTE = {};
+window.NAV_ROUTE['_wallet'] = '/u/wallet/';
+window.NAV_ROUTE['_vip_flat'] = '//film.qq.com/vip/my/index.html';
+window.NAV_ROUTE['_time'] = '/u/history';
+window.NAV_ROUTE['_collect'] = '/u/playlist.html';
+window.NAV_ROUTE['_shopcar'] = '/u/shoppingcart/';
+window.NAV_ROUTE['_film'] = '/u/ticket.html';
+window.NAV_ROUTE['_follow'] = '/u/subscribe.html';
+window.NAV_ROUTE['_message'] = '/u/comment/';
+window.NAV_ROUTE['_notice'] = '/u/message/';
+window.NAV_ROUTE['_upload'] = '/u/upload.html';
+window.NAV_ROUTE['_folder'] = '/u/videos';
+window.NAV_ROUTE['_user'] = '#';
+window.NAV_ROUTE['_data'] = '/u/data';
+window.NAV_ROUTE['_revenue'] = '/u/cash';
+window.NAV_ROUTE['_router'] = '/u/routemanage/index.html';
+window.NAV_ROUTE['_realname'] = '/u/realname.html';
+window.NAV_ROUTE['_doki'] = '/u/doki.html'
+</script>
+            <!-- 导航栏 结束 -->
+            <div class="wrapper_main">
+				<div class="main_content">
+			<div class="panel_title">
+				<ul class="mod_tab_list">
+					<li class="item item_my_vip current"><span class="txt">我的VIP信息</span></li>
+					<li class="item item_my_message" style="display: none;"><span class="txt">消息通知</span></li>
+					<li class="item item_my_buy"><span class="txt">购买记录</span></li>
+					<li class="item item_my_give"><span class="txt">赠片记录</span></li>
+				</ul>
+				<!--当切换我的会员信息，显示下面的a标签，其他情况隐藏-->
+				<div class="btn_exc_wrap">
+					<a class="btn_exc" target="_blank" href="http://film.qq.com/duihuan.html" title="兑换VIP会员"><i>+</i>兑换VIP会员</a>
+				</div>
+			</div>
+			
+			<!--我的会员信息 开始-->
+			<div class="panel_content my_vip" style="display: block;">
+			<!--会员专享信息-->
+				<!--年费会员 开始-->
+				<div class="mod_vip_info year_vip" style="display: none;">
+					<div class="vip_exp_time cf">
+						<div class="exp_time">
+							<div class="time_info vip_year_expire">
+								<p class="tit">年费到期时间</p>
+								<p class="time">2016-05-06</p>
+							</div>
+							<div class="time_info vip_expire">
+								<p class="tit">VIP到期时间</p>
+								<p class="time">2017-02-07</p>
+							</div>
+							<dl class="pay_info" >
+								<dt style="display: none;"><p class="txt">您现在只需续费<span class="num">4</span>个月，即可补齐下1年年费VIP会员。</p></dt>
+								<dd>
+									<a href="javascript:;" class="pay_btn">立即续费</a>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="vip_bar_out">
+		                <div class="vip_bar_inner">
+		                    <div class="vip_bar">
+		                    	<span class="bar_num">7457</span>
+		                    </div>
+		                    
+		                    <div class="vip_num_wrap">
+		                        <span class="vip_num vip_num_1">
+		                            <strong class="state">&nbsp;V1&nbsp;</strong>
+		                            <span class="score">1</span>
+		                            <i class="line"></i>
+		                        </span>
+		                        <span class="vip_num vip_num_2">
+		                            <strong class="state">V2</strong>
+		                            <span class="score">600</span>
+		                            <i class="line"></i>
+		                        </span>
+		                        <span class="vip_num vip_num_3">
+		                            <strong class="state">V3</strong>
+		                            <span class="score">1800</span>
+		                            <i class="line"></i>
+		                        </span>
+		                        <span class="vip_num vip_num_4">
+		                            <strong class="state">V4</strong>
+		                            <span class="score">3800</span>
+		                            <i class="line"></i>
+		                        </span>
+		                        <span class="vip_num vip_num_5">
+		                            <strong class="state">V5</strong>
+		                            <span class="score">8000</span>
+		                            <i class="line"></i>
+		                        </span>
+		                        <span class="vip_num vip_num_6">
+		                            <strong class="state">V6</strong>
+		                            <span class="score">16800</span>
+		                            <i class="line"></i>
+		                        </span>
+		                        <span class="vip_num vip_num_7">
+		                            <strong class="state">V7</strong>
+		                            <span class="score">36800</span>
+		                            <i class="line"></i>
+		                        </span>
+								<span class="vip_num vip_num_8">
+		                            <strong class="state">星光</strong>
+		                            <span class="score">53600</span>
+		                            <i class="line"></i>
+		                        </span>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="vip_state_speed">
+	                    <span class="state_txt">VIP等级：<span class="num">LV5</span></span><span class="line">|</span>
+	                    <span class="speed_txt">V力值：<span class="num">772</span>点
+	                </div>
+				</div>
+				<!--年费会员 结束-->
+				<!--年费过期 开始-->
+				<div class="mod_vip_info not_year_vip" style="display: none;">
+					<div class="vip_exp_time cf">
+						<div class="exp_time">
+							<div class="time_info">
+								<p class="tit">年费到期时间</p>
+								<p class="txt">您还不是年费VIP</p>
+							</div>
+							<div class="time_info vip_expire">
+								<p class="tit">VIP到期时间</p>
+								<p class="time">2017-02-07</p>
+							</div>
+							<dl class="pay_info pay_info_link">
+								<dt style="display: none;">
+									<p class="txt">您现在只需续费<span class="num">4</span>个月，即可成为年费VIP。</p>
+									<a href="http://film.qq.com/vip/index.html" target="_blank" class="know_link">更多&gt;&gt;</a>
+								</dt>
+								<dd>
+									<a href="javascript:;" class="pay_btn">立即续费</a>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="vip_bar_out">
+		                <div class="vip_bar_inner">
+		                    <div class="vip_bar">
+		                    	<span class="bar_num">7457</span>
+		                    </div>
+		                    
+		                    <div class="vip_num_wrap">
+		                        <span class="vip_num vip_num_1">
+		                            <strong class="state">&nbsp;V1&nbsp;</strong>
+		                            <span class="score">1</span>
+		                            <i class="line"></i>
+		                        </span>
+		                        <span class="vip_num vip_num_2">
+		                            <strong class="state">V2</strong>
+		                            <span class="score">600</span>
+		                            <i class="line"></i>
+		                        </span>
+		                        <span class="vip_num vip_num_3">
+		                            <strong class="state">V3</strong>
+		                            <span class="score">1800</span>
+		                            <i class="line"></i>
+		                        </span>
+		                        <span class="vip_num vip_num_4">
+		                            <strong class="state">V4</strong>
+		                            <span class="score">3800</span>
+		                            <i class="line"></i>
+		                        </span>
+		                        <span class="vip_num vip_num_5">
+		                            <strong class="state">V5</strong>
+		                            <span class="score">8000</span>
+		                            <i class="line"></i>
+		                        </span>
+		                        <span class="vip_num vip_num_6">
+		                            <strong class="state">V6</strong>
+		                            <span class="score">16800</span>
+		                            <i class="line"></i>
+		                        </span>
+		                        <span class="vip_num vip_num_7">
+		                            <strong class="state">V7</strong>
+		                            <span class="score">36400</span>
+		                            <i class="line"></i>
+		                        </span>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="vip_state_speed">
+	                    <span class="state_txt">VIP等级：<span class="num">V5</span></span><span class="line">|</span>
+	                    <span class="speed_txt">V力值：<span class="num">772</span>点
+	                </div>
+				</div>
+				<!--年费过期 结束-->
+				<!--开通会员 开始-->
+				<div class="mod_vip_tit" style="display: none;">
+		            <h3 class="vip_tit">
+		                <fieldset>
+		                    <legend>成为VIP会员</legend>
+		                </fieldset>
+		            </h3>
+		        </div>
+				<div class="mod_vip_join" style="display: none;">
+		            <div class="vip_join">
+		                <ul class="list list_4 cf">
+		                </ul>
+		            </div>
+		        </div>
+		        <!--开通会员 结束-->
+				<!--会员过期 开始-->
+				<div class="mod_vip_tit" style="display: none">
+		            <h3 class="vip_tit">
+		                <fieldset>
+		                    <legend>VIP特权</legend>
+		                </fieldset>
+		            </h3>
+		            <a href="http://film.qq.com/vip/priv.html?ptag=film.daohang" target="_blank" class="more">了解VIP特权&gt;&gt;</a>
+		        </div>
+				<div class="mod_vip_info not_vip" style="display: none;">
+					<div class="privilege_wrap">
+		                <!-- <p class="tit_txt"><span class="txt">您还不是好莱坞会员，开通会员即享以下专属特权。</span><a href="javascript:;" class="pay_btn">立即开通</a><a href="http://film.qq.com/vip/priv.html?ptag=film.daohang" class="know_link" target="_blank">了解会员特权&gt;&gt;</a></p> -->
+		                <div class="vip_privilege">
+			                <ul class="list cf">
+			                    <li class="item">
+				                    <a class="item_link" target="_blank" href="http://film.qq.com/vip/vip_privilege_detail.html?tab=0">
+				                        <span class="icon_privilege icon_privilege_new"></span>
+				                        <p class="name">院线新片全覆盖</p>
+				                    </a>
+			                    </li>
+			                    <li class="item">
+				                    <a class="item_link" target="_blank" href="http://film.qq.com/vip/vip_privilege_detail.html?tab=1">
+				                        <span class="icon_privilege icon_privilege_us"></span>
+				                        <p class="name">独家美剧免费看</p>
+			                     	</a>
+			                    </li>
+			                    <li class="item">
+				                    <a class="item_link" target="_blank" href="http://film.qq.com/vip/vip_privilege_detail.html?tab=5">
+				                        <span class="icon_privilege icon_privilege_ads"></span>
+				                        <p class="name">远离广告无干扰</p>
+			                        </a>
+			                    </li>
+			                    <li class="item">
+				                    <a class="item_link" target="_blank" href="http://film.qq.com/vip/vip_privilege_detail.html?tab=6">
+				                        <span class="icon_privilege icon_privilege_hd"></span>
+				                        <p class="name">1080P蓝光画质</p>
+			                        </a>
+			                    </li>
+			                    <li class="item">
+				                    <a class="item_link" target="_blank" href="http://film.qq.com/vip/vip_privilege_detail.html?tab=4">
+				                        <span class="icon_privilege icon_privilege_coupon"></span>
+				                        <p class="name">每月赠送观影券</p>
+			                        </a>
+			                    </li>
+			                    <li class="item">
+				                    <a class="item_link" target="_blank" href="http://film.qq.com/vip/vip_privilege_detail.html?tab=8">
+				                        <span class="icon_privilege icon_privilege_send"></span>
+				                        <p class="name">大片赠送好友看</p>
+			                       </a>
+			                    </li>
+			                    <li class="item">
+				                    <a class="item_link" target="_blank" href="http://film.qq.com/vip/vip_privilege_detail.html?tab=9">
+				                        <span class="icon_privilege icon_privilege_live"></span>
+				                        <p class="name">演唱会获赠道具</p>
+			                        </a>
+			                    </li>
+			                    <li class="item">
+				                    <a class="item_link" target="_blank" href="http://film.qq.com/vip/vip_privilege_detail.html?tab=0">
+				                        <span class="icon_privilege icon_privilege_hv"></span>
+				                        <p class="name">专享高速通道</p>
+			                        </a>
+			                    </li>
+			                    <li class="item">
+				                    <a class="item_link" target="_blank" href="http://film.qq.com/vip/vip_privilege_detail.html?tab=0">
+				                        <span class="icon_privilege icon_privilege_mobile"></span>
+				                        <p class="name">移动终端随时看</p>
+			                        </a>
+			                    </li>
+			                    <li class="item">
+				                    <a class="item_link" target="_blank" href="http://film.qq.com/vip/vip_privilege_detail.html?tab=7">
+				                        <span class="icon_privilege icon_privilege_vip"></span>
+				                        <p class="name">尊贵身份亮起来</p>
+				                    </a>
+			                    </li>
+			                </ul>
+			            </div>
+		            </div>
+				</div>
+				<!--会员过期 结束-->
+
+
+
+				<!--会员观影券 开始-->
+				<div class="mod_vip_tit">
+		            <h3 class="vip_tit">
+		                <fieldset>
+		                    <legend>VIP观影券</legend>
+		                </fieldset>
+		            </h3>
+		        </div>
+				<div class="mod_coupon_list">
+					<div class="coupon_tit">您目前拥有<span class="num"></span>张观影券，
+					<span class="js_coupon_next_give">下次赠券时间：<span class="time"></span>,</span>可用于支付VIP影院VIP用券影片。VIP每月按等级获赠VIP观影券。</div>
+					<div class="coupon_time">
+                        <div class="time_tit cf">
+                        	<span class="tit tit_1">获得时间</span>
+                        	<span class="tit tit_2">到期时间</span>
+                        	<span class="tit tit_3">张数</span>
+                        	<span class="tit tit_4">使用情况</span>
+                        </div>
+                        <div class="time_txt">
+                        	<div class="time_txt_inner">                        		
+                        	</div>
+                        	<div class="mod_pages">								
+							</div>
+                        </div>
+                    </div>
+				</div>
+				<!--会员观影券 结束-->
+				<!--会员专享大片 开始-->
+				<div class="content_col">
+					<div class="mod_vip_tit">
+						<h3 class="vip_tit">
+							<fieldset>
+								<legend>会员专享大片</legend>
+							</fieldset>
+						</h3>
+						<a href="//film.qq.com" target="_blank" class="more">更多&gt;&gt;</a>
+					</div>
+					<ul class="mod_vip_figure mod_vip_figure_v cf js_vipList">
+					
+					</ul>
+				</div>
+		        <!--会员专享大片 结束-->
+		        <!--会员活动 开始-->
+				<div class="content_col" id="vip_activity" style="display: none">
+					<div class="mod_vip_tit">
+						<h3 class="vip_tit">
+							<fieldset>
+								<legend>推荐活动/专题</legend>
+							</fieldset>
+						</h3>
+					</div>
+					<ul class="mod_vip_act cf" id="vip_activities">
+
+					</ul>
+				</div>
+		        <!--会员活动 结束-->
+		    </div>
+		    <!--我的会员信息 结束-->
+
+		    <!--消息通知 开始-->
+			<div class="panel_content my_message" style="display: none;">
+				<!--有消息 开始-->
+				<div class="mod_filter_bar">
+
+					<div class="layout_toggle">
+						<a href="javascript:;" class="btn_normal btn_empty">清空</a>
+					</div>
+
+				</div>
+				<ul class="mod_message_figures">
+					
+				</ul>
+
+				<div class="mod_pages">
+					
+				</div>
+				<!--有消息 结束-->
+				<!--无消息 开始-->
+				<div class="mod_empty_data" style="display: none;">
+					<i class="icon_empty_200"></i>
+					<span class="text">您暂时还没有消息哦！</span>
+				</div>
+				<!--无消息 结束-->
+
+			</div>
+			<!--消息通知 结束-->
+
+			<!--购买记录 开始-->
+			<div class="panel_content my_buy" style="display: none;">
+			    <!--有购买记录，有过期影片的状态 开始-->
+					<!--已购买有效影片 开始-->
+					<div class="content_col has_active" style="display: none;">
+						<div class="mod_vip_tit">
+				            <h3 class="vip_tit">
+				                <fieldset>
+				                    <legend></legend>
+				                </fieldset>
+				            </h3>
+				        </div>
+		                <ul class="mod_vip_figure mod_vip_figure_v cf">
+		                	<!--鼠标经过 加hover 形如<li class="list_item hover">-->
+		           
+		                </ul>
+	                </div>
+					
+					<div class="content_col not_has_active" >
+						<div class="mod_vip_tit">
+				            <h3 class="vip_tit">
+				                <fieldset>
+				                    <legend>有效影片</legend>
+				                </fieldset>
+				            </h3>
+				        </div>
+				        <div class="mod_vip_noreg">
+		                	<p class="noreg_txt">您暂时还没有在有效期内的影片的购买记录，点击<a href="http://film.qq.com/film_all_list/allfilm.html?type=movie" target="_blank" class="link">这里</a>去VIP影院挑选节目吧~</p>
+		                </div>
+	                </div>
+			        
+			        <!--已购买有效影片 结束-->
+			        <!--已过期影片 开始-->
+			        <div class="content_col has_expire" style="display: none;">
+						<div class="mod_vip_tit">
+				            <h3 class="vip_tit">
+				                <fieldset>
+				                    <legend></legend>
+				                </fieldset>
+				            </h3>
+				        </div>
+		                <ul class="mod_vip_figure mod_vip_figure_v cf">
+		                	<!--鼠标经过 加hover 形如<li class="list_item hover">-->
+		                   
+		                </ul>
+			        </div>
+			        <!--已过期影片 结束-->
+			    <!--有购买记录，有过期影片的状态 结束-->
+
+			    <!--无购买记录，有过期影片的状态 开始-->
+			        <!--已购买有效影片 开始-->
+					
+			        
+			        <!--已购买有效影片 结束-->
+			        <!--已过期影片 开始-->
+					<div class="content_col not_has_expire" >
+						<div class="mod_vip_tit">
+				            <h3 class="vip_tit">
+				                <fieldset>
+				                    <legend>已过期影片</legend>
+				                </fieldset>
+				            </h3>
+				        </div>
+				        <div class="mod_vip_noreg">
+		                	<p class="noreg_txt">您暂时还没有已过期影片记录</p>
+		                </div>
+	                </div>
+			        <!--已过期影片 结束-->
+		        <!--有购买记录，无过期影片的状态 结束-->
+
+		        
+			</div>
+			<!--购买记录 结束-->
+
+			<!--赠片记录 开始-->
+			<div class="panel_content my_give" style="display: none;">
+			    <!--有赠片的状态 开始-->
+					<!--剩余赠片部数 开始-->
+					<div class="content_col">
+						<div class="mod_surplus_list">
+							<dl class="surplus_list cf">
+								<dt>
+									<p class="tit">剩余赠片部数</p>
+									<p class="txt"><span class="num">...</span>部</p>
+								</dt>
+								<dd>
+									<p class="info_txt">
+										<a href="javascript:;" class="link">什么是微信赠片特权？</a>
+										<a href="http://film.qq.com/film_all_list/allfilm.html?type=movie" target="_blank" class="send_link">立即挑选影片赠送给好友&gt;&gt;</a></p>
+									<p class="info_txt">1、赠送影片为VIP特权，每月按等级获得，有效期为31天<span class="js_send_next_give_hint"></span>。</p>
+									<p class="info_txt">2、每次赠送消耗1次赠片机会，支持微信好友、朋友圈、QQ空间、微博，同部影片只消耗1次赠片资格。</p>
+									<p class="info_txt">3、每部影片可由5位好友领取，先到先得。</p>									
+								</dd>
+							</dl>
+						</div>
+	                </div>
+			        
+			        <!--剩余赠片部数 结束-->
+			        <!--已过期影片 开始-->
+			        <div class="content_col detail_my_give">
+						<div class="mod_vip_tit">
+				            <h3 class="vip_tit">
+				                <fieldset>
+				                    <legend></legend>
+				                </fieldset>
+				            </h3>
+				        </div>
+		                <ul class="mod_vip_figure mod_vip_figure_v cf">
+		                	<!--鼠标经过 加hover 形如<li class="list_item hover">-->
+		                    
+		                </ul>
+			        </div>
+			        <!--已过期影片 结束-->
+			    <!--有赠片的状态 结束-->
+			    <!--无赠片的状态 开始-->
+					<!--剩余赠片部数 开始-->
+					
+			        
+			        <!--剩余赠片部数 结束-->
+			        <!--已过期影片 开始-->
+			        <div class="content_col detail_my_give_not " style="display: none;">
+						<div class="mod_vip_tit">
+				            <h3 class="vip_tit">
+				                <fieldset>
+				                    <legend>已赠送影片（0）</legend>
+				                </fieldset>
+				            </h3>
+				        </div>
+		                <div class="mod_empty_data">
+							<i class="icom_emoji_cry"></i>
+							<span class="text">您暂时还没有赠片记录</span>
+						</div>
+			        </div>
+			        <!--已过期影片 结束-->
+			    <!--无赠片的状态 结束-->
+			</div>
+			<!--赠片记录 结束-->
+			</div>
+		</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="mod_vip_footer">
+    <div class="vip_footer_inner cf">
+        <div class="icon_fly" data-role="mod" data-processors="report" data-stat-f_module="侧边栏" _expose="mod_sidebar">
+    <a href="javascript:void(0);" class="icon_fly_link js_topbtn" style="display: none" data-stat-f_module="侧边栏" data-stat-f_resource="返回顶部" _hot="mod_sidebar:button" _expose="mod_sidebar:button">
+        <i class="icon_lg icon_backup_lg">
+            <svg class="svg_icon svg_icon_backup_lg" viewBox="0 0 30 30">
+                <path d="M15 12l9 9c1.469 1.156 2.375 0 2.375 0 .781-.938.156-2.031-.346-2.57l-10-10A1.74 1.74 0 0 0 15 8a1.74 1.74 0 0 0-1.029.43l-10 10c-.502.539-1.127 1.633-.346 2.57 0 0 .906 1.156 2.375 0l9-9z"></path>
+            </svg>
+        </i>
+        <span>返回顶部</span>
+    </a>
+    <a href="javascript:void(0);" class="icon_fly_link js_focusUs">
+        <i class="icon_lg icon_followqr_lg">
+            <svg class="svg_icon svg_icon_followqr_lg" viewBox="0 0 30 30">
+                <g>
+                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#727272" d="M22.621,27.104h-3.587v-2.689h2.689
+								c1.98,0,3.587-1.606,3.587-3.587v-2.689H28v3.586C28,24.694,25.592,27.104,22.621,27.104z M25.311,9.173
+								c0-1.98-1.606-3.586-3.587-3.586h-2.689V2.897h3.587C25.592,2.897,28,5.305,28,8.276v3.586h-2.689V9.173z M4.689,9.173v2.689H2
+								V8.276c0-2.971,2.409-5.379,5.379-5.379h3.586v2.689h-2.69C6.295,5.586,4.689,7.192,4.689,9.173z M8.276,13.655h13.448v2.689H8.276
+								V13.655z M4.689,20.827c0,1.98,1.606,3.587,3.586,3.587h2.69v2.689H7.379C4.409,27.104,2,24.694,2,21.724v-3.586h2.689V20.827z"></path>
+                </g>
+            </svg>
+        </i>
+        <span>关注我们</span>
+    </a>
+    <a href="//film.qq.com/support/help.html?ptag=help.home.web" target="_blank" class="icon_fly_link" data-stat-f_module="侧边栏" data-stat-f_resource="帮助服务" _hot="mod_sidebar:button" ="mod_sidebar:button">
+        <i class="icon_lg icon_feedback_lg">
+            <svg class="svg_icon svg_icon_feedback_lg" viewBox="0 0 30 30">
+                <g>
+                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#9B9B9B" d="M25.064,23.387c-0.469,0-0.904-0.119-1.298-0.314
+								c-1.215,1.145-2.637,2.071-4.213,2.703c-0.134,0.55-0.607,0.967-1.198,0.967h-5.033c-0.694,0-1.258-0.563-1.258-1.259
+								c0-0.694,0.564-1.258,1.258-1.258h5.033c0.474,0,0.872,0.273,1.086,0.661c1.337-0.563,2.557-1.346,3.613-2.305
+								c-0.567-0.535-0.926-1.289-0.926-2.13v-7.969c-0.54-3.801-3.576-6.71-7.129-6.71s-6.565,2.909-7.129,6.71v7.969
+								c0,1.62-1.315,2.935-2.936,2.935C3.314,23.387,2,22.072,2,20.452v-4.194c0-2.085,1.69-3.774,3.774-3.774H5.353
+								C5.904,7.288,10.066,3.258,15,3.258c4.934,0,9.072,4.03,9.645,9.226h-0.419c2.085,0,3.774,1.689,3.774,3.774v4.194
+								C28,22.072,26.686,23.387,25.064,23.387z"></path>
+                </g>
+            </svg>
+        </i>
+        <span>帮助服务</span>
+    </a>
+    <span class="qr_pic js_wxQrImg" style="display: none;" data-stat-f_module="侧边栏" data-stat-f_resource="二维码" _expose="mod_sidebar:button">
+				<img src="https://puui.qpic.cn/vupload/0/20190508_1557305047539_n82hyjdaqw.png/0" class="img_weixin" alt="微信官方账号">
+			</span>
+</div>
+    </div>
+</div>
+
+
+
+
+<div class="site_footer">
+	<div class="footer_inner">
+		<div class="mod_footer_contentinfo cf">
+			<div class="contentinfo_column contentinfo_channel">
+				<em class="contentinfo_title">热门频道</em>
+				<ul>
+					
+    <li  class='item_3'><a href='http://v.qq.com/tv/' target='_blank'  title='电视剧' _hot='{pagetype}.footbar.hot.1'>电视剧</a></li><li ><a href='http://v.qq.com/variety/' target='_blank'  title='综艺' _hot='{pagetype}.footbar.hot.2'>综艺</a></li><li ><a href='http://v.qq.com/movie/' target='_blank'  title='电影' _hot='{pagetype}.footbar.hot.3'>电影</a></li><li ><a href='http://v.qq.com/ent/' target='_blank'  title='娱乐' _hot='{pagetype}.footbar.hot.4'>娱乐</a></li><li ><a href='http://v.qq.com/music/' target='_blank'  title='MV' _hot='{pagetype}.footbar.hot.5'>MV</a></li><li ><a href='http://v.qq.com/cartoon/' target='_blank'  title='动漫' _hot='{pagetype}.footbar.hot.6'>动漫</a></li><li ><a href='http://v.qq.com/games/' target='_blank'  title='游戏' _hot='{pagetype}.footbar.hot.7'>游戏</a></li><li  class='item_4'><a href='http://film.qq.com' target='_blank'  title='VIP影院' _hot='{pagetype}.footbar.hot.8'>VIP影院</a></li><li  class='item_3'><a href='http://v.qq.com/tv/yingmei/' target='_blank'  title='英美剧' _hot='{pagetype}.footbar.hot.9'>英美剧</a></li><li  class='item_3'><a href='http://v.qq.com/doco/' target='_blank'  title='纪录片' _hot='{pagetype}.footbar.hot.10'>纪录片</a></li><li ><a href='http://v.qq.com/news/' target='_blank'  title='新闻' _hot='{pagetype}.footbar.hot.11'>新闻</a></li><li ><a href='http://v.qq.com/sports/' target='_blank'  title='体育' _hot='{pagetype}.footbar.hot.12'>体育</a></li><li ><a href='http://v.qq.com/life/' target='_blank'  title='生活' _hot='{pagetype}.footbar.hot.13'>生活</a></li><!--[if !IE]>|xGv00|37004d0491fa7d85db7e0b6349f3a048<![endif]-->
+				</ul>
+			</div>
+			<div class="contentinfo_column contentinfo_feature">
+				<em class="contentinfo_title">特色推荐</em>
+				<ul>
+					
+    <li  class='item_5'><a href='http://v.qq.com/videoplus/' target='_blank'  title='原创自媒体' _hot='{pagetype}.footbar.special.1'>原创自媒体</a></li><li  class='item_3'><a href='http://v.qq.com/dv/' target='_blank'  title='微电影' _hot='{pagetype}.footbar.special.2'>微电影</a></li><li ><a href='http://v.qq.com/paike/' target='_blank'  title='拍客' _hot='{pagetype}.footbar.special.3'>拍客</a></li><li ><a href='http://v.qq.com/hotshare/' target='_blank'  title='搞笑' _hot='{pagetype}.footbar.special.4'>搞笑</a></li><!--[if !IE]>|xGv00|d866fff45657538033983dd0d469c4f9<![endif]-->
+				</ul>
+			</div>
+			<div class="contentinfo_column contentinfo_download">
+				<em class="contentinfo_title">软件下载</em>
+				<ul>
+					
+    <li ><a href='http://v.qq.com/download.html#pc' target='_blank'  title='PC版' _hot='{pagetype}.footbar.download.1'>PC版</a></li><li ><a href='http://v.qq.com/download.html#phone' target='_blank'  title='iPhone版' _hot='{pagetype}.footbar.download.2'>iPhone版</a></li><li ><a href='http://v.qq.com/download.html#pad' target='_blank'  title='iPad版' _hot='{pagetype}.footbar.download.3'>iPad版</a></li><li ><a href='http://v.qq.com/download.html#tv' target='_blank'  title='TV版' _hot='{pagetype}.footbar.download.4'>TV版</a></li><li ><a href='http://v.qq.com/download.html#phone' target='_blank'  title='Android Phone版' _hot='{pagetype}.footbar.download.5'>Android Phone版</a></li><!--[if !IE]>|xGv00|c757883369e170c2eedec79563d71217<![endif]-->
+				</ul>
+			</div>
+			<div class="contentinfo_column contentinfo_service">
+				<em class="contentinfo_title">服务</em>
+				<ul>
+					
+    <li ><a href='http://kf.qq.com/product/QQlive.html' target='_blank'  title='客服' _hot='{pagetype}.footbar.service.1'>客服</a></li><li ><a href='https://support.qq.com/products/2208' target='_blank'  title='反馈' _hot='{pagetype}.footbar.service.2'>反馈</a></li><li ><a href='http://v.qq.com/qinquan/q1.html' target='_blank'  title='投诉' _hot='{pagetype}.footbar.service.3'>投诉</a></li><li ><a href='http://v.qq.com/open/index.html' target='_blank'  title='免广告合作' _hot='{pagetype}.footbar.service.4'>免广告合作</a></li><!--[if !IE]>|xGv00|50fe2943e16f80a385ff71c4cab27aa4<![endif]-->
+				</ul>
+			</div>
+		</div>
+		<div class="mod_footer"><!--placeholder-->
+			<div class="footermenu">
+				<a href="http://www.tencent.com/" rel="nofollow" target="_blank">关于腾讯</a> | <a href="http://www.tencent.com/index_e.shtml" rel="nofollow" target="_blank">About Tencent</a> | <a href="http://www.qq.com/contract.shtml" rel="nofollow" target="_blank">服务条款</a> | <a href="http://www.tencentmind.com/" rel="nofollow" target="_blank">广告服务</a> | <a href="http://hr.tencent.com/" rel="nofollow" target="_blank">腾讯招聘</a> | <a href="http://service.qq.com/" rel="nofollow" target="_blank">客服中心</a> | <a href="http://www.qq.com/map/" rel="nofollow" target="_blank">网站导航</a>
+			</div>
+			<div class="copyrighten">Copyright © 1998 - <span><script>document.write(new Date().getFullYear());</script></span> Tencent. <a target="_blank" href="http://www.tencent.com/en-us/le/copyrightstatement.shtml" rel="nofollow">All Rights Reserved.</a></div>
+			<div class="copyrightzh">腾讯公司 <a target="_blank" href="http://www.tencent.com/zh-cn/le/copyrightstatement.shtml" rel="nofollow">版权所有</a> <a target="_blank" href="http://www.tencent.com/law/mo_law.shtml?/law/copyright.htm" rel="nofollow">腾讯网络文化经营许可证</a></div>
+		</div>
+	</div>
+</div><!--[if !IE]>|xGv00|4e8337cf30aab310ca6b85b4e7c7234f<![endif]-->
+<div class="mask_layer" style="display:none;"></div>
+<div id="ipop" class="x_modal mod_pop" style="display:none;">
+	<!--[if IE]><iframe src="about:blank" frameborder="0" class="x_iframe_mask"></iframe><![endif]-->
+	<div class="x_modal_bd mod_pop_hd" style="height:auto">
+		<a href="javascript:;" class="x_close mod_pop_close">关闭</a>
+		<div class="x_icon_line"><i class="x_iconfont x_icon_warning"></i></div>
+		<h3 class="x_title">您确定要删除订单吗？?</h3>
+		<div class="x_desc">删除后将不可恢复</div>
+	</div>
+	<div class="x_modal_ft mod_pop_ft">
+		<a class="x_btn btn_normal" href="javascript:;">取消</a>
+		<a class="x_btn x_btn_primary btn_strong" href="javascript:;">确定</a>
+	</div>
+</div>
+<script type="text/javascript" src="//vm.gtimg.cn/tencentvideo_v1/script/txv.core.js"></script>
+<script src="//vm.gtimg.cn/tencentvideo/script/txv.sea.js"></script>
+<script type="text/javascript" src="//vm.gtimg.cn/tencentvideo_v1/script/usercenter/common/side_nav_2016.js?v=20150326"></script>
+<script type="text/javascript" src="//vm.gtimg.cn/tencentvideo_v1/script/vip.minipay.js"></script>
+<script type="text/javascript" src="//vm.gtimg.cn/tencentvideo_v1/js/vip.lev.js"></script>
+<script type="text/javascript" charset="utf-8" src="//vm.gtimg.cn/tencentvideo_v1/script/film/open/hlwstats.js?max_age=31104000"></script>
+<script type="text/javascript">
+	
+	pageInit();
+	window.HLWSTATE && window.HLWSTATE.pgvMain();
+
+	$('._vip_flat').parent().addClass('current');
+	
+</script>
+<script type="text/javascript" src="//tajs.qq.com/stats?sId=26678786" charset="UTF-8"></script>
+<script>
+    !function(t){function n(e){if(r[e])return r[e].exports;var i=r[e]={i:e,l:!1,exports:{}};return t[e].call(i.exports,i,i.exports,n),i.l=!0,i.exports}var r={};n.m=t,n.c=r,n.i=function(t){return t},n.d=function(t,r,e){n.o(t,r)||Object.defineProperty(t,r,{configurable:!1,enumerable:!0,get:e})},n.n=function(t){var r=t&&t.__esModule?function(){return t["default"]}:function(){return t};return n.d(r,"a",r),r},n.o=function(t,n){return Object.prototype.hasOwnProperty.call(t,n)},n.p="/",n(n.s=12)}([function(t,n,r){var e,i,o="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t};(function(){function r(t){function n(n,r,e,i,o,u){for(;o>=0&&o<u;o+=t){var c=i?i[o]:o;e=r(e,n[c],c,n)}return e}return function(r,e,i,o){e=k(e,o,4);var u=!M(r)&&j.keys(r),c=(u||r).length,a=t>0?0:c-1;return arguments.length<3&&(i=r[u?u[a]:a],a+=t),n(r,e,i,u,a,c)}}function u(t){return function(n,r,e){r=E(r,e);for(var i=T(n),o=t>0?0:i-1;o>=0&&o<i;o+=t)if(r(n[o],o,n))return o;return-1}}function c(t,n,r){return function(e,i,o){var u=0,c=T(e);if("number"==typeof o)t>0?u=o>=0?o:Math.max(o+c,u):c=o>=0?Math.min(o+1,c):o+c+1;else if(r&&o&&c)return o=r(e,i),e[o]===i?o:-1;if(i!==i)return o=n(d.call(e,u,c),j.isNaN),o>=0?o+u:-1;for(o=t>0?u:c-1;o>=0&&o<c;o+=t)if(e[o]===i)return o;return-1}}function a(t,n){var r=F.length,e=t.constructor,i=j.isFunction(e)&&e.prototype||p,o="constructor";for(j.has(t,o)&&!j.contains(n,o)&&n.push(o);r--;)(o=F[r])in t&&t[o]!==i[o]&&!j.contains(n,o)&&n.push(o)}var f=this,s=f._,l=Array.prototype,p=Object.prototype,h=Function.prototype,v=l.push,d=l.slice,y=p.toString,m=p.hasOwnProperty,g=Array.isArray,b=Object.keys,_=h.bind,w=Object.create,x=function(){},j=function K(t){return t instanceof K?t:this instanceof K?void(this._wrapped=t):new K(t)};void 0!==t&&t.exports&&(n=t.exports=j),n._=j,j.VERSION="1.8.3";var k=function(t,n,r){if(void 0===n)return t;switch(null==r?3:r){case 1:return function(r){return t.call(n,r)};case 2:return function(r,e){return t.call(n,r,e)};case 3:return function(r,e,i){return t.call(n,r,e,i)};case 4:return function(r,e,i,o){return t.call(n,r,e,i,o)}}return function(){return t.apply(n,arguments)}},E=function(t,n,r){return null==t?j.identity:j.isFunction(t)?k(t,n,r):j.isObject(t)?j.matcher(t):j.property(t)};j.iteratee=function(t,n){return E(t,n,Infinity)};var O=function(t,n){return function(r){var e=arguments.length;if(e<2||null==r)return r;for(var i=1;i<e;i++)for(var o=arguments[i],u=t(o),c=u.length,a=0;a<c;a++){var f=u[a];n&&void 0!==r[f]||(r[f]=o[f])}return r}},S=function(t){if(!j.isObject(t))return{};if(w)return w(t);x.prototype=t;var n=new x;return x.prototype=null,n},A=function(t){return function(n){return null==n?void 0:n[t]}},I=Math.pow(2,53)-1,T=A("length"),M=function(t){var n=T(t);return"number"==typeof n&&n>=0&&n<=I};j.each=j.forEach=function(t,n,r){n=k(n,r);var e,i;if(M(t))for(e=0,i=t.length;e<i;e++)n(t[e],e,t);else{var o=j.keys(t);for(e=0,i=o.length;e<i;e++)n(t[o[e]],o[e],t)}return t},j.map=j.collect=function(t,n,r){n=E(n,r);for(var e=!M(t)&&j.keys(t),i=(e||t).length,o=Array(i),u=0;u<i;u++){var c=e?e[u]:u;o[u]=n(t[c],c,t)}return o},j.reduce=j.foldl=j.inject=r(1),j.reduceRight=j.foldr=r(-1),j.find=j.detect=function(t,n,r){var e;if(void 0!==(e=M(t)?j.findIndex(t,n,r):j.findKey(t,n,r))&&e!==-1)return t[e]},j.filter=j.select=function(t,n,r){var e=[];return n=E(n,r),j.each(t,function(t,r,i){n(t,r,i)&&e.push(t)}),e},j.reject=function(t,n,r){return j.filter(t,j.negate(E(n)),r)},j.every=j.all=function(t,n,r){n=E(n,r);for(var e=!M(t)&&j.keys(t),i=(e||t).length,o=0;o<i;o++){var u=e?e[o]:o;if(!n(t[u],u,t))return!1}return!0},j.some=j.any=function(t,n,r){n=E(n,r);for(var e=!M(t)&&j.keys(t),i=(e||t).length,o=0;o<i;o++){var u=e?e[o]:o;if(n(t[u],u,t))return!0}return!1},j.contains=j.includes=j.include=function(t,n,r,e){return M(t)||(t=j.values(t)),("number"!=typeof r||e)&&(r=0),j.indexOf(t,n,r)>=0},j.invoke=function(t,n){var r=d.call(arguments,2),e=j.isFunction(n);return j.map(t,function(t){var i=e?n:t[n];return null==i?i:i.apply(t,r)})},j.pluck=function(t,n){return j.map(t,j.property(n))},j.where=function(t,n){return j.filter(t,j.matcher(n))},j.findWhere=function(t,n){return j.find(t,j.matcher(n))},j.max=function(t,n,r){var e,i,o=-Infinity,u=-Infinity;if(null==n&&null!=t){t=M(t)?t:j.values(t);for(var c=0,a=t.length;c<a;c++)(e=t[c])>o&&(o=e)}else n=E(n,r),j.each(t,function(t,r,e){((i=n(t,r,e))>u||i===-Infinity&&o===-Infinity)&&(o=t,u=i)});return o},j.min=function(t,n,r){var e,i,o=Infinity,u=Infinity;if(null==n&&null!=t){t=M(t)?t:j.values(t);for(var c=0,a=t.length;c<a;c++)(e=t[c])<o&&(o=e)}else n=E(n,r),j.each(t,function(t,r,e){((i=n(t,r,e))<u||i===Infinity&&o===Infinity)&&(o=t,u=i)});return o},j.shuffle=function(t){for(var n,r=M(t)?t:j.values(t),e=r.length,i=Array(e),o=0;o<e;o++)n=j.random(0,o),n!==o&&(i[o]=i[n]),i[n]=r[o];return i},j.sample=function(t,n,r){return null==n||r?(M(t)||(t=j.values(t)),t[j.random(t.length-1)]):j.shuffle(t).slice(0,Math.max(0,n))},j.sortBy=function(t,n,r){return n=E(n,r),j.pluck(j.map(t,function(t,r,e){return{value:t,index:r,criteria:n(t,r,e)}}).sort(function(t,n){var r=t.criteria,e=n.criteria;if(r!==e){if(r>e||void 0===r)return 1;if(r<e||void 0===e)return-1}return t.index-n.index}),"value")};var U=function(t){return function(n,r,e){var i={};return r=E(r,e),j.each(n,function(e,o){var u=r(e,o,n);t(i,e,u)}),i}};j.groupBy=U(function(t,n,r){j.has(t,r)?t[r].push(n):t[r]=[n]}),j.indexBy=U(function(t,n,r){t[r]=n}),j.countBy=U(function(t,n,r){j.has(t,r)?t[r]++:t[r]=1}),j.toArray=function(t){return t?j.isArray(t)?d.call(t):M(t)?j.map(t,j.identity):j.values(t):[]},j.size=function(t){return null==t?0:M(t)?t.length:j.keys(t).length},j.partition=function(t,n,r){n=E(n,r);var e=[],i=[];return j.each(t,function(t,r,o){(n(t,r,o)?e:i).push(t)}),[e,i]},j.first=j.head=j.take=function(t,n,r){if(null!=t)return null==n||r?t[0]:j.initial(t,t.length-n)},j.initial=function(t,n,r){return d.call(t,0,Math.max(0,t.length-(null==n||r?1:n)))},j.last=function(t,n,r){if(null!=t)return null==n||r?t[t.length-1]:j.rest(t,Math.max(0,t.length-n))},j.rest=j.tail=j.drop=function(t,n,r){return d.call(t,null==n||r?1:n)},j.compact=function(t){return j.filter(t,j.identity)};var q=function Y(t,n,r,e){for(var i=[],o=0,u=e||0,c=T(t);u<c;u++){var a=t[u];if(M(a)&&(j.isArray(a)||j.isArguments(a))){n||(a=Y(a,n,r));var f=0,s=a.length;for(i.length+=s;f<s;)i[o++]=a[f++]}else r||(i[o++]=a)}return i};j.flatten=function(t,n){return q(t,n,!1)},j.without=function(t){return j.difference(t,d.call(arguments,1))},j.uniq=j.unique=function(t,n,r,e){j.isBoolean(n)||(e=r,r=n,n=!1),null!=r&&(r=E(r,e));for(var i=[],o=[],u=0,c=T(t);u<c;u++){var a=t[u],f=r?r(a,u,t):a;n?(u&&o===f||i.push(a),o=f):r?j.contains(o,f)||(o.push(f),i.push(a)):j.contains(i,a)||i.push(a)}return i},j.union=function(){return j.uniq(q(arguments,!0,!0))},j.intersection=function(t){for(var n=[],r=arguments.length,e=0,i=T(t);e<i;e++){var o=t[e];if(!j.contains(n,o)){for(var u=1;u<r&&j.contains(arguments[u],o);u++);u===r&&n.push(o)}}return n},j.difference=function(t){var n=q(arguments,!0,!0,1);return j.filter(t,function(t){return!j.contains(n,t)})},j.zip=function(){return j.unzip(arguments)},j.unzip=function(t){for(var n=t&&j.max(t,T).length||0,r=Array(n),e=0;e<n;e++)r[e]=j.pluck(t,e);return r},j.object=function(t,n){for(var r={},e=0,i=T(t);e<i;e++)n?r[t[e]]=n[e]:r[t[e][0]]=t[e][1];return r},j.findIndex=u(1),j.findLastIndex=u(-1),j.sortedIndex=function(t,n,r,e){r=E(r,e,1);for(var i=r(n),o=0,u=T(t);o<u;){var c=Math.floor((o+u)/2);r(t[c])<i?o=c+1:u=c}return o},j.indexOf=c(1,j.findIndex,j.sortedIndex),j.lastIndexOf=c(-1,j.findLastIndex),j.range=function(t,n,r){null==n&&(n=t||0,t=0),r=r||1;for(var e=Math.max(Math.ceil((n-t)/r),0),i=Array(e),o=0;o<e;o++,t+=r)i[o]=t;return i};var B=function(t,n,r,e,i){if(!(e instanceof n))return t.apply(r,i);var o=S(t.prototype),u=t.apply(o,i);return j.isObject(u)?u:o};j.bind=function(t,n){if(_&&t.bind===_)return _.apply(t,d.call(arguments,1));if(!j.isFunction(t))throw new TypeError("Bind must be called on a function");var r=d.call(arguments,2);return function e(){return B(t,e,n,this,r.concat(d.call(arguments)))}},j.partial=function(t){var n=d.call(arguments,1);return function r(){for(var e=0,i=n.length,o=Array(i),u=0;u<i;u++)o[u]=n[u]===j?arguments[e++]:n[u];for(;e<arguments.length;)o.push(arguments[e++]);return B(t,r,this,this,o)}},j.bindAll=function(t){var n,r,e=arguments.length;if(e<=1)throw new Error("bindAll must be passed function names");for(n=1;n<e;n++)r=arguments[n],t[r]=j.bind(t[r],t);return t},j.memoize=function(t,n){var r=function e(r){var i=e.cache,o=""+(n?n.apply(this,arguments):r);return j.has(i,o)||(i[o]=t.apply(this,arguments)),i[o]};return r.cache={},r},j.delay=function(t,n){var r=d.call(arguments,2);return setTimeout(function(){return t.apply(null,r)},n)},j.defer=j.partial(j.delay,j,1),j.throttle=function(t,n,r){var e,i,o,u=null,c=0;r||(r={});var a=function(){c=r.leading===!1?0:j.now(),u=null,o=t.apply(e,i),u||(e=i=null)};return function(){var f=j.now();c||r.leading!==!1||(c=f);var s=n-(f-c);return e=this,i=arguments,s<=0||s>n?(u&&(clearTimeout(u),u=null),c=f,o=t.apply(e,i),u||(e=i=null)):u||r.trailing===!1||(u=setTimeout(a,s)),o}},j.debounce=function(t,n,r){var e,i,o,u,c,a=function f(){var a=j.now()-u;a<n&&a>=0?e=setTimeout(f,n-a):(e=null,r||(c=t.apply(o,i),e||(o=i=null)))};return function(){o=this,i=arguments,u=j.now();var f=r&&!e;return e||(e=setTimeout(a,n)),f&&(c=t.apply(o,i),o=i=null),c}},j.wrap=function(t,n){return j.partial(n,t)},j.negate=function(t){return function(){return!t.apply(this,arguments)}},j.compose=function(){var t=arguments,n=t.length-1;return function(){for(var r=n,e=t[n].apply(this,arguments);r--;)e=t[r].call(this,e);return e}},j.after=function(t,n){return function(){if(--t<1)return n.apply(this,arguments)}},j.before=function(t,n){var r;return function(){return--t>0&&(r=n.apply(this,arguments)),t<=1&&(n=null),r}},j.once=j.partial(j.before,2);var R=!{toString:null}.propertyIsEnumerable("toString"),F=["valueOf","isPrototypeOf","toString","propertyIsEnumerable","hasOwnProperty","toLocaleString"];j.keys=function(t){if(!j.isObject(t))return[];if(b)return b(t);var n=[];for(var r in t)j.has(t,r)&&n.push(r);return R&&a(t,n),n},j.allKeys=function(t){if(!j.isObject(t))return[];var n=[];for(var r in t)n.push(r);return R&&a(t,n),n},j.values=function(t){for(var n=j.keys(t),r=n.length,e=Array(r),i=0;i<r;i++)e[i]=t[n[i]];return e},j.mapObject=function(t,n,r){n=E(n,r);for(var e,i=j.keys(t),o=i.length,u={},c=0;c<o;c++)e=i[c],u[e]=n(t[e],e,t);return u},j.pairs=function(t){for(var n=j.keys(t),r=n.length,e=Array(r),i=0;i<r;i++)e[i]=[n[i],t[n[i]]];return e},j.invert=function(t){for(var n={},r=j.keys(t),e=0,i=r.length;e<i;e++)n[t[r[e]]]=r[e];return n},j.functions=j.methods=function(t){var n=[];for(var r in t)j.isFunction(t[r])&&n.push(r);return n.sort()},j.extend=O(j.allKeys),j.extendOwn=j.assign=O(j.keys),j.findKey=function(t,n,r){n=E(n,r);for(var e,i=j.keys(t),o=0,u=i.length;o<u;o++)if(e=i[o],n(t[e],e,t))return e},j.pick=function(t,n,r){var e,i,o={},u=t;if(null==u)return o;j.isFunction(n)?(i=j.allKeys(u),e=k(n,r)):(i=q(arguments,!1,!1,1),e=function(t,n,r){return n in r},u=Object(u));for(var c=0,a=i.length;c<a;c++){var f=i[c],s=u[f];e(s,f,u)&&(o[f]=s)}return o},j.omit=function(t,n,r){if(j.isFunction(n))n=j.negate(n);else{var e=j.map(q(arguments,!1,!1,1),String);n=function(t,n){return!j.contains(e,n)}}return j.pick(t,n,r)},j.defaults=O(j.allKeys,!0),j.create=function(t,n){var r=S(t);return n&&j.extendOwn(r,n),r},j.clone=function(t){return j.isObject(t)?j.isArray(t)?t.slice():j.extend({},t):t},j.tap=function(t,n){return n(t),t},j.isMatch=function(t,n){var r=j.keys(n),e=r.length;if(null==t)return!e;for(var i=Object(t),o=0;o<e;o++){var u=r[o];if(n[u]!==i[u]||!(u in i))return!1}return!0};var N=function G(t,n,r,e){if(t===n)return 0!==t||1/t==1/n;if(null==t||null==n)return t===n;t instanceof j&&(t=t._wrapped),n instanceof j&&(n=n._wrapped);var i=y.call(t);if(i!==y.call(n))return!1;switch(i){case"[object RegExp]":case"[object String]":return""+t==""+n;case"[object Number]":return+t!=+t?+n!=+n:0==+t?1/+t==1/n:+t==+n;case"[object Date]":case"[object Boolean]":return+t==+n}var u="[object Array]"===i;if(!u){if("object"!=(void 0===t?"undefined":o(t))||"object"!=(void 0===n?"undefined":o(n)))return!1;var c=t.constructor,a=n.constructor;if(c!==a&&!(j.isFunction(c)&&c instanceof c&&j.isFunction(a)&&a instanceof a)&&"constructor"in t&&"constructor"in n)return!1}r=r||[],e=e||[];for(var f=r.length;f--;)if(r[f]===t)return e[f]===n;if(r.push(t),e.push(n),u){if((f=t.length)!==n.length)return!1;for(;f--;)if(!G(t[f],n[f],r,e))return!1}else{var s,l=j.keys(t);if(f=l.length,j.keys(n).length!==f)return!1;for(;f--;)if(s=l[f],!j.has(n,s)||!G(t[s],n[s],r,e))return!1}return r.pop(),e.pop(),!0};j.isEqual=function(t,n){return N(t,n)},j.isEmpty=function(t){return null==t||(M(t)&&(j.isArray(t)||j.isString(t)||j.isArguments(t))?0===t.length:0===j.keys(t).length)},j.isElement=function(t){return!(!t||1!==t.nodeType)},j.isArray=g||function(t){return"[object Array]"===y.call(t)},j.isObject=function(t){var n=void 0===t?"undefined":o(t);return"function"===n||"object"===n&&!!t},j.each(["Arguments","Function","String","Number","Date","RegExp","Error"],function(t){j["is"+t]=function(n){return y.call(n)==="[object "+t+"]"}}),j.isArguments(arguments)||(j.isArguments=function(t){return j.has(t,"callee")}),"function"!=typeof/./&&"object"!=("undefined"==typeof Int8Array?"undefined":o(Int8Array))&&(j.isFunction=function(t){return"function"==typeof t||!1}),j.isFinite=function(t){return isFinite(t)&&!isNaN(parseFloat(t))},j.isNaN=function(t){return j.isNumber(t)&&t!==+t},j.isBoolean=function(t){return t===!0||t===!1||"[object Boolean]"===y.call(t)},j.isNull=function(t){return null===t},j.isUndefined=function(t){return void 0===t},j.has=function(t,n){return null!=t&&m.call(t,n)},j.noConflict=function(){return f._=s,this},j.identity=function(t){return t},j.constant=function(t){return function(){return t}},j.noop=function(){},j.property=A,j.propertyOf=function(t){return null==t?function(){}:function(n){return t[n]}},j.matcher=j.matches=function(t){return t=j.extendOwn({},t),function(n){return j.isMatch(n,t)}},j.times=function(t,n,r){var e=Array(Math.max(0,t));n=k(n,r,1);for(var i=0;i<t;i++)e[i]=n(i);return e},j.random=function(t,n){return null==n&&(n=t,t=0),t+Math.floor(Math.random()*(n-t+1))},j.now=Date.now||function(){return(new Date).getTime()};var C={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","`":"&#x60;"},P=j.invert(C),$=function(t){var n=function(n){return t[n]},r="(?:"+j.keys(t).join("|")+")",e=RegExp(r),i=RegExp(r,"g");return function(t){return t=null==t?"":""+t,e.test(t)?t.replace(i,n):t}};j.escape=$(C),j.unescape=$(P),j.result=function(t,n,r){var e=null==t?void 0:t[n];return void 0===e&&(e=r),j.isFunction(e)?e.call(t):e};var L=0;j.uniqueId=function(t){var n=++L+"";return t?t+n:n},j.templateSettings={evaluate:/<%([\s\S]+?)%>/g,interpolate:/<%=([\s\S]+?)%>/g,escape:/<%-([\s\S]+?)%>/g};var V={"'":"'","\\":"\\","\r":"r","\n":"n","\u2028":"u2028","\u2029":"u2029"},D=function(t){return"\\"+V[t]};j.template=function(t,n,r){!n&&r&&(n=r),n=j.defaults({},n,j.templateSettings);var e=RegExp([(n.escape||/(.)^/).source,(n.interpolate||/(.)^/).source,(n.evaluate||/(.)^/).source].join("|")+"|$","g"),i=0,o="__p+='";t.replace(e,function(n,r,e,u,c){return o+=t.slice(i,c).replace(/\\|'|\r|\n|\u2028|\u2029/g,D),i=c+n.length,r?o+="'+\n((__t=("+r+"))==null?'':_.escape(__t))+\n'":e?o+="'+\n((__t=("+e+"))==null?'':__t)+\n'":u&&(o+="';\n"+u+"\n__p+='"),n}),o+="';\n",n.variable||(o="with(obj||{}){\n"+o+"}\n"),o="var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};\n"+o+"return __p;\n";try{var u=new Function(n.variable||"obj","_",o)}catch(f){throw f.source=o,f}var c=function(t){return u.call(this,t,j)},a=n.variable||"obj";return c.source="function("+a+"){\n"+o+"}",c},j.chain=function(t){var n=j(t);return n._chain=!0,n};var z=function(t,n){return t._chain?j(n).chain():n};j.mixin=function(t){j.each(j.functions(t),function(n){var r=j[n]=t[n];j.prototype[n]=function(){var t=[this._wrapped];return v.apply(t,arguments),z(this,r.apply(j,t))}})},j.mixin(j),j.each(["pop","push","reverse","shift","sort","splice","unshift"],function(t){var n=l[t];j.prototype[t]=function(){var r=this._wrapped;return n.apply(r,arguments),"shift"!==t&&"splice"!==t||0!==r.length||delete r[0],z(this,r)}}),j.each(["concat","join","slice"],function(t){var n=l[t];j.prototype[t]=function(){return z(this,n.apply(this._wrapped,arguments))}}),j.prototype.value=function(){return this._wrapped},j.prototype.valueOf=j.prototype.toJSON=j.prototype.value,j.prototype.toString=function(){return""+this._wrapped},e=[],(i=function(){return j}.apply(n,e))!==undefined&&(t.exports=i)}).call(this)},function(t,n,r){"use strict";function e(t,n){return t&&t.hasOwnProperty&&t.hasOwnProperty(n)}var i={escape:function(t){return t?String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/'/g,"&#39;").replace(/"/g,"&quot;"):""},type:function(t){if(null===t)return"null";if(void 0===t)return"undefined";var n=/\[object (\w+)\]/.exec(Object.prototype.toString.call(t));return n?n[1].toLowerCase():""},keys:function o(t){var o=[];return t?Object.keys?Object.keys(t):(this.objEach(t,function(t){o.push(t)}),o):o},bind:function(t,n){return t.bind?t.bind(n):function(){return t.apply(n,arguments)}},extend:function(t){if("object"!=this.type(t)&&"function"!=this.type(t))return t;for(var n,r,i=1,o=arguments.length;i<o;i++){n=arguments[i];for(r in n)e(n,r)&&(t[r]=n[r])}return t},trim:function(t){return t.trim?t.trim():t.replace(/^\s+|\s+$/gm,"")},indexOf:function(t,n){if(t.indexOf)return t.indexOf(n);var r=-1;return i.some(t,function(t,e){if(t===n)return r=e,!0}),r},forEach:function(t,n){if(t.forEach)return t.forEach(n);for(var r=t.length,e=0;e<r;e++)n(t[e],e);return t},some:function(t,n){if(t.some)return t.some(n);for(var r=t.length,e=!1,i=0;i<r;i++)if(n(t[i],i)){e=!0;break}return e},map:function(t,n){if(t.map)return t.map(n);for(var r=t.length,e=[],i=0;i<r;i++)e.push(n(t[i],i));return e},objEach:function(t,n){if(t)for(var r in t)if(e(t,r)&&n(r,t[r])===!1)break},reduce:function(t,n){if("function"!=i.type(n))throw new TypeError("Array.prototype.reduce callback must be a function");var r=t.length;if(0===r&&2===arguments.length)throw new TypeError("reduce of empty array with no initial value");var e,o=0;if(arguments.length>=3)e=arguments[2];else for(;;){if(o in t){e=t[o++];break}if(++o>=r)throw new TypeError("reduceRight of empty array with no initial value")}for(;o<r;o++)e=n(e,t[o],o,t);return e},filter:function(t,n,r){if(t.filter)return t.filter(n);for(var e=t.length,i=[],o=0;o<e;o++){var u=t[o];n.call(r,u,o,t)&&i.push(u)}return i},nextTick:function(){var t=this;return function(){setTimeout.apply(t,arguments)}}(),lock:function(t){var n;return function(){if(!n){n=!0;var r=[].slice.call(arguments,0);r.unshift(function(){n=!1}),t.apply(this,r)}}},queue:function(t,n){function r(){var t=e.shift();if(!t)return void(o=n);o--;var u=t[0],c=t[1],a=t[2];a.unshift(function(){o++,r.apply(this,arguments)}),i.nextTick(function(){return u.apply(c,a)})}n=n||1;var e=[],o=n;return function(){if(e.push([t,this,[].slice.call(arguments,0)]),o)return r()}},delegator:function(t){var n,r=[];return function(e){if(n)return r.push(e);n=!0,t.call(this,function(){n=!1;var t=this,o=arguments;e&&e.apply(t,o),i.forEach(r,function(n){n&&n.apply(t,o)})})}},once:function(t){var n,r=arguments;return function(){if(!n&&t)return n=!0,t.apply(r.length>=2?r[1]:null,arguments)}},verCompare:function(t,n){if(t===n)return 0;t=t.split("."),n=n.split(".");for(var r=t.length>=n.length?t.length:n.length,e=0;r--;){var i=Number(t[e]||0),o=Number(n[e++]||0);if(o>i)return 1;if(o<i)return-1}return 0}};t.exports=i},function(t,n,r){"use strict";function e(){}t.exports=function(t){var n=document.createElement("img");n.onerror=e,n.onload=e,n.onabort=e,n.src=t}},function(t,n,r){"use strict";t.exports={set:function(t,n,r,e,i){if(i){var o=new Date,u=new Date;u.setTime(o.getTime()+36e5*i)}return document.cookie=t+"="+n+"; "+(i?"expires="+u.toGMTString()+"; ":"")+(e?"path="+e+"; ":"path=/; ")+(r?"domain="+r+";":"domain="+window.location.host+";"),!0},get:function(t,n){var r=new RegExp("(?:^|;+|\\s+)"+t+"=([^;]*)"),e=(n||document.cookie).match(r);return e?e[1]:""},del:function(t,n,r){var e=new Date;e.setTime(e.getTime()-1),document.cookie=t+"=; expires="+e.toGMTString()+";"+(r?"path="+r+"; ":"path=/; ")+(n?"domain="+n+";":"domain="+window.location.host+";")}}},function(t,n,r){"use strict";function e(t){return Object.prototype.toString.call(t)}function i(t){return"[object Object]"==e(t)}function o(t,n,r){var e="";if(!t)throw new Error("[util.url.buildUrl]url is required");return n&&null!==n?(e=u(n,r),e&&e.length?[t,t.indexOf("?")>-1?"&":"?",e].join(""):t):t}function u(t,n){var r,e,i,o=[];for(r in t)e=t[r],null!=(i=c(r,e,n))&&""!==i&&o.push(i);return o.join("&")}function c(t,n,r){var e,o,u=void 0===n?"undefined":a(n),f=0,s=[];if("number"==u||"string"==u||"boolean"==u)return[t,r?encodeURIComponent(n):n].join("=");if(i(n))for(e in n)s.push(c([t,"[",e,"]"].join(""),n[e],r));else if(Array.isArray(n))for(o=n.length;f<o;f++)s.push(c([t,"[",f,"]"].join(""),n[f],r));return s=s.filter(function(t){return null!=t}),s.length?s.join("&"):""}var a="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t};t.exports={buildUrl:o,buildQueryStr:u}},function(t,n,r){"use strict";function e(){$(document.body).on("click","[_hot]",function(t){var n=$(t.currentTarget),r=a(n);l.click(r,c(n))})}function i(t){var n=t.find("[_expose]");t.attr("_expose")&&(n=n.add(t)),n.each(function(t,n){var r=$(n),e=(r.attr("_expose"),h(n,p.throttle(function(){r.attr("_expose")&&(u(r),setTimeout(function(){e&&e()},0))},50)))})}function o(t){l.click(a(t),c(t))}function u(t){var n=a(t);l.expose(n),t.removeAttr("_expose").attr("__expose",n.f_hottag)}function c(t){return"A"==t.prop("tagName")&&("_blank"!=t.attr("target")&&!/^(javascript:|#)/i.test(t.attr("href")))}function a(t){var n=t.data(),r={},e=t.attr("_hot")||t.attr("_expose");return p.each(n,function(t,n){/^stat[A-Z]+/.test(n)&&(r[s(n)]=t)}),r.f_hottag=e,~e.indexOf(":cover")&&!r.f_cid&&p.extend(r,{f_cid:f(t)}),r}function f(t){var n;return t.data("cid")?t.data("cid"):"A"==t.prop("tagName")&&t.attr("href")?(n=t.attr("href").match(/\/cover\/\w\/(\w+)\.html/),n?n[1]:""):""}function s(t){var t=t.replace(/^stat/,"");return t.charAt(0).toLowerCase()+t.substring(1)}var l=r(14),p=r(0),h=r(7);t.exports={init:function(t){l.init(t||{version:"2.0.0"}),l.pv(),e()},click:o,expose:u,listenExpose:i}},function(t,n,r){"use strict";function e(){this._evtObjs={},this._outdatedMsgs={}}function i(){}var o=r(1);e.prototype.on=function(t,n,r){this._evtObjs[t]||(this._evtObjs[t]=[]),this._evtObjs[t].push({handler:n,once:r});var e=this;return function(){e.off(t,n)}},e.prototype.wait=function(t,n){return this._outdatedMsgs[t]?(n.apply(null,this._outdatedMsgs[t]),i):this.on(t,n,!0)},e.prototype.off=function(t,n){var r,e=this;return r=t?[t]:o.keys(this._evtObjs),o.forEach(r,function(t){if(n){var r=e._evtObjs[t]||[],i=[];o.forEach(r,function(t){t.handler!==n&&i.push(t)}),e._evtObjs[t]=i}else e._evtObjs[t]=[]}),this},e.prototype.emit=function(t){var n=Array.prototype.slice.call(arguments,1);this._outdatedMsgs[t]=n;var r=this._evtObjs[t]||[];o.forEach(r,function(t){t.once&&t.called||(t.called=!0,t.handler&&t.handler.apply(null,n))})},e.prototype.emitAsync=function(){var t=arguments,n=this;setTimeout(function(){n.emit.apply(n,t)},0)},e.prototype.assign=function(t){var n=this;o.forEach(["on","off","wait","emit","emitAsync"],function(r){var e=n[r];t[r]=function(){return e.apply(n,arguments)}})},(new e).assign(e),t.exports=e},function(t,n,r){"use strict";function e(t,n){function r(r){var s,l,p=!r||r===document.body;p&&!m?s=c(t):p||m||(l=r.getBoundingClientRect().height);var v=!1,b=!1,_=function(i,o){if(!e.once||!b){var u;if(p){if(s=m||!s.height?c(t):s,!s.height)return;var a=s.top-g,f=s.bottom;e.offset&&(a-=e.offset,f+=e.offset),u=d?i+o>a&&i<f:i+o>a}else if(!p){var h=t.getBoundingClientRect();if(!h.height)return;var _=l||r.getBoundingClientRect().height,a=h.top-g;e.offset&&(a-=e.offset),u=d?a>-h.height&&a<_:a<_}var w=v;if(!u)return void(v=!1);v=!0,(y&&!w||!y)&&(b=!0,n&&n())}},w=h.on("scroll",_);return p?i():(a(r,"scroll",_),_(o(),u())),function(){w(),p||f(r,"scroll",_)}}var e={},p=arguments;"object"==l.type(n)&&(e=n,n=p[2]);var d=s(e,"visible",!0),y=s(e,"enter",!1),m=s(e,"recalc",!1),g=e.offsetTop||0,b=v(t);if(l.some(b.parents,function(t){return document.body===t}))return r(b.scrollParent);var _,w=setTimeout(function(){_=r(v(t).scrollParent)});return function(){clearTimeout(w),_&&_()}}function i(){if(y.throttle){if(m)return;m=!0,setTimeout(function(){m=!1,h.emit("scroll",o(),u())},y.throttle)}else h.emit("scroll",o(),u())}function o(){return window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop}function u(){return"BackCompat"==document.compatMode?document.body.clientHeight:document.documentElement.clientHeight}function c(t){var n=t.getBoundingClientRect();return{top:n.top+o(),bottom:n.bottom+o(),height:n.bottom-n.top}}function a(t,n,r){d?t.attachEvent("on"+n,r):t.addEventListener(n,r)}function f(t,n,r){d?t.detachEvent("on"+n,r):t.removeEventListener(n,r)}function s(t,n,r){return t.hasOwnProperty(n)?!!t[n]:r}var l=r(1),p=r(6),h=new p,v=r(8),d=!document.addEventListener,y={};a(window,"scroll",i),a(window,"resize",i),e.set=function(t,n){return y[t]=n,e},e.message=h,h.on("update",i),t.exports=e;var m},function(t,n,r){"use strict";function e(t,n){n=n||[];var r=t.parentNode;return r?(n.push(r),r===document.body?n:e(r,n)):n}function i(t){if(!t)return"";var n;if(window.getComputedStyle)try{n=window.getComputedStyle(t)}catch(r){}else t.currentStyle&&(n=t.currentStyle);return n?n["overflow-y"]||n.overflow:""}function o(t){return/(auto|scroll)/.test(i(t))}t.exports=function(t){for(var n=e(t),r=document.body,i=0;i<n.length;i++){var u=n[i];if(u===document.body||o(u)){r=u;break}}return{parents:n,scrollParent:r}}},function(module,exports,__webpack_require__){var cookie=__webpack_require__(3),report=__webpack_require__(2),storage=function(){var t=!1;try{window.localStorage&&(t=!0)}catch(r){}var n=location.hostname||location.host;return t?{get:function(t){return localStorage.getItem(t)},set:function(t,n){return localStorage.setItem(t,n)},clear:function(t){return localStorage.removeItem(t)}}:{get:function(t){return cookie.get(t)},set:function(t,r){return cookie.set(t,r,n)},clear:function(t){return cookie.set(t,"",n)}}}(),reg=/^(?:ht|f)tp(?:s)?\:\/\/(?:[\w\-\.]+)\.\w+/i,k="txv_lazyreport_list",d="|",clear=function(){return storage.clear(k)},shift=function(){var t=storage.get(k);if(!t)return"";var n=t.split(d),r=n.shift();return storage.set(k,n.join(d)),r?decodeURIComponent(r):""},push=function(t){if(t){var n=storage.get(k),r=[];n&&(r=n.split(d)),r.push(encodeURIComponent(t)),storage.set(k,r.join(d))}},reportItem=function reportItem(item){if(reg.test(item))try{!!report&&report(item)}catch(e){}else setTimeout(function(){try{eval(item)}catch(e){}},0)},_report=function(){for(var t=shift();t;)reportItem(t),t=shift()};module.exports={push:push,clear:clear,report:_report}},function(t,n){var r={"<":"&#60;",">":"&#62;",'"':"&#34;","'":"&#39;","&":"&#38;"},e=function(t){return r[t]};t.exports=function(t){return(""+t).replace(/&(?![\w#]+;)|[<>"']/g,e)}},function(t,n,r){"use strict";var e=r(10);t.exports={get:function(t,n){var r=new RegExp("(\\?|#|&)"+t+"=([^&#]*)(&|#|$)");n=n||location.href;var i=n.match(r);return i?e(i[2]):""},del:function(t){var n=new RegExp("(\\?|#|&)"+t+"=([^&#]*)(&|#|$)"),r=location.href.match(n);r=r?r[2]:"";try{window.history&&history.replaceState&&history.replaceState(null,null,location.href.replace(t+"="+r,""))}catch(e){}}}},function(t,n,r){!function(){function t(t){throw new URIError("The script "+t.target.src+" is not accessible.")}function n(n,r){var e=document.createElement("script");e.type="text/javascript",e.onerror=t,r&&(e.onload=r),document.currentScript.parentNode.insertBefore(e,document.currentScript),e.src=n}function e(){var t=0,n=$(".js_topbtn"),r=$(".js_wxQrImg"),e=$(".js_focusUs"),i=$(document);$(window).on("scroll",_.throttle(function(){t=i.scrollTop(),t>700&&n.is(":hidden")&&(n.fadeIn(),n.attr("_expose")&&o.expose(n)),t<=700&&n.is(":visible")&&n.fadeOut()},50)),n.on("click",function(){i.scrollTop(0)}),e.on("mouseenter",function(){r.stop(!0,!0),r.fadeIn(),r.attr("_expose")&&o.expose(r)}).on("mouseleave",function(){r.stop(!0,!0),r.fadeOut()})}function i(){"function"==typeof _?e():n("//vm.gtimg.cn/tencentvideo_v1/script/film/weixin/v2/lib/underscore.js",function(){e()})}Array.prototype.forEach||(Array.prototype.forEach=function(t,n){var r,e;if(null==this)throw new TypeError(" this is null or not defined");var i=Object(this),o=i.length>>>0;if("function"!=typeof t)throw new TypeError(t+" is not a function");for(arguments.length>1&&(r=n),e=0;e<o;){var u;e in i&&(u=i[e],t.call(r,u,e,i)),e++}});var o=r(5);o.init(),o.listenExpose($(".mod_vip_footer")),o.listenExpose($(".site_footer")),"function"==typeof jQuery?i():n("//vm.gtimg.cn/tencentvideo_v1/script/film/film_index_prevuce/jquery-1.9.1.min.js",function(){i()}),"undefined"==typeof window.Ta&&n("//tajs.qq.com/stats?sId=26678786")}()},function(t,n,r){"use strict";function e(t){if(!t||!t.bossId||!t.pwd)throw new Error("[report.Boss]bossId and pwd is required");this._cfg=t,this._baseUrl=o.buildUrl(c,{BossId:t.bossId,Pwd:t.pwd})}var i=r(2),o=r(4),u=r(15),c="//btrace.qq.com/kvcollect";e.prototype={_baseUrl:"",report:function(t){var n=this;return u.reqAnimFrame(function(){i(n.buildReportUrl(t))}),this},buildReportUrl:function(t){return o.buildUrl(this._baseUrl,t,!0)},setBaseUrl:function(t){return this._baseUrl=t,this},getBaseUrl:function(){return this._baseUrl}},t.exports=e},function(t,n,r){"use strict";function e(t){var n;t&&t.version&&(g=t.version),c=new f(m.PV),a=new f(m.EVENT),n={f_url:location.href.split("?")[0],f_url_param:location.href.split("?")[1]||"",f_dm:location.host,_dc:Math.random(),f_version:g,f_pagetag:u(),f_vip:0},d.get().then(function(t){n.f_vip=t.isVip()?1:0}).always(function(){var t;for(c.setBaseUrl(s.buildUrl(c.getBaseUrl(),n)),a.setBaseUrl(s.buildUrl(a.getBaseUrl(),n)),w=!0;b.shift();)c.report(o());for(;t=_.shift();)i.apply(null,t)})}function i(t,n,r){return w?v.isObject(n)&&!n.f_hottag?void console.warn("[report.vBoss._report]f_hottag is required"):(v.isString(n)&&(n={f_hottag:n}),n.f_event=t||y,v.extend(n,o()),void(r===!0?h.push(a.buildReportUrl(n)):a.report(n))):void _.push([t,n,r])}function o(){var t=l.get("main_login"),n="",r="";return"qq"==t?n=l.get("uin")||l.get("luin")||l.get("o_cookie"):"wx"==t&&(n=l.get("openid"),r=l.get("appid")),{f_logintype:t,f_uid:n,f_appid:r}}function u(){var t="";return["ptag","PTAG"].forEach(function(n){t||(t=p.get(n)||sessionStorage&&sessionStorage.getItem(n)||l.get(n))}),t}var c,a,f=r(13),s=r(4),l=r(3),p=r(11),h=r(9),v=r(0),d=r(16),y="click",m={PV:{bossId:3754,pwd:598288292},EVENT:{bossId:3753,pwd:1449912345}},g="",b=[],_=[],w=!1;t.exports={init:e,click:function(t,n){i(y,t,n)},expose:function(t,n){i("expose",t,n)},pv:function(){if(!w)return void b.push(1);c.report(o())},flush:function(){h.report()},report:i}},function(t,n,r){"use strict";function e(t){return"[object Function]"==Object.prototype.toString.call(t)}var i,o=r(0),u=["webkit","moz","ms","o"],c=function(){return window.requestAnimationFrame||o.find(u.map(function(t){return window[t+"RequestAnimationFrame"]}),function(t){return e(t)})||function(t){var n,r=Date.now(),e=Math.max(0,16-(r-i));return n=setTimeout(t,e),i=r+e,n}}();t.exports={reqAnimFrame:function(t){c.call(window,t)}}},function(t,n,r){"use strict";function e(t){this.data=t||{}}var i=txv.vip,o=[0,600,1800,3600,6e3,10800,32400],u=[2,2,4,4,5,5,6];e.prototype={isVip:function(){return 1==this.data.vip},isYear:function(){return this.isVip()&&!!this.data.annualvip},isAnnual:function(){return this.isYear()},isAnnualExpire:function(){return!this.data.annualvip&&this.data.annualendtime>0},isExpire:function(){return!this.isVip()&&""!=this.data.endTime},prevLevel:function(){return Math.max(this.level()-1,0)},prevScore:function(){return o[this.isMax()?this.prevLevel()-1:this.prevLevel()]||0},score:function(){return this.data.score},level:function(){return this.data.level},nextLevel:function(){return Math.min(this.data.level+1,this.maxLevel())},nextScore:function(){return this.isVip()||this.isExpire()?o[this.isMax()?this.level()-1:this.level()]:0},ratio:function(t){if("total"===(t=t||"update"))return Math.min(this.score()/_.last(o),1);var n=this.prevScore();return Math.min((this.score()-n)/(this.nextScore()-n),1)},percent:function(t){return 100*this.ratio(t)+"%"},toYear:function(){return Math.max(Math.ceil(this.data.annualneedtime/2678400),1)},toSmartYear:function(){var t=this.toYear();return 2===t||3===t?3:t>=8?12:t},levelUp:function(t){t=t||"days";var n=this.data.dailyscore,r=Math.ceil((this.nextScore()-this.score())/n);return levelChange(r,t)},degrade:function(t){t=t||"days";var n=this.prevScore()-1,r=Math.ceil((this.score()-n)/Math.abs(this.data.dailyscore));return levelChange(r,t)},inRange:function(){return this.score()<=_.last(o)},isMax:function(){return this.level()===o.length},maxLevel:function(){return o.length},tickets:function(){var t=this.level();return u[t-1]},get:function(t){return this.data[t]}},e.get=function(){return i.getVipInfo().then(function(t){return $.Deferred().resolve(new e(t)).promise()})},t.exports=e}]);
+
+
+    function getQrAd () {
+        var deferred = $.Deferred();
+        $.ajax('//vip.video.qq.com/fcgi-bin/comm_cgi?name=spp_VipActConf_V2&cmd=2&posId=47&platform=1', {
+            cache: false,
+            dataType: 'jsonp',
+            success: function (data) {
+                if(data && data.posList && data.posList.length) {
+                    var list = data.posList
+                    if (list && list.length) {
+                        if (list[0].code === 0) {
+                            var confData = list[0].confData
+                            if (confData && confData.length) {
+                            var conf = confData[0]
+                            if (conf.begTime && conf.endTime) {
+                                var begTime = new Date(conf.begTime.replace('-', '/'))
+                                var endTime = new Date(conf.endTime.replace('-', '/'))
+                                var now = new Date().getTime()
+                                if (begTime.toString() !== 'Invalid Date' &&  endTime.toString() !== 'Invalid Date') {
+                                    if (begTime.getTime() < now && endTime.getTime() > now) {
+                                        deferred.resolve(conf);
+                                        return
+                                    }
+                                } else {
+                                deferred.resolve(conf);
+                                    return
+                                }
+                            } else {
+                                deferred.resolve(conf);
+                                return
+                            }
+                            }
+                        }
+                    }
+                }
+
+                deferred.resolve('');
+            },
+            error: function () {
+                deferred.resolve([]);
+            }
+        });
+
+        return deferred;
+    }
+
+    function init() {
+         // 站内场景增加推广位
+         getQrAd().then(function (qr) {
+            if (!qr) {
+                $('.js_wxQrImg').style({
+                    width: '84px', height: '84px', padding: '3px'
+                }).html('<img src="https://puui.qpic.cn/vupload/0/20190508_1557305047539_n82hyjdaqw.png/0" class="img_weixin" alt="微信官方账号">')
+                return
+            }
+            var html = [
+                '<div style="box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.18); width: 100%; height: 100%;">',
+                    '<div style="float: left; padding: 39px 0 39px 20px;">',
+                        '<div style="margin-bottom: 7px;">',
+                        '<img src="' + qr.little_icon + '" style="width: 25px; float: left"><span style="color: ' + qr.title_color + '; font-size: 14px; height: 25px; line-height: 25px">' + qr.title + '</span>',
+                        '</div>',
+                        '<div><span style="color: ' + qr.subtitle_color + '; font-size: 12px">' + qr.subtitle + '</span></div>',
+                    '</div>',
+
+                    '<img src="' + qr.QR_code + '" style="float: left;width: 90px;height: 90px;padding: 19px 10px">',
+                '</div>'
+            ]
+            $('.js_wxQrImg').html(html.join('\n'))
+            $('.js_wxQrImg').css({
+                width: '324px', height: '128px', padding: 0
+            })
+        })
+    }
+
+    txv.login.addReadyCallback(function () {
+        init(txv.login.isLogin());
+    });
+
+    txv.login.addLoginCallback(function(){
+        init(true);
+    });
+
+    txv.login.addLogoutCallback(function(){
+        init(false);
+    });
+</script>
+</body>
+</html>

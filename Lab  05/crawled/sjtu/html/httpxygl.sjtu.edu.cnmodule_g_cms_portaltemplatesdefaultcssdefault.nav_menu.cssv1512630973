@@ -1,0 +1,84 @@
+/**
+ * 默认导航菜单样式
+ * 
+ * @version $Id: default.nav_menu.css 4402 2017-12-19 10:09:35Z shengyj $
+ * @creator liqt @ 2013-06-24 11:27:58 by caster0.0.3
+ */
+@media all {
+	.sf-menu {
+	}
+	
+    #nav-menu {
+        height: 40px;
+        line-height: 40px;
+        border-top:1px solid #ddd; 
+        border-bottom:1px solid #ddd;
+        box-shadow: 0 3px 3px #ccc;
+    }
+    
+    #nav-menu .ym-wrapper {
+    }
+    
+    #nav-menu ul.menu{
+        
+    }
+    #nav-menu ul.menu a, #nav-menu ul.menu a:visited  {
+        color: #333;
+    }
+    
+    #nav-menu ul.menu li.level-1 {
+        font-size: 14px;
+        width:148.8px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-right:1px solid #efefef; 
+    }
+    #nav-menu ul.menu li.level-1:FIRST-CHILD{
+        border-left:1px solid #efefef; 
+    }
+    
+    #nav-menu ul.menu a.level-1:hover, 
+    #nav-menu ul.menu li.sfHover a.level-1,
+    #nav-menu ul.menu a.level-1.active{
+        color: #fff;
+        font-weight: bold;
+        background-color: #243d7b
+    }
+    
+    #nav-menu ul.menu a.level-1.active{
+        background-color: #243d7b;
+    }
+    
+    #nav-menu ul.menu ul.level-2{
+        border: 0px solid #294795;
+        width: 148.8px;
+        z-index: 999;
+    }
+    
+    /*调整superfish的子菜单区域显示位置*/
+    #nav-menu ul.menu li.sfHover ul.level-2 {
+        top: 40px;
+    }
+    
+    #nav-menu ul.menu li.level-2 {
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+        font-weight: normal;
+        text-align: left;
+        background: #6c6c6c;
+        border-top: 1px solid #fff;
+    }
+    
+    #nav-menu ul.menu a.level-2{
+        padding-left: 15px;
+        color: #fff;
+    }
+    
+    #nav-menu ul.menu a.level-2:hover{
+        background: #294795;
+        color: #fff;
+    }
+}

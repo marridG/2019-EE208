@@ -1,0 +1,84 @@
+/**
+ * 为superfish插件设置的默认样式
+ * 
+ * @version $Id: common.superfish.css 1155 2014-04-09 10:45:46Z fuy $
+ * @creator liqt @ 2013-03-03 21:45:43 by caster0.0.3
+ */
+@media all {
+    /*默认水平菜单样式>>*/
+    .sf-menu, .sf-menu * {
+        margin:         0;
+        padding:        0;
+        list-style:     none;
+    }
+    
+    .sf-menu {
+        line-height:    1.0;
+    }
+    
+    .sf-menu ul {
+        position:       absolute;
+        top:            -999em;
+    }
+    
+    .sf-menu ul li {
+        width:          100%;
+    }
+    
+    .sf-menu li {
+        float:          left;
+        position:       relative;
+        z-index: 990;/*fix ie6 ie7 z-index bug*/
+    }
+    
+    .sf-menu a {
+        display:        block;
+        position:       relative;
+    }
+    
+    .sf-menu li:hover ul, .sf-menu li.sfHover ul {
+        z-index:        99;
+    }
+    
+    ul.sf-menu li:hover li ul, ul.sf-menu li.sfHover li ul {
+        top:            -999em;
+    }
+    
+    ul.sf-menu li li:hover ul, ul.sf-menu li li.sfHover ul {
+        left:           10em; /* match ul width */
+        top:            0;
+    }
+    
+    ul.sf-menu li li:hover li ul, ul.sf-menu li li.sfHover li ul {
+        top:            -999em;
+    }
+    
+    ul.sf-menu li li li:hover ul,  ul.sf-menu li li li.sfHover ul {
+        left:           10em; /* match ul width */
+        top:            0;
+    }
+    
+    .sf-menu {
+        float: left;
+    }
+    
+    .sf-menu a {
+        text-decoration:none;
+    }
+    
+    .sf-menu a, .sf-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
+        color: #000;
+    }
+    
+    .sf-menu li li {
+        background: #fff;
+    }
+    
+    .sf-menu li li li {
+        background: #fff;
+    }
+    .sf-menu li:hover, .sf-menu li.sfHover,  .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
+        outline:        0;
+    }
+    /*默认水平菜单样式<<*/
+}

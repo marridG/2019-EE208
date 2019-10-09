@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!--STATUS OK-->
+<html>
+
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="referrer" content="always" />
+<meta name="description" content="百度百科是一部内容开放、自由的网络百科全书，旨在创造一个涵盖所有领域知识，服务所有互联网用户的中文知识性百科全书。在这里你可以参与词条编辑，分享贡献你的知识。">
+<title>任务列表_百科任务_百度百科</title>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="icon" sizes="any" mask href="//www.baidu.com/img/baidu.svg">
+
+    <meta itemprop="image" content="https://bkssl.bdimg.com/cms/static/baike.png">
+    <meta name="csrf-token" content="72d146a97b8e4e4c8bacf021ac408fdf">
+<!--[if lte IE 9]>
+<script>
+    (function() {
+      var e = "abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(","),
+        i = e.length;
+      while (i--) {
+        document.createElement(e[i]);
+      }
+
+      window.console = window.console || {};
+      var f = ['log', 'info', 'warning', 'error', 'clear'];
+      var l = f.length;
+      while(l--) {
+        window.console[f[l]] = function () {};
+      }
+    })();
+  </script>
+<![endif]-->
+
+        
+<link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-common/pkg/wiki-common-base_9a9fb54.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-task/pkg/wiki-task_sync_css_0_abf3587.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-task/taskList/taskList_9917910.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-common/widget/component/userbar-n/userbar-n_2890903.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-common/widget/lib/larkplayer/larkplayer_981c735.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-common/widget/lib/webuploader/webuploader_08d9db4.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-common/widget/component/userbar/userbar_388002f.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-task/widget/taskPager/taskPager_ab8217b.css"/>    
+</head>
+<body class="w-small">
+
+    
+
+
+    <ul class="wgt-userbar">
+<li>
+<a href="http://www.baidu.com/">百度首页</a>
+</li>
+</ul>
+    <div class="header-wrapper">
+    <div class="header">
+        <div class="layout">
+            <div class="wgt-searchbar wgt-searchbar-simple cmn-clearfix ">
+<div class="logo-container">
+<a class="logo cmn-inline-block" title="到百科首页" href="/">
+<span class="cmn-baike-logo">
+<em class="cmn-icon cmn-icons cmn-icons_logo-bai" style="font-size: 38px"></em>
+<em class="cmn-icon cmn-icons cmn-icons_logo-du" style="font-size: 38px"></em>
+<em class="cmn-icon cmn-icons cmn-icons_logo-baike" style="font-size: 38px"></em>
+</span>
+</a><span class="topic"><a href="/task">百科任务</a></span></div>
+</div>
+            <div class="search">
+                <div class="form">
+                    <form id="searchForm" action="/usertask/searchlist" method="GET" target="_self">
+                                                                        <input id="query" name="taskName" type="text" autocomplete="off" autocorrect="off" placeholder="请输入任务关键词" value="" /><button type="submit">搜索任务</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="layout-pv40">
+        <div class="theaderWrap">
+            <h3 class="theader">正在进行的任务</h3>
+            <div class="theaderRight myRecord"><a href="/usertask/history" target="_blank">我的编辑记录</a></div>
+        </div>
+        <div class="content">
+            <div class="contentHeader">全部<span class="total">共<span class="c459">0</span>个</span></div>
+            <div class="taskType">
+                                    <a href="#hot" class="t-type t-typeSelected" value="hot">热门</a>
+                                            <span class="t-separator m"></span>
+                                                        <a href="#simple" class="t-type " value="simple">入门</a>
+                                            <span class="t-separator m"></span>
+                                                        <a href="#advanced" class="t-type " value="advanced">进阶</a>
+                                            <span class="t-separator m"></span>
+                                                        <a href="#complicated" class="t-type " value="complicated">高奖励</a>
+                                                </div>
+            <div class="listWrap">
+                <div class="loadingWrap">
+                    <ul class="loading">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="taskList cmn-clearfix">
+                    
+                </div>
+            </div>
+        </div>
+        <div id="pager" pager-type="tpager"></div>
+    </div>
+
+
+    <div class="wgt-footer-main">
+<div class="content">
+<dl class="fresh">
+<dt><em class="cmn-icon cmn-icons cmn-icons_footer-fresh"></em>新手上路</dt>
+<dd>
+<div><a target="_blank" href="/usercenter/tasks#guide">成长任务</a></div>
+<div><a target="_blank" href="/help#main01">编辑入门</a></div>
+<div><a target="_blank" href="/help#main06">编辑规则</a></div>
+<div><a target="_blank" href="/item/%E7%99%BE%E5%BA%A6%E7%99%BE%E7%A7%91%EF%BC%9A%E6%9C%AC%E4%BA%BA%E8%AF%8D%E6%9D%A1%E7%BC%96%E8%BE%91%E6%9C%8D%E5%8A%A1/22442459?bk_fr=pcFooter">本人编辑</a><img src="https://bkssl.bdimg.com/static/wiki-common/widget/component/footer/img/new-icon_a64774d.png" class="new-icon" alt="new"></div>
+</dd>
+</dl>
+<dl class="question">
+<dt><em class="cmn-icon cmn-icons cmn-icons_footer-question"></em>我有疑问</dt>
+<dd>
+<div><a target="_blank" href="/user/question">常见问题</a></div>
+<div><a target="_blank" href="http://zhiqiu.baidu.com/baike/passport/html/baikechat.html" nslog-type="10000003">在线客服</a></div>
+<div><a target="_blank" href="http://tieba.baidu.com/f?ie=utf-8&fr=bks0000&kw=%E7%99%BE%E5%BA%A6%E7%99%BE%E7%A7%91">官方贴吧</a></div>
+<div><a id="J-bk-feedback-main" href="javascript:void(0);">意见反馈</a></div>
+</dd>
+</dl>
+<dl class="suggestion">
+<dt><em class="cmn-icon cmn-icons cmn-icons_footer-suggestion"></em>投诉建议</dt>
+<dd>
+<div><a target="_blank" href="http://help.baidu.com/newadd?prod_id=10&category=1">举报不良信息</a></div>
+<div><a target="_blank" href="http://help.baidu.com/newadd?prod_id=10&category=2">未通过词条申诉</a></div>
+<div><a target="_blank" href="http://help.baidu.com/newadd?prod_id=10&category=6">投诉侵权信息</a></div>
+<div><a target="_blank" href="http://help.baidu.com/newadd?prod_id=10&category=5">封禁查询与解封</a></div>
+</dd>
+</dl>
+</div>
+<div class="copyright">©2019&nbsp;Baidu&nbsp;<a href="http://www.baidu.com/duty/" target="_blank">使用百度前必读</a>&nbsp;|&nbsp;<a href="http://help.baidu.com/question?prod_en=baike&class=89&id=1637" target="_blank">百科协议</a>&nbsp;|&nbsp;<a href="http://help.baidu.com/question?prod_id=10&class=690&id=1001779" target="_blank">隐私政策</a>&nbsp;|&nbsp;<a href="/operation/cooperation" target="_blank">百度百科合作平台</a>&nbsp;|&nbsp;<span>京ICP证030173号&nbsp;</span><img class="copyright-img" width="13" height="16" src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/copy_rignt_24.png"></div>
+<p class="recordcode"><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000001" target="_blank"><i class="icon-police"></i>京公网安备11000002000001号</a></p>
+</div>
+
+
+    <script>
+      window['__abbaidu_2020_subidgetf'] = function () {
+          var subid = 01000000;
+          return subid;
+      };
+    </script>
+<script async src="https://dlswbr.baidu.com/heicha/mw/abclite-2020-s.js"></script>
+
+</body><script type="text/javascript" src="https://bkssl.bdimg.com/static/wiki-common/js/mod_4302fe0.js"></script>
+<script type="text/javascript" src="https://bkssl.bdimg.com/static/wiki-common/pkg/wiki-common-base_0ce23c8.js"></script>
+<script type="text/javascript" src="https://bkssl.bdimg.com/static/wiki-common/widget/component/userbar/userbar_3077484.js"></script>
+<script type="text/javascript" src="https://bkssl.bdimg.com/static/wiki-task/widget/taskUtil/jsmart_bece4ee.js"></script>
+<script type="text/javascript" src="https://bkssl.bdimg.com/static/wiki-task/widget/taskPager/taskPager_2aa064f.js"></script>
+<script type="text/javascript" src="https://bkssl.bdimg.com/static/wiki-task/taskList/taskList_a8ec544.js"></script>
+<script type="text/javascript">!function(){  var $ = require('wiki-common:widget/lib/jquery/jquery'),
+    userbar = require('wiki-common:widget/component/userbar/userbar');
+    
+  $(function() {
+    userbar.buildUserbar($('.wgt-userbar'), null);
+  });
+}();
+!function(){    var $ = require('wiki-common:widget/lib/jquery/jquery'),
+      initSearchbar = require('wiki-common:widget/component/searchbar/searchbar');  
+    initSearchbar($('.wgt-searchbar-simple'));
+  }();
+!function(){  require.async(["wiki-common:widget/lib/jquery/jquery","wiki-common:widget/component/footer/footer_feedback"], function($, feedback){
+    feedback({el: '#J-bk-feedback-main',
+      proData: {
+        "extend_feedback_channel": null
+      }
+    });
+    feedback({el: '#J-bk-feedback-query', config: {
+        appid: 215645,
+        productLine: 20184,
+        needContactWay: true,
+        issuePlaceholder: '亲爱的百度百科用户，请在此填写您的质疑内容及原因哦～'
+      },
+      proData: {
+        "kw": $('#J-bk-feedback-query').data('lemma')
+      }
+    });
+  });
+}();
+!function(){      require('wiki-common:widget/component/psLink/psLink');
+    }();</script><script type="text/javascript">(new Image()).src="https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/pms/img/st.gif?pid=242&v=2&fs=6ad41cc,9450c16,4c1e907,acd68f5,ce8988f,ea2609d&otherStr=&page=wiki-task/page/taskList.tpl&sid=1570620795&hash=dbe095f572&fid=baike";</script></html>

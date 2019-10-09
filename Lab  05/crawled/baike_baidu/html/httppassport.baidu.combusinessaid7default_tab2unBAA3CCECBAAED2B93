@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>百度用户信息中心_海天寒夜</title>
+<link rel="stylesheet" href="/style/v2/info.css?t=20100901" type="text/css" media="all" />
+<script type="text/javascript" src="/js/center_accountbind.js?t=20100901"></script>
+<script type="text/javascript" src="/js/business.js?t=20100901"></script>
+<script language="javascript">
+      window.hasSpace = '';
+      var tabinfo = initTabInfo('%BA%A3%CC%EC%BA%AE%D2%B9');
+      var ab=gethash(1);
+      if(ab>0 && ab<tabinfo.length)
+      {
+         if(tabinfo[ab][2]=="_blank")
+         {
+            window.location=tabinfo[ab][0];
+         }
+      }
+      function fixImgSize(img){
+		  var width = img.offsetWidth;
+		  var height = img.offsetHeight;
+		  if( width>78 ){
+		      width>height?( img.style.width='78px' ):( img.style.height='78px' );
+		  }else if( height>78 ){
+		      img.style.height='78px';
+		  }
+	  }
+    </script>
+</head>
+<body onLoad="javascript:chgdeftab(2);">
+                                        <div class="wrapper">
+<noscript>
+<p class="nojs">您的浏览器已经禁用了脚本，这会影响您正常使用本站的功能。</p>
+</noscript>
+<div class="head">
+<h1><a href="http://www.baidu.com/"><img src="/img/logo.gif" alt="百度"/></a></h1>
+<h2><a href="/center">海天寒夜的个人资料</a></h2>
+<link href="https://passport.baidu.com/style/loginbar.css" rel="stylesheet" type="text/css" />
+<style>
+		#ui_standardizing_pop{position:absolute;top:21px;right:0;border:1px solid #999;display:none;height:62px;width:5em;box-shadow:1px 1px 2px #CCC;}
+		#ui_standardizing_pop div{height:20px;line-height:20px;width:5em;background:#fff;}
+		#ui_standardizing_pop div.ui_standardizing_first{border-bottom:1px solid #ebebeb}
+		#ui_standardizing_pop div a{text-decoration:none;line-height:20px;height:20px;display:block;padding:0 0.5em;margin:0}
+		#ui_standardizing_pop div a:hover{background:#ebebeb}
+		.head .nav li span.ui_standardizing_tri{border-left:3px solid #FAFAFA;border-right:3px solid #FAFAFA;display:inline-block;height:4px;line-height:0;width:1px;border-top:4px solid #00c;color:#00c;vertical-align: middle;margin-left:4px;margin-top:2px;}
+		#mnum{display:none;}
+		.ui_standardizing_shuxian{color:#999;margin:0 5px;}
+	</style>
+<ul class="nav" id="ubUserBar">
+<li><a href="/v2/?login">登录</a></li>
+<li>&nbsp;|&nbsp;</li>
+<li><a href="/v2/?reg">注册</a></li>
+<script>var loginflag=0;</script>
+</ul></div>
+<div class="main">
+<ul class="main-nav">
+<li class="current" id="tabdiv5a" style="display:none"><span>搜藏记录</span></li>
+<li id="tabdiv1"><a href="javascript:clicktab(1)">贴吧发言</a></li>
+<li class="current" id="tabdiv1a" style="display:none"><span>贴吧发言</span></li>
+<li id="tabdiv2"><a href="javascript:clicktab(2)">知道回答</a></li>
+<li class="current" id="tabdiv2a" style="display:none"><span>知道回答</span></li>
+<li id="tabdiv3"><a href="javascript:clicktab(3)">百科贡献</a></li>
+<li class="current" id="tabdiv3a" style="display:none"><span>百科贡献</span></li>
+<li id="tabdiv7"><a href="javascript:clicktab(7)">文库贡献</a></li>
+<li class="current" id="tabdiv7a" style="display:none"><span>文库贡献</span></li>
+<li id="tabdiv4"><a href="javascript:clicktab(4)">音乐掌门人</a></li>
+<li class="current" id="tabdiv4a" style="display:none"><span>音乐掌门人</span></li>
+<li id="tabdiv5"><a href="javascript:clicktab(5)">搜藏记录</a></li>
+</ul>
+<div id="tabarea2" class="content2">
+<iframe id="ifr" name="ifr" src="" width="100%" frameborder="0" height="0" scrolling="no"></iframe>
+<iframe id="ifrext" name="ifrext" src="" width="100%" frameborder="0" height="0" scrolling="no"></iframe>
+</div>
+</div>
+</div>
+<div class="foot">
+&copy; Baidu</div>
+</body>
+<script type="text/javascript" src="/js/check_baiduhi.js?t=20100901"></script>
+<script type="text/javascript">
+function sr(json) {
+    var arr = [];
+    json = json['pp.1.3e7c9047.iSzkyAtR4E_eU_bGepMtvg']
+    if (+json["space"]) {
+        hasSpace = true;
+    }else{
+        hasSpace = false;
+    }
+}
+//PA.io.xss('http://pdc.baidu.com/imstate?callback=sr&type=json&uids=pp.1.3e7c9047.iSzkyAtR4E_eU_bGepMtvg&flag=4');
+
+function showMsg() {
+    if (typeof(redmsg) != 'undefined') {
+        if (!redmsg || redmsg.length < 1) return;
+        document.getElementById('mnum').innerHTML = redmsg;
+    }
+}
+if (loginflag && loginflag == 1) {
+    document.write("<script src=http://msg.baidu.com/ms?ct=18&cm=3&tn=bmSelfUsrStat&mpn=13227114&un=><\/script>");
+    setTimeout("showMsg()", 500);
+}
+
+
+function getData() {
+    var head = document.getElementsByTagName("head")[0];
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.src = "http://pdc.baidu.com/imstate/?callback=imstate&type=json&uids=pp.1.3e7c9047.iSzkyAtR4E_eU_bGepMtvg&" + new Date().getTime();
+    head.appendChild(s);
+};
+
+function startbdh() {
+    startBaiduHi("message", "", "海天寒夜", {
+        clk: "icon",
+        src: "psp"
+    });
+    return false;
+};
+
+function imstate(json) {
+    var status = json["pp.1.3e7c9047.iSzkyAtR4E_eU_bGepMtvg"];
+    if (!status) return false;
+    if (status.imuser == '1') {
+        var el = document.getElementById('userStatus');
+        el.style.display = '';
+        if (status.online == '1') {
+            el.className += ' imonline';
+            document.getElementById("userStatusWord").innerHTML = '在线交谈';
+        } else {
+            el.className += ' imoffline';
+            document.getElementById("userStatusWord").innerHTML = '离线留言';
+        }
+        document.getElementById('userStatusWord').onclick = startbdh;
+    }
+};
+//getData();//干掉imstate接口
+</script>
+</html>
+<!--20183035250969169930100919-->
+<script> var _trace_page_logid = 2018303525; </script>

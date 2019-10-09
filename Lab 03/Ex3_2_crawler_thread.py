@@ -14,11 +14,20 @@ import time
 from Ex3_1_Bloom_Filter_class import BloomFilter
 
 # global variables
-# [control - for users]
+# [control - for users] general
 THREAD_NUM = 10
 FINAL_SUBMISSION = False
 MAX_PATH = 200
 MODE_QUEUE_THREADING = 1  # using ? to join: queue=0, [faster]threading=1
+# [control - for users] source and path
+SOURCE_SITE = "www.sjtu.edu.cn"
+FOLDER_PREFIX = "crawled"
+FOLDER_SUB_PREFIX = "sjtu"
+FOLDER_SUB_SUB_PREFIX = "html"
+# EASY USE
+easy_use_target = "http://www.sjtu.edu.cn"
+easy_use_max_page = 1000
+easy_use_max_depth = 5
 # ********** CHECK BEFORE UPLOAD !!! **********
 # [status]
 DEBUG_MODE = False
@@ -48,10 +57,8 @@ def crawl(in_seed, in_max_page, in_max_depth):
     time_start = time.time()
 
     # clear the file and empty the folder
-    index_filename = 'index.txt'  # each line in index.txt: "link " + "corresponding file name"
-    folder = 'html'  # the folder to save all the web pages
     if ALWAYS_CLEAR:
-        clear_storage(index_filename, folder)
+        clear_storage(FOLDER_PREFIX)
 
     if MODE_QUEUE_THREADING:  # using threading to join
         threads = []
@@ -78,9 +85,9 @@ def crawl(in_seed, in_max_page, in_max_depth):
     # calculate the run time
     run_time = time.time() - time_start
 
-    # for an easier version contro
+    # for an easier version control
     if VERSION_CONTROL:
-        clear_storage(index_filename, folder)
+        clear_storage(FOLDER_PREFIX)
 
     # print report
     if SHOW_REPORT:
@@ -221,9 +228,7 @@ def crawl_using_argument_url(arg_url, depth, thread_idx):
                 varLock.release()
 
 
-def clear_storage(index_filename, folder):
-    if os.path.exists(index_filename):
-        os.remove(index_filename)
+def clear_storage(folder):
     if os.path.exists(folder):
         shutil.rmtree(folder)
 
@@ -271,7 +276,10 @@ def get_page(page):
                 print "Network Error"
             fail += 1
         else:
-            return open_page.read()
+            try:
+                return open_page.read()
+            except:
+                return None
 
 
 # get all the links on the given page using the contents grabbed by BeautifulSoup
@@ -312,9 +320,22 @@ def get_all_links(content, page_url):
 
 # store the pages and record the page-file_name correspondence
 def add_page_to_folder(page, content):
-    index_filename = 'index.txt'  # each line in index.txt: "link " + "corresponding file name"
-    folder = 'html'  # the folder to save all the web pages
-    filename = valid_filename(page)  # change the web page link into a valid file name
+    # create the prefixed folders
+    if not os.path.exists(FOLDER_PREFIX):
+        os.mkdir(FOLDER_PREFIX)
+    if not os.path.exists(FOLDER_PREFIX + "/" + FOLDER_SUB_PREFIX):
+        os.mkdir(FOLDER_PREFIX + "/" + FOLDER_SUB_PREFIX)
+
+    # create the source site txt
+    with open(FOLDER_PREFIX + "/" + FOLDER_SUB_PREFIX + "/src.txt", 'w')as f:
+        f.write(SOURCE_SITE)
+
+    # each line in index.txt: "link " + "corresponding file name"
+    index_filename = FOLDER_PREFIX + "/" + FOLDER_SUB_PREFIX + '/index.txt'
+    # the folder to save all the web pages
+    folder = FOLDER_PREFIX + "/" + FOLDER_SUB_PREFIX + "/" + FOLDER_SUB_SUB_PREFIX
+    # change the web page link into a valid file name
+    filename = valid_filename(page)
 
     # write(by adding) log into the file
     index = open(index_filename, 'a')
@@ -360,14 +381,15 @@ if THREAD_NUM > 10:
     SHOW_LOGS = False
 
 if not FINAL_SUBMISSION:
-    crawl("http://www.sjtu.edu.cn/", 100, 2)
-
-    # if __name__ == '__main__':
-    #     trm_seed = sys.argv[1]
-    #     trm_max_page = int(sys.argv[2])
-    #     trm_max_depth = int(sys.argv[3])
-    #
-    #     crawl(trm_seed, trm_max_page, trm_max_depth)
+    if __name__ == '__main__':
+        try:
+            trm_seed = sys.argv[1]
+            trm_max_page = int(sys.argv[2])
+            trm_max_depth = int(sys.argv[3])
+        except:
+            crawl(easy_use_target, easy_use_max_page, easy_use_max_depth)
+        else:
+            crawl(trm_seed, trm_max_page, trm_max_depth)
 else:
     DEBUG_MODE = False
     SHOW_LOGS = True

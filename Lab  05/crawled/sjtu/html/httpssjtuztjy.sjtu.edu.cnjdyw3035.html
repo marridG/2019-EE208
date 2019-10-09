@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>校党委书记姜斯宪焦点讲坛作专题授课-上海交通大学“不忘初心,牢记使命”主题教育</title>
+<meta name="description" content="上海交通大学“不忘初心,牢记使命”主题教育" />
+<meta name="keywords" content="上海交通大学“不忘初心,牢记使命”主题教育" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Bootstrap -->    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+<link type="text/css" rel="stylesheet" href="/css/css.css" />
+<link rel="stylesheet" href="/css/animate.css">
+<script src="/js/jquery.min.js"></script>
+<!--轮转焦点图-->
+<script src="/js/jquery.hiSlider.js"></script>
+<link rel="stylesheet" href="/css/jquery.hiSlider.css">
+
+<!-- 图片滚动 --> 
+<link href="/css/owl.carousel.css" type="text/css" rel="stylesheet" />
+<link href="/css/owl.theme.css" type="text/css" rel="stylesheet" />
+<!-- 图片滚动 --> 
+<script type="text/javascript" src="/js/owl.carousel.js"></script>
+<script type="text/javascript">
+    function search_validate(){
+        if(document.getElementById('search_keywords').value == ''){
+            alert('请输入搜索关键字');
+            return false;
+        }
+    }
+</script> 
+</head>
+<body class="bj_b"><div class="top" id="top_nav">
+    <div class="main">
+        <a href="/" class="logo"></a>     
+        <span class="menu2" id="menu2"><a href="javascript:void(0)">&nbsp;</a></span>   
+        <div id=navk>
+                        <ul class="cd_t">
+                  
+                <li><a href="https://www.sjtu.edu.cn" target="_blank">交大首页</a></li>
+                                <li class="l_x">|</li>
+                                  
+                <li><a href="https://news.sjtu.edu.cn" target="_blank">交大新闻网</a></li>
+                                <li class="l_x">|</li>
+                                  
+                <li><a href="http://jd.sjtu.edu.cn/web/JDJDW/2960001.htm" target="_blank">焦点网</a></li>
+                                            </ul>
+            <span class="ss">
+                <form method="get" action="https://sjtuztjy.sjtu.edu.cn/active/search.html" onsubmit="return search_validate();">
+                <div class="txtk">
+                    <input type="text" id="search_keywords" name="search_keywords" class="form-control" placeholder="">
+                    <button class="an_ss" type="submit"></button>
+                </div>
+                </form>
+            </span>
+            <ul class="menu">
+                <li><a href="/" class="dbt">首页</a></li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/zyjs.html" class="dbt ">中央精神</a>
+                                        <dl>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/zy_file.html" >中央文件</a></dd>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/zy_study.html" >学习资料</a></dd>
+                                            </dl>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/news.html" class="dbt on">新闻动态</a>
+                                        <dl>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/jdyw.html" >交大要闻</a></dd>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/jcdt.html" >基层动态</a></dd>
+                                            </dl>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/xjdx.html" class="dbt ">先进典型</a>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/mtgz.html" class="dbt ">媒体关注</a>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/slhj.html" class="dbt ">史料汇集</a>
+                                    </li>
+                            </ul>
+            <div class="clear"></div>
+        </div> 
+    </div>  
+</div>
+<div class="top_jg"></div>
+<SCRIPT type=text/javascript>  
+$(document).ready(function() {
+    var pk=document.body.clientWidth;
+    if(pk<1200){
+        //手机菜单
+        $("#menu2").click(function(){
+            if($("#navk").css("display")=="none"){
+                $(this).find("a").addClass("on");
+                $("#navk").slideDown("slow");       
+            }
+            else{
+                $(this).find("a").removeClass("on");
+                $("#navk").slideUp("slow");     
+            }
+        });  
+    }
+    else{
+        $(".menu li").hover(function() {
+            $(this).find("dl").css("display","block");
+        },function(){
+            
+            $(this).find("dl").css("display","none");
+        });
+
+        //向下滚动顶部缩小
+        $.fn.smartFloat = function() {
+            var position = function(element) {
+                var top = element.position().top, pos = element.css("position");
+                $(window).scroll(function() {
+                    var scrolls = $(this).scrollTop();
+                    if (scrolls > top) {
+                        $("#top_nav").addClass("on");
+                        if (window.XMLHttpRequest) {
+                            element.css({
+                                position: "fixed",
+                                //background:"#efefef",
+                                top: 0
+                            });
+                        } else {
+                            element.css({
+                                top: scrolls
+                            });
+                        }
+                    }else {
+                        $("#top_nav").removeClass("on");
+                        element.css({
+                            position: pos,
+                            //background:"transparent",
+                            top: top
+                        });
+                    }
+                });
+            };
+            return $(this).each(function() {
+                position($(this));
+            });
+
+        };
+        $("#top_nav").smartFloat();
+        //向下滚动顶部缩小 end
+    };
+});  
+//-->  
+</SCRIPT>
+<div class="ban"><img src="/upload/image/20190924/20190924141304.jpg" ></div>
+<div class="dqwz">
+ 	<div class="main wow fadeInUp">
+  		<a href="/">首页</a> &gt; <a href="https://sjtuztjy.sjtu.edu.cn/news.html">新闻动态</a> &gt; <a href="https://sjtuztjy.sjtu.edu.cn/jdyw.html">交大要闻</a> 	</div>
+</div>
+<div class="nyk">
+	 	<div class="main">
+   		<div class="zt_snr">
+     		<div class="sbt wow fadeInUp">校党委书记姜斯宪焦点讲坛作专题授课</div>
+     		<div class="fbt wow fadeInUp"></div>
+     		<div class="xx wow fadeInUp"></div>
+    		<div class="ssj news_ssj wow fadeInUp">日期：2019-06-27</div>
+    		<div class="snr wow fadeInUp">
+			    <p>　　6月26日，在中国共产党98周年华诞即将到来之际，校党委书记姜斯宪应邀做客第108期焦点讲坛，以&ldquo;回望征程守初心 接续奋斗新时代&rdquo;为主题，在徐汇校区为各单位师生作专题授课。校党委副书记顾锋，校党委常委、党委宣传部部长胡昊，安泰经济与管理学院、凯原法学院、人文学院、国际与公共事务学院、上海高级金融学院等院系，档案馆、继续教育学院、钱学森图书馆、海外教育学院、出版社等直属单位中心组成员、办学骨干和学生代表300余人参加学习。学习活动由顾锋主持。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="" src="/upload/image/20190925/20190925120117.jpg" style="width: 800px;" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="" src="/upload/image/20190925/20190925120133.jpg" style="width: 800px;" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="" src="/upload/image/20190925/20190925120154.jpg" style="width: 800px;" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="" src="/upload/image/20190925/20190925120205.jpg" style="width: 800px;" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p>　　姜斯宪首先和在座师生一起，回顾了123年来学校办学和发展过程中的一些历史片段。他强调，&ldquo;因图强而生，因改革而兴，因人才而盛&rdquo;，既是交大悠久办学历史的凝练，也是励精图治办学经验的总结，交通大学的发展历史见证了中国高等教育从无到有、从弱到强的奋斗历程。他通过讲解率先组成新中国高校访美代表团、率先接受海外巨额捐赠两个例子，指出上海交大是一所具有改革创新基因的大学，担当了中国教育改革开放的先行者和排头兵。</p>
+
+<p><br />
+　　姜斯宪表示，党的十八大以来，以习近平同志为核心的党中央制定并实施了建设世界一流大学和一流学科的重大战略决策，对提升我国高等教育的综合实力和国际竞争力作用十分显著。我们要对中国特色社会主义制度充满信心，对我国高等教育发展充满信心，与此同时也要看清差距，接续奋斗。</p>
+
+<p><br />
+　　姜斯宪指出，从今年6月份开始全党自上而下分两批开展&ldquo;不忘初心，牢记使命&rdquo;主题教育，虽然学校被列入第二批开展主题教育的单位，但是按照中央&ldquo;学习不用等，整改不用等&rdquo;的要求，各单位要牢牢把握&ldquo;守初心、担使命，找差距、抓落实&rdquo;的总要求，先学起来，先改起来，不忘办人民满意教育的初心，牢记推动中国特色世界一流大学建设的使命。</p>
+
+<p><br />
+　　姜斯宪对习近平总书记关于高等教育的重要论述进行了解读。他提出，党的十八大以来，习近平总书记多次深入高校考察座谈，对高等教育做出一系列重要论述，是习近平新时代中国特色社会主义思想的重要内容，为高校办学治校提供了根本遵循。姜斯宪从要坚持高等教育的办学方向和根本任务、要建设高素质的教师队伍、要坚持中国特色与世界一流的有机统一、要不断提升国际化水平等四个方面与在座师生交流了学习体会，要求全校上下要认真领会落实，坚守初心、牢记使命，以习近平新时代中国特色社会主义思想为指导，以更大的格局、更高的热情、更大的担当加快推进中国特色世界一流大学建设。</p>
+
+<p>&nbsp;</p>
+
+<p>　　视频链接：<a href="https://v.sjtu.edu.cn/reports/report2-1643.html">http://v.sjtu.edu.cn/reports/report2-1643.html</a></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: right;">作者：牟鲁霞<br />
+供稿单位：新闻中心</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+    		</div>
+    		<div class="sgd wow fadeInUp">
+				            	<a href="https://sjtuztjy.sjtu.edu.cn/jdyw/3035.html">下一条：校党委书记姜斯宪焦点讲坛作专题授课</a>     			<a href="https://sjtuztjy.sjtu.edu.cn/jdyw.html" class="cd_fh">返回列表</a>
+     		</div>
+   		</div>
+  		<div class="clear"></div>
+ 	</div>
+</div>
+<script type="text/javascript" src="/js/wow.js"></script>
+<script>
+var wow = new WOW({
+    boxClass: 'wow',
+    animateClass: 'animated',
+    offset: 0,
+    mobile: true,
+    live: true
+});
+wow.init();
+</script>
+
+	<div class="foot">
+	 	<div class="main">
+	  		<div class="f1 wow fadeInUp" data-wow-delay=".1s">
+	  		沪ICP备05052060   沪举报中心   版权所有© 上海交通大学<br>  
+			地址：上海市东川路800号   邮编：200240   查号：86-21-54740000	  	</div>
+	  	<div class="f2 wow fadeInUp" data-wow-delay=".3s">
+	   		<span class="s1">相关链接</span>
+	   			   			   		<a href="https://www.sjtu.edu.cn" target="_blank">交大首页</a>
+	   			   		<b>|</b>
+	   			   			   		<a href="https://news.sjtu.edu.cn" target="_blank">交大新闻网</a>
+	   			   		<b>|</b>
+	   			   			   		<a href="http://jd.sjtu.edu.cn/web/JDJDW/2960001.htm" target="_blank">焦点网</a>
+	   			   			   	</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.fy1 a').each(function(){
+            if($(this).text()=='上一页' || $(this).text()=='下一页'){
+                $(this).addClass('cd_sx');
+            }
+        })
+    });
+</script>
+</body>
+</html>

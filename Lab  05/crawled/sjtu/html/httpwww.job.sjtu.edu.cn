@@ -1,0 +1,554 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" href="../css/index_style.css" rel="stylesheet" />
+<title>上海交通大学就业网</title>
+<script type="text/javascript">
+	function testAuto(thisId, needLeng) {
+		var element = document.getElementById(thisId);
+		var nowLeng = element.innerText.length;
+		if (nowLeng > needLeng) {
+			var nowWord = element.innerText.substr(0, needLeng) + '...';
+			element.innerHTML = nowWord;
+		}
+	}
+</script>
+</head>
+
+<body>
+	<!--头部-->
+	<!-- 用户账号 -->
+	<div class="ind_top">
+        <ul class="ind_top_q">
+        	<li class="ind_top_l">
+            	<a href="https://www.sjtu.edu.cn" target="_blank">院系专业</a>
+                <a href="/eweb/jygl/zpfw.so?modcode=null&subsyscode=zpfw&type=searchBysycx">生源信息</a>
+                <a href="/eweb/jygl/jygl.so?modcode=jygl_jygljylc&subsyscode=jygl&type=searchNews&newsType=jylc">就业导航</a>
+                <a href="/channel/index.htm?nParentId=5">访客</a>
+            </li>
+            						            <li class="ind_top_c">
+            	            		<a target="_blank" href="http://info.sjtu.edu.cn/index.aspx?jatkt=rejected">综合信息网</a>
+            		                		<div class="top_with_line">|</div>
+                	            	            		<a target="_blank" href="http://3dcampus.sjtu.edu.cn/">虚拟校园</a>
+            		                		<div class="top_with_line">|</div>
+                	            	            		<a target="_blank" href="http://www.jwc.sjtu.edu.cn/web/sjtu/198109.htm">校历</a>
+            		            	            	<input type="text" class="search_input" id="strTitle" maxLength="30" />
+            	<input type="button" class="search_btn" onclick="queryInfo()" />
+            	<script type="text/javascript">
+                	function queryInfo(){
+                		var strTitle = document.getElementById("strTitle").value;
+                		if(strTitle!=null && strTitle.length>0){
+                			var url = "/news/result.htm?strTitle=" + strTitle;
+							url = encodeURI(url).replace(/#/g, '%23');
+							window.open(url);
+                		}
+                	}
+                </script>
+               
+            </li>
+        </ul>
+    </div>
+    <!--头部 END-->
+    
+    <!--宽度1000px-->
+    <div class="w1000">
+    <!--bannner图-->
+        <div>
+            <!--导航-->
+	    	    	<div class="nav_wrap">
+                <div class="nav">
+                    <ul class="nav_logo w1000_margin0"><a href="/index.htm"><img class="logo" src="/images/logo.png" /></a></ul>
+                    <div class="hr"></div>
+                    <ul class="nav_dh w1000_margin0">
+                        <li class="dh_left">
+		                    <div class="dh_q">
+		                        <a  class="nav_tit" href="/index.htm">首页</a>
+		                    </div>
+                            <div class="dh_q">
+		                        <a class="nav_tit" href="/news/list.htm?nType=0">新闻公告</a>
+		                     </div>
+		                    <div class="dh_q">
+		                        <a  class="nav_tit" target="_blank" href="/eweb/jygl/zpfw.so?modcode=jygl_scfwzpxx&subsyscode=zpfw&type=searchZprd&sysType=TPZPFW&zpxxType=new">招聘热点</a>
+		                    </div>
+		                	<div class="dh_q">
+		                        <a  class="nav_tit" href="/intro/index.htm">关于我们</a>
+		                    </div>
+                        </li>
+                        <li class="dh_right">
+		                	<span class="dh_time" id="myDate">
+		                		<span id="myYear"></span>年<span id="myMonth"></span>月<span id="myDay"></span>日
+		                	</span>
+		                    <span class="dh_week" id="myWeek">星期二</span>
+		                    <script type="text/javascript">
+		                		var myDate=new Date()
+		                		document.getElementById("myDate").innerHTML=myDate.getFullYear()+"年"+(myDate.getMonth()+1)+"月"+myDate.getDate()+"日";
+		                		var day =myDate.getDay();
+		                		var week ="";
+		                		if(day==0){
+		                			week ="星期日"
+		                		}
+		                		if(day==1){
+		                			week ="星期一"
+		                		}
+		                		if(day==2){
+		                			week ="星期二"
+		                		}
+		                		if(day==3){
+		                			week ="星期三"
+		                		}
+		                		if(day==4){
+		                			week ="星期四"
+		                		}
+		                		if(day==5){
+		                			week ="星期五"
+		                		}
+		                		if(day==6){
+		                			week ="星期六"
+		                		}
+		                		document.getElementById("myWeek").innerHTML=week;
+		                	</script>
+		                 <!--   
+				 																                    <select class="iselect" onchange="openLink(this)">
+		                    	<option value="#">热点专题</option>
+		                    			                        <option value="http://www3.sjtu.edu.cn/qzlx2013.htm">
+		        					党的教育实践活专题网              
+		        				</option>
+		                        		                        <option value="http://202.120.33.37/14xz/">
+		        					2014年校长奖评选              
+		        				</option>
+		                        		                        <option value="http://xxgk.sjtu.edu.cn/">
+		        					信息公开              
+		        				</option>
+		                        		                        <option value="http://news.sjtu.edu.cn/jdrw.htm">
+		        					学者笔谈              
+		        				</option>
+		                        		                        <option value="http://www.sjtu.edu.cn/18/">
+		        					聚焦十八大              
+		        				</option>
+		                        		                        <option value="http://www.sjtu.edu.cn/jdwmw.htm">
+		        					文明在线              
+		        				</option>
+		                        		                    </select>
+		                    																                    <select class="iselect" onchange="openLink(this)">
+		                    	<option value="#">快速通道</option>
+		                       		                        <option value="http://cc.sjtu.edu.cn/G2S/ShowSystem/Index.aspx">
+		        					课程中心               
+		        				</option>
+		                        		                        <option value="http://www.sjtu.edu.cn/zsjy.htm">
+		        					招生就办               
+		        				</option>
+		                        		                        <option value="http://alumni.sjtu.edu.cn/alumni/xiaoyouhui/index.php">
+		        					校友会               
+		        				</option>
+		                        		                        <option value="http://join.sjtu.edu.cn/">
+		        					人才招聘               
+		        				</option>
+		                        		                        <option value="http://www.qianxslib.sjtu.edu.cn/">
+		        					钱学森图书馆               
+		        				</option>
+		                        		                        <option value="http://postd.sjtu.edu.cn/">
+		        					博士后流动站               
+		        				</option>
+		                        		                        <option value="http://zbb.sjtu.edu.cn/">
+		        					招投标办               
+		        				</option>
+		                        		                    </select>
+                          	   -->
+		                </li>
+                    </ul>
+                </div>
+            </div>
+        <script type="text/javascript">
+        	function openLink(obj){
+        		if(obj.value !='#'){
+        			window.open(obj.value);
+        		}
+        	}
+		</script>
+        
+	        <!--导航 END-->
+	        <!--轮播图-->
+            <div class="w1000_margin0" style="height:353px;">
+            	
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+	<head>
+								<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!-- Cascading Style Sheets -->
+		<link rel="stylesheet" href="../js/jquery-jDiaporama/page2.css" type="text/css"></link>
+		<link href="../js/jquery-jDiaporama/style.css" rel="stylesheet" type="text/css" />
+		<!-- Javascript -->
+		<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="../js/jquery-jDiaporama/js/jquery.jDiaporama.js"></script>
+				<script type="text/javascript" src="../js/jquery-jDiaporama/js/script.js"></script>
+			</head>
+	<body>
+		<ul class="diaporama1" style="width:1000px">
+												<li>
+												<img width="1000" height="352" src="http://file.scc.sjtu.edu.cn//////////////img/201901/bd291691f22746d2abcedf3f6ec56dc0.jpg" />
+																		<div class="ban_bg" style="padding:5px 20px; background-image:url(/images/ban_tmpic.png); position:absolute; right:35px; bottom:40px;">
+                			<span style="opacity:1; color:#f2f2f2; font-size:22px; height:25px; line-height:25px;">上海交通大学就业引导工作会议</span>
+               			</div>
+						
+											</li>
+					
+																<li>
+												<img width="1000" height="352" src="http://file.scc.sjtu.edu.cn///////img/201904/9f72cb65085846f98ca980bb7f3a0e5d.jpg" />
+																		<div class="ban_bg" style="padding:5px 20px; background-image:url(/images/ban_tmpic.png); position:absolute; right:35px; bottom:40px;">
+                			<span style="opacity:1; color:#f2f2f2; font-size:22px; height:25px; line-height:25px;">2019年毕业生赴国防科技单位就业座谈会</span>
+               			</div>
+						
+											</li>
+					
+																<li>
+												<img width="1000" height="352" src="http://file.scc.sjtu.edu.cn//////img/201905/25264fa58b4448249482c82144293e2d.jpg" />
+																		<div class="ban_bg" style="padding:5px 20px; background-image:url(/images/ban_tmpic.png); position:absolute; right:35px; bottom:40px;">
+                			<span style="opacity:1; color:#f2f2f2; font-size:22px; height:25px; line-height:25px;">毕业生赴基层单位就业座谈会暨弘毅公共服务奖捐赠签约仪式</span>
+               			</div>
+						
+											</li>
+					
+																<li>
+												<img width="1000" height="352" src="http://file.scc.sjtu.edu.cn//img/201907/56045e1db35846ae9ab7f0ab93a0e08e.jpg" />
+																		<div class="ban_bg" style="padding:5px 20px; background-image:url(/images/ban_tmpic.png); position:absolute; right:35px; bottom:40px;">
+                			<span style="opacity:1; color:#f2f2f2; font-size:22px; height:25px; line-height:25px;">上海交通大学2019年本科毕业生就业座谈会</span>
+               			</div>
+						
+											</li>
+					
+																<li>
+												<img width="1000" height="352" src="http://file.scc.sjtu.edu.cn////////img/201904/f8dfbc8f460f4625aaa0f50e4d0cc945.jpg" />
+																		<div class="ban_bg" style="padding:5px 20px; background-image:url(/images/ban_tmpic.png); position:absolute; right:35px; bottom:40px;">
+                			<span style="opacity:1; color:#f2f2f2; font-size:22px; height:25px; line-height:25px;">2019年毕业生赴国防科技单位就业座谈会</span>
+               			</div>
+						
+											</li>
+					
+									</ul>
+	</body>
+</html>
+            </div>
+            <!--轮播图 end-->
+        </div>
+        <!--bannner图 END-->
+        <!--五类系统-->
+         <!--四类导航-->
+        <div class="wl_q">
+        	<ul>
+            	<li>
+                	<a style="position:relative;" href="/channel/index.htm?nParentId=1" target="_blank"><img src="/images/index_05_30.png" /></a>
+                	                	<div class="zxs_dl">
+                		<a class="sk_a" href="/IndexLoginServlet.svl?type=1">JAccount登录</a>
+                		<a class="sk_a" href="login.htm?type=1">学号登录</a>
+                	</div>
+                	                	<div class="wl_hover1">
+                    	
+                    																															<ul>
+		                        	<p><a href="http://www.job.sjtu.edu.cn/career/" target="_blank">生涯伴随</a></p>
+		                            																													                            <li><a href="http://sjtu.careersky.cn/jixun/Account/signIn" target="_blank">职业测评与规划</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/career/course/front/index.htm" target="_blank">素养提升</a></li>
+		                            		                            <li><a href="http://www.tongqu.me/" target="_blank">校园活动</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/career/growthGuide/careerDevelop/front/datumIndex.htm" target="_blank">生涯发展指导</a></li>
+		                            	                            </ul>
+                            								<ul>
+		                        	<p><a href="http://www.job.sjtu.edu.cn/eweb/jygl/jygl.so" target="_blank">就业管理</a></p>
+		                            																													                            <li><a href="http://www.job.sjtu.edu.cn/eweb/jygl/jygl.so?
+
+type=forward&entityId=XS_JYGL_XSJBXX&subsyscode=jygl&modcode=jygl_xsjbxx" target="_blank">生源信息核对</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/eweb/jygl/jygl.so?
+
+type=forward&entityId=XS_JYGL_XSTJBXX&subsyscode=jygl&modcode=jygl_xstjb" target="_blank">推荐表自制</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/eweb/jygl/jygl.so?
+
+type=forward&entityId=XS_JYGL_BYQX&subsyscode=jygl&modcode=jygl_xsbyqxdj" target="_blank">毕业去向登记</a></li>
+		                            	                            </ul>
+                            								<ul>
+		                        	<p><a href="http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so" target="_blank">求职应聘</a></p>
+		                            																													                            <li><a href="http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so?modcode=jygl_scfwzpxx&subsyscode=zpfw&type=searchZprd&sysType=TPZPFW" target="_blank">招聘热点</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so?type=zpxx" target="_blank">招聘信息</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so?type=xjh" target="_blank">宣讲会信息</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so?type=zph" target="_blank">招聘会信息</a></li>
+		                            	                            </ul>
+                                                    <div class="clear"></div>
+                    </div>
+                </li>
+                <li>
+                	<a style="position:relative;" href="/channel/index.htm?nParentId=2" target="_blank"><img src="/images/index_09_30.png" /></a>
+                	<div class="yrdw_dl">
+                	                	<a class="sk_a" href="http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so">登录</a>
+                	<a class="sk_a" href="http://www.job.sjtu.edu.cn/eweb/jygl/jyglext.so?type=dwzc">注册</a>
+                	                	</div>
+                	
+                    <div class="wl_hover3">
+                    																															<ul>
+		                        	<p><a href="http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so?type=dwfw" target="_blank">招聘指南</a></p>
+		                            																													                            <li><a href="http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so?
+
+type=forward&entityId=DWFW_JYGL_DWXX&subsyscode=zpfw&modcode=jygl_dwfwdwxx" target="_blank">单位信息维护</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so?
+
+type=forward&entityId=DWFW_JYGL_ZPHXX&subsyscode=zpfw&modcode=jygl_dwfwzphxx" target="_blank">招聘会报名</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so?
+
+type=forward&entityId=DWFW_JYGL_ZPXX&subsyscode=zpfw&modcode=jygl_dwfwzpxx" target="_blank">发布招聘信息</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so?
+
+type=forward&entityId=DWFW_JYGL_XJHBMXX&subsyscode=zpfw&modcode=jygl_dwfwxjhbm" target="_blank">宣讲会报名</a></li>
+		                            	                            </ul>
+                            								<ul>
+		                        	<p><a href="http://www.job.sjtu.edu.cn/sjcj/" target="_blank">生涯数据</a></p>
+		                            																													                            <li><a href="http://www.job.sjtu.edu.cn/homePage.htm" target="_blank">问卷调查[待定]</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/homePage.htm" target="_blank">分析报告[待定]</a></li>
+		                            	                            </ul>
+                            								<ul>
+		                        	<p><a href="http://www.job.sjtu.edu.cn/index.htm" target="_blank">其他公共信息</a></p>
+		                            																													                            <li><a href="http://www.sjtu.edu.cn/xbdh/yjdh/yx.htm" target="_blank">院系专业</a></li>
+		                            		                            <li><a href="http://scc.sjtu.edu.cn/eweb/jygl/zpfw.so?modcode=null&subsyscode=zpfw&type=searchBysycx" target="_blank">生源信息</a></li>
+		                            	                            </ul>
+                                                    <div class="clear"></div>
+                    </div>
+                </li>
+                <li>
+                	<a style="position:relative;" href="/channel/index.htm?nParentId=4" target="_blank"><img src="/images/index_11_30.png" /></a>
+                	                	<div class="xy_dl">
+                	<a class="sk_a" href="/IndexLoginServlet.svl?type=3">JAccount登录</a>
+                	<a class="sk_a" href="login.htm?type=3">学号登录</a>
+                	</div>
+                	                    <div class="wl_hover4">
+                    																														<ul>
+		                        	<p><a href="http://www.job.sjtu.edu.cn/career/" target="_blank">生涯伴随</a></p>
+		                            																													                            <li><a href="http://www.job.sjtu.edu.cn/career/career/archives/front/archivesIndex.htm" target="_blank">校友档案</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/career/evalution/front/evalutionHome.htm?lId=2&evalutionType=1" target="_blank">职业测评</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/career/profession/career/front/careerHome.htm" target="_blank">职业世界</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/career/growthGuide/careerDevelop/front/datumIndex.htm" target="_blank">成长指导</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/career/course/front/index.htm" target="_blank">素养提升</a></li>
+		                            	                            </ul>
+                            								<ul>
+		                        	<p><a href="http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so" target="_blank">招聘服务</a></p>
+		                            																													                            <li><a href="http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so?type=zpxx" target="_blank">招聘信息</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so?type=xjh" target="_blank">宣讲会信息</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so?type=dwfw" target="_blank">招聘指南</a></li>
+		                            	                            </ul>
+                            								<ul>
+		                        	<p><a href="http://www.job.sjtu.edu.cn/sjcj/" target="_blank">生涯数据</a></p>
+		                            																													                            <li><a href="http://www.job.sjtu.edu.cn/homePage.htm" target="_blank">问卷调查[待定]</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/homePage.htm" target="_blank">分析报告[待定]</a></li>
+		                            	                            </ul>
+                            								<ul>
+		                        	<p><a href="http://www.job.sjtu.edu.cn/index.htm" target="_blank">其他公共信息</a></p>
+		                            																													                            <li><a href="http://www.job.sjtu.edu.cn/school/index.htm" target="_blank">院系专业</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/news/list.htm?nType=1" target="_blank">生源信息</a></li>
+		                            	                            </ul>
+                                                    <div class="clear"></div>
+                    </div>
+                </li>
+                <li>
+                	<a style="position:relative;" href="/channel/index.htm?nParentId=3" target="_blank"><img src="/images/index_07_30.png" /></a>
+                	                	<div class="js_dl">
+                		<a class="sk_a" href="/IndexLoginServlet.svl?type=4">JAccount登录</a>
+                		<a class="sk_a" href="login_other.htm?type=4">其他登录</a>
+                	</div>
+                	                    <div class="wl_hover2">
+                    																																							<ul>
+		                        	<p><a href="http://www.job.sjtu.edu.cn/career/" target="_blank">生涯伴随</a></p>
+		                            																													                            <li><a href="http://www.job.sjtu.edu.cn/career/career/archives/admin/archivesList.htm" target="_blank">校友档案管理</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/career/evalution/admin/list.htm?lId=2&evalutionType=1" target="_blank">测评指导</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/career/growthGuide/careerDevelop/admin/datumList.htm" target="_blank">资料管理</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/career/course/admin/list.htm" target="_blank">课程管理</a></li>
+		                            	                            </ul>
+	                                                        																<ul>
+		                        	<p><a href="http://www.job.sjtu.edu.cn/eweb/jygl/jygl.so" target="_blank">就业管理</a></p>
+		                            																													                            <li><a href="http://www.job.sjtu.edu.cn/eweb/jygl/jygl.so?
+
+type=forward&entityId=YX_JYGL_XSXXKW&subsyscode=jygl&modcode=jygl_yxxsxxkw" target="_blank">学生信息勘误</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/eweb/jygl/jygl.so?
+
+type=forward&entityId=YX_JYGL_XSTJBXX&subsyscode=jygl&modcode=jygl_yxtjbgl" target="_blank">推荐表审核</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/eweb/jygl/jygl.so?
+
+type=forward&entityId=YX_JYGL_BYQX&subsyscode=jygl&modcode=jygl_yxbyqxgl" target="_blank">毕业去向管理</a></li>
+		                            	                            </ul>
+	                                                        																<ul>
+		                        	<p><a href="http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so" target="_blank">招聘服务</a></p>
+		                            																													                            <li><a href="http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so?
+
+type=forward&entityId=SCFW_JYGL_DWXX&subsyscode=zpfw&modcode=jygl_scfwyrdw" target="_blank">单位信息审核</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so?
+
+type=forward&entityId=SCFW_JYGL_ZPXX&subsyscode=zpfw&modcode=jygl_scfwzpxx" target="_blank">招聘信息发布</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/eweb/jygl/zpfw.so?
+
+type=forward&entityId=SCFW_JYGL_XJHBMXX&subsyscode=zpfw&modcode=jygl_scfwxjhgl" target="_blank">专场宣讲会管理</a></li>
+		                            	                            </ul>
+	                                                        																<ul>
+		                        	<p><a href="http://www.job.sjtu.edu.cn/support/" target="_blank">教师支持</a></p>
+		                            																													                            <li><a href="http://www.job.sjtu.edu.cn/support/course/front/index.htm" target="_blank">视频库</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/support/supportDevelop/front/datumIndex.htm" target="_blank">资料库</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/support/report/front/list.htm" target="_blank">数据库</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/support/consultation/front/allConsultationList.htm" target="_blank">生涯咨询</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/support/examination/front/list.htm" target="_blank">业务考核</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/support/activity/front/index.htm" target="_blank">校园活动</a></li>
+		                            	                            </ul>
+	                                                        																<ul>
+		                        	<p><a href="http://www.job.sjtu.edu.cn/sjcj/" target="_blank">生涯数据</a></p>
+		                            																													                            <li><a href="http://www.job.sjtu.edu.cn/sjcj/jyfx/tpjyfx/ejcd.jsp?modcode=wsdc" target="_blank">问卷管理</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/sjcj/jyfx/tpjyfx/ejcd.jsp?modcode=wjzz" target="_blank">问卷追踪</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/sjcj/jyfx/tpjyfx/ejcd.jsp?modcode=bbxt" target="_blank">分析工具</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/sjcj/jyfx/tpjyfx/ejcd.jsp?modcode=bbxx" target="_blank">报表管理</a></li>
+		                            		                            <li><a href="http://www.job.sjtu.edu.cn/sjcj/jyfx/tpjyfx/ejcd.jsp?modcode=bgxx" target="_blank">报告管理</a></li>
+		                            	                            </ul>
+	                                                        								                                                    <div class="clear"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--四类导航 END-->
+                <!--五类系统 END-->
+        <!--公告-->
+        <div class="gg_q">
+        	<div class="w1000_margin0">
+                <div class="gg_left">
+                    <div class="gg_left_top">
+                        <ul class="gg_l">
+			            	<h2 class="gg_l_tit">
+			            		<a target="_blank" href="/news/list.htm?nType=0">公告新闻</a><a target="_blank" class="gg_more" href="/news/list.htm?nType=0">更多</a>
+			            	</h2>
+			                																	                			                 <li title="【新闻】中国航天科工集团2020届招聘宣讲会暨双选会顺利举行">
+			                 	<a id="info_1" target="_blank" href="/news/detail.htm?lId=1860&nType=0">
+			                 	【新闻】中国航天科工集团2020届招聘宣讲会暨双选会顺利举行
+			                 	</a>
+			                 	<script type="text/javascript">
+									testAuto('info_1',24)
+								</script>
+			                 </li>
+			                			                 <li title="【新闻】中国核工业集团在上海交通大学举行2020届招聘活动">
+			                 	<a id="info_2" target="_blank" href="/news/detail.htm?lId=1859&nType=0">
+			                 	【新闻】中国核工业集团在上海交通大学举行2020届招聘活动
+			                 	</a>
+			                 	<script type="text/javascript">
+									testAuto('info_2',24)
+								</script>
+			                 </li>
+			                			                 <li title="【新闻】华为2020届应届生招聘高管宣讲会在我校举行">
+			                 	<a id="info_3" target="_blank" href="/news/detail.htm?lId=1858&nType=0">
+			                 	【新闻】华为2020届应届生招聘高管宣讲会在我校举行
+			                 	</a>
+			                 	<script type="text/javascript">
+									testAuto('info_3',24)
+								</script>
+			                 </li>
+			                			                 <li title="【新闻】中国航天科技集团招聘专场与中船重工七〇一研究所宣讲会">
+			                 	<a id="info_4" target="_blank" href="/news/detail.htm?lId=1857&nType=0">
+			                 	【新闻】中国航天科技集团招聘专场与中船重工七〇一研究所宣讲会
+			                 	</a>
+			                 	<script type="text/javascript">
+									testAuto('info_4',24)
+								</script>
+			                 </li>
+			                			                 <li title="【新闻】上海交通大学国防科技招聘周招聘宣讲会陆续举行">
+			                 	<a id="info_5" target="_blank" href="/news/detail.htm?lId=1856&nType=0">
+			                 	【新闻】上海交通大学国防科技招聘周招聘宣讲会陆续举行
+			                 	</a>
+			                 	<script type="text/javascript">
+									testAuto('info_5',24)
+								</script>
+			                 </li>
+			                			                 <li title="【新闻】航空工业第一飞机设计研究院招聘宣讲会顺利举行">
+			                 	<a id="info_6" target="_blank" href="/news/detail.htm?lId=1855&nType=0">
+			                 	【新闻】航空工业第一飞机设计研究院招聘宣讲会顺利举行
+			                 	</a>
+			                 	<script type="text/javascript">
+									testAuto('info_6',24)
+								</script>
+			                 </li>
+			                			                 <li title="中物院2020届招聘宣讲会暨上海交通大学国防科技招聘周启动会">
+			                 	<a id="info_7" target="_blank" href="/news/detail.htm?lId=1854&nType=0">
+			                 	中物院2020届招聘宣讲会暨上海交通大学国防科技招聘周启动会
+			                 	</a>
+			                 	<script type="text/javascript">
+									testAuto('info_7',24)
+								</script>
+			                 </li>
+			                			                 <li title="关于做好2019-2020学年毕业生求职创业补贴发放工作通知">
+			                 	<a id="info_8" target="_blank" href="/news/detail.htm?lId=1833&nType=0">
+			                 	关于做好2019-2020学年毕业生求职创业补贴发放工作通知
+			                 	</a>
+			                 	<script type="text/javascript">
+									testAuto('info_8',24)
+								</script>
+			                 </li>
+			                			                 <li title="【新闻】《职业生涯发展与规划》课程学生走访上海航天技术研究院">
+			                 	<a id="info_9" target="_blank" href="/news/detail.htm?lId=1813&nType=0">
+			                 	【新闻】《职业生涯发展与规划》课程学生走访上海航天技术研究院
+			                 	</a>
+			                 	<script type="text/javascript">
+									testAuto('info_9',24)
+								</script>
+			                 </li>
+			                			            </ul>
+                        <ul class="gg_c">
+                            <h2 class="gg_l_tit">
+			            		<a target="_blank" href="/eweb/jygl/zpfw.so?modcode=jygl_scfwzpxx&subsyscode=zpfw&type=searchZprd&sysType=TPZPFW">招聘热点</a><a target="_blank" class="gg_more" href="/eweb/jygl/zpfw.so?modcode=jygl_scfwzpxx&subsyscode=zpfw&type=searchZprd&sysType=TPZPFW">更多</a>
+			            	</h2>
+                            																														                           		 <li><a target="_blank" href="/eweb/jygl/zpfw.so?modcode=jygl_zpfwzpgg&subsyscode=zpfw&type=view&id=WS2zBr4DDoe4dWyhRLptgV&sysType=TPZPFW">【上海闵行 选调生&储备人才】上海市闵行区2020年度定向选调生和储备人才招录公告</a></li>
+				                			                									                           		 <li><a target="_blank" href="/eweb/jygl/zpfw.so?modcode=jygl_zpfwzpgg&subsyscode=zpfw&type=view&id=KeMTYU936fdANm5vejZ38K&sysType=TPZPFW">【山东 选调生】山东省2020年度选拔录用选调生公告</a></li>
+				                			                									                           		 <li><a target="_blank" href="/eweb/jygl/zpfw.so?modcode=jygl_zpfwzpgg&subsyscode=zpfw&type=view&id=Ve2VfyXNb4Q2FdYKsGh6Ra&sysType=TPZPFW">【国家移民管理局 人才招录】国家移民管理局2020年招录公告</a></li>
+				                			                									                           		 <li><a target="_blank" href="/eweb/jygl/zpfw.so?modcode=jygl_zpfwzpgg&subsyscode=zpfw&type=view&id=QsvoRWdh5Vg9iv8xwCFnMR&sysType=TPZPFW">【工信部  秋季硕博招聘会】工业和信息化部人才交流中心 （2019年度）全国秋季硕博巡回招聘会</a></li>
+				                			                									                           		 <li><a target="_blank" href="/eweb/jygl/zpfw.so?modcode=jygl_zpfwzpgg&subsyscode=zpfw&type=view&id=TvitpbvSuzyVXmkXcrgktP&sysType=TPZPFW">【吉林延边 党政人才】2020年吉林省延边州招才引智工程高层次人才“千人计划”引进优秀高校毕业生公告</a></li>
+				                			                									                           		 <li><a target="_blank" href="/eweb/jygl/zpfw.so?modcode=jygl_zpfwzpgg&subsyscode=zpfw&type=view&id=Ueya2WFpG7rSaPKkyN1y2R&sysType=TPZPFW">【上海嘉定 选调生&储备人才】2020年嘉定区优秀大学毕业生储备计划招聘和选调生招录公告</a></li>
+				                			                									                           		 <li><a target="_blank" href="/eweb/jygl/zpfw.so?modcode=jygl_zpfwzpgg&subsyscode=zpfw&type=view&id=35fNFh84zf9cfTxopsV8Gg&sysType=TPZPFW">【浙江杭州 党政人才】2020年杭州钱塘新区党政储备人才招聘公告</a></li>
+				                			                									                           		 <li><a target="_blank" href="/eweb/jygl/zpfw.so?modcode=jygl_zpfwzpgg&subsyscode=zpfw&type=view&id=LzNDpFpYpe7UW1QHgVXvwt&sysType=TPZPFW">【重庆 选调生】重庆市面向上海交通大学定向选调2020届急需紧缺专业应届优秀大学毕业生简章</a></li>
+				                			                									                           		 <li><a target="_blank" href="/eweb/jygl/zpfw.so?modcode=jygl_zpfwzpgg&subsyscode=zpfw&type=view&id=LgFSDy1ErWL66MNyMWZZ2m&sysType=TPZPFW">【湖南长沙 峰会邀请】2019中国国际轨道交通和装备制造产业人才峰会</a></li>
+				                			                                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="gg_r">
+                	<h2 class="gg_l_tit"><a href="#">关注我们</a></h2>
+                	<li class="gg_ewm">
+                        <img width="145px" height="135px" src="/images/ewm.jpg" />
+                    </li>
+                    <li class="gg_gz"><img src="/images/sina_logo.png" /><input class="gz_btn" type="button" onclick="window.open('http://weibo.com/p/1002061912131520/home?from=page_100206&mod=TAB#place')"/></li>
+                    
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="line_gray"></div>
+            <div class="gg_left_bot">
+                <ul class="gg_left_bot_left">
+                	<p class="gg_bot_tit">全国大学生就业一站式服务系统入口</p>
+                   <a href="https://sjtu.ncss.cn/"> <img class="gg_xsfw_logo" src="/images/fuxt_logo.png" /></a>
+                    <div class="clear"></div>
+                </ul>
+                <ul class="gg_left_bot_cen" style="margin:0 0 0 30px;">
+					<p class="gg_bot_tit">国际组织实习任职信息服务平台</p>
+                    <a href="http://gj.ncss.cn/"><img class="gg_xsfw_logo" src="/images/0417_1.jpg" width="280px" height="90px"/></a>
+                    <div class="clear"></div>
+                </ul>
+                <ul class="gg_left_bot_right" style="margin:0 0 0 0;">
+                	<p class="gg_bot_tit mt30">上海市学生事务中心学生激活入口</p>
+                	<a href="http://www3.firstjob.com.cn/pros/identity/student.action"><img class="gg_xsfw_logo mt30" src="/images/jihuo_pic.png" /></a>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!--公告 END-->
+        <!--底部-->
+                <div class="foot">
+        	<ul class="footer_content">
+                <li>
+                	<a href="http://cert.sjtu.edu.cn/beian_user/show.asp?number=930">沪交ICP备2010930</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                	版权所有：上海交通大学学生就业服务和职业发展中心
+                </li>
+                <li>
+                	地址：上海市闵行区东川路800号交通大学铁生馆&nbsp;&nbsp;&nbsp;&nbsp;
+                	邮编：200240&nbsp;&nbsp;<a href="/intro/index.htm?lId=3">联系我们</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                	<a target="_blank" href="/admin/welcome.htm">网站管理</a>
+                </li>
+            </ul>
+        </div>        <!--底部 END-->
+	</div>
+    <!--宽度1000px END-->
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>上海交通大学召开无党派人士“不忘合作初心，继续携手前行” 主题教育活动启动会暨无党派人士座谈会-上海交通大学“不忘初心,牢记使命”主题教育</title>
+<meta name="description" content="上海交通大学“不忘初心,牢记使命”主题教育" />
+<meta name="keywords" content="上海交通大学“不忘初心,牢记使命”主题教育" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Bootstrap -->    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+<link type="text/css" rel="stylesheet" href="/css/css.css" />
+<link rel="stylesheet" href="/css/animate.css">
+<script src="/js/jquery.min.js"></script>
+<!--轮转焦点图-->
+<script src="/js/jquery.hiSlider.js"></script>
+<link rel="stylesheet" href="/css/jquery.hiSlider.css">
+
+<!-- 图片滚动 --> 
+<link href="/css/owl.carousel.css" type="text/css" rel="stylesheet" />
+<link href="/css/owl.theme.css" type="text/css" rel="stylesheet" />
+<!-- 图片滚动 --> 
+<script type="text/javascript" src="/js/owl.carousel.js"></script>
+<script type="text/javascript">
+    function search_validate(){
+        if(document.getElementById('search_keywords').value == ''){
+            alert('请输入搜索关键字');
+            return false;
+        }
+    }
+</script> 
+</head>
+<body class="bj_b"><div class="top" id="top_nav">
+    <div class="main">
+        <a href="/" class="logo"></a>     
+        <span class="menu2" id="menu2"><a href="javascript:void(0)">&nbsp;</a></span>   
+        <div id=navk>
+                        <ul class="cd_t">
+                  
+                <li><a href="https://www.sjtu.edu.cn" target="_blank">交大首页</a></li>
+                                <li class="l_x">|</li>
+                                  
+                <li><a href="https://news.sjtu.edu.cn" target="_blank">交大新闻网</a></li>
+                                <li class="l_x">|</li>
+                                  
+                <li><a href="http://jd.sjtu.edu.cn/web/JDJDW/2960001.htm" target="_blank">焦点网</a></li>
+                                            </ul>
+            <span class="ss">
+                <form method="get" action="https://sjtuztjy.sjtu.edu.cn/active/search.html" onsubmit="return search_validate();">
+                <div class="txtk">
+                    <input type="text" id="search_keywords" name="search_keywords" class="form-control" placeholder="">
+                    <button class="an_ss" type="submit"></button>
+                </div>
+                </form>
+            </span>
+            <ul class="menu">
+                <li><a href="/" class="dbt">首页</a></li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/zyjs.html" class="dbt ">中央精神</a>
+                                        <dl>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/zy_file.html" >中央文件</a></dd>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/zy_study.html" >学习资料</a></dd>
+                                            </dl>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/news.html" class="dbt on">新闻动态</a>
+                                        <dl>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/jdyw.html" >交大要闻</a></dd>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/jcdt.html" >基层动态</a></dd>
+                                            </dl>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/xjdx.html" class="dbt ">先进典型</a>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/mtgz.html" class="dbt ">媒体关注</a>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/slhj.html" class="dbt ">史料汇集</a>
+                                    </li>
+                            </ul>
+            <div class="clear"></div>
+        </div> 
+    </div>  
+</div>
+<div class="top_jg"></div>
+<SCRIPT type=text/javascript>  
+$(document).ready(function() {
+    var pk=document.body.clientWidth;
+    if(pk<1200){
+        //手机菜单
+        $("#menu2").click(function(){
+            if($("#navk").css("display")=="none"){
+                $(this).find("a").addClass("on");
+                $("#navk").slideDown("slow");       
+            }
+            else{
+                $(this).find("a").removeClass("on");
+                $("#navk").slideUp("slow");     
+            }
+        });  
+    }
+    else{
+        $(".menu li").hover(function() {
+            $(this).find("dl").css("display","block");
+        },function(){
+            
+            $(this).find("dl").css("display","none");
+        });
+
+        //向下滚动顶部缩小
+        $.fn.smartFloat = function() {
+            var position = function(element) {
+                var top = element.position().top, pos = element.css("position");
+                $(window).scroll(function() {
+                    var scrolls = $(this).scrollTop();
+                    if (scrolls > top) {
+                        $("#top_nav").addClass("on");
+                        if (window.XMLHttpRequest) {
+                            element.css({
+                                position: "fixed",
+                                //background:"#efefef",
+                                top: 0
+                            });
+                        } else {
+                            element.css({
+                                top: scrolls
+                            });
+                        }
+                    }else {
+                        $("#top_nav").removeClass("on");
+                        element.css({
+                            position: pos,
+                            //background:"transparent",
+                            top: top
+                        });
+                    }
+                });
+            };
+            return $(this).each(function() {
+                position($(this));
+            });
+
+        };
+        $("#top_nav").smartFloat();
+        //向下滚动顶部缩小 end
+    };
+});  
+//-->  
+</SCRIPT>
+<div class="ban"><img src="/upload/image/20190924/20190924141304.jpg" ></div>
+<div class="dqwz">
+ 	<div class="main wow fadeInUp">
+  		<a href="/">首页</a> &gt; <a href="https://sjtuztjy.sjtu.edu.cn/news.html">新闻动态</a> &gt; <a href="https://sjtuztjy.sjtu.edu.cn/jdyw.html">交大要闻</a> 	</div>
+</div>
+<div class="nyk">
+	 	<div class="main">
+   		<div class="zt_snr">
+     		<div class="sbt wow fadeInUp">上海交通大学召开无党派人士“不忘合作初心，继续携手前行” 主题教育活动启动会暨无党派人士座谈会</div>
+     		<div class="fbt wow fadeInUp"></div>
+     		<div class="xx wow fadeInUp"></div>
+    		<div class="ssj news_ssj wow fadeInUp">日期：2019-10-09</div>
+    		<div class="snr wow fadeInUp">
+			    <p>&nbsp; &nbsp; &nbsp; 为深入学习贯彻习近平新时代中国特色社会主义思想和中共十九大精神，加强中国特色社会主义参政党建设，9月29日下午，无党派人士&ldquo;不忘合作初心，继续携手前行&rdquo;主题教育活动启动会暨无党派人士座谈会在新行政楼B625举行。校党委常委、统战部部长张卫刚，副部长张杰，分析测试中心主任张兆国、知联会常务副会长、塑性成形技术与装备研究院院长陈军等我校15名无党派人士应邀出席了座谈会。座谈会由张杰主持。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="1.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_015952_525.jpg" title="20190930_015952_525.jpg" /></p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_020007_735.jpg" title="20190930_020007_735.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; 张杰首先向与会人员介绍回顾了无党派人士的历史、含义、地位、作用以及我校优秀的无党派代表人士，传达了中央统战部、市委统战部出台的《关于支持各民主党派、无党派人士开展&ldquo;不忘合作初心,继续携手前进&rdquo;主题教育活动方案》和《支持无党派人士开展&ldquo;不忘合作初心,继续携手前进&rdquo;主题教育活动有关安排》等相关文件精神，重点介绍了《中共上海交通大学党委统战部支持无党派人士开展&ldquo;不忘合作初心，继续携手前进&rdquo;主题教育活动的实施方案》。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_020007_543.jpg" title="20190930_020007_543.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; 与会的无党派人士结合自己的成长、工作经历就我国的执政党建设、我国的政治制度，一一作了交流发言，并纷纷表示：在新中国成立70周年、我国新型政党制度确立70周年之际，中国共产党开展&ldquo;不忘初心、牢记使命&rdquo;主题教育之时，开展此次&ldquo;不忘合作初心，继续携手前进&rdquo;主题教育活动正当其时、意义重大，是深入学习贯彻习近平新时代中国特色社会主义思想的重要举措，是充分发挥我国新型政党制度效能的必然要求，也是加强中国特色社会主义参政党建设的迫切需要。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="4.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_020025_151.jpg" title="20190930_020025_151.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; 张卫刚作总结讲话，他指出，开展主题教育活动是深入学习贯彻习近平新时代中国特色社会主义思想的重要举措。无党派人士要通过主题教育活动，深化对多党合作初心、中国特色社会主义参政党性质地位的认识，树牢&ldquo;四个意识&rdquo;、坚定&ldquo;四个自信&rdquo;、坚决做到&ldquo;两个维护&rdquo;，以更加坚定的信念、更加奋发有为的姿态投身新时代、新征程，要准确把握本次主题教育活动的目标要求，结合自身实际，切实将主题教育活动贯穿履职尽责和自身建设全过程。希望无党派人士今后自觉加强学习，立足本职岗位，在积极参政议政、建言献策、服务社会等方面提出具有前瞻眼光、有战略思维、有操作性的意见建议，提高主题教育活动的成效，以更加优异的成绩向中华人民共和国成立70周年献礼。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: right;"><label>作者：</label>李莹莹</p>
+
+<p style="text-align: right;"><label>摄影：</label>李莹莹</p>
+
+<p style="text-align: right;"><label>供稿单位：</label>党委统战部</p>
+    		</div>
+    		<div class="sgd wow fadeInUp">
+				            	<a href="https://sjtuztjy.sjtu.edu.cn/jdyw/3035.html">下一条：校党委书记姜斯宪焦点讲坛作专题授课</a>     			<a href="https://sjtuztjy.sjtu.edu.cn/jdyw.html" class="cd_fh">返回列表</a>
+     		</div>
+   		</div>
+  		<div class="clear"></div>
+ 	</div>
+</div>
+<script type="text/javascript" src="/js/wow.js"></script>
+<script>
+var wow = new WOW({
+    boxClass: 'wow',
+    animateClass: 'animated',
+    offset: 0,
+    mobile: true,
+    live: true
+});
+wow.init();
+</script>
+
+	<div class="foot">
+	 	<div class="main">
+	  		<div class="f1 wow fadeInUp" data-wow-delay=".1s">
+	  		沪ICP备05052060   沪举报中心   版权所有© 上海交通大学<br>  
+			地址：上海市东川路800号   邮编：200240   查号：86-21-54740000	  	</div>
+	  	<div class="f2 wow fadeInUp" data-wow-delay=".3s">
+	   		<span class="s1">相关链接</span>
+	   			   			   		<a href="https://www.sjtu.edu.cn" target="_blank">交大首页</a>
+	   			   		<b>|</b>
+	   			   			   		<a href="https://news.sjtu.edu.cn" target="_blank">交大新闻网</a>
+	   			   		<b>|</b>
+	   			   			   		<a href="http://jd.sjtu.edu.cn/web/JDJDW/2960001.htm" target="_blank">焦点网</a>
+	   			   			   	</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.fy1 a').each(function(){
+            if($(this).text()=='上一页' || $(this).text()=='下一页'){
+                $(this).addClass('cd_sx');
+            }
+        })
+    });
+</script>
+</body>
+</html>

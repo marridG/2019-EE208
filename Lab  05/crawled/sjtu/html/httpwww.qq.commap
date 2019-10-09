@@ -1,0 +1,1068 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+<title>网站地图_腾讯网</title>
+<meta name="keywords" content="腾讯网 网站地图 sitemap 网站导航" />
+<meta name="description" content="腾讯网网站地图sitemap页（http://www.qq.com/map/），腾讯公司（tencent）最全的网站产品信息导航页。" />
+
+<style>
+/*mapsite v1.0.0 power by Austinjin t.qq.com/austinjin @20120628*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, input, textarea, p, th, td { margin:0; padding:0; }
+body{font-size:12px;font-family:Tahoma,"宋体","微软雅黑",sans-serif; line-height:1.231em;}
+img { border:none; }
+ol, ul { list-style:none; }
+h1, h2, h3, h4, h5, h6 { font-size:100%; font-weight:normal; }
+strong { font-weight:bold; }
+
+a{color:#2d374b; text-decoration:none;}
+a:hover{color:#3b639f; text-decoration: underline;}
+
+.en{ font-family:Tahoma, Geneva, sans-serif;}
+.song,.song *{ font-family: "宋体";}
+
+.wrap{width:1000px;margin:0 auto; clear:both;overflow:hidden;zoom:1;}
+.main{float:left;width:786px;}
+.side{float:right;width:190px;}
+.bottom{height:130px;margin-top:42px;padding-top:4px;border-top:#d1d1d1 1px solid;}
+
+.allwidth{position:relative; z-index:99999;width:100%;min-width:1000px;height:29px;background:#ededed;border-bottom:16px solid #fff;}
+.mininav{width:1000px;height:28px;margin:0 auto;}
+.mapbar{width:1000px;height:29px;margin:0 auto;}
+.mapbar .sobar{height:83px;}
+.mapbar .enter{padding:9px 0 0 80px;height:20px;background:url(//mat1.gtimg.com/www/images/qq2012/skin/kuaijierukou.png) no-repeat left center;}
+.mapbar .enter li{float:left;padding:0 12px; border-right:#bababa 1px solid;line-height:12px;*padding-top:1px;*line-height:13px;}
+.mapbar .enter li.end{border:none;}
+.mapbar .enter a{color:#666; }
+.mapbar .enter a:hover{color:#f00;}
+
+.focus-wrap{width:786px;height:120px;background:#FC0; position:relative; z-index:99999; }
+.focus-pic { width:786px; height:120px; overflow:hidden; position: absolute; }
+.focus-pic img{width:786px; height:120px;}
+.focus-pic ul { position:absolute; left:0; overflow:hidden; }
+.focus-pic li { float:left; width:786px; }
+.focus-pic a{display:block;width:786px;height:120px;}
+.f-dot { position:absolute;top:90px;right:10px;}
+.f-dot span {display:inline-block;width:20px;height:20px;margin:0 3px; background:#644d13;line-height:20px; font-family:Arial, Helvetica, sans-serif;color:#fff;text-align:center; border-radius:10px; cursor:pointer; }
+.f-dot .hover { background:#ed8600; text-decoration:none;}
+
+.tagsMod{width:786px;position:relative; z-index:9999; }
+.tagsMod em{font-style:normal;padding: 0 6px;*padding:0;_padding:0;}
+.tags{position:relative; z-index:99999;height:46px;border-top:#fff 16px solid; background:#fff;font-family: "微软雅黑","MicrosoftYahei","宋体","Arial Narrow",sans-serif;clear:both;_font-weight:bold;}
+.tags div{float:left;width:132px;height:33px;margin-right:1px;padding-top:10px; background:url(//mat1.gtimg.com/www/austin/map/tag_bg.png) -133px 0 no-repeat;color:#454545;font-size:16px;line-height:20px;text-align:center; cursor:pointer;_font-size:14px;text-shadow:1px -1px 1px #fff; }
+.tags div:hover{color:#8d5a00;background-position:-265px 0;}
+.tags .at{color:#fff;background-position:0 0;text-shadow:1px -1px 1px #134d92; }
+.tags .at:hover{ color:#fff;background-position:0 0;}
+.tags .end{width:120px;margin:0;}
+.tags .end:hover{color:#8d5a00;background-position:-271px 0;}
+.tags #end.at{background-position:-5px 0;}
+.tags #end.at:hover{color:#fff;background-position:-5px 0;}
+
+#wrapCon { position:relative;overflow:hidden;zoom:1;}
+.cons{ position:absolute;}
+.con{margin-bottom:12px;border:#d6dbe1 1px solid;border-top:#458fce 2px solid;}
+.con a{padding:1px 2px 2px 2px;_padding:2px;*padding:2px;}
+.con a:hover{color:#fff;background:#3b639f; text-decoration:none;}
+.con .hd{height:39px; background:#fcfcfc;border-bottom:#fff 1px solid;}
+.con .hd h1{width:122px;height:39px; background:url(//mat1.gtimg.com/www/austin/map/contit_bg.png) right center no-repeat;font-size:16px;line-height:39px;font-family: "微软雅黑","MicrosoftYahei","宋体","Arial Narrow",sans-serif; text-align:center;_font-weight:bold;_font-size:14px;}
+.con .bd{padding:10px 0;border-top:#d6dbe1 1px solid;overflow:hidden;zoom:1;}
+.con:hover .bd{background:#f5f8fa;}
+.con:hover .hd h1{color:#3b639f;}
+.con .bd dl{padding:0 0 10px 10px;overflow:hidden;zoom:1;}
+.con .bd dt{padding-left:7px;color:#b87500;font-weight:bold;line-height:28px;}
+.con .bd dd{float:left;overflow:hidden;zoom:1;}
+.con .bd ul{margin-right:0;padding-right:0;overflow:hidden;zoom:1;}
+.con .bd li{float:left;height:28px;padding:0 5px;line-height:28px;}
+.con .bd strong{color:#3b639f;}
+.con .bd strong a{color:#3b639f;}
+.con .bd strong a:hover{color:#fff;}
+
+.con .line,.con .line ul{background:url(//mat1.gtimg.com/www/austin/map/line_bg.png) right 8px no-repeat;}
+
+.modRight{width:190px;overflow:hidden;zoom:1;}
+.modRight .hd{height:29px; background:#f6f8fa;border-top:#e3e3e3 1px solid;}
+.modRight .hd h2{ padding-left:12px;color:#636b7c;font-size:14px;font-weight:bold;line-height:28px;}
+.modRight .bd{}
+.modRight ul {padding:10px 0;overflow:hidden;zoom:1;}
+.modRight li {overflow:hidden;zoom:1;}
+.modRight img{display:block;}
+.modRight .typeA li{padding:10px 0;line-height:18px;}
+.modRight .typeA h3{float:left;width:42px;padding:2px 0 0 2px;}
+.modRight .typeA h3 img{width:32px;height:32px;}
+.modRight .typeA h4{float:left;width:140px;color:#3b639f;font-weight:bold; text-align:left;}
+.modRight .typeA h4 a{color:#3b639f;}
+.modRight .typeA p{float:left;}
+
+.modRight .typeB li{padding:4px 0;line-height:20px;}
+.modRight .typeB h3{float:left;width:30px;padding-left:2px;}
+.modRight .typeB h4{float:left;width:148px;}
+.modRight .typeB h4 a{float:left;}
+.modRight .typeB img{width:20px;height:20px;border:#e3e6eb 1px solid;}
+.modRight .typeB .fl{float:right;}
+.modRight .typeB span a{color:#3b639f;}
+
+.modRight .typeC li{padding:6px 0;}
+.modRight .typeC img{width:190px;height:80px;}
+
+.modRight .typeD li{padding:4px 2px 4px 12px; background:url(//mat1.gtimg.com/www/austin/map/li_bg.png) 0 8px no-repeat;line-height:20px;}
+body,html{width:100%;}
+.nav{width:100%;min-width:1000px;height:60px;background:url(//mat1.gtimg.com/www/images/qq2012/skin/QQnavBgBlue.png) repeat-x top center;}
+.navInner{width:1000px;margin:0 auto;}
+.nav li{float:left;font:16px "微软雅黑";padding:18px 72px 0 0;height:42px;position:relative;}
+.nav li .navIcon{width:20px;height:10px;position:absolute;bottom:0;left:22px;background:url(//mat1.gtimg.com/www/images/qq2012/skin/navIcon.png) no-repeat;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=scale,src='//mat1.gtimg.com/www/images/qq2012/skin/navIcon.png');}
+.nav li a{color:#fff;}
+
+@media screen and (max-device-width: 320px){body{-webkit-text-size-adjust:none;}}
+@media screen and (max-device-width: 480px){body{-webkit-text-size-adjust:none;}}
+@media only screen and (-webkit-min-device-pixel-ratio: 2){body{-webkit-text-size-adjust:auto;}}
+
+/*竖版*/
+/*
+@media only screen and (orientation:portrait) {
+    .nav,.allwidth{width:1000px;}
+}
+*/
+/*横版*/
+/*
+@media only screen and (orientation:landscape) {
+   .nav,.allwidth{width:1000px;}
+}
+*/
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+</head>
+
+<body>
+<!--pgv 20180329 by yijunliu-->
+<script src="//mat1.gtimg.com/pingjs/ext2020/dc2017/publicjs/m/ping.js" charset="gbk"></script>
+
+<script>!function(t,e){"use strict";function a(){var t,e,a=(""+p.catalog_full).replace(/-/g,".").replace(/_/g,"-");p.topic&&p.topic.name&&p.topic.name.length>0?(t="L.",e="Z."+a+"."+p.topic.name):(t="L."+a,e="Z.");var n="W."+p.type,o="M."+p.tpl.type+p.tpl.stype,i="P."+(""+p.site).replace(/_/g,"-"),c="F."+f,l=t+"_"+e+"_"+n+"_"+o+"_"+i+"_"+c;l&&r({pgUserType:l})}function n(t){o(e,"click",function(e){var a=e.target;"img"===a.tagName&&(a=a.parentNode);var n=a.tagName.toLowerCase(),o=a.getAttribute("href");if(!o||o.indexOf("qqcom_pgv_from=")>-1)return!1;if("a"===n&&a.hostname&&a.hostname.indexOf("qq.com")>-1){var r=o+(a.search?"&":"?")+"qqcom_pgv_from="+t;a.setAttribute("href",r)}})}function o(a,n,o){var r=function(a){return a=a||t.event,a.target||(a.target=a.srcElement||e),3===a.target.nodeType&&(a.target=a.target.parentNode),a};return a.addEventListener?a.addEventListener(n,function(t){o.call(t.currentTarget,r(t))},!1):a.attachEvent("on"+n,function(t){o.call(a,r(t))}),!0}if(!t||!t.location||"function"!=typeof t.pgvMain)return!1;var r=function(){var e=arguments;setTimeout(function(){t.pgvMain.apply(this,e)},0)},i=location.search.replace(/adtag=client\.qq\.\d+_\.0/i,"from=tips"),c=["aio","tips"],f="def";location.search.indexOf("qqcom_pgv_from=")>-1&&(f=location.host+location.pathname+location.search);var p=t.ARTICLE_INFO||null,l=p&&p.catalog_full;if(l)for(var g=0;g<c.length;g+=1)if(i.indexOf(c[g])>-1){n(c[g]);break}l&&a(),l||("undefined"!=typeof whatCatalog&&(t.pvCSTM=t.whatCatalog),r({pgUserType:"F."+f}))}(window,document);</script><!--/pgv 20160801-->
+<!-- 视频来源ptag --><script src="//mat1.gtimg.com/v/ptag/ptag_1.2.js" async="true"></script>
+<!--[if !IE]>|xGv00|a1d505b81f0731c97405c05986e06bb8<![endif]-->
+<!--[if !IE]>|xGv00|9c0360d10346546f68f55326baad5f5c<![endif]-->
+<div class="nav">
+	<div class="navInner">
+		<ul>
+			<li><a href="http://www.qq.com/map">网站地图</a><em class="navIcon"></em></li>
+			<li><a href="http://www.qq.com/history">主题皮肤回顾</a></li>
+                                      <li><a href="http://www.qq.com/daren.htm">点亮资讯达人图标</a></li>
+                                      <li><a href="http://www.qq.com/sheweishouye.htm">主页设置说明</a></li>
+                        </ul>
+	</div>
+</div>
+<div class="allwidth">
+    <div class="mapbar">
+        <div class="enter">
+        	<ul>
+            	<li><a href="http://www.qq.com/" target="_blank">腾讯网</a></li>
+                <li><a href="http://kb.qq.com/" target="_blank">快报</a></li>
+                <li><a href="http://im.qq.com/" target="_blank"><span class="en">QQ</span></a></li>
+                <li><a href="http://game.qq.com/" target="_blank">腾讯游戏</a></li>
+                <li><a href="https://qian.qq.com?stat_data=oth87ppcsy00223&ADTAG=SCQD.BD.PC.TXWZ1" target="_blank">理财通</a></li>
+                <li><a href="http://qzone.qq.com/" target="_blank"><span class="en"><span class="en">QQ</span></span>空间</a></li>
+                <li class="end"><a href="http://pc.qq.com/" target="_blank"><span class="en"><span class="en">QQ</span></span>软件</a></li>
+            </ul>  
+        </div><!--[if !IE]>|xGv00|02be6539e82f562dbcd99dde0e6067c5<![endif]-->
+    </div>
+</div>
+<div class="wrap">
+	<div class="main">
+
+<!--focus-->
+<style>
+.focus1{background:url(//mat1.gtimg.com/www/images/qq2012/mapTime.jpg) no-repeat;}
+.focus2{background:url(//mat1.gtimg.com/www/images/qq2012/aiodown.jpg) no-repeat;}
+.focus3{background:url(//img1.gtimg.com/www/pics/hv1/64/192/1151/74892799.jpg) no-repeat;}
+.focus4{background:url(//mat1.gtimg.com/www/images/qq2012/mapuser_xyz.png) no-repeat;}
+</style>
+<div class="focus-wrap"  id="focus-wrap">
+	<div id="focus-pic" class="focus-pic">
+		<ul>
+			<li class="focus4"><a href="http://users.qq.com/?pgv_ref=qqmap" target="_blank" bosszone="qqmap_1"></a></li>
+			<li class="focus1"><a href="http://time.qq.com?pgv_ref=qqmap" target="_blank"></a></li>
+			<li class="focus2"><a href="http://dldir1.qq.com/dlomg/qqcom/mini/QQNewsMini7.exe" target="_blank"></a></li>
+			<li class="focus3"><a href="http://news.qq.com/mobile/" target="_blank"></a></li>
+      	</ul>
+  	</div>
+  	<div id="f-dot" class="f-dot"><span class="hover">1</span><span>2</span><span>3</span><span>4</span></div>
+</div>
+<!--focus end--><!--[if !IE]>|xGv00|771d4852ee9edd8fec98d3e82ef48cbb<![endif]-->
+        
+<div class="tagsMod">
+            <div class="tags" id="tags">
+                <div class="at">新闻<em>·</em>资讯</div>
+                <div>通信<em>·</em>社区</div>
+                <div>腾讯<em>·</em>游戏</div>
+                <div>商务<em>·</em>生活 </div>
+                <div>手机<em>·</em>无线</div>
+                <div id="end" class="end">搜索<em>·</em>服务</div>
+            </div>
+            <div id="wrapCon">
+            <div class="cons">
+                <div class="con" id="0">
+                    <div class="hd">
+                        <h1>新闻<em>·</em>资讯</h1>
+                    </div>
+                    <div class="bd">
+                        <dl>
+                            <dt>[资讯]</dt>
+                            <dd class="line" style="width:254px;">
+                                <ul>
+                                    <li><strong><a href="http://news.qq.com/" target="_blank">新闻</a></strong></li>
+                                    <li><a href="https://new.qq.com/ch/world" target="_blank">国际</a></li>
+                                    <li  style="display:none"><a href="http://society.qq.com/" target="_blank">社会</a></li>
+                                    <li><a href="https://new.qq.com/ch/photo/" target="_blank">图片</a></li>
+                                    <li><a href="https://new.qq.com/ch/milite/" target="_blank">军事</a></li>
+                                    <li><a href="https://new.qq.com/omn/author/41" target="_blank">评论</a></li>
+                                </ul>
+                                <ul>
+                                    <li><strong><a href="https://new.qq.com/ch/finance" target="_blank">财经</a></strong></li>
+                                    <li><a href="https://new.qq.com/ch2/hgjj" target="_blank">宏观</a></li>
+                                    <li><a href="https://new.qq.com/ch2/jinr" target="_blank">金融</a></li>
+                                    <li><a href="https://new.qq.com/ch/finance_stock" target="_blank">证券</a></li>
+                                    <li><a href="https://new.qq.com/ch2/ganggu" target="_blank">港股</a></li>
+                                    <li><a href="https://new.qq.com/ch2/meigu" target="_blank">美股</a></li>
+                                </ul>
+                                <ul>
+                                    <li><strong><a href="http://sports.qq.com/" target="_blank">体育</a></strong></li>
+                                    <li><a href="http://sports.qq.com/nba/" target="_blank">NBA</a></li>
+                                    <li><a href="http://sports.qq.com/isocce/" target="_blank">国际足球</a></li>
+                                    <li><a href="http://sports.qq.com/others/" target="_blank">综合体育</a></li>
+                                    <li><a href="http://fans.sports.qq.com/#/" target="_blank">社区</a></li>
+                                </ul>
+                                <ul>
+                                    <li><strong><a href="https://v.qq.com" target="_blank">视频</a></strong></li>
+                                    <li><a href="https://v.qq.com/tv/" target="_blank">电视剧</a></li>
+                                    <li><a href="http://v.qq.com/variety/" target="_blank">综艺</a></li>
+                                    <li><a href="http://v.qq.com/movie/" target="_blank">电影</a></li>
+                                    <li><a href="http://v.qq.com/cartoon/" target="_blank">动漫</a></li>
+                                    <li><a href="http://film.qq.com/" target="_blank">VIP</a></li>
+                                </ul>
+                                <ul>
+                                    <li><strong><a href="https://new.qq.com/ch/ent/" target="_blank">娱乐</a></strong></li>
+                                    <li><a href="https://new.qq.com/ch2/star" target="_blank">明星</a></li>
+                                    <li><a href="https://new.qq.com/omn/author/32" target="_blank">贵圈</a></li>
+                                    <li><a href="https://new.qq.com/ch/ent/" target="_blank">封面</a></li>
+                                    <li><a href="https://new.qq.com/omn/author/26135" target="_blank">懂小姐</a></li>
+                                    <li><a href="https://new.qq.com/ch/astro/" target="_blank">星座</a></li>
+                                </ul>
+
+                            </dd>
+                            <dd class="line" style="width:254px;padding-left:6px;">
+                                <ul>
+                                    <li><strong><a href="https://new.qq.com/ch/tech/" target="_blank">科技</a></strong></li>
+                                    <li><a href="https://biznext.qq.com/" target="_blank">智酷</a></li>
+                                    <li><a href="https://new.qq.com/ch2/tcctit" target="_blank">移动</a></li>
+                                    <li><a href="https://new.qq.com/ch2/internet" target="_blank">IT</a></li>
+                                    <li><a href="https://new.qq.com/ch/digi/" target="_blank">数码</a></li>
+                                    <li><a href="https://new.qq.com/omn/author/5157372" target="_blank">深网</a></li>
+                                </ul>
+                                <ul>
+                                    <li><strong><a href="https://new.qq.com/ch/auto/" target="_blank">汽车</a></strong></li>
+                                    <li><a href="https://new.qq.com/hot/?ext=auto" target="_blank">热点</a></li>
+                                </ul>
+                                <ul>
+                                    <li><strong><a href="https://new.qq.com/ch/fashion" target="_blank">时尚</a></strong></li>
+                                    <li><a href="http://v.qq.com/fashion/" target="_blank">视频</a></li>
+                                    <li><a href="https://new.qq.com/ch2/fashiondress" target="_blank">服饰</a></li>
+                                    <li><a href="https://new.qq.com/ch2/makeup" target="_blank">美容</a></li>
+                                </ul>
+                                <ul>
+                                    <li><strong><a href="https://new.qq.com/ch/games" target="_blank">游戏</a></strong></li>
+                                    <li><a href="https://new.qq.com/ch2/online" target="_blank">网游</a></li>
+                                    <li><a href="https://new.qq.com/ch2/console" target="_blank">主机</a></li>
+                                    <li><a href="https://new.qq.com/ch2/yxpd" target="_blank">手游</a></li>
+                                    <li><a href="https://new.qq.com/ch2/esports" target="_blank">电竞</a></li>
+                                    <li><a href="https://new.qq.com/ch2/gamesnews" target="_blank">行业</a></li>
+                                </ul>
+                                <ul>
+                                    <li><strong><a href="https://new.qq.com/ch/house/" target="_blank">房产</a></strong></li>
+                                    <li><a href="https://new.qq.com/ch2/zlzj" target="_blank">租赁</a></li>
+                                    <li><a href="https://new.qq.com/ch2/jiadian" target="_blank">家电</a></li>
+                                    <li><a href="https://new.qq.com/ch2/lpxs" target="_blank">楼盘</a></li>
+                                    <li><a href="https://new.qq.com/ch2/zhuangxiu" target="_blank">装修</a></li>
+                                </ul>
+                            </dd>
+                            <dd style="width:254px;padding-left:6px;">
+                                <ul>
+                                    <li><strong><a href="https://new.qq.com/ch/cul/" target="_blank">文化</a></strong></li>
+                                    <li><a href="https://new.qq.com/ch2/art" target="_blank">艺术</a></li>
+                                    <li><a href="https://new.qq.com/ch/edu/" target="_blank">教育</a></li>
+                                    <li><a href="https://new.qq.com/ch2/abroad" target="_blank">出国</a></li>
+                                    <li><a href="https://new.qq.com/ch2/gaokao" target="_blank">高考</a></li>
+                                    <li><a href="http://class.qq.com/" target="_blank">精品课</a></li>
+                                </ul>
+                                <ul>
+                                    <li><strong><a href="https://new.qq.com/ch/comic/" target="_blank">动漫</a></strong></li>
+                                    <li><a href="http://ac.qq.com/" target="_blank">漫画</a></li>
+                                    <li><a href="https://new.qq.com/tag/88195" target="_blank">新闻</a></li>
+                                    <li><a href="http://kid.qq.com/" target="_blank">儿童</a></li>
+                                    <li><a href="http://fun.qq.com/hd/pc/index.html" target="_blank">活动</a></li>
+                                    <li><a href="http://v.qq.com/x/list/children?sort=4&offset=0&iarea=-1&iplot=6" target="_blank">视频</a></li>
+                                </ul>
+                                <ul>
+                                    <li><strong><a href="https://new.qq.com/ch/health/" target="_blank">健康</a></strong></li>
+                                    <li><a href="https://new.qq.com/ch2/healthnews" target="_blank">资讯</a></li>
+                                    <li><a href="https://new.qq.com/ch2/yangsheng" target="_blank">养生</a></li>
+                                    <li><a href="http://v.qq.com/life/" target="_blank">视频</a></li>
+                                    <li><a href="https://new.qq.com/ch/baby/" target="_blank">育儿</a></li>
+                                    <li><a href="https://new.qq.com/ch2/yunc" target="_blank">孕产</a></li>
+                                </ul>
+                                <ul>
+                                    <li><strong><a href="http://gongyi.qq.com/" target="_blank">公益</a></strong></li>
+                                    <li><a href="http://gongyi.qq.com/jjhgy/index.htm" target="_blank">基金会</a></li>
+                                    <li><a href="http://v.qq.com/hotshare/" target="_blank">播客</a></li>
+                                    <li><a href="https://new.qq.com/ch/cul_ru/" target="_blank">新国风</a></li>
+                                </ul>
+                                <ul>
+                                    <li><strong><a href="https://new.qq.com/ch/games/" target="_blank">旅游</a></strong></li>
+                                    <li><a href="http://city.qq.com/" target="_blank">城市</a></li>
+                                    <li><a href="http://youpin.qq.com/web" target="_blank">优品</a></li>
+                                    <li><a href="https://tianqi.qq.com/index.htm" target="_blank">天气</a></li>
+                                    <li><a href="https://new.qq.com/omn/author/10708214" target="_blank">影展</a></li>
+                                    <li><a href="https://new.qq.com/omv/video/p0030rl60d8" target="_blank">视频</a></li>
+                                </ul>  
+                            </dd>
+                            
+                        </dl>
+                        <dl>
+                          <dt>[地方站]</dt>
+                            <dd>
+                                <ul>
+<li><a href="https://new.qq.com/d/bj" target="_blank">北京</a></li>
+
+                                     <li><a href="https://new.qq.com/d/sh" target="_blank">上海</a></li>
+                                    <li><a href="https://new.qq.com/d/gd" target="_blank">广东</a></li>
+<li><a href="https://new.qq.com/d/tj" target="_blank">天津</a></li>
+<li><a href="https://new.qq.com/d/hebei" target="_blank">河北</a></li>
+
+                                    <li><a href="https://new.qq.com/d/cd" target="_blank">四川</a></li>
+                                    <li><a href="https://new.qq.com/d/cq" target="_blank">重庆</a></li>
+                                    <li><a href="https://new.qq.com/d/xian" target="_blank">陕西</a></li>
+                                    <li><a href="https://new.qq.com/d/hn" target="_blank">湖南</a></li>
+                                    <li><a href="https://new.qq.com/d/hb" target="_blank">湖北</a></li>
+                                    <li><a href="https://new.qq.com/d/fj" target="_blank">福建</a></li>
+                                    <li><a href="https://new.qq.com/d/henan" target="_blank">河南</a></li>
+                                    <li><a href="https://new.qq.com/d/zj" target="_blank">浙江</a></li>
+                                    <li><a href="https://new.qq.com/d/ln" target="_blank">辽宁</a></li>
+                                    <li><a href="https://new.qq.com/d/jiangsu" target="_blank">江苏</a></li>
+                                </ul>
+                            </dd>
+                      </dl>
+                    </div>
+                </div>
+                <div class="con" id="1">
+                    <div class="hd">
+                        <h1>通信<em>·</em>社区</h1>
+                    </div>
+                    <div class="bd">
+                        <dl>
+                            <dt>[通信]</dt>
+                            <dd style="width:390px;">
+                                <ul class="line">
+                                    <li><strong><a href="http://im.qq.com/" target="_blank" class="en">QQ</a></strong></li>
+                                    <li><a href="http://vip.qq.com/" target="_blank"><span class="en">QQ</span>会员</a></li>
+                                    <li><a href="http://show.qq.com/" target="_blank"><span class="en">QQ</span>秀</a></li>
+                                    <li><a href="http://zc.qq.com/chs/index.html" target="_blank">帐号申请</a></li>
+                                    <li><a href="http://aq.qq.com/cn2/manage/my_mb" target="_blank">密码保护</a></li>
+                                    <li><a href="https://aq.qq.com/cn2/findpsw/pc/pc_find_pwd_input_account" target="_blank">找回号码</a></li>
+                                    <li><a href="http://im.qq.com/qq/all.shtml" target="_blank">下载</a></li>
+                                </ul>
+                                <ul>
+                                    <li><strong><a href="http://weixin.qq.com/" target="_blank">微信</a></strong></li>
+                                    <li><a href="https://work.weixin.qq.com/" target="_blank">企业微信</a></li>
+                                    <li><a href="http://b.qq.com/" target="_blank">企业<span class="en">QQ</span></a></li>
+                                    <li><a href="http://web2.qq.com/" target="_blank" class="en">WebQQ</a></li>
+                                     <li><a href="http://www.imqq.com" target="_blank">国际版<span class="en">QQ</span></a></li>        
+                                </ul>     
+                            </dd>
+                            <dd>
+                                <ul style="padding-left:6px;">
+                                    <li><strong><a href="https://mail.qq.com/" target="_blank">邮箱</a></strong></li>
+                                    <li><a href="http://exmail.qq.com/" target="_blank">企业邮箱</a></li>
+                                    <li><a href="http://mail.qq.com/cgi-bin/login?vt=passport&from=webmap&delegate_url=%2Fcgi-bin%2Fframe_html%3Furl%3D%25252Fcgi-bin%25252Fsetting10%25253Faction%25253Dlist%252526t%25253Dsetting10%252526ss%25253Dindex%252526Mtype%25253D1%252526clickpos%25253D20%252526loc%25253Ddelegate%25252Cwebmap%25252C%25252C1" target="_blank">订阅</a></li>
+                                    <li><a href="http://mail.qq.com/cgi-bin/login?vt=passport&from=webmap&delegate_url=%2Fcgi-bin%2Fframe_html%3Furl%3D%25252Fcgi-bin%25252Fcardlist%25253Ftoday_tips%25253D200%252526ListType%25253DCards%252526t%25253Dcard%252526Cate1Idx%25253Dlistall%252526loc%25253Ddelegate%25252Cwebmap%25252C%25252C4" target="_blank">贺卡</a></li>
+                                    <li><a href="http://mail.qq.com/cgi-bin/login?vt=passport&from=webmap&delegate_url=%2Fcgi-bin%2Fframe_html%3Furl%3D%25252Fcgi-bin%25252Freadtemplate%25253Ft%25253Dcompose_postcard%252526photogroupid%25253Dmh%252526photoid%25253D0%252526loc%25253Ddelegate%25252Cwebmap%25252C%25252C3" target="_blank">明信片</a></li>
+                                    <li><a href="http://mail.qq.com/cgi-bin/login?vt=passport&from=webmap&delegate_url=%2Fcgi-bin%2Fframe_html%3Furl%3D%25252Fcgi-bin%25252FftnExs_files%25253Ft%25253Dexs_ftn_files%252526filetype%25253D0%252526listtype%25253Dself%252526page%25253D0%252526pagesize%25253D20%252526loc%25253Ddelegate%25252Cwebmap%25252C%25252C2" target="_blank">文件中转站</a></li>
+                                    <li><a href="http://www.foxmail.com.cn/" target="_blank" class="en">Foxmail</a></li>
+                                </ul>    
+
+                                <ul style="padding-left:6px;">
+                                    <li><a href="http://qrobot.qq.com" target="_blank">Qrobot小Q机器人</a></li>
+                                </ul>
+                            </dd>
+                      </dl>
+                         <dl>
+                            <dt>[软件]</dt>
+                            <dd>
+                                <ul  style="float:left;width:390px;" class="line">
+                                    <li><strong><a href="http://guanjia.qq.com/" target="_blank">电脑管家</a></strong></li>
+                                    <li><a href="http://guanjia.qq.com/help/mmcs.html" target="_blank">云查杀木马</a></li>
+                                    <li><a href="http://guanjia.qq.com/security/safe.html" target="_blank">安全中心</a></li>
+                                    <li><a href="http://pc.qq.com/" target="_blank"><span class="en">QQ</span>软件管理</a></li>
+                                </ul>
+                                <ul style="float:left;width:350px;padding-left:6px;">
+                                    <li><a href="http://im.qq.com/macqq/index.shtml" target="_blank" class="en">QQ for Mac</a></li>
+                                    <li><a href="http://browser.qq.com/mac/index.html" target="_blank"><span class="en">QQ</span>浏览器 <span class="en">for Mac</span></a></li>
+                                </ul>
+                                <ul  style="float:left;width:700px;">
+                                    <li><a href="http://browser.qq.com/" target="_blank"><span class="en">QQ</span>浏览器</a></li>
+                                    <li><a href="http://www.weiyun.com/" target="_blank">微云</a></li>
+                                    <li><a href="http://py.qq.com/" target="_blank"><span class="en">QQ</span>拼音</a></li>
+                                    <li><a href="http://y.qq.com/#type=index" target="_blank"><span class="en">QQ</span>音乐</a></li>
+                                    <li><a href="http://v.qq.com/download.html#mac" target="_blank">腾讯视频播放器</a></li>
+                                    <li><a href="http://zjbl.qq.com/" target="_blank"><span class="en">QQ</span>装机部落</a></li>
+                                </ul>
+                            </dd>
+                         </dl>
+                    </div>
+                </div>
+                <div class="con" id="2">
+                    <div class="hd">
+                        <h1>腾讯<em>·</em>游戏</h1>
+                    </div>
+                    <div class="bd">
+                        <dl>
+                            <dt>[角色扮演]</dt>
+                            <dd>
+                                <ul>
+                                    <li><a href="http://dnf.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank">地下城与勇士</a></li>
+                                    <li><a href="http://yl.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank">御龙在天</a></li>
+                                    <li><a href="http://xy.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank">轩辕传奇</a></li>
+                                    <li><a href="http://xx.qq.com/index.shtml" target="_blank">寻仙</a></li>
+                                    <li><a href="http://xj.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank"><span class="en">QQ</span>仙境</a></li>
+                                    <li><a href="http://dzs.qq.com/" target="_blank">斗战神</a></li>
+                                    <li><a href="http://xxz.qq.com/" target="_blank"><span class="en">QQ</span>仙侠传</a></li>
+                                    <li><a href="http://hs.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank">幻想世界</a></li>
+                                    <li><a href="http://ffo.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank">自由幻想</a></li>
+                                    <li><a href="http://sg.qq.com/index.shtml" target="_blank"><span class="en">QQ</span>三国</a></li>
+                                    <li><a href="http://fs.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank"><span class="en">QQ</span>封神记</a></li>
+                                    <li><a href="http://qqhx.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank"><span class="en">QQ</span>华夏</a></li>
+                                    <li><a href="http://tiantang.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank">天堂</a></li>
+                                    <li><a href="http://tiantang2.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank">天堂Ⅱ</a></li>
+                                    <li><a href="http://age.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank">上古世纪</a></li>
+                                    <li><a href="http://bns.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank">剑灵</a></li>
+                                    <li><a href="http://d2.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank">刀剑2</a></li>
+                                    <li><a href="http://h2.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank"><span class="en">QQ</span>仙灵</a></li>
+                                    <li><a href="http://jf.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank">疾风之刃</a></li>
+                                </ul>    
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>[竞技游戏]</dt>
+                            <dd>
+                                <ul>
+                                    <li><a href="http://cf.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank">穿越火线</a></li>
+                                    <li><a href="http://ava.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank">战地之王</a></li>
+                                    <li><a href="http://nz.qq.com/index.shtml" target="_blank">逆战</a></li>
+                                    <li><a href="http://lol.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank">英雄联盟</a></li>
+                                    <li><a href="http://x5.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank"><span class="en">QQ</span>炫舞</a></li>
+                                    <li><a href="http://speed.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank"><span class="en">QQ</span>飞车</a></li>
+                                    <li><a href="http://r2.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank"><span class="en">QQ</span>音速</a></li>
+                                    <li><a href="http://xd.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank">炫斗之王</a></li>
+                                    <li><a href="http://qqtang.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank"><span class="en">QQ</span>堂</a></li>
+                                    <li><a href="http://nba2k.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank"><span class="en">NBA2K OL</span></a></li>  
+                                </ul>
+                            </dd>
+                      </dl>
+                         <dl>
+                            <dt>[网页游戏]</dt>
+                            <dd>
+                                <ul>
+                                    <li><a href="http://7.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank">七雄争霸</a></li>
+                                    <li><a href="http://fight.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank">Q宠大乐斗</a></li>
+                                    <li><a href="http://ye.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank">夜店之王</a></li>
+                                    <li><a href="http://108.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank"><span class="en">QQ</span>水浒</a></li>
+                                    <li><a href="http://xia.qq.com/?ADTAG=media.innerenter.gamecom.navigation" target="_blank">寻侠</a></li>
+                                    <li><a href="http://games.qq.com/" target="_blank">更多</a></li>
+                                </ul>
+                            </dd>
+                         </dl>
+                          <dl>
+                            <dt>[平台游戏]</dt>
+                            <dd>
+                                <ul>
+                                    <li><a href="http://qqgame.qq.com/" target="_blank"><span class="en">QQ</span>游戏</a></li>
+                                    <li><a href="https://egame.qq.com/?ADTAG=QQCOM.MAP" target="_blank">企鹅电竞</a></li>
+                                    <li><a href="http://gamevip.qq.com/index.shtml?ADTAG=MAP.QQCOM" target="_blank">蓝钻贵族</a></li>   
+                                </ul>
+                            </dd>
+                         </dl>
+                    </div>
+                </div>
+                <div class="con" id="3">
+                    <div class="hd">
+                        <h1>商务<em>·</em>生活</h1>
+                    </div>
+                    <div class="bd">
+                        <dl>
+                            <dt>[网购]</dt>
+                            <dd>
+                                <ul>
+                                    <li><a href="http://www.yixun.com/" target="_blank">易迅</a></li>
+                                    <li><a href="https://www.jd.com/" target="_blank">京东</a></li>
+                                    <li><a href="http://juhui.tenpay.com/" target="_blank">聚惠</a></li>
+                                    <li><a href="http://www.gaopeng.com/" target="_blank">高朋网</a></li>
+                                    <li><a href="http://cb.qq.com/?attach=200_1000_10090&QQ_from=200_1000_10090" target="_blank"><span class="en">QQ</span>彩贝</a></li>
+                                </ul>                                  
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>[支付]</dt>
+                            <dd>
+                                <ul>
+                                    <li><strong><a href="https://qian.qq.com?stat_data=oth87ppcsy00223&ADTAG=SCQD.BD.PC.TXWZ1" target="_blank">理财通</a></strong></li>
+                                    <li><a href="https://www.tenpay.com/v2/account/charge/index.shtml?jump=0" target="_blank">充值</a></li>
+                                    <li><a href="https://www.tenpay.com/app/v1.0/show_drawing.cgi?RAW" target="_blank">提现</a></li>
+                                    <li><a href="https://www.tenpay.com/v2/account/pay/" target="_blank">付款</a></li>
+                                    <li><a href="https://www.tenpay.com/v2/account/pay/paycard.shtml" target="_blank">付款到银行卡</a></li>
+                                    <li><a href="https://life.tenpay.com/v2/app/detail.shtml?appId=0000000845&ADTAG=CREDIT.QQCOM.LIFE.CREDIT" target="_blank">还款</a></li>
+                                    <li><a href="https://www.tenpay.com/v2/account/ydt/intro.shtml" target="_blank">快捷支付</a></li>
+                                    <li><a href="https://www.tenpay.com/v2/mapp/index.shtml?ADTAG=TENPAY.MOBILE.QQ.BUSINESS" target="_blank">手机支付</a></li>
+                                    <li><a href="https://www.tenpay.com/v2/account/purse/index.shtml" target="_blank">微支付</a></li>
+                                    <li><a href="https://www.tenpay.com/v2/account/charge/mobile.shtml" target="_blank">手机充值卡充值</a></li>
+                              </ul>
+                                 <ul>                                   
+                                    <li><strong><a href="http://my.pay.qq.com/account/index.shtml" target="_blank">Q点Q币</a></strong></li>
+                                    <li><a href="https://pay.qq.com/" target="_blank">充Q点Q币</a></li>
+                                    <li><a href="https://pay.qq.com/service/index.shtml" target="_blank">购买<span class="en">QQ</span>服务</a></li>
+                                    <li><a href="https://www.tenpay.com/v2/account/purse/mypurse.shtml" target="_blank">游戏充值</a></li>
+                                    <li><a href="http://qianbao.qq.com" target="_blank">QQ钱包</a></li>
+                                </ul>
+                            </dd>
+                      </dl>
+                         <dl>
+                            <dt>[便民]</dt>
+                            <dd>
+                                <ul>
+                                    <li><a href="https://life.tenpay.com/v2/app/detail.shtml?appId=0000000845&ADTAG=CREDIT.QQCOM.LIFE.CREDIT" target="_blank">信用卡还款</a></li>
+                                </ul>
+                            </dd>
+                         </dl>
+                    </div>
+                </div>
+                <div class="con" id="4">
+                    <div class="hd">
+                        <h1>手机<em>·</em>无线</h1>
+                    </div>
+                    <div class="bd">
+                        <dl>
+                            <dt>[手机]</dt>
+                            <dd>
+                                <ul>
+                                    <li><a href="https://vip.qq.com/" target="_blank">超级<span class="en">QQ</span></a></li>
+                                    <li><a href="http://mobile.qq.com/" target="_blank">手机<span class="en">QQ</span></a></li>
+                                    <li><a href="http://news.qq.com/mobile/" target="_blank">腾讯新闻客户端</a></li>
+
+                                    <li><a href="http://mobile.qq.com/qzone/" target="_blank">手机<span class="en">QQ</span>空间</a></li>
+                                    <li><a href="http://map.qq.com/mobile/" target="_blank">腾讯地图</a></li>
+                                    <li><a href="http://map.qq.com/lubao/?source_id=10019/" target="_blank">腾讯路宝</a></li>
+                                    <li><a href="http://m.qq.com/?from=qq" target="_blank"><span class="en">QQ</span>无线</a></li>
+                                    <li><a href="http://bd.qq.com/?from=qq" target="_blank">绑定</a></li>
+                                    <li><a href="http://888.qq.com/m.html?bc_tag=10162.1.1" target="_blank">手机<span class="en">QQ</span>彩票</a></li>
+                                </ul>                                  
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>[应用]</dt>
+                            <dd>
+                                <ul>
+                                    <li><a href="https://m.qq.com/?ADTAG=media.innerenter.gj.top" target="_blank">腾讯手机管家</a><a href="http://sj.qq.com" target="_blank">(PC版)</a></li> 
+                                    <li><a href="http://dianhua.qq.com/cgi-bin/readtemplate?t=dianhuaben&from=map" target="_blank">微信电话本</a></li>
+                                    <li><a href="http://pim.qq.com/?g_f=6661" target="_blank"><span class="en">QQ</span>同步助手</a></li>
+                                    <li><a href="http://mb.qq.com/" target="_blank">手机<span class="en">QQ</span>浏览器</a></li>
+                                    <li><a href="http://ebook.qq.com/" target="_blank">手机<span class="en">QQ</span>读书</a></li>
+                                    <li><a href="http://qqreader.qq.com/" target="_blank">手机<span class="en">QQ</span>阅读器</a></li>
+                              </ul>
+                                 <ul>
+                                    <li><a href="http://v.qq.com/download.html" target="_blank">腾讯视频</a></li>
+                                    <li><a href="http://sports.qq.com/kbs/" target="_blank">看比赛</a></li>
+                                    <li><a href="http://www.shuame.com/" target="_blank">刷机精灵</a></li>
+                                 </ul>
+                            </dd>
+                      </dl>
+                         <dl>
+                            <dt>[手机游戏]</dt>
+                            <dd>
+                                <ul>
+                                    <li><strong><a href="http://qqgame.qq.com/" target="_blank">游戏大厅</a></strong></li>
+                                    <li><a href="http://mz.qq.com/" target="_blank">魔钻</a></li>
+                                    <li><a href="http://bl.qq.com/" target="_blank">部落守卫城</a></li>
+                                </ul>
+                            </dd>
+                         </dl>
+                    </div>
+                </div>
+                <div class="con" id="5">
+                    <div class="hd">
+                        <h1>搜索<em>·</em>服务</h1>
+                    </div>
+                    <div class="bd">
+                        <dl>
+                            <dt>[搜索]</dt>
+                            <dd class="line" style="width:390px;">
+                                <ul>
+                                    <li><strong><a href="http://www.soso.com/" target="_blank">网页</a></strong></li>
+                                    <li><a href="http://image.soso.com/" target="_blank">图片</a></li>
+                                    <li><a href="http://video.soso.com/" target="_blank">视频</a></li>
+                                    <li><a href="http://mp3.sogou.com" target="_blank">音乐</a></li>
+                                    <li><a href="http://news.sogou.com/" target="_blank">新闻</a></li>
+                                    <li><a href="https://map.qq.com/" target="_blank">地图</a></li>
+                                </ul>
+                            </dd>
+                            <dd>
+                                <ul>
+                                    <li><strong><a href="http://hao.qq.com/" target="_blank"><span class="en">QQ</span>导航</a></strong></li>
+                                </ul>
+                          </dd>
+                             <dd>
+                                <ul>
+                                    <li><strong><a href="http://www.sogou.com/docs/more.htm" target="_blank">社区搜索</a></strong></li>
+                                    <li><a href="http://wenwen.soso.com/" target="_blank">问问</a></li>
+                                    <li><a href="http://baike.soso.com/" target="_blank">百科</a></li>
+                                </ul>                               
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>[服务]</dt>
+                            <dd>
+                                <ul>
+                                    <li><a href="http://kf.qq.com/" target="_blank">客服中心</a></li>
+                                    <li><a href="http://open.qq.com/" target="_blank">开放平台</a></li>
+                                    <li><a href="http://e.qq.com/index.shtml" target="_blank">广点通</a></li>
+                                    <li><a href="http://exp.qq.com/" target="_blank">腾讯体验中心</a></li>
+<li><a href="https://cloud.tencent.com/?from=txwqblb" target="_blank">腾讯云</a></li>
+<li><a href="http://wj.qq.com/" target="_blank">腾讯问卷</a></li>
+                                    <li><a href="http://idesign.qq.com/" target="_blank">腾讯设计导航</a></li>
+                                    <li><a href="http://bbs.qcloud.com/" target="_blank">腾讯云论坛</a></li>
+                                    <li><a href="http://uni.qq.com/" target="_blank">QQ智慧校园</a></li>
+                                    <li><a href="http://win.qq.com" target="_blank">智赢销</a></li>
+                                    <li><a href="http://dmp.qq.com" target="_blank">腾讯DMP</a></li>
+                                    <li><a href="http://adx.qq.com" target="_blank">腾讯ADX</a></li>
+                              </ul>
+                            </dd>
+                      </dl>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div><!--[if !IE]>|xGv00|8cdd3e650dce2f838669d46e99d3d542<![endif]-->        
+        
+  </div>
+    <div class="side">
+    	<div class="modRight">
+        	<div class="hd"><h2>最新推荐</h2></div>
+            <div class="bd">
+            	<ul class="typeA">
+
+                   <li>
+                    	<h3><a href="http://dldir1.qq.com/dlomg/qqcom/mini/QQNewsMini8.exe" target="_blank"><img src="//mat1.gtimg.com/www/images/qq2012/aiodownicon2.png"></a></h3>
+                        <h4><a href="http://dldir1.qq.com/dlomg/qqcom/mini/QQNewsMini8.exe" target="_blank">腾讯网迷你版</a></h4>
+                        <p>你关心的，尽在眼前</p>
+                    </li>
+
+                	      <li>
+                    	<h3><a href="http://news.qq.com/mobile/" target="_blank"><img src="//img1.gtimg.com/www/pics/hv1/87/202/1092/71058897.jpg"></a></h3>
+                        <h4><a href="http://news.qq.com/mobile/" target="_blank">腾讯新闻客户端</a></h4>
+                        <p>最新资讯 一手掌握</p>
+                    </li>
+                   <li>
+                    	<h3><a href="http://v.qq.com/mobile/" target="_blank"><img src="//mat1.gtimg.com/www/austin/map/iconA7.png"></a></h3>
+                        <h4><a href="http://v.qq.com/mobile/" target="_blank">腾讯视频客户端</a></h4>
+                        <p>乐享移动新视界</p>
+                    </li>
+<li>
+                    	<h3><a href="http://sports.qq.com/kbs/" target="_blank"><img src="//mat1.gtimg.com/www/austin/map/app_kbs.png"></a></h3>
+                        <h4><a href="http://sports.qq.com/kbs/" target="_blank">腾讯看比赛</a></h4>
+                        <p>比赛从此不再错过</p>
+                    </li>
+<li>
+                    	<h3><a href="http://stockapp.finance.qq.com/pstock/?pgv_ref=fi_quote_navi_bar" target="_blank"><img src="//mat1.gtimg.com/www/austin/map/iconA5.png"></a></h3>
+                        <h4><a href="http://stockapp.finance.qq.com/pstock/?pgv_ref=fi_quote_navi_bar" target="_blank">腾讯自选股</a></h4>
+                        <p>一处定制 随处查看</p>
+                    </li>
+<li>
+                    	<h3><a href="http://im.qq.com/pcqq/" target="_blank"><img src="//mat1.gtimg.com/www/austin/map/iconA1.png"></a></h3>
+                        <h4><a href="http://im.qq.com/pcqq/" target="_blank">QQ PC版</a></h4>
+                        <p>隔空取图 QQ文件只能秒传</p>
+                    </li>
+
+                    <li>
+                    	<h3><a href="http://guanjia.qq.com/" target="_blank"><img src="//img1.gtimg.com/www/pics/hv1/38/160/2199/143030813.png"></a></h3>
+                        <h4><a href="http://guanjia.qq.com/" target="_blank">电脑管家</a></h4>
+                        <p>专业的免费杀毒软件</p>
+                    </li>
+                    <li>
+                    	<h3><a href="http://map.qq.com/mobile/?&cid=mapjd.jiejing.tuiguang.index" target="_blank"><img src="//mat1.gtimg.com/www/images/qqmap/TxMap.png"></a></h3>
+                        <h4><a href="http://map.qq.com/mobile/?&cid=mapjd.jiejing.tuiguang.index" target="_blank">腾讯地图</a></h4>
+                        <p>怀抱梦想 勇于探索</p>
+                    </li>
+                    <!--<li>
+                    	<h3><a href="http://y.qq.com/#type=index" target="_blank"><img src="//mat1.gtimg.com/www/austin/map/iconA3.png"></a></h3>
+                        <h4><a href="http://y.qq.com/#type=index" target="_blank">QQ音乐</a></h4>
+                        <p>猜你喜欢 歌曲一览无遗</p>
+                    </li>-->
+                                                        </ul>
+            </div>
+        </div><!--[if !IE]>|xGv00|5ccdad4d8b2bf0bcaa34fb29279a8234<![endif]-->
+        <div class="modRight">
+        	<div class="hd"><h2>软件下载</h2></div>
+            <div class="bd">
+            	<ul class="typeB">
+                        <li>
+                    	<h3><a href="http://news.qq.com/mobile/download.htm" target="_blank"><img src="//img1.gtimg.com/www/pics/hv1/9/97/1276/82996644.jpg"></a></h3>
+                         <h4><a href="http://news.qq.com/mobile/download.htm" target="_blank">腾讯新闻客户端</a><span class="fl"><a href="http://news.qq.com/mobile/download.htm" target="_blank">下载</a></span></h4>
+                    </li>
+<li>
+                    	<h3><a href="https://im.qq.com/pcqq/" target="_blank"><img src="//mat1.gtimg.com/www/austin/map/iconB1.png"></a></h3>
+                        <h4><a href="https://im.qq.com/pcqq/" target="_blank"><span class="en">QQ</span></a><span class="fl"><a href="https://im.qq.com/pcqq/" target="_blank">下载</a></span></h4>
+                    </li>
+                    <li>
+                    	<h3><a href="http://mobile.qq.com/download.jsp" target="_blank"><img src="//mat1.gtimg.com/www/austin/map/iconB3.png"></a></h3>
+                        <h4><a href="http://mobile.qq.com/download.jsp" target="_blank">手机<span class="en">QQ</span></a><span class="fl"><a href="http://mobile.qq.com/download.jsp" target="_blank">下载</a></span></h4>
+                    </li>
+                    <li>
+                    	<h3><a href="https://m.qq.com/" target="_blank"><img src="//mat1.gtimg.com/www/austin/map/guanjia_logo_22.png"></a></h3>
+                        <h4><a href="https://m.qq.com/" target="_blank">腾讯手机管家</a><span class="fl"><a href="https://m.qq.com/" target="_blank">下载</a></span></h4>
+                    </li>
+                    <li>
+                    	<h3><a href="http://dl_dir3.qq.com/minigamefile/QQGame2012Beta5P1_setup_guanjia.EXE" target="_blank"><img src="//mat1.gtimg.com/www/austin/map/iconB5.png"></a></h3>
+                        <h4><a href="http://dl_dir3.qq.com/minigamefile/QQGame2012Beta5P1_setup_guanjia.EXE" target="_blank"><span class="en">QQ</span>游戏</a><span class="fl"><a href="http://dl_dir3.qq.com/minigamefile/QQGame2012Beta5P1_setup_guanjia.EXE" target="_blank">下载</a></span></h4>
+                    </li>
+                    <li>
+                    	<h3><a href="https://guanjia.qq.com/" target="_blank"><img src="//mat1.gtimg.com/www/austin/map/guanjia_logo_22.png"></a></h3>
+                        <h4><a href="https://guanjia.qq.com/" target="_blank">电脑管家</a><span class="fl"><a href="https://guanjia.qq.com/" target="_blank">下载</a></span></h4>
+                    </li>
+                    <li>
+                    	<h3><a href="https://y.qq.com/download/download.html" target="_blank"><img src="//mat1.gtimg.com/www/austin/map/iconB7.png"></a></h3>
+                        <h4><a href="https://y.qq.com/download/download.html" target="_blank"><span class="en">QQ</span>音乐</a><span class="fl"><a href="https://y.qq.com/download/download.html" target="_blank">下载</a></span></h4>
+                    </li>
+                    <li>
+                    	<h3><a href="http://dl_dir.qq.com/invc/tt/QQBrowserSetup.exe" target="_blank"><img src="//mat1.gtimg.com/www/austin/map/QBlogo.png"></a></h3>
+                         <h4><a href="http://dl_dir.qq.com/invc/tt/QQBrowserSetup.exe" target="_blank"><span class="en">QQ</span>浏览器</a><span class="fl"><a href="http://dl_dir.qq.com/invc/tt/QQBrowserSetup.exe" target="_blank">下载</a></span></h4>
+                    </li>
+                    <li>
+                    	<h3><a href="http://dl_dir.qq.com/qqtv/QQLive8.45.6522.0.exe" target="_blank"><img src="//mat1.gtimg.com/www/austin/map/iconB10.png"></a></h3>
+                        <h4><a href="http://dl_dir.qq.com/qqtv/QQLive8.45.6522.0.exe" target="_blank"><span class="en">QQ</span>视频播放器</a><span class="fl"><a href="http://dl_dir.qq.com/qqtv/QQLive8.45.6522.0.exe" target="_blank">下载</a></span></h4>
+                    </li>
+                </ul>
+            </div>
+        </div><!--[if !IE]>|xGv00|d475b03a49c6d8a6a8857e0079a551f6<![endif]-->
+        <div class="modRight">
+        	<div class="hd"><h2>产品推荐</h2></div>
+            <div class="bd">
+            	<ul class="typeC">
+                     <li>
+                    	<h3><a href="http://dldir1.qq.com/dlomg/qqcom/mini/QQNewsMini9.exe" target="_blank" bosszone="mapaio"><img src="//mat1.gtimg.com/www/images/qq2012/mapAio.jpg" style="height:264px;"></a></h3>
+                     </li>
+             </ul>
+            </div>
+        </div><!--[if !IE]>|xGv00|f5f008472d4466e6114b16a4cdbc8939<![endif]-->       
+    </div>
+</div>
+<div class="wrap bottom">
+	<div class="footer">
+<script>
+var NavNoticeSiteName = ["sports","tech","games","cul","edu","fashion","house","auto","finance","ent"]; 
+</script>
+<script src="//mat1.gtimg.com/www/chrometips/notification2017_v0118.js"></script><!--[if !IE]>|xGv00|160405494288ecc3516e240c185c4fd7<![endif]-->
+<style>
+.tcopyright {width:960px;margin:0 auto;padding:8px 0;font-size:12px;line-height:28px;color:#333; text-align:center; overflow:hidden;clear:both;}
+.tcopyright .en{font-family:Arial;}
+.tcopyright a{color:#333;text-decoration: none;}
+.tcopyright a:hover{color:#bd0a01;text-decoration: underline;}
+</style>
+<div id="tcopyright" class="tcopyright" bossZone="footer" role="contentinfo">
+	<div>
+		<a href="http://www.tencent.com/" target="_blank" rel="nofollow">关于腾讯</a> | <a href="http://www.tencent.com/index_e.shtml" target="_blank" rel="nofollow">About Tencent</a> | <a href="http://www.qq.com/contract.shtml" target="_blank" rel="nofollow">服务协议</a> | <a href="http://www.qq.com/privacy.htm" target="_blank" rel="nofollow">隐私政策</a> | <a href="http://open.qq.com/" target="_blank" rel="nofollow">开放平台</a> | <a href="http://www.tencentmind.com/" target="_blank" rel="nofollow">广告服务</a> | <a href="http://hr.tencent.com/" target="_blank" rel="nofollow">腾讯招聘</a> | <a href="http://gongyi.qq.com/" target="_blank" rel="nofollow">腾讯公益</a> | <a href="https://cloud.tencent.com/?from=txwdibu" target="_blank" rel="nofollow">腾讯云</a> | <a href="http://service.qq.com/" target="_blank" rel="nofollow">客服中心</a> | <a href="http://news.qq.com/zt2014/2014qtnews/ccybspxd.htm
+" target="_blank" rel="nofollow">举报中心</a> | <a href="http://www.qq.com/map/" target="_blank" rel="nofollow">网站导航</a>
+	</div>
+  	<div class="en">Copyright &copy; 1998 - 2019 Tencent. All Rights Reserved</div>
+    <div>
+		<a href="http://www.tencent.com/" target="_blank" rel="nofollow">腾讯公司</a> <a href="http://www.tencent.com/zh-cn/le/copyrightstatement.shtml" target="_blank" rel="nofollow">版权所有</a>
+	</div>
+</div><!--[if !IE]>|xGv00|1846ccac67b3b46811044596d33e3588<![endif]-->
+</div>
+</div>
+<script type="text/javascript" src="//mat1.gtimg.com/joke/Koala/Qfast1.0.1.js"></script>
+<script type="text/javascript" src="//mat1.gtimg.com/joke/Koala/Koala.min.1.3.3.js"></script> 
+<script type="text/javascript" src="//mat1.gtimg.com/joke/Koala/plusfx1.0.min.js"></script> 
+<script>
+//页卡js开始
+(function($, $$) {
+    var pageCard = K.pageCard = function(args) {
+        return new _pageCard(args)
+    }
+   	
+	_pageCard = function(args){
+		var _this = this, _cur = 0;
+		this.btn = $$(args.btn);
+		this.con = $$(args.con);
+		this.child = $$(args.child);
+		this.hover = args.hover;
+		this.Time = args.Time || 3000;
+		
+		
+		this.con.item(0).parent(1).css('height', this.con.item(0).height() + 'px');
+		//this.con.item(0).append(_this.con.item(0).html());
+
+		var arr1 = this.setArrHeight(this.child), arr2 = this.setArrDistance(this.child);
+	
+
+		this.btn.each(function(o, i){
+			o.click(function(){
+		//	alert(arr2);
+				if(_cur != i) _this.btn.item(_cur).removeClass('at');
+				else return;
+				this.addClass('at');
+				_this.con.item(0).go({
+					marginTop : -arr2[i] + 'px'
+				}, 'defaults', 'easeIn', function(){
+					_this.insertItem(_this.con.item(0), 6, i);
+					arr2 = _this.setArrDistance(_this.child);
+					_this.con.css('marginTop', 0);
+				});
+				_cur = i;
+			});
+		});
+	}
+})(K, KK);
+
+_pageCard.prototype = {
+	setArrHeight : function(args){
+		var arr = [];
+		for(var i = 0, len = args.length; i < len; i++){
+			arr.push(args.item(i).node.offsetHeight);	//子元素高度
+		}
+		return arr;
+	},
+	setArrDistance : function(args){
+		var arr = [];
+		for(var i = 0, len = args.length; i < len; i++){
+			arr.push(args.item(i).parentY());  //子元素距离父元素距离
+		}
+		return arr;
+	},
+	insertItem : function(obj, len, index){
+		
+		for(var i = 0; i < len; i++){
+			var id = obj.child(0).attr('id');
+			if(id != index){
+				obj.append(obj.child(0));
+			}else {
+				return;
+			}
+		}
+	}
+};
+//页卡js结束
+//页卡调用开始
+var arg = {
+	btn : '.tags div',
+	con : '.cons',
+	hover : 'at',
+	child : '.con'
+}
+K.pageCard(arg);
+//页卡调用结束
+</script> 
+<script>
+//焦点图js开始
+(function($, $$) {
+    var focus = K.focus = function(args) {
+        return new _focus(args)
+    }
+   	
+	_focus = function(args){
+		var _this = this;
+		this.dot = $$(args.dot);
+		this.con = $(args.con);
+		this.wrap = $(args.wrap);
+		this.Time = args.Time;
+		this.isAuto = args.isAuto;
+		this.ul = $$(args.ul).item(0);
+		this.slidT = null;
+		var w = this.con.width();
+		
+		this.ul.node.style.width = 4*w + 'px';
+		this.cur = 0;
+		//alert(this.ul.width());
+		this.dot.each(function(o, i){
+			o.click(function(){
+				_this.move(i);
+			});	
+		});
+		this.wrap.bind('mouseover', function(){
+			clearInterval(_this.slidT);
+		});
+		this.wrap.bind('mouseout', function(){
+			_this.AutoPlay();
+		});
+		this.AutoPlay();	
+	}
+	
+	_focus.prototype = {
+		 move : function(n){
+			var _this = this;
+			this.cur = n; 
+			var w = this.con.width(), l = this.ul.css('left');
+			this.ul.go({
+				left : - (n * w)	+ 'px'
+			}, 'defaults', 'easeIn');
+			this.clearHover(n);
+		 },
+		 clearHover : function(n){
+			 var _this = this;
+			for(var i = 0, len = _this.dot.length; i < len; i++){
+				if(i == n){ _this.dot.item(n).addClass('hover'); }else{_this.dot.item(i).removeClass('hover')}	
+			}	 
+		 },
+		 AutoPlay: function() {
+			 var _this = this;
+           if(this.isAuto){
+			   this.slidT = setInterval(function(){
+					_this.cur = _this.cur + 1 > 3 ? 0 : _this.cur + 1; 
+					_this.move(_this.cur); 
+				}, _this.Time);
+			}
+        }	
+	}
+	
+})(K, KK);
+//焦点图js结束
+
+//焦点图js调用开始
+args1 = {
+	wrap : 'focus-wrap',
+	con : 'focus-pic',
+	ul : '#focus-pic ul',
+	dot : '#f-dot span',
+	Time : 3000,
+	isAuto : true	
+} 
+K.focus(args1);
+//焦点图js调用结束
+</script>
+
+
+<a href="#" target="_self" id="toTop" title="返回顶部" onClick="window.scrollTo(0,0);return false" style="display:none;"></a>
+<style type="text/css">
+#toTop{width:54px;height:54px;display:block;position:fixed;right:25px;bottom:45px;background-position:-700px -110px;opacity:0.3;filter:alpha(opacity=30);background-image:url(//mat1.gtimg.com/www/images/qq2012/qqbg_1.0.png); background-repeat:no-repeat;}
+#toTop:hover{opacity:1;filter:alpha(opacity=100);}
+</style>
+<script type="text/javascript">
+function toTopHide(){
+	if(document.documentElement.scrollTop+document.body.scrollTop > 400){
+		document.getElementById("toTop").style.display = "block";
+	}else{
+		document.getElementById("toTop").style.display = "none";
+	}
+}
+window.onscroll = toTopHide;
+</script>
+
+<!--[if lte IE 6]>
+<style type="text/css">
+#toTop{position:absolute;right:15px;bottom:45px;}
+</style>
+<script type="text/javascript">
+function topFixed(){
+	if(document.documentElement.scrollTop > 400){
+		document.getElementById("toTop").style.display = "block";
+	}else{
+		document.getElementById("toTop").style.display = "none";
+	}
+	document.getElementById("toTop").style.top = (document.documentElement.clientHeight + document.documentElement.scrollTop - document.getElementById("toTop").clientHeight - 45) + "px";
+}
+window.onscroll = topFixed;
+window.resize = topFixed;
+topFixed();
+</script>
+<![endif]-->
+<script>
+var gBossZoneHandler = new bossZoneHandler();
+var gImage;
+var registerZone2 = gBossZoneHandler.registerZone2;
+
+if(document.addEventListener)
+    document.addEventListener("click", registerZone2, false);
+else if(document.attachEvent)
+    document.attachEvent("onclick", registerZone2);
+
+function bossZoneHandler()
+{
+    var sFlag=false;
+	this.registerZone2 = function (ev,clickType)
+	{
+	    var loopTryNum = 10;
+	    var bossID = 1807; 
+		  
+	    try
+		{		
+		    //qq
+			var a=document.cookie.match(new RegExp('(^|)o_cookie=([^;]*)(;|$)'));
+			var iQQ=(a==null?"":unescape(a[2]));
+			var purl='';
+			var zoneId='';
+			
+			if(typeof clickType == 'undefined')
+			{
+			    if(sFlag) return true;
+		        var ev = window.event || ev;
+		        var et = ev.srcElement || ev.target;
+			    var type=et.tagName;
+		        if (type != "A" && type != "IMG" ) 
+			    {
+			        return false;
+			    } 
+			
+			    if (type == "A")
+			    {
+			        purl = et.href;
+			    }
+			    else if (type == "IMG")
+			    {
+			        purl = et.parentNode.href;
+			    }
+			
+			    //pseudo attr
+			    for (var i=loopTryNum-1,tagNode=et;i>=0;i--,tagNode=tagNode.parentNode)
+			    {
+			        if(tagNode.attributes['bossZone'])
+				    {
+			            zoneId = tagNode.attributes['bossZone'].nodeValue;
+				    } else if(tagNode.attributes['bosszone'])
+				    {
+				        zoneId = tagNode.attributes['bosszone'].nodeValue;
+				    }
+				    else if(tagNode.attributes['BossZone'])
+				    {
+				        zoneId = tagNode.attributes['BossZone'].nodeValue;
+				    }
+				    else if(tagNode.attributes['Bosszone'])
+				    {
+				        zoneId = tagNode.attributes['Bosszone'].nodeValue;
+				    }
+
+			        if(zoneId) break; 
+			    }		
+			    if(!zoneId) return;
+			}
+			else
+			{
+			    zoneId = ev.bossZone;
+				purl = ev.url;
+				sFlag = true;
+				setTimeout(function (){sFlag = false;},200);
+			}
+			
+			var iurl = '//btrace.qq.com/collect?sIp=&iQQ='+iQQ+'&sBiz=qq.com&sOp='+zoneId+'&iSta=&iTy='+bossID+'&iFlow=&sUrl='+escape(purl)+'&sLocalUrl='+escape(location.href)+'&'+Math.random();
+			gImage = new Image(1,1);
+			gImage.src = iurl;
+		} catch (e) {}
+	}
+}
+</script>
+</body>
+</html>
+<!--[if !IE]>|xGv00|1d9944ae6838bff83d31f92915b658f1<![endif]-->

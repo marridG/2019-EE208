@@ -1,0 +1,102 @@
+/* jquery.hiSlider.css */
+.hiSlider{
+		    overflow: hidden;
+		    width: 100%;
+		}
+.hiSlider-item{
+		    float: left;
+			position: relative;			
+		    width: 100%;
+}
+.hiSlider-item .txtk{ position:absolute; left:0px; bottom:6%; color:#ffffff;}
+.hiSlider-pages,
+.hiSlider-title{
+    position: absolute;
+    z-index: 3;
+}
+.hiSlider-item img{ width:100%;}
+.hiSlider-btn-prev,
+.hiSlider-btn-next{
+    position: absolute;
+	display:none;
+    z-index: 5;
+    top: 50%;
+    height: 30px;
+    width: 30px;
+    background:  url(../images/hislider-arrow.png) no-repeat;
+    margin-top: -15px;
+    text-indent: -200px;
+    overflow: hidden;
+    opacity: .6;
+    filter:alpha(opacity:60);
+}
+.hiSlider-btn-prev{
+    left: 10px;
+}
+.hiSlider-btn-next{
+    right: 10px;
+    background-position: -30px 0;
+}
+.hiSlider-btn-prev:hover,
+.hiSlider-btn-next:hover{
+    opacity: 1;
+    filter:alpha(opacity:100);
+}
+.hiSlider-title{
+    bottom: 0;
+    width: 100%;
+    padding: 6px 0;
+    color: #fff;
+    text-indent: 10px;
+    background: rgba(0,0,0,.6);
+    z-index: 2;
+    font: 14px/2 "Microsoft YaHei", "Arial", "Tahoma"
+}
+.hiSlider-pages{
+    bottom:6%;
+	height:16px;	
+    left:0px;
+	width:100%;
+    text-align: center;
+}
+.hiSlider-pages a{
+    height:16px;
+    width:16px;
+    margin: 0 5px;
+	-moz-border-radius:16px; -webkit-border-radius:16px; border-radius:16px;
+    display: inline-block;
+    overflow: hidden;
+    text-indent: -9999em;
+    background:#ffffff;
+	border:solid 2px #ffffff;
+}
+.hiSlider-pages a.active{
+    background: inherit;
+}
+
+.sy_ban1{ width:100%; overflow:hidden; position: relative}
+@media only screen and (max-width:1140px){
+.sy_ban1 .hiSlider-pages{ text-align:right; width:97%;}
+.sy_ban1 .hiSlider-pages a{ text-align:center; width:10px; height:10px; margin:0px 2px;}
+.sy_ban1 .hiSlider-item .txtk{width:97%; left:3%; font-size:1em; line-height:150%;}
+	.sy_ban1 .hiSlider-item .txtk b{ font-size:1.2em; display:block;}
+
+}
+
+@media only screen and (min-width:1140px){
+    .sy_ban1:before{
+        content: '';
+        background: url("../images/top_bj.png") top no-repeat;
+        background-size: 100% 100%;
+        height:180px;
+        width:100%;
+        position:absolute;
+        top:0px;
+        left:0px;
+        z-index: 10;
+    }
+	.sy_ban1 .hiSlider-pages{ text-align:center; width:100%; left:0%;}
+	.sy_ban1 .hiSlider-pages a{ text-align:center;}
+	.sy_ban1 .hiSlider-item .txtk{width:1140px; left:50%; margin-left:-570px; font-size:30px; line-height:normal;}
+	.sy_ban1 .hiSlider-item .txtk b{ font-size:48px; display:block;}
+}

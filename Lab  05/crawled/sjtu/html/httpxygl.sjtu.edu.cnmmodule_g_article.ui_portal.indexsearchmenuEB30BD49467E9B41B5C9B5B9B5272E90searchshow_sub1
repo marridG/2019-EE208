@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="utf-8">
+	<title>上海交通大学校园管理办公室</title>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="上海交通大学校园管理办公室">
+	<meta name="author" content="上海交通大学校园管理办公室">
+	<meta name="keywords" content="scap">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="http://xygl.sjtu.edu.cn/module_g_yaml/inc/lib/yaml/core/base.css" weight="1">
+	<link rel="stylesheet" type="text/css" href="http://xygl.sjtu.edu.cn/module_g_yaml/inc/lib/scap/default.css" weight="2">
+	<link rel="stylesheet" type="text/css" href="http://xygl.sjtu.edu.cn/module_g_yaml/inc/lib/yaml/print/print.css" media="print" weight="3">
+	<link rel="stylesheet" type="text/css" href="http://xygl.sjtu.edu.cn/module_g_cms_portal/templates/default/css/portal.layout.css?v=1512630973" weight="104">
+	<link rel="stylesheet" type="text/css" href="http://xygl.sjtu.edu.cn/module_g_cms_portal/templates/default/css/common.superfish.css?v=1512630972" weight="105">
+	<link rel="stylesheet" type="text/css" href="http://xygl.sjtu.edu.cn/module_g_cms_portal/templates/default/css/default.nav_top.css?v=1512630973" weight="106">
+	<link rel="stylesheet" type="text/css" href="http://xygl.sjtu.edu.cn/module_g_cms_portal/templates/default/css/default.header.css?v=1512630973" weight="107">
+	<link rel="stylesheet" type="text/css" href="http://xygl.sjtu.edu.cn/module_g_cms_portal/templates/default/css/default.nav_menu.css?v=1512630973" weight="108">
+	<link rel="stylesheet" type="text/css" href="http://xygl.sjtu.edu.cn/module_g_cms_portal/templates/default/css/default.banner_header.css?v=1512630972" weight="109">
+	<link rel="stylesheet" type="text/css" href="http://xygl.sjtu.edu.cn/module_g_cms_portal/templates/default/css/default.footer.css?v=1512630972" weight="110">
+	<link rel="stylesheet" type="text/css" href="http://xygl.sjtu.edu.cn/module_g_cms_portal/templates/default/css/default.split_page.css?v=1512630973" weight="111">
+	<link rel="stylesheet" type="text/css" href="http://xygl.sjtu.edu.cn/module_g_cms_portal/templates/default/css/default.inner_page.css?v=1512630973" weight="112">
+	<link rel="stylesheet" type="text/css" href="http://xygl.sjtu.edu.cn/module_g_cms_portal/templates/default/css/article.index.css?v=1512630972" weight="113">
+	<link rel="stylesheet" type="text/css" href="http://xygl.sjtu.edu.cn/module_g_jquery/inc/lib/jquery-ui/themes/smoothness/jquery-ui.css" weight="114">
+	<link rel="stylesheet" type="text/css" href="http://xygl.sjtu.edu.cn/module_g_form/inc/lib/pnotify/jquery.pnotify.default.css" weight="115">
+	<link rel="stylesheet" type="text/css" href="http://xygl.sjtu.edu.cn/module_g_form/inc/lib/pnotify/jquery.pnotify.default.icons.css" weight="116">
+	<!--[if lte IE 7]>
+	<link rel="stylesheet" type="text/css" href="http://xygl.sjtu.edu.cn/module_g_yaml/inc/lib/yaml/core/iehacks.css" weight="1000">
+	<![endif]-->
+	<script src="http://xygl.sjtu.edu.cn/module_g_jquery/inc/lib/jquery/1.11.3.min.js" weight="1"></script>
+	<script src="http://xygl.sjtu.edu.cn/module_g_jquery/inc/lib/jquery-ui/1.10.0.min.js" weight="2"></script>
+	<script src="http://xygl.sjtu.edu.cn/module_g_jquery/inc/lib/jquery/jquery.cookie.js" weight="2"></script>
+	<script src="http://xygl.sjtu.edu.cn/module_g_jquery/inc/lib/scap/common.js" weight="3"></script>
+	<script src="http://xygl.sjtu.edu.cn/module_g_jquery/inc/lib/scap/jquery.scap.js" weight="4"></script>
+	<!--[if lt IE 9]>
+	<script src="http://xygl.sjtu.edu.cn/module_g_yaml/inc/lib/html5shiv/html5shiv.js" weight="100"></script>
+	<![endif]-->
+	<script src="http://xygl.sjtu.edu.cn/module_g_jquery/inc/lib/jquery-ui/datepicker.zh.js" weight="106"></script>
+	<script src="http://xygl.sjtu.edu.cn/module_g_form/inc/lib/superfish/hoverIntent.js" weight="107"></script>
+	<script src="http://xygl.sjtu.edu.cn/module_g_form/inc/lib/superfish/superfish.js" weight="108"></script>
+	<script src="http://xygl.sjtu.edu.cn/module_g_form/inc/lib/scap/superfish.js" weight="109"></script>
+	<!--[if lt IE 7]>
+	<script src="http://xygl.sjtu.edu.cn/module_g_cms_portal/templates/default/js/supersleight-min.js?v=1512630975" weight="110"></script>
+	<![endif]-->
+	<script src="http://xygl.sjtu.edu.cn/module_g_form/inc/lib/pnotify/jquery.pnotify.min.js" weight="111"></script>
+	<script src="http://xygl.sjtu.edu.cn/module_g_form/inc/lib/scap/pnotify.js" weight="112"></script>
+	<script src="http://xygl.sjtu.edu.cn/module_g_form/inc/lib/scap/show_system_info.js" weight="113"></script>
+    <style>
+    </style>
+    <script>
+    </script>
+	
+<script>
+$(function(){
+    $("#nav-menu .menu").scap('superfish');
+    switch_lang();
+    
+});
+
+// 切换语言功能
+function switch_lang()
+{
+	$(".link-lang").click(function(){
+		var lang = $(this).attr('lang');
+		if ($.cookie('lang') == lang)
+		{
+			return false;
+		}
+		$.cookie('lang', lang);
+		location.reload();//刷新当前窗口
+		return false;
+	});
+}
+</script>
+
+</head>
+<body >
+
+<div id="scap-container">
+    <nav id="nav-top"><!--顶部导航栏-->
+        <div class="ym-wrapper">
+            <div class="ym-wbox">
+                <!---->
+顶部导航栏            </div>
+        </div>
+    </nav><!--顶部导航栏-->
+   
+    <header id="header"><!--头部区域-->
+        <div class="ym-wrapper">
+            <div class="ym-wbox">
+                <!---->
+
+<a class="logo" href="http://xygl.sjtu.edu.cn/?m=module_g_cms_portal.ui_portal.home"></a>
+<span class="name-ch">校园管理办公室</span>
+<span class="name-en">Campus Management Office</span>
+
+<div class="search">
+    <form action="http://xygl.sjtu.edu.cn/?m=module_g_cms_portal.ui_portal.search" method="post" id="form-search">
+        <button class="btn" type="submit"></button>
+        <input class="input" type="text" placeholder="搜索您感兴趣的关键词" name="search[q]">
+    </form>
+</div>
+
+            </div>
+        </div>
+    </header><!--头部区域-->
+
+    
+    <nav id="nav-menu"><!--导航菜单区域-->
+        <div class="ym-wrapper">
+            <div class="ym-wbox">
+                <!---->
+<style>
+.sf-menu li {
+}
+</style>
+
+<ul class="menu sf-menu level-1"><li class="item level-1 menu-667C1EB8CAC951764EEF2686C316B086"><a class="level-1 menu-667C1EB8CAC951764EEF2686C316B086 " href="?m=module_g_cms_portal.ui_portal.home" >首　　页</a></li><li class="item level-1 menu-011A4DF0377C6C6FB5F576D4A1F1ADD1"><a class="level-1 menu-011A4DF0377C6C6FB5F576D4A1F1ADD1 " href="?m=module_g_article.ui_portal.detail&id=0713F97DA6EAA19CBFA5EF788C94965D" >部门概况</a><ul class="level-2"><li class="item level-2 menu-1DD30833F788DB4AD2D888B6E75E76C8"><a class="level-2 menu-1DD30833F788DB4AD2D888B6E75E76C8 " href="?m=module_g_article.ui_portal.detail&id=4902A0FBF0C49FBE34779A802C208139" >分管领导</a></li><li class="item level-2 menu-D989D32203B4608B9ECDA43B4AC2CA07"><a class="level-2 menu-D989D32203B4608B9ECDA43B4AC2CA07 " href="?m=module_g_article.ui_portal.detail&id=BC6CA7D46B6418D534676CA1DEB96868" >委员会</a></li><li class="item level-2 menu-ADC6620CA96B630B53CCD3918D6DFF4B"><a class="level-2 menu-ADC6620CA96B630B53CCD3918D6DFF4B " href="?m=module_g_article.ui_portal.detail&id=0713F97DA6EAA19CBFA5EF788C94965D" >部门介绍</a></li><li class="item level-2 menu-9C17F3D84F2CF989F485947190634767"><a class="level-2 menu-9C17F3D84F2CF989F485947190634767 " href="?m=module_g_article.ui_portal.detail&id=54CE2E27558081AB06DA5928F59B5718" >组织机构</a></li><li class="item level-2 menu-970A7123E6DB9DB13BB1E96256A4EA3C"><a class="level-2 menu-970A7123E6DB9DB13BB1E96256A4EA3C " href="?m=module_g_article.ui_portal.detail&id=DEE14AABBA0D7D4D12C8D1E5F6B98545" >工作人员</a></li></ul><li class="item level-1 menu-8274ED67A2C5BC4F7E7D7372B56C437C"><a class="level-1 menu-8274ED67A2C5BC4F7E7D7372B56C437C " href="?m=module_g_article.ui_portal.index&search[menu]=4A18FBD54270406F6CF5992556325A6F" >制度流程</a><ul class="level-2"><li class="item level-2 menu-4A18FBD54270406F6CF5992556325A6F"><a class="level-2 menu-4A18FBD54270406F6CF5992556325A6F " href="?m=module_g_article.ui_portal.index&search[menu]=4A18FBD54270406F6CF5992556325A6F" >管理制度</a></li><li class="item level-2 menu-707800E09B156D323BE361C1F3B60529"><a class="level-2 menu-707800E09B156D323BE361C1F3B60529 " href="?m=module_g_article.ui_portal.index&search[menu]=707800E09B156D323BE361C1F3B60529" >工作流程</a></li><li class="item level-2 menu-4CCE30EDC19295CFA9B10EAF866F4BF9"><a class="level-2 menu-4CCE30EDC19295CFA9B10EAF866F4BF9 " href="?m=module_g_article.ui_portal.index&search[menu]=4CCE30EDC19295CFA9B10EAF866F4BF9" >表格下载</a></li></ul><li class="item level-1 menu-48744E0ED84D6CB6858C3449B647FC5C"><a class="level-1 menu-48744E0ED84D6CB6858C3449B647FC5C " href="?m=module_g_article.ui_portal.index&search[menu]=48744E0ED84D6CB6858C3449B647FC5C" >通知公告</a></li><li class="item level-1 menu-57B57FB32F878C374B7CD5D5C9DCE99C"><a class="level-1 menu-57B57FB32F878C374B7CD5D5C9DCE99C " href="?m=module_g_article.ui_portal.index&search[menu]=28577BD10E07C4348C4F17944A7C12E1" >校园信息</a><ul class="level-2"><li class="item level-2 menu-28577BD10E07C4348C4F17944A7C12E1"><a class="level-2 menu-28577BD10E07C4348C4F17944A7C12E1 " href="?m=module_g_article.ui_portal.index&search[menu]=28577BD10E07C4348C4F17944A7C12E1" >餐饮指南</a></li><li class="item level-2 menu-2EA35FC260D5E7D18DE77C65984295B6"><a class="level-2 menu-2EA35FC260D5E7D18DE77C65984295B6 " href="?m=module_g_article.ui_portal.index&search[menu]=2EA35FC260D5E7D18DE77C65984295B6" >住宿指南</a></li><li class="item level-2 menu-079C6CC0FAC76A6A348219201D2E644A"><a class="level-2 menu-079C6CC0FAC76A6A348219201D2E644A " href="?m=module_g_article.ui_portal.index&search[menu]=079C6CC0FAC76A6A348219201D2E644A" >出行指南</a></li><li class="item level-2 menu-03CCF951A32AD82BC423A12F352D09B4"><a class="level-2 menu-03CCF951A32AD82BC423A12F352D09B4 " href="?m=module_g_article.ui_portal.index&search[menu]=03CCF951A32AD82BC423A12F352D09B4" >水电指南</a></li></ul><li class="item level-1 menu-B722AF3BB07B8ECE33728B4F88B11842"><a class="level-1 menu-B722AF3BB07B8ECE33728B4F88B11842 " href="?m=module_g_article.ui_portal.detail&id=27C4B858210A3A3FDB3C49D02C4AB31A" >党务公开</a><ul class="level-2"><li class="item level-2 menu-3B6D0E7197B0E81480CA09C868132E8A"><a class="level-2 menu-3B6D0E7197B0E81480CA09C868132E8A " href="?m=module_g_article.ui_portal.detail&id=27C4B858210A3A3FDB3C49D02C4AB31A" >支部成员</a></li><li class="item level-2 menu-38D0DFD00C4129E1C43FFF961C102AB1"><a class="level-2 menu-38D0DFD00C4129E1C43FFF961C102AB1 " href="?m=module_g_article.ui_portal.index&search[menu]=38D0DFD00C4129E1C43FFF961C102AB1" >支部建设</a></li><li class="item level-2 menu-31129ECA7DEBC2188AECF421F25635C2"><a class="level-2 menu-31129ECA7DEBC2188AECF421F25635C2 " href="?m=module_g_article.ui_portal.index&search[menu]=31129ECA7DEBC2188AECF421F25635C2" >学习资料</a></li></ul><li class="item level-1 menu-61BE34BC590179A74CCA0688616AB6A0"><a class="level-1 menu-61BE34BC590179A74CCA0688616AB6A0 " href="?m=module_g_article.ui_portal.detail&id=0D26C99B355110CA585ED7BD6BB0BDC1" >联系我们</a></li><li class="item level-1 menu-0D16FFDEEF353244992CB3C90C94DDBD"><a class="level-1 menu-0D16FFDEEF353244992CB3C90C94DDBD " href="?m=module_g_consult.ui_portal.index&search[menu]=F70A7F956AA1EBA2190BF94D575E4A4E" >意见建议</a><ul class="level-2"><li class="item level-2 menu-F70A7F956AA1EBA2190BF94D575E4A4E"><a class="level-2 menu-F70A7F956AA1EBA2190BF94D575E4A4E " href="?m=module_g_consult.ui_portal.index" >回复</a></li><li class="item level-2 menu-B07373987D5F519A6BEE571C733D27BA"><a class="level-2 menu-B07373987D5F519A6BEE571C733D27BA " href="?m=module_g_consult.ui_portal.submit" >建议</a></li></ul></ul>            </div>
+        </div>
+    </nav><!--导航菜单区域-->
+    
+    
+    <div id="banner-header"><!--头部banner区域-->
+        <div class="ym-wrapper">
+            <div class="ym-wbox">
+                <!---->
+            </div>
+        </div>
+    </div><!--头部banner区域-->
+
+    <div id="main"><!--主体内容区域-->
+        <div class="ym-wrapper">
+            <div class="ym-wbox">
+                
+<div class="ym-column">
+    <div class="ym-col3">
+        <div class="ym-cbox sidebar">
+            <h2>
+            <a href="?m=module_g_article.ui_portal.index&search[menu]=EB30BD49467E9B41B5C9B5B9B5272E90">            新闻速递
+            </a>            </h2>
+            <ul class="menu-inner-page level-2"></ul>
+        </div>
+    </div>
+    
+    <div class="ym-col1">
+        <div class="nav-path">
+            <span class="home">&nbsp;&nbsp;您当前的位置：<span class="path-item"><a href="?m=module_g_article.ui_portal.index&search[menu]=EB30BD49467E9B41B5C9B5B9B5272E90">新闻速递</a></span></span>
+        </div>
+        <div class="ym-cbox content">
+            
+
+<!--  -->
+
+    <div class="article-row">
+        <div class="title ym-clearfix">
+            <a href="http://xygl.sjtu.edu.cn/?m=module_g_article.ui_portal.detail&id=3364AB828D3B8B65056BFB479FAC96DD" title="【通知】关于“英文版地图及地图导航功能”上线试运行的通知">【通知】关于“英文版地图及地图导航功能”上线试运行的通知</a>
+            <span class="time">2019-07-12</span>
+        </div>
+        <div class="content">各位老师、同学：大家好！为提高校园服务品质、提升校园管理服务效率， 2019年4月校园电子地图上线试运行。电子地图涵盖闵行和徐汇校区精细化二维和实景三维视图，打造了一站式、个性化的服务界面，实现多级缩放、精准定位、交通指引、校园服...</div>
+    </div>
+    <div class="article-row">
+        <div class="title ym-clearfix">
+            <a href="http://xygl.sjtu.edu.cn/?m=module_g_article.ui_portal.detail&id=0A4E26B33065515FF35DE6C73ADD568F" title="【图】上海交通大学召开2019年度防汛防台工作会议">【图】上海交通大学召开2019年度防汛防台工作会议</a>
+            <span class="time">2019-07-02</span>
+        </div>
+        <div class="content">为有效落实上级防汛防台工作要求，进一步提高我校“放大汛、抗大灾、抢大险”的能力，合力建设平安校园。6月28日，学校召开2019年度防汛防台工作会议。校党委常委、党委统战部部长张卫刚出席会议，校防汛防台领导小组各成员单位负责人，以及...</div>
+    </div>
+    <div class="article-row">
+        <div class="title ym-clearfix">
+            <a href="http://xygl.sjtu.edu.cn/?m=module_g_article.ui_portal.detail&id=119FC5FC1469C58DD956FC6EA46FB9CC" title="【图】市区校联动演练 合力建平安校园——2019年上海市教育系统防汛防台应急演练在交大举行">【图】市区校联动演练 合力建平安校园——2019年上海市教育系统防汛防台应急演练在交大举行</a>
+            <span class="time">2019-07-01</span>
+        </div>
+        <div class="content">为进一步做好2019年防汛应急抢险工作，积极应对“台风、暴雨、高潮、洪水”等自然灾害侵袭可能引发的重特大灾害和各类突发事件，强化应急预案保障措施的落实，提高防汛突发性事件的应对能力。6月27日下午，2019年上海市教育系统防汛防台...</div>
+    </div>
+    <div class="article-row">
+        <div class="title ym-clearfix">
+            <a href="http://xygl.sjtu.edu.cn/?m=module_g_article.ui_portal.detail&id=62698818D0A114194E14B393E3331560" title="【图】校园管理办公室党支部参观“上海解放70周年主题展”">【图】校园管理办公室党支部参观“上海解放70周年主题展”</a>
+            <span class="time">2019-06-15</span>
+        </div>
+        <div class="content">6月13日，校园管理办公室党支部在支部书记苏卓君的带领下，前往上海展览中心参观了“城市荣光——庆祝上海解放70周年”主题展览。共同回顾70年上海发展的“传奇历程”。 展览根据历史进程分为“解放大上海”、“建设新上海”、“敢为天下先...</div>
+    </div>
+    <div class="article-row">
+        <div class="title ym-clearfix">
+            <a href="http://xygl.sjtu.edu.cn/?m=module_g_article.ui_portal.detail&id=553FC74D008ED6D121B074CF940E9C6A" title="【图】校园管理办公室党支部 联合 船院交通航运党支部、保卫处党小组开展“党建引领促融合、优势互补增效能”主题党日活动">【图】校园管理办公室党支部 联合 船院交通航运党支部、保卫处党小组开展“党建引领促融合、优...</a>
+            <span class="time">2019-06-06</span>
+        </div>
+        <div class="content">为进一步强化党建对业务工作的引领作用，促进院系专业优势与机关管理优势的效能融合，5月29日下午，校园管理办公室党支部联合船建学院交通航运党支部、保卫处党支部第三党小组在基建楼109室开展5月主题党日活动。保卫处副处长、党支部第三党...</div>
+    </div>
+    <div class="split-page"><a href='#' class='page_number current'><span>1</span></a><a class="page_number" href="http://xygl.sjtu.edu.cn/?m=module_g_article.ui_portal.index&amp;search[show_sub]=1&amp;search[menu]=EB30BD49467E9B41B5C9B5B9B5272E90&amp;steps=5&amp;start=1&amp;order=a_time_update&amp;sort=DESC"  ><span>2</span></a><a class="page_number" href="http://xygl.sjtu.edu.cn/?m=module_g_article.ui_portal.index&amp;search[show_sub]=1&amp;search[menu]=EB30BD49467E9B41B5C9B5B9B5272E90&amp;steps=5&amp;start=2&amp;order=a_time_update&amp;sort=DESC"  ><span>3</span></a><a class="page_number" href="http://xygl.sjtu.edu.cn/?m=module_g_article.ui_portal.index&amp;search[show_sub]=1&amp;search[menu]=EB30BD49467E9B41B5C9B5B9B5272E90&amp;steps=5&amp;start=3&amp;order=a_time_update&amp;sort=DESC"  ><span>4</span></a><span class='page_number_dots'> ... </span><a class="page_number page_last" href="http://xygl.sjtu.edu.cn/?m=module_g_article.ui_portal.index&amp;search[show_sub]=1&amp;search[menu]=EB30BD49467E9B41B5C9B5B9B5272E90&amp;steps=5&amp;start=5&amp;order=a_time_update&amp;sort=DESC"  ><span>6</span></a><a class="page_next" href="http://xygl.sjtu.edu.cn/?m=module_g_article.ui_portal.index&amp;search[show_sub]=1&amp;search[menu]=EB30BD49467E9B41B5C9B5B9B5272E90&amp;steps=5&amp;start=1&amp;order=a_time_update&amp;sort=DESC"  ><span>下一页</span></a></div>
+
+
+        </div>
+    </div>
+    
+</div>
+
+            </div>
+        </div>
+    </div><!--主体内容区域-->
+    
+    <div class="scap-push"></div>
+</div><!-- id="scap-container" -->
+
+<footer id="footer"><!--脚部区域-->
+    <div class="ym-wrapper">
+        <div class="ym-wbox">
+            <!---->
+<div class="main">
+    <div class="link-other">
+        <div class="friend ym-grid">
+            <div class="ym-g40 ym-gl left">
+            </div>
+            <div class="ym-g20 ym-gl center">
+            友情链接
+            </div>
+            <div class="ym-g40 ym-gr right">
+            </div>
+        </div>
+    	<span>
+            <a target="_blank" href="http://www.sjtu.edu.cn/">上海交通大学</a>
+            <a target="_blank" href="http://zcc.sjtu.edu.cn/">资产管理与实验室处</a>
+            <a target="_blank" href="http://jjc.sjtu.edu.cn/">基建处</a>
+            <a target="_blank" href="http://www.bpa.sjtu.edu.cn/zcb">招投标与政府采购办公室</a>
+            <a target="_blank" href="http://ourhome.sjtu.edu.cn/">家园网</a>
+            <a target="_blank" href="http://houqin.sjtu.edu.cn/">后勤保障中心</a>
+    	</span>
+    </div>
+    <p>
+        沪ICP备05052060 版权所有©上海交通大学校园管理办公室
+    </p>
+</div>        </div>
+    </div>
+</footer><!--脚部区域-->
+
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/webpage/css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="/webpage/css/bootstrap.css"/>
+		<link rel="stylesheet" href="/webpage/css/common.css" />
+	</head>
+	 <script type="text/javascript">
+	 function FontList(){
+	 
+	  $.ajax({ 
+                //客户端向服务器发送请求时采取的方式
+                type: "post", 
+                 
+                cache: false, 
+                 
+                //服务器返回的数据类型，可选 XML, Json, jsonp, script, html, text。
+                dataType: 'text',
+                 
+                //指明客户端要向哪个页面里面的哪个方法发送请求
+                 url: "/a/news/news/fontnewlist",
+                 
+                data:{
+                    
+                 },
+ 
+                //客户端调用服务器端方法成功后执行的回调函数
+                 success: function(msg) {
+                    alert(msg);
+                    //$("#resText").html(msg);
+                    /*
+                    if (result.d=="success") {
+                        alert("登陆成功");
+                        window.location.href = 'welcome.html';
+                    } else {
+                        alert("登录失败");
+                    }*/
+                 }
+             });
+	 }
+	 </script>
+	<body >
+		<header>
+			<div class="logo-img">
+				<img src="/webpage/img/logo.png"/>
+			</div>
+			<form action="/a/news/news/frontnewlist" method="post" id="index"></form>
+		</header>
+        <script>
+            window.onload = function () {
+                document.getElementById("index").submit();
+            }
+        </script>
+</html>

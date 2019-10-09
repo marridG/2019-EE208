@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>三代传承，各地交大人唱响生日颂歌献礼新中国成立70周年-上海交通大学“不忘初心,牢记使命”主题教育</title>
+<meta name="description" content="上海交通大学“不忘初心,牢记使命”主题教育" />
+<meta name="keywords" content="上海交通大学“不忘初心,牢记使命”主题教育" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Bootstrap -->    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+<link type="text/css" rel="stylesheet" href="/css/css.css" />
+<link rel="stylesheet" href="/css/animate.css">
+<script src="/js/jquery.min.js"></script>
+<!--轮转焦点图-->
+<script src="/js/jquery.hiSlider.js"></script>
+<link rel="stylesheet" href="/css/jquery.hiSlider.css">
+
+<!-- 图片滚动 --> 
+<link href="/css/owl.carousel.css" type="text/css" rel="stylesheet" />
+<link href="/css/owl.theme.css" type="text/css" rel="stylesheet" />
+<!-- 图片滚动 --> 
+<script type="text/javascript" src="/js/owl.carousel.js"></script>
+<script type="text/javascript">
+    function search_validate(){
+        if(document.getElementById('search_keywords').value == ''){
+            alert('请输入搜索关键字');
+            return false;
+        }
+    }
+</script> 
+</head>
+<body class="bj_b"><div class="top" id="top_nav">
+    <div class="main">
+        <a href="/" class="logo"></a>     
+        <span class="menu2" id="menu2"><a href="javascript:void(0)">&nbsp;</a></span>   
+        <div id=navk>
+                        <ul class="cd_t">
+                  
+                <li><a href="https://www.sjtu.edu.cn" target="_blank">交大首页</a></li>
+                                <li class="l_x">|</li>
+                                  
+                <li><a href="https://news.sjtu.edu.cn" target="_blank">交大新闻网</a></li>
+                                <li class="l_x">|</li>
+                                  
+                <li><a href="http://jd.sjtu.edu.cn/web/JDJDW/2960001.htm" target="_blank">焦点网</a></li>
+                                            </ul>
+            <span class="ss">
+                <form method="get" action="https://sjtuztjy.sjtu.edu.cn/active/search.html" onsubmit="return search_validate();">
+                <div class="txtk">
+                    <input type="text" id="search_keywords" name="search_keywords" class="form-control" placeholder="">
+                    <button class="an_ss" type="submit"></button>
+                </div>
+                </form>
+            </span>
+            <ul class="menu">
+                <li><a href="/" class="dbt">首页</a></li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/zyjs.html" class="dbt ">中央精神</a>
+                                        <dl>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/zy_file.html" >中央文件</a></dd>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/zy_study.html" >学习资料</a></dd>
+                                            </dl>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/news.html" class="dbt on">新闻动态</a>
+                                        <dl>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/jdyw.html" >交大要闻</a></dd>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/jcdt.html" >基层动态</a></dd>
+                                            </dl>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/xjdx.html" class="dbt ">先进典型</a>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/mtgz.html" class="dbt ">媒体关注</a>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/slhj.html" class="dbt ">史料汇集</a>
+                                    </li>
+                            </ul>
+            <div class="clear"></div>
+        </div> 
+    </div>  
+</div>
+<div class="top_jg"></div>
+<SCRIPT type=text/javascript>  
+$(document).ready(function() {
+    var pk=document.body.clientWidth;
+    if(pk<1200){
+        //手机菜单
+        $("#menu2").click(function(){
+            if($("#navk").css("display")=="none"){
+                $(this).find("a").addClass("on");
+                $("#navk").slideDown("slow");       
+            }
+            else{
+                $(this).find("a").removeClass("on");
+                $("#navk").slideUp("slow");     
+            }
+        });  
+    }
+    else{
+        $(".menu li").hover(function() {
+            $(this).find("dl").css("display","block");
+        },function(){
+            
+            $(this).find("dl").css("display","none");
+        });
+
+        //向下滚动顶部缩小
+        $.fn.smartFloat = function() {
+            var position = function(element) {
+                var top = element.position().top, pos = element.css("position");
+                $(window).scroll(function() {
+                    var scrolls = $(this).scrollTop();
+                    if (scrolls > top) {
+                        $("#top_nav").addClass("on");
+                        if (window.XMLHttpRequest) {
+                            element.css({
+                                position: "fixed",
+                                //background:"#efefef",
+                                top: 0
+                            });
+                        } else {
+                            element.css({
+                                top: scrolls
+                            });
+                        }
+                    }else {
+                        $("#top_nav").removeClass("on");
+                        element.css({
+                            position: pos,
+                            //background:"transparent",
+                            top: top
+                        });
+                    }
+                });
+            };
+            return $(this).each(function() {
+                position($(this));
+            });
+
+        };
+        $("#top_nav").smartFloat();
+        //向下滚动顶部缩小 end
+    };
+});  
+//-->  
+</SCRIPT>
+<div class="ban"><img src="/upload/image/20190924/20190924141304.jpg" ></div>
+<div class="dqwz">
+ 	<div class="main wow fadeInUp">
+  		<a href="/">首页</a> &gt; <a href="https://sjtuztjy.sjtu.edu.cn/news.html">新闻动态</a> &gt; <a href="https://sjtuztjy.sjtu.edu.cn/jdyw.html">交大要闻</a> 	</div>
+</div>
+<div class="nyk">
+	 	<div class="main">
+   		<div class="zt_snr">
+     		<div class="sbt wow fadeInUp">三代传承，各地交大人唱响生日颂歌献礼新中国成立70周年</div>
+     		<div class="fbt wow fadeInUp">青春为祖国歌唱，团结坚定共同奋进</div>
+     		<div class="xx wow fadeInUp"></div>
+    		<div class="ssj news_ssj wow fadeInUp">日期：2019-09-30</div>
+    		<div class="snr wow fadeInUp">
+			    <p>&nbsp; &nbsp; &nbsp; &ldquo;今天是你的生日，我的中国&hellip;&hellip;&rdquo;国庆佳节将近，不同地方、不同行业、不同年龄的交大人，共同唱响《今天是你的生日》，满怀热情与感慨，为新中国成立70周年献上真挚的祝福，唱响对母校、祖国未来发展的美好期望。</p>
+
+<p>&nbsp; &nbsp; &nbsp; 从交大1949届校友黄旭华到2019级新生；从云南洱海湖泊富营养化治理团队、西昌卫星发射中心到广西鹿寨研究生支教团、2019年入伍新兵；从高新技术研究所到防风治沙实践团；从致力于少数民族精英教育的教师到胸怀报国之志的少数民族学生&hellip;&hellip;各地交大人共同为祖国唱响生日祝福，在有力的歌声中、在坚定的眼神里，满含交大人对祖国的感恩与热爱、满溢交大人爱国荣校的坚定与热情。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="1.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_082248_700.jpg" title="20190930_082248_700.jpg" /></p>
+
+<p><strong>光荣传承，三代交大人共唱赞歌</strong></p>
+
+<p>&nbsp; &nbsp; &nbsp; &ldquo;同学们，要牢记你们是国家的未来，民族的希望，国家寄希望于你们，毕业之后能为国家作出卓越的贡献。祖国就是母亲，让母亲过得更好，这是我们的责任。&rdquo;2019共和国勋章获得者、中国工程院院士、交大1949届造船系校友黄旭华寄语师生。&ldquo;1949年给我的印象就是解放了，我们从落后、贫穷的国家，然后逐步建设成为一个富强、在国际上得到大家尊重的国家，这整个的过程，我都经过了，我尽了我一个螺丝钉的作用。&rdquo; 中国工程院院士、国家最高科学技术奖获得者、上海交通大学医学院附属瑞金医院终身教授王振义娓娓讲述他与新中国70年共成长的故事。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="2.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_082304_397.jpg" title="20190930_082304_397.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="3.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_082310_234.jpg" title="20190930_082310_234.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="4.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_082317_619.jpg" title="20190930_082317_619.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="5.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_082322_707.jpg" title="20190930_082322_707.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; 中国核工业集团有限公司董事、总经理、党组副书记、上海交大1979级核动力工程专业校友顾军，是改革开放政策实施以来的第一批大学生。他说：&ldquo;我们非常荣幸，经历了改革开放的整个过程，也成为了祖国发生翻天覆地变化的亲历者、见证者和建设者。江南造船（集团）有限责任公司科技委主任、船舶设计大师、上海交大1978级校友胡可一表示：&rdquo;作为一个造船人，我们将尽自己最大的努力，打造大国重器，为新中国成立七十周年献礼。&ldquo;</p>
+
+<p>&nbsp; &nbsp; &nbsp; 此次献声的还有2019级新生&rdquo;交三代&ldquo;张博涵，他的家三代人中此前共有8位毕业于上海交大。 &rdquo;饮水思源，爱国荣校&ldquo;的交大精神代代传承，新老交大人与祖国共同成长、与梦想并肩前行。</p>
+
+<p><strong>志向报国，四海交大人守护祖国山水</strong></p>
+
+<p>&nbsp; &nbsp; &nbsp; 同为祖国唱起生日祝福的，还有位于云南、广西、西昌等地的交大人和2019入伍新兵学子。他们胸怀感恩之心与报国志向，到祖国需要的地方去，为建设祖国事业、守护祖国山水贡献出自己的力量。</p>
+
+<p style="text-align: center;"><img alt="6.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_082346_245.jpg" title="20190930_082346_245.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="7.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_082352_661.jpg" title="20190930_082352_661.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; 上海交大环境科学与工程学院孔海南教授、&rdquo;全国民族团结进步模范集体&ldquo;&mdash;&mdash;上海交通大学云南(大理)研究院、第21届研究生支教团广西分队、游泳世界冠军徐嘉余、在西昌卫星发射中心工作的交大校友、2019年交大入伍新兵、医学院师生&hellip;&hellip;他们从全国各地用歌声为祖国送上祝福。</p>
+
+<p>&nbsp; &nbsp; &nbsp; &rdquo;在新中国成立70周年之际，我们在上海交大耕耘十多年的洱海月湿地，祝福我们的祖国！&ldquo;环境科学与工程学院讲席教授孔海南激动地说。&rdquo;感恩祖国的培养，感谢母校上海交大的教育，我将继续拼搏，用最好的成绩献上对祖国的生日祝福。&ldquo;游泳世界冠军、交大2019届校友徐嘉余表示。&rdquo;能为祖国的航天事业贡献一份力，是我的光荣，希望更多优秀的交大学子，了解发射场、来到发射场、建设发射场，为祖国的航天事业添砖加瓦。&ldquo;在西昌卫星发射中心工作的交大校友王强、梁珂岩、向宇这样说。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="8.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_082412_955.jpg" title="20190930_082412_955.jpg" /></p>
+
+<p><strong>立德树人，用科研成果和青春脚步向祖国告白</strong></p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp;此次活动中更是有不少科研团队、实践团队和师生为祖国唱响生日赞歌。海洋深水池海洋工程国家重点实验室团队、系统控制与信息处理教育部重点实验室、薄板结构数字化制造研究所&hellip;&hellip;交大为国家关键领域的发展做出了不可磨灭的贡献。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="9.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_082434_860.jpg" title="20190930_082434_860.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="10.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_082441_956.jpg" title="20190930_082441_956.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="11.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_082448_468.jpg" title="20190930_082448_468.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="12.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_082507_637.jpg" title="20190930_082507_637.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; 不仅是专业科研团队，许多交大学子在国际领域的赛事中频频斩获大奖，他们为中国的科创注入新鲜而卓越的力量。同时，交大学子积极参与暑期社会实践和西部计划，用青春脚步丈量祖国大地，用实际行动向祖国告白。2019全国&rdquo;最美高校辅导员&ldquo;汪雨申，他通过话剧的制作为学生们提供德育课堂，他的所有工作都紧紧围绕着&rdquo;育人&ldquo;这个学校的中心任务，挖掘学生潜质，努力将学生塑造成堪当大任的&rdquo;全方位一流人才&ldquo;。</p>
+
+<p><strong>民族团结，多民族师生携手深情献礼</strong></p>
+
+<p>&nbsp; &nbsp; &nbsp; 多年来学校始终高度重视民族工作，切实关心引导少数民族学生成长成才，许多来自少数民族的教职工也致力于少数民族精英人才的培养。少数民族师生能在交大找到归属感，携手深情献礼祖国。致远学院党总支书记洪梅，安泰经济与管理学院副院长田新民，为少数民族学生教育做出贡献，都荣获国务院授予的&rdquo;全国民族团结进步模范个人&ldquo;称号。</p>
+
+<p style="text-align: center;"><img alt="13.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_082521_752.jpg" title="20190930_082521_752.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; 此次，少数民族师生也参与到了献礼新中国成立70周年的活动中，表达出他们的兴奋、激动和深厚的爱国情感。&rdquo;作为一名维吾尔族博士生，我要衷心感谢祖国的培育之恩，有国才有家，愿我们伟大祖国更加繁荣昌盛！&ldquo;安泰经济与管理学院博士生甫祺娜依&middot;尤力瓦斯说。</p>
+
+<p>主题片推送链接：<a href="https://mp.weixin.qq.com/s/a2oEUZ1ZFwK5l6_tQwvRqQ">https://mp.weixin.qq.com/s/a2oEUZ1ZFwK5l6_tQwvRqQ</a></p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: right;"><label>作者：</label>江倩倩、尹静一</p>
+
+<p style="text-align: right;"><label>供稿单位：</label>新闻中心</p>
+    		</div>
+    		<div class="sgd wow fadeInUp">
+				<a href="https://sjtuztjy.sjtu.edu.cn/jdyw/3035.html">上一条：校党委书记姜斯宪焦点讲坛作专题授课</a><br>            	<a href="https://sjtuztjy.sjtu.edu.cn/jdyw/3031.html">下一条：新时代 新经典——《平易近人》系列重点数字图书上线学习强国等网络传播平台</a>     			<a href="https://sjtuztjy.sjtu.edu.cn/jdyw.html" class="cd_fh">返回列表</a>
+     		</div>
+   		</div>
+  		<div class="clear"></div>
+ 	</div>
+</div>
+<script type="text/javascript" src="/js/wow.js"></script>
+<script>
+var wow = new WOW({
+    boxClass: 'wow',
+    animateClass: 'animated',
+    offset: 0,
+    mobile: true,
+    live: true
+});
+wow.init();
+</script>
+
+	<div class="foot">
+	 	<div class="main">
+	  		<div class="f1 wow fadeInUp" data-wow-delay=".1s">
+	  		沪ICP备05052060   沪举报中心   版权所有© 上海交通大学<br>  
+			地址：上海市东川路800号   邮编：200240   查号：86-21-54740000	  	</div>
+	  	<div class="f2 wow fadeInUp" data-wow-delay=".3s">
+	   		<span class="s1">相关链接</span>
+	   			   			   		<a href="https://www.sjtu.edu.cn" target="_blank">交大首页</a>
+	   			   		<b>|</b>
+	   			   			   		<a href="https://news.sjtu.edu.cn" target="_blank">交大新闻网</a>
+	   			   		<b>|</b>
+	   			   			   		<a href="http://jd.sjtu.edu.cn/web/JDJDW/2960001.htm" target="_blank">焦点网</a>
+	   			   			   	</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.fy1 a').each(function(){
+            if($(this).text()=='上一页' || $(this).text()=='下一页'){
+                $(this).addClass('cd_sx');
+            }
+        })
+    });
+</script>
+</body>
+</html>

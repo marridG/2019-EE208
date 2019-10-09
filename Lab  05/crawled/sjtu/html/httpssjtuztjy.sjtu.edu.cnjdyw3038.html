@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>上海交通大学“学经典 迎国庆 开展主题教育”学习《习近平用典》大赛圆满举行-上海交通大学“不忘初心,牢记使命”主题教育</title>
+<meta name="description" content="上海交通大学“不忘初心,牢记使命”主题教育" />
+<meta name="keywords" content="上海交通大学“不忘初心,牢记使命”主题教育" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Bootstrap -->    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+<link type="text/css" rel="stylesheet" href="/css/css.css" />
+<link rel="stylesheet" href="/css/animate.css">
+<script src="/js/jquery.min.js"></script>
+<!--轮转焦点图-->
+<script src="/js/jquery.hiSlider.js"></script>
+<link rel="stylesheet" href="/css/jquery.hiSlider.css">
+
+<!-- 图片滚动 --> 
+<link href="/css/owl.carousel.css" type="text/css" rel="stylesheet" />
+<link href="/css/owl.theme.css" type="text/css" rel="stylesheet" />
+<!-- 图片滚动 --> 
+<script type="text/javascript" src="/js/owl.carousel.js"></script>
+<script type="text/javascript">
+    function search_validate(){
+        if(document.getElementById('search_keywords').value == ''){
+            alert('请输入搜索关键字');
+            return false;
+        }
+    }
+</script> 
+</head>
+<body class="bj_b"><div class="top" id="top_nav">
+    <div class="main">
+        <a href="/" class="logo"></a>     
+        <span class="menu2" id="menu2"><a href="javascript:void(0)">&nbsp;</a></span>   
+        <div id=navk>
+                        <ul class="cd_t">
+                  
+                <li><a href="https://www.sjtu.edu.cn" target="_blank">交大首页</a></li>
+                                <li class="l_x">|</li>
+                                  
+                <li><a href="https://news.sjtu.edu.cn" target="_blank">交大新闻网</a></li>
+                                <li class="l_x">|</li>
+                                  
+                <li><a href="http://jd.sjtu.edu.cn/web/JDJDW/2960001.htm" target="_blank">焦点网</a></li>
+                                            </ul>
+            <span class="ss">
+                <form method="get" action="https://sjtuztjy.sjtu.edu.cn/active/search.html" onsubmit="return search_validate();">
+                <div class="txtk">
+                    <input type="text" id="search_keywords" name="search_keywords" class="form-control" placeholder="">
+                    <button class="an_ss" type="submit"></button>
+                </div>
+                </form>
+            </span>
+            <ul class="menu">
+                <li><a href="/" class="dbt">首页</a></li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/zyjs.html" class="dbt ">中央精神</a>
+                                        <dl>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/zy_file.html" >中央文件</a></dd>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/zy_study.html" >学习资料</a></dd>
+                                            </dl>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/news.html" class="dbt on">新闻动态</a>
+                                        <dl>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/jdyw.html" >交大要闻</a></dd>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/jcdt.html" >基层动态</a></dd>
+                                            </dl>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/xjdx.html" class="dbt ">先进典型</a>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/mtgz.html" class="dbt ">媒体关注</a>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/slhj.html" class="dbt ">史料汇集</a>
+                                    </li>
+                            </ul>
+            <div class="clear"></div>
+        </div> 
+    </div>  
+</div>
+<div class="top_jg"></div>
+<SCRIPT type=text/javascript>  
+$(document).ready(function() {
+    var pk=document.body.clientWidth;
+    if(pk<1200){
+        //手机菜单
+        $("#menu2").click(function(){
+            if($("#navk").css("display")=="none"){
+                $(this).find("a").addClass("on");
+                $("#navk").slideDown("slow");       
+            }
+            else{
+                $(this).find("a").removeClass("on");
+                $("#navk").slideUp("slow");     
+            }
+        });  
+    }
+    else{
+        $(".menu li").hover(function() {
+            $(this).find("dl").css("display","block");
+        },function(){
+            
+            $(this).find("dl").css("display","none");
+        });
+
+        //向下滚动顶部缩小
+        $.fn.smartFloat = function() {
+            var position = function(element) {
+                var top = element.position().top, pos = element.css("position");
+                $(window).scroll(function() {
+                    var scrolls = $(this).scrollTop();
+                    if (scrolls > top) {
+                        $("#top_nav").addClass("on");
+                        if (window.XMLHttpRequest) {
+                            element.css({
+                                position: "fixed",
+                                //background:"#efefef",
+                                top: 0
+                            });
+                        } else {
+                            element.css({
+                                top: scrolls
+                            });
+                        }
+                    }else {
+                        $("#top_nav").removeClass("on");
+                        element.css({
+                            position: pos,
+                            //background:"transparent",
+                            top: top
+                        });
+                    }
+                });
+            };
+            return $(this).each(function() {
+                position($(this));
+            });
+
+        };
+        $("#top_nav").smartFloat();
+        //向下滚动顶部缩小 end
+    };
+});  
+//-->  
+</SCRIPT>
+<div class="ban"><img src="/upload/image/20190924/20190924141304.jpg" ></div>
+<div class="dqwz">
+ 	<div class="main wow fadeInUp">
+  		<a href="/">首页</a> &gt; <a href="https://sjtuztjy.sjtu.edu.cn/news.html">新闻动态</a> &gt; <a href="https://sjtuztjy.sjtu.edu.cn/jdyw.html">交大要闻</a> 	</div>
+</div>
+<div class="nyk">
+	 	<div class="main">
+   		<div class="zt_snr">
+     		<div class="sbt wow fadeInUp">上海交通大学“学经典 迎国庆 开展主题教育”学习《习近平用典》大赛圆满举行</div>
+     		<div class="fbt wow fadeInUp">以典启智 以文化人</div>
+     		<div class="xx wow fadeInUp"></div>
+    		<div class="ssj news_ssj wow fadeInUp">日期：2019-09-29</div>
+    		<div class="snr wow fadeInUp">
+			    <p>&nbsp; &nbsp; &nbsp; 在<a>喜迎新中国70华诞</a>、开展&ldquo;不忘初心，牢记使命&rdquo;主题教育之际，上海交通大学图书馆于9月29日下午，在图书信息大楼八楼特别策划举办了&ldquo;学经典 迎国庆 开展主题教育&rdquo;学习《习近平用典》大赛，以促进广大教职工学经典、用经典，提升文化素养，提高政治站位。校工会主席于朝阳、副主席罗莹，网络信息中心党总支书记管海兵，分析测试中心党总支副书记张玉平，教育技术中心副主任张健，校主题教育巡回指导组办公室副主任吴淑琴，第五巡回指导组副组长沈燕明，图书馆馆长陈进、党委书记董玉山及全体班子成员到场观摩了此次比赛。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_022609_470.jpg" title="20190930_022609_470.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_022609_780.jpg" title="20190930_022609_780.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_022609_243.jpg" title="20190930_022609_243.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; 进入本次比赛的有由图书馆各部门初选脱颖而出的25位馆员，以及来自工会等校内其他7家单位的特邀参赛人员15名，共计40位选手。比赛由必答题和<a>抢答题环节</a>组成，选手角逐激烈、赛场精彩纷呈。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="04.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_022634_137.jpg" title="20190930_022634_137.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="05.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_022639_128.jpg" title="20190930_022639_128.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="06.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_022645_652.jpg" title="20190930_022645_652.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; 必答题环节共20道题，由选择题与填空题组成。选手们有备而来，题目刚在大屏上出现，答题板上便&ldquo;刷刷&rdquo;作响。面对&ldquo;见贤思齐焉，见不贤而内自省也&rdquo; &ldquo;但愿苍生俱饱暖，不辞辛劳出山林&rdquo;等经典名句，选手们大都从容淡定，落笔自如。选手实力难分秋色，比分紧咬不放。最终，来自图书馆、教育技术中心、分析测试中心的12位老师高分入围决胜三甲的抢答题环节。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="07.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_022658_361.jpg" title="20190930_022658_361.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="08.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_022704_526.jpg" title="20190930_022704_526.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="09.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_022709_375.jpg" title="20190930_022709_375.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="10.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_022714_316.jpg" title="20190930_022714_316.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; 在随后的抢答题环节中，比赛逐渐趋于白热化。第一题&ldquo;行之力则知愈进，知之深则行愈达&rdquo;刚出，7名选手便竞相举手示意答题，以至于监督员需要用0.25倍速回看现场视频，来区分举手先后顺序。来自图书馆资源与公共服务部的年轻馆员梁颖更是当选全场&ldquo;手速王&rdquo;，连续成功抢答4道题，以总成绩350分高居榜首。面对同分的情况，现场还安排了2轮&ldquo;秒杀答题&rdquo;的加赛环节，观众拍手助威，看得不亦乐乎。经过激烈的比拼，本次大赛共决出一等奖2名、二等奖4名、三等奖6名。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="11.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_022726_154.jpg" title="20190930_022726_154.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="12.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_022732_393.jpg" title="20190930_022732_393.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="13.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_022737_839.jpg" title="20190930_022737_839.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="14.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_022741_775.jpg" title="20190930_022741_775.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; 点评环节，各位嘉宾对选手们的精彩表现赞叹不已，对本次比赛的内涵和意义给予了高度肯定。管海兵和吴淑琴表示，看到这么多朝气蓬勃的年轻面庞很让人欣慰，并勉励在场的各位，在日常的点滴时间充实文化知识，学无止境；郭晶认为，习近平总书记用典涵盖了治国理政、修身养性等方方面面，是中华文化的精髓，图书馆肩负了文化传承中心的职能，要将这些优秀传统文化继续发扬下去；董玉山为此次进入决赛的教职工们点赞，表示这次比赛意义重大，大家不仅要&ldquo;以赛促学&rdquo;，更要&ldquo;以赛促行&rdquo;，更好地理解总书记讲话精神，以文化人、以文育人。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="15.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_022753_631.jpg" title="20190930_022753_631.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="16.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_022758_499.jpg" title="20190930_022758_499.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="17.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_022803_481.jpg" title="20190930_022803_481.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="18.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_022808_486.jpg" title="20190930_022808_486.jpg" /></p>
+
+<p>&nbsp; &nbsp; &nbsp; 在最后的总结发言中，陈进感谢学校机关和直属单位对图书馆举办此次活动的大力支持，勉励大家未来不断提升自己的理论水平，并用实践检验学习成效，服务科研，助力交大&ldquo;双一流&rdquo;建设。吴淑琴、董玉山、陈进受邀为获奖选手颁奖并合影留念，比赛圆满落幕。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="19.jpg" src="https://news.sjtu.edu.cn/resource/upload/201909/20190930_022814_242.jpg" title="20190930_022814_242.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; 文运同国运相牵，文脉同国脉相连。此次比赛顺应&ldquo;弘扬爱国奋斗精神、建功立业新时代&rdquo;思想政治引领活动的要求，意义深远，不仅促进了广大教职工认真学习博大精深的中华古典文化，更促使大家深刻领会习近平新时代中国特色社会主义思想，深入透彻理解习近平总书记讲话精神，加强理论修养，提高思想站位，推动了&ldquo;不忘初心、牢记使命&rdquo;主题教育目标任务的实现。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: right;"><label>作者：</label>张蔚林</p>
+
+<p style="text-align: right;"><label>摄影：</label>严宏</p>
+
+<p style="text-align: right;"><label>供稿单位：</label>图书馆</p>
+    		</div>
+    		<div class="sgd wow fadeInUp">
+				            	<a href="https://sjtuztjy.sjtu.edu.cn/jdyw/3035.html">下一条：校党委书记姜斯宪焦点讲坛作专题授课</a>     			<a href="https://sjtuztjy.sjtu.edu.cn/jdyw.html" class="cd_fh">返回列表</a>
+     		</div>
+   		</div>
+  		<div class="clear"></div>
+ 	</div>
+</div>
+<script type="text/javascript" src="/js/wow.js"></script>
+<script>
+var wow = new WOW({
+    boxClass: 'wow',
+    animateClass: 'animated',
+    offset: 0,
+    mobile: true,
+    live: true
+});
+wow.init();
+</script>
+
+	<div class="foot">
+	 	<div class="main">
+	  		<div class="f1 wow fadeInUp" data-wow-delay=".1s">
+	  		沪ICP备05052060   沪举报中心   版权所有© 上海交通大学<br>  
+			地址：上海市东川路800号   邮编：200240   查号：86-21-54740000	  	</div>
+	  	<div class="f2 wow fadeInUp" data-wow-delay=".3s">
+	   		<span class="s1">相关链接</span>
+	   			   			   		<a href="https://www.sjtu.edu.cn" target="_blank">交大首页</a>
+	   			   		<b>|</b>
+	   			   			   		<a href="https://news.sjtu.edu.cn" target="_blank">交大新闻网</a>
+	   			   		<b>|</b>
+	   			   			   		<a href="http://jd.sjtu.edu.cn/web/JDJDW/2960001.htm" target="_blank">焦点网</a>
+	   			   			   	</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.fy1 a').each(function(){
+            if($(this).text()=='上一页' || $(this).text()=='下一页'){
+                $(this).addClass('cd_sx');
+            }
+        })
+    });
+</script>
+</body>
+</html>

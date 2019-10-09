@@ -1,0 +1,748 @@
+
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <base href="http://map.sjtu.edu.cn:80/">
+    <title>上海交通大学校园电子地图</title>
+    <link rel="stylesheet" href="resources/plugins/bootstrap-3.3.7/css/bootstrap-dropdown.css?v=a17e1fd404ce41615bdba3b9473694ca">
+    <link rel="stylesheet" href="resources/jmap/jmap.css?v=427fadb30bed2f2b76091f1ab3fd212c">
+    <script src="resources/plugins/jquery-3.2.1.min.js?v=c9f5aeeca3ad37bf2aa006139b935f0a"></script>
+    <script src="resources/plugins/bootstrap-3.3.7/js/bootstrap.min.js?v=5869c96cc8f19086aee625d670d741f9"></script>
+    <script src="resources/plugins/html2canvas.js?v=515bb86c6c8a267a0f19d553df35fad6"></script>
+    <script src="resources/plugins/jQuery.print-master/dist/jQuery.print.min.js?v=24e2a67de04e387ec209034ca4d8e990"></script>
+
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.0/html2canvas.js"></script>-->
+    <script type="text/javascript"
+            src="https://api.tianditu.gov.cn/api?v=4.0&tk=edf4f74200f4c196a9a57c7c472809d9"></script>
+    <script src="resources/jmap/sjtu_config.js?v=0d27ad2840916d2fec1c09252988a1"></script>
+    
+    <script src="resources/myCustom/commUtil.js?v=4a85d57983494e4b578cc4d742bf0122"></script>
+    
+    
+    
+    
+    <link rel="stylesheet" href="resources/plugins/bigautocomplete/jquery.bigautocomplete.css?v=d77a9350e3e6a421a2ac7d2f4a608a7e">
+    <link rel="stylesheet" href="resources/jmap/tool.css?v=baec67031647b5c2f267593d405a8b7c">
+    <link rel="stylesheet" href="resources/jmap/calendar.css?v=5c8305884d599dcd55c64740cd4a620d">
+    <link rel="stylesheet" href="resources/jmap/hanshujia.css?v=284f637d6a8d87af32f5eed7cd51c47">
+    <script src="resources/plugins/bigautocomplete/jquery.bigautocomplete.js?v=012404ce65acb6b18c5bd21c296dd44a"></script>
+    <script src="resources/plugins/sweetalert/sweetalert.2.1.2.min.js?v=f3b8ce97ff6ce324da6232da353adf40"></script>
+    <script src="resources/jmap/calendar.js?v=54647493b43b7312a39abcc6814db7ee"></script>
+    <script>
+        //自动切换成移动端
+        var ua = navigator.userAgent.toLowerCase();
+        if (/mobile|android|iphone|ipad|phone/i.test(ua)) {
+            window.location.href = "m";
+        }
+        //百度统计
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?365fca99d2eb6b95678fa1fa659c9a6c";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+
+<body>
+<div id="container"></div>
+<iframe id="container2" name="d25Container" display="none" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no"
+        allowtransparency="yes"></iframe>
+<!--logo-->
+<div class="top_logo">
+    <img src="resources/jmap/images/top_logo.png">
+</div>
+<!--搜索-->
+<div class="searchbar">
+    <input id="searchKey" type="text" placeholder="搜索">
+    <div class="search_list_close" onclick="searchListCloseClick()"><img src="resources/jmap/images/delete.png"></div>
+    <a><img src="resources/jmap/images/search.png"></a>
+</div>
+<!--导航-->
+<div class="navigation" id="navigation">
+    <div class="navigation_title">
+        <span class="title" id="navigation_title">校内导航</span>
+        <a class="delete" id="navigation_close">x</a>
+    </div>
+    <div class="navigation_check">
+        <a href="javascript:void(0);" class="navigation_exchange" id="navigation_exchange"><img src="resources/jmap/images/exchange.png"></a>
+        <div>
+            <div class="navigation_input beginning">
+                <span id="navigation_start_tip">起</span>
+                <input id="startP" placeholder="请输入或者在地图上选择起点">
+                <a id="startP_d" style="cursor:pointer;display: none"><img src="resources/jmap/images/delete.png"></a>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </div>
+            <div class="navigation_input ending">
+                <span id="navigation_end_tip">终</span>
+                <input id="endP" placeholder="请输入或者在地图上选择终点">
+                <a id="endP_d" style="cursor:pointer;display: none"><img src="resources/jmap/images/delete.png"></a>
+            </div>
+        </div>
+    </div>
+    <div class="navigation_route" id="navigation_route">
+    </div>
+</div>
+<!--列表-->
+<div id="search_list" class="search_list" style="display: none;">
+    <div class="details_top">
+        <span id="search_list_title">动态标题</span>
+        <a href="javascript:;" class="search_list_closeX" onclick="searchListCloseClick()">x</a>
+    </div><!--div为新增-->
+    <ul id="search_list_ul">
+        <li id="list_1">
+            <a class="list1">
+                <div>
+                    <h2><p class="list_num">1</p>第一餐饮大楼</h2>
+                    <span>类别：餐饮</span>
+                    <span>校区：闵行校区</span>
+                    <p>地址：上海市闵行区东川路800号上海交通大学内思源南路</p>
+                </div>
+                <div>
+                    <img src="resources/jmap/images/image.jpg">
+                </div>
+            </a>
+        </li>
+        <li id="list_2">
+            <a>
+                <div>
+                    <h2><p class="list_num">2</p>第二餐饮大楼</h2>
+                    <span>类别：餐饮</span>
+                    <span>校区：闵行校区</span>
+                    <p>地址：东川路800上海交通大学闵行校区</p>
+                </div>
+                <div>
+                    <img src="resources/jmap/images/image.jpg">
+                </div>
+            </a>
+        </li>
+        <li id="list_3">
+            <a>
+                <div>
+                    <h2><p class="list_num">3</p>第三餐饮大楼</h2>
+                    <span>类别：餐饮</span>
+                    <span>校区：闵行校区</span>
+                    <p>地址：上海市闵行区东川路800上海交通大学闵行校区</p>
+                </div>
+                <div>
+                    <img src="resources/jmap/images/image.jpg">
+                </div>
+            </a>
+        </li>
+        <li>
+            <a>
+                <div>
+                    <h2><p class="list_num">4</p>第四餐饮大楼</h2>
+                    <span>类别：餐饮</span>
+                    <span>校区：闵行校区</span>
+                    <p>地址：闵行区东川路800号交通大学(学生服务中心、教育超市)</p>
+                </div>
+                <div>
+                    <img src="resources/jmap/images/image.jpg">
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+<!--建筑详情-->
+<iframe class="search_details" id="search_details" display="none" frameborder="no" border="0" marginwidth="0"
+        marginheight="0" scrolling="no" allowtransparency="yes"></iframe>
+<!--暑期服务（首页日历，有校园巴士按钮，无描述）-->
+<div id="hanshujiaIndex" class="search_list sp_summervocation">
+    <div class="details_top">
+        <span>&nbsp;</span>
+        <a href="javascript:void(0);" class="sp_sv_close">x</a>
+    </div>
+    <div id="indexCalendar" class="calendar"></div>
+    <div id="hanshujiaBusBtn" class="hanshujiaBtsWrap">
+        <a href="javascript:hanshujiaShowSchoolBus();void(0);" id="hanshujiaIndexSchoolBus" class="school_bus">校园巴士&gt;&gt;</a>
+        <a href="javascript:hanshujiaShowStaffBus();void(0);" id="hanshujiaIndexStaffBus" class="school_bus">教工班车&gt;&gt;</a>
+    </div>
+</div>
+<!--暑期服务（详情日历，无校园巴士按钮，有描述）-->
+<div id="hanshujiaDetail" class="search_list sp_summervocation">
+    <div class="details_top">
+        <span id="hanshujiaDetailTitle">&nbsp;</span>
+        <a href="javascript:void(0);" class="sp_sv_close">x</a>
+    </div>
+    <div id="detailCalendar" class="calendar"></div>
+    <div id="hanshujiaDetailDescription" class="sp_description">1月14日—1月18日全楼正常营业，1月19日-1月25日一楼正常营业，1月26日-2月17日大楼关闭，2月18日-2月20日一楼正常营业，2月21日全楼恢复正常。清真餐厅：1月21日-2月17日关闭。</div>
+    <div id="hanshujiaDetailBtn" class="hanshujiaBtsWrap">
+        <a href="javascript:showHanshujiaIndex();void(0);" id="hanshujiaDetailRetunBtn" class="school_bus" style="padding: 5px 19px;border-radius: 5px;margin-right: 20px;">&lt;&lt;返回</a>
+    </div>
+</div>
+
+<!--校庆地图-->
+<div id="yingxinPanel" class="search_list search_sp" style="display:none">
+    <div class="details_top">
+        <span id="yingxinTitle">迎新活动</span>
+        <a href="javascript:void(0);" class="sp_close">x</a>
+    </div>
+    <div>
+        <select id="yingxinDateSelect"  name="">
+            
+            
+            
+            
+            
+            <option value="2019-09-09">2019-09-09</option>
+        </select>
+    </div>
+    <ul class="search_list_sp">
+        <li class="sp_li">
+            <h2><p class="list_num">1</p>剑川路S4附近研究生楼</h2>
+            <table class="sp_item">
+                <tr>
+                    <td class="sp_time">08:30-09:00</td>
+                    <td>气膜运动中心启用仪式</td>
+                </tr>
+            </table>
+        </li>
+        <li class="sp_li">
+            <h2><p class="list_num">2</p>思源湖（包图南侧）</h2>
+            <table class="sp_item">
+                <tr>
+                    <td class="sp_time">08:30-09:00</td>
+                    <td>闵行办学三十周年纪念雕塑落成仪式</td>
+                </tr>
+            </table>
+        </li>
+        <li class="sp_li">
+            <h2><p class="list_num">3</p>霍英东体育中心</h2>
+            <table class="sp_item">
+                <tr class="sp_item_important">
+                    <td class="sp_time">09:30-09:50</td>
+                    <td>重要校友和嘉宾会见交流（贵宾厅）</td>
+                </tr>
+                <tr class="sp_item_important">
+                    <td class="sp_time">10:00-11:30</td>
+                    <td>建校123周年纪念大会</td>
+                </tr>
+            </table>
+        </li>
+        <li class="sp_li">
+            <h2><p class="list_num">4</p>学术活动中心</h2>
+            <table class="sp_item">
+                <tr>
+                    <td class="sp_time">11:45-12:30</td>
+                    <td>工作午餐及交流（杰出校友、老领导等）（一楼会议室）</td>
+                </tr>
+                <tr>
+                    <td class="sp_time">11:45-12:30</td>
+                    <td>工作午餐及交流（校长奖获得者等）（二楼会议室）</td>
+                </tr>
+            </table>
+        </li>
+        <li class="sp_li">
+            <h2><p class="list_num">5</p>思源湖仰思坪</h2>
+            <table class="sp_item">
+                <tr>
+                    <td class="sp_time">12:30-16:00</td>
+                    <td>交大人节——青年创意文化嘉年华</td>
+                </tr>
+            </table>
+        </li>
+        <li class="sp_li">
+            <h2><p class="list_num">6</p>原商业街</h2>
+            <table class="sp_item">
+                <tr>
+                    <td class="sp_time">13:00-14:00</td>
+                    <td>子衿街启用仪式</td>
+                </tr>
+            </table>
+        </li>
+        <li class="sp_li">
+            <h2><p class="list_num">7</p>木兰大楼</h2>
+            <table class="sp_item">
+                <tr>
+                    <td class="sp_time">13:15-14:00</td>
+                    <td>船建学院校友集体照拍摄（约100人）（木兰楼前）</td>
+                </tr>
+                <tr>
+                    <td class="sp_time">14:00-15:30</td>
+                    <td>1949届土木院士校友学术交流座谈会（约50人）（A1002会议室）</td>
+                </tr>
+            </table>
+        </li>
+        <li class="sp_li">
+            <h2><p class="list_num">8</p>徐汇文治堂</h2>
+            <table class="sp_item">
+                <tr>
+                    <td class="sp_time">19:00-20:30</td>
+                    <td>校友音乐会</td>
+                </tr>
+            </table>
+        </li>
+    </ul>
+</div>
+<!--纠错-->
+<div class="correcting" id="correcting">
+    <div class="correcting_box">
+        <div class="correcting_top">
+            <span>纠错</span>
+            <a href="javascript:void(0);" class="correcting_close">x</a>
+        </div>
+        <div class="correcting_container">
+            <p class="correcting_title">请选择问题类型<span style="color: #c8161e;">&nbsp;*</span></p>
+            <div class="ans ans1">
+                <label>
+                    <input type="radio" name="correctingCatelog" value="地点报错" />
+                    地点报错
+                </label>
+                <label>
+                    <input type="radio" name="correctingCatelog" value="使用问题" />
+                    使用问题
+                </label>
+            </div>
+            <p class="correcting_title">问题描述（至少5字）<span style="color: #c8161e;">*</span></p>
+            <textarea id="correctingSubject" class="ans ans2" placeholder="请描述您遇到的问题，以便我们及时为您解决。"></textarea>
+            <p class="correcting_title">添加照片</p>
+
+            <div class="correcting_upload_wrap ans">
+                <div class="correcting_img_wrap" id="correcting_img_wrap">
+                    
+                        
+                    
+                    
+                        
+                    
+                    
+                        
+                    
+                </div>
+                <div class="ans3" id="fileChooser">
+                    <input type="file" multiple="multiple" name="correctingImgInput" id="correctingImgInput" accept="image/*">
+                </div>
+            </div>
+            <p class="correcting_title">联系方式<span style="color: #c8161e;">&nbsp;*</span></p>
+            <input id="correctingContact" type="text" class="ans ans4" placeholder="请留下您的手机号码或邮箱。">
+            <div class="correcting_btn" onclick="correctingSubmit()">提交</div>
+        </div>
+    </div>
+</div>
+<!--下载-->
+<div class="download">
+    <div class="download_box">
+        <div class="download_top">
+            <span id="downloadBoxTitle">下载</span>
+            <a href="javascript:$('.download').hide();void(0);" class="download_close">x</a>
+        </div>
+        <div class="download_container">
+            <p id="downloadTips" class="download_title">请选择下载地图类型<span style="color: #c8161e;">&nbsp;*</span></p>
+            <div class="ans ans1">
+                <label>
+                    <input type="radio" name="downloadType" value="1" checked="checked"/>
+                    <span id="downloadType_cur">下载当前区域地图</span>
+                </label>
+                <label>
+                    <input type="radio" name="downloadType" value="2" />
+                    <span id="downloadType_2d">下载二维地图</span>
+                </label>
+                <label>
+                    <input type="radio" name="downloadType" value="3" />
+                    <span id="downloadType_3d">下载三维地图</span>
+                </label>
+            </div>
+            <div class="download_btn" id="downloadConfirmBtn" onclick="doDownloadMap();">确认下载</div>
+        </div>
+    </div>
+</div>
+
+<nav class="nav_top">
+    <!--活动地图切换按钮-->
+    <div id="hanshujiaTab">
+        <div id="sp_btn_0_sv" class="sp_btn sp_btn_0_sv">
+            <img src="resources/jmap/images/hanshujia/sp_btn_0_zh.png">
+        </div>
+        <div id="sp_btn_1_sv" class="sp_btn sp_btn_1_sv">
+            <img src="resources/jmap/images/hanshujia/sp_btn_1_zh.png">
+        </div>
+        <div id="sp_btn_2_sv" class="sp_btn sp_btn_2_sv">
+            <img src="resources/jmap/images/hanshujia/sp_btn_2_zh.png">
+        </div>
+    </div>
+    <ul>
+        <li class="top_campus dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">
+                <div class="top_icon campus"></div>
+                <span>闵行校区</span>
+                <div class="arrow"></div>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="checked" campus="minhang"><a href="javascript:;" id="minhang_campus">闵行校区</a></li>
+                <li campus="xuhui"><a href="javascript:;" id="xuhui_campus">徐汇校区</a></li>
+                <!--<li><a href="javascript:;">长宁校区</a></li>-->
+                <!--<li><a href="javascript:;">黄浦校区</a></li>-->
+                <!--<li><a href="javascript:;">七宝校区</a></li>-->
+            </ul>
+        </li>
+        <li class="line"></li>
+        <li class="top_mapType dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">
+                <div class="top_icon map"></div>
+                <span>二维</span>
+                <div class="arrow"></div>
+            </a>
+            <ul class="dropdown-menu">
+                <li mapType="2d" class="checked"><a href="javascript:;" id="2d_label">二维</a></li>
+                <li mapType="3d"><a href="javascript:;" id="3d_label">三维</a></li>
+                
+            </ul>
+        </li>
+        <li class="line"></li>
+        <li class="top_language dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">
+                <div class="top_icon language"></div>
+                <span>CN</span>
+                <div class="arrow"></div>
+            </a>
+            <ul class="dropdown-menu">
+                <li language="zh" class="checked"><a href="javascript:;">&nbsp;CN&nbsp;&nbsp;</a></li>
+                <li language="en"><a href="javascript:;">&nbsp;&thinsp;EN&nbsp;&nbsp;</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<nav class="nav_bottom">
+    <!--底部菜单-->
+    <ul>
+        <li class="bottom_menu">
+            <a class="bottom_icon icon1" id="btn1"></a>
+        </li>
+        <li class="bottom_menu">
+            <a class="bottom_icon icon2" id="btn2"></a>
+        </li>
+        <li class="bottom_menu">
+            <a class="bottom_icon icon3" id="btn3"></a>
+        </li>
+        <li class="bottom_menu">
+            <a class="bottom_icon icon4" id="btn4"></a>
+        </li>
+        <li class="bottom_menu">
+            <a class="bottom_icon icon5" id="btn5"></a>
+        </li>
+        <li class="bottom_menu" id="btn6_wrap">
+            <a class="bottom_icon icon6" id="btn6"></a>
+        </li>
+    </ul>
+    <!--菜单1 生活-->
+    <div class="menus menus1" id="tab1" style="display: none;">
+        <div class="menu menu1">
+            <p class="menu_title" id="icon_label_canyin">餐饮</p>
+            <ul>
+                <li iconType="00130014">
+                    <div>
+                        <img id="icon_00130014" class="mene_type_icon" src="resources/jmap/images/icon/00130014_zh.png">
+                    </div>
+                </li>
+                <li iconType="00130052">
+                    <div><img id="icon_00130052"  class="mene_type_icon" src="resources/jmap/images/icon/00130052_zh.png"></div>
+                </li>
+                <li iconType="00130015">
+                    <div><img id="icon_00130015" class="mene_type_icon" src="resources/jmap/images/icon/00130015_zh.png"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="menu menu2">
+            <p class="menu_title" id="icon_label_zhushu">住宿</p>
+            <ul>
+                <li iconType="00160017">
+                    <div><img id="icon_00160017" class="mene_type_icon" src="resources/jmap/images/icon/00160017_zh.png"></div>
+                </li>
+                <li iconType="00160018">
+                    <div><img id="icon_00160018" class="mene_type_icon" src="resources/jmap/images/icon/00160018_zh.png"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="menu menu3">
+            <p class="menu_title" id="icon_label_shangmao">商贸</p>
+            <ul>
+                <li iconType="00280030">
+                    <div><img id="icon_00280030" class="mene_type_icon" src="resources/jmap/images/icon/00280030_zh.png"></div>
+                </li>
+                <li iconType="00280031">
+                    <div><img id="icon_00280031" class="mene_type_icon" src="resources/jmap/images/icon/00280031_zh.png"> </div>
+                </li>
+                <li iconType="00280032">
+                    <div><img id="icon_00280032" class="mene_type_icon" src="resources/jmap/images/icon/00280032_zh.png"></div>
+                </li>
+                <li iconType="00280034">
+                    <div><img id="icon_00280034"  class="mene_type_icon" src="resources/jmap/images/icon/00280034_zh.png"></div>
+                </li>
+                <li iconType="00280051">
+                    <div><img id="icon_00280051" class="mene_type_icon" src="resources/jmap/images/icon/00280051_zh.png"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="menu menu4">
+            <p class="menu_title" id="icon_label_yiliao">医疗</p>
+            <ul>
+                <li iconType="00230059">
+                    <div><img id="icon_00230059" class="mene_type_icon" src="resources/jmap/images/icon/00230059_zh.png"></div>
+                </li>
+                <li iconType="00230060">
+                    <div><img id="icon_00230060" class="mene_type_icon" src="resources/jmap/images/icon/00230060_zh.png"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="menu menu5">
+            <p class="menu_title" id="icon_label_qita1">其他</p>
+            <ul>
+                <li iconType="00280039">
+                    <div><img id="icon_00280039" class="mene_type_icon" src="resources/jmap/images/icon/00280039_zh.png"></div>
+                </li>
+                <li iconType="00450046">
+                    <div><img id="icon_00450046" class="mene_type_icon" src="resources/jmap/images/icon/00450046_zh.png"></div>
+                </li>
+                <li iconType="00450049">
+                    <div><img id="icon_00450049" class="mene_type_icon" src="resources/jmap/images/icon/00450049_zh.png"> </div>
+                </li>
+                <li iconType="00450047">
+                    <div><img id="icon_00450047" class="mene_type_icon" src="resources/jmap/images/icon/00450047_zh.png"> </div>
+                </li>
+                <li iconType="00450067">
+                    <div><img id="icon_00450067" class="mene_type_icon" src="resources/jmap/images/icon/00450067_zh.png"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--菜单2 交通-->
+    <div class="menus menus2" id="tab2">
+        <div class="menu menu1">
+            <p class="menu_title" style="border-color: #0086d1;" id="icon_label_jiaotong2">交通</p>
+            <ul>
+                <li iconType="00190066">
+                    <div><img id="icon_00190066" class="mene_type_icon" src="resources/jmap/images/icon/00190066_zh.png"> </div>
+                </li>
+                <li id="routeBtn" iconType="daohang">
+                    <div><img id="icon_daohang" class="mene_type_icon" src="resources/jmap/images/icon/daohang_zh.png"></div>
+                </li>
+                <li iconType="00190020">
+                    <div><img id="icon_00190020" class="mene_type_icon" src="resources/jmap/images/icon/00190020_zh.png"> </div>
+                </li>
+                <li iconType="00190021">
+                    <div><img id="icon_00190021" class="mene_type_icon" src="resources/jmap/images/icon/00190021_zh.png"></div>
+                </li>
+                <li iconType="00190022">
+                    <div><img id="icon_00190022" class="mene_type_icon" src="resources/jmap/images/icon/00190022_zh.png"> </div>
+                </li>
+                <li iconType="00190053">
+                    <div><img id="icon_00190053" class="mene_type_icon" src="resources/jmap/images/icon/00190053_zh.png"></div>
+                </li>
+                <li iconType="00190054">
+                    <div><img id="icon_00190054" class="mene_type_icon" src="resources/jmap/images/icon/00190054_zh.png"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--菜单3 教学文体-->
+    <div class="menus menus3" id="tab3">
+        <div class="menu menu1">
+            <p class="menu_title" style="border-color: #0086d1;" id="icon_label_jiaoxuewenti">教学文体</p>
+            <ul>
+                <li iconType="00240055">
+                    <div><img id="icon_00240055" class="mene_type_icon" src="resources/jmap/images/icon/00240055_zh.png"> </div>
+                </li>
+                <li iconType="00240025">
+                    <div><img id="icon_00240025" class="mene_type_icon" src="resources/jmap/images/icon/00240025_zh.png"></div>
+                </li>
+                <li iconType="00240036">
+                    <div><img id="icon_00240036" class="mene_type_icon" src="resources/jmap/images/icon/00240036_zh.png"></div>
+                </li>
+                <li iconType="00240026">
+                    <div><img id="icon_00240026" class="mene_type_icon" src="resources/jmap/images/icon/00240026_zh.png"></div>
+                </li>
+                <li iconType="00240027">
+                    <div><img id="icon_00240027" class="mene_type_icon" src="resources/jmap/images/icon/00240027_zh.png"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--菜单4 单位院系-->
+    <div class="menus menus4" id="tab4">
+        <div class="menu menu1">
+            <p class="menu_title" id="icon_label_danwei2">单位</p>
+            <ul>
+                <li iconType="0001003">
+                    <div><img id="icon_0001003" class="mene_type_icon" src="resources/jmap/images/icon/0001003_zh.png"></div>
+                </li>
+                <li iconType="0001004" id="icon_li_0001004">
+                    <div><img id="icon_0001004" class="mene_type_icon" src="resources/jmap/images/icon/0001004_zh.png"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="menu menu2">
+            <p class="menu_title" id="icon_label_xueyuan">学院（系）</p>
+            <ul>
+                <li iconType="00010020061">
+                    <div><img id="icon_00010020061" class="mene_type_icon" src="resources/jmap/images/icon/00010020061_zh.png"></div>
+                </li>
+                <li iconType="00010020062">
+                    <div><img id="icon_00010020062" class="mene_type_icon" src="resources/jmap/images/icon/00010020062_zh.png"></div>
+                </li>
+                <li iconType="00010020063">
+                    <div><img id="icon_00010020063" class="mene_type_icon" src="resources/jmap/images/icon/00010020063_zh.png"></div>
+                </li>
+                <li iconType="00010020064" id="icon_li_00010020064">
+                    <div><img id="icon_00010020064" class="mene_type_icon" src="resources/jmap/images/icon/00010020064_zh.png"></div>
+                </li>
+                <br id="tab4_br_1">
+                <li iconType="00010020065" id="icon_li_00010020065">
+                    <div><img id="icon_00010020065" class="mene_type_icon" src="resources/jmap/images/icon/00010020065_zh.png"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--菜单5 文化景观-->
+    <div class="menus menus5" id="tab5">
+        <div class="menu menu1">
+            <p class="menu_title" style="border-color: #0086d1;" id="icon_label_wenhuajiangguan">文化景观</p>
+            <ul>
+                <li iconType="00410042">
+                    <div><img id="icon_00410042" class="mene_type_icon" src="resources/jmap/images/icon/00410042_zh.png"></div>
+                </li>
+                <li iconType="00410043">
+                    <div><img id="icon_00410043" class="mene_type_icon" src="resources/jmap/images/icon/00410043_zh.png"></div>
+                </li>
+                <li iconType="00410044">
+                    <div><img id="icon_00410044" class="mene_type_icon" src="resources/jmap/images/icon/00410044_zh.png"></div>
+                </li>
+                <li iconType="00410056">
+                    <div><img id="icon_00410056" class="mene_type_icon" src="resources/jmap/images/icon/00410056_zh.png"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--菜单6 工具-->
+    <div class="menus menus6" id="tab6">
+        <div class="menu menu1">
+            <p class="menu_title" id="tool_celiang">测量</p>
+            <table style="width: 100%;">
+                <tr>
+                    <td id="tool_label_getJuli">测距</td>
+                    <td>
+                        <button id="ruleBtn" onclick="ruleLine()" class="xiaoshou"><img src="resources/jmap/images/distance.png">
+                        </button>
+                    </td>
+                    <td id="tool_label_getArea">测面</td>
+                    <td>
+                        <button id="measureAreaBtn" onclick="measureArea()" class="xiaoshou"><img src="resources/jmap/images/area.png">
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="menu_special">
+            <p class="menu_title" id="tool_edit">编辑</p>
+            <ul>
+                <li>
+                    <span id="tool_label_point">点</span>
+                    <div id="dots_wrap">
+                        <button id="dot1" onclick="draw('circle', 1)" class="dot dot1 xiaoshou"></button>
+                        <button id="dot2" onclick="draw('circle', 2)" class="dot dot2 xiaoshou"></button>
+                        <button id="dot3" onclick="draw('circle', 3)" class="dot dot3 xiaoshou"></button>
+                        <button id="dot4" onclick="draw('circle', 4)" class="dot dot4 xiaoshou"></button>
+                        <button id="dot5" onclick="draw('circle', 5)" class="dot dot5 xiaoshou"></button>
+                    </div>
+                </li>
+                <li>
+                    <span id="tool_label_line">线</span>
+                    <div>
+                        <input type="button" value="-" class="addbtn minus xiaoshou">
+                        <input id="polylineStrokeWeight" class="num" value="1">
+                        <input type="button" value="+" class="addbtn plus xiaoshou">
+                        <span id="tool_label_px1">像素</span>
+                        <button id="polylineBtn_solid" class="line xiaoshou" onclick="draw('polyline', 'solid')">实线</button>
+                        <button id="polylineBtn_dashed" class="line xiaoshou" onclick="draw('polyline', 'dashed')">虚线</button>
+                    </div>
+                </li>
+                <li>
+                    <span id="tool_label_area">面</span>
+                    <div>
+                        <input type="button" value="-" class="addbtn minus xiaoshou">
+                        <input id="polygonStrokeWeight" class="num" value="1">
+                        <input type="button" value="+" class="addbtn plus xiaoshou">
+                        <span id="tool_label_px2">像素</span>
+                        <button id="polygonBtn_solid" class="line xiaoshou" onclick="draw('polygon', 'solid')">实线</button>
+                        <button id="polygonBtn_dashed" class="line xiaoshou" onclick="draw('polygon', 'dashed')">虚线</button>
+                    </div>
+                </li>
+                <li>
+                    <span id="tool_label_color">颜色</span>
+                    <div>
+                        <button id="drawColor_0" onclick="setDrawColor(0)" class="color color1 active xiaoshou"></button>
+                        <button id="drawColor_1" onclick="setDrawColor(1)" class="color color2 xiaoshou"></button>
+                        <button id="drawColor_2" onclick="setDrawColor(2)" class="color color3 xiaoshou"></button>
+                        <button id="drawColor_3" onclick="setDrawColor(3)" class="color color4 xiaoshou"></button>
+                        <button id="drawColor_4" onclick="setDrawColor(4)" class="color color5 xiaoshou"></button>
+                    </div>
+                </li>
+                <li>
+                    <span id="tool_label_maker">标记</span>
+                    <div id="marker_wrap">
+                        <button id="marker_0" onclick="draw('marker', 0)" class="sign sign1 xiaoshou"><img
+                                src="resources/jmap/images/mark/mark1-0.png"></button>
+                        <button id="marker_1" onclick="draw('marker', 1)" class="sign sign2 xiaoshou"><img
+                                src="resources/jmap/images/mark/mark2-0.png"></button>
+                        <button id="marker_2" onclick="draw('marker', 2)" class="sign sign3 xiaoshou"><img
+                                src="resources/jmap/images/mark/mark3-0.png"></button>
+                        <button id="marker_3" onclick="draw('marker', 3)" class="sign sign4 xiaoshou"><img
+                                src="resources/jmap/images/mark/mark4-0.png"></button>
+                        <button id="marker_4" onclick="draw('marker', 4)" class="sign sign5 xiaoshou"><img
+                                src="resources/jmap/images/mark/mark5-0.png"></button>
+                    </div>
+                </li>
+                <li>
+                    <span id="tool_label_text">文本</span>
+                    <div>
+                        <button onclick="addTxt()" class="txt xiaoshou"><img src="resources/jmap/images/txt.png"></button>
+                    </div>
+                </li>
+                <li>
+                    <span id="tool_label_clear">清除</span>
+                    <div>
+                        <button onclick="clearDraw(1)" class="delete xiaoshou"><img src="resources/jmap/images/delete.png">
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="menu menu3">
+            <p class="menu_title" id="tool_other">其他</p>
+            <table style="width: 100%;">
+                <tr>
+                    <td id="tool_label_download">下载</td>
+                    <td>
+                        <button id="downloadMapBtn" class="xiaoshou"><img src="resources/jmap/images/download.png"></button>
+                    </td>
+                    <td id="tool_label_jiucuo">纠错</td>
+                    <td>
+                        <button id="correctingBtn" class="xiaoshou"><img src="resources/jmap/images/wrong.png"></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</nav>
+<!--备案号-->
+<div class="record">&copy;沪交ICP备20180217</div>
+    <script src="resources/jmap/jmap.js?v=91aafb64e4b719a1b9f44d28c867767b"></script>
+    <script src="resources/jmap/tab1.js?v=6c27f5adf033ad6ba5c2778d6591b1c"></script>
+    <script src="resources/jmap/tab2.js?v=9802e6b848b5419fa839d046663a8a5e"></script>
+    <script src="resources/jmap/tool.js?v=65cf30f05201fe66966815103697f1d0"></script>
+    <script src="resources/jmap/hanshujia.js?v=bab1be73b91beb5ec34b36c7bdde23b"></script>
+    <script src="resources/jmap/xiaoqin.js?v=ad7e40a0a47e8c577da4f81eb25d5cce"></script>
+</body>
+</html>

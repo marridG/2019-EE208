@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!--STATUS OK-->
+<html>
+
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="referrer" content="always" />
+<meta name="description" content="贺贤土的词条图片">
+<title>贺贤土图片_百度百科</title>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="icon" sizes="any" mask href="//www.baidu.com/img/baidu.svg">
+
+<meta name="keywords" content="贺贤土 贺贤土_图片 百度百科 百科 baike 词条图片">
+<meta name="image" content="https://bkssl.bdimg.com/cms/static/baike.png">
+<meta itemprop="image" content="https://bkssl.bdimg.com/cms/static/baike.png">
+
+<!--[if lte IE 9]>
+<script>
+    (function() {
+      var e = "abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(","),
+        i = e.length;
+      while (i--) {
+        document.createElement(e[i]);
+      }
+
+      window.console = window.console || {};
+      var f = ['log', 'info', 'warning', 'error', 'clear'];
+      var l = f.length;
+      while(l--) {
+        window.console[f[l]] = function () {};
+      }
+    })();
+  </script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-common/pkg/wiki-common-base_9a9fb54.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-common/widget/component/userbar-n/userbar-n_2890903.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-common/widget/lib/larkplayer/larkplayer_981c735.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-common/widget/lib/webuploader/webuploader_08d9db4.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-album/pkg/wiki-album-picture_bca8f93.css"/>    
+</head>
+<body class="w-small">
+
+
+<script>
+        var imageResize = function(event) {
+            var picture = document.getElementById('imgPicture');
+            var parent = document.getElementById('picture');
+            var pHeight = document.body.clientHeight - 102;
+            parent.style.height = pHeight + 'px';
+            var rWidth = picture.width,
+                rHeight = picture.height,
+                pWidth = parent.offsetWidth;
+
+                var rateW = rWidth / pWidth,
+                    rateH = rHeight / pHeight;
+                var w = rWidth,
+                    h = rHeight;
+
+                if (rateW > 1 || rateH > 1) {
+                    if (rateW > rateH) {
+                        w = pWidth;
+                        h = rHeight / rateW;
+                    } else {
+                        h = pHeight;
+                        w = rWidth / rateH;
+                    }
+                }
+                        
+            picture.style.width = w + 'px';
+            picture.style.height = h + 'px';
+            picture.style.marginTop = (pHeight - h) / 2 + 'px';
+            picture.style.visibility = 'visible';
+        };
+
+        // 以下代码的功能是：在页面加载前，判断url中的对应值是否等于hash值，如不等，则改变url重新加载
+        // 添加代码原因：
+        //     1) 之前的代码逻辑是：url会具体指定到某张图片，前端在｀切换相册｀时，使用ajax获取数据，并不断更新hash值，但当用户
+        //        ｀刷新页面｀或｀点击返回词条按钮｀然后再｀点击浏览器后退键｀时，uri中的url和hash值不同，源代码会出现bug,导致
+        //        '上／下一图册'，'向上／下箭头'点击无效（具体原因请view代码）
+        //     2) hash值的使用无意义，页面刷新后并不能让用户回到之前访问的图片/图册
+        // 故作此修改。
+        // 个人认为比较合适的解决方法是：
+        //     1）图册页的图片数据是后端同步打过来的。在词条页面中，图册url不要具体到某张图片，到图册即可，由前端使用hash值加上
+        //        smarty的方法来控制具体到哪张图片，在切换图册时，刷新浏览器，改变url。
+        //     2) 图册页不需要同步的图片数据，全部由前端根据uri利用ajax获取。
+        // COMMENT BY YUHUI
+
+
+        //在此处不知道怎么使用require，所以自己写了一个将hash值转换为对象的函数
+        //另外，在 wiki-common:widget/util/url.js 下有url相关函数
+        //eg: hashStr = '#aid=19973219&pic=f7' => hashObj = {aid: '19973219', pic: 'f7'};
+        //COMMENT BY YUHUI
+        function makeHashIntoObj (hashStr) {
+            if (hashStr[0] === '#') {
+                hashStr = hashStr.substr(1);
+            }
+            var hashObj = {};
+            var hashArr = hashStr.split('&');
+            var tempArr = [];
+            for (var i = 0; i < hashArr.length; i++) {
+                tempArr = hashArr[i].split('=');
+                hashObj[tempArr[0]] = tempArr[1];
+            }
+            return hashObj;
+        }
+        // locationArr = ['', 'pic', $lemmaTitle, $newLemmaId, albumId, picSign];
+        var locationArr = window.location.pathname.split('/');
+        var hashObj = makeHashIntoObj(window.location.hash);
+        var picSign = locationArr[locationArr.length - 1];
+        var albumId = locationArr[locationArr.length - 2];
+        var picSignInHash = hashObj['pic'];
+        var albumIdInHash = hashObj['aid'];
+        if (!!picSignInHash && !!albumIdInHash && !!picSign && !!albumId) {
+            if (picSign != picSignInHash || albumId != albumIdInHash) {
+                locationArr[locationArr.length - 1] = picSignInHash;
+                locationArr[locationArr.length - 2] = albumIdInHash;
+                window.location.pathname = locationArr.join('/');
+            }
+        }
+    </script>
+
+
+<div id="picture-dialog" class="picture-dialog">
+<div class="header">
+<a class="logo" target="_blank" href="/">
+<span class="cmn-baike-logo white"><em class="cmn-icon cmn-icons cmn-icons_logo-bai"></em><em class="cmn-icon cmn-icons cmn-icons_logo-du"></em><em class="cmn-icon cmn-icons cmn-icons_logo-baike"></em></span>
+</a>
+<div class="breadcrumb">
+<a target="_blank" class="album-name" href="/pic/%E8%B4%BA%E8%B4%A4%E5%9C%9F/840065">贺贤土图册</a>&nbsp;>&nbsp;<span class="album-desc">词条图片</span>
+</div>
+<div style="clear: both"></div>
+</div>
+<div class="thumbnail" style="z-index: 2; width: 80px; top: 50%; margin-top: -269.5px; right: 12.5%; margin-right: -80px">
+<a class="prev-album" data-album="25270192"></a>
+<div class="pic-slider">
+<div class="prev-pic"></div>
+<div class="pic-scroller">
+<div class="pic-list">
+
+<a class="pic-item selected" title="" data-index="0" data-sign="9213b07eca8065389b9d52ff99dda144ac3482e3" href="/pic/%E8%B4%BA%E8%B4%A4%E5%9C%9F/840065/0/9213b07eca8065389b9d52ff99dda144ac3482e3">
+<img src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/h%3D160/sign=1d59a0fb6cd0f703f9b291da38fb5148/9213b07eca8065389b9d52ff99dda144ac3482e3.jpg" alt="" style="display: block;width:80px;height:106px;top:0px;left:0px;">
+<div class="seleced-cover"></div>
+</a>
+
+<a class="pic-item " title="爱德华·泰勒奖证书" data-index="1" data-sign="279759ee3d6d55fbf7dea22262224f4a20a4dd9e" href="/pic/%E8%B4%BA%E8%B4%A4%E5%9C%9F/840065/0/279759ee3d6d55fbf7dea22262224f4a20a4dd9e">
+<img src="https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/h%3D160/sign=b2134ef776310a55db24daf287454387/279759ee3d6d55fbf7dea22262224f4a20a4dd9e.jpg" alt="爱德华·泰勒奖证书" style="display: block;width:80px;height:107px;top:0px;left:0px;">
+</a>
+</div>
+</div>
+<div class="next-pic"></div>
+</div>
+<a class="next-album" data-album="25269229" title="贺贤土">
+<img src="https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D290/sign=f57b05801e38534388cf8028a312b01f/9c16fdfaaf51f3de74de4f889aeef01f3b2979ea.jpg" alt="贺贤土"/>
+<span>下一图册</span>
+</a>
+<div class="bottom"></div>
+</div>
+<div class="picture-wrap">
+
+<div id="picture" class="picture" style="left:14.5%; top:62px; width:71%; height:600px">
+<img id="imgPicture" src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=9d1f70c5e5c4b7452099bf44ae957572/9213b07eca8065389b9d52ff99dda144ac3482e3.jpg" onload="imageResize()" style="visibility:hidden"/>
+<div id="picture-msg-tip" class="msg-tip yahei" style="display:none">
+<a class="close"></a>
+<span class="msg-tip-text"></span>
+</div>
+</div>
+</div>
+<div class="picture-footer yahei">
+<div class="footer-wrap" style="width:1000px; left:50%; margin-left:-500px">
+<div class="description">
+<span class="number">
+<span style="color:#b9bbbf">1</span>/<span style="color:#427cb8">2</span>
+</span>
+<span class="text"></span>
+</div>
+<a class="tool-button doubt j-doubt-link" target="_blank" href="/wikiui/doubt?lemmaId=840065&picUrl=https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%253Dbaike80%252C5%252C5%252C80%252C26/sign%3D9d1f70c5e5c4b7452099bf44ae957572/9213b07eca8065389b9d52ff99dda144ac3482e3.jpg" nslog-type="10300106">质疑</a>
+<a class="tool-button info">信息</a>
+
+<a class="tool-button origin" target="_blanck" href="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=9d1f70c5e5c4b7452099bf44ae957572/9213b07eca8065389b9d52ff99dda144ac3482e3.jpg">原图</a>
+<div class="info-panel">
+<div class="image-size">
+<span>图片尺寸</span>
+<span class="size">450X600</span>
+</div>
+<div class="album-info">
+<span class="from-text">来自</span>
+<span class="album-text">
+<a class="lemma-name" target="_blank" href="/item/%E8%B4%BA%E8%B4%A4%E5%9C%9F/840065">
+贺贤土词条</a>-<a class="album-name" target="_blank" href="/pic/%E8%B4%BA%E8%B4%A4%E5%9C%9F/840065">词条图片</a>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+    //科学百科任务的词条所有提交,需要自动审核对其做忽略处理. 所以删除图片/绿色通道等规则也不适用于这类词条, 所以把它置顶处理
+    <script>
+      window['__abbaidu_2020_subidgetf'] = function () {
+          var subid = 01000000;
+          return subid;
+      };
+    </script>
+<script async src="https://dlswbr.baidu.com/heicha/mw/abclite-2020-s.js"></script>
+
+</body><script type="text/javascript" src="https://bkssl.bdimg.com/static/wiki-common/js/mod_4302fe0.js"></script>
+<script type="text/javascript" src="https://bkssl.bdimg.com/static/wiki-common/pkg/wiki-common-base_0ce23c8.js"></script>
+<script type="text/javascript" src="https://bkssl.bdimg.com/static/wiki-album/pkg/wiki-album-picture_458b528.js"></script>
+<script type="text/javascript">!function(){        var $ = require('wiki-common:widget/lib/jquery/jquery.js'),
+            urlExt = require('wiki-common:widget/util/url.js'),
+            nslog = require("wiki-common:widget/component/nslog/nslog.js"),
+            PictureDialog = require('wiki-album:widget/picture/pictureDialog/pictureDialog.js');
+        
+        // 百科质疑，增加质疑入口--当前页面链接
+        // var doubtLink = $('.j-doubt-link').attr('href') + '&albumUrl=' + window.location.href;
+        // $('.j-doubt-link').attr('href', doubtLink);
+
+
+        var hash = window.location.hash.substr(1);
+        var albumId = urlExt.getQuery('aid', hash);
+        var pictureSign = urlExt.getQuery('pic', hash);
+        var useHash = !!albumId && albumId != '' && !!pictureSign && pictureSign != '';
+        albumId = useHash ? albumId : '0';
+        pictureSign = useHash ? pictureSign : '9213b07eca8065389b9d52ff99dda144ac3482e3';
+
+        var pageAlbumId = "0";
+        var pagePicSign = "9213b07eca8065389b9d52ff99dda144ac3482e3";
+
+        var useHash = (!!albumId && albumId != "") && (!!pictureSign && pictureSign != "" && pictureSign != pagePicSign);
+        if (useHash) {
+                            window.location.href = '/pic/%E8%B4%BA%E8%B4%A4%E5%9C%9F/840065/' +albumId+ '/' + pictureSign;
+                    }
+
+        PictureDialog.getInstance().show({
+            albums: {"25269229":{"desc":"\u8d3a\u8d24\u571f","coverpic":"9c16fdfaaf51f3de74de4f889aeef01f3b2979ea","coverwidth":220,"coverheight":178,"albumTag":"","coverurl":"https:\/\/gss0.bdstatic.com\/94o3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=f57b05801e38534388cf8028a312b01f\/9c16fdfaaf51f3de74de4f889aeef01f3b2979ea.jpg","total":8,"sign":25269229,"next":25270192,"prev":0},"25270192":{"desc":"\u8d3a\u8d24\u571f \u8bbf\u8c08 \u6f14\u8bb2","coverpic":"0dd7912397dda144365c9a5ebcb7d0a20df48681","coverwidth":220,"coverheight":146,"albumTag":"","coverurl":"https:\/\/gss3.bdstatic.com\/-Po3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=bbcc85ff07f79052eb1f40373cf2d738\/0dd7912397dda144365c9a5ebcb7d0a20df48681.jpg","total":4,"prev":25269229,"sign":25270192,"next":0},"0":{"desc":"\u8bcd\u6761\u56fe\u7247","coverpic":"9213b07eca8065389b9d52ff99dda144ac3482e3","coverwidth":450,"coverheight":600,"pictures":[{"desc":"","width":450,"height":600,"owner":"huangwujun2010","src":"9213b07eca8065389b9d52ff99dda144ac3482e3","picId":63833328279,"type":{"view":220,"albumview":160,"oriWithWater":601,"litterImage":200,"authModule":150,"view_new":209,"view_card":268},"sizes":{"220":{"url":"https:\/\/gss3.bdstatic.com\/7Po3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D220\/sign=25b180ca63224f4a5399741139f69044\/9213b07eca8065389b9d52ff99dda144ac3482e3.jpg","width":165,"height":220,"size":220},"160":{"url":"https:\/\/gss3.bdstatic.com\/7Po3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D160\/sign=d800e378482309f7e76fa914420f0c39\/9213b07eca8065389b9d52ff99dda144ac3482e3.jpg","width":160,"height":213,"size":160},"601":{"url":"https:\/\/gss3.bdstatic.com\/7Po3dSag_xI4khGkpoWK1HF6hhy\/baike\/c0%3Dbaike80%2C5%2C5%2C80%2C26\/sign=9d1f70c5e5c4b7452099bf44ae957572\/9213b07eca8065389b9d52ff99dda144ac3482e3.jpg","width":450,"height":600,"size":601},"200":{"url":"https:\/\/gss3.bdstatic.com\/7Po3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D200\/sign=25b180ca63224f4a5399741339f69044\/9213b07eca8065389b9d52ff99dda144ac3482e3.jpg","width":150,"height":200,"size":200},"150":{"url":"https:\/\/gss3.bdstatic.com\/7Po3dSag_xI4khGkpoWK1HF6hhy\/baike\/h%3D160\/sign=1d59a0fb6cd0f703f9b291da38fb5148\/9213b07eca8065389b9d52ff99dda144ac3482e3.jpg","width":120,"height":160,"size":150},"209":{"url":"https:\/\/gss3.bdstatic.com\/7Po3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D209\/sign=9d0c31c3b0096b638119595035328733\/9213b07eca8065389b9d52ff99dda144ac3482e3.jpg","width":209,"height":278,"size":209},"268":{"url":"https:\/\/gss3.bdstatic.com\/7Po3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D268\/sign=ec81c99afc1fbe091c5ec41253610c30\/9213b07eca8065389b9d52ff99dda144ac3482e3.jpg","width":268,"height":357,"size":268}},"aid":0,"albumDesc":"\u8bcd\u6761\u56fe\u7247","index":1},{"desc":"\u7231\u5fb7\u534e\u00b7\u6cf0\u52d2\u5956\u8bc1\u4e66","width":600,"height":801,"owner":"","src":"279759ee3d6d55fbf7dea22262224f4a20a4dd9e","picId":65311679813,"type":{"view":220,"albumview":160,"oriWithWater":802,"litterImage":200,"authModule":150,"view_new":209,"view_card":268},"sizes":{"220":{"url":"https:\/\/gss1.bdstatic.com\/-vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D220\/sign=fc24aba4f903738dda4a0b20831bb073\/279759ee3d6d55fbf7dea22262224f4a20a4dd9e.jpg","width":164,"height":220,"size":220},"160":{"url":"https:\/\/gss1.bdstatic.com\/-vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D160\/sign=36a848433612b31bc76cc92fb6183674\/279759ee3d6d55fbf7dea22262224f4a20a4dd9e.jpg","width":160,"height":213,"size":160},"802":{"url":"https:\/\/gss1.bdstatic.com\/-vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/c0%3Dbaike92%2C5%2C5%2C92%2C30\/sign=86d81d379d45d688b70fbaf6c5ab167b\/279759ee3d6d55fbf7dea22262224f4a20a4dd9e.jpg","width":600,"height":801,"size":802},"200":{"url":"https:\/\/gss1.bdstatic.com\/-vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D200\/sign=fc24aba4f903738dda4a0b22831bb073\/279759ee3d6d55fbf7dea22262224f4a20a4dd9e.jpg","width":149,"height":200,"size":200},"150":{"url":"https:\/\/gss1.bdstatic.com\/-vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/h%3D160\/sign=b2134ef776310a55db24daf287454387\/279759ee3d6d55fbf7dea22262224f4a20a4dd9e.jpg","width":119,"height":160,"size":150},"209":{"url":"https:\/\/gss1.bdstatic.com\/-vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D209\/sign=6b566ae0bc1c8701d6b6b5e61e7f9e6e\/279759ee3d6d55fbf7dea22262224f4a20a4dd9e.jpg","width":209,"height":279,"size":209},"268":{"url":"https:\/\/gss1.bdstatic.com\/-vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D268\/sign=0fc8cf4784d4b31cf03c93bdbfd6276f\/279759ee3d6d55fbf7dea22262224f4a20a4dd9e.jpg","width":268,"height":357,"size":268}},"aid":0,"albumDesc":"\u8bcd\u6761\u56fe\u7247","index":2}],"coverurl":"https:\/\/gss3.bdstatic.com\/7Po3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=25b180ca63224f4a5399741a39f69044\/9213b07eca8065389b9d52ff99dda144ac3482e3.jpg","total":2,"prev":25270192,"sign":0,"next":25269229}},
+            lemmaId: '45960',
+            subLemmaId: '45960',
+            lemmaTitle: '贺贤土',
+            newLemmaId: '840065',
+            versionId: '',
+            commitId: '',
+            albumId: albumId,
+            picPageType: '0',
+            pictureSign: pictureSign,
+            lemmaName: '贺贤土',
+            crumbClick: function() {
+                nslog(10000201);
+            },
+            pictureChanged: function(albumId, picSign) {
+                window.location.hash = 'aid=' + albumId + '&pic=' + picSign;
+                // 百科质疑入口变化逻辑
+                var doubtLink = '/wikiui/doubt?lemmaId='+ '840065'
+                    + '&fr=albumPicture'
+                    + '&picUrl=' + $('.picture-footer .origin').attr('href')
+                    + '&albumUrl=' + window.location.origin + window.location.pathname;
+
+                $('.j-doubt-link').attr('href', doubtLink);
+            }
+        });    }();
+!function(){      require('wiki-common:widget/component/psLink/psLink');
+    }();</script></html>

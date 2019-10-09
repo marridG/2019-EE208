@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>孔海南-上海交通大学“不忘初心,牢记使命”主题教育</title>
+<meta name="description" content="上海交通大学“不忘初心,牢记使命”主题教育" />
+<meta name="keywords" content="上海交通大学“不忘初心,牢记使命”主题教育" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Bootstrap -->    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+<link type="text/css" rel="stylesheet" href="/css/css.css" />
+<link rel="stylesheet" href="/css/animate.css">
+<script src="/js/jquery.min.js"></script>
+<!--轮转焦点图-->
+<script src="/js/jquery.hiSlider.js"></script>
+<link rel="stylesheet" href="/css/jquery.hiSlider.css">
+
+<!-- 图片滚动 --> 
+<link href="/css/owl.carousel.css" type="text/css" rel="stylesheet" />
+<link href="/css/owl.theme.css" type="text/css" rel="stylesheet" />
+<!-- 图片滚动 --> 
+<script type="text/javascript" src="/js/owl.carousel.js"></script>
+<script type="text/javascript">
+    function search_validate(){
+        if(document.getElementById('search_keywords').value == ''){
+            alert('请输入搜索关键字');
+            return false;
+        }
+    }
+</script> 
+</head>
+<body class="bj_b"><div class="top" id="top_nav">
+    <div class="main">
+        <a href="/" class="logo"></a>     
+        <span class="menu2" id="menu2"><a href="javascript:void(0)">&nbsp;</a></span>   
+        <div id=navk>
+                        <ul class="cd_t">
+                  
+                <li><a href="https://www.sjtu.edu.cn" target="_blank">交大首页</a></li>
+                                <li class="l_x">|</li>
+                                  
+                <li><a href="https://news.sjtu.edu.cn" target="_blank">交大新闻网</a></li>
+                                <li class="l_x">|</li>
+                                  
+                <li><a href="http://jd.sjtu.edu.cn/web/JDJDW/2960001.htm" target="_blank">焦点网</a></li>
+                                            </ul>
+            <span class="ss">
+                <form method="get" action="https://sjtuztjy.sjtu.edu.cn/active/search.html" onsubmit="return search_validate();">
+                <div class="txtk">
+                    <input type="text" id="search_keywords" name="search_keywords" class="form-control" placeholder="">
+                    <button class="an_ss" type="submit"></button>
+                </div>
+                </form>
+            </span>
+            <ul class="menu">
+                <li><a href="/" class="dbt">首页</a></li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/zyjs.html" class="dbt ">中央精神</a>
+                                        <dl>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/zy_file.html" >中央文件</a></dd>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/zy_study.html" >学习资料</a></dd>
+                                            </dl>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/news.html" class="dbt ">新闻动态</a>
+                                        <dl>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/jdyw.html" >交大要闻</a></dd>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/jcdt.html" >基层动态</a></dd>
+                                            </dl>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/xjdx.html" class="dbt on">先进典型</a>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/mtgz.html" class="dbt ">媒体关注</a>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/slhj.html" class="dbt ">史料汇集</a>
+                                    </li>
+                            </ul>
+            <div class="clear"></div>
+        </div> 
+    </div>  
+</div>
+<div class="top_jg"></div>
+<SCRIPT type=text/javascript>  
+$(document).ready(function() {
+    var pk=document.body.clientWidth;
+    if(pk<1200){
+        //手机菜单
+        $("#menu2").click(function(){
+            if($("#navk").css("display")=="none"){
+                $(this).find("a").addClass("on");
+                $("#navk").slideDown("slow");       
+            }
+            else{
+                $(this).find("a").removeClass("on");
+                $("#navk").slideUp("slow");     
+            }
+        });  
+    }
+    else{
+        $(".menu li").hover(function() {
+            $(this).find("dl").css("display","block");
+        },function(){
+            
+            $(this).find("dl").css("display","none");
+        });
+
+        //向下滚动顶部缩小
+        $.fn.smartFloat = function() {
+            var position = function(element) {
+                var top = element.position().top, pos = element.css("position");
+                $(window).scroll(function() {
+                    var scrolls = $(this).scrollTop();
+                    if (scrolls > top) {
+                        $("#top_nav").addClass("on");
+                        if (window.XMLHttpRequest) {
+                            element.css({
+                                position: "fixed",
+                                //background:"#efefef",
+                                top: 0
+                            });
+                        } else {
+                            element.css({
+                                top: scrolls
+                            });
+                        }
+                    }else {
+                        $("#top_nav").removeClass("on");
+                        element.css({
+                            position: pos,
+                            //background:"transparent",
+                            top: top
+                        });
+                    }
+                });
+            };
+            return $(this).each(function() {
+                position($(this));
+            });
+
+        };
+        $("#top_nav").smartFloat();
+        //向下滚动顶部缩小 end
+    };
+});  
+//-->  
+</SCRIPT>
+<div class="ban"><img src="/upload/image/20190924/20190924141304.jpg" ></div>
+<div class="dqwz">
+ 	<div class="main wow fadeInUp">
+  		<a href="/">首页</a> &gt; <a href="https://sjtuztjy.sjtu.edu.cn/xjdx.html">先进典型</a> 	</div>
+</div>
+<div class="nyk">
+	 	<div class="main">
+   		<div class="zt_snr">
+     		<div class="sbt wow fadeInUp">孔海南</div>
+     		<div class="fbt wow fadeInUp">交大版“老人与海”的故事：把论文写在祖国大地上</div>
+     		<div class="xx wow fadeInUp"></div>
+    		<div class="ssj news_ssj wow fadeInUp">日期：2019-09-25</div>
+    		<div class="snr wow fadeInUp">
+			    <p style="text-align: center;"><img alt="" src="/upload/image/20190925/20190925105238.jpg" style="width: 600px;" /></p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="" src="/upload/image/20190925/20190925105252.jpg" style="width: 600px;" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p>　　日前，教育部公布首批&ldquo;全国高校黄大年式教师团队&rdquo;，上海交通大学环境学院环境学院孔海南教授带领的湖泊富营养化治理教师团队成功入选。他们十五年如一日，扎根在银苍玉洱畔，守护洱海水清月明。有人说，这是一个科研团队，在做一些科研项目，取得了一批科研成果。但是，你不知道的是，在这个故事的背后，是一个个年轻的身影，一趟趟奔驰的列车，是一瓶瓶藻华的水样，一道道山川和河脊。所有的这些，都是一堂堂最生动的教学实践课，而这课堂就在治理现场。<br />
+&nbsp;</p>
+
+<p style="text-align: center;"><strong>把论文写在祖国大地上，守护洱海水清月明</strong><br />
+&nbsp;</p>
+
+<p>　　孔海南是上海交通大学环境科学与工程学院教授。不同于教室和实验室平静的教学科研生活，遥远的云南大理&mdash;&mdash;洱海边是孔海南工作的一线，是他用心守护的一片水域。他主持的项目所取得的成果&mdash;&mdash;富营养化初期湖泊（洱海）水污染控制与生态修复关键技术&mdash;&mdash;已经被列为水专项重大标志性成果。<br />
+&nbsp;</p>
+
+<p>　　洱海作为云南省第二大淡水湖、中国第七大淡水湖，以其丰富的物产和清洁的水源哺育着大理一代又一代人，被大理老百姓亲切地称为&ldquo;母亲湖&rdquo;。然而，从上世纪90年代开始，由于长期污染导致湖水富营养化，洱海两次大规模暴发蓝藻，湖水的透明度骤降，水质也一度下降到IV类。当地老百姓回忆说，把手伸进湖水，出来满手绿，坐在家里就能闻到随风飘来的湖水臭味。曾经风光旖旎的洱海水环境的恶化引起了国家的高度关注，洱海的保护被纳入了国家水体污染控制与治理科技重大专项。在这场保卫洱海的战役中，正是孔海南教授和他的团队联合中国环境科学研究院、中国科学院水生生物研究所以及中国农科院等单位担挑起了这副重担。<br />
+&nbsp;</p>
+
+<p>　　接手项目后，多年海外求学和科研工作的经历让孔海南认识到，环境治理没有小事，做事情要面对真正的需求。其实，洱海问题的根源&mdash;&mdash;面源污染正是一些散落在洱海周边的&ldquo;小&rdquo;污染积累起来的。大理市洱海沿湖及流域绝大多数村落、旅游服务场所几乎没有任何污水处理设施，这些污染是导致洱海富营养化最重要的原因之一，因为污染源分布面积广，治理起来非常困难。<br />
+&nbsp;</p>
+
+<p>　　针对这种情况，2003年，孔海南教授将土壤净化槽技术带到了洱海边，由此开始了自己在大理治污的第一步。孔教授的土壤净化槽湿润技术将污水处理为一级B类水标准排入洱海，一套污水处理系统每天能处理污水250吨。&ldquo;这套污水处理系统可神奇了！能把整个营头村的生活污水变为净水，然后再排入洱海！仅从外表根本看不出什么名堂，其实它里面的道道可多了。&rdquo;大理市挖色镇挖色村委会营头自然村的污水处理系统管理员赵庆生曾这样向前来采访的媒体描述。经过多年的推广和积累，30套示范性污水处理系统遍布洱海沿湖十镇，这为洱海项目的顺利实施打下了坚实的基础。<br />
+&nbsp;</p>
+
+<p>　　依托&ldquo;十一五&rdquo;、&ldquo;十二五&rdquo;水专项洱海项目以及西湖、巢湖等子课题，团队共有师生1000余人次驻守大理等地，累计行程达500多万公里。目前常年有20余名师生在洱海、西湖、巢湖进行实地科研，共完成野外样品采集30000余次，分析水质指标160000余次。以孔海南教授为代表的教师团队，以科学研究为基础、以工程研究为手段，以现场示范为验证，在传授知识的同时，全面培养学生的工程能力和思考能力。更为重要的是，教学团队以德立身、以德立学、以德施教，注重学生的品德教育；身正为范，培养了学生的奉献意识和家国情怀。　　　　<br />
+&nbsp;</p>
+
+<p style="text-align: center;"><strong>科研老兵：用学者的远见和智慧呵护水域环境</strong><br />
+&nbsp;</p>
+
+<p>　　在进一步熟悉洱海之后，孔海南教授认识到，要彻底改变洱海的面貌，就必须改变洱海周边地区的经济发展方式。上世纪80年代以来，对洱海资源的过度利用打破了洱海的自然生态平衡。在洱海最主要的水源地洱源县，县南部农户90年代以来大面积改种大蒜等经济作物带来了污染源的迅速增加，而流域近14万头散养奶牛也带来了相当于300万人口的污染。孔海南和他的团队面对的不仅仅是环境污染问题，而是一个复杂的社会、经济问题。<br />
+&nbsp;</p>
+
+<p>　　&ldquo;从&lsquo;并重&rsquo;到&lsquo;友好&rsquo;的转变，是人与自然和谐相处，合理利用自然资源保护环境的根本性转变。&rdquo;课题负责人之一&mdash;&mdash;上海交通大学王欣泽副教授向记者介绍，&ldquo;孔教授对于洱海项目的总体设计，思路很清晰。环境治理和保护是项系统工程。要以人为本，更要尊重自然，既要和社会&lsquo;友好&rsquo;，更要和自然环境&lsquo;友好&rsquo;。两者的关系不是并列，而是和谐统一。&rdquo;这种&ldquo;友好&rdquo;体现在洱海项目的每一部分设计上，从水源地到入湖河流，从湖滨到湖内，课题设置都围绕着&ldquo;友好&rdquo;二字，环境的治理技术也大多采用了生态治理的方式。不仅如此，团队也认识到，环境治理不能一直靠政府输血，他们用项目中的一项课题促进在环境治理的同时提升当地的经济效益。孔教授正是这样用学者的远见和智慧呵护着洱海的水域环境。<br />
+&nbsp;</p>
+
+<p>　　经济建设的飞速推进，环保意识和举措却没能及时跟上，中国的七大重点流域面临大规模污染，水环境日益恶化。孔海南联合其他的专家一起，历经数年的调研汇报，才直接推动了水专项的落地。在几个水污染&ldquo;重灾区&rdquo;的河湖中，孔海南被推选为洱海项目的负责人，环保部希望他用较快的时间将洱海治理做成一个典范，振奋民心。有家族性心脏病史的孔海南没有退却，毅然接受了任务。<br />
+&nbsp;</p>
+
+<p>　　&ldquo;除了在北京和国外参加重要的项目和学术会议，孔教授几乎所有的时间都在大理，在洱海边。当学校有课时，他也是每周在上海和大理间往返。我们项目组很多人也都如此。&rdquo;孔海南的同事说。然而，孔海南患有较严重的心脏疾病，海拔近2000米的高原对他来说是个严峻挑战。尚榆民等人也记忆犹新，2006年，当孔海南第一次和大理州政府官员讨论洱海治理的理念和技术思路时，就中途昏倒了。 &ldquo;当时大家非常吃惊，马上派人派车把我送回来了。我的家人都不知道。我想如果由于身体原因我不能承担洱海项目，估计年轻老师也很难承担起这个项目。另外，我总觉得这是自己的最后一次机会，再困难也不愿放弃。&rdquo;孔海南多次往返大理后发现，&ldquo;我不能频繁地从高原到平原，从平原到高原，这也是我在大理一年要呆上200多天的原因，我的身体不适合上下跑。&rdquo;<br />
+&nbsp;</p>
+
+<p>　　2012年，孔海南的心脏病变得严重了，原本一年发病三四次，2012年6、7月后就经常发病。尽管医生多次要求其住院治疗观察，但孔海南一直坚持到9月洱海&ldquo;十一五&rdquo;水专项课题验收结束后，才被紧急送回上海住院治疗，进行了两次大手术。手术后，孔海南身体情况还不是很好，但他依然惦记着他的洱海项目。当他得知大理州即将开展新一轮的洱海治理工作时，于是再次奔赴大理，为当地300名领导和治理人员开展有关湖泊治理的讲座。<br />
+&nbsp;</p>
+
+<p>　　就这样，孔海南和他的团队联合中国环科院、中科院水生所、中国农科院等几十家单位，用10年的积累、5年的实践、3年的攻坚获得了丰硕的治理成果，使洱海的水质从浊到清，连续3年保持在国家III类水质标准。大理洱海&mdash;&mdash;曾经被过度开发不堪重负的美丽湖泊，正在逐步重现往日大理&ldquo;母亲湖&rdquo;的风采。&nbsp;<br />
+&nbsp;</p>
+
+<p style="text-align: center;"><strong>&ldquo;黄大年式教师团队&rdquo;， 不是一个人在战斗</strong><br />
+&nbsp;</p>
+
+<p>　　在这场&ldquo;洱海保卫战&rdquo;中，孔海南不是一个人，他有一支跟着他转战南北的年轻队伍。<br />
+&nbsp;</p>
+
+<p>　　环境学院湖泊富营养化治理教学实践团队，由讲席教授孔海南，教授吴德意，研究员王欣泽、何圣兵，特别研究员黄荣振，副教授林燕等7人组成。团队围绕河湖富营养化治理，开设了《水体富营养化控制》《水处理工程课程设计》《生态设计与工程》（全英文）《湿地生态》等课程。用一流的科研反哺一流的教学，让学生们亲临现场实践体验，是团队教学的特色；把个人的发展和国家民族的需要结合起来，到祖国最需要的地方建功立业，是团队传承的信仰。<br />
+&nbsp;</p>
+
+<p>　　这支队伍在他的带领下，有着很强的凝聚力和战斗力，一个个项目完成验收是他们最大的欣慰，一个个新的重大项目的委托是对他们最好的肯定。在他的言传身教下，这支队伍继承了他严谨治学的态度和脚踏实地、勇于奉献的精神。他是领路人、是人生导师。在他的支持下，他团队的每位博士生和青年教师都获得赴海外一流科研机构开展研究工作的机会。此外，他还给年轻人创造独立开展科研工作的机会，给任务、压担子，让他们参与国家重大项目，在项目研究工作中锻炼自我。<br />
+&nbsp;</p>
+
+<p>　　在他的培养下，先后有三位教师晋升为教授，两位晋升为副教授，其中2位荣获2011年新世纪优秀人才计划。他们现在都以课题负责人或子课题负责人的身份在不同的河湖流域承担着国家重大专项的研究工作，肩负起国家重大战略需求的重任。&nbsp;<br />
+&nbsp;</p>
+
+<p>　　经过孔教授及更多洱海&ldquo;守护者&rdquo;的不懈努力，如今，洱海已经改变了以往面貌，它的总体水质已连续3年保持在国家III类水质标准，成为我国目前保护最好的城市近郊湖泊之一。而孔海南也正是把全身心都投入到了洱海的治理上。&ldquo;除了在北京和国外参加重要的项目和学术会议，孔教授几乎所有的时间都在大理，在洱海边。在学校有课的时候，他也是每周在上海和大理之间往返。我们项目组的很多人也都如此。&rdquo;孔海南的同事向记者介绍。孔海南和项目组坚守在洱海保护的第一线，夜以继日地为洱海水质的恢复殚精竭虑，因为他们相信，只有坚守在第一线才能得到更准确的信息，才能真正因地制宜采取合理措施和做出合理规划。<br />
+&nbsp;</p>
+
+<p>　　近20年来，在经济快速增长、资源能源消耗大幅增加的情况下，我国污染排放强度大、负荷高，主要污染物排放量超过受纳水体的环境容量。湖泊水库富营养化问题严重，形成了以氮、磷污染为基本特征的湖泊水环境问题。2006年的监测数据显示，27个国控重点湖(库)中，Ⅴ类水质的湖(库)5个，占19％；劣Ⅴ类水质湖(库)13个，占48％。太湖、滇池和巢湖处于中度富营养状态。<br />
+&nbsp;</p>
+
+<p>　　因此，《国家中长期科学和技术发展规划纲要(2006~2020年)》提出设立&ldquo;水体污染控制与治理&rdquo;科技重大专项，希望籍此集中攻克一批节能减排迫切需要解决的水污染防治关键技术，构建我国流域水污染治理技术体系和水环境管理技术体系，为重点流域污染物减排、水质改善和饮用水安全保障提供强有力科技支撑。这是新中国成立以来投资最大的水污染治理科技项目。<br />
+&nbsp;</p>
+
+<p>　　回到魂牵梦绕的祖国后，孔海南有了更广阔施展才华的舞台。除了教学任务，一个课题接着一个课题，一个项目接着一个项目。他先后作为中方技术总负责人或中方技术负责人之一，从事过贵州省红枫湖水库富营养化抑制技术研究、上海苏州河重污染底泥无害化技术研究、太湖流域富营养化生物&mdash;生态抑制技术研究等工作；参与了&ldquo;十五&rdquo;期间水专项项目太湖水污染控制与水体修复技术及工程示范、湖网地区村镇面源污染防治技术及工程示范和深圳市城市河流水环境综合治理技术及工程示范等项目研究工作。还曾作为总设计师，负责钓鱼台国宾馆景观水域综合治理工程。<br />
+&nbsp;</p>
+
+<p>　　&ldquo;名字里带个&lsquo;海&rsquo;字，大半辈子都和水打交道了。&rdquo;孔海南曾经在课堂上这样风趣地介绍自己。正因为常年在第一线的积累，洱海治理所取得的成果极大地鼓舞了在长江、太湖等更大水域的治理工作，孔海南带领项目组对洱海绿色流域建设做出的全面系统规划也得到了广泛认可。作为学者，孔教授选择亲自奋战在环境治理第一线，水环境的治理是孔教授的事业，洱海的湖光山色时刻牵动着他的心。他和同事们还将在洱海边度过未来的无数日日夜夜，只为洱海的水更清、月更明。<br />
+&nbsp;</p>
+
+<p>　　2013年初以来，《人民日报》《科技日报》、中央电视台等国内主流媒体多次以 &ldquo;老人与海，孔海南的洱海情结&rdquo;&ldquo;孔海南洱海守护者&rdquo;&ldquo;为了洱海水清岸碧&rdquo;&ldquo;一切为了高原明珠&rdquo;&ldquo;心怀使命的洱海守护者&rdquo;为题报道了孔海南的相关事迹。2014年&ldquo;世界环境日&rdquo;，孔海南作为代表受邀出席了总理座谈会。2015年1月20日，习近平总书记来到云南大理洱海边的湾桥镇古生村了解洱海生态保护情况，他同当地干部合影后说：&ldquo;立此存照，过几年再来，希望水更干净清澈。&rdquo;<br />
+<br />
+&nbsp;</p>
+
+<p style="text-align: right;">作者：环境科学与工程学院<br />
+供稿单位：环境科学与工程学院 新闻中心</p>
+    		</div>
+    		<div class="sgd wow fadeInUp">
+				            	<a href="https://sjtuztjy.sjtu.edu.cn/xjdx/3032.html">下一条：钱学森</a>     			<a href="https://sjtuztjy.sjtu.edu.cn/xjdx.html" class="cd_fh">返回列表</a>
+     		</div>
+   		</div>
+  		<div class="clear"></div>
+ 	</div>
+</div>
+<script type="text/javascript" src="/js/wow.js"></script>
+<script>
+var wow = new WOW({
+    boxClass: 'wow',
+    animateClass: 'animated',
+    offset: 0,
+    mobile: true,
+    live: true
+});
+wow.init();
+</script>
+
+	<div class="foot">
+	 	<div class="main">
+	  		<div class="f1 wow fadeInUp" data-wow-delay=".1s">
+	  		沪ICP备05052060   沪举报中心   版权所有© 上海交通大学<br>  
+			地址：上海市东川路800号   邮编：200240   查号：86-21-54740000	  	</div>
+	  	<div class="f2 wow fadeInUp" data-wow-delay=".3s">
+	   		<span class="s1">相关链接</span>
+	   			   			   		<a href="https://www.sjtu.edu.cn" target="_blank">交大首页</a>
+	   			   		<b>|</b>
+	   			   			   		<a href="https://news.sjtu.edu.cn" target="_blank">交大新闻网</a>
+	   			   		<b>|</b>
+	   			   			   		<a href="http://jd.sjtu.edu.cn/web/JDJDW/2960001.htm" target="_blank">焦点网</a>
+	   			   			   	</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.fy1 a').each(function(){
+            if($(this).text()=='上一页' || $(this).text()=='下一页'){
+                $(this).addClass('cd_sx');
+            }
+        })
+    });
+</script>
+</body>
+</html>

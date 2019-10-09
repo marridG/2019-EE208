@@ -1,0 +1,989 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta Name="Keywords" content="上海交通大学,后勤,后勤保障中心,交大后勤">
+<meta Name="作者" content="泡泡,泡泡工作室,www.jdwaimai.cn"> 
+<meta Name="联系方式" content="lipao123@163.com">
+<LINK href="images/css.css" type=text/css rel=stylesheet>
+<script src="inc/Site.js"></script>
+<script src="images/div.js"></script>
+<script language='JavaScript'>
+<!-- 
+function killErrors() {
+return true;
+}
+window.onerror = killErrors;
+// -->
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0" background="images/t_bg.gif" onload="init();">
+
+<!--生成通知-->
+
+
+<iframe id="ifPage" width="405" height="225" style="position:absolute; visibility:visible; z-index:1" src="notice.asp" frameborder="0" border="0" scrolling="no"></iframe>
+<script language="javascript">
+var XX=0;
+var xstep=0;
+var delay_time=60;
+
+var YY=0;  
+var ch=0;
+var oh=0;
+var yon=0;
+
+var ns4=document.layers?1:0
+var ie=document.all?1:0
+var ns6=document.getElementById&&!document.all?1:0
+
+if(ie)
+{
+	XX =  4;
+	YY =  230;
+	document.getElementById('ifPage').style.top=YY;
+}
+else if (ns4)
+{
+	XX =  4;
+	YY =  230;
+	document.getElementById('ifPage').pageX=XX;
+	document.getElementById('ifPage').pageY=YY;
+	document.getElementById('ifPage').visibility="hidden";
+}
+else if (ns6)
+{
+	XX =  4;
+	YY =  230;
+	document.getElementById('ifPage').style.top=YY;
+}
+
+
+function reloc()
+{
+	if(yon==0)
+	{
+		YY=YY-xstep;
+	}
+	else
+	{
+		YY=YY+xstep;
+	}
+
+	if(ie)
+	{
+		ch=document.body.clientHeight;
+		oh=document.getElementById('ifPage').offsetHeight;
+	}
+	else if(ns4)
+	{
+		ch=window.innerHeight;
+		oh=document.getElementById('ifPage').clip.height;
+	}
+	else if(ns6)
+	{
+		ch=window.innerHeight
+		oh=document.getElementById("ifPage").offsetHeight
+	}
+		
+	if(YY<0)
+	{
+		yon=1;YY=0;
+	}
+
+	if(YY>=(ch-oh))
+	{
+		yon=0;YY=(ch-oh);
+	}
+
+	if(ie)
+	{
+		document.getElementById('ifPage').style.left=XX;
+		document.getElementById('ifPage').style.top=YY+document.body.scrollTop;
+	}
+	else if(ns4)
+	{
+		document.getElementById('ifPage').pageX=XX;
+		document.getElementById('ifPage').pageY=YY+window.pageYOffset;
+	}
+	else if(ns6)
+	{
+		document.getElementById("ifPage").style.left=XX
+		document.getElementById("ifPage").style.top=YY+window.pageYOffset
+	}
+}
+
+function onad()
+{
+	if(ns4)
+	document.getElementById('ifPage').visibility="visible";
+	loopfunc();
+}
+
+function loopfunc()
+{
+	reloc();
+	setTimeout('loopfunc()',delay_time);
+}
+
+if(ie||ns4||ns6)
+{
+	onad();
+}
+</script>
+
+
+<!--通知完成-->
+
+<table width="792" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td width="7" background="images/index_06.jpg"></td>
+    <td height="1" bgcolor="#48abf1" class="style1"></td>
+    <td width="7" background="images/index_21.gif"></td>
+  </tr>
+
+  <tr>
+    <td background="images/index_06.jpg"></td>
+    <td width="778" height="160"  bgcolor="0096FF">
+<!--首页LOGO-->
+
+	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="778" height="160">
+      <param name="movie" value="images/3.swf">
+      <param name="quality" value="high">
+      <embed src="images/3.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="778" height="160"></embed>
+    </object>
+
+     
+<!--首页LOGO完成-->
+	</td>
+    <td background="images/index_21.gif"></td>
+  </tr>
+
+    <tr>
+    <td background="images/index_06.jpg"></td>
+    <td width="778" height="28" bgcolor="0096FF">
+	<table width="778" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="369" height="28" valign="bottom" background="images/12_1.jpg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="top">今天是<script language="JavaScript" type="text/JavaScript" src="inc/date.js"></script></span></td>
+    <td><img src="images/12_2.jpg" width="409" height="28" border="0" usemap="#Map"></td>
+  </tr>
+</table>	
+<map name="Map">
+  <area shape="rect" coords="210,3,304,26" href="#" onclick="return setHomePage()">
+  <area shape="rect" coords="310,3,401,27" href="#" onClick="return addFavorite()">
+</map>
+<script type="text/javascript">
+<!--
+function addFavorite()
+{
+  window.external.addFavorite("http://houqin.sjtu.edu.cn","上海交大后勤保障中心");
+  return false;
+}
+function setHomePage()
+{
+  document.body.style.behavior='url(#default#homepage)';
+  document.body.setHomePage('http://houqin.sjtu.edu.cn');
+  return false;
+}
+//-->
+</script>
+</td>
+    <td background="images/index_21.gif"></td>
+  </tr>
+  <tr>
+  <td background="images/index_06.jpg"></td>
+  <td >
+        <TABLE cellSpacing=0 cellPadding=0 width=778 border=0>
+        <TBODY>
+        <TR>
+          <TD bgColor=#7b7b7b height=3 width=478></TD>
+          <TD width=100 bgColor=#8ec8f1 height=3></TD>
+          <TD width=100 bgColor=#48abf1 height=3></TD>
+          <TD width=100 bgColor=#0096ff height=3></TD></TR></TBODY></TABLE>
+  <td background="images/index_21.gif"></td>
+  </td>
+  </tr>
+    <tr>
+    <td background="images/index_06.jpg"></td>
+    <td width="778" align="center" valign="middle" bgcolor="#FFFFFF">
+	<!--
+	这里开始导航
+	-->
+<LINK href="images/menu.css" type=text/css rel=stylesheet>
+<script language="JavaScript" src="images/MENU2.js"> 
+</script> 
+
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#333333" width="778" class="a" background="images/fon_top01.gif">
+  <tr bgcolor="#ffffff" align="center" valign="middle"  > 
+    <td  height="25" bgcolor="#8D977E" background="images/fon_top01.gif"> </td>
+ 
+	<td align="center" background="images/fon_top01.gif"><img src="images/separator.gif"></td>
+	<td align="center" background="images/fon_top01.gif"><a href="index.asp" target="_self" class="memua" >网站首页</a></td>
+
+
+
+	<td align="center" background="images/fon_top01.gif"><img src="images/separator.gif"></td>
+   <td align="center"  background="images/fon_top01.gif"><a href="#"  onMouseOver="expandMenu(null,'tmenu5',getPos(this,'Left'),getPos(this,'Top')+this.offsetHeight);" class="memua" >中心概况</a></td>
+
+
+
+	<td align="center" background="images/fon_top01.gif"><img src="images/separator.gif"></td>
+   <td align="center"  background="images/fon_top01.gif"><a href="#"  onMouseOver="expandMenu(null,'tmenu6',getPos(this,'Left'),getPos(this,'Top')+this.offsetHeight);" class="memua" >下属机构</a></td>
+
+ 
+	<td align="center" background="images/fon_top01.gif"><img src="images/separator.gif"></td>
+	<td align="center" background="images/fon_top01.gif"><a href="view.asp?type=2" target="_self" class="memua" >通知</a></td>
+
+
+
+	<td align="center" background="images/fon_top01.gif"><img src="images/separator.gif"></td>
+   <td align="center"  background="images/fon_top01.gif"><a href="#"  onMouseOver="expandMenu(null,'tmenu4',getPos(this,'Left'),getPos(this,'Top')+this.offsetHeight);" class="memua" >新闻快报</a></td>
+
+
+
+	<td align="center" background="images/fon_top01.gif"><img src="images/separator.gif"></td>
+   <td align="center"  background="images/fon_top01.gif"><a href="#"  onMouseOver="expandMenu(null,'tmenu9',getPos(this,'Left'),getPos(this,'Top')+this.offsetHeight);" class="memua" >精神文明</a></td>
+
+ 
+	<td align="center" background="images/fon_top01.gif"><img src="images/separator.gif"></td>
+	<td align="center" background="images/fon_top01.gif"><a href="eview.asp?type=6" target="_self" class="memua" >年鉴</a></td>
+
+ 
+	<td align="center" background="images/fon_top01.gif"><img src="images/separator.gif"></td>
+	<td align="center" background="images/fon_top01.gif"><a href="http://hqjt.dwgk.sjtu.edu.cn" target="_self" class="memua" >党务公开</a></td>
+
+
+
+	<td align="center" background="images/fon_top01.gif"><img src="images/separator.gif"></td>
+   <td align="center"  background="images/fon_top01.gif"><a href="#"  onMouseOver="expandMenu(null,'tmenu17',getPos(this,'Left'),getPos(this,'Top')+this.offsetHeight);" class="memua" >文件下载</a></td>
+
+
+
+	<td align="center" background="images/fon_top01.gif"><img src="images/separator.gif"></td>
+    <td  height="18" bgcolor="#ffffff" background="images/fon_top01.gif"> </td>
+  </tr>
+</table>
+
+
+
+<!-- 第1开始 -->
+<div id="tmenu5" class="menu" onMouseOut="hideMe();" style='FILTER: alpha(opacity=85)'>
+
+  <a href="cview.asp?blto=5&mytype=1&id=301" onMouseOver="expandMenu('tmenu5');">中心概况</a><br>
+
+  <a href="cview.asp?blto=5&mytype=7&id=302" onMouseOver="expandMenu('tmenu5');">中心领导</a><br>
+ 
+</div>
+
+
+
+<!-- 第2开始 -->
+<div id="tmenu6" class="menu2" onMouseOut="hideMe();" style='FILTER: alpha(opacity=85)'>
+
+  <a href="cview.asp?blto=6&did=172&mytype=354&id=0" onMouseOver="expandMenu('tmenu6');">监管体系</a><br>
+
+  <a href="cview.asp?blto=6&did=184&mytype=361&id=320" onMouseOver="expandMenu('tmenu6');">运行体系</a><br>
+
+  <a href="cview.asp?blto=6&did=185&mytype=371&id=309" onMouseOver="expandMenu('tmenu6');">公益服务体系</a><br>
+ 
+</div>
+
+
+
+<!-- 第3开始 -->
+<div id="tmenu4" class="menu" onMouseOut="hideMe();" style='FILTER: alpha(opacity=85)'>
+
+  <a href="view.asp?type=3" onMouseOver="expandMenu('tmenu4');">新闻快报</a><br>
+
+  <a href="view.asp?type=9" onMouseOver="expandMenu('tmenu4');">图片新闻</a><br>
+ 
+</div>
+
+
+
+<!-- 第4开始 -->
+<div id="tmenu9" class="menu2" onMouseOut="hideMe();" style='FILTER: alpha(opacity=85)'>
+
+  <a href="cview.asp?blto=9&mytype=19&id=0" onMouseOver="expandMenu('tmenu9');">精神文明建设</a><br>
+
+  <a href="mview.asp?blto=9&mytype=21&id=-1" onMouseOver="expandMenu('tmenu9');">光荣榜</a><br>
+ 
+</div>
+
+
+
+<!-- 第5开始 -->
+<div id="tmenu17" class="menu" onMouseOut="hideMe();" style='FILTER: alpha(opacity=85)'>
+
+  <a href="mview.asp?blto=17&mytype=383&id=-1" onMouseOver="expandMenu('tmenu17');">校园环境</a><br>
+
+  <a href="cview.asp?blto=17&mytype=385&id=325" onMouseOver="expandMenu('tmenu17');">爱卫工作</a><br>
+
+  <a href="cview.asp?blto=17&mytype=392&id=0" onMouseOver="expandMenu('tmenu17');">医疗指南</a><br>
+
+  <a href="cview.asp?blto=17&mytype=396&id=331" onMouseOver="expandMenu('tmenu17');">校园零急修</a><br>
+ 
+</div>
+
+
+	<!--
+	这里完成导航
+	-->
+	</td>
+
+
+    <td background="images/index_21.gif"></td>
+  </tr>
+    <tr>
+    <td background="images/index_06.jpg"></td>
+    <td width="778" height="23" align="right" valign="bottom" background="images/21_39.gif">&nbsp;</td>
+    <td background="images/index_21.gif"></td>
+  </tr>
+</table>
+<!--顶部完成-->
+
+
+
+<table width="792" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td width="7" background="images/index_06.jpg"></td>
+	<!--左边框架-->
+    <td width="233"  align="center" valign="top">
+
+	<TABLE cellSpacing=0 cellPadding=0 width=233 border=0>
+              <TR>
+                <TD vAlign=top align=right width=227 height=170>
+				
+	    <TABLE cellSpacing=1 cellPadding=0 width="96%" bgColor=#cccccc border=0>
+             
+            <TR>
+                      <TD height=224 align="center" vAlign=top bgColor=#ffffff>
+					  
+					  <table width="90%"  border="0" cellspacing="4" cellpadding="0">
+                        <tr>
+                          <td><img src="images/1_42.jpg" width="218" height="33"></td>
+                        </tr>
+                        <tr>
+                          <td>
+						  <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="images/a_48.jpg" width="45" height="46"></td>
+    <td><a href='sview.asp?id=296' target=_blank>餐饮指南</a></td>
+    <td><img src="images/a_51.jpg" width="45" height="45"></td>
+    <td><a href='sview.asp?id=297' target=_blank>维修指南</a></td>
+  </tr>
+  <tr>
+    <td><img src="images/a_53.jpg" width="45" height="45"></td>
+    <td><a href='sview.asp?id=124' target=_blank>幼教指南</a></td>
+    <td><img src="images/a_52.jpg" width="45" height="45"></td>
+    <td><a href='sview.asp?id=329' target=_blank>医疗指南</a></td>
+  </tr>
+  <tr>
+    <td><img src="images/a_55.jpg" width="45" height="46"></td>
+    <td><a href='sview.asp?id=298' target=_blank>物业管理</a></td>
+    <td><img src="images/a_54.jpg" width="45" height="46"></td>
+    <td><a href='sview.asp?id=299' target=_blank>通讯服务</a></td>
+  </tr>
+  <tr>
+    <td><img src="images/a_56.jpg" width="45" height="45"></td>
+    <td><a href='sview.asp?id=300' target=_blank>学校班车</a></td>
+    <td><img src="images/a_59.jpg" width="45" height="45"></td>
+    <td><a href='sview.asp?id=294' target=_blank>市内乘车</a>
+</td>
+  </tr>
+  <tr>
+    <td><img src="images/a_60.jpg" width="45" height="45"></td>
+    <td><a href='sview.asp?id=295' target=_blank>校园地图</a>
+      </td>
+</td>
+  </tr>
+</table>
+
+						  </td>
+                        </tr>
+                        <tr>
+                          <td><img src="images/a_70.jpg" width="218" height="18"></td>
+                        </tr>
+                      </table>
+					  
+					  
+					  </td>
+			</tr>
+	</table>
+	
+	</TD>        
+		<TD vAlign=top width=6 height=170><IMG height=262 src="images/f_21.gif" width=6> 
+            </TD></TR></TABLE><br>
+			<TABLE cellSpacing=0 cellPadding=0 width=233 border=0>
+              <TR>
+                <TD vAlign=top align=right width=227 >
+				
+	    <TABLE cellSpacing=1 cellPadding=0 width="96%" bgColor=#cccccc border=0>
+             
+            <TR>
+                      <TD height=170 align="center" vAlign=top bgColor=#ffffff>
+					  
+					  <table width="90%"  border="0" cellspacing="4" cellpadding="0">
+                        <tr>
+                          <td><img src="images/net4u.jpg" width="218" height="33"></td>
+                        </tr>
+                        <tr>
+                          <td>
+		<div style=" margin-bottom:5px; margin-left:20px; margin-top:5px;">
+								 <a href="wbook.asp?title=[投诉]"><img src="images/toushu.gif" width="176" height="40" border="0"></a><br>
+                                  <a href="wbook.asp?title=[建议]"><img src="images/jianyi.gif" width="176" height="40" border="0"></a><br>
+                            <a href="gbook.asp"><img src="images/baoxiu.gif" width="176" height="40" border="0"></a> <br>
+						<a href="mailto:hqjtb@sjtu.edu.cn"><img src="images/xinxiang.gif" width="176" height="40" border="0"></a></div>
+							  
+						  </td>
+                        </tr>
+                        <tr>
+                          <td><img src="images/a_70.jpg" width="218" height="18"></td>
+                        </tr>
+                      </table>
+					  
+					  
+					  </td>
+			</tr>
+	</table>
+	
+	</TD>        
+		<TD vAlign=top width=6 ><IMG height=190 src="images/f_21.gif" width=6> 
+            </TD>
+              </TR></TABLE>		<br>
+			
+<TABLE cellSpacing=0 cellPadding=0 width=233 border=0>
+              <TR>
+                <TD vAlign=top align=right width=227 height=170>
+				
+	    <TABLE cellSpacing=1 cellPadding=0 width="96%" bgColor=#cccccc border=0>
+             
+            <TR>
+                      <TD height=224 align="center" vAlign=top bgColor=#ffffff>
+					  
+					  <table width="90%"  border="0" cellspacing="4" cellpadding="0">
+                        <tr>
+                          <td><img src="images/index_72.jpg" width="218" height="33"></td>
+                        </tr>
+                        <tr>
+                          <td>
+						  <br>
+<div style="padding:5 " align="center">
+	 <TABLE cellSpacing=0 cellPadding=0 width="80%" border=0> 
+ 
+	  
+              <FORM name=form2 action='vshow.asp?id=2' method=post> 
+              <TBODY> 
+<input name="tvote" type="hidden" value="你最希望在“交椒菜篮”（二餐一楼）购买的食材"> 
+<input name="VoteType" type="hidden" value="Multi"> 
+<input name="Action" type="hidden" value="Vote"> 
+              <TR> 
+                <TD  
+              height=21 colSpan=2 align=middle vAlign=center ><font class="liuyan">你最希望在“交椒菜篮”（二餐一楼）购买的食材</font></TD></TR> 
+			    
+              <TR> 
+                <TD bgColor=#e0e0e0 colSpan=2 height=1></TD></TR> 
+              <TR> 
+                <TD vAlign=center align=middle width="1%" height=21><INPUT  
+                  type=checkbox value='5' name='VoteOption'></TD> 
+                <TD>蔬菜</TD></TR> 
+				               
+              <TR> 
+                <TD bgColor=#e0e0e0 colSpan=2 height=1></TD></TR> 
+              <TR> 
+                <TD vAlign=center align=middle width="1%" height=21><INPUT  
+                  type=checkbox value='6' name='VoteOption'></TD> 
+                <TD>肉类</TD></TR> 
+				               
+              <TR> 
+                <TD bgColor=#e0e0e0 colSpan=2 height=1></TD></TR> 
+              <TR> 
+                <TD vAlign=center align=middle width="1%" height=21><INPUT  
+                  type=checkbox value='7' name='VoteOption'></TD> 
+                <TD>禽蛋类</TD></TR> 
+				               
+              <TR> 
+                <TD bgColor=#e0e0e0 colSpan=2 height=1></TD></TR> 
+              <TR> 
+                <TD vAlign=center align=middle width="1%" height=21><INPUT  
+                  type=checkbox value='8' name='VoteOption'></TD> 
+                <TD>水果</TD></TR> 
+				               
+              <TR> 
+                <TD bgColor=#e0e0e0 colSpan=2 height=1></TD></TR> 
+              <TR> 
+                <TD vAlign=center align=middle width="1%" height=21><INPUT  
+                  type=checkbox value='9' name='VoteOption'></TD> 
+                <TD>切配好的盆菜</TD></TR> 
+				               
+              <TR> 
+                <TD bgColor=#e0e0e0 colSpan=2 height=1></TD></TR> 
+              <TR> 
+                <TD vAlign=center align=middle width="1%" height=21><INPUT  
+                  type=checkbox value='10' name='VoteOption'></TD> 
+                <TD>豆制品</TD></TR> 
+				               
+ 
+              <TR> 
+                <TD bgColor=#e0e0e0 colSpan=2 height=1></TD></TR> 
+              <TR align="center"> 
+               
+                <TD colSpan=2><INPUT type=submit value=[投票] name=Submit style="cursor:hand "> &nbsp;&nbsp;&nbsp;&nbsp;
+                  <INPUT onclick="javascrip:window.open('vshow.asp?id=2&tvote=你最希望在“交椒菜篮”（二餐一楼）购买的食材')" type=button value=[查看] name=Submit2 style="cursor:hand "></TD></TR> 
+              <TR> 
+            <TD bgColor=#e0e0e0 colSpan=2  
+            height=1></TD></TR></TBODY> </FORM>
+	 
+</TABLE>
+
+	
+	</div>
+<br>
+
+						  
+						  </td>
+                        </tr>
+                        <tr>
+                          <td><img src="images/a_70.jpg" width="218" height="18"></td>
+                        </tr>
+                      </table>
+					  
+					  
+					  </td>
+			</tr>
+	</table>
+	
+	</TD>        
+		<TD vAlign=top width=6 ><IMG height=200 src="images/f_21.gif" width=6> 
+            </TD>
+              </TR></TABLE><!----><br>
+	
+			
+	</td>
+	
+	<!--右边框架-->
+    <td align="center" valign="top">
+	
+	<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD align=left>&nbsp;<IMG height=30 
+                  src="images/a_41.gif" 
+width=121></TD>
+<td align="right" valign="bottom"><a href="view.asp?type=3"><img src="images/more.gif" width="40" height="17" border="0"></a>&nbsp;</td>
+              </TR></TBODY></TABLE>
+            <TABLE cellSpacing=1 cellPadding=0 width=530 bgColor=#ffffff 
+            border=0>
+              <TBODY>
+              <TR>
+                <TD width=77 bgColor=#0096ff height=3></TD>
+                <TD width=59 bgColor=#48abf1 height=3></TD>
+                <TD width=84 bgColor=#8ec8f1 height=3></TD>
+                <TD width=300 bgColor=#d0cccc height=3></TD></TR>
+              <TR>
+                <TD width=77 bgColor=#0096ff height=1></TD>
+                <TD width=59 bgColor=#48abf1 height=1></TD>
+                <TD width=84 bgColor=#8ec8f1 height=1></TD>
+                <TD width=300 bgColor=#d0cccc height=1></TD></TR></TBODY></TABLE>
+ 
+				           <TABLE cellSpacing=2 cellPadding=0 width=530 border=0 bgcolor='#FFFAF9'>
+              <TBODY>
+              <TR>
+                <TD class=duan1 vAlign=top align=left width=334 
+                  height=113>&nbsp;&nbsp;&nbsp;&nbsp;<SPAN class=style2>  
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;9月23日下午，后勤保障中心在总务楼214会议室召开“不忘初心牢记使命”主题教育学习研讨会暨2019年秋季学期工作会议。校党委常委、副校长王伟明、中心主任蒋宏、党委书记蒋立峰及班子成员、各部门负责人、党支部书记40余人参加会议。会议由蒋立峰主持。
+
+&nbsp;&nbsp;&nbsp;会上，蒋宏从坚持不懈全面加强党的建设、坚定不移纵深推进后勤改革、坚...<FONT 
+                  face="Arial, Helvetica, sans-serif"><B>&gt;&gt;&gt;</B></FONT></SPAN><FONT 
+                  face="Arial, Helvetica, sans-serif"><B><A title=后勤保障中心召开“不忘初心，牢记使命”主题教育学习研讨 
+                  href="show.asp?id=2009" 
+                  target=_blank>详细了解</A></B></FONT> </TD>
+	
+		<TD vAlign=middle align=center width=166 height=113>
+<div style="border:1px solid;border-color:#555555;"><A title=后勤保障中心召开“不忘初心，牢记使命”主题教育学习研讨 
+                  href="show.asp?id=2009" 
+                  target=_blank><img src="upload/2019092433335895.jpg" width="160" height="129" border="0"></a>
+</div>
+		</TD>
+              </TR></TBODY></TABLE><!---->
+
+ <br> 
+	<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD align=left width="86%">&nbsp;<IMG height=30 
+                  src="images/news.gif" width=121></TD>
+                <TD vAlign=bottom align=right width="14%"><a href="view.asp?type=3"><img src="images/more.gif" width="40" height="17" border="0"></a>&nbsp;</TD>
+              </TR></TBODY></TABLE>
+            <TABLE cellSpacing=1 cellPadding=0 width=530 bgColor=#ffffff 
+            border=0>
+              <TBODY>
+              <TR>
+                <TD width=77 bgColor=#0096ff height=3></TD>
+                <TD width=59 bgColor=#48abf1 height=3></TD>
+                <TD width=84 bgColor=#8ec8f1 height=3></TD>
+                <TD width=300 bgColor=#d0cccc height=3></TD></TR>
+              <TR>
+                <TD width=77 bgColor=#0096ff height=1></TD>
+                <TD width=59 bgColor=#48abf1 height=1></TD>
+                <TD width=84 bgColor=#8ec8f1 height=1></TD>
+                <TD width=300 bgColor=#d0cccc height=1></TD></TR></TBODY></TABLE>
+	<table width="530" border="0" cellspacing="1" cellpadding="0" bgcolor='#ffffff'>
+<!--新闻列表开始-->
+   
+  <tr onMouseOver="this.bgColor='#eeeeee';" onMouseOut="this.bgColor='#F2F6FB';" bgcolor='#F2F6FB'>
+    <td width="15" height="20" align="center"><img src="images/bbb.gif" width="5" height="5" border="0"></td>
+    <td>&nbsp;      
+</font><a href="show.asp?id=2014" target=_blank title=后勤保障中心退休职工重阳节“回娘家”系列活动>后勤保障中心退休职工重阳节“回娘家”系列活动</a></A>
+ 
+</td>
+    <td width="150">&nbsp;2019-10-8 18:2:7&nbsp; </td>
+  </tr>
+   
+  <tr onMouseOver="this.bgColor='#eeeeee';" onMouseOut="this.bgColor='#F2F6FB';" bgcolor='#F2F6FB'>
+    <td width="15" height="20" align="center"><img src="images/bbb.gif" width="5" height="5" border="0"></td>
+    <td>&nbsp;      
+</font><a href="show.asp?id=2012" target=_blank title=后勤保障中心第五党支部开展“重阳节探望退休困难老职工”活动>后勤保障中心第五党支部开展“重阳节探望退休困难老职...</a></A>
+ 
+</td>
+    <td width="150">&nbsp;2019-9-25 16:40:19&nbsp; </td>
+  </tr>
+   
+  <tr onMouseOver="this.bgColor='#eeeeee';" onMouseOut="this.bgColor='#F2F6FB';" bgcolor='#F2F6FB'>
+    <td width="15" height="20" align="center"><img src="images/bbb.gif" width="5" height="5" border="0"></td>
+    <td>&nbsp;      
+</font><a href="show.asp?id=2009" target=_blank title=后勤保障中心召开“不忘初心，牢记使命”主题教育学习研讨>后勤保障中心召开“不忘初心，牢记使命”主题教育学习...</a></A>
+ 
+</td>
+    <td width="150">&nbsp;2019-9-24 9:16:34&nbsp; </td>
+  </tr>
+   
+  <tr onMouseOver="this.bgColor='#eeeeee';" onMouseOut="this.bgColor='#F2F6FB';" bgcolor='#F2F6FB'>
+    <td width="15" height="20" align="center"><img src="images/bbb.gif" width="5" height="5" border="0"></td>
+    <td>&nbsp;      
+</font><a href="show.asp?id=2007" target=_blank title=市教委专家组到我校进行食品安全专项督查>市教委专家组到我校进行食品安全专项督查</a></A>
+ 
+</td>
+    <td width="150">&nbsp;2019-9-18 9:26:14&nbsp; </td>
+  </tr>
+   
+  <tr onMouseOver="this.bgColor='#eeeeee';" onMouseOut="this.bgColor='#F2F6FB';" bgcolor='#F2F6FB'>
+    <td width="15" height="20" align="center"><img src="images/bbb.gif" width="5" height="5" border="0"></td>
+    <td>&nbsp;      
+</font><a href="show.asp?id=2003" target=_blank title=聚焦内涵质量，稳步转型升级>聚焦内涵质量，稳步转型升级</a></A>
+ 
+</td>
+    <td width="150">&nbsp;2019-8-26 12:20:35&nbsp; </td>
+  </tr>
+   
+  <tr onMouseOver="this.bgColor='#eeeeee';" onMouseOut="this.bgColor='#F2F6FB';" bgcolor='#F2F6FB'>
+    <td width="15" height="20" align="center"><img src="images/bbb.gif" width="5" height="5" border="0"></td>
+    <td>&nbsp;      
+</font><a href="show.asp?id=2001" target=_blank title=后勤保障中心2019年暑期工作安排>后勤保障中心2019年暑期工作安排</a></A>
+ 
+</td>
+    <td width="150">&nbsp;2019-7-25 15:10:20&nbsp; </td>
+  </tr>
+   
+  <tr onMouseOver="this.bgColor='#eeeeee';" onMouseOut="this.bgColor='#F2F6FB';" bgcolor='#F2F6FB'>
+    <td width="15" height="20" align="center"><img src="images/bbb.gif" width="5" height="5" border="0"></td>
+    <td>&nbsp;      
+</font><a href="show.asp?id=1994" target=_blank title= 后勤保障中心召开第二季度书记工作会议> 后勤保障中心召开第二季度书记工作会议</a></A>
+ 
+</td>
+    <td width="150">&nbsp;2019-7-24 8:34:46&nbsp; </td>
+  </tr>
+ 
+<!--新闻列表结束-->
+</table><br>
+
+	            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD align=left width="86%">&nbsp;<IMG height=30 
+                  src="images/photos.gif" width=121></TD>
+                <TD vAlign=bottom align=right width="14%"><a href="view.asp?type=-1"><img src="images/more.gif" width="40" height="17" border="0"></a>&nbsp;</TD>
+              </TR></TBODY></TABLE>
+            <TABLE cellSpacing=1 cellPadding=0 width=530 bgColor=#ffffff 
+            border=0>
+              <TBODY>
+              <TR>
+                <TD width=77 bgColor=#0096ff height=3></TD>
+                <TD width=59 bgColor=#48abf1 height=3></TD>
+                <TD width=84 bgColor=#8ec8f1 height=3></TD>
+                <TD width=300 bgColor=#d0cccc height=3></TD></TR>
+              <TR>
+                <TD width=77 bgColor=#0096ff height=1></TD>
+                <TD width=59 bgColor=#48abf1 height=1></TD>
+                <TD width=84 bgColor=#8ec8f1 height=1></TD>
+                <TD width=300 bgColor=#d0cccc height=1></TD></TR></TBODY></TABLE><br>
+
+
+<div id=demo style="overflow:hidden;height:110;width:520;background:#F6FEFB;color:#ffffff;margin=5px;">
+<table align=left cellpadding=0 cellspace=0 border=0>
+<tr>
+<td id=demo1 valign=top>
+
+<!--滚动图片列表开始-->
+<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+  
+    <td><a href="show.asp?id=1921" target=_blank title=><img src="upload/2019031149956433.jpg" width="120" height="90" border="0"></a></td>
+	<td width="4">&nbsp;</td>
+  
+    <td><a href="show.asp?id=1920" target=_blank title=><img src="upload/2019031149910869.jpg" width="120" height="90" border="0"></a></td>
+	<td width="4">&nbsp;</td>
+  
+    <td><a href="show.asp?id=1893" target=_blank title=><img src="upload/2018121351112069.jpg" width="120" height="90" border="0"></a></td>
+	<td width="4">&nbsp;</td>
+  
+    <td><a href="show.asp?id=1894" target=_blank title=><img src="upload/2018121351181849.jpg" width="120" height="90" border="0"></a></td>
+	<td width="4">&nbsp;</td>
+  
+    <td><a href="show.asp?id=1892" target=_blank title=><img src="upload/2018121351047689.jpg" width="120" height="90" border="0"></a></td>
+	<td width="4">&nbsp;</td>
+  
+    <td><a href="show.asp?id=1891" target=_blank title=><img src="upload/2018121350976865.jpg" width="120" height="90" border="0"></a></td>
+	<td width="4">&nbsp;</td>
+  
+    <td><a href="show.asp?id=1890" target=_blank title=><img src="upload/2018121350928161.jpg" width="120" height="90" border="0"></a></td>
+	<td width="4">&nbsp;</td>
+  
+    <td><a href="show.asp?id=1889" target=_blank title=><img src="upload/2018121350885509.jpg" width="120" height="90" border="0"></a></td>
+	<td width="4">&nbsp;</td>
+  
+    <td><a href="show.asp?id=1887" target=_blank title=><img src="upload/2018121260760593.jpg" width="120" height="90" border="0"></a></td>
+	<td width="4">&nbsp;</td>
+  
+    <td><a href="show.asp?id=1885" target=_blank title=><img src="upload/2018121259526741.jpg" width="120" height="90" border="0"></a></td>
+	<td width="4">&nbsp;</td>
+ 
+</tr>
+</table>
+<!--滚动图片列表结束-->
+
+</td>
+<td id=demo2 valign=top></td>
+</tr>
+</table>
+</div>
+<br>
+<script>
+var speed=30
+demo2.innerHTML=demo1.innerHTML
+function Marquee(){
+if(demo2.offsetWidth-demo.scrollLeft<=0)
+demo.scrollLeft-=demo1.offsetWidth
+else{
+demo.scrollLeft++
+}
+}
+var MyMar=setInterval(Marquee,speed)
+demo.onmouseover=function() {clearInterval(MyMar)}
+demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
+</script>
+
+<!--检索开始-->
+<form action="search.asp" method="post" name="search">
+<TABLE id=Table8 cellSpacing=0 cellPadding=0 width=538 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top colSpan=3><IMG height=20 
+                        src="images/search_top.gif" width=538></TD></TR>
+                    <TR>
+                      <TD width=59><IMG height=34 
+                        src="images/search_left.gif" width=59></TD>
+                      <TD width=404><span class="bigzi2">站内搜索</span>                        <SELECT id=ddl_search 
+                        style="WIDTH: 104px; HEIGHT: 20px" name=ddl_search> 
+                        <OPTION value=0 selected>--选择类型--</OPTION> <OPTION 
+                          value=1>标题</OPTION> <OPTION value=2>内容</OPTION> 
+                        </SELECT>&nbsp;&nbsp;<INPUT 
+                        name=txt_search 
+                        class=input_login id=txt_search 
+                        style=" HEIGHT: 20px" size="28" maxlength="30">                      </TD>
+                      <TD width=75>
+                        <DIV align=right><INPUT id=btn_search type=image alt="" 
+                        src="images/search_right.gif" border=0 
+                        name=btn_search></DIV></TD></TR>
+                    <TR>
+                      <TD colSpan=3><IMG height=16 
+                        src="images/search_bottom.gif" 
+                    width=538></TD></TR></TBODY></TABLE><br>
+
+</form>
+<!--检索结束-->
+
+<!--链接开始-->
+<TABLE id=Table8 cellSpacing=0 cellPadding=0 width=538 
+                  align=center border=0>
+                    <TBODY>
+					<TR>
+                      <TD vAlign=top colSpan=3><IMG height=20 
+                        src="images/search_top.gif" width=538></TD></TR>
+                     <TR>
+                      <TD width=59><IMG height=34 
+                        src="images/link_left.gif" width=59></TD>
+                      <TD width=462 class="bigzi2">
+					  
+					  
+					  <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td class="bigzi2">友情链接</td>
+                          <td>
+						  <table border="0" cellpadding="0" cellspacing="0" width="100px" align="left">
+	<tr>
+          <td height="30" align="center"><select name="menu5" onChange="MM_jumpMenu('parent',this,1)" style="width:120">
+              <option selected>--校内链接--</option>
+  
+              <option value="http://www.sjtu.edu.cn/">上海交通大学</option>
+  
+              <option value="http://hbchu.sjtu.edu.cn/">后勤保障处</option>
+  
+              <option value="http://sac.sjtu.edu.cn/">学生工作指导委员会</option>
+  
+              <option value="http://www.lib.sjtu.edu.cn/">图书馆</option>
+  
+              <option value="http://www.jwc.sjtu.edu.cn/web/sjtu/198001.htm">教务处</option>
+  
+              <option value="http://www.gs.sjtu.edu.cn/">研究生院</option>
+ 
+              
+            </select>
+          </td>
+        </tr>
+      
+      </table>
+	  </td>
+                          <td>
+						  <table border="0" cellpadding="0" cellspacing="0" width="100px" align="left">
+	<tr>
+          <td height="30" align="center"><select name="menu3" onChange="MM_jumpMenu('parent',this,1)" style="width:120">
+	<option selected>--国内高校--</option>
+  
+              <option value="http://www.pku.edu.cn/">北京大学</option>
+  
+              <option value="http://www.tsinghua.edu.cn/publish/newthu/index.html">清华大学</option>
+  
+              <option value="http://www.fudan.edu.cn/index.html">复旦大学</option>
+  
+              <option value="http://www.tongji.edu.cn/">同济大学</option>
+ 
+        
+            </select>
+          </td>
+        </tr>
+      
+      </table>
+						  </td>
+                          <td>
+						  <table border="0" cellpadding="0" cellspacing="0" width="100px" align="left">
+	<tr>
+          <td height="30" align="center"><select name="menu2" onChange="MM_jumpMenu('parent',this,1)" style="width:120">
+              <option selected>--国内高校后勤--</option>
+
+  
+              <option value="http://www.chinacacm.org/">中国教育后勤协会</option>
+  
+              <option value="http://21caas.cn/">中国院校后勤信息网</option>
+  
+              <option value="http://www.xxhq.org/">上海市学校后勤协会</option>
+  
+              <option value="http://zulg.zju.edu.cn/">浙江大学后勤集团</option>
+  
+              <option value="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/intothu/intothu-1.html">清华大学校园生活</option>
+  
+              <option value="http://hq.tongji.edu.cn/">同济大学后勤集团</option>
+ 
+              
+            </select>
+          </td>
+        </tr>
+      
+      </table>
+						  </td>
+                        </tr>
+                      </table>
+					  
+					  
+					  
+					  
+					  </TD>
+                      <TD width=17 align="right"><img src="images/link_right.gif" width="14" height="34"></TD>
+                     </TR>
+                    <TR>
+      <TD colSpan=3><IMG height=16 
+                        src="images/search_bottom.gif" 
+                    width=538></TD></TR></TBODY></TABLE><br>
+<!--链接结束-->
+
+<!--广告开始-->
+<table width="98%"  border="0" cellspacing="1" cellpadding="0" align="center" bgcolor="#CCCCCC">
+  <tr>
+    <td height="50"  align="center" valign="bottom" background="images/BARBG.jpg" bgcolor="#FFFFFF">
+	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,2,0" width="100%" height="50">  
+    <param name=movie value="images/piao.swf">  
+    <param name=wmode value=transparent>  
+    <param name=quality value=high>  
+    <param name="BGCOLOR" value="#CCcccc"><param name="SCALE" value="noborder">  
+    <!-- <embed src="images/piao.swf" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="100%" height="50" scale="noborder" bgcolor="#CC6600">  
+    </embed>   -->
+   </object>	</td>
+  </tr>
+</table>
+<!--广告结束-->
+
+      <!---->	
+	</td>
+    <td width="7" background="images/index_21.gif"></td>
+  </tr>
+</table>
+
+
+<!--底部开始-->
+<title>上海交通大学后勤保障中心</title>
+<table width="792" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+    <td width="7" background="images/index_06.jpg"></td>
+    <td width="778" height="23" background="images/bo_02.gif">&nbsp;</td>
+    <td width="7" background="images/index_21.gif"></td>
+  </tr>
+  
+   <tr>
+  <td background="images/index_06.jpg"></td>
+  <td >
+        <TABLE cellSpacing=0 cellPadding=0 width=778 border=0>
+        <TBODY>
+        <TR>
+          <TD bgColor=#7b7b7b height=3 width=478></TD>
+          <TD width=100 bgColor=#8ec8f1 height=3></TD>
+          <TD width=100 bgColor=#48abf1 height=3></TD>
+          <TD width=100 bgColor=#0096ff height=3></TD></TR></TBODY></TABLE>
+  <td background="images/index_21.gif"></td>
+  
+  </tr>
+  
+   <tr>
+    <td background="images/index_06.jpg"></td>
+    <td width="778" height="18" background="images/a_66.jpg">&nbsp;</td>
+    <td background="images/index_21.gif"></td>
+  </tr>
+  
+  <tr>
+    <td background="images/index_06.jpg"></td>
+    <td width="778" height="38" align="center" valign="middle" bgcolor="#FFFFFF" >
+	COPYRIGHT&copy;上海交通大学后勤保障中心 联系电话：021-54742401 Email：hqjtb@sjtu.edu.cn 沪交ICP备05209<br>
+    <a href="about.asp?kw=aboutus" target="_blank">关于本站</a> | <a href="about.asp?kw=contact" target="_blank">联系方式</a> | <a href="about.asp?kw=copyright" target="_blank">版权信息</a> | <a href="about.asp?kw=privacy" target="_blank">隐私政策</a> | <a href="admin/admin_login.asp" target="_blank">管理登陆</a><br>
+
+</td>
+    <td background="images/index_21.gif"></td>
+  </tr>
+</table>
+
+</body>
+</html>
+

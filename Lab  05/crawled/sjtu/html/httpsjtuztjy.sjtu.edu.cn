@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>上海交通大学“不忘初心,牢记使命”主题教育</title>
+<meta name="description" content="上海交通大学“不忘初心,牢记使命”主题教育" />
+<meta name="keywords" content="上海交通大学“不忘初心,牢记使命”主题教育" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Bootstrap -->    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+<link type="text/css" rel="stylesheet" href="/css/css.css" />
+<link rel="stylesheet" href="/css/animate.css">
+<script src="/js/jquery.min.js"></script>
+<!--轮转焦点图-->
+<script src="/js/jquery.hiSlider.js"></script>
+<link rel="stylesheet" href="/css/jquery.hiSlider.css">
+
+<!-- 图片滚动 --> 
+<link href="/css/owl.carousel.css" type="text/css" rel="stylesheet" />
+<link href="/css/owl.theme.css" type="text/css" rel="stylesheet" />
+<!-- 图片滚动 --> 
+<script type="text/javascript" src="/js/owl.carousel.js"></script>
+<script type="text/javascript">
+    function search_validate(){
+        if(document.getElementById('search_keywords').value == ''){
+            alert('请输入搜索关键字');
+            return false;
+        }
+    }
+</script> 
+</head>
+<body class="bj_b"><div class="sy0">
+	<div class="top" id="top_nav">
+    <div class="main">
+        <a href="/" class="logo"></a>     
+        <span class="menu2" id="menu2"><a href="javascript:void(0)">&nbsp;</a></span>   
+        <div id=navk>
+                        <ul class="cd_t">
+                  
+                <li><a href="https://www.sjtu.edu.cn" target="_blank">交大首页</a></li>
+                                <li class="l_x">|</li>
+                                  
+                <li><a href="https://news.sjtu.edu.cn" target="_blank">交大新闻网</a></li>
+                                <li class="l_x">|</li>
+                                  
+                <li><a href="http://jd.sjtu.edu.cn/web/JDJDW/2960001.htm" target="_blank">焦点网</a></li>
+                                            </ul>
+            <span class="ss">
+                <form method="get" action="https://sjtuztjy.sjtu.edu.cn/active/search.html" onsubmit="return search_validate();">
+                <div class="txtk">
+                    <input type="text" id="search_keywords" name="search_keywords" class="form-control" placeholder="">
+                    <button class="an_ss" type="submit"></button>
+                </div>
+                </form>
+            </span>
+            <ul class="menu">
+                <li><a href="/" class="dbt">首页</a></li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/zyjs.html" class="dbt ">中央精神</a>
+                                        <dl>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/zy_file.html" >中央文件</a></dd>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/zy_study.html" >学习资料</a></dd>
+                                            </dl>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/news.html" class="dbt ">新闻动态</a>
+                                        <dl>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/jdyw.html" >交大要闻</a></dd>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/jcdt.html" >基层动态</a></dd>
+                                            </dl>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/xjdx.html" class="dbt ">先进典型</a>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/mtgz.html" class="dbt ">媒体关注</a>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/slhj.html" class="dbt ">史料汇集</a>
+                                    </li>
+                            </ul>
+            <div class="clear"></div>
+        </div> 
+    </div>  
+</div>
+<div class="top_jg"></div>
+<SCRIPT type=text/javascript>  
+$(document).ready(function() {
+    var pk=document.body.clientWidth;
+    if(pk<1200){
+        //手机菜单
+        $("#menu2").click(function(){
+            if($("#navk").css("display")=="none"){
+                $(this).find("a").addClass("on");
+                $("#navk").slideDown("slow");       
+            }
+            else{
+                $(this).find("a").removeClass("on");
+                $("#navk").slideUp("slow");     
+            }
+        });  
+    }
+    else{
+        $(".menu li").hover(function() {
+            $(this).find("dl").css("display","block");
+        },function(){
+            
+            $(this).find("dl").css("display","none");
+        });
+
+        //向下滚动顶部缩小
+        $.fn.smartFloat = function() {
+            var position = function(element) {
+                var top = element.position().top, pos = element.css("position");
+                $(window).scroll(function() {
+                    var scrolls = $(this).scrollTop();
+                    if (scrolls > top) {
+                        $("#top_nav").addClass("on");
+                        if (window.XMLHttpRequest) {
+                            element.css({
+                                position: "fixed",
+                                //background:"#efefef",
+                                top: 0
+                            });
+                        } else {
+                            element.css({
+                                top: scrolls
+                            });
+                        }
+                    }else {
+                        $("#top_nav").removeClass("on");
+                        element.css({
+                            position: pos,
+                            //background:"transparent",
+                            top: top
+                        });
+                    }
+                });
+            };
+            return $(this).each(function() {
+                position($(this));
+            });
+
+        };
+        $("#top_nav").smartFloat();
+        //向下滚动顶部缩小 end
+    };
+});  
+//-->  
+</SCRIPT>	<!--轮转焦点图-->
+	<div class="sy_ban1">
+				<ul class="hiSlider hiSlider1">
+						<li class="hiSlider-item"><img src="/upload/image/20190924/20190924150242.jpg" alt=""></li>
+					</ul>
+		<div class="clear"></div>
+	</div>
+</div>
+<div class="sy7 sy_bj7 sy2">
+	<div class="main">
+		<div class="ny_bt wow fadeInUp"><i></i>中央精神<i></i></div>
+		<div class="d1 wow fadeInUp">
+			<div id="owl-demo1" class="owl-carousel">
+				        		    <div class="item">
+		      <div class="imgk img_d"><img src="/upload/image/20190925/20190925131859.jpg"></div>
+    			<div class="txtk">
+    				<a href="http://www.12371.cn/2019/09/18/ARTI1568809675972486.shtml" class="dbt">习近平在河南考察 指导开展第二批主题教育</a>
+    			</div>
+    		</div>
+        		    <div class="item">
+		      <div class="imgk img_d"><img src="/upload/image/20190925/20190925140500.jpg"></div>
+    			<div class="txtk">
+    				<a href="http://www.12371.cn/2019/09/12/ARTI1568288427254558.shtml" class="dbt">习近平：不忘初心牢记使命锐意进取满怀信心继续把新中国巩固好发...</a>
+    			</div>
+    		</div>
+        		    <div class="item">
+		      <div class="imgk img_d"><img src="/upload/image/20190925/20190925140905.jpg"></div>
+    			<div class="txtk">
+    				<a href="http://www.12371.cn/2019/09/05/ARTI1567688292925356.shtml" class="dbt">中央“不忘初心、牢记使命”主题教育领导小组印发《关于开展第二...</a>
+    			</div>
+    		</div>
+        		    <div class="item">
+		      <div class="imgk img_d"><img src="/upload/image/20190925/20190925141227.jpg"></div>
+    			<div class="txtk">
+    				<a href="http://www.12371.cn/2019/09/02/ARTI1567405481993555.shtml" class="dbt">《十九大以来重要文献选编》</a>
+    			</div>
+    		</div>
+        		    <div class="item">
+		      <div class="imgk img_d"><img src="/upload/image/20190925/20190925142036.jpg"></div>
+    			<div class="txtk">
+    				<a href="http://www.12371.cn/2019/08/22/ARTI1566473303265796.shtml" class="dbt">习近平在甘肃考察时强调 坚定信心开拓创新真抓实干 团结一心开...</a>
+    			</div>
+    		</div>
+            	</div>
+    </div>
+        <div class="d2 wow fadeInUp">
+        	<ul class="x_n1">
+        		        		      			<li class="wow fadeInUp">
+      				<a href="http://www.12371.cn/2019/09/18/ARTI1568809675972486.shtml"><span class="sj"><b>18</b>2019/09</span><p>习近平在河南考察 指导开展第二批主题教育</p></a>
+      			</li>
+     			      			<li class="wow fadeInUp">
+      				<a href="http://www.12371.cn/2019/09/12/ARTI1568288427254558.shtml"><span class="sj"><b>12</b>2019/09</span><p>习近平：不忘初心牢记使命锐意进取满怀信心继续把新中国巩固好发展好</p></a>
+      			</li>
+     			      			<li class="wow fadeInUp">
+      				<a href="http://www.12371.cn/2019/09/05/ARTI1567688292925356.shtml"><span class="sj"><b>05</b>2019/09</span><p>中央“不忘初心、牢记使命”主题教育领导小组印发《关于开展第二批“不忘初心、牢记使命”主题教育的指导意见》</p></a>
+      			</li>
+     			      			<li class="wow fadeInUp">
+      				<a href="http://www.12371.cn/2019/09/02/ARTI1567405481993555.shtml"><span class="sj"><b>02</b>2019/09</span><p>《十九大以来重要文献选编》</p></a>
+      			</li>
+     			      			<li class="wow fadeInUp">
+      				<a href="http://www.12371.cn/2019/08/22/ARTI1566473303265796.shtml"><span class="sj"><b>22</b>2019/08</span><p>习近平在甘肃考察时强调 坚定信心开拓创新真抓实干 团结一心开创富民兴陇新局面</p></a>
+      			</li>
+     			     		</ul>
+     		<a href="/zyjs.html" class="cd_a_r wow fadeInUp">更多中央精神</a>
+     	</div>
+     	<div class="clear"></div>
+    </div>
+    <div class="sy_bj7_2"></div>
+</div>
+<div class="sy6 sy sy_bj6">
+	<div class="main">
+		<div class="ny_bt wow fadeInUp"><i></i>新闻动态<i></i></div>
+		  		<ul class="n1">
+  			   			<li class="wow fadeInUp"><a href="https://sjtuztjy.sjtu.edu.cn/jdyw/3035.html"><span class="sj"><b>27</b>2019/06</span><p>校党委书记姜斯宪焦点讲坛作专题授课</p></a></li>
+   			   			<li class="wow fadeInUp"><a href="https://sjtuztjy.sjtu.edu.cn/jdyw/3031.html"><span class="sj"><b>02</b>2019/07</span><p>新时代 新经典——《平易近人》系列重点数字图书上线学习强国等网络传播平台</p></a></li>
+   			   			<li class="wow fadeInUp"><a href="https://sjtuztjy.sjtu.edu.cn/jdyw/3033.html"><span class="sj"><b>02</b>2019/07</span><p>上海交大举行纪念中国共产党成立98周年活动暨“不忘初心、牢记使命”电影党课</p></a></li>
+   			   			<li class="wow fadeInUp"><a href="https://sjtuztjy.sjtu.edu.cn/jdyw/2985.html"><span class="sj"><b>12</b>2019/09</span><p>上海交大召开“不忘初心，牢记使命”主题教育动员大会</p></a></li>
+   			   			<li class="wow fadeInUp"><a href="https://sjtuztjy.sjtu.edu.cn/jdyw/3022.html"><span class="sj"><b>31</b>2019/07</span><p>上海交通大学举办“不忘初心 牢记使命”暑期专题读书班</p></a></li>
+   			   			<li class="wow fadeInUp"><a href="https://sjtuztjy.sjtu.edu.cn/jdyw/2984.html"><span class="sj"><b>20</b>2019/09</span><p>上海交大开展“不忘初心、牢记使命”主题教育读书班活动</p></a></li>
+   			   			<li class="wow fadeInUp"><a href="https://sjtuztjy.sjtu.edu.cn/jdyw/3038.html"><span class="sj"><b>29</b>2019/09</span><p>上海交通大学“学经典 迎国庆 开展主题教育”学习《习近平用典》大赛圆满举行</p></a></li>
+   			   			<li class="wow fadeInUp"><a href="https://sjtuztjy.sjtu.edu.cn/jdyw/3045.html"><span class="sj"><b>09</b>2019/10</span><p>上海交通大学召开无党派人士“不忘合作初心，继续携手前行” 主题教育活动启动会暨无党派人士座谈会</p></a></li>
+   			   			<li class="wow fadeInUp"><a href="https://sjtuztjy.sjtu.edu.cn/jdyw/3041.html"><span class="sj"><b>01</b>2019/10</span><p>上海交大师生热烈庆祝新中国成立70周年</p></a></li>
+   			   			<li class="wow fadeInUp"><a href="https://sjtuztjy.sjtu.edu.cn/jdyw/3040.html"><span class="sj"><b>30</b>2019/09</span><p>三代传承，各地交大人唱响生日颂歌献礼新中国成立70周年</p></a></li>
+   			  		</ul>
+  		<div class="sy_anq wow fadeInUp"><a href="/news.html" class="cd_a_r">更多新闻动态</a></div>
+  		<div class="clear"></div>
+ 	</div>
+</div>
+<div class="sy3 sy_bj3 sy2">
+	<div class="main">  
+  		<div class="ny_bt wow fadeInUp"><i></i>先进典型<i></i></div>
+  		<div class="dx_k wow fadeInUp">
+   			<div id="owl-demo3" class="owl-carousel">
+												<div class="item">
+	     			<a href="https://sjtuztjy.sjtu.edu.cn/xjdx/3032.html">
+	     				<div class="imgk img_d"><img src="/upload/image/20190925/20190925193321.jpg"></div>
+	     				<div class="txtk"><h2>钱学森</h2><p>爱国奋斗的知识分子典范，交通大学的杰出校友</p></div>
+	     			</a>
+	    		</div>
+	    						<div class="item">
+	     			<a href="https://sjtuztjy.sjtu.edu.cn/xjdx/3029.html">
+	     				<div class="imgk img_d"><img src="/upload/image/20190925/20190925193532.jpg"></div>
+	     				<div class="txtk"><h2>黄旭华</h2><p>干惊天动地事，做隐姓埋名人</p></div>
+	     			</a>
+	    		</div>
+	    						<div class="item">
+	     			<a href="https://sjtuztjy.sjtu.edu.cn/xjdx/3028.html">
+	     				<div class="imgk img_d"><img src="/upload/image/20190925/20190925193735.jpg"></div>
+	     				<div class="txtk"><h2>彭康</h2><p>交大掌门人 西迁领导者</p></div>
+	     			</a>
+	    		</div>
+	    						<div class="item">
+	     			<a href="https://sjtuztjy.sjtu.edu.cn/xjdx/3026.html">
+	     				<div class="imgk img_d"><img src="/upload/image/20190925/20190925193902.jpg"></div>
+	     				<div class="txtk"><h2>王振义院士</h2><p>“一门四院士”，师徒接力攻克白血病</p></div>
+	     			</a>
+	    		</div>
+	    						<div class="item">
+	     			<a href="https://sjtuztjy.sjtu.edu.cn/xjdx/3025.html">
+	     				<div class="imgk img_d"><img src="/upload/image/20190925/20190925194009.jpg"></div>
+	     				<div class="txtk"><h2>“90后”院士孙钧</h2><p>为港珠澳大桥“专业护航”</p></div>
+	     			</a>
+	    		</div>
+	    						<div class="item">
+	     			<a href="https://sjtuztjy.sjtu.edu.cn/xjdx/3024.html">
+	     				<div class="imgk img_d"><img src="/upload/image/20190925/20190925194152.jpg"></div>
+	     				<div class="txtk"><h2>王浩伟</h2><p>30载潜心教学科研，聚焦国家重大技术难题</p></div>
+	     			</a>
+	    		</div>
+	    						<div class="item">
+	     			<a href="https://sjtuztjy.sjtu.edu.cn/xjdx/3021.html">
+	     				<div class="imgk img_d"><img src="/upload/image/20190925/20190925194258.jpg"></div>
+	     				<div class="txtk"><h2>孔海南</h2><p>交大版“老人与海”的故事：把论文写在祖国大地上</p></div>
+	     			</a>
+	    		</div>
+	    						<div class="item">
+	     			<a href="https://sjtuztjy.sjtu.edu.cn/xjdx/3016.html">
+	     				<div class="imgk img_d"><img src="/upload/image/20190925/20190925194413.jpg"></div>
+	     				<div class="txtk"><h2>潘建生</h2><p>上海交大“一线院士” 80岁高龄仍去工厂</p></div>
+	     			</a>
+	    		</div>
+	    			   		</div>
+	  	</div>
+	  	<div class="sy_anq wow fadeInUp wow fadeInUp"><a href="/xjdx.html" class="cd_a_r">更多先进典型</a></div>
+	  	<div class="clear"></div>
+	</div>
+</div>
+<div class="sy6 sy">
+ 	<div class="main">  
+  		<div class="ny_bt wow fadeInUp"><i></i>媒体关注<i></i></div>
+  		  		<ul class="mt_lb">
+  			   			<li class="wow fadeInUp">
+    			<a href="http://www.why.com.cn/epaper/webpc/qnb/html/2019-09/17/content_94040.html">
+	     			<div class="imgk img_d"><img src="/upload/image/20190925/20190925192147.jpg"><i></i></div>
+	     			<p>[青春告白] 把青春融入山河 将论文写在高原</p>
+    			</a>
+   			</li>
+   			   			<li class="wow fadeInUp">
+    			<a href="https://mp.weixin.qq.com/s?__biz=MjM5ODI2NDMwMw==&mid=2652813656&idx=1&sn=fb4788013dff9b9cacbb759d0f02c528&chksm">
+	     			<div class="imgk img_d"><img src="/upload/image/20190925/20190925192340.jpg"><i></i></div>
+	     			<p>上观专访钱永刚：父亲钱学森的最后22年</p>
+    			</a>
+   			</li>
+   			   			<li class="wow fadeInUp">
+    			<a href="http://dzb.whb.cn/2019-09-17/7/detail-651969.html">
+	     			<div class="imgk img_d"><img src="/upload/image/20190925/20190925192529.jpg"><i></i></div>
+	     			<p>五星红旗在商船航线最高纬度升起</p>
+    			</a>
+   			</li>
+   			   			<li class="wow fadeInUp">
+    			<a href="https://web.shobserver.com/wx/detail.do?id=176252&time=1568550178141">
+	     			<div class="imgk img_d"><img src="/upload/image/20190925/20190925192651.jpg"><i></i></div>
+	     			<p>中国国旗在人类商船航线的最高纬度、最险区段升起！他们穿越北极航道，开辟冰上丝路</p>
+    			</a>
+   			</li>
+   			  		</ul>
+  		<div class="sy_anq wow fadeInUp"><a href="/mtgz.html" class="cd_a_r">更多媒体关注</a></div>
+  		<div class="clear"></div>
+ 	</div>
+</div>
+
+<div class="sy6 sy sy_bj4">
+ 	<div class="main">
+  		<div class="ny_bt wow fadeInUp"><i></i>史料汇集<i></i></div>
+  		<div class="d1 wow fadeInUp">
+  	 		<div id="owl-demo2" class="owl-carousel">
+				                                	    		<div class="item">
+	     			<a href="javascript:void(0)" ><div class="imgk img_d"><img src="/upload/image/20190925/20190925094811.jpg"></div></a>
+	    		</div>
+	    					</div>
+  		</div>
+  		<div class="d2 fadeInUp">
+  						<ul class="sl_lb">
+					   			<li class="wow fadeInUp"><a href="https://sjtuhistory.sjtu.edu.cn/info/1016/1273.htm">中共交大组织的建立（1925--1930年）</a></li>
+	   				   			<li class="wow fadeInUp"><a href="https://sjtuhistory.sjtu.edu.cn/jdds1/hhzc1/dxdlddxmzzygmyd.htm">交大党史——地下党领导的新民主主义革命运动</a></li>
+	   				   			<li class="wow fadeInUp"><a href="https://sjtuhistory.sjtu.edu.cn/jdds1/hhzc1/shzygdjydtsyqz.htm">交大党史——社会主义高等教育的探索与曲折</a></li>
+	   				   			<li class="wow fadeInUp"><a href="https://sjtuhistory.sjtu.edu.cn/jdds1/hhzc1/zggkfzcjsjyl.htm">交大党史——在改革开放中创建世界一流</a></li>
+	   				   			<li class="wow fadeInUp"><a href="https://www.sjtu.edu.cn/">西迁与独立建校</a></li>
+	   				   			<li class="wow fadeInUp"><a href="https://sjtuhistory.sjtu.edu.cn/info/1011/1507.htm">从小龙坎到九龙坡</a></li>
+	   				   			<li class="wow fadeInUp"><a href="https://sjtuhistory.sjtu.edu.cn/info/1011/1503.htm">书生不辍爱国志</a></li>
+	   				   			<li class="wow fadeInUp"><a href="https://sjtuhistory.sjtu.edu.cn/info/1011/1509.htm">建成“陆海空”皆备的学科体系</a></li>
+	   				  		</ul>
+  		</div>
+  		<div class="sy_anq wow fadeInUp"><a href="/slhj.html" class="cd_a_r">更多史料汇集</a></div>
+  		<div class="clear"></div>
+ 	</div>
+</div>
+
+
+<script>
+ 	$('.menu').find("a").removeClass("on");
+	//轮转图
+	// mode: 'fade', 渐变
+   	// $('.hiSlider2').hiSlider();
+   	    $("#owl-demo1").owlCarousel({
+        items :1,
+        lazyLoad : true,
+        navigation : false,
+        pagination:true,
+        autoPlay:true,
+        itemsMobile:[450,1],
+        itemsTablet:[650,1],
+        itemsDesktopSmall:[900,1],
+        itemsDesktop:[1199,1],
+    });
+
+	$("#owl-demo2").owlCarousel({
+        items :1,
+        lazyLoad : true,
+        navigation : false,
+        pagination:true,
+        autoPlay:true,
+        itemsMobile:[450,1],
+        itemsTablet:[650,1],
+        itemsDesktopSmall:[900,1],
+        itemsDesktop:[1199,1],
+	});
+    $("#owl-demo3").owlCarousel({
+        items :4,
+        lazyLoad : true,
+        navigation : true,
+        pagination:false,
+        autoPlay:true,
+        itemsMobile:[450,1],
+        itemsTablet:[650,2],
+        itemsDesktopSmall:[900,3],
+        itemsDesktop:[1199,4],
+    });
+       
+</script>
+
+<script type="text/javascript" src="/js/wow.js"></script>
+<script>
+var wow = new WOW({
+    boxClass: 'wow',
+    animateClass: 'animated',
+    offset: 0,
+    mobile: true,
+    live: true
+});
+wow.init();
+</script>
+
+	<div class="foot">
+	 	<div class="main">
+	  		<div class="f1 wow fadeInUp" data-wow-delay=".1s">
+	  		沪ICP备05052060   沪举报中心   版权所有© 上海交通大学<br>  
+			地址：上海市东川路800号   邮编：200240   查号：86-21-54740000	  	</div>
+	  	<div class="f2 wow fadeInUp" data-wow-delay=".3s">
+	   		<span class="s1">相关链接</span>
+	   			   			   		<a href="https://www.sjtu.edu.cn" target="_blank">交大首页</a>
+	   			   		<b>|</b>
+	   			   			   		<a href="https://news.sjtu.edu.cn" target="_blank">交大新闻网</a>
+	   			   		<b>|</b>
+	   			   			   		<a href="http://jd.sjtu.edu.cn/web/JDJDW/2960001.htm" target="_blank">焦点网</a>
+	   			   			   	</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.fy1 a').each(function(){
+            if($(this).text()=='上一页' || $(this).text()=='下一页'){
+                $(this).addClass('cd_sx');
+            }
+        })
+    });
+</script>
+</body>
+</html>

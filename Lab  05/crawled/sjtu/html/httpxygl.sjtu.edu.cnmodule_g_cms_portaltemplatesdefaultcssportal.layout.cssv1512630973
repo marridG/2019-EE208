@@ -1,0 +1,108 @@
+/**
+ * portal布局css
+ * 
+ * @version $Id: portal.layout.css 4445 2018-01-11 08:44:14Z fuy $
+ * @creator liqt @ 2013-06-24 10:06:57 by caster0.0.2
+ */
+
+/*
+布局说明(基于yaml规范及最佳实践http://www.yaml.de/docs/index.html)：
+- 使用FULLPAGE Layout：The layout is subdivided into several vertical aligned sections, 
+covering the full width of the viewport. 
+The content area is aligned or centered within these sections.
+- 显示容器：div, id=scap-container // 为实现页面高度自动撑满，并使footer居于底部
+- 顶部导航栏: nav, id=nav-top, height=60px
+- 主体内容区域：div, id=main, height=auto
+- 脚部区域：footer, height=150px, width=1000px
+*/
+
+@media all {
+    html, body {
+        height: 100%;
+/*         background: url("../images/bg.jpg") repeat scroll 0 0 transparent; */
+		background-color: #fff;
+        font-size: 12px;
+        font-family: "微软雅黑", "黑体" !important;
+    }
+    
+    textarea {
+        resize: none;
+    }
+    
+    /**webkit取消文本框聚焦时边框颜色不变**/
+    textarea:focus, input:focus {
+        outline: none;
+    }
+    
+    body {
+        font-family: "微软雅黑", "黑体" !important;
+        /* font-family: "宋体", "Droid Serif",Georgia,"Times New Roman",Times,serif; */
+        overflow-y: scroll;
+        font-size: 12px;
+    }
+    
+    .font-yahei {
+        font-family: "微软雅黑", "黑体" !important;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        
+    }
+    
+    a:hover, a:focus {
+        background-color: transparent;
+    }
+    
+    /* http://ryanfait.com/resources/footer-stick-to-bottom-of-page/ */
+    #scap-container {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        margin: 0 auto -120px;/*对应footer高度*/
+    }
+    
+    /* 页面主体内容容器:The layout module defines a layout-wrapper and default values for minimum and maximum width. */
+    .ym-wrapper {
+        width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;/*相对位置，可使下级dom设置相对wrapper的绝对定位*/
+        background-color: #FFF;
+    }
+    
+    /*  White space surrounding the layout can be defined */
+    .ym-wbox {
+        padding: 0;
+        height: 100%;
+    }
+    
+    .ym-gbox {
+        padding: 0;
+    }
+    
+    .ym-cbox {
+        padding: 0;
+    }
+    
+    #footer, .scap-push {
+        height: 120px;
+    }
+    
+    a {
+        color: #333333;
+        list-style-type: none;
+        text-decoration: none;
+    }
+    
+    a:hover{
+        color:#D00000
+    }
+    
+    .no-result {
+        color: #999;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 100px 10px;
+        text-align: center;
+    }
+}

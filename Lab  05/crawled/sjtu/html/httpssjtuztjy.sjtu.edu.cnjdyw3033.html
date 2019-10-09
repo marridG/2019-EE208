@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>上海交大举行纪念中国共产党成立98周年活动暨“不忘初心、牢记使命”电影党课-上海交通大学“不忘初心,牢记使命”主题教育</title>
+<meta name="description" content="上海交通大学“不忘初心,牢记使命”主题教育" />
+<meta name="keywords" content="上海交通大学“不忘初心,牢记使命”主题教育" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Bootstrap -->    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+<link type="text/css" rel="stylesheet" href="/css/css.css" />
+<link rel="stylesheet" href="/css/animate.css">
+<script src="/js/jquery.min.js"></script>
+<!--轮转焦点图-->
+<script src="/js/jquery.hiSlider.js"></script>
+<link rel="stylesheet" href="/css/jquery.hiSlider.css">
+
+<!-- 图片滚动 --> 
+<link href="/css/owl.carousel.css" type="text/css" rel="stylesheet" />
+<link href="/css/owl.theme.css" type="text/css" rel="stylesheet" />
+<!-- 图片滚动 --> 
+<script type="text/javascript" src="/js/owl.carousel.js"></script>
+<script type="text/javascript">
+    function search_validate(){
+        if(document.getElementById('search_keywords').value == ''){
+            alert('请输入搜索关键字');
+            return false;
+        }
+    }
+</script> 
+</head>
+<body class="bj_b"><div class="top" id="top_nav">
+    <div class="main">
+        <a href="/" class="logo"></a>     
+        <span class="menu2" id="menu2"><a href="javascript:void(0)">&nbsp;</a></span>   
+        <div id=navk>
+                        <ul class="cd_t">
+                  
+                <li><a href="https://www.sjtu.edu.cn" target="_blank">交大首页</a></li>
+                                <li class="l_x">|</li>
+                                  
+                <li><a href="https://news.sjtu.edu.cn" target="_blank">交大新闻网</a></li>
+                                <li class="l_x">|</li>
+                                  
+                <li><a href="http://jd.sjtu.edu.cn/web/JDJDW/2960001.htm" target="_blank">焦点网</a></li>
+                                            </ul>
+            <span class="ss">
+                <form method="get" action="https://sjtuztjy.sjtu.edu.cn/active/search.html" onsubmit="return search_validate();">
+                <div class="txtk">
+                    <input type="text" id="search_keywords" name="search_keywords" class="form-control" placeholder="">
+                    <button class="an_ss" type="submit"></button>
+                </div>
+                </form>
+            </span>
+            <ul class="menu">
+                <li><a href="/" class="dbt">首页</a></li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/zyjs.html" class="dbt ">中央精神</a>
+                                        <dl>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/zy_file.html" >中央文件</a></dd>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/zy_study.html" >学习资料</a></dd>
+                                            </dl>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/news.html" class="dbt on">新闻动态</a>
+                                        <dl>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/jdyw.html" >交大要闻</a></dd>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/jcdt.html" >基层动态</a></dd>
+                                            </dl>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/xjdx.html" class="dbt ">先进典型</a>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/mtgz.html" class="dbt ">媒体关注</a>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/slhj.html" class="dbt ">史料汇集</a>
+                                    </li>
+                            </ul>
+            <div class="clear"></div>
+        </div> 
+    </div>  
+</div>
+<div class="top_jg"></div>
+<SCRIPT type=text/javascript>  
+$(document).ready(function() {
+    var pk=document.body.clientWidth;
+    if(pk<1200){
+        //手机菜单
+        $("#menu2").click(function(){
+            if($("#navk").css("display")=="none"){
+                $(this).find("a").addClass("on");
+                $("#navk").slideDown("slow");       
+            }
+            else{
+                $(this).find("a").removeClass("on");
+                $("#navk").slideUp("slow");     
+            }
+        });  
+    }
+    else{
+        $(".menu li").hover(function() {
+            $(this).find("dl").css("display","block");
+        },function(){
+            
+            $(this).find("dl").css("display","none");
+        });
+
+        //向下滚动顶部缩小
+        $.fn.smartFloat = function() {
+            var position = function(element) {
+                var top = element.position().top, pos = element.css("position");
+                $(window).scroll(function() {
+                    var scrolls = $(this).scrollTop();
+                    if (scrolls > top) {
+                        $("#top_nav").addClass("on");
+                        if (window.XMLHttpRequest) {
+                            element.css({
+                                position: "fixed",
+                                //background:"#efefef",
+                                top: 0
+                            });
+                        } else {
+                            element.css({
+                                top: scrolls
+                            });
+                        }
+                    }else {
+                        $("#top_nav").removeClass("on");
+                        element.css({
+                            position: pos,
+                            //background:"transparent",
+                            top: top
+                        });
+                    }
+                });
+            };
+            return $(this).each(function() {
+                position($(this));
+            });
+
+        };
+        $("#top_nav").smartFloat();
+        //向下滚动顶部缩小 end
+    };
+});  
+//-->  
+</SCRIPT>
+<div class="ban"><img src="/upload/image/20190924/20190924141304.jpg" ></div>
+<div class="dqwz">
+ 	<div class="main wow fadeInUp">
+  		<a href="/">首页</a> &gt; <a href="https://sjtuztjy.sjtu.edu.cn/news.html">新闻动态</a> &gt; <a href="https://sjtuztjy.sjtu.edu.cn/jdyw.html">交大要闻</a> 	</div>
+</div>
+<div class="nyk">
+	 	<div class="main">
+   		<div class="zt_snr">
+     		<div class="sbt wow fadeInUp">上海交大举行纪念中国共产党成立98周年活动暨“不忘初心、牢记使命”电影党课</div>
+     		<div class="fbt wow fadeInUp"></div>
+     		<div class="xx wow fadeInUp"></div>
+    		<div class="ssj news_ssj wow fadeInUp">日期：2019-07-02</div>
+    		<div class="snr wow fadeInUp">
+			    <p>　　7月1日下午，上海交大纪念中国共产党成立98周年暨&ldquo;不忘初心、牢记使命&rdquo;电影党课在菁菁堂举行。会上，校党委书记姜斯宪同志讲话，校长林忠钦宣读了上海市教卫工作党委系统&ldquo;两优一先&rdquo;表彰名单和上海交通大学&ldquo;两优一先&rdquo;表彰决定。与会同志共同参加了&ldquo;不忘初心、牢记使命&rdquo;电影党课，观看电影《周恩来回延安》。大会由校党委副书记顾锋主持。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="" src="/upload/image/20190925/20190925115501.jpg" style="width: 800px;" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="" src="/upload/image/20190925/20190925115519.jpg" style="width: 800px;" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="" src="/upload/image/20190925/20190925115541.jpg" style="width: 800px;" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="" src="/upload/image/20190925/20190925115556.jpg" style="width: 800px;" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="" src="/upload/image/20190925/20190925115607.jpg" style="width: 800px;" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="" src="/upload/image/20190925/20190925115616.jpg" style="width: 800px;" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="" src="/upload/image/20190925/20190925115627.jpg" style="width: 800px;" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="" src="/upload/image/20190925/20190925115638.jpg" style="width: 800px;" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="" src="/upload/image/20190925/20190925115647.jpg" style="width: 800px;" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p>　　在今年上海市教卫工作党委&ldquo;两优一先&rdquo;评选中，学校共受表彰优秀共产党员13名，优秀党务工作者12名，先进基层党组织12个。为弘扬先进，进一步激励学校各级党组织和广大党员不忘初心、牢记使命，学校党委决定表彰优秀共产党员200名，优秀党务工作者69名，命名先进基层党组织52个。会上，姜斯宪和林忠钦共同为大家颁发了荣誉证书。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="" src="/upload/image/20190925/20190925115754.jpg" style="width: 800px;" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p>　　与会同志集体观看影片《周恩来回延安》，上了一堂难忘的&ldquo;不忘初心、牢记使命&rdquo;电影党课。该片以1973年6月身患重症的周恩来总理回到延安这一历史事件为叙事中心，重温党的奋斗历程，回顾了中国革命在延安时期的重大历史事件，讴歌了中国共产党与人民血肉相连，不忘初心、不懈奋斗的伟大精神。怀着深情厚意，一起重温周总理回延安的短暂22小时，感悟周恩来同志伟大、光荣的一生。大家表示，通过观看影片，深刻学习周恩来同志坚定的共产主义信念，学习他伟大的革命精神，学习他高尚的人格风范和真挚的人民情怀。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="" src="/upload/image/20190925/20190925115830.jpg" style="width: 800px;" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p>　　姜斯宪在讲话中表示，以&ldquo;两优一先&rdquo;表彰和电影党课的方式庆祝党的生日，旨在进一步深入学习领会习近平新时代中国特色社会主义思想。他代表学校党委向全校广大党员致以节日的问候，向获得表彰的先进集体和个人表示祝贺，他希望各级党组织和全体党员：一要牢记初心使命，不断加强党的建设，为学校改革发展凝聚强大力量。党的十八大以来，习近平总书记对高等教育的发展高度重视，发表了一系列重要论述，这是习近平新时代中国特色社会主义思想的重要内容，为高校办学治校提供了根本遵循；全校各级党组织要认真领会，在具体实践中加以落实，真正把旗帜举起来，把力量聚起来，加快建设中国特色世界一流的大学。二要强化示范引领，发挥战斗堡垒和先锋模范作用。各基层党组织应强化在思想引领、促进学校中心工作、规范组织生活、团结凝聚师生方面的作用；各位党员要围绕中心、服务大局、精勤进取，做党的教育事业的忠诚实践者：在立德树人方面，坚持高等教育的办学方向和根本任务；在科研创新方面，要有责任感、使命感, 加强关键核心技术集中攻关。姜斯宪强调，全体党员同志要紧密团结在以习近平同志为核心的党中央周围,不忘初心、牢记使命，为加快建设中国特色世界一流大学而不懈奋斗。</p>
+
+<p>&nbsp;</p>
+
+<p><br />
+　　全体校领导、校党委委员、纪委委员，受表彰的&ldquo;两优一先&rdquo;个人及党组织负责人，全体处级领导干部、机关部处科以上干部，思政教师、辅导员、组织员（组织干事）、全体教职工党支部书记、学生党支部书记代表、民主党派代表等近千人出席大会。</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: right;">&nbsp;</p>
+
+<p style="text-align: right;">作者：江倩倩<br />
+摄影：梅秋武<br />
+供稿单位：新闻中心</p>
+    		</div>
+    		<div class="sgd wow fadeInUp">
+				            	<a href="https://sjtuztjy.sjtu.edu.cn/jdyw/3035.html">下一条：校党委书记姜斯宪焦点讲坛作专题授课</a>     			<a href="https://sjtuztjy.sjtu.edu.cn/jdyw.html" class="cd_fh">返回列表</a>
+     		</div>
+   		</div>
+  		<div class="clear"></div>
+ 	</div>
+</div>
+<script type="text/javascript" src="/js/wow.js"></script>
+<script>
+var wow = new WOW({
+    boxClass: 'wow',
+    animateClass: 'animated',
+    offset: 0,
+    mobile: true,
+    live: true
+});
+wow.init();
+</script>
+
+	<div class="foot">
+	 	<div class="main">
+	  		<div class="f1 wow fadeInUp" data-wow-delay=".1s">
+	  		沪ICP备05052060   沪举报中心   版权所有© 上海交通大学<br>  
+			地址：上海市东川路800号   邮编：200240   查号：86-21-54740000	  	</div>
+	  	<div class="f2 wow fadeInUp" data-wow-delay=".3s">
+	   		<span class="s1">相关链接</span>
+	   			   			   		<a href="https://www.sjtu.edu.cn" target="_blank">交大首页</a>
+	   			   		<b>|</b>
+	   			   			   		<a href="https://news.sjtu.edu.cn" target="_blank">交大新闻网</a>
+	   			   		<b>|</b>
+	   			   			   		<a href="http://jd.sjtu.edu.cn/web/JDJDW/2960001.htm" target="_blank">焦点网</a>
+	   			   			   	</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.fy1 a').each(function(){
+            if($(this).text()=='上一页' || $(this).text()=='下一页'){
+                $(this).addClass('cd_sx');
+            }
+        })
+    });
+</script>
+</body>
+</html>

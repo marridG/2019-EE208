@@ -1,0 +1,444 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>百度百科-帮助中心</title>
+<link rel="stylesheet" type="text/css" media="screen" href="https://bkssl.bdimg.com/static/common/widget/userbar/userbar_bcdebd9.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="https://bkssl.bdimg.com/static/common/widget/ui/basecss/basecss_f837c5c.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/cms/s/help/s/styles/util.css" />
+<!--[if IE 6]>
+<script src="s/script/iepng.js" type="text/javascript"></script>
+<script type="text/javascript">
+  EvPNG.fix('*'); //EvPNG.fix;
+</script>
+<![endif]-->
+
+<script src="/cms/s/help/s/script/jquery-1.9.1.js"></script>
+<script src="/cms/s/help/s/script/util.js" type="text/javascript"></script>
+<script src="/cms/s/help/s/script/jquery.slides.min.js"></script>
+</head>
+
+<body>
+<!--header start-->
+<div class="grid header" id="header">
+	<div class="headerMain">
+		<div class="logo"> <a class="nslog:1008" href="/" title="到百科首页"><img width="137" height="46" src="https://bkssl.bdimg.com/img/baike/logo-baike.png"></a>
+			<div class="logoMain"> <span class="line">|</span> <span class="title"><a href="#">帮助中心</a><sup class="betaicon"></sup></span> </div>
+		</div>
+		<div class="search">
+			<form target="_self" name="f1" method="get" id="f1" action="/search/word">
+				<span class="s_ipt_wr"><span>
+				<input lang="zh-CN" value="" tabindex="1" name="word" maxlength="100" id="word" x-webkit-speech="true" x-webkit-grammar="builtin:search" onwebkitspeechchange="this.form.submit();" class="s_ipt" autocorrect="off" autocomplete="off">
+				</span></span><span class="s_btn_wr"><span>
+				<input type="submit" style="z-index: 9; position: relative;" value="进入词条" tabindex="2" onmouseout="this.className='s_btn nslog:1010';" onmousedown="this.className='s_btn s_btn_h nslog:1010';" onclick="this.form.pic.value=1;" log-data-detail="{page:'index'}" class="s_btn nslog:1010">
+				</span></span><span class="s_btn_wr"><span>
+				<input type="submit" style="z-index: 9; position: relative; " value="搜索词条" tabindex="3" onmouseout="this.className='s_btn nslog:1011'" onmousedown="this.className='s_btn s_btn_h nslog:1011';" onclick="this.form.pic.value=2;" log-data-detail="{page:'index'}" class="s_btn nslog:1011">
+				<b style="z-index: 9; position: relative; "></b><b style="z-index: 9; position: relative; "></b></span></span>
+				<input type="hidden" value="1" name="pic" id="sw1">
+				<input type="hidden" value="1" name="sug">
+				<input type="hidden" value="utf8" name="enc" id="search-enc">
+			</form>
+		</div>
+		<style type="text/css">
+		  /**
+		  * @短搜索框
+		  * @author liuwei19
+		  * @update 2013-8-9 14:54:00
+		  */
+		  /* header */
+		  .headerMain{height:77px;}
+		  .headerMain .betaicon{width:24px;height:10px;background:url('/static/common/widget/search_short/img/beta_030f830.png') no-repeat;display: inline-block;margin-left:3px;position: relative;top: -8px;left:3px;}
+		  .headerMain .line{font-size:18px;font-family:"simSun";color:#808080;}
+		  .headerMain .title,.headerMain .title a{font-size:18px;font-family:"微软雅黑";color:#808080;text-decoration: none;}
+		  .headerMain .logo{float:left;height:32px;margin-top: 26px;}
+		  .headerMain .logoMain{display:inline-block;display:-moz-inline-stack;*display:inline;*zoom:1;position:relative;top:-5px;}
+		  .headerMain img{width:100px;height:32px;}
+		  .headerMain .search{float:right;padding-top:35px;}
+		  .headerMain .search .s_ipt_wr,
+		  .headerMain .search .s_btn,
+		  .tangram-suggestion-main, .tang-suggestion-popup{border:1px solid #d1d1d1;}
+		  .headerMain .search .s_ipt_wr{margin-right:2px;height:27px;width:290px;display:inline-block;display:-moz-inline-stack;*display:inline;*zoom:1;}
+		  .headerMain .search .s_btn{margin-left:7px;padding:5px 15px;background:url('https://bkssl.bdimg.com/img/baike/searchBtnBg.png') repeat-x;cursor:pointer;color:#565656;filter:chroma(color=#000000);outline:none;width:84px;text-align: center;}
+		  .tangram-suggestion-main, .tang-suggestion-popup{width:290px!important;}
+		  .headerMain .search #word{margin:2px 0 0 7px;padding:0;border:none;width:280px;height:23px;background: #fff;-webkit-appearance:none;}
+		</style>
+	</div>
+</div>
+<!--header end-->
+
+<!--banner start-->
+<div class="banner" id="slideshow">
+	<div class="banner01-bg"></div>
+	<div class="banner02-bg"></div>
+	<div class="banner03-bg"></div>
+</div>
+<!-- SlidesJS -->
+<script type="text/javascript">
+$(function() {
+	$('#slideshow').slidesjs({
+		width: '100%',
+		height: 361
+	});
+});
+</script>
+<!-- End SlidesJS Required -->
+<!--banner end-->
+
+<!--nav start-->
+<div class="nav" id="helpNav">
+	<ul class="wrapper">
+		<li><a id="helpNav01" href="javascript:void(0)">新手入门</a></li>
+		<li><a id="helpNav02" href="javascript:void(0)">百科理念</a></li>
+		<li><a id="helpNav03" href="javascript:void(0)">编辑宝典</a></li>
+		<li><a id="helpNav04" href="javascript:void(0)">常见问题</a></li>
+		<li><a id="helpNav05" href="javascript:void(0)">百科术语</a></li>
+		<li><a id="helpNav06" href="javascript:void(0)">编辑规则</a></li>
+	</ul>
+</div>
+<!--nav end-->
+
+<!--main main01 start-->
+<div class="main main01" id="main01">
+	<div class="wrapper">
+		<div class="main-tlt">
+			<b>1</b>
+			<p><strong>新手入门</strong><span>编辑词条 只需四步</span></p>
+		</div>
+		<div class="main-wrapper">
+			<div class="main-left">
+				<h3><i>1</i><span>发现问题，编辑词条</span></h3>
+				<p>如果你发现百度百科的词条内容不正确或者不全面，你可以动手改正它</p>
+				<p>点击词条名旁边的“编辑”开始编辑词条</p>
+				<p>如果发现百度百科没有收录你关心的词条，你可以<a href="https://baike.baidu.com/page/createindex" target="_blank">创建新词条</a>；如果百度百科已经收录了同名的其他义项，你可以点击义项选择区的“添加义项”</p>
+				<h3><i>2</i><span>增删内容，修正错误</span></h3>
+				<p>你可以改正词条里的错别字，补充新资料或者删除冗余的内容</p>
+				<p>词条里可以添加图片、表格、地图等等丰富的内容</p>
+				<p>记得给新添加的内容附上参考资料哦</p>
+			</div>
+			<div class="main-right">
+				<img src="/cms/s/help/s/images/img01.jpg" />
+			</div>
+		</div>
+		<div class="main-wrapper main-wrapper02">
+			<div class="main-left">
+				<img src="/cms/s/help/s/images/img02.jpg" />
+			</div>
+			<div class="main-right">
+				<h3 class="marginTop0"><i>3</i><span>预览效果，提交词条</span></h3>
+				<p>如果你已经编辑完了，可以点击右上角的“预览”看看整体的效果</p>
+				<p>看一下目录结构是不是一致，排版是不是美观</p>
+				<p>确认没问题的话就点“提交”吧</p>
+				<h3><i>4</i><span>等待片刻，版本通过</span></h3>
+				<p>你的词条版本提交之后，需要等待一段时间，系统会进行检查</p>
+				<p>你可以在“待通过版本”中看到已经提交的版本</p>
+				<p>版本通过之后，你会收到提示，你编辑的内容也会成为词条的最新版本</p>
+				<p>你的版本也可能无法通过，这时候需要依照未通过原因进行修改</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!--main main01 end-->
+
+<!--main main02 start-->
+<div class="main main02" id="main02">
+	<div class="wrapper">
+		<div class="main-tlt">
+			<b>2</b>
+			<p><strong>百科理念</strong><span>这些原则 你得明白</span></p>
+		</div>
+		<div class="main-wrapper">
+			<div class="main02-pub01">
+				<p class="main02-tip">真实</p>
+				<p class="main02-intr">
+					百科是人人都能编辑的 , 但不是人人都能乱改的
+					所有的更改都应该有据可依
+				</p>
+			</div>
+			<div class="main02-pub02">
+				<p class="main02-tip">客观</p>
+				<p class="main02-intr">
+					百科收集了无数信息，恶意诋毁和吹嘘夸大除外
+					百科全书不应该有任何个人好恶倾向
+				</p>
+			</div>
+			<div class="main02-pub03">
+				<p class="main02-tip">负责</p>
+				<p class="main02-intr">
+					你编辑的每字每句, 都会被万千网友读到并记得
+					所有的修改都应该对整个词条负责
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!--main main02 end-->
+
+<!--main main03 start-->
+<div class="main main03" id="main03">
+	<div class="wrapper">
+		<div class="main-tlt">
+			<b>3</b>
+			<p><strong>编辑宝典</strong><span>编辑操作 一看就会</span></p>
+			<a class="main-tlt-link"  href="https://baike.baidu.com/usercenter#guide" target="_blank">参加成长任务</a>
+		</div>
+		<div class="main-wrapper">
+			<div class="main03-list" id="slides">
+
+				<!--main03-listPub start-->
+				<div class="main03-listPub">
+					<div class="main03-pub">
+						<img src="/cms/s/help/s/images/img/1.png" />
+						<div class="main03-intro">
+							<h4>认识编辑器</h4>
+							<p>怎么编辑一个词条呢？我们一起来认识一下百科词条编辑器吧！</p>
+							<p class="more"><a target="_blank" href="http://baike.baidu.com/static/usercenter/page/lesson.html?t=2&swf=http%3A%2F%2Fbaike.bdimg.com%2Fstatic%2Fusercenter%2Fimages%2Fgrowuptask%2Ftask2%2Fflash%2Flearn_editor.swf&lid=1_3_3&r=0.308460756437853#flashexam">去看看</a></p>
+						</div>
+					</div>
+					<div class="main03-pub">
+						<img src="/cms/s/help/s/images/img/2.png" />
+						<div class="main03-intro">
+							<h4>基础编辑</h4>
+							<p>词条都是网友们编辑出来的。一起看看百科词条的基础编辑方法。</p>
+							<p class="more"><a target="_blank" href="http://baike.baidu.com/static/usercenter/page/lesson.html?t=2&swf=http%3A%2F%2Fbaike.bdimg.com%2Fstatic%2Fusercenter%2Fimages%2Fgrowuptask%2Ftask2%2Fflash%2Fcontent_edit.swf&lid=2_4_1&r=0.5797597726341337#flashexam">去看看</a></p>
+						</div>
+					</div>
+					<div class="main03-pub">
+						<img src="/cms/s/help/s/images/img/3.png" />
+						<div class="main03-intro">
+							<h4>版本提交</h4>
+							<p>编辑完词条之后点击提交，才能让你编辑的内容真正展现在词条页面上。</p>
+							<p class="more"><a target="_blank" href="http://baike.baidu.com/static/usercenter/page/lesson.html?t=2&swf=http%3A%2F%2Fbaike.bdimg.com%2Fstatic%2Fusercenter%2Fimages%2Fgrowuptask%2Ftask2%2Fflash%2Fedit_submit.swf&lid=2_5_1&r=0.015156768262386322#flashexam">去看看</a></p>
+						</div>
+					</div>
+					<div class="main03-pub">
+						<img src="/cms/s/help/s/images/img/5.png" />
+						<div class="main03-intro">
+							<h4>添加目录</h4>
+							<p>为了让一个词条结构清晰，需要把它分开一级目录和二级目录。</p>
+							<p class="more"><a target="_blank" href="http://baike.baidu.com/static/usercenter/page/lesson.html?t=2&swf=http%3A%2F%2Fbaike.bdimg.com%2Fstatic%2Fusercenter%2Fimages%2Fgrowuptask%2Ftask2%2Fflash%2Fcatalog.swf&lid=3_7_1&r=0.1692324560135603#flashexam">去看看</a></p>
+						</div>
+					</div>
+					<div class="main03-pub">
+						<img src="/cms/s/help/s/images/img/6.png" />
+						<div class="main03-intro">
+							<h4>添加图片</h4>
+							<p>百科词条里还可以增加图片、图册、地图等等更丰富的内容哦！</p>
+							<p class="more"><a target="_blank" href="http://baike.baidu.com/static/usercenter/page/lesson.html?t=2&swf=http%3A%2F%2Fbaike.bdimg.com%2Fstatic%2Fusercenter%2Fimages%2Fgrowuptask%2Ftask2%2Fflash%2Faddpic.swf&lid=3_8_1&r=0.6023535791318864#flashexam">去看看</a></p>
+						</div>
+					</div>
+					<div class="main03-pub">
+						<img src="/cms/s/help/s/images/img/7.png" />
+						<div class="main03-intro">
+							<h4>添加表格</h4>
+							<p>表格是门大学问，排版的时候可以发挥意想不到的作用哦~</p>
+							<p class="more"><a target="_blank" href="http://baike.baidu.com/static/usercenter/page/lesson.html?t=2&swf=http%3A%2F%2Fbaike.bdimg.com%2Fstatic%2Fusercenter%2Fimages%2Fgrowuptask%2Ftask2%2Fflash%2Feffort.swf&lid=3_9_1&r=0.04722136654891074#flashexam">去看看</a></p>
+						</div>
+					</div>
+				</div>
+				<!--main03-listPub end-->
+
+				<!--main03-listPub start-->
+				<div class="main03-listPub">
+
+					<div class="main03-pub">
+						<img src="/cms/s/help/s/images/img/4.png" />
+						<div class="main03-intro">
+							<h4>任务平台</h4>
+							<p>领任务，编词条，拿积分，换奖品。<br/><a target="_blank" href="http://baike.baidu.com/task">去百科任务</a></p>
+							<p class="more"><a target="_blank" href="http://baike.baidu.com/static/usercenter/page/lesson.html?t=2&swf=&lid=2_6_2&r=0.504437152761966#flashexam">去看看</a></p>
+						</div>
+					</div>
+					<div class="main03-pub">
+						<img src="/cms/s/help/s/images/img/8.png" />
+						<div class="main03-intro">
+							<h4>百科商城</h4>
+							<p>编词条能得到财富值，财富值能用来做什么呢？<a target="_blank" href="http://baike.baidu.com/mall">进入百科商城</a>就知道了！</p>
+							<p class="more"><a target="_blank" href="http://baike.baidu.com/static/usercenter/page/lesson.html?t=2&swf=http%3A%2F%2Fbaike.bdimg.com%2Fstatic%2Fusercenter%2Fimages%2Fgrowuptask%2Ftask2%2Fflash%2Fmall.swf&lid=2_5_2&r=0.4425782235339284#flashexam">去看看</a></p>
+						</div>
+					</div>
+				</div>
+				<!--main03-listPub end-->
+
+			</div>
+		</div>
+	</div>
+</div>
+<!--main main03 end-->
+<script type="text/javascript">
+$(function() {
+	$('#slides').slidesjs({
+		width: 953,
+		height: 408
+	});
+});
+</script>
+
+<!--main main04 start-->
+<div class="main main04" id="main04">
+	<div class="wrapper">
+		<div class="main-tlt">
+			<b>4</b>
+			<p><strong>常见问题</strong><span>遇到问题 来这里看</span></p>
+			<a class="main-tlt-link" href="http://zhidao.baidu.com/new?ie=GBK" target="_blank">我要提问</a>
+		</div>
+		<div class="main-wrapper">
+			<div class="main04-list">
+				<div class="main04-listPub main04-listPub01">
+					<h5>创建词条</h5>
+					<div class="main04-links">
+						<p><a target="_blank" href="https://baike.baidu.com/planet/issue?issueId=461220">如何创建一个词条？</a></p>
+						<p><a target="_blank" href="https://baike.baidu.com/planet/issue?issueId=461202">什么样的词条能被创建？</a></p>
+						<!-- <p><a target="_blank" href="http://tieba.baidu.com/p/3818071811">创建词条的时候怎么选分类？</a></p> -->
+						<p><a target="_blank" href="https://baike.baidu.com/planet/issue?issueId=461213">有一个词条跟我想创建的词条重名怎么办？</a></p>
+						<p class="last"><a target="_blank" href="https://baike.baidu.com/planet/issue?issueId=461264">为什么我创建的词条没有通过审核？</a></p>
+					</div>
+				</div>
+				<div class="main04-listPub">
+					<h5>编辑词条</h5>
+					<div class="main04-links">
+						<p><a target="_blank" href="https://baike.baidu.com/planet/issue?issueId=461142">百科词条有明显错误，怎么会通过呢？</a></p>
+						<p><a target="_blank" href="https://baike.baidu.com/planet/issue?issueId=459566">如果某个词条名称是错的，应该怎么改正？</a></p>
+						<p><a target="_blank" href="https://baike.baidu.com/planet/issue?issueId=460432">怎么合并同义词？</a></p>
+						<p><a target="_blank" href="https://baike.baidu.com/planet/issue?issueId=460432">怎么拆分多义词？</a></p>
+						<p class="last"><a target="_blank" href="https://baike.baidu.com/planet/issue?issueId=462752">更多常见问题</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="main04-list main04-list02">
+				<h5>未通过</h5>
+				<div class="main04-links">
+					<p><a target="_blank" href="https://baike.baidu.com/planet/issue?issueId=461236">什么是“参考资料不可靠”？</a></p>
+					<p><a target="_blank" href="https://baike.baidu.com/planet/issue?issueId=461237">什么是“含有不客观的内容”？</a></p>
+					<p><a target="_blank" href="https://baike.baidu.com/planet/issue?issueId=462765">什么是“包含广告或宣传性质的内容”？</a></p>
+					<p><a target="_blank" href="https://baike.baidu.com/planet/issue?issueId=461246">什么是“词条名不规范”？</a></p>
+					<p><a target="_blank" href="https://baike.baidu.com/planet/issue?issueId=459261">什么是“含有大量溢美夸耀的描述”？</a></p>
+					<p><a target="_blank" href="https://baike.baidu.com/planet/issue?issueId=461241">什么是“内链不正确”？</a></p>
+					<p><a target="_blank" href="https://baike.baidu.com/planet/issue?issueId=461176">什么是“义项名不正确”？</a></p>
+					<p><a target="_blank" href="https://baike.baidu.com/planet/issue?issueId=461233">什么是“缺少必要的介绍”？</a></p>
+					<p><a target="_blank" href="https://baike.baidu.com/planet/issue?issueId=462773">什么是“缺少参考资料”？</a></p>
+					<p><a target="_blank" href="https://baike.baidu.com/planet/issue?issueId=461195">什么是“参考资料与内容不对应”？</a></p>
+					<p class="last"><a target="_blank" href="https://baike.baidu.com/planet/issue?issueId=461259">什么是“内容与词条主题相关性过低”？</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--main main04 end-->
+
+<!--main main05 start-->
+<div class="main main05" id="main05">
+	<div class="wrapper">
+		<div class="main-tlt">
+			<b>5</b>
+			<p><strong>百科术语</strong><span>专业名词 详细解读</span></p>
+		</div>
+		<div class="main-wrapper">
+			<div class="main-wrapperCloud">
+				<a class="color01 size18" style="top:36px;left:130px;" target="_blank" href="http://baike.baidu.com/view/10812403.htm">通过率</a>
+				<a class="color01 size24" style="top:60px;left:292px;" target="_blank" href="http://baike.baidu.com/view/10812393.htm">创建版本</a>
+				<a class="color02 size44" style="top:14px;left:420px;" target="_blank" href="https://baike.baidu.com/item/%E7%99%BE%E5%BA%A6%E7%99%BE%E7%A7%91%EF%BC%9A%E8%B7%B3%E8%BD%AC%E5%85%B3%E7%B3%BB/16202814">跳转关系</a>
+
+				<a class="color01 size18" style="top:100px;left:200px;" target="_blank" href="http://baike.baidu.com/view/4790778.htm">义项名</a>
+				<a class="color02 size44" style="top:84px;left:546px;" target="_blank" href="http://baike.baidu.com/view/10812277.htm">多义词</a>
+				<a class="color01 size24" style="top:92px;left:735px;" target="_blank" href="http://baike.baidu.com/view/10812866.htm">基本信息栏</a>
+
+				<a class="color02 size44" style="top:148px;left:86px;" target="_blank" href="https://baike.baidu.com/item/%E7%99%BE%E5%BA%A6%E7%99%BE%E7%A7%91%EF%BC%9A%E5%86%85%E9%93%BE">内链</a>
+				<a class="color02 size18" style="top:160px;left:260px;" target="_blank" href="http://baike.baidu.com/view/10812479.htm">不欢迎的内容</a>
+				<a class="color02 size64" style="top:120px;left:389px;" target="_blank" href="http://baike.baidu.com/view/10812237.htm">词条</a>
+				<a class="color03 size24" style="top:162px;left:617px;" target="_blank" href="http://baike.baidu.com/view/10812326.htm">复杂版本</a>
+				<a class="color02 size30" style="top:153px;left:776px;" target="_blank" href="http://baike.baidu.com/view/10812306.htm">特色词条</a>
+
+				<a class="color01 size30" style="top:217px;left:190px;" target="_blank" href="http://baike.baidu.com/view/10812298.htm">编辑冲突</a>
+				<!-- <a class="color02 size14" style="top:214px;left:350px;" target="_blank" href="#">概述</a> -->
+				<a class="color02 size24" style="top:234px;left:412px;" target="_blank" href="http://baike.baidu.com/view/10812319.htm">锁定词条</a>
+				<a class="color02 size30" style="top:207px;left:540px;" target="_blank" href="http://baike.baidu.com/view/10812001.htm">可查证的来源</a>
+				<a class="color02 size14" style="top:230px;left:732px;" target="_blank" href="http://baike.baidu.com/view/10812809.htm">词条概述</a>
+				<a class="color01 size14" style="top:218px;left:894px;" target="_blank" href="http://baike.baidu.com/view/10646573.htm">覆盖</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!--main main05 end-->
+
+<!--main main06 start-->
+<div class="main main06" id="main06">
+	<div class="wrapper">
+		<div class="main-tlt">
+			<b>6</b>
+			<p><strong>编辑规则</strong><span>规则细节 深入阅读</span></p>
+		</div>
+		<div class="main-wrapper">
+			<div class="main06-list main06-list01">
+				<h5>通用规则</h5>
+				<div class="main06-links">
+					<p><a target="_blank" href="http://baike.baidu.com/view/10806812.htm">10分钟学会编辑百科</a><a target="_blank" href="http://baike.baidu.com/view/10811503.htm">收录原则</a></p>
+					<p><a target="_blank" href="http://baike.baidu.com/view/10811633.htm">规范的词条名</a><a target="_blank" href="http://baike.baidu.com/view/10811885.htm">规范的文字和措辞</a></p>
+					<p><a target="_blank" href="http://baike.baidu.com/view/10811941.htm">词条名片</a><a target="_blank" href="http://baike.baidu.com/view/10811960.htm">完整的词条结构</a></p>
+					<p><a target="_blank" href="http://baike.baidu.com/view/10811976.htm">有逻辑的行文</a><a target="_blank" href="http://baike.baidu.com/view/10812001.htm">参考资料</a></p>
+					<p><a target="_blank" href="http://baike.baidu.com/view/10812184.htm">可靠的来源</a><a target="_blank" href="http://baike.baidu.com/view/10812277.htm">多义词判断原则</a></p>
+					<p class="last"><a target="_blank" href="http://baike.baidu.com/view/10799261.htm">违规行为及其处罚</a><a target="_blank" href="http://baike.baidu.com/view/10973017.htm">词条的必要介绍</a></p>
+				</div>
+			</div>
+			<div class="main06-list main06-list02">
+				<h5>分类指南</h5>
+				<div class="main06-links">
+					<p><a target="_blank" href="http://baike.baidu.com/view/10602076.htm">人物类特色词条编辑指南</a></p>
+					<p><a target="_blank" href="http://baike.baidu.com/view/11419808.htm">明星类特色词条编辑指南</a></p>
+					<p><a target="_blank" href="http://baike.baidu.com/view/10618242.htm">动画漫画游戏轻小说词条编辑指南</a></p>
+					<p><a target="_blank" href="http://baike.baidu.com/view/10986473.htm">植物类特色词条编辑指南</a></p>
+					<p><a target="_blank" href="http://baike.baidu.com/view/11267361.htm">历史人物类特色词条编辑指南</a></p>
+					<p class="last"><a target="_blank" href="http://baike.baidu.com/view/10812306.htm#4">更多分类</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--main main06 end-->
+
+<!--main main07 start-->
+<div class="main main07">
+	<div class="wrapper">
+		<div class="main07-pub main07-pub01">
+			<div class="main07-tlt">新手上路</div>
+			<div class="main07-link">
+				<p><a target="_blank" href="https://baike.baidu.com/usercenter#guide">成长任务</a><a target="_blank" href="#main01">编辑入门</a></p>
+				<p><a target="_blank" href="#main06">编辑规则</a><a target="_blank" href="#main05">百科术语</a></p>
+			</div>
+		</div>
+		<div class="main07-pub main07-pub02">
+			<div class="main07-tlt">我有疑问</div>
+			<div class="main07-link">
+				<p><a target="_blank" href="#main04">常见问题</a><a target="_blank" href="https://zhiqiu.baidu.com/baike/passport/html/baikechat.html">在线客服</a></p>
+				<p><a target="_blank" href="http://tieba.baidu.com/f?ie=utf-8&fr=bks0000&kw=%E7%99%BE%E5%BA%A6%E7%99%BE%E7%A7%91">参加讨论</a><a target="_blank" href="http://baike.baidu.com/feedback">意见反馈</a></p>
+			</div>
+		</div>
+		<div class="main07-pub main07-pub03">
+			<div class="main07-tlt">投诉建议</div>
+			<div class="main07-link">
+			    <p><a target="_blank" href="https://help.baidu.com/newadd?prod_id=10&category=1">举报不良信息</a><a target="_blank" href="https://help.baidu.com/newadd?prod_id=10&category=2">未通过词条申诉</a></p>
+                <p><a target="_blank" href="https://help.baidu.com/newadd?prod_id=10&category=6">投诉侵权信息</a><a target="_blank" href="https://help.baidu.com/newadd?prod_id=10&category=5">封禁查询与解封</a></p>
+            </div>
+		</div>
+	</div>
+</div>
+<!--main main07 end-->
+
+<!--footer start-->
+<div class="footer">
+	<div class="wrapper">
+		<p>如果您发现百度百科内容有误，可以点击词条名旁边的“编辑”改正它。</p>
+	</div>
+</div>
+<!--footer end-->
+<script type="text/javascript">
+	var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F55b574651fcae74b0a9f1cf9c8d7c93a' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script>
+	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='https://bkssl.bdimg.com/hunter/baike.js?st='+~(new Date()/864e5)];
+</script>
+</body>
+</html>

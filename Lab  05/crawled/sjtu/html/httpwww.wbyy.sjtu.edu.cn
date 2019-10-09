@@ -1,0 +1,147 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1">
+
+<script src="js/jquery.js" type="text/javascript"></script>  
+<link href="styles/style.css" type="text/css" rel="stylesheet" /><link href="include/adminstyle.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery.ui.draggable.js" type="text/javascript"></script>  
+<script src="js/jquery.alerts.js" type="text/javascript"></script>  
+<script src="js/jquery-1.11.1.min.js"   type="text/javascript"></script>
+
+
+<link href="js/jquery.alerts.css" rel="stylesheet" type="text/css" media="screen" /><title>
+	上海交通大学文博场馆参观预约须知
+</title>
+    
+<script type="text/javascript">
+function disable()
+  {
+  document.getElementById("accept").disabled=true;
+  document.getElementById("accept").style.color = "white";
+  document.getElementById("accept").style.backgroundColor = "#D8D8D8";
+  }
+function enable()
+  {
+  document.getElementById("accept").disabled=false;
+  document.getElementById("accept").style.color = "white";
+  document.getElementById("accept").style.backgroundColor = "#8A0808";
+  }
+function accept_onclick() {
+
+}
+
+
+function  winnotice()
+{
+
+    window.open ('notice.aspx','newwindow','height=1024,width=1024,top=0,left=0,toolbar=yes,menubar=no,scrollbars=yes,resizable=yes,location=no, status=no')  
+
+}
+
+</script>
+
+
+</script>
+
+   
+    <style type="text/css">
+        .style1
+        {
+            color: #FF3300;
+            font-weight: bold;
+        }
+    </style>
+
+   
+</head>
+<body>
+
+    <form method="post" action="apply2.aspx" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUIMTk5OTM1NDRkZLHBq6jhnNK9ToEfYc9HnGvqq0Cw+c2T6ujHlhECyNJ2" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="DDB3A781" />
+    <div id="bodychild">
+	<div id="outercontainer">
+    	
+       
+        
+
+        <!-- SLIDER -->
+        <div id="outerslider" >
+        	<div id="slidercontainer">
+            	<div id="bgslider"></div>
+            	
+            </div>
+        </div>
+        <!-- END SLIDER -->
+        
+    
+        
+        <!-- MAIN CONTENT -->
+        <div id="outermain"  style ="width:1027px;">
+        	<section id="maincontent">
+            
+             <div style="font-size:22px; align=center" >上海交通大学文博场馆参观预约须知&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                 <span class="style1"><font face="宋体"><a href ="notice.aspx" target="_blank"><font color=red>暑假期间参观公告提醒：</font></a></font></span></div>
+				
+				      <br />
+				      <br />	
+			         <div style="width:80%;  margin-left:15px;font-size:16px;margin:0 auto "  >                 
+1. 上海交通大学文博场馆团队参观预约，请提前两个工作日进行网上预约。<br/><br/>
+2. 所有参观团队必须经过网上预约或现场登记方可进馆，否则拒绝进馆。<br/><br/>
+3. 预约参观讲解需听从各场馆老师的具体安排。<br/><br/>
+4. 预约成功后，若实际参观信息发生变更，请提前与场馆联系，否则将影响后续进馆资格。<br/><br/>
+5. 若团队参观活动与场馆活动发生冲突时，以场馆安排为准。<br/><br/>
+
+ </div>
+ 		<div style="font-size:12px;" align=center>
+ 		<a href="images/cns.pdf"  style="color:#0080FF;" target="_blank">校外团体进入校园参观承诺书</A>
+ 		&nbsp;&nbsp;&nbsp;<a href="images/xz.pdf" style="color:#0080FF;" target="_blank">团队预约参观管理规范（试行）</A>
+ 		</div>
+         <br />
+         <div style="font-size:16px;" align=center>
+          <input type="checkBox" onclick="if (this.checked) {enable()} else {disable()}"><font color="#8A0808"><strong>我已仔细阅读并了解上述各项条款，同意遵守相关管理规定。</strong></font>
+          </div>
+<br />
+<br />
+<div align="center">
+<input type="submit" id="accept"  disabled="true" value="立即预约" style="height:45px; width:200px; font-size:16px; font-weight:bold; color:white; background-color:#D8D8D8" onclick="return accept_onclick()">
+     </div>          
+              
+             
+           </div>	
+            
+                 
+                    
+           </form>
+             
+				
+             
+            </section>
+        </div>
+        <!-- END MAIN CONTENT -->
+        
+        
+     
+        
+       <!-- FOOTER -->
+        <div id="outerfooter">
+        	<div id="footercontainer">
+            	<footer id="footer">Copyright<span style="font-size:12px;font-family:Arial, Helvetica, sans-serif;" >&#169;</span> 2016 上海交通大学 All Rights Reserved.</footer>
+            </div>
+        </div>
+       
+        <!-- END FOOTER -->
+        
+        
+    </div>
+</div>
+
+  
+</body>
+
+
+</html>

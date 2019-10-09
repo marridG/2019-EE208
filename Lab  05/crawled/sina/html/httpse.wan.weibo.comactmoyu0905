@@ -1,0 +1,542 @@
+<!--线上地址   https://e.wan.weibo.com/act/moyu00625-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="renderer" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>《魔域》最潮开学季火爆来袭</title>
+  <meta itemprop="name" content='《魔域》最潮开学季火爆来袭'/>
+  <meta itemprop="image" content="https://n.sinaimg.cn/games/cd7a8368/20190905/qq.jpg" />
+  <meta name="description" itemprop="description" content="上线报到领新款时装、原初之火、神火养成可选箱！" />
+  <link href="https://n.sinaimg.cn/games/sina.gdc/reset.css" rel="stylesheet" type="text/css"/>
+  <link href="https://n.sinaimg.cn/games/sina.gdc/animate.min.css" rel="stylesheet" type="text/css"/>
+  <link href="https://n.sinaimg.cn/games/moyupc20190904/index.css" type="text/css" rel="stylesheet"/>
+  <script src="https://games.sina.com.cn/sina-gdc-common/jquery-1.7.min.js"></script>
+
+  <!--  顶部导航包括登录验证开始  依赖于jquery    -->
+  <!--<link type="text/css" rel="stylesheet" href="http://games.sina.com.cn/308/2014/0424/13/strandwhitetop.css"/>
+  <script src="http://n.sinaimg.cn/game/article/js/gametophtml.js"></script>
+  <script src="http://i.sso.sina.com.cn/js/ssologin.js?version20140415"></script>-->
+  <link rel="stylesheet" type="text/css" href="https://n.sinaimg.cn/games/system/strandwhitetop.css?v=201901">
+<script type="text/javascript" charset="UTF-8" src="/gameact/statics/js/common.js?201805"></script>
+<script type="text/javascript" charset="UTF-8" src="https://i.sso.sina.com.cn/js/outlogin_layer.js"></script>
+<script type="text/javascript" charset="UTF-8" src="/gameact/statics/js/user_homepage.js?20190318"></script>
+<script type="text/javascript" charset="UTF-8" src="https://i.sso.sina.com.cn/js/ssologin.js?version20140415"></script>
+
+<script>
+	$(function () {
+		$('.login_action').on('click', function () {
+			if (!user_id) {
+				SOL.loginShow();
+			}
+			return;
+		});
+		$('.logout_action').on('click', function () {
+			if (user_id) {
+				SOL.logout();
+			}
+			return;
+		});
+	});
+	
+	var is_login = parseInt('0');
+</script>
+<script type="text/javascript">
+    	var lott_lottery=0;
+    	var imgwidth = "114px";//微博好友头像宽
+		var imgheight = "114px"; //微博好友头像高
+		var len_fl = "6";//微博好友数目
+		var lott="0";
+		var weibosta='';
+		var wContent = "《魔域》最潮开学季火爆来袭，上线报到领新款时装、原初之火、神火养成可选箱！即日起参与定制特权活动，更有机会赢取华为P30 Pro等豪华数码大礼！@XXX还在犹豫什么，快来参与吧";
+		var symbol = "moyu0905"
+		var user_id="0";
+		var tuid="";
+		//var cardstatus=0;
+</script>
+<script type="text/javascript" charset="UTF-8" src="/gameact/statics/js/publicact/public.js?111"></script>
+<!--<script type="text/javascript" charset="UTF-8" src="/gameact/statics/js/publicact/comment.js?16"></script>-->
+<!-- SUDA_CODE_START -->
+<script type="text/javascript" charset="utf-8" src="https://www.sinaimg.cn/unipro/pub/suda_s_v851c.js"></script>
+<!-- SUDA_CODE_END -->
+
+  <!-- 微信分享 start -->
+
+  <!--  顶部导航包括登录验证开始  依赖于jquery    -->
+  <script type="text/javascript" charset="UTF-8" src="/gameact/statics/js/publicact/comment.js?16"></script>
+  <script>
+      len_fl = 9;
+      var imgwidth = "115px"; //微博好友头像宽1
+      var imgheight = "115px"; //微博好友头像高1
+      if (parseInt(is_login) == 1) {
+          changeweibo();
+      }
+  </script>
+  <style>
+    .prize-con{position: relative}
+    .prize-con li{list-style:none;text-align: center;color: #ffffff;display: block;width: 215px;height: 141px;
+      box-sizing: border-box;
+      position: absolute;
+      padding-top: 15px;
+      top:0;left: 0;
+      background-color:rgba(82,121,229,0.6);
+      /*background:-webkit-linear-gradient(#4491e5,#38a1e2);*/
+      /*background:-o-linear-gradient(#4491e5,#38a1e2);*/
+      /*background:-moz-linear-gradient(#4491e5,#38a1e2);*/
+      /*background:linear-gradient(#4491e5,#38a1e2);*/
+    }
+    .prize-con .sprite{background-color:rgba(82,121,229,0);}
+    .prize-con li p{margin: 0px;font-size: 15px;}
+    .prize-con #g2{left:220px}
+    .prize-con #g3{left:440px}
+    .prize-con #g4{left:440px;top:146px}
+    .prize-con #g5{left:440px;top:292px;padding-top: 60px}
+    .prize-con #g6{left:220px;top:292px}
+    .prize-con #g7{top:292px}
+    .prize-con #g8{top:146px}
+
+
+    .prize-con .btn-prize{left:220px;top:146px;cursor:pointer;width:215px; height:141px; background-position: -1px -1px}
+    .prize-con .btn-prize:hover{background-position: -1px -144px}
+    .prize-con .img-wrap,.prize-con .sprite{display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(https://n.sinaimg.cn/games/cd7a8368/20190904/1.png);}
+
+    .prize-con .selected{
+      background-color: rgba(0,0,0,0);
+      background: none;
+    }
+
+    .prize-con .p1 {width:178px; height:84px; background-position: -1px -287px}
+    .prize-con .p2 {width:178px; height:84px; background-position: -181px -287px}
+    .prize-con .p3 {width:178px; height:84px; background-position: -218px -1px}
+    .prize-con .p4 {width:178px; height:84px; background-position: -218px -87px}
+    .prize-con .p5 {width:178px; height:84px; background-position: -218px -173px}
+    .prize-con .p6 {width:178px; height:84px; background-position: -1px -373px}
+    .prize-con .p7 {width:178px; height:84px; background-position: -181px -373px}
+    .prize-con .tk {width:94px; height:24px; background-position: -218px -259px}
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <!--  头图和登录部分  -->
+  <div class="part1-wrap">
+    <div class="part1 preload-main" style="opacity:0;">
+      <div class="part1-container">
+        <a href="https://my.99.com/index/" target="_blank" class="logo animated slideInLeft preload-main"></a>
+        <span class="slogan-ch preload-main animated animated1 infinite shake"></span>
+      </div>
+    </div>
+  </div>
+  <div class="part2 anchor1">
+    <div class="part2-container">
+      <div class="register-container">
+        <div class="require-card">
+          <a href="javascript:;" class="btn-require-card animated animated1 infinite shake"></a>
+          <p class="num">抽奖次数<span>+1</span></p>
+        </div>
+        <div class="register">
+          <iframe src="https://aq.99.com/StaticPage/regformy/xl.html " frameborder="0" width="100%" height="100%"></iframe>
+        </div>
+        <div class="download-game">
+          <a href="https://my.99.com/download/" id="download" class="btn-download animated animated1 infinite shake" target="_blank"></a>
+          <p class="num">抽奖次数<span>+1</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="part3 anchor2">
+    <div class="part3-container">
+      <img class="title" src="https://n.sinaimg.cn/games/moyupc20190904/title1.png" alt="">
+      <p class="txt">邀请更多好友示爱魔域</p>
+      <p class="artical" id="weibocontent">
+        国庆猎豹野性登场，#不知火舞#带您领略性感“豹力”美学！热辣变装秀，多种外观皮肤一网打尽。金秋十月魔域吃鸡大逃杀即将上演，领取特权礼包抽取iPhone 7手机！
+      </p>
+      <div class="send-weibo-con">
+        <ul class="imgUl" id="flist">
+          <li>
+            <img src="https://n.sinaimg.cn/games/moyu_call/photo1.jpg" alt="">
+            <input type="checkbox" checked="checked">
+          </li>
+          <li>
+            <img src="https://n.sinaimg.cn/games/moyu_call/photo1.jpg" alt="">
+            <input type="checkbox" checked="checked">
+          </li>
+          <li>
+            <img src="https://n.sinaimg.cn/games/moyu_call/photo1.jpg" alt="">
+            <input type="checkbox" checked="checked">
+          </li>
+          <li>
+            <img src="https://n.sinaimg.cn/games/moyu_call/photo1.jpg" alt="">
+            <input type="checkbox" checked="checked">
+          </li>
+          <li>
+            <img src="https://n.sinaimg.cn/games/moyu_call/photo1.jpg" alt="">
+            <input type="checkbox" checked="checked">
+          </li>
+          <li>
+            <img src="https://n.sinaimg.cn/games/moyu_call/photo1.jpg" alt="">
+            <input type="checkbox" checked="checked">
+          </li>
+          <li>
+            <img src="https://n.sinaimg.cn/games/moyu_call/photo1.jpg" alt="">
+            <input type="checkbox" checked="checked">
+          </li>
+          <li>
+            <img src="https://n.sinaimg.cn/games/moyu_call/photo1.jpg" alt="">
+            <input type="checkbox" checked="checked">
+          </li>
+          <li>
+            <img src="https://n.sinaimg.cn/games/moyu_call/photo1.jpg" alt="">
+            <input type="checkbox" checked="checked">
+          </li>
+        </ul>
+        <div class="inputs-con">
+          <input type="text" value="输入昵称" id="search_input">
+          <a href="javascript:;" id="findbtn" class="search">精确查找</a>
+          <a href="javascript:;" id="changebtn" class="change">换一组</a>
+          <a href="javascript:;" onclick="share();" class="btn-send-weibo animated animated1 infinite shake">分享微博</a>
+        </div>
+        <p class="num">抽奖次数<span>+3</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="part4 anchor3">
+    <div class="part4-container">
+      <img class="title" src="https://n.sinaimg.cn/games/moyupc20190904/title2.png" alt="">
+
+      <div class="prize-container">
+        <div class="active-rules-con">
+          <input class="txt1" type="text" id="ckcardno" placeholder="请填写激活后的礼包码">
+          <div class="txt-wrap">
+            <img src="https://n.sinaimg.cn/games/moyupc20190515/erweima.jpg" alt="" class="img-erweima">
+            <div class="btn-shuoming">
+              <a href="javascript:void(0);" class="btn-confirm" onclick="ckno();">点击验证</a>
+              <p class="txt2">扫描二维码。下载移动 客户端，并在其中激活 礼包，可额外获得一次 抽奖机会</p>
+            </div>
+          </div>
+          <div class="rules-con">
+            <p class="total-chance">您还有<span id="lotto_times">0</span>次抽奖机会</p>
+            <p class="active-rules-tit">活动规则</p>
+            <ul class="active-rules">
+              <li>1.在游戏中激活本页面领取的礼包方可获得抽奖资格</li>
+              <li>2.发布微博。领取特权卡与下载游戏可各 获得一次抽奖机会</li>
+              <li>3.得到周边后请认真填写信息，否则将按弃权处理</li>
+              <li>4.活动截止时间：2019年9月27日</li>
+              <li>5.活动最终解释权归新浪所有</li>
+            </ul>
+          </div>
+        </div>
+        <!--下面行内抽奖背景颜色请删掉-->
+        <div class="prize-con" style="">
+          <ul class="prize-ul">
+            <li id="g1">
+              <div  class="img-wrap p1"></div>
+              <p>华为 P30 Pro</p>
+            </li>
+            <li id="g2">
+              <div class="img-wrap p2"></div>
+              <p>小米（MI）路由器</p>
+            </li>
+            <li id="g3">
+              <div  class="img-wrap p3"></div>
+              <p>足银999青瓷镶莲花茶具套装</p>
+            </li>
+
+            <li class="sprite btn-prize">
+            </li>
+            <li id="g4">
+              <div  class="img-wrap p4"></div>
+              <p>JBL耳机</p>
+            </li>
+            <li  id="g5" class="thanks">
+              <div  class="img-wrap tk">
+
+              </div>
+            </li>
+            <li id="g6">
+              <div  class="img-wrap p5"></div>
+              <p>Sony小音箱</p>
+            </li>
+            <li id="g7">
+              <div  class="img-wrap p6"></div>
+              <p>飞利浦自拍杆</p>
+            </li>
+            <li id="g8">
+              <div class="img-wrap p7"></div>
+              <p>100元京东卡</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="float-right-hot">
+    <ul class="slides">
+      <li data-target="anchor1"><a href="javascript:;">下载游戏</a></li>
+      <li data-target="anchor1"><a href="javascript:;">领取礼包</a></li>
+      <li data-target="anchor2"><a href="javascript:;">转发微博</a></li>
+      <li data-target="anchor3"><a href="javascript:;">抽取大奖</a></li>
+    </ul>
+    <a href="javascript:;" class="btn-top"></a>
+  </div>
+
+  <!--新浪底部3 begin-->
+  <div class="footer">
+    <div id="Gtrail" class=trail>
+      <div style="text-align:center; font-size:12px; margin:0 auto;">
+        <div id="ZWTrail">
+          <p><a href="http://corp.sina.com.cn/chn/" target="_blank" class="sinatail">新浪简介</a> | <a href="http://corp.sina.com.cn/eng/" target="_blank" class="sinatail">About Sina</a> | <a href="http://games.sina.com.cn/guide/index.shtml" target="_blank" class="sinatail">网站地图</a> | <a href="http://emarketing.sina.com.cn/" target="_blank" class="sinatail">广告服务</a> | <a href="http://www.sina.com.cn/contactus.html" target="_blank" class="sinatail">联系我们</a> | <a href="http://corp.sina.com.cn/chn/sina_job.html" target="_blank" class="sinatail">招聘信息</a> | <a href="http://www.sina.com.cn/intro/lawfirm.shtml" class="sinatail">网站律师</a> | <a href="http://english.sina.com" class="sinatail">SINA English</a> | <a href="https://login.sina.com.cn/signup/signup.php" target="_blank" class="sinatail">会员注册</a> | <a href="http://tech.sina.com.cn/focus/sinahelp.shtml" target="_blank" class="sinatail">产品答疑</a></p>
+          <br />
+          <p>Copyright &copy; 1996-2015 SINA Corporation, All Rights Reserved</p>
+          <br />
+          <p>新浪公司 <a href="http://www.sina.com.cn/intro/copyright.shtml" target="_blank">版权所有</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--新浪底部3 end-->
+  <!-- 弹窗 begin-->
+  <!-- 中奖弹窗-->
+  <div class="btn-mask dialog-messages preload-main2" style="display:none;">
+    <div class="btn-mask-content zoomIn">
+      <p class="txt1" id="prizename">xxxxxxxxxxxxxx</p>
+      <p class="txt-message">请完善您的中奖信息</p>
+      <ul class="messages">
+        <li>
+          <p class="name"><span>姓名</span></p>
+          <input id="userName" type="text" value="我哪敢">
+        </li>
+        <li>
+          <p class="name"><span>电话</span></p>
+          <input id="telephone" type="text" value="1334555666">
+        </li>
+        <li>
+          <p class="name"><span>地址</span></p>
+          <input id="address" type="text" value="的三个代表vDVD吧v">
+        </li>
+        <li>
+          <p class="name"><span>邮编</span></p>
+          <input id="email" type="text" value="45678">
+        </li>
+      </ul>
+      <a href="javascript:void(0);" class="btn-submit" onclick="my0905submit()"></a>
+      <span class="close"></span>
+    </div>
+  </div>
+  <div class="btn-mask dialog-no-prize preload-main2" style="display:none;">
+    <div class="btn-mask-content zoomIn">
+      <a href="javascript:void(0)" class="close"></a>
+    </div>
+  </div>
+  <div class="btn-mask dialog-gift preload-main2" style="display:none;">
+    <div class="btn-mask-content zoomIn">
+      <p class="gift-num" id="cardnum">0000000000000</p>
+      <a href="http://ka.sina.com.cn/store/box" target="_blank" class="gift-tip">进入我的存卡箱</a>
+      <a href="javascript:void(0)" class="close"></a>
+    </div>
+  </div>
+</div>
+
+<!-- 弹窗 end-->
+<script>
+  /**********  预加载部分   ***********/
+
+  //预加载相关图片，加载完毕后显示页面
+  var preload_main = getPreloadImages("preload-main");
+  var preload_main2 = getPreloadImages("preload-main2");
+  preloadImages(preload_main,function(){
+    $(".part1").css('opacity','1');
+    //$(".part1").fadeIn(500);
+    preloadImages(preload_main2);
+  });
+
+  //图片预加载
+  function preloadImages(arr,func){
+    var newimages=[], loadedimages=0;
+    var arr=(typeof arr!="object")? [arr] : arr;
+    for (var i=0; i<arr.length; i++){
+      newimages[i]=new Image();
+      newimages[i].src=arr[i];
+      newimages[i].onload=function(){
+        imageloadpost();
+      }
+      newimages[i].onerror=function(){
+        imageloadpost();
+      }
+    }
+    function imageloadpost(){
+      loadedimages++;
+      if (loadedimages==arr.length){
+        //预加载完成
+        if(func){
+          func();
+        }
+      }
+    }
+  }
+  //获取需要预加载的图片
+  function getPreloadImages(className){
+    var images = [];
+    $("."+className).each(function(){
+      var str = getImg(this);
+      if(checkImage(str)){
+        images.push(str)
+      }
+    });
+    return images;
+    function checkImage(obj){
+      var res = true;
+      for(var i = 0;i<images.length;i++){
+        if(images[i] == obj){
+          res = false;
+          break;
+        }
+      }
+      return res;
+    }
+    function getImg(obj){
+      if(obj.tagName.toLowerCase() == "img"){
+        return obj.src;
+      }else{
+        return $(obj).css("background-image").split('"')[1];
+      }
+    }
+  }
+  //弹窗
+  $(".btn-require-card").click(function() {
+      getcardmoyu0905();
+   // $(".dialog-gift").show();
+  });
+  //关闭弹窗
+  $(".btn-mask .close").click(function() {
+    $(this).closest('.btn-mask').hide();
+  });
+  //回到顶部
+  $(".btn-top").click(function () {
+    $("html,body").animate({scrollTop: 0}, 300);
+  });
+  //锚点
+  $('.slides li').click(function () {
+    let dataTarget = this.getAttribute('data-target');
+    if(dataTarget){
+      let offsetTop = $('.'+dataTarget).offset().top;
+      $('html,body').animate({scrollTop:offsetTop},500);
+    }
+  });
+</script>
+<script type="text/javascript">
+    $("#lotto_times").html(lott);
+    $('#findbtn').click(function () {
+        if (parseInt(is_login) == 0) {
+            login();
+            return;
+        };
+        findfriend();
+    });
+    $('#changebtn').click(function () {
+        if (parseInt(is_login) == 0) {
+            login();
+            return;
+        };
+        changefriend('115px', '115px');
+    });
+    $('#download').click(function () {
+        if (parseInt(is_login) == 0) {
+            login();
+            return;
+        };
+        var attenddo = new Array();
+        attenddo = SinaGameInterface.attend('moyu0905', 'download');
+        lott_lottery = attenddo.data.times;
+        $("#lotto_times").html(attenddo.data.times);
+    });
+
+    //弹窗
+    function getcardmoyu0905() {
+        if (parseInt(is_login) == 0) {
+            login();
+            return;
+        };
+        $.ajax({
+            type: 'get',
+            url: "/act_ajax/" + symbol + "/sendCardNo",
+            dataType: 'json',
+            data: {
+                'item_id': 27459,
+                'gid': 2424,
+                'tuid': '',
+            },
+            success: function (data) {
+                if (data.code == 200 || data.code == 400 || data.code == 403 || data.code == 301) {
+                    $('#cardnum').html(data.data.kahao);
+                } else if (data.code == 402) {
+                    //激活但是魔域同一个账号
+                    $('#cardnum').html(data.data.kahao);
+                } else {
+                    $('#cardnum').html("很抱歉" + data.msg);
+                }
+                $(".dialog-gift").show();
+            }
+        });
+        var attenddo = new Array();
+        attenddo = SinaGameInterface.attend('moyu0905', 'ka');
+        $("#lotto_times").html(attenddo.data.times);
+    }
+    function share() {
+        if (parseInt(is_login) == 0) {
+            login();
+            return;
+        };
+        weibcontent = $("#weibocontent").html();
+        $.ajax({
+            type: 'POST',
+            url: "/act/" + symbol + "/add_times/wb",
+            dataType: 'json',
+            data: { 'content': weibcontent },
+            success: function (data) {
+                console.log(data);
+                $("#lotto_times").html(data.data.times);
+                alert("发布微博成功！");
+            }
+        });
+    }
+    function ckno() {
+        if(parseInt(is_login) == 0){
+            login();
+            return;
+        };
+        var numck=$("#ckcardno").val();
+        $.ajax({
+            type: 'get',
+            url: "/game/moyu0905_checkno",
+            dataType: 'json',
+            data:{'ckcardno':numck},
+            success: function(data){
+                if(data.code==200){
+                    alert("验证成功！");
+                    var attenddo=new Array();
+                    attenddo=SinaGameInterface.attend('moyu0905','ck');
+                    lott_lottery=attenddo.data.times;
+                    $("#lotto_times").html(attenddo.data.times);
+                }else{
+                    alert(data.msg);
+                }
+            }
+        });
+    }
+
+</script>
+<script src="/gameact/statics/moyu/moyu0905.js"></script>
+</body>
+</html>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?07479cf3d9c04334c457af390755ff8e";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>

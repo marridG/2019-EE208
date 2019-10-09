@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>腾讯数字商品管理平台</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1,IE=EmulateIE7">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="author" content="Tencent">
+    <meta name="copyright" content="Tencent">
+    <meta name="robots" content="index,follow">
+    
+    <link href="//midas.gtimg.cn/wholesale/css/txspIndex.bb193ef1d4a4fa4a09b0bd58f62190f0.css" rel="stylesheet">
+    
+    <style>
+	    .alertBox #loginModal iframe {
+	        margin: 0 auto;
+	        position: absolute;
+	        left: 0;
+	        right: 0;
+	        top: 0;
+	        bottom: 0;
+	    }
+	</style>
+</head>
+<body>
+	<div id="app"></div>
+	<div id="target"></div>
+  <script src="//midas.gtimg.cn/enterprise/js/enterpriseAPI_v1.0.2.js"></script>
+  <script src="//res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+	<script src="//midas.gtimg.cn/wholesale/js/txspIndex.7a255e993639c8d8ad79.js"></script>
+	<script>
+	if(isUglyIE()){
+	  document.body.innerHTML = '<p style="margin:10px;">对不起，暂不支持IE6/7/8/9版本浏览器。<br />建议使用Chrome浏览器</p>'
+	}
+	function isUglyIE(){
+	  var reIE = /MSIE (\d+\.\d+);/
+	  var m = reIE.exec(navigator.userAgent);
+	  if(m){
+	    var version = parseFloat(m[1])
+	    return version < 10
+	  }
+	  return false
+	}
+	</script>
+</body>
+</html>

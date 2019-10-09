@@ -1,0 +1,78 @@
+<HTML>
+<META http-equiv=Content-Type content=text/html; charset=gb2312 >
+<HEAD><TITLE>闵行校区校园交通示意图</TITLE></HEAD>
+
+<SCRIPT src="http://comic.sjtu.edu.cn/map/map.files/gMapJS.js" type=text/javascript></SCRIPT>
+<SCRIPT src="http://comic.sjtu.edu.cn/map/map.files/maptilecutter.js" type=text/javascript></SCRIPT>
+<SCRIPT src="http://comic.sjtu.edu.cn/map/map.files/gSJTU.js" type=text/javascript></SCRIPT>
+	
+<BODY style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px">
+<DIV id=map style="WIDTH: 100%; HEIGHT: 100%"></DIV>
+<SCRIPT type=text/javascript>
+//<![CDATA[
+	
+	
+function createCustomTileLayer1() {
+  var dataLayer =
+    new GTileLayer(
+      new GCopyrightCollection(""), 0, 3);
+  dataLayer.getTileUrl=CustomTileLayer_getTileUrl1;
+  return dataLayer;
+} 
+ 
+function createCustomTileLayer2() {
+  var dataLayer =
+    new GTileLayer(
+      new GCopyrightCollection(""), 0, 5);
+  dataLayer.getTileUrl=CustomTileLayer_getTileUrl2;
+  return dataLayer;
+} 
+
+var CustomTileLayer_getTileUrl1 = function(tile, zoom) {
+		var tilesPerSide = Math.pow(2, zoom);
+		if(zoom >= 0 && zoom < 5 && tile.x >= 0 && tile.y >= 0 && tile.x < tilesPerSide && tile.y < tilesPerSide){
+				var n = tile.y * tilesPerSide + tile.x;
+				return "http://comic.sjtu.edu.cn/map/hbc/tile" + "-" + zoom + "-" + n + ".jpg";
+		}else{
+			return "http://comic.sjtu.edu.cn/map/images/transparent.gif";
+		}
+}     	  
+
+var CustomTileLayer_getTileUrl2 = function(tile, zoom) {
+
+        var c=Math.pow(2,zoom);
+        var d=tile.x;
+        var e=tile.y;
+        var f="t";
+        for(var g=0;g<zoom;g++){
+            c=c/2;
+            if(e<c){
+                if(d<c){f+="q"}
+                else{f+="r";d-=c}
+            }
+            else{
+                if(d<c){f+="t";e-=c}
+                else{f+="s";d-=c;e-=c}
+            }
+        }
+        return "http://comic.sjtu.edu.cn/map/gelf/mhweb2007-tiles/"+f+".jpg"
+    }
+ 
+
+	   var customTileLayer1 = createCustomTileLayer1();
+	   var customTileLayer2 = createCustomTileLayer2();
+	   var mapType2 = new GMapType([customTileLayer2],G_NORMAL_MAP.getProjection(),"gelf版本",{errorMessage:"No image here, sorry"});
+	 
+ 	   var map = new GMap2(document.getElementById("map"),{mapTypes:[mapType2]});
+           var mapType1 = new GMapType([customTileLayer1],G_NORMAL_MAP.getProjection(),"后保处版本",{errorMessage:"No image here, sorry"});
+
+	 		map.addMapType(mapType1);
+		
+			map.setCenter(new GLatLng(0,0), 2, mapType1);
+			map.addControl(new GLargeMapControl());	
+			map.addControl(new GMapTypeControl());
+    
+			
+//]]>
+</SCRIPT>
+</BODY></HTML>

@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>《问道》十三岁啦！周年大服开启！参与抽奖赢大礼！</title>
+  <meta itemprop="name" content='问道 十三岁啦！' />
+  <meta itemprop="image" content="https://n.sinaimg.cn/games/cd7a8368/20190411/wx.jpg" />
+  <meta name="description" itemprop="description" content="周年大服“道十三”将于4月19日中午12:00全面开启！！！参与抽奖赢大礼！" />
+  <link href="https://games.sina.com.cn/308/2014/reset.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://n.sinaimg.cn/games/sina.gdc/swiper-3.4.2.min.css">
+  <!-- <link href="https://n.sinaimg.cn/games/cd7a8368/20190411/index1.css" type="text/css" rel="stylesheet" /> -->
+  <link rel="stylesheet" href="https://n.sinaimg.cn/games/wd20190411/index1.css?v=551">
+  <!--<script src="https://n.sinaimg.cn/game/homepage/js/jquery.min.js"></script>-->
+  <script src="https://games.sina.com.cn/sina-gdc-common/jquery-1.7.min.js"></script>
+  <script rel="stylesheet" src="https://n.sinaimg.cn/games/wendao20180718pc/swiper.min.js"
+    type="text/javascript"></script>
+  <!--  顶部导航包括登录验证开始  依赖于jquery    -->
+  <!--<link type="text/css" rel="stylesheet" href="http://games.sina.com.cn/308/2014/0424/13/strandwhitetop.css" />
+  <script src="http://n.sinaimg.cn/game/article/js/gametophtml.js"></script>
+  <script src="http://i.sso.sina.com.cn/js/ssologin.js?version20140415"></script>-->
+  <!--  顶部导航包括登录验证开始  依赖于jquery    -->
+
+  <link rel="stylesheet" type="text/css" href="https://n.sinaimg.cn/games/system/strandwhitetop.css?v=201901">
+<script type="text/javascript" charset="UTF-8" src="/gameact/statics/js/common.js?201805"></script>
+<script type="text/javascript" charset="UTF-8" src="https://i.sso.sina.com.cn/js/outlogin_layer.js"></script>
+<script type="text/javascript" charset="UTF-8" src="/gameact/statics/js/user_homepage.js?20190318"></script>
+<script type="text/javascript" charset="UTF-8" src="https://i.sso.sina.com.cn/js/ssologin.js?version20140415"></script>
+
+<script>
+	$(function () {
+		$('.login_action').on('click', function () {
+			if (!user_id) {
+				SOL.loginShow();
+			}
+			return;
+		});
+		$('.logout_action').on('click', function () {
+			if (user_id) {
+				SOL.logout();
+			}
+			return;
+		});
+	});
+	
+	var is_login = parseInt('0');
+</script>
+<script type="text/javascript">
+    	var lott_lottery=0;
+    	var imgwidth = "114px";//微博好友头像宽
+		var imgheight = "114px"; //微博好友头像高
+		var len_fl = "6";//微博好友数目
+		var lott="0";
+		var weibosta='';
+		var wContent = "#浮生梦 三世约#感谢各位道友的支持，@问道 十三岁啦！周年大服“道十三”将于4月19日中午12:00全面开启！！！参与抽奖赢大礼！@XXX";
+		var symbol = "wd412"
+		var user_id="0";
+		var tuid="";
+		//var cardstatus=0;
+</script>
+<script type="text/javascript" charset="UTF-8" src="/gameact/statics/js/publicact/public.js?111"></script>
+<!--<script type="text/javascript" charset="UTF-8" src="/gameact/statics/js/publicact/comment.js?16"></script>-->
+<!-- SUDA_CODE_START -->
+<script type="text/javascript" charset="utf-8" src="https://www.sinaimg.cn/unipro/pub/suda_s_v851c.js"></script>
+<!-- SUDA_CODE_END -->
+
+    <!-- 微信分享 start -->
+
+      <script type="text/javascript" charset="UTF-8" src="/gameact/statics/js/publicact/comment.js?16"></script>
+      <!--  底部通用条css开始  -->
+      <script>
+        len_fl = 2;
+        var imgwidth = "85px"; //微博好友头像宽
+        var imgheight = "85px"; //微博好友头像高
+        if (parseInt(is_login) == 1) {
+          changeweibo();
+        }
+      </script>
+      <style>
+        #Gtrail {
+          width: 100%;
+          min-width: 980px;
+          height: 63px;
+          padding: 70px 0px 74px;
+          font-family: "微软雅黑";
+          overflow: hidden;
+          background: #262626;
+        }
+
+        #Gtrail #ZWTrail {
+          width: 980px;
+          margin: 0px auto;
+          font-size: 14px;
+          color: #777777;
+          line-height: 12px;
+          text-align: center;
+        }
+
+        #Gtrail #ZWTrail a,
+        #Gtrail #ZWTrail a:visited {
+          color: #777777;
+          text-decoration: none;
+        }
+
+        #Gtrail #ZWTrail a:hover {
+          color: #777777;
+          text-decoration: none;
+        }
+
+
+        .prize-ul {
+          position: relative;
+          margin: 30px 30px
+        }
+
+        .prize-ul img {
+          height: 100%
+        }
+
+        .prize-ul p {
+          margin: 2px;
+          text-align: center;
+          font-size: 13px
+        }
+
+        .prize-ul>div {
+          width: 134px;
+          height: 134px;
+          background-image: url("https://n.sinaimg.cn/games/cd7a8368/20190411/bg1.png");
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          box-sizing: border-box;
+          padding: 14px 5px
+        }
+
+        .img-wrap {
+          width: 100%;
+          height: 90px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .prize-ul #g2 {
+          left: 140px
+        }
+
+        .prize-ul #g3 {
+          left: 280px
+        }
+
+        .prize-ul #g4 {
+          left: 280px;
+          top: 140px
+        }
+
+        .prize-ul #g4>p {
+          font-size: 12px
+        }
+
+        .prize-ul #g5 {
+          left: 280px;
+          top: 280px
+        }
+
+        .prize-ul #g6 {
+          left: 140px;
+          top: 280px
+        }
+
+        .prize-ul #g7 {
+          left: 0px;
+          top: 280px
+        }
+
+        .prize-ul #g8 {
+          left: 0px;
+          top: 140px
+        }
+
+        .prize-ul .btn-prize {
+          background-image: url("https://n.sinaimg.cn/games/cd7a8368/20190411/btn2.png");
+          left: 140px;
+          top: 140px;
+          cursor: pointer;
+          height: 137px
+        }
+
+        .prize-ul .btn-prize:hover {
+          background-image: url("https://n.sinaimg.cn/games/cd7a8368/20190411/btn1.png");
+        }
+
+        .prize-ul .selected {
+          background-image: url("https://n.sinaimg.cn/games/cd7a8368/20190411/bg2.png")
+        }
+      </style>
+      <!--  底部通用条css结束  -->
+</head>
+
+<body>
+  <!--  头图和登录部分  -->
+  <div class="ad-top"></div>
+  <div class="part1">
+    <div class="part1_container">
+      <a href="http://sm.zhuiqu.com/" target="_blank" class="logo"></a>
+      <nav class="nav">
+        <a href="http://wd.gyyx.cn/index_wd_v5.htm" class="nav-per" target="_blank">游戏官网</a>
+        <span>|</span>
+        <a href="http://ka.sina.com.cn/27319" class="nav-per pos-libao" target="_blank">特权礼包</a>
+        <span>|</span>
+        <a href="http://vega30.test.gyyx.cn/asktao/WdDownLoader.exe" target="_blank" class="nav-per"
+          target="_blank">下载游戏</a>
+      </nav>
+      <span class="slogan"></span>
+      <span class="btn-video">
+        <i class="btn-video-bottom"></i>
+        <i class="btn-video-arrow"></i>
+      </span>
+      <div class="video-bg">
+        <!--视频资源,poster为视频未加载完毕时显示的图片，可以为视频第一帧-->
+        <video id="video1" src="https://f.sinaimg.cn/games/wd20190411/1.mp4" width="100%" height="100%"
+          controls="controls" preload="auto" webkit-playsinline playsinline poster="">
+        </video>
+        <span class="close"></span>
+      </div>
+      <ul class="prize-ul0">
+        <li>
+          <div class="img-con">
+            <img src="https://n.sinaimg.cn/games/wd20190411/pic10.jpg" alt="">
+          </div>
+          <p class="txt">飞利浦电动牙刷</p>
+        </li>
+        <li>
+          <div class="img-con">
+            <img src="https://n.sinaimg.cn/games/wd20190411/pic12.jpg" alt="">
+          </div>
+          <p class="txt">勾陈手办</p>
+        </li>
+        <li>
+          <div class="img-con">
+            <img src="https://n.sinaimg.cn/games/wd20190411/pic11.jpg" alt="">
+          </div>
+          <p class="txt">华为P20p</p>
+        </li>
+        <li>
+          <div class="img-con">
+            <img src="https://n.sinaimg.cn/games/wd20190411/pic9.png" alt="">
+          </div>
+          <p class="txt">华为荣耀盒子</p>
+        </li>
+      </ul>
+      <a href="javascript:;" class="require-bag" onclick="getcardwd412();">领取“浮生若梦”至尊礼包</a>
+    </div>
+  </div>
+  <div class="part2 scrollDiv" id="part2">
+    <div class="part2_container">
+      <img class="title" src="https://n.sinaimg.cn/games/cd7a8368/20190411/title1.png" alt="">
+      <div class="part2-inner">
+        <div class="register bs">
+          <span class="txt-step"></span>
+          <span class="txt-tit">注册抢华为P20p</span>
+          <div class="register-wrap">
+            <iframe style="background-color: rgba(255, 255, 255,0); " frameborder="0" width="100%" height="100%"
+              scrolling="no"
+              src="http://news.gyyx.cn/Counter.ashx?pc=8141&sc=18760&mc=6342&gc=2&ul=http%3a%2f%2fscgg.gyyx.cn%2fwd%2fzck%2fzc_sina_1903.html&mt=4072&et=1"></iframe>
+          </div>
+        </div>
+        <div class="part2-center">
+          <span class="txt-step"></span>
+          <span class="txt-tit">领浮生若梦至尊礼包</span>
+          <p class="txt-tit-little">浮生若梦至尊礼包 限时发放</p>
+          <div class="property-swiper-box">
+            <div class="property-arr">
+              <div class="property-arrow property-left"></div>
+              <div class="property-arrow property-right"></div>
+            </div>
+            <div class="property-swiper swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="property-item" data-tit="140首饰" title="140首饰">
+                    <img src="https://n.sinaimg.cn/games/wd20190411/daoju1.png" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="property-item" data-tit="八卦神符" title="八卦神符">
+                    <img src="https://n.sinaimg.cn/games/wd20190411/daoju2.png" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="property-item" data-tit="超级天书" title="超级天书">
+                    <img src="https://n.sinaimg.cn/games/wd20190411/daoju3.png" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="property-item property-item-txtoh" data-tit="超级藏宝图" title="超级藏宝图">
+                    <img src="https://n.sinaimg.cn/games/wd20190411/daoju4.png" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="property-item property-item-txtoh" data-tit="清风沐浴套时装" title="清风沐浴套时装">
+                    <img src="https://n.sinaimg.cn/games/wd20190411/daoju5.png" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="property-item property-item-txtoh" data-tit="天神道符" title="天神道符">
+                    <img src="https://n.sinaimg.cn/games/wd20190411/daoju6.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script>
+
+            $(function () {
+              var swiper = new Swiper(".property-swiper", {
+                slidesPerView: 3,
+                prevButton: '.property-left',
+                nextButton: '.property-right',
+                navigation: {
+                  nextEl: '.property-right',
+                  prevEl: '.property-left',
+                }
+              })
+            })
+          </script>
+          <div class="btn-bag-con">
+            <a href="javascript:;" class="btn-bag " onclick="getcardwd412()">领取特权礼包</a>
+            <p class="num">抽奖次数+1</p>
+          </div>
+          <div class="btn-active-con">
+            <a href="http://activity.gyyx.cn/novice/pc/19/card" target="_blank" class="btn-active" id="gojh">立即激活礼包 </a>
+            <p class="num">抽奖次数+1</p>
+          </div>
+        </div>
+        <div class="btn-download-con">
+          <span class="txt-step"></span>
+          <span class="txt-tit">30秒极速下载微端</span>
+          <span class="pic"></span>
+          <a href="http://vega30.test.gyyx.cn/asktao/WdDownLoader.exe" target="_blank" class="btn-download"
+            id="download">极速下载26M微端</a>
+          <p class="num">抽奖次数+1</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 问卷调查 -->
+  <div class="answer-con">
+    <div class="answer-con-inner">
+      <img class="title" src="https://n.sinaimg.cn/games/cd7a8368/20190411/title2.png" alt="">
+      <div class="answer-search">
+        <div class="video-block">
+          <div class="video-box">
+            <div class="vidoe-wrap">
+              <div class="video-tag">
+                <video src="https://f.sinaimg.cn/games/wd20190411/vdream.mp4" width="100%" height="100%"
+                  controls="controls" preload="auto" webkit-playsinline playsinline poster=""></video>
+              </div>
+              <img src="https://n.sinaimg.cn/games/wd20190411/video_poster.png" alt="" class="video-cover">
+              <div class="video-btn"></div>
+            </div>
+          </div>
+
+          <div class="video-rules">
+            <dl>
+              <dt>活动规则：</dt>
+              <dd>看视频，来答题，三道题全部答对后即可获得一次抽奖机会</dd>
+              <dd>填写正确的个人信息，以免影响发奖；</dd>
+              <dd>本次活动的解释权归新浪与《问道》官方共同所有。</dd>
+            </dl>
+          </div>
+        </div>
+
+        <div class="question-con">
+          <ul class="question">
+            <li class="rows">
+              <h1><span class="num"><i>1</i></span>题目1：赵奕欢在电话中说了什么？</h1>
+              <label>
+                <input name="t1" id="t1-1" type="radio" value="" />
+                <div class="fake-radio"></div>
+                <p class="options"><span class="select"></span>A：往后余生，我只要你。快来《问道》找我。</p>
+              </label>
+              <label><input name="t1" type="radio" value="" data-value="1" />
+                <div class="fake-radio"></div>
+                <p class="options"><span class="select"></span>B：往后余生，我只要你，我在《问道》等你。</p>
+              </label>
+              <label><input name="t1" type="radio" value="" />
+                <div class="fake-radio"></div>
+                <p class="options"><span class="select"></span>C：往后余生，我只要你，我在《问道》找你。</p>
+              </label>
+            </li>
+
+            <li class="rows">
+              <h1><span class="num"><i>2</i></span>题目2：在大神提问环节中，《问道》是以什么名著为背景的？</h1>
+              <label>
+                <input name="t2" type="radio" value="" data-value="1" />
+                <div class="fake-radio"></div>
+                <p class="options"><span class="select"></span>A：封神榜</p>
+              </label>
+              <label>
+                <input name="t2" type="radio" value="" />
+                <div class="fake-radio"></div>
+                <p class="options"><span class="select"></span>B：山海经</p>
+              </label>
+              <label>
+                <input name="t2" type="radio" value="" />
+                <div class="fake-radio"></div>
+                <p class="options"><span class="select"></span>C：淮南子</p>
+              </label>
+            </li>
+
+            <li class="rows">
+              <h1><span class="num"><i>3</i></span>题目3：在综艺中，董岩磊和赵奕欢最后一轮的PK对应的是《问道》中哪个任务？</h1>
+              <label><input name="t3" type="radio" value="" />
+                <div class="fake-radio"></div>
+                <p class="options"><span class="select"></span>A：寻找黄三</p>
+              </label>
+              <label><input name="t3" type="radio" value="" />
+                <div class="fake-radio"></div>
+                <p class="options"><span class="select"></span>B：白邦芒</p>
+              </label>
+              <label><input name="t3" type="radio" value="" data-value="1" />
+                <div class="fake-radio"></div>
+                <p class="options"><span class="select"></span>C：仙界神捕</p>
+              </label>
+            </li>
+
+          </ul>
+          <div class="btn_libao_submit"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="part3">
+    <div class="part3_container">
+      <img class="title" src="https://n.sinaimg.cn/games/cd7a8368/20190411/title3.png" alt="">
+      <div class="game-prize-con">
+
+        <div class="game-prize-box">
+          <div class="game-prize-times" data-tit="剩余抽奖次数：" id="lotto_times">99</div>
+          <div class="game-prize">
+            <div class="prize-ul">
+              <div id="g1">
+                <div class="img-wrap">
+
+                  <img src="http://n.sinaimg.cn/games/cd7a8368/20190411/p1.png" /></div>
+                <p>大圣T恤</p>
+              </div>
+              <div id="g2">
+                <div class="img-wrap">
+
+                  <img src="https://n.sinaimg.cn/games/cd7a8368/20190411/p0.png" /></div>
+                <p>谢谢参与</p>
+
+              </div>
+              <div id="g3">
+                <div class="img-wrap">
+
+                  <img src="https://n.sinaimg.cn/games/cd7a8368/20190411/p3.png" /></div>
+                <p>勾陈手办</p>
+              </div>
+              <div id="g4">
+                <div class="img-wrap">
+
+                  <img src="http://n.sinaimg.cn/games/cd7a8368/20190411/p4.png" /></div>
+                <p>华为P20pro-128GB</p>
+              </div>
+              <div id="g5">
+                <div class="img-wrap">
+
+                  <img src="http://n.sinaimg.cn/games/cd7a8368/20190411/p0.png" /></div>
+                <p>谢谢参与</p>
+              </div>
+              <div id="g6">
+                <div class="img-wrap">
+
+                  <img src="https://n.sinaimg.cn/games/cd7a8368/20190411/p2.png" /></div>
+                <p>飞利浦电动牙刷</p>
+              </div>
+              <div id="g7">
+                <div class="img-wrap">
+
+                  <img src="https://n.sinaimg.cn/games/cd7a8368/20190411/p0.png" /></div>
+                <p>谢谢参与</p>
+              </div>
+              <div id="g8">
+                <div class="img-wrap">
+
+                  <img src="https://n.sinaimg.cn/games/cd7a8368/20190411/p5.png" /></div>
+                <p>华为荣耀盒子</p>
+              </div>
+              <div class="btn-prize">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="weiboed">
+          <!-- <div class="weiboed-tit">点击登录</div> -->
+
+          <div class="weiboed-box">
+            <div class="weiboed-box-wrap">
+              <div class="weiboed-txt textarea" cols="30" rows="10" id="weibocontent"></div>
+              <div class="weiboed-info">
+                <ul class="weiboed-imgs" id="flist">
+                  <li>
+                    <input type="checkbox">
+                    <a>
+                      <img src="https://n.sinaimg.cn/games/moyu_call/photo1.jpg" alt="">
+                    </a>
+                  </li>
+                </ul>
+                <div class="weiboed-form">
+                  <input type="text" class="weiboed-nickname" placeholder="请输入昵称" id="search_input">
+                  <div class="weiboed-btn weiboed-search" id="findbtn">精确查找</div>
+                  <div class="weiboed-btn weiboed-other" id="changebtn">换一组</div>
+                </div>
+              </div>
+
+            </div>
+            <div class="weiboed-fa" data-after="抽奖次数+1" onclick="share();">发微博</div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 新版本玩法介绍 -->
+  <div class="part4">
+    <div class="part4-container">
+      <div class="part4_container">
+        <img src="https://n.sinaimg.cn/games/wd20190411/title4.png" alt="" class="title">
+        <div class="part4-tit">全新版本浮生若梦梦幻开启</div>
+        <div class="part4-subtit">海量全新玩法 多重福利好礼 快进入瑰丽的游戏世界吧</div>
+        <a class="part4-resign" href="http://account.gyyx.cn/Member/Register" target="_blank">立即注册</a>
+        <div class="part4-cont">
+          <ul class="tab-ul---">
+            <li>
+              <div class="fold">
+                <img class="pai" src="https://n.sinaimg.cn/games/wd20190411/01.png" alt="">
+              </div>
+              <div class="unfold" style="display: block;">
+                <img src="https://n.sinaimg.cn/games/wd20190411/wd20190412011.jpg" alt="" style="margin-left:-50px; ">
+                <span class="border-shade"></span>
+              </div>
+            </li>
+            <li>
+              <div class="fold">
+                <img class="pai" src="https://n.sinaimg.cn/games/wd20190411/02.png" alt="">
+              </div>
+              <div class="unfold">
+                <img src="https://n.sinaimg.cn/games/wd20190411/wd20190412021.jpg" alt="">
+                <span class="border-shade"></span>
+              </div>
+            </li>
+            <li>
+              <div class="fold">
+                <img class="pai" src="https://n.sinaimg.cn/games/wd20190411/03.png" alt="">
+              </div>
+              <div class="unfold">
+                <img src="https://n.sinaimg.cn/games/cd7a8368/20181029/03.png" alt="">
+                <span class="border-shade"></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--新浪底部3 begin-->
+  <div class="footer">
+    <div id="Gtrail" class=trail>
+      <div style="text-align:center; font-size:12px; margin:0 auto;">
+        <div id="ZWTrail">
+          <p><a href="http://corp.sina.com.cn/chn/" target="_blank" class="sinatail">新浪简介</a> | <a
+              href="http://corp.sina.com.cn/eng/" target="_blank" class="sinatail">About Sina</a> | <a
+              href="http://games.sina.com.cn/guide/index.shtml" target="_blank" class="sinatail">网站地图</a> | <a
+              href="http://emarketing.sina.com.cn/" target="_blank" class="sinatail">广告服务</a> | <a
+              href="http://www.sina.com.cn/contactus.html" target="_blank" class="sinatail">联系我们</a> | <a
+              href="http://corp.sina.com.cn/chn/sina_job.html" target="_blank" class="sinatail">招聘信息</a> | <a
+              href="http://www.sina.com.cn/intro/lawfirm.shtml" class="sinatail">网站律师</a> | <a
+              href="http://english.sina.com" class="sinatail">SINA English</a> | <a
+              href="https://login.sina.com.cn/signup/signup.php" target="_blank" class="sinatail">会员注册</a> | <a
+              href="http://tech.sina.com.cn/focus/sinahelp.shtml" target="_blank" class="sinatail">产品答疑</a></p>
+          <br />
+          <p>Copyright &copy; 1996-2015 SINA Corporation, All Rights Reserved</p>
+          <br />
+          <p>新浪公司 <a href="http://www.sina.com.cn/intro/copyright.shtml" target="_blank">版权所有</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--新浪底部3 end-->
+  <!-- 弹窗 begin-->
+  <!-- 中奖弹窗-->
+  <div class="btn-mask dialog-messages" id="dialog-messages">
+    <div class="btn-mask-content">
+      <h1 class="txt1">恭喜你</h1>
+      <h1 class="txt1 txt2">获得<span id="prizename">XXXXXX</span></h1>
+      <p class="txt3">获得的奖励将在活动结束后，统一寄出，请准确填写联系方式、快递地址等信息。</p>
+      <ul class="messages">
+        <li>
+          <p class="name"><span class="star">*</span><span>姓名：</span></p>
+          <input id="userName" type="text" value="">
+        </li>
+        <li>
+          <p class="name"><span class="star">*</span><span>电话：</span></p>
+          <input id="telephone" type="text" value="">
+        </li>
+        <li>
+          <p class="name"><span class="star">*</span><span>地址：</span></p>
+          <input id="address" type="text" value="" class="address">
+        </li>
+      </ul>
+      <a href="javascript:void(0);" class="btn-submit" onclick="wd412submit()">提交</a>
+      <span class="close"></span>
+    </div>
+    <input id="email" type="hidden" value="1000000000@qq.com">
+  </div>
+  <!--未中奖弹窗-->
+  <div class="btn-mask dialog-no-prize" id="dialog-no-prize">
+    <div class="btn-mask-content">
+      <h1 class="txt1 txt2">很遗憾未中奖</h1>
+      <h1 class="txt1">谢谢您的参与</h1>
+      <span class="close"></span>
+    </div>
+  </div>
+  <!--开宝箱次数不足弹窗-->
+  <div class="btn-mask dialog-no-prize dialog-num" id="dialog-num">
+    <div class="btn-mask-content">
+      <h1 class="txt1">开宝箱次数不足</h1>
+      <p class="txt3">注:如数据同步延迟请刷新页面重试</p>
+      <span class="close"></span>
+    </div>
+  </div>
+
+  <!-- 预留 弹窗-->
+  <!-- <div class="btn-mask dialog-pre" id="dialog-pre">
+    <div class="btn-mask-content">
+      <h1 class="txt1">很抱歉</h1>
+      <p class="txt3" id="falsecard">领卡失败</p>
+      <span class="close"></span>
+    </div>
+  </div> -->
+
+  <!-- 领取 -->
+  <div class="mask mask-1 mask-show0" id="sucsscard">
+    <div class="mask-wrap">
+      <div class="mask-tit">恭喜您成功领取<span>3799</span>礼包</div>
+      <div class="mask-box">
+        <div class="mask-cont" data-tit="《问道》礼包卡号：" data-txt="激活礼包可获得一次抽奖次数，请妥善保管记录礼包号用于抽奖信息的填写。">
+          <div class="mask-code" id="cardnum">1111111-11111-1111</div>
+          <!-- <div class="mask-copy">复制</div> -->
+        </div>
+      </div>
+      <div class="mask-off-btn"></div>
+    </div>
+  </div>
+
+  <!-- 激活 : 由弹窗改为直接跳转页面-->
+
+
+
+  <!-- 答对 -->
+  <div class="mask mask-3 mask-show0">
+    <div class="mask-wrap">
+      <div class="mask-tit">恭喜您答对了所有题目，<br>获得一次抽奖机会</div>
+      <div class="mask-off-btn"></div>
+    </div>
+  </div>
+  <!-- 没答对 -->
+  <div class="mask mask-4 mask-show0">
+    <div class="mask-wrap">
+      <div class="mask-tit">很遗憾您没有答对所有题目，<br>无法获得抽奖机会</div>
+      <div class="mask-off-btn"></div>
+    </div>
+  </div>
+  <!-- 预留 -->
+  <div class="mask mask-5 mask-show0">
+    <div class="mask-wrap">
+      <div class="mask-tit" id="falsecard">预留预留预留预留<br>预留预留预留预留</div>
+      <div class="mask-off-btn"></div>
+    </div>
+  </div>
+
+
+
+  <!-- 弹窗 end-->
+  <script>
+    //视频
+    $(".btn-video").click(function () {
+      $(this).next('.video-bg').show();
+      $(this).next('.video-bg').find('video')[0].play();
+    });
+    $(".video-bg .close").click(function () {
+      $(this).parent().hide();
+      $(this).parent().find('video')[0].pause();
+    });
+
+    // part4 新版本玩法
+    $(function () {
+      //------- edited by hover-hov @2019-04-11 18:01:23 ---------------
+      //手风琴效果;
+      $(".tab-ul--- li").each(function () {
+        var unfold = $(this).find(".unfold");
+        if (unfold.is(":hidden")) {
+          $(this).width(120);
+        } else {
+          $(this).width(938);
+        }
+      });
+      /*
+        约定： 
+          1. 标题栏图片传在同个目录下；
+          2. 若标题栏图片默认名称 是 x.png，则标题栏激活时的图片名称为 x_active.png,既约定_active为区分字符串；
+          3. 相对应的图片后缀(含大小写)一致；
+      */
+
+      $(".tab-ul--- li").click(function () {
+        var that = $(this).index();
+        var fileName = (($(this).index() + 1) + "").length >= 2 ? ($(this).index() + 1) : ("0" + ($(this).index() + 1));
+        var img_left = $(this).find("img").eq(0),
+          imgLeftFullPath = img_left.attr("src"),//图片全路径
+          imgLeftPathArr = imgLeftFullPath.split("/"),
+          imgLeftName = imgLeftPathArr.reverse().splice(0, 1)[0],//图片全名
+          imgLeftPath = imgLeftPathArr.reverse().join("/") + "/",//路径
+          activeStr = "_active",
+          imgType = "." + imgLeftName.split(".")[1]+"?v=1",//后缀名
+          imgActiveName = imgLeftName.split(".")[0] + activeStr + imgType //标题栏图片 active 时的图片名称，遵循约定。
+          ;
+        $('.tab-ul--- li').each(function () {
+          var fileName = (($(this).index() + 1) + "").length >= 2 ? ($(this).index() + 1) : ("0" + ($(this).index() + 1));
+          $(this).find('.pai').attr('src', imgLeftPath + fileName + imgType);
+        });
+        $(this).find('.fold img').attr('src', imgLeftPath + fileName + activeStr + imgType);
+        $(this).animate({
+          width: 938
+        }, 144);
+        $(this).find(".unfold").show();
+        $(this).siblings().animate({
+          width: 120
+        }, 144);
+        $(this).siblings().find(".unfold").hide();
+      });
+
+      //默认显示第一个
+      $(".tab-ul--- li").eq(0).trigger("click");
+
+    })
+
+  </script>
+</body>
+<script type="text/javascript">
+  $("#lotto_times").html(lott);
+  $('#findbtn').click(function () {
+    if (parseInt(is_login) == 0) {
+      login();
+      return;
+    };
+    findfriend();
+  });
+  $('#changebtn').click(function () {
+    if (parseInt(is_login) == 0) {
+      login();
+      return;
+    };
+    changefriend('85px', '85px');
+  });
+  $('#download').click(function () {
+    if (parseInt(is_login) == 0) {
+      login();
+      return;
+    };
+    var attenddo = new Array();
+    attenddo = SinaGameInterface.attend('wd412', 'download');
+    lott_lottery = attenddo.data.times;
+    $("#lotto_times").html(attenddo.data.times);
+  });
+
+
+  $('#gojh').click(function () {
+    if (parseInt(is_login) == 0) {
+      login();
+      return;
+    };
+    var attenddo = new Array();
+    attenddo = SinaGameInterface.attend('wd412', 'gojh');
+    lott_lottery = attenddo.data.times;
+    $("#lotto_times").html(attenddo.data.times);
+  });
+  //弹窗
+  function getcardwd412() {
+    if (parseInt(is_login) == 0) {
+      login();
+      return;
+    };
+    $.ajax({
+      type: 'get',
+      url: "/act_ajax/" + symbol + "/sendCardNo",
+      dataType: 'json',
+      data: {
+        'item_id': 27319,
+        'gid': 6002,
+        'tuid': '',
+      },
+      success: function (data) {
+        if (data.code == 200 || data.code == 400 || data.code == 403 || data.code == 301) {
+          $('#cardnum').html(data.data.kahao);
+          showMask(1);
+        } else if (data.code == 402) {
+          //激活但是魔域同一个账号
+          $('#cardnum').html(data.data.kahao);
+          showMask(1);
+        } else {
+          $('#falsecard').html("很抱歉<br/>" + data.msg);
+          //$('#falsecard').html("很抱歉<br/>领卡失败");
+          showMask(5);
+        }
+
+      }
+    });
+    var attenddo = new Array();
+    attenddo = SinaGameInterface.attend('wd412', 'ka');
+    $("#lotto_times").html(attenddo.data.times);
+  }
+  function share() {
+    if (parseInt(is_login) == 0) {
+      login();
+      return;
+    };
+    weibcontent = $("#weibocontent").html();
+    $.ajax({
+      type: 'POST',
+      url: "/act/" + symbol + "/add_times/wb",
+      dataType: 'json',
+      data: { 'content': weibcontent },
+      success: function (data) {
+        console.log(data);
+        $("#lotto_times").html(data.data.times);
+        alert("发布微博成功！");
+      }
+    });
+  }
+  function loginday() {
+    if (parseInt(is_login) == 0) {
+      login();
+      return;
+    };
+    $.ajax({
+      type: 'POST',
+      url: "/act/" + symbol + "/add_times/loginday",
+      dataType: 'json',
+      data: {},
+      success: function (data) {
+        console.log(data);
+        $("#lotto_times").html(data.data.times);
+      }
+    });
+  }
+  /*if (parseInt(is_login) == 1) {
+    loginday();
+  };*/
+
+</script>
+<script>
+
+  $(function () {
+    //  两个视频播放
+
+    //视频1
+    $(".btn-video").click(function () {
+      $(this).next('.video-bg').show();
+      $(this).next('.video-bg').find('video')[0].play();
+      $('.video-tag').find('video')[0].pause();
+      $(".video-cover").show();
+      $(".video-btn").show();
+    });
+    $(".video-bg .close").click(function () {
+      $(this).parent().hide();
+      $(this).parent().find('video')[0].pause();
+    });
+
+    //视频2
+    $(".video-btn").click(function () {
+      $(this).hide();
+      $(".video-cover").hide();
+      $('.video-tag').find('video')[0].play();
+      $(".video-bg .close").trigger("click");
+    });
+  })
+
+  //问卷调查
+  $(".btn_libao_submit").on("click", function () {
+    var ul = document.querySelector(".question"),
+      selected = ul.querySelectorAll("input[type=radio]:checked") || [],
+      i = 0,
+      len = selected.length,
+      arr = []
+      ;
+    if (len < 3) {
+      showMask(4);
+      return;
+    }
+    for (; i < len; i++) {
+      if (!selected[i].getAttribute("data-value")) {
+        showMask(4);
+        return;
+      }
+    }
+
+    showMask(3);
+
+    //此处应有接口调用
+    var attenddo = new Array();
+    attenddo = SinaGameInterface.attend('wd412', 'dati');
+    $("#lotto_times").html(attenddo.data.times);
+
+  })
+
+  //关闭弹窗
+  $(".mask .mask-off-btn").on("click", function () {
+    console.log(1)
+    $(this).parents(".mask").removeClass("mask-show");
+  })
+
+  //弹出 弹层
+  function showMask(index) {
+    var maskName = ".mask-" + index,
+      mask = document.querySelector(maskName)
+      ;
+    $(".mask").removeClass("mask-show");
+    $(mask).addClass("mask-show");
+
+    if (index == 3) {
+      //全答对之后
+    }
+  }
+
+  //之前弹窗关闭
+  $(".btn-mask-content .close").on("click", function () {
+    $(this).parents(".btn-mask").hide();
+  })
+
+</script>
+
+<script src="/gameact/statics/wendao/wd412.js"></script>
+
+</html>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?07479cf3d9c04334c457af390755ff8e";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>

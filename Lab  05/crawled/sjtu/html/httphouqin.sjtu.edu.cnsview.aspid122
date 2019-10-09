@@ -1,0 +1,1249 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta Name="Keywords" content="上海交通大学,后勤,后勤保障中心,交大后勤">
+<meta Name="作者" content="泡泡,泡泡工作室,www.jdwaimai.cn"> 
+<meta Name="联系方式" content="lipao123@163.com">
+<LINK href="images/css.css" type=text/css rel=stylesheet>
+<script src="inc/Site.js"></script>
+<script src="images/div.js"></script>
+<script language='JavaScript'>
+<!-- 
+function killErrors() {
+return true;
+}
+window.onerror = killErrors;
+// -->
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0" background="images/t_bg.gif" onload="init();">
+
+<!--生成通知-->
+
+
+<iframe id="ifPage" width="405" height="225" style="position:absolute; visibility:visible; z-index:1" src="notice.asp" frameborder="0" border="0" scrolling="no"></iframe>
+<script language="javascript">
+var XX=0;
+var xstep=0;
+var delay_time=60;
+
+var YY=0;  
+var ch=0;
+var oh=0;
+var yon=0;
+
+var ns4=document.layers?1:0
+var ie=document.all?1:0
+var ns6=document.getElementById&&!document.all?1:0
+
+if(ie)
+{
+	XX =  4;
+	YY =  230;
+	document.getElementById('ifPage').style.top=YY;
+}
+else if (ns4)
+{
+	XX =  4;
+	YY =  230;
+	document.getElementById('ifPage').pageX=XX;
+	document.getElementById('ifPage').pageY=YY;
+	document.getElementById('ifPage').visibility="hidden";
+}
+else if (ns6)
+{
+	XX =  4;
+	YY =  230;
+	document.getElementById('ifPage').style.top=YY;
+}
+
+
+function reloc()
+{
+	if(yon==0)
+	{
+		YY=YY-xstep;
+	}
+	else
+	{
+		YY=YY+xstep;
+	}
+
+	if(ie)
+	{
+		ch=document.body.clientHeight;
+		oh=document.getElementById('ifPage').offsetHeight;
+	}
+	else if(ns4)
+	{
+		ch=window.innerHeight;
+		oh=document.getElementById('ifPage').clip.height;
+	}
+	else if(ns6)
+	{
+		ch=window.innerHeight
+		oh=document.getElementById("ifPage").offsetHeight
+	}
+		
+	if(YY<0)
+	{
+		yon=1;YY=0;
+	}
+
+	if(YY>=(ch-oh))
+	{
+		yon=0;YY=(ch-oh);
+	}
+
+	if(ie)
+	{
+		document.getElementById('ifPage').style.left=XX;
+		document.getElementById('ifPage').style.top=YY+document.body.scrollTop;
+	}
+	else if(ns4)
+	{
+		document.getElementById('ifPage').pageX=XX;
+		document.getElementById('ifPage').pageY=YY+window.pageYOffset;
+	}
+	else if(ns6)
+	{
+		document.getElementById("ifPage").style.left=XX
+		document.getElementById("ifPage").style.top=YY+window.pageYOffset
+	}
+}
+
+function onad()
+{
+	if(ns4)
+	document.getElementById('ifPage').visibility="visible";
+	loopfunc();
+}
+
+function loopfunc()
+{
+	reloc();
+	setTimeout('loopfunc()',delay_time);
+}
+
+if(ie||ns4||ns6)
+{
+	onad();
+}
+</script>
+
+
+<!--通知完成-->
+
+<table width="792" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td width="7" background="images/index_06.jpg"></td>
+    <td height="1" bgcolor="#48abf1" class="style1"></td>
+    <td width="7" background="images/index_21.gif"></td>
+  </tr>
+
+  <tr>
+    <td background="images/index_06.jpg"></td>
+    <td width="778" height="160"  bgcolor="0096FF">
+<!--首页LOGO-->
+
+	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="778" height="160">
+      <param name="movie" value="images/3.swf">
+      <param name="quality" value="high">
+      <embed src="images/3.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="778" height="160"></embed>
+    </object>
+
+     
+<!--首页LOGO完成-->
+	</td>
+    <td background="images/index_21.gif"></td>
+  </tr>
+
+    <tr>
+    <td background="images/index_06.jpg"></td>
+    <td width="778" height="28" bgcolor="0096FF">
+	<table width="778" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="369" height="28" valign="bottom" background="images/12_1.jpg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="top">今天是<script language="JavaScript" type="text/JavaScript" src="inc/date.js"></script></span></td>
+    <td><img src="images/12_2.jpg" width="409" height="28" border="0" usemap="#Map"></td>
+  </tr>
+</table>	
+<map name="Map">
+  <area shape="rect" coords="210,3,304,26" href="#" onclick="return setHomePage()">
+  <area shape="rect" coords="310,3,401,27" href="#" onClick="return addFavorite()">
+</map>
+<script type="text/javascript">
+<!--
+function addFavorite()
+{
+  window.external.addFavorite("http://houqin.sjtu.edu.cn","上海交大后勤保障中心");
+  return false;
+}
+function setHomePage()
+{
+  document.body.style.behavior='url(#default#homepage)';
+  document.body.setHomePage('http://houqin.sjtu.edu.cn');
+  return false;
+}
+//-->
+</script>
+</td>
+    <td background="images/index_21.gif"></td>
+  </tr>
+  <tr>
+  <td background="images/index_06.jpg"></td>
+  <td >
+        <TABLE cellSpacing=0 cellPadding=0 width=778 border=0>
+        <TBODY>
+        <TR>
+          <TD bgColor=#7b7b7b height=3 width=478></TD>
+          <TD width=100 bgColor=#8ec8f1 height=3></TD>
+          <TD width=100 bgColor=#48abf1 height=3></TD>
+          <TD width=100 bgColor=#0096ff height=3></TD></TR></TBODY></TABLE>
+  <td background="images/index_21.gif"></td>
+  </td>
+  </tr>
+    <tr>
+    <td background="images/index_06.jpg"></td>
+    <td width="778" align="center" valign="middle" bgcolor="#FFFFFF">
+	<!--
+	这里开始导航
+	-->
+<LINK href="images/menu.css" type=text/css rel=stylesheet>
+<script language="JavaScript" src="images/MENU2.js"> 
+</script> 
+
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#333333" width="778" class="a" background="images/fon_top01.gif">
+  <tr bgcolor="#ffffff" align="center" valign="middle"  > 
+    <td  height="25" bgcolor="#8D977E" background="images/fon_top01.gif"> </td>
+ 
+	<td align="center" background="images/fon_top01.gif"><img src="images/separator.gif"></td>
+	<td align="center" background="images/fon_top01.gif"><a href="index.asp" target="_self" class="memua" >网站首页</a></td>
+
+
+
+	<td align="center" background="images/fon_top01.gif"><img src="images/separator.gif"></td>
+   <td align="center"  background="images/fon_top01.gif"><a href="#"  onMouseOver="expandMenu(null,'tmenu5',getPos(this,'Left'),getPos(this,'Top')+this.offsetHeight);" class="memua" >中心概况</a></td>
+
+
+
+	<td align="center" background="images/fon_top01.gif"><img src="images/separator.gif"></td>
+   <td align="center"  background="images/fon_top01.gif"><a href="#"  onMouseOver="expandMenu(null,'tmenu6',getPos(this,'Left'),getPos(this,'Top')+this.offsetHeight);" class="memua" >下属机构</a></td>
+
+ 
+	<td align="center" background="images/fon_top01.gif"><img src="images/separator.gif"></td>
+	<td align="center" background="images/fon_top01.gif"><a href="view.asp?type=2" target="_self" class="memua" >通知</a></td>
+
+
+
+	<td align="center" background="images/fon_top01.gif"><img src="images/separator.gif"></td>
+   <td align="center"  background="images/fon_top01.gif"><a href="#"  onMouseOver="expandMenu(null,'tmenu4',getPos(this,'Left'),getPos(this,'Top')+this.offsetHeight);" class="memua" >新闻快报</a></td>
+
+
+
+	<td align="center" background="images/fon_top01.gif"><img src="images/separator.gif"></td>
+   <td align="center"  background="images/fon_top01.gif"><a href="#"  onMouseOver="expandMenu(null,'tmenu9',getPos(this,'Left'),getPos(this,'Top')+this.offsetHeight);" class="memua" >精神文明</a></td>
+
+ 
+	<td align="center" background="images/fon_top01.gif"><img src="images/separator.gif"></td>
+	<td align="center" background="images/fon_top01.gif"><a href="eview.asp?type=6" target="_self" class="memua" >年鉴</a></td>
+
+ 
+	<td align="center" background="images/fon_top01.gif"><img src="images/separator.gif"></td>
+	<td align="center" background="images/fon_top01.gif"><a href="http://hqjt.dwgk.sjtu.edu.cn" target="_self" class="memua" >党务公开</a></td>
+
+
+
+	<td align="center" background="images/fon_top01.gif"><img src="images/separator.gif"></td>
+   <td align="center"  background="images/fon_top01.gif"><a href="#"  onMouseOver="expandMenu(null,'tmenu17',getPos(this,'Left'),getPos(this,'Top')+this.offsetHeight);" class="memua" >文件下载</a></td>
+
+
+
+	<td align="center" background="images/fon_top01.gif"><img src="images/separator.gif"></td>
+    <td  height="18" bgcolor="#ffffff" background="images/fon_top01.gif"> </td>
+  </tr>
+</table>
+
+
+
+<!-- 第1开始 -->
+<div id="tmenu5" class="menu" onMouseOut="hideMe();" style='FILTER: alpha(opacity=85)'>
+
+  <a href="cview.asp?blto=5&mytype=1&id=301" onMouseOver="expandMenu('tmenu5');">中心概况</a><br>
+
+  <a href="cview.asp?blto=5&mytype=7&id=302" onMouseOver="expandMenu('tmenu5');">中心领导</a><br>
+ 
+</div>
+
+
+
+<!-- 第2开始 -->
+<div id="tmenu6" class="menu2" onMouseOut="hideMe();" style='FILTER: alpha(opacity=85)'>
+
+  <a href="cview.asp?blto=6&did=172&mytype=354&id=0" onMouseOver="expandMenu('tmenu6');">监管体系</a><br>
+
+  <a href="cview.asp?blto=6&did=184&mytype=361&id=320" onMouseOver="expandMenu('tmenu6');">运行体系</a><br>
+
+  <a href="cview.asp?blto=6&did=185&mytype=371&id=309" onMouseOver="expandMenu('tmenu6');">公益服务体系</a><br>
+ 
+</div>
+
+
+
+<!-- 第3开始 -->
+<div id="tmenu4" class="menu" onMouseOut="hideMe();" style='FILTER: alpha(opacity=85)'>
+
+  <a href="view.asp?type=3" onMouseOver="expandMenu('tmenu4');">新闻快报</a><br>
+
+  <a href="view.asp?type=9" onMouseOver="expandMenu('tmenu4');">图片新闻</a><br>
+ 
+</div>
+
+
+
+<!-- 第4开始 -->
+<div id="tmenu9" class="menu2" onMouseOut="hideMe();" style='FILTER: alpha(opacity=85)'>
+
+  <a href="cview.asp?blto=9&mytype=19&id=0" onMouseOver="expandMenu('tmenu9');">精神文明建设</a><br>
+
+  <a href="mview.asp?blto=9&mytype=21&id=-1" onMouseOver="expandMenu('tmenu9');">光荣榜</a><br>
+ 
+</div>
+
+
+
+<!-- 第5开始 -->
+<div id="tmenu17" class="menu" onMouseOut="hideMe();" style='FILTER: alpha(opacity=85)'>
+
+  <a href="mview.asp?blto=17&mytype=383&id=-1" onMouseOver="expandMenu('tmenu17');">校园环境</a><br>
+
+  <a href="cview.asp?blto=17&mytype=385&id=325" onMouseOver="expandMenu('tmenu17');">爱卫工作</a><br>
+
+  <a href="cview.asp?blto=17&mytype=392&id=0" onMouseOver="expandMenu('tmenu17');">医疗指南</a><br>
+
+  <a href="cview.asp?blto=17&mytype=396&id=331" onMouseOver="expandMenu('tmenu17');">校园零急修</a><br>
+ 
+</div>
+
+
+	<!--
+	这里完成导航
+	-->
+	</td>
+
+
+    <td background="images/index_21.gif"></td>
+  </tr>
+    <tr>
+    <td background="images/index_06.jpg"></td>
+    <td width="778" height="23" align="right" valign="bottom" background="images/21_39.gif">&nbsp;</td>
+    <td background="images/index_21.gif"></td>
+  </tr>
+</table>
+<!--顶部完成-->
+
+
+
+
+<title>上海交通大学后勤保障中心-></title>
+
+<style type="text/css">
+<!--
+#chang {
+	background-color: #eeeeee;
+	height: 100%;
+	width: 228px;
+	float: left;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+-->
+</style>
+
+<table width="792" height="370" border="0" cellpadding="0" cellspacing="0"  align="center" bgcolor=#ffffff>
+  <tr>
+   <td width="7" background="images/index_06.jpg"></td>
+
+<!--左边框架-->
+    <td width="233"  align="center" valign="top">
+
+	<TABLE cellSpacing=0 cellPadding=0 width=233 border=0>
+              <TR>
+                <TD vAlign=top align=right width=227 height=170>
+				
+	    <TABLE cellSpacing=1 cellPadding=0 width="96%" bgColor=#cccccc border=0>
+             
+            <TR>
+                      <TD height=224 align="center" vAlign=top bgColor=#ffffff>
+					  
+					  <table width="90%"  border="0" cellspacing="4" cellpadding="0">
+                        <tr>
+                          <td><img src="images/1_42.jpg" width="218" height="33"></td>
+                        </tr>
+                        <tr>
+                          <td>
+						  <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="images/a_48.jpg" width="45" height="46"></td>
+    <td><a href='sview.asp?id=296'>餐饮指南</a></td>
+    <td><img src="images/a_51.jpg" width="45" height="45"></td>
+    <td><a href='sview.asp?id=297' >维修指南</a></td>
+  </tr>
+  <tr>
+    <td><img src="images/a_53.jpg" width="45" height="45"></td>
+    <td><a href='sview.asp?id=124'>幼教指南</a></td>
+    <td><img src="images/a_52.jpg" width="45" height="45"></td>
+    <td><a href='sview.asp?id=329' >医疗指南</a></td>
+  </tr>
+
+  <tr>
+    <td><img src="images/a_55.jpg" width="45" height="46"></td>
+    <td><a href='sview.asp?id=298' >物业管理</a></td>
+    <td><img src="images/a_54.jpg" width="45" height="46"></td>
+    <td><a href='sview.asp?id=299' >通讯服务</a></td>
+  </tr>
+  <tr>
+    <td><img src="images/a_56.jpg" width="45" height="45"></td>
+    <td><a href='sview.asp?id=300' target=_blank>学校班车</a></td>
+    <td><img src="images/a_59.jpg" width="45" height="45"></td>
+    <td><a href='sview.asp?id=294' target=_blank>市内乘车</a>
+</td>
+  </tr>
+  <tr>
+    <td><img src="images/a_60.jpg" width="45" height="45"></td>
+    <td><a href='sview.asp?id=295' target=_blank>校园地图</a>
+      </td>
+
+</td>
+  </tr>
+</table>
+
+						  </td>
+                        </tr>
+                        <tr>
+                          <td><img src="images/a_70.jpg" width="218" height="18"></td>
+                        </tr>
+                      </table>
+					  
+					  
+					  </td>
+			</tr>
+	</table>
+	
+	</TD>        
+		<TD vAlign=top width=6 height=170><IMG height=262 src="images/f_21.gif" width=6> 
+            </TD></TR></TABLE>	<br>
+
+			<TABLE cellSpacing=0 cellPadding=0 width=233 border=0>
+              <TR>
+                <TD vAlign=top align=right width=227 >
+				
+	    <TABLE cellSpacing=1 cellPadding=0 width="96%" bgColor=#cccccc border=0>
+             
+            <TR>
+                      <TD height=170 align="center" vAlign=top bgColor=#ffffff>
+					  
+					  <table width="90%"  border="0" cellspacing="4" cellpadding="0">
+                        <tr>
+                          <td><img src="images/net4u.jpg" width="218" height="33"></td>
+                        </tr>
+                        <tr>
+                          <td>
+		<div style=" margin-bottom:5px; margin-left:20px; margin-top:5px;">
+								 <a href="wbook.asp?title=[投诉]"><img src="images/toushu.gif" width="176" height="40" border="0"></a><br>
+                                  <a href="wbook.asp?title=[建议]"><img src="images/jianyi.gif" width="176" height="40" border="0"></a><br>
+                            <a href="gbook.asp"><img src="images/baoxiu.gif" width="176" height="40" border="0"></a> <br>
+						<a mailto="hqjtb@sjtu.edu.cn"><img src="images/xinxiang.gif" width="176" height="40" border="0"></a></div>
+							  
+						  </td>
+                        </tr>
+                        <tr>
+                          <td><img src="images/a_70.jpg" width="218" height="18"></td>
+                        </tr>
+                      </table>
+					  
+					  
+					  </td>
+			</tr>
+	</table>
+	
+	</TD>        
+		<TD vAlign=top width=6 ><IMG height=190 src="images/f_21.gif" width=6> 
+            </TD>
+              </TR></TABLE>		<br>
+			
+<TABLE cellSpacing=0 cellPadding=0 width=233 border=0>
+              <TR>
+                <TD vAlign=top align=right width=227 height=170>
+				
+	    <TABLE cellSpacing=1 cellPadding=0 width="96%" bgColor=#cccccc border=0>
+             
+            <TR>
+                      <TD height=224 align="center" vAlign=top bgColor=#ffffff>
+					  
+					  <table width="90%"  border="0" cellspacing="4" cellpadding="0">
+                        <tr>
+                          <td><img src="images/index_72.jpg" width="218" height="33"></td>
+                        </tr>
+                        <tr>
+                          <td>
+						  <br>
+<div style="padding:5 " align="center">
+	 <TABLE cellSpacing=0 cellPadding=0 width="80%" border=0> 
+ 
+	  
+              <FORM name=form2 action='vshow.asp?id=2' method=post> 
+              <TBODY> 
+<input name="tvote" type="hidden" value="你最希望在“交椒菜篮”（二餐一楼）购买的食材"> 
+<input name="VoteType" type="hidden" value="Multi"> 
+<input name="Action" type="hidden" value="Vote"> 
+              <TR> 
+                <TD  
+              height=21 colSpan=2 align=middle vAlign=center ><font class="liuyan">你最希望在“交椒菜篮”（二餐一楼）购买的食材</font></TD></TR> 
+			    
+              <TR> 
+                <TD bgColor=#e0e0e0 colSpan=2 height=1></TD></TR> 
+              <TR> 
+                <TD vAlign=center align=middle width="1%" height=21><INPUT  
+                  type=checkbox value='5' name='VoteOption'></TD> 
+                <TD>蔬菜</TD></TR> 
+				               
+              <TR> 
+                <TD bgColor=#e0e0e0 colSpan=2 height=1></TD></TR> 
+              <TR> 
+                <TD vAlign=center align=middle width="1%" height=21><INPUT  
+                  type=checkbox value='6' name='VoteOption'></TD> 
+                <TD>肉类</TD></TR> 
+				               
+              <TR> 
+                <TD bgColor=#e0e0e0 colSpan=2 height=1></TD></TR> 
+              <TR> 
+                <TD vAlign=center align=middle width="1%" height=21><INPUT  
+                  type=checkbox value='7' name='VoteOption'></TD> 
+                <TD>禽蛋类</TD></TR> 
+				               
+              <TR> 
+                <TD bgColor=#e0e0e0 colSpan=2 height=1></TD></TR> 
+              <TR> 
+                <TD vAlign=center align=middle width="1%" height=21><INPUT  
+                  type=checkbox value='8' name='VoteOption'></TD> 
+                <TD>水果</TD></TR> 
+				               
+              <TR> 
+                <TD bgColor=#e0e0e0 colSpan=2 height=1></TD></TR> 
+              <TR> 
+                <TD vAlign=center align=middle width="1%" height=21><INPUT  
+                  type=checkbox value='9' name='VoteOption'></TD> 
+                <TD>切配好的盆菜</TD></TR> 
+				               
+              <TR> 
+                <TD bgColor=#e0e0e0 colSpan=2 height=1></TD></TR> 
+              <TR> 
+                <TD vAlign=center align=middle width="1%" height=21><INPUT  
+                  type=checkbox value='10' name='VoteOption'></TD> 
+                <TD>豆制品</TD></TR> 
+				               
+ 
+              <TR> 
+                <TD bgColor=#e0e0e0 colSpan=2 height=1></TD></TR> 
+              <TR align="center"> 
+               
+                <TD colSpan=2><INPUT type=submit value=[投票] name=Submit style="cursor:hand "> &nbsp;&nbsp;&nbsp;&nbsp;
+                  <INPUT onclick="javascrip:window.open('vshow.asp?id=2&tvote=你最希望在“交椒菜篮”（二餐一楼）购买的食材')" type=button value=[查看] name=Submit2 style="cursor:hand "></TD></TR> 
+              <TR> 
+            <TD bgColor=#e0e0e0 colSpan=2  
+            height=1></TD></TR></TBODY> </FORM>
+	 
+</TABLE>
+
+	
+	</div>
+<br>
+
+						  
+						  </td>
+                        </tr>
+                        <tr>
+                          <td><img src="images/a_70.jpg" width="218" height="18"></td>
+                        </tr>
+                      </table>
+					  
+					  
+					  </td>
+			</tr>
+	</table>
+	
+	</TD>        
+		<TD vAlign=top width=6 ><IMG height=200 src="images/f_21.gif" width=6> 
+            </TD>
+              </TR></TABLE><!----><br>
+<div id="chang">&nbsp;</div>
+ </td>	
+<!--右边框架-->
+    <td align="center" valign="top">
+
+	
+	<table width="100%"  border="0" align="center" cellpadding="2" cellspacing="0"  >
+
+  <tr> 
+    <td align="center" height=50 valign=bottom><b><font size=5>餐饮指南</font></b></td>
+  </tr>
+<tr><td> 
+           
+<TABLE cellSpacing=1 cellPadding=0 width=100% bgColor=#ffffff 
+            border=0>
+              <TBODY>
+              <TR>
+                <TD width=77 bgColor=#0096ff height=1></TD>
+                <TD width=59 bgColor=#48abf1 height=1></TD>
+                <TD width=84 bgColor=#8ec8f1 height=1></TD>
+                <TD width=300 bgColor=#d0cccc height=1></TD></TR>
+              <TR>
+                <TD width=77 bgColor=#0096ff height=1></TD>
+                <TD width=59 bgColor=#48abf1 height=1></TD>
+                <TD width=84 bgColor=#8ec8f1 height=1></TD>
+                <TD width=300 bgColor=#d0cccc height=1></TD></TR></TBODY></TABLE>
+
+</td></tr>
+<tr align=right><td align="center">
+所属类型:服务指南
+&nbsp;&nbsp;|&nbsp;&nbsp;
+阅读次数:105496&nbsp;&nbsp;|&nbsp;&nbsp;
+添加时间:2017-3-9 12:7&nbsp;</td>
+</tr>
+</table>
+<table width="98%"  border="0" align="center" cellpadding="0" cellspacing="0" >
+<tr></tr>
+<tr></tr>
+<tr><td>&nbsp;</td></tr>
+<tr>
+<td width=4>
+</td>
+<td >
+<font class="zhengwen">
+<div id='neirong'>
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:PunctuationKerning/>
+  <w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:AdjustLineHeightInTable/>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan" align="left"><b><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt">一、服务范围：</span></b><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"></span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan" align="left"><span style="font-size:12.0pt;
+font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;
+color:black;mso-font-kerning:0pt;mso-bidi-font-weight:bold">为广大师生提供餐饮服务及洗浴服务。</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"></span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan" align="left"><b><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt">二、服务承诺：</span></b><b style="mso-bidi-font-weight:
+normal"><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"></span></b></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan" align="left"><span style="font-size:12.0pt;
+font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;
+color:black;mso-font-kerning:0pt;mso-bidi-font-weight:bold">保证饮食安全； </span><span style="font-size:12.0pt;font-family:宋体;mso-fareast-font-family:仿宋_GB2312;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt;mso-bidi-font-weight:
+bold" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt;mso-bidi-font-weight:
+bold" lang="EN-US"> </span><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"></span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan" align="left"><span style="font-size:12.0pt;
+font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;
+color:black;mso-font-kerning:0pt;mso-bidi-font-weight:bold">提高饭菜质量； </span><span style="font-size:12.0pt;font-family:宋体;mso-fareast-font-family:仿宋_GB2312;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt;mso-bidi-font-weight:
+bold" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt;mso-bidi-font-weight:
+bold" lang="EN-US"> </span><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"></span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan" align="left"><span style="font-size:12.0pt;
+font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;
+color:black;mso-font-kerning:0pt;mso-bidi-font-weight:bold">热情礼貌服务。</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"></span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan" align="left"><b><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt">三、分布情况：</span></b><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"></span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan" align="left"><b><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt">①徐汇校区：</span></b><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"></span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan" align="left"><b><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt">二食堂</span></b><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"></span></p>
+
+<p class="MsoNormal" style="text-align:left;mso-pagination:widow-orphan" align="left"><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">早餐<span lang="EN-US">6</span>：<span lang="EN-US">30</span>～<span lang="EN-US">9</span>：<span lang="EN-US">30</span>；午餐<span lang="EN-US">11</span>：</span><span style="font-size:12.0pt;
+font-family:仿宋_GB2312;mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;
+color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;
+font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;
+color:black;mso-font-kerning:0pt">～<span lang="EN-US">13</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">；晚餐<span lang="EN-US">
+17</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">～<span lang="EN-US">19</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">；</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt"> <span lang="EN-US"></span></span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan" align="left"><b><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt">教工餐厅</span></b><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"></span></p>
+
+<p class="MsoNormal" style="text-align:left;mso-pagination:widow-orphan" align="left"><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">午餐<span lang="EN-US">11</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">～<span lang="EN-US">13</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">；晚餐<span lang="EN-US">
+17</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">～<span lang="EN-US">19</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">；</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt"> <span lang="EN-US"></span></span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan" align="left"><b><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt">研究生餐厅</span></b><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"></span></p>
+
+<p class="MsoNormal" style="text-align:left;mso-pagination:widow-orphan" align="left"><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">午餐<span lang="EN-US">11</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">～<span lang="EN-US">13</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">；晚餐<span lang="EN-US">
+17</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">～<span lang="EN-US">19</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">；<b><span lang="EN-US"><br>
+<br>
+</span>招待餐厅</b><span lang="EN-US"><br>
+<br>
+</span>中餐<span lang="EN-US">11</span>：</span><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;
+font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;
+color:black;mso-font-kerning:0pt">～<span lang="EN-US">14</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">；晚餐<span lang="EN-US">17</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">～<span lang="EN-US">21</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">；</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt"> <span lang="EN-US"></span></span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan" align="left"><b><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt">茶室<span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span></b><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US">9</span><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt">：</span><span style="font-size:12.0pt;
+font-family:仿宋_GB2312;mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;
+mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt">～</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US">22</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt">：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt">；</span><span style="font-size:12.0pt;
+font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;
+mso-font-kerning:0pt" lang="EN-US"></span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan" align="left"><b><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt">西餐厅<span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span></span></span></b><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US">9</span><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt">：<span lang="EN-US">30</span><span style="color:black">～</span><span lang="EN-US">22</span>：</span><span style="font-size:12.0pt;
+font-family:仿宋_GB2312;mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;
+mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-font-kerning:0pt">；</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"></span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan" align="left"><b><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt">北方面食</span></b><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"></span></p>
+
+<p class="MsoNormal" style="text-align:left;mso-pagination:widow-orphan" align="left"><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt">早、午餐<span lang="EN-US">7</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt">～<span lang="EN-US">14</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt">；晚餐<span lang="EN-US"> 16</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt">～<span lang="EN-US">20</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt">； <span lang="EN-US"></span></span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan" align="left"><b><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt">清真食堂</span></b><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"></span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan" align="left"><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span></span><span style="font-size:12.0pt;
+font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;
+color:black;mso-font-kerning:0pt">早、午餐<span lang="EN-US">7</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">～<span lang="EN-US">13</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">；晚餐<span lang="EN-US">
+17</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">～<span lang="EN-US">19</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">；</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"></span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan" align="left"><span style="font-size:12.0pt;font-family:宋体;mso-fareast-font-family:仿宋_GB2312;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">&nbsp;</span><b><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">浴室</span></b><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt"> <span lang="EN-US"></span></span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan" align="left"><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US"><span style="mso-spacerun:yes">&nbsp;</span></span><span style="font-size:12.0pt;
+font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;
+mso-font-kerning:0pt">冬季（<span lang="EN-US">12</span>月<span style="color:black">～</span><span lang="EN-US">2</span>月）<span lang="EN-US">16</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt">～</span><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt" lang="EN-US">22</span><span style="font-size:12.0pt;font-family:
+仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
+0pt">：<span lang="EN-US">30</span>；</span><span style="font-size:12.0pt;
+font-family:仿宋_GB2312;mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;
+mso-font-kerning:0pt" lang="EN-US"><br>
+</span><span style="font-size:12.0pt;font-family:Calibri;mso-ascii-font-family:
+仿宋_GB2312;mso-fareast-font-family:仿宋_GB2312;mso-bidi-font-family:宋体;mso-font-kerning:
+0pt" lang="EN-US">&nbsp;</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt">夏季（<span lang="EN-US">3</span>月<span style="color:black">～</span><span lang="EN-US">11</span>月）<span lang="EN-US">16</span>：</span><span style="font-size:12.0pt;
+font-family:仿宋_GB2312;mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;
+mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt">～</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US">23</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt">：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt">；</span><span style="font-size:12.0pt;
+font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;
+mso-font-kerning:0pt" lang="EN-US"></span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan" align="left"><span style="font-size:12.0pt;font-family:Calibri;mso-ascii-font-family:仿宋_GB2312;
+mso-fareast-font-family:仿宋_GB2312;mso-bidi-font-family:宋体;mso-font-kerning:
+0pt" lang="EN-US">&nbsp;</span><b><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt">徐汇校区校园卡充值服务部</span></b><span style="font-size:12.0pt;
+font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;
+mso-font-kerning:0pt" lang="EN-US"></span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan" align="left"><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:宋体;mso-fareast-font-family:
+仿宋_GB2312;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">&nbsp;</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt" lang="EN-US"> </span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;
+font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;
+color:black;mso-font-kerning:0pt">周一</span><span style="font-size:
+12.0pt;mso-bidi-font-size:10.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">--</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt">周五</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;
+font-family:宋体;mso-fareast-font-family:仿宋_GB2312;mso-bidi-font-family:宋体;
+color:black;mso-font-kerning:0pt" lang="EN-US">&nbsp;</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt" lang="EN-US"> 10:30--13:00 </span><span style="font-size:12.0pt;font-family:
+仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
+0pt" lang="EN-US"></span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan" align="left"><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan" align="left"><b><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt">②闵行校区：</span></b><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"></span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan" align="left"><b><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt">第一餐饮大楼<span lang="EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span></span></span></b><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"></span></p>
+
+<p class="MsoNormal" style="text-align:left;mso-pagination:widow-orphan" align="left"><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt">早餐<span lang="EN-US"> 7</span>：<span lang="EN-US">00</span></span><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt">～<span lang="EN-US">9</span>：</span><span style="font-size:12.0pt;
+font-family:仿宋_GB2312;mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;
+color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;
+font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;
+color:black;mso-font-kerning:0pt">；午餐<span lang="EN-US"> 11</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">～<span lang="EN-US">13</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">；晚餐<span lang="EN-US">
+17</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">～<span lang="EN-US">19</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">；<span lang="EN-US"><br>
+</span></span><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt" lang="EN-US"><br>
+</span><b><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">第二餐饮大楼<span lang="EN-US"><br>
+<span style="mso-spacerun:yes">&nbsp;</span><br>
+</span></span></b><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-font-kerning:0pt">早餐<span lang="EN-US"> 7</span>：<span lang="EN-US">00</span></span><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt">～<span lang="EN-US">9</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">；午餐<span lang="EN-US">
+11</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">～<span lang="EN-US">13</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">；晚餐<span lang="EN-US">
+17</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">～<span lang="EN-US">19</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">；</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"></span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan" align="left"><b><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt">第三餐饮大楼</span></b><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"></span></p>
+
+<p class="MsoNormal" style="text-align:left;mso-pagination:widow-orphan" align="left"><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt">早餐<span lang="EN-US"> 7</span>：<span lang="EN-US">00</span></span><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt">～<span lang="EN-US">9</span>：</span><span style="font-size:12.0pt;
+font-family:仿宋_GB2312;mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;
+color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;
+font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;
+color:black;mso-font-kerning:0pt">；午餐<span lang="EN-US"> 11</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">～<span lang="EN-US">13</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">；晚餐<span lang="EN-US">
+17</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">～<span lang="EN-US">19</span>：</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">00</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">；</span><span style="font-size:12.0pt;font-family:Calibri;mso-ascii-font-family:
+仿宋_GB2312;mso-fareast-font-family:仿宋_GB2312;mso-bidi-font-family:宋体;color:black;
+mso-font-kerning:0pt" lang="EN-US">&nbsp;</span><span style="font-size:12.0pt;
+font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;
+mso-font-kerning:0pt" lang="EN-US"> </span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:left;mso-pagination:widow-orphan" align="left"><b><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt">西区学生浴室</span></b><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"></span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt">（周一至周日）<span lang="EN-US">15</span></span><span style="font-size:12.0pt;
+font-family:仿宋_GB2312;mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;
+mso-font-kerning:0pt">：</span><span style="font-size:12.0pt;
+font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;
+color:black;mso-font-kerning:0pt" lang="EN-US">30</span><span style="font-size:12.0pt;
+font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;
+color:black;mso-font-kerning:0pt">～<span lang="EN-US">23</span></span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt">：<span style="color:black" lang="EN-US">00<br>
+</span></span><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"><br>
+</span><b><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt">闵行校区校园卡充值服务部<span lang="EN-US"><br>
+</span></span></b><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"><br>
+</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:
+仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;color:black;
+mso-font-kerning:0pt">第一餐饮大楼：周一</span><span style="font-size:12.0pt;
+mso-bidi-font-size:10.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">--</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt">周五</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;
+font-family:宋体;mso-fareast-font-family:仿宋_GB2312;mso-bidi-font-family:宋体;
+color:black;mso-font-kerning:0pt" lang="EN-US">&nbsp;</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt" lang="EN-US"> 10:30--13:00</span><span style="font-size:12.0pt;mso-bidi-font-size:
+10.0pt;font-family:宋体;mso-fareast-font-family:仿宋_GB2312;mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt" lang="EN-US">&nbsp;&nbsp;</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt" lang="EN-US">15:00--17:30</span><span style="font-size:12.0pt;mso-bidi-font-size:
+10.0pt;font-family:宋体;mso-fareast-font-family:仿宋_GB2312;mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt" lang="EN-US">&nbsp;</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"> </span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:宋体;mso-fareast-font-family:
+仿宋_GB2312;mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt" lang="EN-US"> <br>
+</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;
+font-family:宋体;mso-fareast-font-family:仿宋_GB2312;mso-bidi-font-family:宋体;
+color:black;mso-font-kerning:0pt" lang="EN-US">&nbsp;&nbsp;</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt" lang="EN-US"> </span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;
+font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;
+color:black;mso-font-kerning:0pt">周六</span><span style="font-size:
+12.0pt;mso-bidi-font-size:10.0pt;font-family:宋体;mso-fareast-font-family:仿宋_GB2312;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt" lang="EN-US"> </span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;
+font-family:宋体;mso-fareast-font-family:仿宋_GB2312;mso-bidi-font-family:宋体;
+color:black;mso-font-kerning:0pt" lang="EN-US">&nbsp;</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt" lang="EN-US"> 10:30--14:00<br>
+</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;
+font-family:宋体;mso-fareast-font-family:仿宋_GB2312;mso-bidi-font-family:宋体;
+color:black;mso-font-kerning:0pt" lang="EN-US">&nbsp;&nbsp;</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt" lang="EN-US"><br>
+</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:
+仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;color:black;
+mso-font-kerning:0pt">第二餐饮大楼：周一</span><span style="font-size:12.0pt;
+mso-bidi-font-size:10.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:宋体;color:black;mso-font-kerning:0pt" lang="EN-US">--</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt">周五</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;
+font-family:宋体;mso-fareast-font-family:仿宋_GB2312;mso-bidi-font-family:宋体;
+color:black;mso-font-kerning:0pt" lang="EN-US">&nbsp;</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt" lang="EN-US"> 10:30--13:00</span><span style="font-size:12.0pt;mso-bidi-font-size:
+10.0pt;font-family:宋体;mso-fareast-font-family:仿宋_GB2312;mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt" lang="EN-US">&nbsp;&nbsp;</span><span style="font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;color:black;mso-font-kerning:
+0pt" lang="EN-US">15:00--17:30</span></p>
+
+<p class="MsoNormal"><span style="font-size:12.0pt;mso-bidi-font-size:
+10.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:
+宋体;color:black;mso-font-kerning:0pt" lang="EN-US"><br>
+<br>
+</span><b><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt">③七宝校区</span></b><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt">：<span lang="EN-US"><br>
+<br>
+</span><b style="mso-bidi-font-weight:normal">七宝餐厅<span lang="EN-US"><br>
+</span></b><span lang="EN-US"><br>
+</span>周一～周五</span><span style="font-size:12.0pt;font-family:宋体;
+mso-fareast-font-family:仿宋_GB2312;mso-bidi-font-family:宋体;mso-font-kerning:
+0pt" lang="EN-US">&nbsp;</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"> </span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt">早餐<span lang="EN-US"> 7</span>：<span lang="EN-US">00</span>～<span lang="EN-US">8</span>：<span lang="EN-US">15</span></span><span style="font-size:12.0pt;font-family:宋体;mso-fareast-font-family:仿宋_GB2312;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US">&nbsp;</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"> </span><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt">午餐<span lang="EN-US">11</span>：<span lang="EN-US">00</span>～<span lang="EN-US">12</span>：<span lang="EN-US">30</span></span><span style="font-size:12.0pt;font-family:宋体;mso-fareast-font-family:仿宋_GB2312;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US">&nbsp;</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"> </span><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt">晚餐<span lang="EN-US"> 16</span>：<span lang="EN-US">30</span>～<span lang="EN-US">17</span>：<span lang="EN-US">30</span></span><span style="font-size:12.0pt;font-family:宋体;mso-fareast-font-family:仿宋_GB2312;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US">&nbsp;</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"> <br>
+</span><span style="font-size:12.0pt;font-family:宋体;mso-fareast-font-family:
+仿宋_GB2312;mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US">&nbsp;</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt">双休日</span><span style="font-size:12.0pt;font-family:宋体;mso-fareast-font-family:仿宋_GB2312;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:
+宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"> </span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt">早餐<span lang="EN-US"> 7</span>：<span lang="EN-US">00</span>～<span lang="EN-US">8</span>：<span lang="EN-US">15</span></span><span style="font-size:12.0pt;font-family:宋体;mso-fareast-font-family:仿宋_GB2312;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US">&nbsp;</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"> </span><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt">午餐<span lang="EN-US">11</span>：<span lang="EN-US">00</span>～<span lang="EN-US">12</span>：<span lang="EN-US">00</span></span><span style="font-size:12.0pt;font-family:宋体;mso-fareast-font-family:仿宋_GB2312;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US">&nbsp;</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"> </span><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt">晚餐<span lang="EN-US"> 16</span>：<span lang="EN-US">30</span>～<span lang="EN-US">17</span>：<span lang="EN-US">00<br>
+<br>
+</span><b style="mso-bidi-font-weight:normal">浴室 （七宝餐厅北侧）</b><span lang="EN-US"><br>
+<br>
+</span>周一～周四</span><span style="font-size:12.0pt;font-family:宋体;
+mso-fareast-font-family:仿宋_GB2312;mso-bidi-font-family:宋体;mso-font-kerning:
+0pt" lang="EN-US">&nbsp;</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"> 16</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt">：<span lang="EN-US">30</span>～<span lang="EN-US">21</span>：<span lang="EN-US">00</span>；周五～周日</span><span style="font-size:12.0pt;font-family:宋体;mso-fareast-font-family:仿宋_GB2312;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US">&nbsp;</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"> 16</span><span style="font-size:
+12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;mso-bidi-font-family:
+宋体;mso-font-kerning:0pt">：<span lang="EN-US">30</span>～<span lang="EN-US">20</span>：<span lang="EN-US">00<br>
+<br>
+</span><b style="mso-bidi-font-weight:normal">校园卡充值（七宝餐厅充值窗口）</b><span lang="EN-US"><br>
+<br>
+</span>周一～周五</span><span style="font-size:12.0pt;font-family:宋体;
+mso-fareast-font-family:仿宋_GB2312;mso-bidi-font-family:宋体;mso-font-kerning:
+0pt" lang="EN-US">&nbsp;</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;
+mso-hansi-font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt" lang="EN-US"> 11</span><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt">：<span lang="EN-US">00</span>～<span lang="EN-US">12</span>：<span lang="EN-US">00(</span>节假日除外<span lang="EN-US">)</span></span></p><p class="MsoNormal"><span style="font-size:12.0pt;font-family:仿宋_GB2312;mso-hansi-font-family:宋体;
+mso-bidi-font-family:宋体;mso-font-kerning:0pt"><span lang="EN-US">
+<br>
+</span><b>四、联系电话及投诉热线</b><span lang="EN-US"><br>
+<b><br>
+</b></span><b>徐汇校区：<span lang="EN-US">62933024<br>
+</span>闵行校区：<span lang="EN-US">54742418<br>
+</span>七宝校区：<span lang="EN-US">64785584</span></b></span><span style="font-family:仿宋_GB2312" lang="EN-US"></span></p>
+
+<!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:普通表格;
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><br><br>
+	
+</div>
+</font>
+</td>
+<td width=4>
+</td></tr>
+<tr height=50><td colspan=3>
+<div align="center"><a href="javascript:window.print();">【打印此页】</a>&nbsp;&nbsp;<a href="javascript:window.close();" >【关闭窗口】</a></div>
+</td></tr>
+</table>
+<table width="98%"  border="0" align="center" cellpadding="5" cellspacing="0" background="images/bodybg.jpg">
+<tr><td><hr align="center" width="98%" size="1" noshade style="border-style: dotted; border-color: #000080"></td></tr>
+
+</table>
+
+	
+		</td>
+
+    <td width="7" background="images/index_21.gif"></td>
+  </tr>
+</table>
+<!--main frame end here-->
+
+<!--底部开始-->
+<title>上海交通大学后勤保障中心</title>
+<table width="792" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+    <td width="7" background="images/index_06.jpg"></td>
+    <td width="778" height="23" background="images/bo_02.gif">&nbsp;</td>
+    <td width="7" background="images/index_21.gif"></td>
+  </tr>
+  
+   <tr>
+  <td background="images/index_06.jpg"></td>
+  <td >
+        <TABLE cellSpacing=0 cellPadding=0 width=778 border=0>
+        <TBODY>
+        <TR>
+          <TD bgColor=#7b7b7b height=3 width=478></TD>
+          <TD width=100 bgColor=#8ec8f1 height=3></TD>
+          <TD width=100 bgColor=#48abf1 height=3></TD>
+          <TD width=100 bgColor=#0096ff height=3></TD></TR></TBODY></TABLE>
+  <td background="images/index_21.gif"></td>
+  
+  </tr>
+  
+   <tr>
+    <td background="images/index_06.jpg"></td>
+    <td width="778" height="18" background="images/a_66.jpg">&nbsp;</td>
+    <td background="images/index_21.gif"></td>
+  </tr>
+  
+  <tr>
+    <td background="images/index_06.jpg"></td>
+    <td width="778" height="38" align="center" valign="middle" bgcolor="#FFFFFF" >
+	COPYRIGHT&copy;上海交通大学后勤保障中心 联系电话：021-54742401 Email：hqjtb@sjtu.edu.cn 沪交ICP备05209<br>
+    <a href="about.asp?kw=aboutus" target="_blank">关于本站</a> | <a href="about.asp?kw=contact" target="_blank">联系方式</a> | <a href="about.asp?kw=copyright" target="_blank">版权信息</a> | <a href="about.asp?kw=privacy" target="_blank">隐私政策</a> | <a href="admin/admin_login.asp" target="_blank">管理登陆</a><br>
+
+</td>
+    <td background="images/index_21.gif"></td>
+  </tr>
+</table>
+
+</body>
+</html>
+

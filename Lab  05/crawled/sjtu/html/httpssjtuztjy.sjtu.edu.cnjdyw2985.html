@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>上海交大召开“不忘初心，牢记使命”主题教育动员大会-上海交通大学“不忘初心,牢记使命”主题教育</title>
+<meta name="description" content="上海交通大学“不忘初心,牢记使命”主题教育" />
+<meta name="keywords" content="上海交通大学“不忘初心,牢记使命”主题教育" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Bootstrap -->    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+<link type="text/css" rel="stylesheet" href="/css/css.css" />
+<link rel="stylesheet" href="/css/animate.css">
+<script src="/js/jquery.min.js"></script>
+<!--轮转焦点图-->
+<script src="/js/jquery.hiSlider.js"></script>
+<link rel="stylesheet" href="/css/jquery.hiSlider.css">
+
+<!-- 图片滚动 --> 
+<link href="/css/owl.carousel.css" type="text/css" rel="stylesheet" />
+<link href="/css/owl.theme.css" type="text/css" rel="stylesheet" />
+<!-- 图片滚动 --> 
+<script type="text/javascript" src="/js/owl.carousel.js"></script>
+<script type="text/javascript">
+    function search_validate(){
+        if(document.getElementById('search_keywords').value == ''){
+            alert('请输入搜索关键字');
+            return false;
+        }
+    }
+</script> 
+</head>
+<body class="bj_b"><div class="top" id="top_nav">
+    <div class="main">
+        <a href="/" class="logo"></a>     
+        <span class="menu2" id="menu2"><a href="javascript:void(0)">&nbsp;</a></span>   
+        <div id=navk>
+                        <ul class="cd_t">
+                  
+                <li><a href="https://www.sjtu.edu.cn" target="_blank">交大首页</a></li>
+                                <li class="l_x">|</li>
+                                  
+                <li><a href="https://news.sjtu.edu.cn" target="_blank">交大新闻网</a></li>
+                                <li class="l_x">|</li>
+                                  
+                <li><a href="http://jd.sjtu.edu.cn/web/JDJDW/2960001.htm" target="_blank">焦点网</a></li>
+                                            </ul>
+            <span class="ss">
+                <form method="get" action="https://sjtuztjy.sjtu.edu.cn/active/search.html" onsubmit="return search_validate();">
+                <div class="txtk">
+                    <input type="text" id="search_keywords" name="search_keywords" class="form-control" placeholder="">
+                    <button class="an_ss" type="submit"></button>
+                </div>
+                </form>
+            </span>
+            <ul class="menu">
+                <li><a href="/" class="dbt">首页</a></li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/zyjs.html" class="dbt ">中央精神</a>
+                                        <dl>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/zy_file.html" >中央文件</a></dd>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/zy_study.html" >学习资料</a></dd>
+                                            </dl>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/news.html" class="dbt on">新闻动态</a>
+                                        <dl>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/jdyw.html" >交大要闻</a></dd>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/jcdt.html" >基层动态</a></dd>
+                                            </dl>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/xjdx.html" class="dbt ">先进典型</a>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/mtgz.html" class="dbt ">媒体关注</a>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/slhj.html" class="dbt ">史料汇集</a>
+                                    </li>
+                            </ul>
+            <div class="clear"></div>
+        </div> 
+    </div>  
+</div>
+<div class="top_jg"></div>
+<SCRIPT type=text/javascript>  
+$(document).ready(function() {
+    var pk=document.body.clientWidth;
+    if(pk<1200){
+        //手机菜单
+        $("#menu2").click(function(){
+            if($("#navk").css("display")=="none"){
+                $(this).find("a").addClass("on");
+                $("#navk").slideDown("slow");       
+            }
+            else{
+                $(this).find("a").removeClass("on");
+                $("#navk").slideUp("slow");     
+            }
+        });  
+    }
+    else{
+        $(".menu li").hover(function() {
+            $(this).find("dl").css("display","block");
+        },function(){
+            
+            $(this).find("dl").css("display","none");
+        });
+
+        //向下滚动顶部缩小
+        $.fn.smartFloat = function() {
+            var position = function(element) {
+                var top = element.position().top, pos = element.css("position");
+                $(window).scroll(function() {
+                    var scrolls = $(this).scrollTop();
+                    if (scrolls > top) {
+                        $("#top_nav").addClass("on");
+                        if (window.XMLHttpRequest) {
+                            element.css({
+                                position: "fixed",
+                                //background:"#efefef",
+                                top: 0
+                            });
+                        } else {
+                            element.css({
+                                top: scrolls
+                            });
+                        }
+                    }else {
+                        $("#top_nav").removeClass("on");
+                        element.css({
+                            position: pos,
+                            //background:"transparent",
+                            top: top
+                        });
+                    }
+                });
+            };
+            return $(this).each(function() {
+                position($(this));
+            });
+
+        };
+        $("#top_nav").smartFloat();
+        //向下滚动顶部缩小 end
+    };
+});  
+//-->  
+</SCRIPT>
+<div class="ban"><img src="/upload/image/20190924/20190924141304.jpg" ></div>
+<div class="dqwz">
+ 	<div class="main wow fadeInUp">
+  		<a href="/">首页</a> &gt; <a href="https://sjtuztjy.sjtu.edu.cn/news.html">新闻动态</a> &gt; <a href="https://sjtuztjy.sjtu.edu.cn/jdyw.html">交大要闻</a> 	</div>
+</div>
+<div class="nyk">
+	 	<div class="main">
+   		<div class="zt_snr">
+     		<div class="sbt wow fadeInUp">上海交大召开“不忘初心，牢记使命”主题教育动员大会</div>
+     		<div class="fbt wow fadeInUp"></div>
+     		<div class="xx wow fadeInUp"></div>
+    		<div class="ssj news_ssj wow fadeInUp">日期：2019-09-12</div>
+    		<div class="snr wow fadeInUp">
+			    <p>　　9月12日，上海交通大学在闵行校区陈瑞球楼召开&ldquo;不忘初心，牢记使命&rdquo;主题教育动员大会，贯彻落实中央对于第二批主题教育的要求，对学校主题教育做动员部署。中央第三指导组组长诸葛彩华出席会议并讲话，校党委书记姜斯宪作动员报告，党委副书记、校长林忠钦主持会议。中央第三指导组李涛、宋翔、王志慧，在校全体校领导，部分老领导，全校处级领导干部，教师党支部书记，学生党支部书记代表参加大会。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="" src="/upload/image/20190924/20190924184844.jpg" style="width: 800px;" /></p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="" src="/upload/image/20190924/20190924184905.jpg" style="width: 800px;" /></p>
+
+<p>&nbsp;</p>
+
+<p>　　姜斯宪在讲话中明确提出四点要求，第一，提高政治站位，深刻领会主题教育的重大意义，切实把思想和行动统一到中央的决策部署上来。开展主题教育，是用新时代中国特色社会主义思想武装全党的迫切需要，是推进新时代党的建设的迫切需要，是保持党同人民群众血肉联系的迫切需要，是实现党的十九大确定的目标任务的迫切需要。要教育引导广大党员干部发扬革命传统和优良作风，团结带领师生落实立德树人的根本任务，把创建一流大学一流学科的宏伟蓝图变为美好现实。第二，找准定位，结合实际，深刻领会中央关于主题教育的目标要求。正确把握主题教育总体要求，以深入学习贯彻习近平新时代中国特色社会主义思想为根本任务和主线，以守初心、担使命，找差距、抓落实为总要求，坚持抓好四个到位，实现理论学习有收获、思想政治受洗礼、干事创业敢担当、为民服务解难题、清正廉洁作表率的目标。要准确把握中管高校和我校主题教育的着力点。第三，聚焦主题主线，分层分类部署，认真落实中央关于第二批主题教育的任务措施。一是统筹推进学习教育、调查研究、检视问题、整改落实四项重点措施，突出抓好县处级以上领导班子干部主题教育。将学习教育贯穿整个主题教育的全过程，学懂弄通做实习近平新时代中国特色社会主义思想，聚焦贯彻习近平新时代中国特色社会主义思想、习近平总书记重要指示批示精神和党中央决策部署，边学边查、立查立改。二是学习教育全覆盖，做实基层党支部学习教育和检视整改。以党支部为单位，结合&ldquo;两学一做&rdquo;学习教育常态化制度化，依托&ldquo;三会一课&rdquo;、主题党日等进行，抓好学习教育，认真检视整改。第四，强化组织领导，坚持严实作风，确保主题教育取得实际成效。强化组织领导，主动接受指导，压实领导责任，防止形式主义和走过场，注重舆论引导，坚持统筹兼顾。把开展主题教育与学校中心工作相结合、与建立管长远、管根本的常态长效机制相结合、与庆祝新中国成立70周年相结合。</p>
+
+<p>&nbsp;</p>
+
+<p><br />
+　　姜斯宪强调，要以高度的政治责任感、更加认真的态度、更加振奋的精神、更加务实的作风，在中央指导组的指导下，认真组织好、开展好主题教育，不断开创学校改革发展的新局面，以优异成绩迎接新中国成立70周年，把党的十九大确定的目标任务落到实处。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="" src="/upload/image/20190924/20190924185033.jpg" style="width: 800px;" /></p>
+
+<p>&nbsp;</p>
+
+<p>　　诸葛彩华在动员讲话指出，按照党中央的部署要求，上海交通大学党委高度重视、提前谋划、精心组织、周密安排主题教育各项工作。她围绕学习贯彻习近平总书记重要讲话精神和党中央部署要求，结合指导组的工作职责，就落实主题教育各项任务提出四点意见：一要聚焦主题主线，深入学习贯彻习近平新时代中国特色社会主义思想。在学懂、弄通、做实上取得新进步、达到新高度，在坚持党的全面领导、加强党的建设上走在前、做表率。二要把握总体要求，努力实现&ldquo;五句话&rdquo;目标。紧紧围绕为党育人、为国育才，突出党的政治建设，坚持立德树人，着力整改解决党委领导下的校长负责制、基层党组织建设、教师队伍建设、意识形态工作、学生社团等工作中存在的突出问题。三要坚持高起点、高标准，统筹推进四项重点措施。要学做结合，查改贯通，抓好学习教育、调查研究、检视问题、整改落实各环节工作，推动主题教育高起点开展、高标准推进，取得扎实成效。四要严格履行主体责任，切实防止形式主义、官僚主义。加强组织领导、强化督促指导，全面从严、全程求实、全员投入，确保主题教育高质量的开展。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="" src="/upload/image/20190924/20190924185118.jpg" style="width: 800px;" /></p>
+
+<p>&nbsp;</p>
+
+<p>　　林忠钦在主持会议最后要求，全校各级领导班子、全体党员，特别是党员领导干部，要认真学习领会动员大会精神，切实把思想和行动统一到中央精神上来，切实把握好主题教育的重大意义、主题主线、总体要求和实施步骤。统筹安排，扎实推进，认真务实开展好各项工作，确保主题教育取得实效，为加快推进学校&ldquo;双一流&rdquo;建设、为建设高等教育强国做出更大贡献。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="" src="/upload/image/20190924/20190924185156.jpg" style="width: 800px;" /></p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: right;">作者：张文清<br />
+摄影：梅秋武<br />
+供稿单位：新闻中心</p>
+
+<p style="text-align: right;">&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+
+<p>&nbsp;</p>
+    		</div>
+    		<div class="sgd wow fadeInUp">
+				            	<a href="https://sjtuztjy.sjtu.edu.cn/jdyw/3035.html">下一条：校党委书记姜斯宪焦点讲坛作专题授课</a>     			<a href="https://sjtuztjy.sjtu.edu.cn/jdyw.html" class="cd_fh">返回列表</a>
+     		</div>
+   		</div>
+  		<div class="clear"></div>
+ 	</div>
+</div>
+<script type="text/javascript" src="/js/wow.js"></script>
+<script>
+var wow = new WOW({
+    boxClass: 'wow',
+    animateClass: 'animated',
+    offset: 0,
+    mobile: true,
+    live: true
+});
+wow.init();
+</script>
+
+	<div class="foot">
+	 	<div class="main">
+	  		<div class="f1 wow fadeInUp" data-wow-delay=".1s">
+	  		沪ICP备05052060   沪举报中心   版权所有© 上海交通大学<br>  
+			地址：上海市东川路800号   邮编：200240   查号：86-21-54740000	  	</div>
+	  	<div class="f2 wow fadeInUp" data-wow-delay=".3s">
+	   		<span class="s1">相关链接</span>
+	   			   			   		<a href="https://www.sjtu.edu.cn" target="_blank">交大首页</a>
+	   			   		<b>|</b>
+	   			   			   		<a href="https://news.sjtu.edu.cn" target="_blank">交大新闻网</a>
+	   			   		<b>|</b>
+	   			   			   		<a href="http://jd.sjtu.edu.cn/web/JDJDW/2960001.htm" target="_blank">焦点网</a>
+	   			   			   	</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.fy1 a').each(function(){
+            if($(this).text()=='上一页' || $(this).text()=='下一页'){
+                $(this).addClass('cd_sx');
+            }
+        })
+    });
+</script>
+</body>
+</html>

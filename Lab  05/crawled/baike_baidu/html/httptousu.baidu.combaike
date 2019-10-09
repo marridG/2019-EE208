@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?06072155b3281b1c9388aef3decf5fae";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <meta charset="UTF-8" />
+    <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
+    <meta name="baidu-site-verification" content="GaTo5YnIV9" />
+    <title>百度用户服务中心-百科-用户反馈</title>
+    <meta name="keywords" content="百度服务中心、百度意见反馈、百度投诉反馈、百度倾听、百度帮助中心、百度产品投诉、百度产品意见">
+    <meta name="description" content="百度服务中心是百度客服官方网站，为您解决使用百度产品过程中遇到的问题，帮助用户更了解百度，也让百度更懂用户。">
+    <link rel="shortcut icon" href="/resources/images/favicon.ico"/>
+    <link type="text/css" rel="stylesheet" href="/resources/css/normalize.css" />
+    <link type="text/css" rel="stylesheet" href="/resources/css/global.css?timestamp=20171208" />
+    <!-- <link type="text/css" rel="stylesheet" href="/resources/css/bd-selector.css"/> -->
+    <script type="text/javascript" src="/resources/js/lib/tangram-2.0.2.1.js"></script>
+    <script type="text/javascript" src="/resources/js/lib/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="https://passport.baidu.com/passApi/js/uni_login_wrapper.js?cdnversion=201910091933"></script>
+    <script type="text/javascript" src="/resources/js/common.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            login.init('https://passport.baidu.com', 'http://help.baidu.com/resources/html/jump.html', 'service_feedback');
+        });
+    </script>
+    <link type="text/css" rel="stylesheet" href="/resources/css/feedback.css?timestamp=20190724"/>
+    <script type="text/javascript" src="/resources/js/add.js?timestamp=20190724"></script>
+    <script type="text/javascript" src="/resources/js/commonFankui.js?timestamp=20190724"></script>
+</head>
+<body>
+<div class="header clear">
+    <h1 class="logo"><a href="http://help.baidu.com" target="_blank" class="logobd">百度</a><a href="/index2" class="logo-serv">服务中心</a>
+        <a href="/index2"><img src="/resources/images/logo2x.png"/></a>
+    </h1>
+    <form class="search-form" action="/search2" name="f" id="searchForm">
+        <input id="search_txt" value="请简单描述您遇到的问题" placeholder="请简单描述您遇到的问题" type="text" class="search-key" x-webkit-speech="true"  name="keywords" autocomplete="off"/>
+        <input id="searchbutton" class="btn-search" type="submit" value=""/>
+        <ul id="searchSuggest" class="suggestion" style="display:none;">
+            <!--<li index="0"><span>帐号</span>不能自动登录怎么办</li>
+            <li index="1">登录百度<span>帐号</span>有什么作用呢？</li>
+            <li index="2">我的<span>帐号</span>被封了怎么办</li>
+            <li index="3">数字<span>帐号</span></li>
+            <li index="4">关注百度<span>帐号</span>管家微信号有什么用？</li>
+            <li index="5">怎样注册百度<span>帐号</span>？</li>
+            <li index="6">我的手机被绑定在了别的<span>帐号</span>上</li>
+            <li class="" index="7">我的<span>帐号</span>会被清空么</li>
+            <li class="" index="8">什么是<span>帐号</span>冻结？</li>
+            <li class="" index="9"><span>帐号</span>莫名发消息，被别人登录怎么办</li>
+            <li class="" index="9"><span>帐号</span>莫名发消息，被别人登录怎么办</li>-->
+        </ul>
+        <div class="hotword">
+                    </div>
+    </form>
+    <div class="loginfo">
+                <div class="unlogin">
+            <a href="#" id="btnLogin">登录</a>
+            <a href="https://passport.baidu.com/v2/?reg&tpl=service_feedback&u=">注册</a>
+        </div>
+            </div>
+    <div style="clear: both"></div>
+</div>
+
+
+<div class="banner-title">
+    <div class="main">
+        <a href="/index2" class="tit">服务中心</a><span class="tit">></span><a href="/question?prod_id=10" class="tit">百科</a><span class="tit">></span><span class="tit">意见反馈</span>
+    </div>
+</div>
+
+<div class="main-b">
+    <div class="left-bar" id="left-bar">
+        <div class="side-tit">
+            <img src="/resources/images/icon/baike_65.png"/>
+        </div>
+        <ul id="formTab">
+                                    <li class="setTab-tab"><a href="#1">举报不良信息</a></li>
+                                                <li class="setTab-tab"><a href="#2">未通过词条申诉</a></li>
+                                                <li class="setTab-tab"><a href="#3">封禁查询与解封</a></li>
+                                                <li class="setTab-tab"><a href="#4">反馈侵权信息</a></li>
+                                                                    </ul>
+    </div>
+    <!-- 表单部分  -->
+    <div class="center-form">
+    <div class="pro-name">百度百科</div>
+    <div class="tip">
+                百度百科词条人人可编辑，词条创建和修改都是免费，绝不存在官方及代理商付费代编。
+            </div>
+    <!-- 提交成功样式  -->
+    <div style="display:none;" class="form-success" id="js-form-success">
+    <div class="form-success-inner">
+        <div class="form-right"></div>
+        <p>
+        </p>
+    </div>
+</div>
+        <!-- end -->
+    <div class="form-mod tab1-cnt" id="form-panel">
+        <!-- tab1 -->
+        <div class="setTab-panel">
+            <div class="tip tip_a on" id="form1-tip">
+                <div class="caution"></div>
+                <p class="tip-fk">
+                    反馈须知：
+                                        如果您发现百科中已收录的黄色网站、买卖信息、反动暴力等不良信息，请在此举报。
+                                    </p>
+                                <!-- <div class="tip_b">
+	建议您 <a href="#" class="btnLog">登录</a> 后进行反馈，以便在 <a href="/pscenter">我的反馈</a>中及时跟踪处理状态，并在第一时间收到答复。
+</div> -->
+<div class="caution"></div>
+<p class="tip-fk">
+	建议您 <a href="#" class="btnLog">登录</a> 后进行反馈，以便在 <a href="/pscenter">我的反馈</a> 中及时跟踪处理状态，并在第一时间收到答复。
+</p>
+                            </div>
+            <form method="post" name="tousu_form1" id="tousu_form1" class="form1" action="/submit"
+                  target="ifr">
+                <div class="fk-list">
+                    <div class="lable">
+                        <span class="red">*</span> 我要举报的词条名：
+                    </div>
+                    <div class="list-con">
+                        <input name="title" class="iptxt" id="form1_extra" type="text" maxlength="100" value=""/>
+                        <span id="form1_extra_ok" class="msgok"></span>
+                        <p id="form1_extra_err" class="err"></p>
+                    </div>
+                </div>
+                <div class="fk-list">
+                    <div class="lable">
+                        <span class="red">*</span> 举报链接：
+                    </div>
+                    <div class="list-con">
+                        <div id="form1_link" class="multi-link">
+                            <div><input type="text" class="iptxt formlink" id="form1_link1"
+                                        value="" size="40" maxlength="1024"/>
+                                <span id="form1_link1_ok" class="msgok"></span>
+                                <p id="form1_link1_err" class="err"></p>
+                            </div>
+                            <div><input type="text" class="iptxt formlink" id="form1_link2" value="" size="40"
+                                        maxlength="1024"> <span id="form1_link2_ok" class="msgok"></span><p id="form1_link2_err" class="err"></p></div>
+                            <div><input type="text" class="iptxt formlink" id="form1_link3" value="" size="40"
+                                        maxlength="1024"> <span id="form1_link3_ok" class="msgok"></span><p id="form1_link3_err" class="err"></p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fk-list">
+                    <div class="lable">
+                        我要举报的帐号：
+                    </div>
+                    <div class="list-con">
+                        <input name="ids" class="iptxt" id="form1_ids" type="text" maxlength="100"/>
+                         <span id="form1_ids_ok" class="msgok"></span>
+                        <p id="form1_ids_err" class="err"></p>
+                    </div>
+                </div>
+                <div class="fk-list">
+                    <div class="lable">
+                        <span class="red">*</span> 描述 <span id="form1_content_info" class="form-info">（请您详细说明遇到的情况和申请原因，500个汉字以内）</span>：
+
+                    </div>
+                    <div class="list-con">
+                        <textarea name="content" id="form1_content" cols="83" rows="10" class="ipt-area" minlength="0"
+                                  maxlength="1000"></textarea> <span id="form1_content_ok" class="tmsgok"></span>
+
+                        <p id="form1_content_err" class="err"></p>
+
+                    </div>
+                </div>
+                <div class="fk-list">
+                    <div class="lable">
+                        <span class="red">*</span> 手机号码
+                    </div>
+                    <div class="list-con">
+                        <input name="mobile" class="iptxt" id="form1_mobile" type="tel" maxlength="11"/>
+                        <span id="form1_mobile_ok" class="msgok"></span>
+                        <p id="form1_mobile_err" class="err"></p>
+                        <div class="bd-check-box sms-checkbox">
+                            <input type="hidden" name="sms_notice" id="form1_sms_notice" value="" />
+                            <label val="1">收到反馈结果时短信通知我</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="fk-list">
+                    <div class="form-submit">
+                        <input type="hidden" name="links" id="form1_links" value="">
+                        <input type="hidden" name="category_id" value="1">
+                        <input type="hidden" name="pid" value="10"/>
+                        <input type="hidden" name="submit_token" value="the fisrt two args should be string type:0,1!"/>
+                        <input type="hidden" name="ptfk" value="0"/>
+                        <div class="btn-wrapper">
+                            <input type="submit" id="form1_btnSubmit" class="js-submit" value="提交反馈" />
+                        </div>
+                        <span id="form1_submit_err" class="form-err" style="display:none;"></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- tab2 -->
+        <div class="setTab-panel">
+            <div class="tip tip_a on" id="form2-tip">
+                <div class="caution"></div>
+                <p class="tip-fk">
+                    反馈须知：
+                                        如果您提交的词条版本未通过系统审核，且您对系统反馈的原因有疑问，可在此提出申诉。
+                                    </p>
+                                <!-- <div class="tip_b red">请您 <a href="#" class="btnLog">登录</a> 之后进行反馈，以便在 <a href="/pscenter" class="btnLog">我的反馈</a> 中及时跟踪处理状态，并在第一时间收到答复。</div> -->
+<div class="caution"></div>
+<p class="tip-fk red">
+	请您 <a href="#" class="btnLog">登录</a> 之后进行反馈，以便在 <a href="/pscenter">我的反馈</a> 中及时跟踪处理状态，并在第一时间收到答复。
+</p>
+
+                            </div>
+            <form method="post" name="tousu_form2" id="tousu_form2" class="form2" action="/submit"
+                  target="ifr">
+                <div class="fk-list">
+                    <div class="lable">
+                        <span class="red">*</span> 请选择要申诉的词条名及对应版本：
+                        <span id="form2_version_select_err" class="err"></span>
+                    </div>
+                    <div class="list-con">
+                        <div class="bd-wrapper-dropdown">
+                            <input type="hidden" id="form2_version_select" name="extratype" value="" />
+                            <ul>
+                                <li class="on" val="">词条名 版本提交时间</li>
+                                                                <li val="其他">其他</li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="fk-list">
+                    <div class="lable">
+                        <span class="red">*</span> 我要申诉的词条名：
+                    </div>
+                    <div class="list-con">
+                        <input disabled name="extra" class="iptxt" id="form2_extra" type="text" maxlength="100" value="" disabled/>
+                        <span id="form2_extra_ok" class="msgok"></span>
+                        <p id="form2_extra_err" class="err"></p>
+                    </div>
+                </div>
+                <div class="fk-list">
+                    <div class="lable">
+                        <span class="red">*</span> 申诉ID：
+                    </div>
+                    <div class="list-con">
+                        <input disabled name="ids" class="iptxt" id="form2_ids" type="text" maxlength="100" value="" disabled/>
+                        <span id="form2_ids_ok" class="msgok"></span>
+                        <p id="form2_ids_err" class="err"></p>
+                    </div>
+                </div>
+                <div class="fk-list">
+                    <div class="lable">
+                        <span class="red">*</span> 版本提交时间 <span id="form2_time_info" class="form-info">（例如2013-06-28 11:09，请至少精确到分钟）</span>：
+                    </div>
+                    <div class="list-con">
+                        <input disabled name="time" class="iptxt" id="form2_time" type="text" maxlength="100" value="" disabled/>
+                        <span id="form2_time_ok" class="msgok"></span>
+                        <p id="form2_time_err" class="err"></p>
+                    </div>
+                </div>
+                <div class="fk-list">
+                    <div class="lable">
+                        <span class="red">*</span> 词条类型：
+                        <span id="form2_extra_type_err" class="err"></span>
+                    </div>
+                    <div class="list-con">
+                        <div class="bd-wrapper-dropdown">
+                            <input type="hidden" id="form2_extra_type" name="extratype" value="" />
+                            <ul>
+                                <li class="on" val="">请选择词条类型</li>
+                                <li val="1">人物</li>
+                                <li val="2">企业</li>
+                                <li val="3">产品</li>
+                                <li val="4">网站</li>
+                                <li val="5">品牌</li>
+                                <li val="6">学校</li>
+                                <li val="7">动植物</li>
+                                <li val="8">景观景区</li>
+                                <li val="9">文学作品</li>
+                                <li val="10">其他</li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="fk-list">
+                    <div class="lable">
+                        申诉描述 <span id="form2_content_info" class="form-info">（请您详细说明遇到的情况和申请原因，500个汉字以内）</span>：
+
+                    </div>
+                    <div class="list-con">
+                        <textarea disabled name="content" id="form2_content" cols="83" rows="10" class="ipt-area" minlength="0"
+                                  maxlength="1000" disabled></textarea> <span id="form2_content_ok" class="tmsgok"></span>
+
+                        <p id="form2_content_err" class="err"></p>
+                    </div>
+                </div>
+                <div class="fk-list">
+                    <div class="lable">
+                        <span class="red">*</span> 手机号码
+                    </div>
+                    <div class="list-con">
+                        <input name="mobile" class="iptxt" id="form2_mobile" type="tel" maxlength="11"/>
+                        <span id="form2_mobile_ok" class="msgok"></span>
+                        <p id="form2_mobile_err" class="err"></p>
+                        <div class="bd-check-box sms-checkbox">
+                            <input type="hidden" name="sms_notice" id="form2_sms_notice" value="" />
+                            <label val="1">收到反馈结果时短信通知我</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="fk-list">
+                    <div class="form-submit">
+                        <input type="hidden" name="version" value="" disabled />
+                        <input type="hidden" name="commitid" id="form2_commitid">
+                        <input type="hidden" name="category_id" value="2">
+                        <input type="hidden" name="pid" value="10"/>
+                        <input type="hidden" name="submit_token" value="the fisrt two args should be string type:0,1!"/>
+                        <input type="hidden" name="ptfk" value="0"/>
+                        <div class="btn-wrapper disabled">
+                            <input type="submit" id="form2_btnSubmit" class="js-submit" value="提交反馈" disabled />
+                        </div>
+                       <span id="form2_submit_err" class="form-err" style="display:none;"></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- tab3 -->
+        <div class="setTab-panel">
+            <div class="tip tip_a on" id="form5-tip">
+                <div class="caution"></div>
+                <p class="tip-fk">
+                    反馈须知：
+                                        如果您的百度百科帐号被封禁，而您对封禁结论或原因有疑问，请在此反馈。 
+
+                                    </p>
+                                <!-- <div class="tip_b red">请您 <a href="#" class="btnLog">登录</a> 之后进行反馈，以便在 <a href="/pscenter" class="btnLog">我的反馈</a> 中及时跟踪处理状态，并在第一时间收到答复。</div> -->
+<div class="caution"></div>
+<p class="tip-fk red">
+	请您 <a href="#" class="btnLog">登录</a> 之后进行反馈，以便在 <a href="/pscenter">我的反馈</a> 中及时跟踪处理状态，并在第一时间收到答复。
+</p>
+
+                            </div>
+            <form method="post" name="tousu_form5" id="tousu_form5" class="form5" action="/submit"
+                  target="ifr">
+                <div class="fk-list">
+                    <div class="lable">
+                        <span class="red">*</span> 我要查询的ID :
+                    </div>
+                    <div class="list-con">
+                        <input disabled name="id" class="iptxt" id="form5_id" type="text" maxlength="100" value="" disabled/>
+                        <span id="form5_id_ok" class="msgok"></span>
+                        <p id="form5_id_err" class="err"></p>
+                    </div>
+                </div>
+                <div class="fk-list">
+                    <div class="lable">
+                        <span class="red">*</span> 详细描述  <span id="form5_content_info" class="form-info">（请您详细说明遇到的情况和申请原因，500个汉字以内）</span>：
+
+                    </div>
+                    <div class="list-con">
+                        <textarea disabled name="content" id="form5_content" cols="83" rows="10" class="ipt-area" minlength="0"
+                                  maxlength="1000" disabled></textarea> <span id="form5_content_ok" class="tmsgok"></span>
+
+                        <p id="form5_content_err" class="err"></p>
+                    </div>
+                </div>
+                <div class="fk-list">
+                    <div class="lable">
+                        <span class="red">*</span> 手机号码
+                    </div>
+                    <div class="list-con">
+                        <input name="mobile" class="iptxt" id="form5_mobile" type="tel" maxlength="11"/>
+                        <span id="form5_mobile_ok" class="msgok"></span>
+                        <p id="form5_mobile_err" class="err"></p>
+                        <div class="bd-check-box sms-checkbox">
+                            <input type="hidden" name="sms_notice" id="form5_sms_notice" value="" />
+                            <label val="1">收到反馈结果时短信通知我</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="fk-list">
+                    <div class="form-submit">
+                        <input type="hidden" name="category_id" value="5">
+                        <input type="hidden" name="pid" value="10"/>
+                        <input type="hidden" name="submit_token" value="the fisrt two args should be string type:0,1!"/>
+                        <input type="hidden" name="ptfk" value="0"/>
+                        <div class="btn-wrapper disabled">
+                            <input type="submit" id="form5_btnSubmit" class="js-submit" value="提交反馈" disabled />
+                        </div>
+                        <span id="form5_submit_err" class="form-err" style="display:none;"></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- tab4 -->
+        <div class="setTab-panel">
+            <div class="tip tip_a on" id="form6-tip">
+                <div class="caution"></div>
+                <p class="tip-fk">
+                    反馈须知：
+                                        当您发现词条中有对您侮辱诽谤或者侵犯您隐私权、商标权、著作权等合法权益的内容，请在本专区反馈。
+
+                                    </p>
+                                <!-- <div class="tip_b red">请您 <a href="#" class="btnLog">登录</a> 之后进行反馈，以便在 <a href="/pscenter" class="btnLog">我的反馈</a> 中及时跟踪处理状态，并在第一时间收到答复。</div> -->
+<div class="caution"></div>
+<p class="tip-fk red">
+	请您 <a href="#" class="btnLog">登录</a> 之后进行反馈，以便在 <a href="/pscenter">我的反馈</a> 中及时跟踪处理状态，并在第一时间收到答复。
+</p>
+
+                            </div>
+            <form method="post" name="tousu_form6" id="tousu_form6" class="form6" action="/submit"
+                  target="ifr">
+                <div class="fk-list" >
+                    <div class="lable">
+                        <span class="red">*</span> 本人身份：<span id="form6_qType_ok" class="msgok"></span><span id="form6_qType_err" class="err"></span>
+                    </div>
+                    <div class="list-con qtype"><!--  id="form6_qType" -->
+                       <!--  <label><input disabled class="form-radio" value="企业" name="type" flag="company" type="radio" disabled/>企业</label>
+                        <label><input disabled class="form-radio" value="个人" name="type" flag="person" type="radio" disabled/>个人</label> -->
+                        <div class="bd-radio">
+                            <input type="hidden" id="form6_qType" name="type" value="" />
+                            <label val="企业" flag="company">企业</label>
+                            <label val="个人" flag="person">个人</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- 企业隐藏部分 -->
+                <div class="fk-list typeImg type_company">
+                    <div class="lable"><span class="red">*</span> 保证函 <span class="form-info">按<a id="btnGuarantee1" href="#"> 示例 </a> 填写完整，签字并加盖公章确认</span>：</div>
+                    <div class="list-con">
+                        <ul class="up-img-lst">
+                            <li id="form6_upimg_5"><a href="/uploadimg?pid=10&form_id=6&picIdFlag=pic05&category_id=6" class="btn-upload-img" id="form6_pic05_uploadImage"><img src="/resources/images/fk/form_img_add.png"/></a> <p id="form6_pic05_imagePreview" class="img-prev"></p> <input class="iptPic" type="hidden" id="form6_pic05_imageId" value="" name="pic_1"></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                    <span id="form6_pic05_ok" class="msgok"></span>
+                    <p id="form6_pic05_err" class="err"></p>
+                </div>
+                <div class="fk-list typeImg type_company">
+                    <div class="lable"><span class="red">*</span> 营业执照（副本）或 组织机构代码证 <span class="form-info">原件照片或加盖公章的复印件照片</span>：</div>
+                    <div class="list-con">
+                        <ul class="up-img-lst">
+                            <li id="form6_upimg_6"><a href="/uploadimg?pid=10&form_id=6&picIdFlag=pic06&category_id=6" class="btn-upload-img" id="form6_pic06_uploadImage"><img src="/resources/images/fk/form_img_add.png"/></a> <p id="form6_pic06_imagePreview" class="img-prev"></p> <input class="iptPic" type="hidden" id="form6_pic06_imageId" value="" name="pic_2"></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                    <span id="form6_pic06_ok" class="msgok"></span>
+                    <p id="form6_pic06_err" class="err"></p>
+                </div>
+                <!-- END -->
+                <!-- 个人隐藏部分 -->
+                <div class="fk-list typeImg type_person">
+                    <div class="lable"><span class="red">*</span> 保证函 <span class="form-info">按<a id="btnGuarantee2" href="#"> 示例 </a> 填写完整，并签字确认</span>：</div>
+                    <div class="list-con">
+                        <ul class="up-img-lst">
+                            <li id="form6_upimg_7"><a href="/uploadimg?pid=10&form_id=6&picIdFlag=pic07&category_id=6" class="btn-upload-img" id="form6_pic07_uploadImage"><img src="/resources/images/fk/form_img_add.png"/></a> <p id="form6_pic07_imagePreview" class="img-prev"></p> <input class="iptPic" type="hidden" id="form6_pic07_imageId" value="" name="pic_1"></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                    <span id="form6_pic07_ok" class="msgok"></span>
+                    <p id="form6_pic07_err" class="err"></p>
+                </div>
+                <div class="fk-list typeImg type_person">
+                    <div class="lable"><span class="red">*</span> 身份证 <span class="form-info">（包括正反面）</span>：</div>
+                    <div class="list-con">
+                        <ul class="up-img-lst">
+                            <li id="form6_upimg_8"><a href="/uploadimg?pid=10&form_id=6&picIdFlag=pic08&category_id=6" class="btn-upload-img" id="form6_pic08_uploadImage"><img src="/resources/images/fk/form_img_add.png"/></a> <p id="form6_pic08_imagePreview" class="img-prev"></p> <input class="iptPic" type="hidden" id="form6_pic08_imageId" value="" name="pic_2"></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                    <span id="form6_pic08_ok" class="msgok"></span>
+                    <p id="form6_pic08_err" class="err"></p>
+                </div>
+                <!-- END -->
+                <div class="fk-list">
+                    <div class="lable">
+                        <span class="red">*</span> 我要反馈的词条：
+                    </div>
+                    <div class="list-con">
+                        <input disabled name="extra" class="iptxt" id="form6_extra" type="text" maxlength="100" value="" disabled/>
+                        <span id="form6_extra_ok" class="msgok"></span>
+                        <p id="form6_extra_err" class="err"></p>
+                    </div>
+                </div>
+                <div class="fk-list">
+                    <div class="lable">
+                        <span class="red">*</span> 反馈链接：
+                    </div>
+                    <div class="list-con">
+                        <input disabled name="links" class="iptxt" id="form6_link" type="text" maxlength="100" value="" disabled/>
+                        <span id="form6_link_ok" class="msgok"></span>
+                        <p id="form6_link_err" class="err"></p>
+                    </div>
+                </div>
+                <div class="fk-list">
+                    <div class="lable">
+                        <span class="red">*</span> 我要反馈的帐号 <span  id="form6_ids_info" class="form-info">（多个帐号用“,”隔开）</span>：
+                    </div>
+                    <div class="list-con">
+                        <input disabled name="ids" class="iptxt" id="form6_ids" type="text" maxlength="100" value="" disabled/>
+                        <span id="form6_ids_ok" class="msgok"></span>
+                        <p id="form6_ids_err" class="err"></p>
+                    </div>
+                </div>
+                <div class="fk-list">
+                    <div class="lable">
+                        <span class="red">*</span> 问题描述 <span id="form6_content_info" class="form-info">（若您认为词条内容存在错误或者与事实不符，请<a href="http://tieba.baidu.com/p/2758338351" target="_blank">点击这里</a>）</span>：
+
+                    </div>
+                    <div class="list-con">
+                        <textarea disabled name="content" id="form6_content" cols="83" rows="10" class="ipt-area" minlength="0"
+                                  maxlength="1000" disabled></textarea> <span id="form6_content_ok" class="tmsgok"></span>
+
+                        <p id="form6_content_err" class="err"></p>
+                    </div>
+                </div>
+                <div class="fk-list">
+                    <div class="lable">上传图片 <span class="form-info">（如有证明反馈理由成立的其它辅助材料，可以上传图片）</span>：</div>
+                    <div class="list-con">
+                        <ul class="up-img-lst">
+                            <li id="form6_upimg_1"><a href="/uploadimg?pid=10&form_id=6&amp;picIdFlag=pic01&category_id=6" class="btn-upload-img" id="form6_pic01_uploadImage"><img src="/resources/images/fk/form_img_add.png"/></a> <p id="form6_pic01_imagePreview" class="img-prev"></p> <input type="hidden" id="form6_pic01_imageId" value="" name="pic[]"></li>
+                            <li id="form6_upimg_2" style="display:none;"><a href="/uploadimg?pid=10&form_id=6&amp;picIdFlag=pic02&category_id=6" class="btn-upload-img" id="form6_pic02_uploadImage"><img src="/resources/images/fk/form_img_add.png"/></a> <p id="form6_pic02_imagePreview" class="img-prev"></p> <input type="hidden" id="form6_pic02_imageId" value="" name="pic[]"></li>
+                            <li id="form6_upimg_3" style="display:none;"><a href="/uploadimg?pid=10&form_id=6&amp;picIdFlag=pic03&category_id=6" class="btn-upload-img" id="form6_pic03_uploadImage"><img src="/resources/images/fk/form_img_add.png"/></a> <p id="form6_pic03_imagePreview" class="img-prev"></p> <input type="hidden" id="form6_pic03_imageId" value="" name="pic[]"></li>
+                            <li id="form6_upimg_4" style="display:none;"><a href="/uploadimg?pid=10&form_id=6&amp;picIdFlag=pic04&category_id=6" class="btn-upload-img" id="form6_pic04_uploadImage"><img src="/resources/images/fk/form_img_add.png"/></a> <p id="form6_pic04_imagePreview" class="img-prev"></p> <input type="hidden" id="form6_pic04_imageId" value="" name="pic[]"></li>
+
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="fk-list">
+                    <div class="lable">
+                        联系邮箱  <span class="form-info">（留下您的联系邮箱，以便我们将处理结果通知给您，我们会严格保密）</span>：
+                    </div>
+                    <div class="list-con">
+                        <input disabled name="email" class="iptxt" id="form6_email" type="text" maxlength="100" value="" disabled/>
+                        <span id="form6_email_ok" class="msgok"></span>
+                        <p id="form6_email_err" class="err"></p>
+                    </div>
+                </div>
+                <div class="fk-list">
+                    <div class="lable">
+                        <span class="red">*</span> 手机号码
+                    </div>
+                    <div class="list-con">
+                        <input name="mobile" class="iptxt" id="form6_mobile" type="tel" maxlength="11"/>
+                        <span id="form6_mobile_ok" class="msgok"></span>
+                        <p id="form6_mobile_err" class="err"></p>
+                        <div class="bd-check-box sms-checkbox">
+                            <input type="hidden" name="sms_notice" id="form6_sms_notice" value="" />
+                            <label val="1">收到反馈结果时短信通知我</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="fk-list">
+                    <div class="form-submit">
+                        <input type="hidden" name="category_id" value="6">
+                        <input type="hidden" name="pid" value="10"/>
+                        <input type="hidden" name="submit_token" value="the fisrt two args should be string type:0,1!"/>
+                        <input type="hidden" name="ptfk" value="0"/>
+                        <div class="btn-wrapper disabled">
+                            <input type="submit" id="form6_btnSubmit" class="js-submit" value="提交反馈" disabled />
+                        </div>
+                        <span id="form6_submit_err" class="form-err" style="display:none;"></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+<iframe name="ifr" id="ifr" width="0" height="0" style="display:none;"></iframe>
+    <!--  end  -->
+    <!-- 帮助list -->
+                        <div class="right-bar">
+            <div class="gray">
+                <span class="span-img"><img src="/resources/images/bg/wenhao_gray.png" ／></span>
+                <span class="span-text">问题帮助</span>
+                <div class="clear"></div>
+            </div>
+            <ul class="right-list">
+                                                             <li><a href="http://tieba.baidu.com/p/3774972570" target="_blank" title="【1】什么是“缺少参考资料”？">【1】什么是“缺少参考资料”？</a></li>
+                                             <li><a href="http://tieba.baidu.com/p/3818125715" target="_blank" title="【2】什么是“参考资料不可靠”？">【2】什么是“参考资料不可靠”</a></li>
+                                             <li><a href="http://tieba.baidu.com/p/3774912620" target="_blank" title="【3】什么是“参考资料与内容不对应”？">【3】什么是“参考资料与内容不</a></li>
+                                             <li><a href="http://tieba.baidu.com/p/3774953576" target="_blank" title="【4】什么是“含有大量溢美夸耀的描述”？">【4】什么是“含有大量溢美夸耀</a></li>
+                                             <li><a href="http://tieba.baidu.com/p/3819217540" target="_blank" title="【5】有一个词条跟我想创建的词条重名怎么办？">【5】有一个词条跟我想创建的词</a></li>
+                                                </ul>
+                              <div class="gray inline">
+                  <span class="span-img lue">
+                    <img src="/resources/images/bg/lue.png" />
+                  </span>
+                  <span class="span-text">
+                    进入<a
+                    href="http://baike.baidu.com/help" target="_blank">产品帮助</a> , 查看更多常见问题
+                  </span>
+                  <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                  </div>
+    
+   <!--  end  -->
+</div>
+<div class="clear-center">
+</div>
+<script type="text/javascript" src="/resources/js/add/baike.js?timestamp=20190724?timestamp=20190724"></script>
+<div class="footer">
+&copy; <script>document.write((new Date()).getFullYear());</script> Baidu <a href="http://www.baidu.com/duty/" target="_blank">使用百度前必读</a>
+</div>
+<script>var sugapi="http://"+window.location.host;</script>
+<script type="text/javascript" src="/resources/js/sug.js"></script>
+</body>
+</html>
+<!--20167183930328555530100919-->
+<script> var _trace_page_logid = 2016718393; </script><!--20167168270992500746100919-->
+<script> var _trace_page_logid = 2016716827; </script>

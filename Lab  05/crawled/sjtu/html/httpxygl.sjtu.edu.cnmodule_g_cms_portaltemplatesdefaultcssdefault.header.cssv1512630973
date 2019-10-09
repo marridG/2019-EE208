@@ -1,0 +1,82 @@
+/**
+ * 默认头部样式
+ * 
+ * @version $Id: default.header.css 4378 2017-12-04 09:41:48Z fuy $
+ * @creator liqt @ 2013-06-24 11:27:58 by caster0.0.3
+ */
+@media all {
+    #header {
+        overflow: hidden;
+        height: 100px;
+        border-bottom: 0px solid #d6303b;
+    }
+    
+    #header .ym-wrapper{
+        background-color: #fff;
+    }
+    
+    /*网站logo*/
+    #header a.logo {
+        background-image: url("../images/logo4.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 300px;
+        height: 100px;
+        position: absolute;
+        left:-10px;
+    }
+    
+    #header span.name-ch {
+        width: 300px;
+        height: 100px;
+        position: absolute;
+        left:320px;
+        top:26px;
+        font-size: 26px;
+        font-weight: bold;
+    }
+    #header span.name-en {
+        width: 300px;
+        height: 100px;
+        position: absolute;
+        left:320px;
+        top:65px;
+        font-size: 14px;
+    }
+    
+    #header .search .btn {
+        position: absolute;
+        right:190px;
+        bottom:41px;
+        border-radius: 0;
+        color: #ffffff;
+        font-size: 12px;
+        z-index: 999;
+        border-radius: 50%;
+        background-image: url("../images/icon.search.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 25px;
+        height: 25px;
+        background-color: #fff;
+    }
+    #header .search .input {
+        position: absolute;
+        right:0;
+        bottom:40px;
+        border: 1px solid #ccc;
+        border-radius: 0;
+        height: 27px;
+        width: 180px;
+        padding-left:40px;
+        border-radius: 14px;
+    }
+    .btn {
+        -moz-user-select: none;
+        background-image: none;
+        border: 1px solid rgba(0, 0, 0, 0);
+        cursor: pointer;
+        vertical-align: middle;
+        white-space: nowrap;
+    }
+}

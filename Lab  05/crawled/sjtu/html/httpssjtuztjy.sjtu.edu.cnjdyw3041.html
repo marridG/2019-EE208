@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>上海交大师生热烈庆祝新中国成立70周年-上海交通大学“不忘初心,牢记使命”主题教育</title>
+<meta name="description" content="上海交通大学“不忘初心,牢记使命”主题教育" />
+<meta name="keywords" content="上海交通大学“不忘初心,牢记使命”主题教育" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Bootstrap -->    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+<link type="text/css" rel="stylesheet" href="/css/css.css" />
+<link rel="stylesheet" href="/css/animate.css">
+<script src="/js/jquery.min.js"></script>
+<!--轮转焦点图-->
+<script src="/js/jquery.hiSlider.js"></script>
+<link rel="stylesheet" href="/css/jquery.hiSlider.css">
+
+<!-- 图片滚动 --> 
+<link href="/css/owl.carousel.css" type="text/css" rel="stylesheet" />
+<link href="/css/owl.theme.css" type="text/css" rel="stylesheet" />
+<!-- 图片滚动 --> 
+<script type="text/javascript" src="/js/owl.carousel.js"></script>
+<script type="text/javascript">
+    function search_validate(){
+        if(document.getElementById('search_keywords').value == ''){
+            alert('请输入搜索关键字');
+            return false;
+        }
+    }
+</script> 
+</head>
+<body class="bj_b"><div class="top" id="top_nav">
+    <div class="main">
+        <a href="/" class="logo"></a>     
+        <span class="menu2" id="menu2"><a href="javascript:void(0)">&nbsp;</a></span>   
+        <div id=navk>
+                        <ul class="cd_t">
+                  
+                <li><a href="https://www.sjtu.edu.cn" target="_blank">交大首页</a></li>
+                                <li class="l_x">|</li>
+                                  
+                <li><a href="https://news.sjtu.edu.cn" target="_blank">交大新闻网</a></li>
+                                <li class="l_x">|</li>
+                                  
+                <li><a href="http://jd.sjtu.edu.cn/web/JDJDW/2960001.htm" target="_blank">焦点网</a></li>
+                                            </ul>
+            <span class="ss">
+                <form method="get" action="https://sjtuztjy.sjtu.edu.cn/active/search.html" onsubmit="return search_validate();">
+                <div class="txtk">
+                    <input type="text" id="search_keywords" name="search_keywords" class="form-control" placeholder="">
+                    <button class="an_ss" type="submit"></button>
+                </div>
+                </form>
+            </span>
+            <ul class="menu">
+                <li><a href="/" class="dbt">首页</a></li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/zyjs.html" class="dbt ">中央精神</a>
+                                        <dl>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/zy_file.html" >中央文件</a></dd>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/zy_study.html" >学习资料</a></dd>
+                                            </dl>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/news.html" class="dbt on">新闻动态</a>
+                                        <dl>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/jdyw.html" >交大要闻</a></dd>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/jcdt.html" >基层动态</a></dd>
+                                            </dl>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/xjdx.html" class="dbt ">先进典型</a>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/mtgz.html" class="dbt ">媒体关注</a>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/slhj.html" class="dbt ">史料汇集</a>
+                                    </li>
+                            </ul>
+            <div class="clear"></div>
+        </div> 
+    </div>  
+</div>
+<div class="top_jg"></div>
+<SCRIPT type=text/javascript>  
+$(document).ready(function() {
+    var pk=document.body.clientWidth;
+    if(pk<1200){
+        //手机菜单
+        $("#menu2").click(function(){
+            if($("#navk").css("display")=="none"){
+                $(this).find("a").addClass("on");
+                $("#navk").slideDown("slow");       
+            }
+            else{
+                $(this).find("a").removeClass("on");
+                $("#navk").slideUp("slow");     
+            }
+        });  
+    }
+    else{
+        $(".menu li").hover(function() {
+            $(this).find("dl").css("display","block");
+        },function(){
+            
+            $(this).find("dl").css("display","none");
+        });
+
+        //向下滚动顶部缩小
+        $.fn.smartFloat = function() {
+            var position = function(element) {
+                var top = element.position().top, pos = element.css("position");
+                $(window).scroll(function() {
+                    var scrolls = $(this).scrollTop();
+                    if (scrolls > top) {
+                        $("#top_nav").addClass("on");
+                        if (window.XMLHttpRequest) {
+                            element.css({
+                                position: "fixed",
+                                //background:"#efefef",
+                                top: 0
+                            });
+                        } else {
+                            element.css({
+                                top: scrolls
+                            });
+                        }
+                    }else {
+                        $("#top_nav").removeClass("on");
+                        element.css({
+                            position: pos,
+                            //background:"transparent",
+                            top: top
+                        });
+                    }
+                });
+            };
+            return $(this).each(function() {
+                position($(this));
+            });
+
+        };
+        $("#top_nav").smartFloat();
+        //向下滚动顶部缩小 end
+    };
+});  
+//-->  
+</SCRIPT>
+<div class="ban"><img src="/upload/image/20190924/20190924141304.jpg" ></div>
+<div class="dqwz">
+ 	<div class="main wow fadeInUp">
+  		<a href="/">首页</a> &gt; <a href="https://sjtuztjy.sjtu.edu.cn/news.html">新闻动态</a> &gt; <a href="https://sjtuztjy.sjtu.edu.cn/jdyw.html">交大要闻</a> 	</div>
+</div>
+<div class="nyk">
+	 	<div class="main">
+   		<div class="zt_snr">
+     		<div class="sbt wow fadeInUp">上海交大师生热烈庆祝新中国成立70周年</div>
+     		<div class="fbt wow fadeInUp"></div>
+     		<div class="xx wow fadeInUp"></div>
+    		<div class="ssj news_ssj wow fadeInUp">日期：2019-10-01</div>
+    		<div class="snr wow fadeInUp">
+			    <p>&nbsp; &nbsp; &nbsp; 10月1日的交大校园，彩旗飘飘，花团锦簇，洋溢着一派欢乐祥和的节日气氛，交大师生满怀激动和喜悦的心情，欢聚一堂，热烈庆祝中华人民共和国成立70周年。</p>
+
+<p style="text-align: center;"><img alt="微信图片_20191001120140_副本.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_040528_775.jpg" title="20191001_040528_775.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; 党委书记姜斯宪，校长、党委副书记林忠钦等校领导、老领导、师生代表参加了升旗仪式，并分别在闵行校区、徐汇校区各个会场观看了庆祝中华人民共和国成立70周年大会、阅兵式和群众游行。</p>
+
+<p>&nbsp; &nbsp; &nbsp; 早晨7时许，闵行校区仰思坪前已经挤满了前来观看升旗仪式的师生和市民。天空不时飘起细雨，同学们跳起欢快的民族舞蹈，唱起激扬的&ldquo;心动南洋&rdquo;，现场洋溢着喜庆欢乐的气氛。7点40分，升旗仪式正式开始，交大国旗护卫队员迈着整齐的步伐，由思源门正步行至升旗台，步伐铿锵有力。&ldquo;行注目礼，升国旗，奏唱国歌！&rdquo;伴随着雄壮的国歌，鲜艳的五星红旗在现场师生注目下缓缓升起，飘扬在仰思坪上方。数百名师生群众顶着细雨观礼，表达对祖国母亲的祝福与热爱，祝愿伟大祖国更加繁荣富强。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="微信图片_20191001104812.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_034036_193.jpg" title="20191001_034036_193.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="1_副本.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_051926_271.jpg" title="20191001_051926_271.jpg" /></p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="微信图片_20191001104823.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_034328_988.jpg" title="20191001_034328_988.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="微信图片_20191001104817.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_034347_838.jpg" title="20191001_034347_838.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="微信图片_20191001104913.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_035059_591.jpg" title="20191001_035059_591.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="微信图片_20191001105435.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_034444_164.jpg" title="20191001_034444_164.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="微信图片_20191001104807.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_035225_663.jpg" title="20191001_035225_663.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; 随后，师生们分别来到闵行校区菁菁堂，徐汇校区总办公厅、各个实验室、寝室等处，集体收看庆祝中华人民共和国成立70周年大会、阅兵式和群众游行活动电视直播。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="微信图片_20191001105551.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_035317_520.jpg" title="20191001_035317_520.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; 上午九点五十，大屏幕上出现了天安门广场的盛景：庄严的广场、鲜红的花树、沸腾的人群，汇聚成欢乐的海洋，各会场里顿时一片欢腾，交大学子难抑内心的激动，菁菁堂里响起了师生们热烈的掌声，会场宛然成了交大师生的观礼台。</p>
+
+<p>&nbsp; &nbsp; &nbsp; 习近平总书记等党和国家领导人登上天安门城楼、出现在电视画上时，伴随着礼炮轰鸣，各会场上响起了阵阵热烈掌声。大家不由自主全体起立，跟随电视直播高唱中华人民共和国国歌。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="微信图片_20191001105532.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_035404_646.jpg" title="20191001_035404_646.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; 当盛大的阅兵式开始，雄壮的乐曲声中，三军列队，接受祖国的检阅，接受党和国家领导人的检阅&mdash;&mdash;大家的骄傲、自豪之情油然而生，同学们眼睛里饱含着激动的泪水，振臂高呼：祖国万岁！向祖国致敬！激情盛典，庄严演绎，屏幕上画面转换，会场上不时响起师生们的热烈掌声&hellip;&hellip;</p>
+
+<p>&nbsp; &nbsp; &nbsp; 庆典结束，师生们还围聚在一起不愿离开，激动的心情久久难以平息。&ldquo;今天是您的生日，我的祖国&hellip;&hellip;&rdquo;最美的祝福旋律响起，交大师生的千言万语汇聚成了一个共同的声音：祖国万岁！祖国，我爱您！祖国，我们用青春、用创建一流的实绩向您致敬！</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="2_副本.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_051909_214.jpg" title="20191001_051909_214.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="1_副本.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_054329_556.jpg" title="20191001_054329_556.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="2_副本.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_054348_924.jpg" title="20191001_054348_924.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="微信图片_20191001105556.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_035635_751.jpg" title="20191001_035635_751.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="微信图片_20191001120129_副本.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_040447_154.jpg" title="20191001_040447_154.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="微信图片_20191001105537.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_035029_195.jpg" title="20191001_035029_195.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="微信图片_20191001121030.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_042329_451.jpg" title="20191001_042329_451.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="微信图片_20191001104741.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_040844_173.jpg" title="20191001_040844_173.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="3_副本.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_052024_426.jpg" title="20191001_052024_426.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="微信图片_20191001105612.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_040918_134.jpg" title="20191001_040918_134.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="微信图片_20191001232902.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_153132_723.jpg" title="20191001_153132_723.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p>　　今年，上海交通大学有多位老师应邀去北京参加了盛大阅兵庆典，亲临国庆庆典现场的他们，迫切地通过手机把感受传递给学校师生。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="untitled_副本.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_052234_389.jpg" title="20191001_052234_389.jpg" /></p>
+
+<p><strong>&nbsp; &nbsp; &nbsp; 贺林</strong></p>
+
+<p>&nbsp; &nbsp; &nbsp; 遗传生物学家，中国科学院院士，发展中国家世界科学院院士</p>
+
+<p>&nbsp; &nbsp; &nbsp; 庆祝中华人民共和国成立70周年大会、阅兵式和群众游行是一场举国同庆的庆典，它是新中国魅力在我党励精图治下的一次完美展示。自1949年以来，我国的综合国力逐渐稳步提高，各行各业百花齐放。作为一名中科院院士，遗传生物学家，上海交大Bio-X研究院院长，我长期从事生物遗传学研究，充分感受到了与党和国家共同成长的欢喜与压力。多年来，自己在党和国家提出的&ldquo;科教兴国，科技强国&rdquo;发展战略指引下，始终奋斗在科研前线，揭示了第一例孟德尔常染色体显性遗传病A-1型短指（趾）症致病机制，发现了国际首例以中国人姓氏命名的&ldquo;贺-赵缺陷症&rdquo;。如今依然忙碌于为人类健康谋福祉。正是党和国家作为坚实的后盾，我与同仁们才能坚守在科研道路上，期待祖国的明天更加繁荣富强，我国的科研行业更加人才济济，硕果累累。</p>
+
+<p>&nbsp; &nbsp; &nbsp; 我有幸参与祖国的建设和发展，最深的感受是与祖国同发展共命运。这次阅兵式是出奇的棒，可以用神（韵）和美（旋律）描述所得印象。</p>
+
+<p>&nbsp; &nbsp; &nbsp; 祝福伟大和美丽的祖国国泰民安 繁荣昌盛。</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="微信图片_20191001134001.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_054414_569.jpg" title="20191001_054414_569.jpg" /></p>
+
+<p style="text-align: center;"><img alt="1.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_052521_990.jpg" title="20191001_052521_990.jpg" /></p>
+
+<p><strong>&nbsp; &nbsp; &nbsp; 李家明</strong></p>
+
+<p>&nbsp; &nbsp; &nbsp; 上海交大物理与天文学院教授、中国科学院院士</p>
+
+<p>&nbsp; &nbsp; &nbsp; 我作为上海交通大学无党派人士代表，有幸在新中国成立70周年国庆盛典的历史时刻登上天安门观礼台，分享祖国母亲的激情与荣光，见证激动人心的一刻，心中涌动着无限荣耀与自豪。</p>
+
+<p>&nbsp; &nbsp; &nbsp; 看着眼前随风飘扬的五星红旗，看着我们的威武之师、文明之师、胜利之师气势磅礴地走过天安门广场，我身在其中、心在其中；看着祖国历经七十年峥嵘岁月后的硕果累累，回想起一代又一代中华儿女浴血奋战、团结一心、开天辟地的勇气和决心，我热泪盈眶。七十年，是一个传承，更是一个新的起点，祝福祖国母亲，我将一如既往与祖国同向同行！</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="2.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_052616_686.jpg" title="20191001_052616_686.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="3.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_052829_629.jpg" title="20191001_052829_629.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p><strong>&nbsp; &nbsp; &nbsp; 王如竹</strong></p>
+
+<p>&nbsp; &nbsp; &nbsp; 上海交通大学制冷与低温工程研究所所长</p>
+
+<p>&nbsp; &nbsp; &nbsp; 教育部太阳能工程研究中心主任，上海交通大学讲席教授，国家级教学名师，全国模范教师，全国先进工作者</p>
+
+<p>&nbsp; &nbsp; &nbsp; 新中国成立70周年之际，我有幸受邀来到北京首都，怀着无比崇敬和激动的心情现场观看了庆祝大会、阅兵式和群众游行。整齐的步伐、抖擞的精神，徒步方队15个、装备方队32个、空中梯队12个，总接受检阅近1.5万人，各型飞机160余架，装备580台套。每个队伍走过，大地震颤，威风扑面，气势恢弘，好一个强大自信的中国！我深刻感受到中华民族政治、经济、军事、科技的迅猛发展所带来的灿烂文明。</p>
+
+<p>&nbsp; &nbsp; &nbsp; &ldquo;建国创业&rdquo;，&ldquo;改革开放&rdquo;，&ldquo;伟大复兴&rdquo;三个篇章的群众游行活动，体现了中国人民同心共筑中国梦的共同愿望。我心潮澎湃，热血沸腾，一种强烈的爱国情和民族自豪感油然而生。我们处在一个生机勃勃不断变革和创新的伟大时代，作为一名高校教授，我们担负着教书育人、科学研究、社会服务的几大重任，培养爱国奉献和勇于创新的国家栋梁之才是我们的基本任务。百年大计，教育为本，我热爱我的教育事业！我热爱我的中国！我愿意为你的繁荣昌盛而奋斗终身！</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="31.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_052842_196.jpg" title="20191001_052842_196.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><img alt="4.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_053148_810.jpg" title="20191001_053148_810.jpg" /></p>
+
+<p>&nbsp;</p>
+
+<p><strong>&nbsp; &nbsp; &nbsp; 洪梅</strong></p>
+
+<p>&nbsp; &nbsp; &nbsp; 交大致远学院党总支书记，交大民族联常务副会长</p>
+
+<p>&nbsp; &nbsp; &nbsp; 今天是我第一次参加国庆观礼，内心的激动久久不能平复，这是难得的荣耀，也将成为我一生中最美的印记。</p>
+
+<p>&nbsp; &nbsp; &nbsp; 作为全国少数民族参观团上海代表，参加了上午在天安门广场举行的庆祝中华人民共和国成立70周年大会，聆听了习近平总书记的重要讲话。每一句都铿锵有力、催人奋进。随后举行的盛大的阅兵式和群众游行展示了全国各族人民的大团结，彰显了国家的整体实力。</p>
+
+<p>&nbsp; &nbsp; &nbsp; 当看到阅兵式和彩车游行方阵从眼前而过，感受着祖国在国防、科技、教育、文化、工农业等多个领域取得的让世界刮目相看的伟大成就，见证着祖国在世界面前展示的中华文明和强大自信，内心感到无比喜悦、无比振奋、无比自豪。</p>
+
+<p>&nbsp; &nbsp; &nbsp; &ldquo;中华民族一家亲，同心共筑中国梦。&rdquo;国庆观礼带给我的不仅是心灵的震撼和感动，更给了我锐意前行的动力。我将立足岗位，守初心、担使命，为学校的发展、祖国的强盛，贡献自己的一份力量！</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><img alt="41.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_053203_231.jpg" title="20191001_053203_231.jpg" /></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p style="text-align: center;"><strong><img alt="5.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_053253_391.jpg" title="20191001_053253_391.jpg" /></strong></p>
+
+<p style="text-align: center;">&nbsp;</p>
+
+<p><strong>&nbsp; &nbsp; &nbsp; 汪雨申</strong></p>
+
+<p>&nbsp; &nbsp; &nbsp; 上海交通大学学生处副处长</p>
+
+<p>&nbsp; &nbsp; &nbsp; 2012年获上海市育才奖；2013年荣获第五届全国辅导员年度人物；2019年获评中宣部、教育部最美高校辅导员</p>
+
+<p>&nbsp; &nbsp; &nbsp; 我爱你，中国！这是我最想大声呼喊的一句话。</p>
+
+<p>&nbsp; &nbsp; &nbsp; 在这秋高气爽的日子里，在这普天同庆的时候，我有幸能够在天安门广场亲身经历这一伟大的历史时刻，心情是无以言表的激动！</p>
+
+<p>&nbsp; &nbsp; &nbsp; 一排排整齐的方阵从天安门广场列队走过；一群群欢快的人群，代表着祖国蒸蒸日上的繁荣发展，从天安门广场走过；一架架飞机整齐的排列，从天安门上空飞过；还有那些自由自在、象征着和平的白鸽，都和我们一起经历着这一伟大的历史时刻！</p>
+
+<p>&nbsp; &nbsp; &nbsp; 祖国强大，我的责任！滴水可以汇成江河，每一个中国人都团结一心，在中国共产党的领导之下，阔步前行，为早日实现中华民族的伟大复兴，贡献自己的青春和力量！作为一名高校的青年教师，一个思想政治教育工作者，我也将在今后的工作中破浪前行，接续奋斗！努力为祖国培养一代又一代有能力、有担当、值得信任的可靠接班人！</p>
+
+<p style="text-align: center;"><img alt="51.jpg" src="https://news.sjtu.edu.cn/resource/upload/201910/20191001_053310_633.jpg" title="20191001_053310_633.jpg" /></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: right;"><label>作者：</label>张文清</p>
+
+<p style="text-align: right;"><label>摄影：</label>武新民、周思未、隋思哲、高繁昕、张欣慧、张希、郑文鑫 、金晓晖、魏江洋等</p>
+
+<p style="text-align: right;"><label>供稿单位：</label>新闻中心</p>
+    		</div>
+    		<div class="sgd wow fadeInUp">
+				<a href="https://sjtuztjy.sjtu.edu.cn/jdyw/3035.html">上一条：校党委书记姜斯宪焦点讲坛作专题授课</a><br>            	<a href="https://sjtuztjy.sjtu.edu.cn/jdyw/3031.html">下一条：新时代 新经典——《平易近人》系列重点数字图书上线学习强国等网络传播平台</a>     			<a href="https://sjtuztjy.sjtu.edu.cn/jdyw.html" class="cd_fh">返回列表</a>
+     		</div>
+   		</div>
+  		<div class="clear"></div>
+ 	</div>
+</div>
+<script type="text/javascript" src="/js/wow.js"></script>
+<script>
+var wow = new WOW({
+    boxClass: 'wow',
+    animateClass: 'animated',
+    offset: 0,
+    mobile: true,
+    live: true
+});
+wow.init();
+</script>
+
+	<div class="foot">
+	 	<div class="main">
+	  		<div class="f1 wow fadeInUp" data-wow-delay=".1s">
+	  		沪ICP备05052060   沪举报中心   版权所有© 上海交通大学<br>  
+			地址：上海市东川路800号   邮编：200240   查号：86-21-54740000	  	</div>
+	  	<div class="f2 wow fadeInUp" data-wow-delay=".3s">
+	   		<span class="s1">相关链接</span>
+	   			   			   		<a href="https://www.sjtu.edu.cn" target="_blank">交大首页</a>
+	   			   		<b>|</b>
+	   			   			   		<a href="https://news.sjtu.edu.cn" target="_blank">交大新闻网</a>
+	   			   		<b>|</b>
+	   			   			   		<a href="http://jd.sjtu.edu.cn/web/JDJDW/2960001.htm" target="_blank">焦点网</a>
+	   			   			   	</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.fy1 a').each(function(){
+            if($(this).text()=='上一页' || $(this).text()=='下一页'){
+                $(this).addClass('cd_sx');
+            }
+        })
+    });
+</script>
+</body>
+</html>

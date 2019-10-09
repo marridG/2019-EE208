@@ -1,0 +1,436 @@
+
+<!DOCTYPE html>
+<html class="scripts-not-loaded" dir="ltr"   lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <title>登录到 Canvas</title>
+  <!--[if lte IE 9]> <meta http-equiv=refresh content="0; URL=/ie-9-is-not-supported.html" /> <![endif]-->
+  <link rel="preload" href="/dist/fonts/lato/latin/LatoLatin-Regular-3cd3657802.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="shortcut icon" type="image/x-icon" href="/dist/images/favicon-e58a7078aa.ico" />
+  <link rel="apple-touch-icon" href="/dist/images/apple-touch-icon-585e5d997d.png" />
+  
+  <link rel="stylesheet" media="all" href="/dist/brandable_css/c2f0f355e52aed2aece4775b7e265c7c/variables-fe50d8260770e95c3c33e12011eac102.css" />
+  <link rel="stylesheet" media="all" href="/dist/brandable_css/new_styles_normal_contrast/bundles/common-e39c04a622.css" />
+  <script>
+//<![CDATA[
+
+!function(){
+  function get(u){document.write('<scr'+'ipt src="'+ u +'"></sc'+'ript>')}
+  var o,s,v;
+  if (!(window.Promise && Object.assign && Object.values && [].find && [].includes && (o={},s=Symbol(),v={},o[s]=v,o[s]===v) && (function f(){}).bind().name==='bound f')) {
+    get("/dist/ie11-polyfill-240a417f04.js");
+  }
+  window.fetch || get("https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.min.js");
+}();
+      
+//]]>
+</script>
+  <script src="/dist/lato-fontfaceobserver-ed903d58c4.js" async="async"></script>
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#008EE2">
+  <link rel="stylesheet" media="all" href="/dist/brandable_css/new_styles_normal_contrast/bundles/login-ec18a7108d.css" />
+  
+  
+  <script>
+    function _earlyClick(e){
+      var c = e.target
+      while (c && c.ownerDocument) {
+        if (c.getAttribute('href') == '#' || c.getAttribute('data-method')) {
+          e.preventDefault()
+          (_earlyClick.clicks = _earlyClick.clicks || []).push(c)
+          break
+        }
+        c = c.parentNode
+      }
+    }
+    document.addEventListener('click', _earlyClick)
+  </script>
+  <script src="/dist/brandable_css/c2f0f355e52aed2aece4775b7e265c7c/variables-fe50d8260770e95c3c33e12011eac102.js" defer="defer"></script>
+  <script src="/dist/webpack-production/vendor.bundle-04748352ad.js" defer="defer"></script>
+<script src="/dist/timezone/Asia/Shanghai-589fe84c71.js" defer="defer"></script>
+<script src="/dist/timezone/zh_CN-a04f4e8062.js" defer="defer"></script>
+<script src="/dist/webpack-production/moment/locale/zh-cn.bundle-03897ff4f2.js" defer="defer"></script>
+<script src="/dist/webpack-production/appBootstrap.bundle-5201174d55.js" defer="defer"></script>
+<script src="/dist/webpack-production/common.bundle-17371ec1a0.js" defer="defer"></script>
+<script src="/dist/webpack-production/login.bundle-0fa5470760.js" defer="defer"></script>
+</head>
+
+<body class="full-width ic-Login-Body no-headers  primary-nav-expanded lato-font-not-loaded-yet">
+
+<noscript>
+  <div role="alert" class="ic-flash-static ic-flash-error">
+    <div class="ic-flash__icon" aria-hidden="true">
+      <i class="icon-warning"></i>
+    </div>
+    <h1>您必须启用JavaScript才能访问这个网站。</h1>
+  </div>
+</noscript>
+
+
+
+
+
+<ul id="flash_message_holder"></ul>
+<div id="flash_screenreader_holder"></div>
+
+<div id="application" class="ic-app">
+  
+
+  <div id="instructure_ajax_error_box">
+    <div style="text-align: right; background-color: #fff;"><a href="#" class="close_instructure_ajax_error_box_link">关闭</a></div>
+    <iframe id="instructure_ajax_error_result" src="about:blank" style="border: 0;" title="错误"></iframe>
+  </div>
+
+  
+
+  <div id="wrapper" class="ic-Layout-wrapper">
+    <div id="main" class="ic-Layout-columns">
+      <div id="not_right_side" class="ic-app-main-content">
+        <div id="content-wrapper" class="ic-Layout-contentWrapper">
+            
+          <div id="content" class="ic-Layout-contentMain" role="main">
+            
+
+
+
+<style class="cp-pen-styles">*
+{
+margin:0px;
+padding:0px;
+}  
+                             
+#loginform
+{
+width:630px;
+height:auto;
+position:relative;
+margin:0 auto;
+margin-top:100px;
+
+}
+
+#mainlogin input
+{
+background-color: rgba(36, 167, 240, 0.2);
+margin:0px 0px 15px 0px ;
+border-radius:3px;
+
+width:72%;
+padding:8px 20px 8px 10px;
+border:solid 0px #d4d4d4;
+color:#ebebeb;                       
+
+font-size:0.8em;
+
+}
+
+button
+{
+background: rgba(104, 175, 39, 0.4);
+border-radius:50%;
+border:10px solid rgba(255, 255, 255, 0.4);
+font-size:0.9em;
+color:#fff;
+font-weight:bold;
+cursor:pointer;
+width:85px;
+height:85px;
+position:absolute;
+right: -42px;
+top: 64px;
+text-align:center;
+-webkit-transition:0.5s ease;
+-moz-transition:0.5s ease;
+-o-transition:0.5s ease;
+-ms-transition:0.5s ease;
+transition:0.5s ease;
+}
+
+button:hover
+{
+color:#68af27;
+background:rgba(255, 255, 255, 1);
+border-color:rgba(104, 175, 39, 1);
+-webkit-transition:0.5s ease;
+-moz-transition:0.5s ease;
+-o-transition:0.5s ease;
+-ms-transition:0.5s ease;
+transition:0.5s ease;
+}
+label{color:#fff;font-size:12px;}
+button i
+{
+font-size:20px;
+-webkit-transition:0.5s ease;
+-moz-transition:0.5s ease;
+-o-transition:0.5s ease;
+-ms-transition:0.5s ease;
+transition:0.5s ease;
+}
+
+button:hover i
+{
+color:#ff5f32;
+-webkit-transition:0.5s ease;
+-moz-transition:0.5s ease;
+-o-transition:0.5s ease;
+-ms-transition:0.5s ease;
+transition:0.5s ease;
+}
+  
+*:focus{outline:none;}
+::-webkit-input-placeholder {
+color:#929999;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+color:#929999; 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+color:#929999;  
+}
+
+:-ms-input-placeholder {  
+color:#929999; 
+}
+
+h1
+{
+text-align:center;
+color:#22a7f0;
+font-size:16px;
+padding:12px 0px;
+}
+
+#note
+{
+color:#88887a;
+font-size: 0.8em;
+text-align:left;
+padding-left:5px;
+}
+
+#jaccount
+{
+text-align:center;
+float:left;
+background:#22a7f0;
+padding:35px 10px 20px 10px;
+width:250px;
+height:135px; 
+border-radius:3px;
+cursor:pointer;
+box-shadow: 0px 0px 10px 2px #161718; 
+margin-right:10px;
+-webkit-transition:0.5s ease;
+-moz-transition:0.5s ease;
+-o-transition:0.5s ease;
+-ms-transition:0.5s ease;
+transition:0.5s ease;
+}
+
+#jaccount:hover
+{
+box-shadow: 0px 0px 0px 0px #161718;
+-webkit-transition:0.5s ease;
+-moz-transition:0.5s ease;
+-o-transition:0.5s ease;
+-ms-transition:0.5s ease;
+transition:0.5s ease;
+}
+
+
+a
+{
+color:#88887a;
+text-decoration:none;
+-webkit-transition:0.5s ease;
+-moz-transition:0.5s ease;
+-o-transition:0.5s ease;
+-ms-transition:0.5s ease;
+transition:0.5s ease;
+}
+
+a:hover
+{
+color:#fff;
+margin-left:5px;
+-webkit-transition:0.5s ease;
+-moz-transition:0.5s ease;
+-o-transition:0.5s ease;
+-ms-transition:0.5s ease;
+transition:0.5s ease;
+}
+
+#mainlogin
+{
+float:left;
+width:250px;
+height:170px;
+padding:10px 15px;
+position:relative;
+background-color: rgba(36, 167, 240, 0.1);
+border-radius:3px;
+box-shadow: 0 0 10px 2px rgba(1, 1, 1, 0.18);
+}
+
+#mainlogin:hover
+{
+box-shadow: 0px 0px 0px 0px rgba(1, 1, 1, 0.18);
+-webkit-transition:0.5s ease;
+-moz-transition:0.5s ease;
+-o-transition:0.5s ease;
+-ms-transition:0.5s ease;
+transition:0.5s ease;
+}
+
+
+
+#connect
+{
+font-weight: bold;
+color: #fff;
+font-size: 13px;
+text-align: left;
+font-family: verdana;
+padding-top:10px;
+}
+
+#or
+{
+position:absolute;
+left: -25px;
+top: 10px;
+background:#222222;
+text-shadow:0 2px 0px #121212;
+color:#fff;
+width:40px;
+height:40px;
+text-align:center;
+border-radius:50%;
+font-weight:bold;
+line-height:38px;
+font-size: 13px;
+}
+.footcanvas
+{
+
+float:left;
+width:560px;
+height:36px;
+text-align:center;
+line-height:36px;
+padding:36px 0px 0px 0px;
+position:relative;
+marging-top:36px;
+color:#eaeaea;
+font-size:0.8em;
+list-style-type:none;
+}
+.footcanvas2
+{
+
+float:left;
+width:560px;
+height:24px;
+text-align:center;
+line-height:24px;
+padding:0px 0px 0px 0px;
+position:relative;
+marging-top:0px;
+color:#eaeaea;
+font-size:0.8em;
+list-style-type:none;
+}
+
+
+.footcanvas2 a
+{
+    color: #eaeaea !important;
+    display: inline-block;
+}
+.footcanvas2 a:hover
+{
+    color: #fff !important;
+    display: inline-block;
+}
+
+</style>
+
+
+<div id="loginform">
+<img src="https://oc.sjtu.edu.cn/dist/logo.png" style="border:0;padding-bottom:15px" alt="" /> 
+ 
+<a href="https://oc.sjtu.edu.cn/login/openid_connect"><div id="jaccount"><img src="https://oc.sjtu.edu.cn/dist/logojaccount_v2.png" style="border:0" alt="" /></div></a>
+
+<div id="mainlogin">
+<div id="or">or</div>
+<h1>校外用户登录</h1>
+
+        
+		 
+		  <form id="login_form" action="/login/canvas" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="0eJx2zA/USDB8K/TPYflGDnJ0Tw6AaFlO1un86syeByeuzmTCQk0ToOg+Jdl17Iga6iidGhtllJNApChnWQJKg==" />
+        
+		 
+			
+			
+            
+            <input type="hidden" name="redirect_to_ssl" value="1"/>
+           
+             <input autofocus="autofocus" type="text" name="pseudonym_session[unique_id]" id="pseudonym_session_unique_id" />
+             <input role="textbox" type="password" name="pseudonym_session[password]" id="pseudonym_session_password" />
+            
+                <button type="submit" ><!--登录按钮代码-->
+                  登录
+                </button>
+          
+      
+            
+
+</form>
+</div>
+
+<div  class="footcanvas">沪交ICP备20170023&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp上海交通大学 CANVAS SJTU</div>
+<div  class="footcanvas2">电话：(021)34205990 &nbsp&nbsp&nbsp E-mail：canvas@sjtu.edu.cn&nbsp&nbsp&nbsp <a href="/search/all_courses">浏览公开课程</a>&nbsp&nbsp&nbsp<a href="/copyright/default.html">免责声明</a></div>
+
+</div>
+
+
+
+
+
+
+
+          </div>
+        </div>
+        <div id="right-side-wrapper" class="ic-app-main-content__secondary">
+          <aside id="right-side" role="complementary">
+            
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div style="display:none;"><!-- Everything inside of this should always stay hidden -->
+    </div>
+  <div id='aria_alerts' class='hide-text affix' role="alert" aria-live="assertive"></div>
+  <div id='StudentTray__Container'></div>
+  
+
+<script>
+  INST = {"environment":"production","disableCrocodocPreviews":true,"maxVisibleEditorButtons":3,"editorButtons":[]};
+  ENV = {"ASSET_HOST":null,"active_brand_config_json_url":"/dist/brandable_css/c2f0f355e52aed2aece4775b7e265c7c/variables-fe50d8260770e95c3c33e12011eac102.json","url_to_what_gets_loaded_inside_the_tinymce_editor_css":["/dist/brandable_css/c2f0f355e52aed2aece4775b7e265c7c/variables-fe50d8260770e95c3c33e12011eac102.css","/dist/brandable_css/new_styles_normal_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-53dac18d10.css"],"url_for_high_contrast_tinymce_editor_css":["/dist/brandable_css/default/variables-high_contrast-fe50d8260770e95c3c33e12011eac102.css","/dist/brandable_css/new_styles_high_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-b4d65fe883.css"],"current_user_id":null,"current_user_roles":null,"current_user_disabled_inbox":null,"files_domain":"oc.sjtu.edu.cn","DOMAIN_ROOT_ACCOUNT_ID":10000000000001,"k12":false,"use_responsive_layout":false,"help_link_name":"帮助","help_link_icon":"help","use_high_contrast":null,"LTI_LAUNCH_FRAME_ALLOWANCES":["geolocation *","microphone *","camera *","midi *","encrypted-media *"],"SETTINGS":{"open_registration":true,"eportfolios_enabled":false,"collapse_global_nav":null,"show_feedback_link":false,"enable_profiles":true},"current_user":{},"context_asset_string":null,"TIMEZONE":"Asia/Shanghai","LOCALE":"zh-Hans","BIGEASY_LOCALE":"zh_CN","FULLCALENDAR_LOCALE":"zh-cn","MOMENT_LOCALE":"zh-cn","notices":[]};
+</script>
+
+
+
+
+</div> <!-- #application -->
+</body>
+</html>

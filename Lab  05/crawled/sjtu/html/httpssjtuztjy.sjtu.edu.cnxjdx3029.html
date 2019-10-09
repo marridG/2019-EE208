@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>黄旭华-上海交通大学“不忘初心,牢记使命”主题教育</title>
+<meta name="description" content="上海交通大学“不忘初心,牢记使命”主题教育" />
+<meta name="keywords" content="上海交通大学“不忘初心,牢记使命”主题教育" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Bootstrap -->    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+<link type="text/css" rel="stylesheet" href="/css/css.css" />
+<link rel="stylesheet" href="/css/animate.css">
+<script src="/js/jquery.min.js"></script>
+<!--轮转焦点图-->
+<script src="/js/jquery.hiSlider.js"></script>
+<link rel="stylesheet" href="/css/jquery.hiSlider.css">
+
+<!-- 图片滚动 --> 
+<link href="/css/owl.carousel.css" type="text/css" rel="stylesheet" />
+<link href="/css/owl.theme.css" type="text/css" rel="stylesheet" />
+<!-- 图片滚动 --> 
+<script type="text/javascript" src="/js/owl.carousel.js"></script>
+<script type="text/javascript">
+    function search_validate(){
+        if(document.getElementById('search_keywords').value == ''){
+            alert('请输入搜索关键字');
+            return false;
+        }
+    }
+</script> 
+</head>
+<body class="bj_b"><div class="top" id="top_nav">
+    <div class="main">
+        <a href="/" class="logo"></a>     
+        <span class="menu2" id="menu2"><a href="javascript:void(0)">&nbsp;</a></span>   
+        <div id=navk>
+                        <ul class="cd_t">
+                  
+                <li><a href="https://www.sjtu.edu.cn" target="_blank">交大首页</a></li>
+                                <li class="l_x">|</li>
+                                  
+                <li><a href="https://news.sjtu.edu.cn" target="_blank">交大新闻网</a></li>
+                                <li class="l_x">|</li>
+                                  
+                <li><a href="http://jd.sjtu.edu.cn/web/JDJDW/2960001.htm" target="_blank">焦点网</a></li>
+                                            </ul>
+            <span class="ss">
+                <form method="get" action="https://sjtuztjy.sjtu.edu.cn/active/search.html" onsubmit="return search_validate();">
+                <div class="txtk">
+                    <input type="text" id="search_keywords" name="search_keywords" class="form-control" placeholder="">
+                    <button class="an_ss" type="submit"></button>
+                </div>
+                </form>
+            </span>
+            <ul class="menu">
+                <li><a href="/" class="dbt">首页</a></li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/zyjs.html" class="dbt ">中央精神</a>
+                                        <dl>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/zy_file.html" >中央文件</a></dd>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/zy_study.html" >学习资料</a></dd>
+                                            </dl>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/news.html" class="dbt ">新闻动态</a>
+                                        <dl>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/jdyw.html" >交大要闻</a></dd>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/jcdt.html" >基层动态</a></dd>
+                                            </dl>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/xjdx.html" class="dbt on">先进典型</a>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/mtgz.html" class="dbt ">媒体关注</a>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/slhj.html" class="dbt ">史料汇集</a>
+                                    </li>
+                            </ul>
+            <div class="clear"></div>
+        </div> 
+    </div>  
+</div>
+<div class="top_jg"></div>
+<SCRIPT type=text/javascript>  
+$(document).ready(function() {
+    var pk=document.body.clientWidth;
+    if(pk<1200){
+        //手机菜单
+        $("#menu2").click(function(){
+            if($("#navk").css("display")=="none"){
+                $(this).find("a").addClass("on");
+                $("#navk").slideDown("slow");       
+            }
+            else{
+                $(this).find("a").removeClass("on");
+                $("#navk").slideUp("slow");     
+            }
+        });  
+    }
+    else{
+        $(".menu li").hover(function() {
+            $(this).find("dl").css("display","block");
+        },function(){
+            
+            $(this).find("dl").css("display","none");
+        });
+
+        //向下滚动顶部缩小
+        $.fn.smartFloat = function() {
+            var position = function(element) {
+                var top = element.position().top, pos = element.css("position");
+                $(window).scroll(function() {
+                    var scrolls = $(this).scrollTop();
+                    if (scrolls > top) {
+                        $("#top_nav").addClass("on");
+                        if (window.XMLHttpRequest) {
+                            element.css({
+                                position: "fixed",
+                                //background:"#efefef",
+                                top: 0
+                            });
+                        } else {
+                            element.css({
+                                top: scrolls
+                            });
+                        }
+                    }else {
+                        $("#top_nav").removeClass("on");
+                        element.css({
+                            position: pos,
+                            //background:"transparent",
+                            top: top
+                        });
+                    }
+                });
+            };
+            return $(this).each(function() {
+                position($(this));
+            });
+
+        };
+        $("#top_nav").smartFloat();
+        //向下滚动顶部缩小 end
+    };
+});  
+//-->  
+</SCRIPT>
+<div class="ban"><img src="/upload/image/20190924/20190924141304.jpg" ></div>
+<div class="dqwz">
+ 	<div class="main wow fadeInUp">
+  		<a href="/">首页</a> &gt; <a href="https://sjtuztjy.sjtu.edu.cn/xjdx.html">先进典型</a> 	</div>
+</div>
+<div class="nyk">
+	 	<div class="main">
+   		<div class="zt_snr">
+     		<div class="sbt wow fadeInUp">黄旭华</div>
+     		<div class="fbt wow fadeInUp">干惊天动地事，做隐姓埋名人</div>
+     		<div class="xx wow fadeInUp"></div>
+    		<div class="ssj news_ssj wow fadeInUp">日期：2019-09-25</div>
+    		<div class="snr wow fadeInUp">
+			    <p style="text-align: center;"><img alt="" src="/upload/image/20190925/20190925113953.jpg" style="width: 640px;" /></p>
+
+<p><br />
+　　&ldquo;若有人问我们如何评价这一生，我们会说，此生没有虚度，我们的这一生都奉献给国家、给核潜艇事业，我们仅用不到10年的时间就实现了毛主席&lsquo;核潜艇，一万年也要造出来&rsquo;的誓言，我们此生无悔！&rdquo; &nbsp; &nbsp; &mdash;&mdash;核动力潜艇总设计师黄旭华<br />
+&nbsp;</p>
+
+<p>　　2017年11月17日上午，中共中央总书记、国家主席、中央军委主席习近平在人民大会堂亲切会见参加全国精神文明建设表彰大会的代表和全国道德模范代表。习近平看到93岁的中船重工719所名誉所长黄旭华院士年事已高，站在代表们中间，就握住他的手，请他坐到自己身旁。这感人的一幕，通过电视传遍了千家万户，温暖了全国人民的心。<br />
+&nbsp;</p>
+
+<p>　　黄旭华，中国工程院院士，我国第一代核动力潜艇研制创始人之一。原籍广东省揭阳市揭东县玉湖镇新寮村，1924年2月24日出生于广东省汕尾市海丰县田墘镇。1949年毕业于交通大学造船系船舶制造专业，先后从事过民用船舶和军用舰艇的研究设计工作，1958年开始参与并领导我国第一代核潜艇的研究设计工作。先后出任第一代核潜艇副总设计师、第二任总设计师，历任中船重工集团公司副所长、所长、党委书记。曾先后于1978年获全国科学大会奖、1982年获国防科工委二等奖。他参与完成的我国第一代核潜艇研制获1985年国家科学技术进步奖特等奖、导弹核潜艇研制获1996年国家科学技术进步奖特等奖。1989年被评为全国先进工作者。1994年当选为中国工程院院士。2014年1月当选中央电视台感动中国2013年度人物。 2017年当选全国道德模范。&nbsp;<br />
+&nbsp;</p>
+
+<p style="text-align: center;"><strong>&ldquo;深海同舟&rdquo;</strong><br />
+&nbsp;</p>
+
+<p>　　1958年，中国核潜艇事业的元年。就在那一年，34岁的黄旭华奉命进京，参加&ldquo;核潜艇总体设计组&rdquo;工作。这六十年，这一个甲子的时光，只够黄旭华做一件事：为国家设计最好的核潜艇。<br />
+&nbsp;</p>
+
+<p>　　30年前的4月20日，中国核潜艇首次出海执行深潜任务。<br />
+&nbsp;</p>
+
+<p>　　&ldquo;300米深，是上个世纪六七十年代核潜艇研制的世界水平，美国和苏联研制的核潜艇深度大都在这个深度上下。&rdquo;黄旭华说。<br />
+&nbsp;</p>
+
+<p>　　上世纪六七十年代，中国海军尚以近海防御战略为主，那第一代鱼雷攻击型核潜艇主要的对手是谁?只能是来犯的敌水面舰艇及水下潜艇，甚至是来犯的敌战略核潜艇。来犯者潜多深，防御者也必须潜多深。&ldquo;虽然当年我们的科研力量和工业水平在今天回首看去都还是刚刚起步，但我们制定的第一代核潜艇设计目标并不低。&rdquo;黄旭华告诉记者。<br />
+&nbsp;</p>
+
+<p>　　客观地说，我国在六十年前要研制核潜艇，不仅当时国家尚不具备基本的工业制造基础，而且毫无研制核潜艇的科研技术储备。而这个雄心，仅源自一个不能落后挨打、再被帝国主义侵略欺辱的民族梦想!<br />
+&nbsp;</p>
+
+<p>　　&ldquo;1988年我们进行了首次深潜，但我们不是到了上世纪80年代才想起来深潜的，早在我国第一代攻击型核潜艇研制初期就有了深潜的目标。&rdquo;黄旭华说，&ldquo;我们设计时就提出，我国第一艘鱼雷攻击型核潜艇&lsquo;401&rsquo;艇应该既是试验艇，又是战斗艇。&rdquo;<br />
+&nbsp;</p>
+
+<p>　　1970年12月26日，我国第一艘核潜艇&ldquo;401&rdquo;艇神秘下水。下水时，艇上核燃料尚未安装就绪。&ldquo;核潜艇下水后，首先要进行系泊、设备联调、启堆，完成系泊试验。系泊试验成功了，核潜艇才能出海，进行航行试验。航行试验的主要内容是核动力堆的性能以及核动力和应急动力的转换试验，以及潜艇的操纵、导航、声呐、武器等各个系统和噪音测试试验，等等。&rdquo;黄旭华说，&ldquo;&lsquo;401&rsquo;艇下水以后，我们所的主要任务就是配合核潜艇总体建造厂和潜艇部队解决试航、试验中发现的一切问题，提出不断完善的方案，力争尽快完成该型核潜艇的设计定型，使我们的核潜艇尽早形成战斗力。&rdquo;<br />
+&nbsp;</p>
+
+<p>　　&ldquo;我们三方经过4年的共同努力，完成了将近600次的核堆启堆、提升功率、发电、主机试车等系泊试验;以及20多次、累计6000余海里的出海航行，完成了水上、水下高速巡航200多次，不断优化设计，终于在1974年&lsquo;八一&rsquo;建军节这天，将&lsquo;401&rsquo;艇正式交付海军，编入人民海军的战斗序列。&rdquo;<br />
+&nbsp;</p>
+
+<p>　　黄旭华清楚地记得，海军司令员肖劲光代表中央军委宣布了《第一艘核动力潜艇命名》的命令，首任艇长杨玺亲手升起的&ldquo;八一&rdquo;军旗，在碧海晴空中迎风招展。被命名为&ldquo;长征一号&rdquo;的&ldquo;401&rdquo;艇缓缓地驶离军港码头，在众人的注目礼中，潜入波涛之中。人民海军由此跨进了&ldquo;核时代&rdquo;。<br />
+&nbsp;</p>
+
+<p>　　&ldquo;&lsquo;401&rsquo;艇解决了中国&lsquo;有没有&rsquo;核潜艇的问题。但那时因为&lsquo;文革&rsquo;的破坏，不少设备还达不到我们期待的水平，还有的设备可靠性比较差，&rdquo;黄旭华说，&ldquo;我们在后续的&lsquo;402&rsquo;&lsquo;403&rsquo;艇上又不断改进。到了上世纪80年代，我们的&lsquo;404&rsquo;艇终于可以向&lsquo;极限深潜&rsquo;这个目标冲刺了。&rdquo;<br />
+&nbsp;</p>
+
+<p>　　时任&ldquo;404&rdquo;艇副艇长、退休前为海军某潜艇基地副司令员的薛法玉告诉记者：黄旭华的工作非常严细。&ldquo;在深潜前的准备工作中，他要求把核潜艇的主要设备，如通海阀门、蒸汽管等八大系统的关键部位都挂上牌子，写清楚这个设备正常情况下应该怎样、应急情况下如何处置，海军艇员是谁在操作，719所是谁在监控保驾，核潜艇总体建造厂是哪位师傅负责维修，都一目了然。&rdquo;但是准备工作越充分、越周全，大家的精神压力也就越大。<br />
+&nbsp;</p>
+
+<p>　　&ldquo;404&rdquo;艇艇长王福山请黄旭华去帮助做艇员思想工作，缓解一下过分紧张的情绪。上艇后，黄旭华也感觉到气氛有点沉重。他当即对艇长说:&ldquo;作为核潜艇的总设计师，我对核潜艇的感情就像父亲对孩子一样，不仅疼爱，而且相信它的质量是过硬的，我要跟你们一起下去深潜。&rdquo;<br />
+&nbsp;</p>
+
+<p>　　核潜艇的总设计师亲自参与深潜!这在世界上尚无先例，总设计师的职责里也没有这一项。很多领导得知后，都劝年已64岁的黄旭华不要亲自参加深潜了。<br />
+&nbsp;</p>
+
+<p>　　黄旭华坚持这么做。他说:&ldquo;首先我对它很有信心；但是，我担心深潜时出现超出了我现在认知水平之外的问题；而且，万一还有哪个环节疏漏了，我在下面可以及时协助艇长判断和处置。&rdquo;<br />
+&nbsp;</p>
+
+<p>　　中国人有句形象地表达&ldquo;生死与共&rdquo;的成语，叫作&ldquo;风雨同舟&rdquo;。黄旭华的深潜，是现代版的&ldquo;风雨同舟&rdquo;，比什么都有说服力:别紧张，兄弟，咱核潜艇的总设计师和你&ldquo;深海同舟&rdquo;!<br />
+&nbsp;</p>
+
+<p>　　&ldquo;404&rdquo;艇和后续艇，成为我国第一代鱼雷攻击型核潜艇的定型艇。从此，我国核潜艇的总设计师随同首艇一起深潜，成了719所的&ldquo;光荣传统&rdquo;。<br />
+&nbsp;</p>
+
+<p style="text-align: center;"><strong>&ldquo;当无名英雄？小事情！&rdquo;</strong><br />
+&nbsp;</p>
+
+<p>　　时光回溯到六十年前，时任上海船舶工业管理局设计二处潜艇科长的黄旭华，突然接到去北京出差的通知。走进了海军舰船修造部和一机部船舶工业管理局联合组建的核潜艇总体设计组，他这才知道是&ldquo;天字第一号&rdquo;绝密工程选中了他。当时设计组只有29人，分为船体组，以及动力、电气三个专业组。<br />
+&nbsp;</p>
+
+<p>　　黄旭华至今记得，报到时领导找他谈话说了三条：一是&ldquo;你被选中，说明党和国家信任你&rdquo;；二是&ldquo;这项工作保密性强，这个工作领域进去了就出不来，即使将来万一犯了错误，也不能离开，只能留在里面打扫卫生，因为出来了就泄密了&rdquo;；三是&ldquo;一辈子出不了名，当无名英雄&rdquo;。<br />
+&nbsp;</p>
+
+<p>　　黄旭华毫无犹豫。&ldquo;一辈子出不了名，当无名英雄&rdquo;，这与&ldquo;党和国家信任你&rdquo;相比，算得上什么啊？当年，他加入地下党，不就是无名英雄吗?&ldquo;党和国家信任你&rdquo;，是那个年代的年轻人最为看重的荣誉。&ldquo;当无名英雄，是小事情!&rdquo;黄旭华风轻云淡地说。<br />
+&nbsp;</p>
+
+<p>　　1956年年底，黄旭华因公出差广州，顺道回老家海丰田墘镇三天，探望父母兄妹。此后三十年，对父母而言，黄旭华只是一个会按月给他们寄生活费的神秘的北京信箱号码。&ldquo;我的小学同学、中学同学、大学同学，从此都没有联系了。此后三十年里，他们不知道我，我也不知道他们。&rdquo;黄旭华说。<br />
+&nbsp;</p>
+
+<p>　　1958年6月27日，时任国务院副总理、中央原子能事业三人领导小组成员聂荣臻元帅向中共中央呈报了一份《关于开展研制导弹原子潜艇的报告》。两天后，周恩来总理、邓小平总书记分别对这份绝密文件进行了批示并呈送毛泽东主席。毛泽东签批后，中国的核潜艇事业正式启动。鉴于当时中苏两国的关系，最初我国曾希望核潜艇事业也能得到苏联的支持和帮助。然而，无论是中方参观苏联核潜艇工程，还是请苏联提供核潜艇的技术援助等要求，都遭到了苏方的漠视和回绝，苏方还提出了&ldquo;成立联合舰队&rdquo;&ldquo;在中国建立与苏联核潜艇通信的长波电台&rdquo;等一些中国领导人认为无法接受的建议，被激怒的毛泽东留下了穿越时空的名言:&ldquo;核潜艇，一万年也要搞出来!&rdquo;<br />
+&nbsp;</p>
+
+<p>　　&ldquo;我们必须拥有核潜艇。我们只要还有一艘战略核潜艇潜在海底，帝国主义就不敢按下核按钮。&rdquo;黄旭华说，&ldquo;正是这个信念激励着我们克服一切困难，一万年太久，必须只争朝夕地完成核潜艇的研制任务。&rdquo;<br />
+&nbsp;</p>
+
+<p>　　但是，当时中国人谁也没有见过核潜艇。之前，黄旭华虽是上海船舶工业管理局的潜艇科长，但当时苏联交由我国&ldquo;转造&rdquo;的都是常规潜艇，而他在上海交大读造船专业时学的是民船设计。<br />
+&nbsp;</p>
+
+<p>　　曾有人建议，将已经引进的苏联常规潜艇中间剖开，加一个核反应堆，但后来很快发现没这么简单。&ldquo;我们认为还是要从情报入手，从国外报刊资料的点点滴滴中寻找蛛丝马迹，弄清核潜艇究竟是什么。&rdquo;黄旭华于是提出了他的&ldquo;骑驴找马&rdquo;理论:&ldquo;我们没有马怎么办?那就先骑上身边的驴子找起来!核潜艇在任何国家都是绝对机密，要在文献中发现有价值的材料非常不容易。所以我说，我们找资料既要用&lsquo;放大镜&rsquo;，沙里淘金，追踪线索;又要用&lsquo;显微镜&rsquo;，去粗取精，看清实质;更要用&lsquo;照妖镜&rsquo;，鉴别真假，去伪存真。&rdquo;<br />
+&nbsp;</p>
+
+<p>　　就在黄旭华他们艰难地摸索时，1960年年中，苏联突然宣布中断对中国所有的技术援助，还撤回了全部专家。当时，我国国民经济又遭受严重困难，国家进入生活困难时期，伙食很差，一个人一个月也只有1斤肉、3两油。大多数科研人员因营养不良而全身浮肿，而每个人的办公费才8分钱。但即便如此，留下来的科研人员依然&ldquo;不改其志&rdquo;，啃着咸菜窝窝头搞科研。<br />
+&nbsp;</p>
+
+<p>　　1965年的春天，周恩来总理主持召开第11次中央专委会议，正式批准核潜艇研制重新列入国家计划。中央决定成立719所，黄旭华和尤子平担任副总工程师。而719所正与核潜艇总体建造厂隔山而居。<br />
+&nbsp;</p>
+
+<p style="text-align: center;"><strong>45000张秘密图纸</strong><br />
+&nbsp;</p>
+
+<p>　　&ldquo;现在有了计算机，只要把数字输进去，一个软件一下子都算好了。当时我们只有算盘和计算尺，后来才有了手摇计算器，&rdquo;黄旭华说，&ldquo;但是即使现在有计算机，最原始的数据录入，依然要人一个一个输进去的，同样一个数据都错不得。&rdquo;<br />
+&nbsp;</p>
+
+<p>　　当年只有算盘和计算尺的黄旭华他们，经常为得到一个正确数值而组织三组人马同时计算:如果三组人的计算结果都一样，那OK，通过;只要三组数据有一个不同，就必须重算，必须算到三组人得出的是同一个数值。<br />
+&nbsp;</p>
+
+<p>　　计算之难，还因为设计时很多配套的设备尚未研制完成。更何况，&ldquo;文革&rdquo;导致的企业生产管理形同虚设，设备粗制滥造十分常见，一台设备运进厂里，才发现原来说是七八百公斤的，现在1吨多重了。只要一个数值变化，所有的重心、力矩都要从头算过。<br />
+&nbsp;</p>
+
+<p>　　黄旭华发现，核潜艇的重量和浮容积很难控制。没等潜艇造完，在施工中很快就发现全艇总重量将超重近200吨，核潜艇面临着超重、重心无法确定、无法平衡下潜的问题。<br />
+&nbsp;</p>
+
+<p>　　黄旭华和大家反复研究，并吸取了其他设计师的意见，终于想出了控制潜艇的总重和稳性的多项措施。其中一条就是&ldquo;斤斤计较&rdquo;，采用最古老又最管用的办法，在施工时，所有设备、管道、电缆上艇都要称重备案，安装完毕切下的边角废料、剩下的管道电缆拿下艇时也要过秤，并从总重量中扣除。<br />
+&nbsp;</p>
+
+<p>　　如今走进&ldquo;401&rdquo;艇，就会发现核动力舱的过道是舷侧布置的。而美、苏核潜艇核动力舱的过道都在核岛的上部，那为什么改用舷侧布置呢?钱凌白说，最初我们也打算将过道设在上部，因为核潜艇采用的是两次屏蔽，第一层屏蔽是核堆，第二层屏蔽是核动力舱的舱壁。为解决稳性问题，采用了舷侧走道的方案，艇的稳性指标也相应得到了提高。&ldquo;401&rdquo;艇最后总装完毕，实测下来重心与原来的设计基本一致，海军对此给予了很高的评价。<br />
+&nbsp;</p>
+
+<p>　　当年的老同事，至今非常怀念与黄旭华一起攻关的日子，感激他&ldquo;还为我国的核潜艇事业带出了一支队伍&rdquo;。尊重每一位科研人员的贡献，充分发掘大家的智慧，在智慧的&ldquo;众筹&rdquo;中激荡创新，是黄旭华的创新智慧。<br />
+&nbsp;</p>
+
+<p>　　黄旭华带领719所的核潜艇设计专家团队，从最初的方案论证开始，到方案设计&mdash;初步设计&mdash;技术设计&mdash;施工设计，他们总共画了多少张图纸?<br />
+&nbsp;</p>
+
+<p>　　&ldquo;我知道他们719所的专家总共为&lsquo;401&rsquo;艇画了45000张设计图纸。如果把它们一张一张连接起来，大约有30公里长!&rdquo;行业的一位资深专家透露说。<br />
+&nbsp;</p>
+
+<p style="text-align: center;"><strong>&ldquo;千千万万普通人最伟大&rdquo;</strong><br />
+&nbsp;</p>
+
+<p>　　曾任核潜艇总体建造厂军代表的杨连新说：第一代核潜艇上的每一块钢板、每一台设备的零部件都是中国原创原装，使用的材料有1300多个规格品种，装艇设备、仪器仪表多达2600多项、46000多台件，电缆有300多种，各种管材有270多种。全国共有2000多家工厂、研究单位、大专院校、军队单位参与了核潜艇的研究、设计、试验、试制和生产，涉及24个省、市、自治区和21个国家部委，其规模之大在中国造船史和军工史上都是空前的。核潜艇是中华民族聚合力的结晶，是这一民族聚合力创造的奇迹。自从核潜艇工程于1965年3月重新启动，到1970年年底&ldquo;401&rdquo;艇下水，不过5年多时间。<br />
+&nbsp;</p>
+
+<p>　　黄旭华至今记得在&ldquo;401&rdquo;艇正式交付海军的仪式上，钱学森激动地说:&ldquo;毛主席说&lsquo;核潜艇，一万年也要搞出来&rsquo;，现在不是一万年，不是一千年，不是一百年，也不是十年，我们就搞出来啦!&rdquo;<br />
+&nbsp;</p>
+
+<p>　　坐在一旁的黄旭华百感交集。核潜艇是他的理想，1945年他因优异成绩取得中央大学航空工程系保送资格，稍晚又接到上海交大造船工程系录取通知书。从小的大海情结、工业救国的理想，让他毅然选择了上海交大。交大求学期间，他加入地下党，走上革命道路。在中国核潜艇事业的&ldquo;元年&rdquo;受命入列，3年后海军司令员肖劲光、政委苏振华任命他为国防部第七研究院副总工程师，他内心十分感激组织的知遇之恩。<br />
+&nbsp;</p>
+
+<p>　　&ldquo;那时，我父母的成份被划为&lsquo;工商地主&rsquo;，实际上我父母只有一点薄地糊口。&rdquo;黄旭华说，&ldquo;核潜艇是绝密工程，当时很多年轻有为的同志因为&lsquo;成分问题&rsquo;，被迫离开这个岗位。而组织上这么信任我，我也很珍惜这份信任，我要在这个岗位上为国家做出最大的贡献，这就是我的理想。&rdquo;<br />
+&nbsp;</p>
+
+<p>　　为了核潜艇，黄旭华30年没有回老家。1961年12月，父亲黄树榖仙逝，黄旭华都没能送上父亲最后一程。&ldquo;我心里很难过，我也想回家去送送老父亲。但我知道这项工作的保密纪律很严，虽然我知道如果我提出来，组织上是一定会批准让我去的，但这会让组织上为难。我身上带的&lsquo;密&rsquo;太重大了，当时的研究任务又这么重，我只能打消了这个念头。&rdquo;<br />
+&nbsp;</p>
+
+<p>　　三十年没有回老家，他的8个兄弟姐妹难免对他有所埋怨。1985年3月，他的二哥黄绍振病逝，享年65岁。因工作繁忙，他也未能回老家相送。直到1987年第一代核潜艇的保密程度出现了些微的松动，作家祖慰才在那年《文汇月刊》的第二期发表了长篇报告文学《赫赫而无名的人生》，讲述了一位核潜艇总设计师为中国核潜艇事业隐姓埋名三十年的事迹。黄旭华把这期《文汇月刊》寄给母亲，这篇文章虽然全篇没有提到&ldquo;黄旭华&rdquo;三个字，但写了&ldquo;他妻子李世英&rdquo;，老母亲知道这是她的三儿媳，文章尚未读完，老人已经泪流满面。读罢，老人把其他的子女都叫到身边说:&ldquo;三哥正在为国家做大事情，你们从此不许说三哥的不是。&rdquo;<br />
+&nbsp;</p>
+
+<p>　　黄旭华的妹妹后来告诉三哥，此后，每当老母亲想念老三了，就把这本《文汇月刊》拿出来反复阅读。每读一次，都双泪长流。<br />
+&nbsp;</p>
+
+<p>　　黄旭华直到1986年11月出差到深圳大亚湾核电站，才首次回到阔别三十年的广东老家。母亲已经从一位硬朗干练的六旬大妈，成为白发苍苍、望穿秋水的93岁老人。黄旭华在广东肇庆陪伴老母亲三天后，即告辞回所。<br />
+&nbsp;</p>
+
+<p>　　每当说起铸造国之重器的大师，如&ldquo;两弹一星&rdquo;的元勋王淦昌、彭恒武、程开甲、郭永怀、朱光亚、邓稼先、陈能宽&hellip;&hellip;我们心中就充满敬意。其实，为之付出牺牲的还有更多的普通人，就如黄旭华的父母兄妹，中国这样的普通家庭何止成千上万!　他们无名如沙砾、沉默若黄土、平凡似溪流，却是哺育和支撑中华民族挺起的脊梁的血肉。诚如习近平总书记所言，&ldquo;千千万万普通人最伟大&rdquo;。<br />
+&nbsp;</p>
+
+<p>　　黄旭华献身中国核潜艇事业整一个甲子了。今天，身为中船重工719所名誉所长的他，敬终如始，依然在为我国核潜艇事业的未来出谋划策。每天早晨，只要不外出开会，他都会出现在719所的家属院里，打一套兼具杨氏太极和陈氏太极特点的&ldquo;太极长拳&rdquo;。上午上班时间，他会准时出现在他的办公室里。但他总是谦逊地说，现在，他只是新一代核潜艇研制团队的&ldquo;啦啦队&rdquo;，偶尔客串一下&ldquo;场外指导&rdquo;。<br />
+&nbsp;</p>
+
+<p>　　对别人称颂他为&ldquo;中国核潜艇之父&rdquo;，他一概否认。说他&ldquo;隐姓埋名&rdquo;，他说:&ldquo;我们这个行业隐姓埋名的专家太多了。&rdquo;<br />
+&nbsp;</p>
+
+<p>　　时光荏苒，甲子沧桑。回首往事，黄旭华说:&ldquo;我从中国核潜艇事业开创的第一年起，为之服务了六十年，这让我很自豪。&rdquo;<br />
+&nbsp;</p>
+
+<p>　　&ldquo;不忘初心，方得始终。&rdquo;习近平总书记说，&ldquo;中国共产党人的初心和使命，就是为中国人民谋幸福，为中华民族谋复兴。&rdquo;<br />
+&nbsp;</p>
+
+<p>　　六十年来，正是这初心和使命，激励着黄旭华痴迷核潜艇事业。任何艰难曲折都动摇不了他内心的定力，可谓坚忍不拔。&ldquo;国家也好，家国也罢，有国才有家。&rdquo;黄旭华说。这就是大国重器和他的设计师的故事。<br />
+&nbsp;</p>
+
+<p>　　2016年4月，在上海交通大学纪念建校120周年大会现场，92岁高龄的黄旭华学长作为校友代表发言，他轻轻地推开了学校为他演讲准备的座椅，坚持站立着向大家讲述心中的&ldquo;交大精神&rdquo;，让无数人为之动容。黄旭华深情回顾了自己在交大的学习生活，并分享了中国第一代核潜艇研制的艰辛历程。他表示，正是母校给予他的智慧和能力，正是母校培育他的百折不饶的意志品质，支撑他在偏僻的葫芦岛隐姓埋名十余年，为中国的核潜艇事业立下汗马功劳。当黄旭华以颤抖而坚决的语调说出&ldquo;此生属于祖国，此生属于核潜艇，献身核潜艇事业，此生无怨无悔&rdquo;时，全场掌声雷动。<br />
+&nbsp;</p>
+
+<p>　　黄旭华还语重心长地对交大学子提出了殷切希望：第一需要有扎扎实实的知识基础，而且面要广；第二，要有思想准备要自力更生，争取外援可以不放松，但是立足点是我们自己；第三，创新的道路不可能平平坦坦的，往往是要经历不少个反反复复，要有这个思想准备；第四，科学发展要有无私奉献的精神。<br />
+<br />
+&nbsp;</p>
+
+<p style="text-align: right;">图片来源：文汇报<br />
+供稿单位：新闻中心</p>
+    		</div>
+    		<div class="sgd wow fadeInUp">
+				            	<a href="https://sjtuztjy.sjtu.edu.cn/xjdx/3032.html">下一条：钱学森</a>     			<a href="https://sjtuztjy.sjtu.edu.cn/xjdx.html" class="cd_fh">返回列表</a>
+     		</div>
+   		</div>
+  		<div class="clear"></div>
+ 	</div>
+</div>
+<script type="text/javascript" src="/js/wow.js"></script>
+<script>
+var wow = new WOW({
+    boxClass: 'wow',
+    animateClass: 'animated',
+    offset: 0,
+    mobile: true,
+    live: true
+});
+wow.init();
+</script>
+
+	<div class="foot">
+	 	<div class="main">
+	  		<div class="f1 wow fadeInUp" data-wow-delay=".1s">
+	  		沪ICP备05052060   沪举报中心   版权所有© 上海交通大学<br>  
+			地址：上海市东川路800号   邮编：200240   查号：86-21-54740000	  	</div>
+	  	<div class="f2 wow fadeInUp" data-wow-delay=".3s">
+	   		<span class="s1">相关链接</span>
+	   			   			   		<a href="https://www.sjtu.edu.cn" target="_blank">交大首页</a>
+	   			   		<b>|</b>
+	   			   			   		<a href="https://news.sjtu.edu.cn" target="_blank">交大新闻网</a>
+	   			   		<b>|</b>
+	   			   			   		<a href="http://jd.sjtu.edu.cn/web/JDJDW/2960001.htm" target="_blank">焦点网</a>
+	   			   			   	</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.fy1 a').each(function(){
+            if($(this).text()=='上一页' || $(this).text()=='下一页'){
+                $(this).addClass('cd_sx');
+            }
+        })
+    });
+</script>
+</body>
+</html>

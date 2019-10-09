@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    <title>天气通-官网</title>
+    <link rel="stylesheet" type="text/css" href="css/tqt.css"></head>
+  <script>(function(doc, win) {
+      var docEl = doc.documentElement,
+      resizeEvt = 'orientationchange' in window ? 'orientationchange': 'resize',
+      recalc = function() {
+        var clientWidth = docEl.clientWidth;
+        if (!clientWidth) return;
+        if (clientWidth > 1440) clientWidth = 1440;
+        docEl.style.fontSize = 80 * (clientWidth / 1440) + 'px';
+      };
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    window.onscroll = function() {
+      var t = document.documentElement.scrollTop || document.body.scrollTop;
+      var topbt = document.getElementById("topbt");
+      if (t > 0) {
+        topbt.style.display = "inline";
+      } else {
+        topbt.style.display = "none";
+      }
+    }
+
+    function goTop() {
+      if (document.documentElement.scrollTop) {
+        document.documentElement.scrollTop = 0;
+      }
+      if (document.body.scrollTop) {
+        document.body.scrollTop = 0;
+      }
+    }
+
+    function goIOS() {
+      window.location.href = "https://itunes.apple.com/cn/app/id458032309?mt=8";
+    }
+
+    function goAndroid() {
+      window.location.href = "http://tqt.weibo.cn/r.php?i=304796980";
+    }</script>
+  
+  <body>
+    <div class="item topbg">
+      <div class="topItem lDistance" style="width: 100%;">
+        <div style="display: flex;background-image: url(./img/logo.png);background-repeat: no-repeat;background-size: contain;width: 100%;" class="topicon"></div>
+        <div style="display: flex;background-image: url(./img/title.png);background-repeat: no-repeat;background-size: contain;width: 100%;" class="title"></div>
+        <div style="display: flex;background-image: url(./img/qr.png);background-repeat: no-repeat;background-size: contain;width: 100%;" class="qricon"></div>
+      </div>
+      <div class="btList">
+        <img class="bt iosbt" src="./img/iosbt.png" onclick="goIOS()" />
+        <img class="androidbt bt" src="./img/androidbt.png" onclick="goAndroid()" /></div>
+    </div>
+    <div class="item itemWhite">
+      <div class="lbg"></div>
+      <img class="itemImg1 lDistance" src="./img/item1.png" />
+      <div class="rightArea rDistance itemTop">
+        <div class="itemTitle">明星播报</div>
+        <div class="rightLine"></div>
+        <div class="itemDesc">首创明星语音播报功能
+          <br/>百位明星大咖为你亲自播报天气</div>
+        <img class="itemIcon" src="./img/icon1.png" /></div>
+    </div>
+    <div class="item itemBlue">
+      <div class="rbg"></div>
+      <img class="itemImg2 rDistance" src="./img/item2.png" />
+      <div class="leftArea lDistance itemTop">
+        <div class="itemTitle">实况天气</div>
+        <div class="leftLine"></div>
+        <div class="itemDesc">提供最权威精准的实时气温气象信息
+          <br/>每时每刻为您提供当前天气的最新情况</div>
+        <img class="itemIcon" src="./img/icon2.png" /></div>
+    </div>
+    <div class="item itemWhite">
+      <div class="lbg"></div>
+      <img class="itemImg3 lDistance" src="./img/item3.png" />
+      <div class="rightArea rDistance itemTop">
+        <div class="itemTitle">临近降雨</div>
+        <div class="rightLine"></div>
+        <div class="itemDesc">精准定位 精确雨量 分钟级降水提醒
+          <br/>120分钟内雨势变化一目了然</div>
+        <img class="itemIcon" src="./img/icon3.png" /></div>
+    </div>
+    <div class="item itemBlue">
+      <div class="rbg"></div>
+      <img class="itemImg4 rDistance" src="./img/item4.png" />
+      <div class="leftArea lDistance itemTop">
+        <div class="itemTitle">未来预报</div>
+        <div class="leftLine"></div>
+        <div class="itemDesc">15日阴晴冷暖早知道
+          <br/>短期出行更放心</div>
+        <img class="itemIcon" src="./img/icon4.png" /></div>
+    </div>
+    <div class="rights">Copyright © 2009-2019 WEIBO
+      <br/>公司名称：北京微梦创科网络技术有限公司 公司地址：北京市海淀区西北旺东路10号院西区8号 ICP备案号：京ICP证000007</div>
+    <img id="topbt" class="topbt rDistance" style="display: none;z-index: 1000" src="./img/top.png" onclick="goTop()" /></body>
+
+</html>

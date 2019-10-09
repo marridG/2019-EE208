@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>海淀区投资促进局</title>
+<link rel="stylesheet" href="/invest/css/main.css">
+<link rel="stylesheet" href="/invest/css/swiper2.css">
+</head>
+<body>
+<!--头部开始 -->
+<!-- <script type="text/javascript" src="/invest/js/jquery.js"></script>  -->
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function () {
+            var now = new Date();
+
+            var year = now.getFullYear();       //年
+            var month = now.getMonth() + 1;     //月
+            var day = now.getDate();            //日
+            var week1 = now.getDay();
+            var week;
+            if (week1 == 0)
+                week = "星期日";
+            else if (week1 == 1)
+                week = "星期一";
+            else if (week1 == 2)
+                week = "星期二";
+            else if (week1 == 3)
+                week = "星期三";
+            else if (week1 == 4)
+                week = "星期四";
+            else if (week1 == 5)
+                week = "星期五";
+            else if (week1 == 6)
+                week = "星期六";
+            var spanb = "";
+            spanb += year + "年" + month + "月" + day + "日" + "  " + week + "  " + "欢迎您的访问"
+            document.getElementById('spanb').innerHTML = spanb;
+
+        };
+    </script>
+     <style>
+      .top1 i {background: url(http://zyk.bjhd.gov.cn/resources/images/icon/small-logo_old.png) no-repeat;
+    display: block;
+      width: 25px;
+    height: 25px;
+    float: left;
+    overflow: hidden;
+    margin: 7px 8px;
+    background-size: 25px 25px;}
+      .top1 .return_index {}
+    </style>
+    <div class="top c">
+        <div class="top1 c"><span>
+             <i></i>
+            <a class="return_index" href="http://www.bjhd.gov.cn" target="_blank">北京市海淀区人民政府</a>
+            <a href='./tcjen/' target="_blank"><img src="/invest/images/enligh.jpg" /></a> </span>
+            <b id="spanb"></b></div>
+    </div>
+    <div class="both"></div>
+    <div class="logo c">
+        <div class="logo1 c">
+            <div class="f">
+                <img src="/invest/images/logo.png" width="513" height="91" />
+            </div>
+        </div>
+    </div>
+    <div class="menu c">
+        <div class="mainNav">
+            <ul class="nav">
+                <li><a target="_blank" href="/invest" class="mainNavItem">首页</a></li>
+                <li>
+                    <a class="mainNavItem">海淀概况</a>
+                    <ul class="subNav">
+                        
+                            <li><a target="_blank" href='./hdgk_55574/qqjs/201706/t20170614_4306839.html' class="s1">区情介绍</a></li>
+                        
+                        
+                            <li><a target="_blank" href='./hdgk_55574/xzqh/201506/t20150614_4306840.html' >行政区划</a></li>
+                        
+                        
+                            <li><a target="_blank" href='./hdgk_55574/lsyg/201506/t20150614_4306842.html' >历史沿革</a></li>
+                        
+                        
+                            <li><a target="_blank" href='./hdgk_55574/zrtj/201705/t20170531_4306843.html' >自然条件</a></li>
+                        
+                        
+                            <li><a target="_blank" href='./hdgk_55574/shyjjfz/201506/t20150614_4306844.html' >社会与经济发展</a></li>
+                        
+
+                        <li><a target="_blank" href='./hdgk_55574/hdqsewgh/'>海淀区规划</a></li>
+                        <li><a target="_blank" href='./hdgk_55574/sjfx/'>数据分析</a></li>
+                        <li><a target="_blank" href='./hdgk_55574/hdqsdys/rcjc/'>海淀区投资优势</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="mainNavItem">最新资讯</a>
+                    <ul class="subNav">
+                        <li><a target="_blank" href='./zxzx/tzdt/' class="s2">投资动态</a></li>
+                        <li><a target="_blank" href='./zxzx/tcjtz/'>投促局通知</a></li>
+                    </ul>
+                </li>
+                <li>
+                     <a class="mainNavItem">投资推介</a>
+                    <ul class="subNav">
+                        <li><a target="_blank" href='./tztj/tjzdtzqy/bbyfcyd/' class="s3">推荐重点投资区域</a></li>
+                        <li><a target="_blank" href='./tztj/tzxm/zsxm/'>投资项目</a></li>
+                        <li><a target="_blank" href='./tztj/zssc/'>招商手册</a></li>
+                    </ul>
+                </li>
+                <li>
+                     <a class="mainNavItem">产业布局</a>
+                    <ul class="subNav">
+                        <li><a target="_blank" href='./cybj/zdcy/ydhlwyxydhlwcy/' class="s4">主导产业</a></li>
+                        <li><a target="_blank" href='./cybj/hdbb/'>海淀北部</a></li>
+                        <li><a target="_blank" href='./cybj/hdzb/zgckxc/'>海淀中部</a></li>
+                        <li><a target="_blank" href='./cybj/hdxbb/'>海淀西北部</a></li>
+                        <li><a target="_blank" href='./cybj/hdnb/'>海淀南部</a></li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a class="mainNavItem">投资政策</a>
+                    <ul class="subNav">
+                        <li><a target="_blank" href='./tzzc/zzcxhcyfzzctx14/GYJYBJK/' class="s5">自主创新和产业发展政策体系（1+4）</a></li>
+                        <li><a target="_blank" href="http://zxzj.zhsp.gov.cn/">申报入口</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="mainNavItem">服务指引</a>
+                    <ul class="subNav">
+                        <li><a target="_blank" href='./fwzy/zffw_19537/dzzf/' class="s6">政府服务</a></li>
+                        <li><a target="_blank" href='./fwzy/qyfw/zdqyml/'>企业服务</a></li>
+                        <li><a target="_blank" href='./fwzy/gszczn/'>公司注册指南</a></li>
+                    </ul>
+                </li>
+                
+                    <li><a target="_blank" href='./lxwm/201506/t20150604_4308135.html' class="mainNavItem">联系我们</a></li>
+                
+            </ul>
+        </div>
+    </div>
+    <div class="both"></div>
+    <script src="/invest/js/swiper2.min.js"></script>
+	<script src="/invest/js/jquery.min.js"></script>
+	<script src="/invest/js/main.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            autoplay: 5000,
+            loop: true,
+            autoplayDisableOnInteraction: false
+        })
+    </script>
+<!--头部结束  -->
+<div class="swiper-container" style="width:1000px;" >
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" style="background: url(/invest/images/b1.jpg) no-repeat center center;"></div>
+    <div class="swiper-slide" style="background: url(/invest/images/b2.jpg) no-repeat center center;"></div>
+    <div class="swiper-slide" style="background: url(/invest/images/b3.jpg) no-repeat center center;"></div>
+    <div class="swiper-slide" style="background: url(/invest/images/b4.jpg) no-repeat center center;"></div>
+    <div class="swiper-slide" style="background: url(/invest/images/b5.jpg) no-repeat center center;"></div>
+  </div>
+</div>
+
+<script>
+        var mySwiper = new Swiper('.swiper-container', {
+            autoplay: 5000,
+            loop: true,
+            autoplayDisableOnInteraction: false
+        })
+    </script>
+<div class="con1 c">
+  <div class="con1_f f">
+    <div class="con_tit c"><span><a target="_blank" href='./zxzx/tzdt/'>更多</a></span>最新资讯</div>
+    <div class="con_text c">
+    
+      <div class="f">
+
+<img src="./zxzx/tzdt/201802/W020190320551872446350.jpg" width="308" height="209" />
+
+      </div>
+      <div class="con_text1 f">
+        <div class="con_text_tit c">
+            <a href="./zxzx/tzdt/201802/t20180208_4307708.html" target="_blank">“企”飞新动能投促局举...</a>
+        </div>
+        <div class="con_text_sub c">
+            
+        </div>
+        
+        <div class="con_news c">
+          <ul>
+            
+              <li> <span>
+                [09/18]
+                </span><a target="_blank" href='
+                                        ./zxzx/tzdt/201909/t20190918_4347533.html'>
+                <a href="./zxzx/tzdt/201909/t20190918_4347533.html" target="_blank">海淀创业园9家企业、12个项目...</a>
+                </a> </li>
+            
+              <li> <span>
+                [09/18]
+                </span><a target="_blank" href='
+                                        ./zxzx/tzdt/201909/t20190918_4347532.html'>
+                <a href="./zxzx/tzdt/201909/t20190918_4347532.html" target="_blank">中关村企业中科曙光入围中央...</a>
+                </a> </li>
+            
+              <li> <span>
+                [09/18]
+                </span><a target="_blank" href='
+                                        ./zxzx/tzdt/201909/t20190918_4347531.html'>
+                <a href="./zxzx/tzdt/201909/t20190918_4347531.html" target="_blank">百度智能云发布20款新产品 全...</a>
+                </a> </li>
+            
+              <li> <span>
+                [09/18]
+                </span><a target="_blank" href='
+                                        ./zxzx/tzdt/201909/t20190918_4347528.html'>
+                <a href="./zxzx/tzdt/201909/t20190918_4347528.html" target="_blank">海淀创业园8家企业获得第28批...</a>
+                </a> </li>
+            
+              <li> <span>
+                [09/10]
+                </span><a target="_blank" href='
+                                        ./zxzx/tzdt/201909/t20190910_4346289.html'>
+                <a href="./zxzx/tzdt/201909/t20190910_4346289.html" target="_blank">寒武纪与眼控科技签署战略合...</a>
+                </a> </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="con1_r r">
+    <div class="con_tit c"><span><a target="_blank" href='./hdgk_55574/qqjs/'>更多</a></span>海淀概况</div>
+    <div class="con_map c">
+      <div class="f"> <img src="/invest/images/con2.jpg" width="133" height="139" /> </div>
+      <div class="con_map1 r">
+        <ul>
+          
+          
+            <li>·
+              <a href="./hdgk_55574/hdqsdys/jrjg/201506/t20150607_4306921.html" target="_blank">活跃的金融机构</a>
+            </li>
+          
+          
+            <li>·
+              <a href="./hdgk_55574/hdqsdys/kjsl/201506/t20150607_4306922.html" target="_blank">强大的科技实力</a>
+            </li>
+          
+          
+            <li>·
+              <a href="./hdgk_55574/hdqsdys/cytx/201506/t20150607_4306923.html" target="_blank">成套的产业体系</a>
+            </li>
+          
+          
+            <li>·
+              <a href="./hdgk_55574/hdqsdys/cqbh/201506/t20150607_4306924.html" target="_blank">严格的产权保护</a>
+            </li>
+          
+          
+            <li>·
+              <a href="./hdgk_55574/hdqsdys/whjy/201506/t20150607_4306925.html" target="_blank">发达的文化教育</a>
+            </li>
+          
+          
+            <li>·
+              <a href="./hdgk_55574/hdqsdys/zrhj/201506/t20150607_4306926.html" target="_blank">优美的自然环境</a>
+            </li>
+          
+          
+          
+            <li>·
+              <a href="./hdgk_55574/hdqsdys/zffw/201506/t20150607_4306928.html" target="_blank">高效的政府服务</a>
+            </li>
+          
+          
+            <li>·
+              <a href="./hdgk_55574/hdqsdys/szss/201506/t20150607_4306929.html" target="_blank">完善的市政设施</a>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="map_tab c"> <img src="/invest/images/con3.jpg" width="332" height="93" /> </div>
+  </div>
+</div>
+<div class="con2 c">
+  <div class="con2_1 f">
+    <div class="con_tit c"><span><a target="_blank" href='./tztj/zssc/'>更多</a></span>投资推介</div>
+    
+      <div class="con2_news c">
+        <div class="f"> <a target="_blank" href='
+                            ./tztj/tjzdtzqy/bbyfcyd/201506/t20150604_4308280.html'>
+      
+<img src="./tztj/tjzdtzqy/bbyfcyd/201506/W020190320746590421188.jpg" width="136" height="85" />
+          </a> </div>
+        <div class="con2_news1 r">
+          <a href="./tztj/tjzdtzqy/bbyfcyd/201506/t20150604_4308280.html" target="_blank">北部高新技术产业聚集区</a>
+          <p>
+            　　海淀以北望山为界，分为南部地区和北部地区。...
+          </p>
+        </div>
+      </div>
+    
+    
+      <div class="con2_news c">
+        <div class="f"> <a target="_blank" href='
+                            ./tztj/tjzdtzqy/dxkjyq/201506/t20150604_4308281.html'>
+        
+<img src="./tztj/tjzdtzqy/dxkjyq/201506/W020190320746592675362.jpg" width="136" height="85" />
+
+          </a> </div>
+        <div class="con2_news1 r">
+          <a href="./tztj/tjzdtzqy/dxkjyq/201506/t20150604_4308281.html" target="_blank">北科大科技园</a>
+          <p>
+            　九十年代初期，北科大就开始了科技园的探索与建...
+          </p>
+        </div>
+      </div>
+    
+    
+      <div class="con2_news c">
+        <div class="f"> <a target="_blank" href='
+                            ./tztj/tjzdtzqy/zyyqhcyjd/201506/t20150618_4308289.html'>
+
+<img src="./tztj/tjzdtzqy/zyyqhcyjd/201506/W020190320746607555680.jpg" width="136" height="85" />
+
+          </a> </div>
+        <div class="con2_news1 r">
+          <a href="./tztj/tjzdtzqy/zyyqhcyjd/201506/t20150618_4308289.html" target="_blank">中关村永丰基地</a>
+          <p>
+            　　北京中关村永丰高新技术产业基地位于海淀新区...
+          </p>
+        </div>
+      </div>
+    
+  </div>
+  <div class="con2_2 f">
+    <div class="con_tit c"><span><a target="_blank" href='./cybj/zdcy/ydhlwyxydhlwcy/'>更多</a></span>主导产业</div>
+    <div class="zdcy c">
+      <ul>
+        
+          <li style="margin-bottom : 5px;">
+            <a href="./cybj/zdcy/ydhlwyxydhlwcy/201506/t20150604_4308099.html" target="_blank">移动互联网与下一代互联网产业</a>
+          </li>
+        
+        
+          <li style="margin-bottom : 5px;">
+            <a href="./cybj/zdcy/bdjkjxxcy/201506/t20150604_4308100.html" target="_blank">北斗及空间信息产业</a>
+          </li>
+        
+        
+          <li  style="margin-bottom : 5px;">
+            <a href="./cybj/zdcy/yjscy/201506/t20150604_4308101.html" target="_blank">云计算产业</a>
+          </li>
+        
+        
+          <li style="margin-bottom : 5px;">
+            <a href="./cybj/zdcy/jcdlsjcy/201506/t20150604_4308102.html" target="_blank">集成电路设计产业</a>
+          </li>
+        
+        
+          <li style="margin-bottom : 5px;">
+            <a href="./cybj/zdcy/swgcyxyycy/201506/t20150604_4308103.html" target="_blank">生物工程与新医药产业</a>
+          </li>
+        
+        
+          <li style="margin-bottom : 5px;">
+            <a href="./cybj/zdcy/xclxnyjgxjnhbcy/201506/t20150604_4308104.html" target="_blank">新材料、新能源及高效节能、环境保护产业</a>
+          </li>
+        
+        
+          <li style="margin-bottom : 5px;">
+            <a href="./cybj/zdcy/whykjrhcy/201506/t20150604_4308105.html" target="_blank">文化与科技融合产业</a>
+          </li>
+        
+        
+          <li style="margin-bottom : 5px;">
+            <a href="./cybj/zdcy/kjjrcy/201506/t20150604_4308106.html" target="_blank">科技金融产业</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+  <div class="con2_3 r">
+    <div class="con_tit c"><span><a target="_blank" href='./tzzc/zzcxhcyfzzctx14/GYJYBJK/'>更多</a></span>投资政策</div>
+    <div class="con2_3_1 c"> <img src="/invest/images/con6.jpg" usemap="#tzzc" width="332" height="198" /> </div>
+    <map name="tzzc" id="tzzc">
+      
+      
+        <area shape="rect" target="_blank" coords="44,145,179,168" href='./tzzc/zzcxhcyfzzctx14/hdqyhcx/201506/t20150618_4308113.html' alt="Sun" />
+      
+      
+        <area shape="rect" target="_blank" coords="180,145,332,168" href='./tzzc/zzcxhcyfzzctx14/hdqjfkj/201506/t20150618_4308114.html' alt="Sun" />
+      
+      
+      
+        <area shape="rect" target="_blank" coords="180,169,332,198" href='./tzzc/zzcxhcyfzzctx14/hdqcjzd/201506/t20150618_4308116.html' alt="Sun" />
+      
+    </map>
+    <div class="con_news c"  style=" padding-left:10px;">
+      <ul>
+        
+        
+          <li>·
+            <a href="./tzzc/zzcxhcyfzzctx14/hdqyhcx/201506/t20150618_4308113.html" target="_blank">海淀区优化创新生态环境支持办法</a>
+          </li>
+        
+        
+          <li>·
+            <a href="./tzzc/zzcxhcyfzzctx14/hdqjfkj/201506/t20150618_4308114.html" target="_blank">海淀区激发科技创业活力支持办法</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="both"></div>
+<div class="con3 c">
+  <div class="fuwu f">
+    <div class="con_tit c"><span><a target="_blank" href='./fwzy/gszczn/'>更多</a></span>服务指引</div>
+    <div class="con_news c" style="padding-left:10px; padding-top:10px;">
+      <ul>
+        
+          <li>·
+            <a href="./fwzy/qyfw/zdqyfwssbf/201506/t20150604_4308122.html" target="_blank">海淀区重点企业服务和引进支持办法</a>
+          </li>
+        
+        
+          <li>·
+            <a href="./fwzy/qyfw/zdqyml/201506/t20150604_4308121.html" target="_blank">中关村国家自主创新示范区“十百千工程” 首批企业...</a>
+          </li>
+        
+        <li>· <a href="http://newhouse.fang.com/house/web/Search_Result_tzhd.php" target="_blank">企业办公选址</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="zhuce f">
+    <div class="con_tit c"><span><a target="_blank" href='./fwzy/gszczn/'>更多</a></span>公司注册指南</div>
+    <div class="con_news c pt10" style=" padding-left:10px;">
+      <ul>
+        
+          <li>·
+            <a href="./fwzy/gszczn/201507/t20150709_4308134.html" target="_blank">户外广告登记</a>
+          </li>
+        
+          <li>·
+            <a href="./fwzy/gszczn/201507/t20150709_4308133.html" target="_blank">拍卖活动备案</a>
+          </li>
+        
+          <li>·
+            <a href="./fwzy/gszczn/201507/t20150709_4308132.html" target="_blank">经纪人备案</a>
+          </li>
+        
+          <li>·
+            <a href="./fwzy/gszczn/201507/t20150709_4308131.html" target="_blank">外商投资企业分支机构注销登记</a>
+          </li>
+        
+          <li>·
+            <a href="./fwzy/gszczn/201507/t20150709_4308130.html" target="_blank">外商投资企业备案登记</a>
+          </li>
+        
+          <li>·
+            <a href="./fwzy/gszczn/201507/t20150709_4308129.html" target="_blank">外商投资企业增、减、补、换照登记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+  <div class="lx r">
+    <div class="con_tit c"><span><a target="_blank" href='./lxwm/'>更多</a></span>联系我们 </div>
+    <div class="lx1 c"><img src="/invest/images/lxwm.png" width="332" height="165" /></div>
+  </div>
+</div>
+<div class="both"></div>
+<div class="link c"> <span>友情链接</span>
+  <div class="f link01">
+    <select class="link1" name="select" style="width: 215px;" onChange="window.open(this.options[this.selectedIndex].value,target='_blank')">
+      <option value='#' selected="selected">海淀区政府部门</option>
+      <option value='http://hdqw.bjhd.gov.cn/'>北京市海淀区委员会</option>
+      <option value='http://www.bjhd.gov.cn/'>北京市海淀区政府</option>
+      <!-- <option value='http://whw.bjhd.gov.cn/'>北京市海淀区文化委员会</option> -->
+      <option value='http://hdzx.bjhd.gov.cn/'>北京市海淀区政协委员会</option>
+      <!-- <option value='http://www.zhongguancun.com.cn/'>中关村科技园区海淀园管理委员会</option> -->
+      <!-- <option value='http://www.ibridge.com.cn/'>中关村科技园区海淀园管理委员会对外合作处</option> -->
+    </select>
+  </div>
+  <div class="f link01">
+    <select class="link1" name="select" style="width: 215px;" onChange="window.open(this.options[this.selectedIndex].value,target='_blank')">
+      <option value='#' selected="selected">园区及产业联盟</option>
+      <option value='http://www.cloud-ccia.org.cn/'>中关村云计算产业联盟</option>
+      <option value='http://cflianmeng.cn.b2b168.com/'>长风联盟</option>
+      <option value='http://ss.zhsp.gov.cn/sl/jzbgq/'>创业孵化服务机构</option>
+      <option value='http://www.spatial.org.cn/'>中关村空间信息技术产业联盟</option>
+      <option value='http://www.zgckfsys.com/cenep/portalw/'>中关村开放实验室</option>
+      <option value='http://www.dtnel.org/'>数字电视产业联盟</option>
+      <option value='http://www.igrs.org/'>闪联（IGRS）</option>
+      <option value='http://www.buptsp.com/'>北京邮电大学国家大学科技园</option>
+      <option value='http://www.bitsp.com.cn/'>北京理工大学科技园</option>
+      <option value='http://www.cspruc.com/'>中国人民大学文化科技园</option>
+      <option value='http://www.pkusp.com.cn/'>北京大学科技园</option>
+      <option value='http://www.tuspark.com/'>清华大学科技园</option>
+      <option value='http://www.cau.edu.cn/'>中国农业大学科技园</option>
+      <option value='http://www.zpark.com.cn/'>中关村软件园</option>
+    </select>
+  </div>
+  <div class="r mt10"> <a target="_blank" href='
+                ./wzdt/'> <img src="/invest/images/con8.jpg" width="78" height="19" /> </a> </div>
+</div>
+<!--底部开始 -->
+<!-- <div class="footer c">
+        <span>
+            版权所有：中关村科技园区海淀园管理委员会 京ICP备13049140号<br />
+            地址：海淀区四季青路6号海淀招商大厦 　　电话：88498950 　　传真：88498950
+        </span>
+   </div>    -->
+
+
+
+
+<div class="footer c">
+			<p>版权所有：中关村科技园区海淀园管理委员会&nbsp;&nbsp;&nbsp;&nbsp;京ICP备13049140号&nbsp;&nbsp;&nbsp;&nbsp;网站标识码：1101080016&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:;"><img src="http://zyk.bjhd.gov.cn/resources/images/icon_ga.png" /></a>
+				 <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802021701" target="_blank">京公网安备 11010802021701号</a></p>
+                         <p>
+                              地址：海淀区四季青路6号海淀招商大厦&nbsp;&nbsp;&nbsp;&nbsp;电话：88498950&nbsp;&nbsp;&nbsp;&nbsp;传真：88498950&nbsp;&nbsp;&nbsp;&nbsp;主办：北京市海淀区政府办公室&nbsp;&nbsp;&nbsp;&nbsp; 承办单位：中关村科技园区海淀园管理委员会
+
+                     </p>
+			
+			<div class="linkPhoto">
+				<div class="fleft"><script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/01/008/0000/60467459/CA010080000604674590001.js' type='text/javascript'%3E%3C/script%3E"));</script></div>
+				<div class="fright"><script id="_jiucuo_" sitecode='1101080016' src='http://pucha.kaipuyun.cn/exposure/jiucuo.js'></script></div>
+			</div>
+		</div> 
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?8c689524101a8173fb4728da9334592f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!--底部结束  -->
+<style>
+.lz_div{ position:fixed; top:141px; left:10px; width:150px;z-index:1000000;}
+.lz_div span{ background:url(http://www.bjhd.gov.cn/redianzhuanti/lianzheng/images/lz_close.png) no-repeat; width:25px; height:25px; display:block; float:left;}
+.lz_div span:hover{ cursor:pointer;}
+</style>
+<div class="lz_div">
+<span></span>
+
+
+    <a target="_blank" href='./hdgk_55574/qqjs/201706/t20170614_4306839.html'>
+        <img src="./hdgk_55574/qqjs/201706/W020190320546635252658.png" alt="上线啦2.png"/>
+    </a>
+
+</div>
+<script>
+$(function(){
+  $(".lz_div span").click(function(){
+    $(".lz_div").hide();
+    })
+  })
+</script>
+
+<style>
+.rz_div{ position:fixed; top:141px; right:10px; width:150px;z-index:1000000;}
+.rz_div span{ background:url(http://www.bjhd.gov.cn/redianzhuanti/lianzheng/images/lz_close.png) no-repeat; width:25px; height:25px; display:block; float:right;}
+.rz_div span:hover{ cursor:pointer;}
+</style>
+<div class="rz_div">
+<span></span>
+
+
+    <a href="/invest/zxzx/tcjtz/" target="_blank">
+        <img src="./zxzx/201707/W020190320549743645925.png" alt="tzgg.png"/>
+    </a>
+
+</div>
+<script>
+$(function(){
+  $(".rz_div span").click(function(){
+    $(".rz_div").hide();
+    })
+  })
+</script>
+</body>
+</html>

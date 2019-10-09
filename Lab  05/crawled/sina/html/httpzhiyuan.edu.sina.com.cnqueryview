@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+  <title>高考报志愿数据指南_高考志愿通_新浪教育_新浪网</title>
+  <meta name="Keywords" content="高考分数线,录取分数线,高考志愿,志愿填报" />
+  <meta name="Description" content="通过大数据分析，新浪高考志愿通帮你顺利完成高考志愿填报.只需三步,轻松完成填报志愿，进入理想高校." />
+  	  	<link rel="stylesheet" href="http://n.sinaimg.cn/edu/volunteer/css/common/public.css?ver=26177018">
+  	  	<link rel="stylesheet" href="http://n.sinaimg.cn/edu/volunteer/css/pages/query/query.css?ver=26177018">
+  	<script>
+    $scope = {};
+    $scope['zhiyuantong'] = {};
+</script>
+</head>
+<body>
+<!-- 公共头部 begin  -->
+<div class="sina_top_bar">
+	<div class="sina_top_inner" data-sudaclick="zhiyuan_dbdh">
+		<div class="logo"><a href="http://zhiyuan.edu.sina.com.cn" target="_blank"><img src="http://n.sinaimg.cn/edu/volunteer/images/pages/top/logo.jpg" alt="高考志愿填报"></a></div>
+		<div class="sina_top_bar_user">
+			<div id="logout" class="logout"><span class="thumb_default"><img src="http://n.sinaimg.cn/edu/volunteer/images/pages/top/thumb_default.png" alt=""></span><a id="login_btn" class="login_btn" href="javascript:void(0);">登录</a>并完善信息，送免费查询<a href="https://login.sina.com.cn/signup/signup?entry=edu" target="_blank" class="register">注册</a></div>
+			<div id="login" class="login">
+				<div class="user_info_wrap">
+                    <div class="user_info"><a class="thumb_user" href="http://zhiyuan.edu.sina.com.cn/consume/view/" target="_blank"><img src="http://n.sinaimg.cn/edu/volunteer/images/pages/top/thumb_default.png" alt=""></a><i class="u_ico"></i></div>
+                    <ul class="user_info_list">
+                        <li><a href="http://zhiyuan.edu.sina.com.cn/consume/view/" target="_blank">个人信息</a></li>
+                        <li><a href="http://zhiyuan.edu.sina.com.cn/consume/mycard/" target="_blank">购卡记录</a></li>
+                        <li><a href="http://zhiyuan.edu.sina.com.cn/consume/myquery/" target="_blank">使用记录</a></li>
+                        <li><a href="http://zhiyuan.edu.sina.com.cn/consume/mysolution/" target="_blank">专家服务</a></li>
+                        <li><a href="http://zhiyuan.edu.sina.com.cn/consume/myenrollment/" target="_blank">自主招生</a></li>
+                        <li><a href="http://zhiyuan.edu.sina.com.cn/consume/mycomment/" target="_blank">我的评论</a></li>
+                        <li><a href="http://zhiyuan.edu.sina.com.cn/default/video/" target="_blank">志愿精品课</a></li>
+                        <li><a id="logout_btn" href="javascript:void(0);">退出</a></li>
+                    </ul>
+                </div>
+                <div class="msg_wrap">
+                  <div class="msg">消息<em>0</em></div>
+                  <ul class="msg_list">
+                    <li><a href="http://zhiyuan.edu.sina.com.cn/query/ceping/" target="_blank">专业定位<em>0</em></a></li>
+                    <li><a href="http://zhiyuan.edu.sina.com.cn/query/report/" target="_blank">海选院校<em>0</em></a></li>
+                    <li><a href="http://zhiyuan.edu.sina.com.cn/query/view/#detail-3" target="_blank">数据查询<em>0</em></a></li>
+                    <li><a data-href="http://zhiyuan.edu.sina.com.cn/consume/mysolution/" data-href-other="http://zhiyuan.edu.sina.com.cn/solution/view/" target="_blank">专家服务<em>0</em></a></li>
+                    <li><a data-href="http://zhiyuan.edu.sina.com.cn/consume/myenrollment/" data-href-other="http://zhiyuan.edu.sina.com.cn/enrollment/view/" target="_blank">自主招生<em>0</em></a></li>
+                  </ul>
+                </div>
+                <div class="fill_tip"><a href="http://zhiyuan.edu.sina.com.cn/consume/me/" target="_blank">完善信息</a>，送免费查询</div>
+			</div>
+		</div>
+		<div class="nav_list">
+		  <a href="http://zhiyuan.edu.sina.com.cn/default/video/" target="_blank">志愿精品课</a>
+          <!-- <a href="http://edu.sina.com.cn/zt_d/zyjz" target="_blank">大讲堂</a> -->
+		  <a href="http://zhiyuan.edu.sina.com.cn/query/view/" target="_blank">查数据</a>
+		  <a href="http://zhiyuan.edu.sina.com.cn/solution/view/" target="_blank">找专家</a>
+		  <a href="http://zhiyuan.edu.sina.com.cn/enrollment/view/" target="_blank">自主招生</a>
+		</div>
+	</div>
+</div>
+<!-- 公共头部 end  -->
+<div id="wrapper">
+    <div id="upper">
+        <div id="left">
+            <div class="red" style="line-height:22px;margin-bottom:20px;font-size: 16px;display:none;">注:为了给高考考生提供更好的报志愿服务，新浪高考志愿通将于2015年9月1日起进行系统升级。因此志愿通卡将于2016年9月1日零时起停止购买和使用。
+            </div>
+			<!-- <div>
+				<span style="color:red;line-height:2.5em;font-size:14px">
+					注：已购志愿通卡的用户，卡内服务权限将于2016年9月1日零时进行清零，因此请尽快使用卡内服务。
+				</span>
+			</div> -->
+            <div id="si-header">
+                <span class="si-title left">四步报志愿</span>
+                <span class="right">
+                   立即<a href="http://zhiyuan.edu.sina.com.cn/query/card/" target='_blank' class="si-link">购买志愿通卡</a>,轻松四步报志愿
+                </span>
+            </div>
+            <div id="si-content">
+                <div id="si-step-overall">
+
+                    <div class="icon-steps">
+                        <a class="link" href="#detail-0"></a>
+                        <a class="link" href="#detail-1"></a>
+                        <a class="link" href="#detail-2"></a>
+                        <a class="link" href="#detail-3"></a>
+                    </div>
+
+                   <!--  <a href='http://zhiyuan.edu.sina.com.cn/query/card/'><img src='http://n.sinaimg.cn/edu/volunteer/images/pages/query/card/2015625.jpg' width='652px' style='float:left'/></a> -->
+
+                    <div class="notice" style="line-height: 20px;">
+                        <span class="title">注：</span>
+
+                        <p class="content">
+                            1、本系统不含体育、艺术类院校信息。<br/>
+                            2、本系统浙江、西藏、上海考生无法使用。<br/>
+                            <!-- 3、2017年26省市高考录取数据已更新，海南、青海暂无最新数据。另请注意，部分数据有缺失。<br/> -->
+                            3、2018年28省市高考录取数据已更新。另请注意，部分数据有缺失。<br/>
+                            <!--4、<span style="color:red;">2017年高考录取数据预计从5月初陆续上线。</span>-->
+
+                        </p>
+                    </div>
+                </div>
+                <div class="edu-ad">
+                    <a href="http://custom.yangyue.com.cn/jnc/190528/" target="_blank"><img src="http://n.sinaimg.cn/edu/volunteer/images/pages/ad_jnc.jpg"></a>
+                </div>
+                <div id="si-step-expl">
+                    <div class="detail" id="detail-0">
+                            <div class="left">
+                                <div class="inner">
+                                    <h1 class="num">1</h1>
+    
+                                    <h2 class="expl">志愿课程</h2>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="inner">
+                                    <div class="icon-step0-icon"></div>
+                                    <div class="content">
+                                        <div>
+                                            <h3 class="si-title"><a href="/default/video/" target="_blank">志愿精品课</a></h3>
+    
+                                            <p class="text">6节精品实操课助您系统学习志愿报考录取规则，规避报志愿误区，新旧高考皆适用。</p>
+                                        </div>
+                                        <div class="bottomBar">
+                                            <button class="btn" id="link_to_video" link="http://zhiyuan.edu.sina.com.cn/default/video/">立即观看</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="detail" id="detail-1">
+                        <div class="left">
+                            <div class="inner">
+                                <h1 class="num">2</h1>
+
+                                <h2 class="expl">专业定位</h2>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="inner">
+                                <div class="icon-step1-icon"></div>
+                                <div class="content">
+                                    <div>
+                                        <h3 class="si-title"><a href="/query/ceping/" target="_blank">适合专业测评</a></h3>
+
+                                        <p class="text">通过测查个人兴趣性格和能力特点，寻找相匹配的二十个专业，并有详细介绍，提供开设院校，报告长20页。</p>
+                                    </div>
+                                    <div class="bottomBar">
+                                        <button class="btn" id="link_to_ceping" link="http://zhiyuan.edu.sina.com.cn/query/ceping/">立即测评</button>
+                                        <span class="sub-total"><b class="orange">55225</b>人已测试</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail" id="detail-2">
+                        <div class="left">
+                            <div class="inner">
+                                <h1 class="num">3</h1>
+
+                                <h2 class="expl">海选院校</h2>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="inner">
+                                <div class="icon-step2-icon"></div>
+                                <div class="content">
+                                    <div>
+                                        <h3 class="si-title"><a href="/query/report/" target="_blank">录取可能性报告</a></h3>
+
+                                        <p class="text">只需要30秒时间系统就会生成一份20页左右的个性化的《录取可能性报告》，分析所有高校和专业的录取可能性。</p>
+                                    </div>
+                                    <div class="bottomBar">
+                                        <button class="btn" id="link_to_report" link="http://zhiyuan.edu.sina.com.cn/query/report/">立即测评</button>
+                                        <span class="sub-total"><b class="orange">123282</b>人已测试</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail" id="detail-3">
+                        <div class="left">
+                            <div class="inner">
+                                <h1 class="num">4</h1>
+
+                                <h2 class="expl">精选院校</h2>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="inner">
+                                <div class="step3-sub" id="sub-1" href="http://zhiyuan.edu.sina.com.cn/query/yxxq/">
+                                    <div class="icon-step3-icon1 icon-step3-icon"></div>
+                                    <div class="query-type">高校各专业分数线查询</div>
+                                    <div class="sub-total"><b class="orange">1258945</b>人已查询</div>
+                                </div>
+                                <div class="step3-sub" id="sub-2" href="http://zhiyuan.edu.sina.com.cn/query/yxlb/">
+                                    <div class="icon-step3-icon2 icon-step3-icon"></div>
+                                    <div class="query-type">专业开设院校查询</div>
+                                    <div class="sub-total"><b class="orange">77660</b>人已查询</div>
+                                </div>
+                                <div class="step3-sub" id="sub-3" href="http://zhiyuan.edu.sina.com.cn/query/tfks/">
+                                    <div class="icon-step3-icon3 icon-step3-icon"></div>
+                                    <div class="query-type">往年考生去向查询</div>
+                                    <div class="sub-total"><b class="orange">356580</b>人已查询</div>
+                                </div>
+                                <div class="step3-sub" id="sub-4" href="http://zhiyuan.edu.sina.com.cn/query/yxlbbyfswc/">
+                                    <div class="icon-step3-icon4 icon-step3-icon"></div>
+                                    <div class="query-type">根据分数/位次选学校</div>
+                                    <div class="sub-total"><b class="orange">669669</b>人已查询</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sideBar">
+            <div class="user-center-wrap">
+                <div class="user-center notLogin">
+                    <h3 class="si-title">个人中心</h3>
+
+                    <div class="user-info notLogin">
+                        <div class="icon-user-photo-icon"></div>
+                        <div class="right">
+                            欢迎您！<br/>
+                            <a class="si-link user_login" href="javascript:void 0;">登陆，</a>获得试用权限<br/>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-center partial">
+                    <h3 class="si-title">个人中心</h3>
+                    <div class="user-info partial">
+                        <img src='${photo}' class="login_user_photo"/>
+
+                        <div class="right">
+                            <p class="user_welcome">${nickname} 您好！</p>
+
+                            <p class="user_partial_hint">
+                                <a class="si-link" target='_blank' href="/consume/me">补充高考信息</a>，<br/>
+                                获得五次免费查询机会
+                            </p>
+                        </div>
+                    </div>
+                <span class="user_action user_action_partial">
+                    <a href="javascript:void 0;" class="si-link user_logout">退出</a>
+                </span>
+                </div>
+                <div class="user-center complete">
+                    <h3 class="si-title">个人中心</h3>
+                    <div class="user-info complete">
+                        <div class="top">
+                            <img src='${photo}' class="login_user_photo"/>
+
+                            <div class="right">
+                                <p class="user_welcome">${nickname} 您好！</p>
+                                <b>${prov}</b>&nbsp;&nbsp;<b>${mjr}</b>&nbsp;&nbsp;<b>${score}</b>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <p>您可使用：</p>
+
+                            <div class="btm_col">
+                                <dl class="usable_list">
+                                    <dt>
+                                        <em class="orange">${zydwCount}</em>&nbsp;次专业定位
+                                    </dt>
+                                    <dt>
+                                        <em class="orange">${h Count}</em>&nbsp;次海选院校
+                                    </dt>
+                                    <dt>
+                                        <em class="orange">${jxCount}</em>&nbsp;次精选院校查询
+                                    </dt>
+                                </dl>
+                                <a href='/query/card' target='_blank' class="purchase_card_link">
+                                    <strong>购买</strong><br/>
+                                    志愿通卡
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                <span class="user_action user_action_complete">
+                    <a href="javascript:void 0;" class="si-link user_edit_info">修改资料</a>
+                    <em class="splitter">|</em>
+                    <a href="javascript:void 0;" class="use _logout">退出</a>
+                </span>
+                </div>
+            </div>
+            <div class="guide_center" style="padding-bottom: 8px;">
+                <h3 style="line-height: 22px;">新浪志愿填报指导中心</h3>
+                <div class="guide_center_contact" style="margin-bottom: 6px;padding-bottom: 8px;">
+                    <!-- <p>咨询电话：010-58983379</p>
+					<p>咨询QQ：3331309779</p> -->
+                </div>
+                <div class="guide_center_b" style="  height: 108px;">
+                    <!-- <div class="guide_consult" style="  height: 107px;">
+                        <h4>在线咨询：</h4>
+                        <div class="guide_qq">
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=692116945&site=qq&menu=yes" title="点击这里给我发消息"><i></i><span>客服</span></a>
+
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=504374305&site=qq&menu=yes" title="点击这里给我发消息"><i></i><span>客服</span></a>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=504374305&site=qq&menu=yes" title="点击这里给我发消息"><i></i><span>客服</span></a>
+                        </div>
+                    </div> -->
+                    <div class="guide_wx" style='margin:0 auto;float:none;'>
+                    <h4>微信：</h4>
+                    <img src="http://n.sinaimg.cn/edu/af2ee665/20180308/ZhiYuanTongErWeiMa.png" alt="">
+                </div>
+                </div>
+            </div>
+            <div id="card-intro" style="padding-top: 10px;">
+                <h3 class="si-title">志愿通卡介绍</h3>
+
+                <div class="subscription-panel">
+                    <div class="icon-subs-topright-icon"></div>
+                    <div class="header">
+                        <div class="header-text">购买志愿通卡可使用如下服务：</div>
+                    </div>
+                    <div class="content">
+                        <p>
+                            <b>志愿精品课（看教程报志愿）&nbsp;6&nbsp;节</b><br/>
+                            <b>专业定位（专业测评）&nbsp;1&nbsp;次</b><br/>
+                            <b>海选院校（录取可能性报告）&nbsp;5&nbsp;次</b><br/>
+                            <b>精选院校（数据查询）共&nbsp;80&nbsp;次，</b>包含：<br/>
+                            <span class="icon-tick-icon"></span>高校各专业分数线查询<br/>
+                            <span class="icon-tick-icon"></span>专业开设院校查询<br/>
+                            <span class="icon-tick-icon"></span>往年考生去向查询<br/>
+                            <span class="icon-tick-icon"></span>根据分数/位次选学校<br/>
+                        </p>
+                    </div>
+                    <div class="btn-bar">
+                        <span class="cost">￥<b class="orange">138元</b></span>
+                        <!-- <button class="subs-btn" id="link_to_card" link="http://zhiyuan.edu.sina.com.cn/query/card/">立即购买</button> -->
+                        <!-- <a href="http://zhiyuan.edu.sina.com.cn/query/card/" target='_blank'><button class="subs-btn">立即购买</button></a> -->
+                    </div>
+                </div>
+
+                <div class="tips">
+                    <h4 class="header"><b>温馨提示</b></h4>
+
+                    <p class="content first">
+                        1、所购志愿通卡仅用于新浪高考志愿通产品查询，用于志愿精品课、适合专业测评、录取可能性报告、高校各专业分数线查询、专业开设院校查询、往年考生去向查询、根据分数/位次选学校七大服务。
+                    </p>
+
+                    <p class="content">
+                        2、所购志愿通卡一经购买不支持提现或转账，您账户内服务使用次数有效期为本年度高考季（2018年9月1日-2019年8月31日），即：购卡成功之日 至2019年8月31 日，请您及时使用。会员卡内剩余查询次数不退钱，不折现。
+                    </p>
+
+                    <p class="content">
+                        3、本系统不含体育类、艺术类院校分数，因此体育类，艺术类考生无法使用本系统。
+                    </p>
+
+                    <p class="content">
+                        4、本系统浙江、上海、西藏考生无法使用。
+                    </p>
+
+                    <p class="content">
+                        <!-- 5、2017年26省市高考录取数据已更新，海南、青海暂无最新数据。另请注意，部分数据有缺失。 -->
+                        5、2018年28省市高考录取数据已更新。另请注意，部分数据有缺失。
+                    </p>
+
+                    <p class="content">
+                        6、系统数据统计时包含特长生分数，最低分和平均分可能与院校公布数据不一致，请以各高校正式公布的数据为准。
+                    </p>
+					<p class="content">
+                        7、由于高考填报志愿是一个动态变化的过程，本系统查询历年录取数据仅作为填报志愿参考。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bottom" ></div>
+</div>
+<!-- 免责声明和客服热线 begin -->
+<div class="disclaimer_service">
+    <div class="disclaimer_service_inner clearfix">
+        <div class="disclaimer">
+            <h2>免责声明</h2>
+            <p>1、系统数据来源于权威教育部门，由合作网站提供。</p>
+            <p>2、部分年份数据如果为空可能是当年不在查询地招生。系统数据不包含高考加分，如果录取数据与院校公布数据不一致，请以各高校正式公布的数据为准。</p>
+            <p>3、由于高考填报志愿是一个动态变化的过程，本系统查询的历年高校录取数据仅作为填报志愿参考，请综合各种信息进行报考，勿仅以此填报志愿。</p>
+        </div>
+        <div class="qrc_blk">
+            <img width="109" height="109" src="http://n.sinaimg.cn/edu/volunteer/images/pages/footer/qrc.jpg" alt="">
+            <p>扫一扫访问手机页面</p>
+        </div>
+        <div class="hotline_blk">
+            <p class="hl_text1">微信咨询</p>
+            <p class="hl_text2">zhiyuantong666</p>
+            <!-- <p class="hl_text1" >志愿通卡咨询</p>
+            <p class="hl_text2">4000130130</p> -->
+            <!--<p class="hl_text1" >咨询电话</p>
+            <p class="hl_text2">010-58983379</p>-->
+			<!-- <p class="hl_text2">010-62675747</p> -->
+			<p class="hl_text1">电话咨询</p>
+            <p class="hl_text2">010-58983379</p>
+
+			<!-- <p class="hl_text2">010-58983790</p> -->
+
+        </div>
+    </div>
+</div>
+<!-- 免责声明和客服热线 end -->
+<!-- 底部begin -->
+<div class="footer" data-sudaclick="zhiyuan_gywm">
+     <p><a href="http://zhiyuan.edu.sina.com.cn/help/about_us/">关于我们</a> | <a href="http://zhiyuan.edu.sina.com.cn/help/contact_us/">联系我们</a> | <a href="http://zhiyuan.edu.sina.com.cn/help/help_center/">帮助中心</a> | <a href="http://zhiyuan.edu.sina.com.cn/help/feedback/">意见反馈</a> | <a href="http://weibo.com/gaokao?s=6cm7D0">官方微博</a></p>
+     <p>Copyright <span style="font-family:arial">©</span> 1996 - 2019 SINA Corporation, All Rights Reserved</p>
+    <p>新浪公司 <a href="http://corp.sina.com.cn/chn/copyright.html" target="_blank">版权所有</a> </p>
+</div>
+<!-- 底部end -->
+<!-- 右侧边栏 -->
+<div id="rightBar" class="right-bar">
+    <a href="javascript:void(0);" class="toTop" action-type="toTop"></a>
+    <a href="http://service.weibo.com/share/share.php?appkey=2942820010&title=%E9%AB%98%E8%80%83%E5%BF%97%E6%84%BF%E9%80%9A%E6%98%AF%E6%96%B0%E6%B5%AA%E9%AB%98%E8%80%83%E8%81%94%E5%90%88%E6%95%B0%E5%8D%81%E4%BD%8D%E5%BF%97%E6%84%BF%E5%A1%AB%E6%8A%A5%E4%B8%93%E5%AE%B6%E3%80%81%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B%E4%B8%93%E5%AE%B6%E5%92%8C%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1%E4%B8%93%E5%AE%B6%E5%8E%86%E6%97%B6%E5%A4%9A%E5%B9%B4%E7%B2%BE%E5%BF%83%E6%89%93%E9%80%A0%E7%9A%84%E9%AB%98%E8%80%83%E5%BF%97%E6%84%BF%E5%92%A8%E8%AF%A2%E5%B9%B3%E5%8F%B0%E3%80%82%E5%B8%AE%E5%8A%A9%E8%80%83%E7%94%9F%E4%B8%8A%E5%A4%A7%E5%AD%A6%E3%80%81%E4%B8%8A%E5%A5%BD%E5%A4%A7%E5%AD%A6%E3%80%81%E8%AF%BB%E5%A5%BD%E4%B8%93%E4%B8%9A%E7%9A%84%E6%A2%A6%E6%83%B3%E3%80%82http%3A%2F%2Fzhiyuan.edu.sina.com.cn" class="shareWeibo" target="_blank"></a>
+    <a href="http://zhiyuan.edu.sina.com.cn/help/feedback/" class="feedback" target="_blank"></a>
+    <a href='javascript:;' onclick='easemobim.bind({configId: "f2e32e52-1e37-42ee-84b5-a8a46432f948"})' id="customerservice" class="customerservice" target="_blank" style="display:none"></a>
+    <script>
+        window.easemobim = window.easemobim || {};
+        easemobim.config = {
+            hide: true,
+            autoConnect: true,
+            xmppServer:'im-api.kfservice.sina.com.cn',
+            restServer:'a1.kfservice.sina.com.cn'
+        };
+    </script>
+    <script src='//visitor.sina.com.cn/webim_made/easemob.js'></script>
+    <script>
+    (function () {
+        var url = window.location.href
+        // 只对具体页面生效
+        var can_show = ['enrollment', 'solution'].filter(function (it) {return url.indexOf(it) > -1}).length > 0
+        if(can_show) {
+            document.getElementById('customerservice').style.display = 'block'
+        }
+    })()
+    </script>
+</div>
+<!-- 右侧边栏 -->
+<script type="text/javascript" src="http://n.sinaimg.cn/lib/core/core.js"></script>
+<script type="text/javascript" src="http://i.sso.sina.com.cn/js/outlogin_layer.js?ver=26177018"></script>
+<script type="text/javascript" src="http://storage.fedev.sina.com.cn/volunteer/js/comp/header.js?ver=26177018"></script>
+
+<!-- SUDA_CODE_START -->
+<script type="text/javascript" charset="utf-8" src="http://www.sinaimg.cn/unipro/pub/suda_s_v851c.js"></script>
+<!-- SUDA_CODE_END -->
+<script src="http://storage.fedev.sina.com.cn/volunteer/js/core/require.js"
+        data-main="http://storage.fedev.sina.com.cn/volunteer/js/pages/query/view.js?ver=26177018"></script>
+<!-- DMP_CODE_START DAGGER --> 
+<script type="text/javascript">
+(function(d, s, id) {
+    var n = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    s = d.createElement(s);
+    s.id = id;
+    s.setAttribute('charset', 'utf-8');
+    s.src = '//d' + Math.floor(0 + Math.random() * (8 - 0 + 1)) + '.sina.com.cn/litong/zhitou/sinaads/src/spec/sinaads_ck.js';
+    n.parentNode.insertBefore(s, n);
+})(document, 'script', 'sinaads-ck-script');
+</script>
+<!-- DMP_CODE_END DAGGER -->
+</body>
+</html>

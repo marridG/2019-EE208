@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>“90后”院士孙钧-上海交通大学“不忘初心,牢记使命”主题教育</title>
+<meta name="description" content="上海交通大学“不忘初心,牢记使命”主题教育" />
+<meta name="keywords" content="上海交通大学“不忘初心,牢记使命”主题教育" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Bootstrap -->    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+<link type="text/css" rel="stylesheet" href="/css/css.css" />
+<link rel="stylesheet" href="/css/animate.css">
+<script src="/js/jquery.min.js"></script>
+<!--轮转焦点图-->
+<script src="/js/jquery.hiSlider.js"></script>
+<link rel="stylesheet" href="/css/jquery.hiSlider.css">
+
+<!-- 图片滚动 --> 
+<link href="/css/owl.carousel.css" type="text/css" rel="stylesheet" />
+<link href="/css/owl.theme.css" type="text/css" rel="stylesheet" />
+<!-- 图片滚动 --> 
+<script type="text/javascript" src="/js/owl.carousel.js"></script>
+<script type="text/javascript">
+    function search_validate(){
+        if(document.getElementById('search_keywords').value == ''){
+            alert('请输入搜索关键字');
+            return false;
+        }
+    }
+</script> 
+</head>
+<body class="bj_b"><div class="top" id="top_nav">
+    <div class="main">
+        <a href="/" class="logo"></a>     
+        <span class="menu2" id="menu2"><a href="javascript:void(0)">&nbsp;</a></span>   
+        <div id=navk>
+                        <ul class="cd_t">
+                  
+                <li><a href="https://www.sjtu.edu.cn" target="_blank">交大首页</a></li>
+                                <li class="l_x">|</li>
+                                  
+                <li><a href="https://news.sjtu.edu.cn" target="_blank">交大新闻网</a></li>
+                                <li class="l_x">|</li>
+                                  
+                <li><a href="http://jd.sjtu.edu.cn/web/JDJDW/2960001.htm" target="_blank">焦点网</a></li>
+                                            </ul>
+            <span class="ss">
+                <form method="get" action="https://sjtuztjy.sjtu.edu.cn/active/search.html" onsubmit="return search_validate();">
+                <div class="txtk">
+                    <input type="text" id="search_keywords" name="search_keywords" class="form-control" placeholder="">
+                    <button class="an_ss" type="submit"></button>
+                </div>
+                </form>
+            </span>
+            <ul class="menu">
+                <li><a href="/" class="dbt">首页</a></li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/zyjs.html" class="dbt ">中央精神</a>
+                                        <dl>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/zy_file.html" >中央文件</a></dd>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/zy_study.html" >学习资料</a></dd>
+                                            </dl>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/news.html" class="dbt ">新闻动态</a>
+                                        <dl>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/jdyw.html" >交大要闻</a></dd>
+                                                <dd><a href="https://sjtuztjy.sjtu.edu.cn/jcdt.html" >基层动态</a></dd>
+                                            </dl>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/xjdx.html" class="dbt on">先进典型</a>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/mtgz.html" class="dbt ">媒体关注</a>
+                                    </li>
+                                <li><a href="https://sjtuztjy.sjtu.edu.cn/slhj.html" class="dbt ">史料汇集</a>
+                                    </li>
+                            </ul>
+            <div class="clear"></div>
+        </div> 
+    </div>  
+</div>
+<div class="top_jg"></div>
+<SCRIPT type=text/javascript>  
+$(document).ready(function() {
+    var pk=document.body.clientWidth;
+    if(pk<1200){
+        //手机菜单
+        $("#menu2").click(function(){
+            if($("#navk").css("display")=="none"){
+                $(this).find("a").addClass("on");
+                $("#navk").slideDown("slow");       
+            }
+            else{
+                $(this).find("a").removeClass("on");
+                $("#navk").slideUp("slow");     
+            }
+        });  
+    }
+    else{
+        $(".menu li").hover(function() {
+            $(this).find("dl").css("display","block");
+        },function(){
+            
+            $(this).find("dl").css("display","none");
+        });
+
+        //向下滚动顶部缩小
+        $.fn.smartFloat = function() {
+            var position = function(element) {
+                var top = element.position().top, pos = element.css("position");
+                $(window).scroll(function() {
+                    var scrolls = $(this).scrollTop();
+                    if (scrolls > top) {
+                        $("#top_nav").addClass("on");
+                        if (window.XMLHttpRequest) {
+                            element.css({
+                                position: "fixed",
+                                //background:"#efefef",
+                                top: 0
+                            });
+                        } else {
+                            element.css({
+                                top: scrolls
+                            });
+                        }
+                    }else {
+                        $("#top_nav").removeClass("on");
+                        element.css({
+                            position: pos,
+                            //background:"transparent",
+                            top: top
+                        });
+                    }
+                });
+            };
+            return $(this).each(function() {
+                position($(this));
+            });
+
+        };
+        $("#top_nav").smartFloat();
+        //向下滚动顶部缩小 end
+    };
+});  
+//-->  
+</SCRIPT>
+<div class="ban"><img src="/upload/image/20190924/20190924141304.jpg" ></div>
+<div class="dqwz">
+ 	<div class="main wow fadeInUp">
+  		<a href="/">首页</a> &gt; <a href="https://sjtuztjy.sjtu.edu.cn/xjdx.html">先进典型</a> 	</div>
+</div>
+<div class="nyk">
+	 	<div class="main">
+   		<div class="zt_snr">
+     		<div class="sbt wow fadeInUp">“90后”院士孙钧</div>
+     		<div class="fbt wow fadeInUp">为港珠澳大桥“专业护航”</div>
+     		<div class="xx wow fadeInUp"></div>
+    		<div class="ssj news_ssj wow fadeInUp">日期：2019-09-25</div>
+    		<div class="snr wow fadeInUp">
+			    <p>　　2018年10月23日，港珠澳大桥开通仪式在广东珠海举行。习近平出席仪式并宣布大桥正式开通。港珠澳大桥跨越伶仃洋，东接香港，西接广东珠海和澳门，总长约55公里，是粤港澳三地首次合作共建的超大型跨海交通工程。</p>
+
+<p style="text-align: center;"><br />
+<img alt="" src="/upload/image/20190925/20190925110949.jpg" style="width: 600px;" /></p>
+
+<p>&nbsp;</p>
+
+<p>　　&ldquo;一桥飞架三地，天堑变通途。&rdquo; 港珠澳大桥是&ldquo;一国两制&rdquo;下粤港澳三地首次合作共建的超大型跨海交通工程，是国家工程、国之重器，也是人类工程史上的一个奇迹。让交大人尤其引以为自豪的是，港珠澳大桥奇迹的背后，有交大人奋斗的足迹，闪耀着交大智慧的光彩，体现了新时代交大人的爱国奋斗精神。<br />
+&nbsp;</p>
+
+<p style="text-align: center;"><strong>&ldquo;90后&rdquo;院士：为港珠澳大桥&ldquo;专业护航&rdquo;</strong><br />
+&nbsp;</p>
+
+<p>　　筹备6年，建设9年，港珠澳大桥建设历时足足15年。它的建成与通车，让粤港澳三地之间的往来更加方便了。它的背后是无数大桥建设者们的爱国奋斗，砥砺前行。其中特别惹人注目的是一位&ldquo;90后&rdquo;老人，他，就是交通大学工学院土木工程系1949届校友、工程力学家、隧道与地下结构工程专家、中国科学院孙钧院士。<br />
+&nbsp;</p>
+
+<p>　　孙钧是交通大学土木工程系1949届校友，毕业后留校任教，3年后在1952年院系调整中，随着土木系调至同济大学。孙钧长期从事高校地下建筑工程专业教学，进行地下结构理论研究，对发展地下结构流变力学、粘弹塑性理论和防护工程抗爆动力学等学科有重大贡献；出色地完成了多项重大工程、国家基金和科技攻关任务。<br />
+&nbsp;</p>
+
+<p>　　最近五六年，孙钧院士的心思都扑在了港珠澳大桥上。过去每次到这里出差，他都是以专家身份，为这座大桥施工建设中遇到的难题把脉、出谋划策。93岁的他解决了港珠澳大桥的不少难题，今年初还亲自去走了一遍，眺望大屿山与伶仃洋。<br />
+&nbsp;</p>
+
+<p>　　2018年2月，已经93岁高龄的孙钧院士心情格外舒坦，站在港珠澳大桥东岛非通航孔桥的桥面上，眺望着大屿山与伶仃洋，&ldquo;来了这么多次，这次心情最轻松。&rdquo;<br />
+&nbsp;</p>
+
+<p>　　港珠澳大桥被誉为&ldquo;世界桥梁界的珠穆朗玛峰&rdquo;。穿着薄薄的羽绒外套、拄着拐杖，沐浴在祖国南方温暖的阳光下，孙钧神采奕奕。没有人能猜到，这位&ldquo;90后&rdquo;院士，过去一年的工作强度是这样的：前后出差30多次，而今年春节来临前的最后两次出差，孙钧都是从上海赶往港珠澳大桥。<br />
+&nbsp;</p>
+
+<p>　　港珠澳大桥沉管隧道是当前世界上唯一的深埋沉管隧道，隧道深埋在外海海底，它的长度和埋置深度都达到世界最长、最深的规模。由于这项&ldquo;超级工程&rdquo;涉及很多全新的技术，其蕴含的巨大工程难度都是过去不曾遇到过的。已至耄耋之年的孙钧，频繁地往来于上海和珠海，奔走于工地和会议室，前前后后参加各类技术风险评估会、咨询会达三四十次。&ldquo;每次提技术方案，他都知无不言，剖析问题更是丝丝入扣，条理分明。&rdquo;<br />
+&nbsp;</p>
+
+<p>　　在孙钧的工作议程上，农历鸡年的最后一个学术会议，是关于港珠澳大桥桥梁美学的。港珠澳大桥，跨海段长度22.9公里，海底隧道长达5.9公里，还有两个10万平方米的人工岛。&ldquo;这两个人工岛如何规划，人工岛的景色如何与海景协调，吸引更多香港同胞到这里来旅游，全桥景色怎么设计更好，这些都是桥梁美学关注的问题。&rdquo;<br />
+&nbsp;</p>
+
+<p>　　事实上，在成为交通部指定的技术顾问、为港珠澳大桥&ldquo;专业护航&rdquo;前，孙钧曾参与过很多&ldquo;超级工程&rdquo;，其中包括青藏公路、长江三峡水利枢纽、南水北调、洋山深水港、长江隧桥等。&ldquo;我这一辈子，经手的大项目大概就是这些。不是我有什么能耐，大概是我资格比较老吧。&rdquo;孙钧谦虚地说，然后哈哈大笑起来。<br />
+&nbsp;</p>
+
+<p style="text-align: center;"><strong>铭记求学岁月，关心母校发展</strong><br />
+&nbsp;</p>
+
+<p>　　落其实者思其树，饮其流者怀其源。作为交大土木系1949届校友，虽已离校多年，孙钧却对求学时的一幕幕记忆犹新，多次返校参加分享活动，时刻心系母校发展。思恩永久，源沛脉长，老院士已经成为饮水思源精神的最佳诠释。<br />
+&nbsp;</p>
+
+<p>　　交大110校庆之际，80高龄的孙钧院士回母校参加了校庆活动。&ldquo;六十年前，我们这帮人也是像你们现在一样的热血青年&rdquo;，老院士回忆道，&ldquo;不过那个时候可没有你们现在这么好的条件。食堂连凳子都没有，四年都是站着吃饭的，平常吃的都是青菜汤和米饭，只有礼拜天可以吃一点荤，称作&lsquo;打牙祭&rsquo;，晚上在图书馆看书看得太晚，就吃几块咸饼干补充营养，我看到你们现在的食堂，真是不知好了多少倍。苦归苦，大家都是很努力地学习，想着早一天毕业，为国家做贡献，像当时念数学系的吴文俊，念物理系的何祚庥等等，后来都成为了祖国的栋梁之材。我们是四九年毕业的，是解放前的最后一批毕业生，也是解放后第一批毕业生，可以说是&lsquo;承前启后&rsquo;的一代。&rdquo;<br />
+&nbsp;</p>
+
+<p>　　虽然踏出校门已经半个多世纪，但母校的一草一木，都深深印在老校友的脑海里。&ldquo;那栋看起来很小很旧的房子是校长府邸，只有在职的校长才能住进去；食堂旁边是体育馆，解放战争时期，同学们就是把中共地下党员藏在那里，躲避国民党军警的迫害，交大成了&lsquo;小解放区&rsquo;，史霄雯和穆汉祥烈士也是在那时英勇捐躯的。为科学和真理献身，这是我们交大人的优良传统啊。&rdquo;<br />
+&nbsp;</p>
+
+<p>　　众所周知，土木系是交大最早的专业之一，曾经有着辉煌的历史，为祖国造就了很多孙钧院士这样的人才，但在1952年院系调整以后，土木系师资设备全部转移到同济大学，直到1986年才开始恢复建设，虽然在这20年里，交大的土木系有了长足的进步，但毕竟太&ldquo;年轻&rdquo;，积累不够，与国内其他知名大学之间还存在很大的差距。孙钧院士时刻关注母校发展和土木工程专业传承，热心建言献策。说到目前应该怎样发展交大的建工专业，孙钧院士殷切提出三点期待：首先，土木工程虽然是一个传统学科，但离不开新技术的更新改造。他希望在今后的学科发展当中，土木工程学科可以和其他学科交叉融合，适应学科发展新态势。第二，他希望教师在教学过程中将理论与实践相结合，引导学生关心国内外发展的前沿动态，运用理论研究解决实际问题。第三，高校的教师要将自己的科研、学习成果运用到教学中去，给学生带去更加新颖的知识内容。<br />
+&nbsp;</p>
+
+<p>　　孙钧说：我们办学要有自己的特色，不能别人做什么做的好，我们也去搞什么，亦步亦趋是永远追不上的。要敢于开发新的领域，研究新的课题，有一个高的起点很重要。<br />
+&nbsp;</p>
+
+<p>　　除了关心土木系传承与发展，老院士还时刻关注青年学子的成长成才。孙钧说：&ldquo;现在的大学生跟我们当时相比，思想比较复杂&mdash;&mdash;当然，这也是很现实的，你们面临着更大的压力，要自己找工作，成家立业，抚养老人等等，而我们当时，考虑最多的是怎样把功课学好，为一道题目争论半天，这种刻苦钻研的精神还是需要现在的年轻人学习的。&rdquo;他语重心长地寄语青年学子：&ldquo;目前你们要做的，是一定要打好基础，培养自己独立钻研、独立学习的能力和方法，只要掌握了好的方法，在以后的人生道路上不管遇到什么问题，都可以迎刃而解。好好珍惜现在的机会，在大学中所学到的，能让你一生受益无穷。&rdquo;<br />
+&nbsp;</p>
+
+<p>　　2015年，在交大土木工程系恢复建系三十周年之际，孙钧院士深情写下了对母校母院的祝愿：&ldquo;深深感谢母校的哺育之恩，使我逐步树立了爱国爱民的人生观，给了我土木工程的ABC，真是一辈子收益不尽！祝愿母校、母系在今后的岁月里，百尺竿头，更上层楼，为祖国的工程教育和建设事业更铸新的辉煌。&rdquo;<br />
+&nbsp;</p>
+
+<p>　　孙钧院士还以90高龄回到母校，登上交大土木工程系&ldquo;百廿校庆土木论坛&mdash;&mdash;传承与发展&rdquo;论坛，在学院学科发展战略论坛上作精彩报告，谆谆教诲后辈学人。<br />
+&nbsp;</p>
+
+<p>　　在老一辈交大人的传承之下，新一代的交大人在茁壮成长。在港珠澳大桥的建设中，就能看见交大几代船建人的身影和足迹。<br />
+&nbsp;</p>
+
+<p>　　船建学院船海系1998届校友程志虎，是港珠澳大桥总监理工程师，教授级高级工程师，上海交通大学毕业后，曾担任中国船级社实业公司副董事长、中国交通建设监理协会副理事长、中国设备监理协会副理事长、茅以升科技教育基金会桥梁委员会委员、天津大学博士生导师、重庆交通大学客座教授等职务，是我国培养的NDT&amp;E领域内的第一个博士，曾获得&ldquo;中国十大桥梁人物&rdquo;&ldquo;全国优秀监理工程师&rdquo;&ldquo;中国交通建设监理优秀人物&rdquo;&ldquo;全国交通运输系统劳动模范&rdquo;以及&ldquo;全国五一劳动奖章&rdquo;等殊荣。2012年2月，程志虎在征得中国船级社党组同意的前提下，正式辞去了中国船级社实业公司总经理职务，远赴港珠澳大桥建设工地，履行总监理工程师的职责。把自己的技术与管理专长实实在在地融入到国家重点工程项目和交通建设事业中去，程志虎觉得更有意义、更有价值。<br />
+&nbsp;</p>
+
+<p>　　还有一支年轻的队伍活跃在港珠澳桥隧工程建设中。交大船建学院海洋工程团队李欣研究员、肖龙飞教授、田新亮副教授从2011年-2016年间参与港珠澳项目岛隧工程项目，完成三个在隧道段沉管安装过程进行受力分析及动力响应数值仿真项目，对沉管浮运和沉放全过程进行数值建模分析，同时计算分析了沉管安装深槽区域特殊波浪与流载荷的影响，分析各种不利荷载作用下沉管管节、沉放驳、系泊缆系的动力响应。数值分析计算结果应用在多个沉管关节的预应力结构设计、接头剪力键的参数选取、沉管沉放过程的吊缆力、负浮力以及作业窗口的选取，为港珠澳桥隧工程的完成贡献力量。<br />
+&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: right;">供稿单位：稿件来源：人民日报、文汇报、交大船建学院、上海交大新闻学术网等</p>
+    		</div>
+    		<div class="sgd wow fadeInUp">
+				            	<a href="https://sjtuztjy.sjtu.edu.cn/xjdx/3032.html">下一条：钱学森</a>     			<a href="https://sjtuztjy.sjtu.edu.cn/xjdx.html" class="cd_fh">返回列表</a>
+     		</div>
+   		</div>
+  		<div class="clear"></div>
+ 	</div>
+</div>
+<script type="text/javascript" src="/js/wow.js"></script>
+<script>
+var wow = new WOW({
+    boxClass: 'wow',
+    animateClass: 'animated',
+    offset: 0,
+    mobile: true,
+    live: true
+});
+wow.init();
+</script>
+
+	<div class="foot">
+	 	<div class="main">
+	  		<div class="f1 wow fadeInUp" data-wow-delay=".1s">
+	  		沪ICP备05052060   沪举报中心   版权所有© 上海交通大学<br>  
+			地址：上海市东川路800号   邮编：200240   查号：86-21-54740000	  	</div>
+	  	<div class="f2 wow fadeInUp" data-wow-delay=".3s">
+	   		<span class="s1">相关链接</span>
+	   			   			   		<a href="https://www.sjtu.edu.cn" target="_blank">交大首页</a>
+	   			   		<b>|</b>
+	   			   			   		<a href="https://news.sjtu.edu.cn" target="_blank">交大新闻网</a>
+	   			   		<b>|</b>
+	   			   			   		<a href="http://jd.sjtu.edu.cn/web/JDJDW/2960001.htm" target="_blank">焦点网</a>
+	   			   			   	</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.fy1 a').each(function(){
+            if($(this).text()=='上一页' || $(this).text()=='下一页'){
+                $(this).addClass('cd_sx');
+            }
+        })
+    });
+</script>
+</body>
+</html>
