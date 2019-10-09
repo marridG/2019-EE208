@@ -18,6 +18,7 @@ from Ex3_1_Bloom_Filter_class import BloomFilter
 THREAD_NUM = 10
 FINAL_SUBMISSION = False
 MAX_PATH = 200
+MODE_QUEUE_THREADING = 1  # using ? to join: queue=0, [faster]threading=1
 # ********** CHECK BEFORE UPLOAD !!! **********
 # [status]
 DEBUG_MODE = False
@@ -32,6 +33,8 @@ ALWAYS_CLEAR = True
 ADVANCED_ELEMENT_MATCH = 1
 # version control - (1)delete downloaded files (2)clear log file
 VERSION_CONTROL = False
+
+
 # ********** ALSO CHECK THE LAST FEW LINES !!! **********
 
 
@@ -50,15 +53,27 @@ def crawl(in_seed, in_max_page, in_max_depth):
     if ALWAYS_CLEAR:
         clear_storage(index_filename, folder)
 
-    # fork the waiting queue
-    for i in range(THREAD_NUM):
-        t = threading.Thread(target=working, args=(i,))
-        t.setDaemon(True)
-        # t.setDaemon(False)
-        t.start()
-
-    # wait until all the jobs are done
-    G_to_crawl_queue.join()
+    if MODE_QUEUE_THREADING:  # using threading to join
+        threads = []
+        for i in range(THREAD_NUM):
+            t = threading.Thread(target=working_thread, args=(i,))
+            t.setDaemon(True)
+            threads.append(t)
+        # start each thread
+        for t in threads:
+            t.start()
+        # join threads
+        for t in threads:
+            t.join()
+    else:  # using queue to join
+        # fork the waiting queue
+        for i in range(THREAD_NUM):
+            t = threading.Thread(target=working_queue, args=(i,))
+            t.setDaemon(True)
+            # t.setDaemon(False)
+            t.start()
+        # join, wait until all the jobs are done
+        G_to_crawl_queue.join()
 
     # calculate the run time
     run_time = time.clock() - time_start
@@ -105,13 +120,44 @@ def crawl(in_seed, in_max_page, in_max_depth):
         print "======================================="
 
 
-# get and handle one url each time from the queue
-def working(i):
+# [thread] get and handle one url each time from the queue
+def working_thread(i):
+    if DEBUG_MODE:
+        print "Thread", i, "starts"
+    while True:
+        do_crawl = local_max_depth = 0
+        if varLock.acquire():
+            if G_crawled_page_count < G_max_page - THREAD_NUM - 2:
+                do_crawl = 1
+            elif (G_crawled_page_count < G_max_page) and 0 == i:
+                do_crawl = 1
+            else:
+                varLock.release()
+                G_to_crawl_queue.task_done()
+                break
+            local_max_depth = G_max_depth
+            varLock.release()
+
+        if do_crawl:
+            argument_url, depth = G_to_crawl_queue.get()  # get the target url form the queue
+            if depth > local_max_depth:
+                G_to_crawl_queue.task_done()
+                break
+            else:
+                crawl_using_argument_url(argument_url, depth, i)  # handle the url
+        G_to_crawl_queue.task_done()
+
+
+# [queue] get and handle one url each time from the queue
+def working_queue(i):
     # while (not G_to_crawl_queue.empty()) and count < max_page:
     if DEBUG_MODE:
         print "Thread", i, "starts"
     while True:
-        argument_url, depth = G_to_crawl_queue.get()  # get the target url form the queue
+        try:
+            argument_url, depth = G_to_crawl_queue.get()  # get the target url form the queue
+        except:
+            break
 
         if varLock.acquire():
             if DEBUG_MODE and G_crawled_page_count and not G_crawled_page_count % (G_max_page / 10):
@@ -314,7 +360,7 @@ if THREAD_NUM > 10:
     SHOW_LOGS = False
 
 if not FINAL_SUBMISSION:
-    crawl("http://www.sjtu.edu.cn/", 10, 2)
+    crawl("http://www.sjtu.edu.cn/", 100, 2)
 
     # if __name__ == '__main__':
     #     trm_seed = sys.argv[1]
