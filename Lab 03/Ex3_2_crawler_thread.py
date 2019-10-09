@@ -45,7 +45,7 @@ def crawl(in_seed, in_max_page, in_max_depth):
     G_max_page = in_max_page
     G_max_depth = in_max_depth
     G_to_crawl_queue.put((G_seed, 0))
-    time_start = time.clock()
+    time_start = time.time()
 
     # clear the file and empty the folder
     index_filename = 'index.txt'  # each line in index.txt: "link " + "corresponding file name"
@@ -76,7 +76,7 @@ def crawl(in_seed, in_max_page, in_max_depth):
         G_to_crawl_queue.join()
 
     # calculate the run time
-    run_time = time.clock() - time_start
+    run_time = time.time() - time_start
 
     # for an easier version contro
     if VERSION_CONTROL:
