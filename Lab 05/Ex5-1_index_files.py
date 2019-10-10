@@ -4,6 +4,7 @@ INDEX_DIR = "IndexFiles.index"
 # [User] limits
 MAX_PAGE_SIZE = 2  # in MiB
 # [User] modes
+INDEX_MODE = 3  # 1=APPEND, 2=CREATE, 3=CREATE_OR_APPEND
 SHOW_LOGS = True  # False
 FILTER_OUT_SCRIPTS = True  # .css .js
 FILTER_OUT_PICS = True  # .png .jpg .gif .jpeg
@@ -15,11 +16,11 @@ WEB_PAGE_INDEX_SUBFIX = "index.txt"
 WEB_PAGE_SITE_SUBFIX = "src.txt"
 WEB_PAGES_SUBFIX = "html/"
 # [Developer]
-DEBUG_MODE = 0
+DEBUG_MODE = True
 # Encodings List: for a less advanced encoding method
 ENCODINGS = ["ascii", "utf-8", "utf-16", "gb2312", "URL", "base64", "BIG5", "GBK", "GB18030"]
 # # [Developer] Test Paths
-# WEB_PAGE_PREFIX = "crawled_test/"
+# WEB_PAGE_PREFIX = "crawled_test2/"
 
 import sys, os, lucene, threading, time
 from datetime import datetime
@@ -70,7 +71,12 @@ class IndexFiles(object):
         analyzer = LimitTokenCountAnalyzer(analyzer, 1048576)
 
         config = IndexWriterConfig(Version.LUCENE_CURRENT, analyzer)
-        config.setOpenMode(IndexWriterConfig.OpenMode.CREATE)
+        if 1 == INDEX_MODE:  # APPEND
+            config.setOpenMode(IndexWriterConfig.OpenMode.APPEND)
+        elif 2 == INDEX_MODE:  # CREATE
+            config.setOpenMode(IndexWriterConfig.OpenMode.CREATE)
+        else:  # CREATE_OR_APPEND
+            config.setOpenMode(IndexWriterConfig.OpenMode.CREATE_OR_APPEND)
         # print "init done"
         writer = IndexWriter(store, config)
         # print "init 2 done"
@@ -141,7 +147,7 @@ class IndexFiles(object):
                         print "\t", src_site
                         print "\t", title
                         print "\t", url_original
-                        print contents
+                        # print contents
                         print "====================="
                     '''
 

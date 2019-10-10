@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<!--STATUS OK-->
+<html>
+
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="referrer" content="always" />
+<meta name="description" content="百度百科是一部内容开放、自由的网络百科全书，旨在创造一个涵盖所有领域知识，服务所有互联网用户的中文知识性百科全书。在这里你可以参与词条编辑，分享贡献你的知识。">
+<title>我的任务我做主_百度百科</title>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="icon" sizes="any" mask href="//www.baidu.com/img/baidu.svg">
+<!--[if lte IE 9]>
+<script>
+    (function() {
+      var e = "abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(","),
+        i = e.length;
+      while (i--) {
+        document.createElement(e[i]);
+      }
+
+      window.console = window.console || {};
+      var f = ['log', 'info', 'warning', 'error', 'clear'];
+      var l = f.length;
+      while(l--) {
+        window.console[f[l]] = function () {};
+      }
+    })();
+  </script>
+<![endif]-->
+
+        
+<link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-common/pkg/wiki-common-base_9a9fb54.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-task/pkg/wiki-task_sync_css_0_abf3587.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-task/taskIndex/taskIndex_692bbdf.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-common/widget/component/userbar-n/userbar-n_2890903.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-common/widget/lib/larkplayer/larkplayer_981c735.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-common/widget/lib/webuploader/webuploader_08d9db4.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-common/widget/component/userbar/userbar_388002f.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-task/widget/taskIndex/banner/banner_945d0b1.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-task/widget/taskIndex/userInfo/userInfo_009c780.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-task/widget/taskIndex/recommendTask/recommendTask_fb4ca3e.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-task/widget/taskIndex/everybodyComing/everybodyComing_e717991.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-task/widget/taskIndex/weeklyTask/weeklyTask_80459b8.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-task/widget/taskIndex/rank/taskGuruAndWeeklyRanking_b600449.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-task/widget/taskIndex/integralMall/integralMall_9ba32ea.css"/>    
+</head>
+<body class="w-small">
+
+
+    <ul class="wgt-userbar">
+<li>
+<a href="http://www.baidu.com/">百度首页</a>
+</li>
+</ul>
+    <div class="header-wrapper">
+    <div class="header">
+        <div class="layout">
+            <div class="wgt-searchbar wgt-searchbar-simple cmn-clearfix ">
+<div class="logo-container">
+<a class="logo cmn-inline-block" title="到百科首页" href="/">
+<span class="cmn-baike-logo">
+<em class="cmn-icon cmn-icons cmn-icons_logo-bai" style="font-size: 38px"></em>
+<em class="cmn-icon cmn-icons cmn-icons_logo-du" style="font-size: 38px"></em>
+<em class="cmn-icon cmn-icons cmn-icons_logo-baike" style="font-size: 38px"></em>
+</span>
+</a><span class="topic"><a href="/task">百科任务</a></span></div>
+</div>
+            <div class="search">
+                <div class="form">
+                    <form id="searchForm" action="/usertask/searchlist" method="GET" target="_self">
+                                                                        <input id="query" name="taskName" type="text" autocomplete="off" autocorrect="off" placeholder="请输入任务关键词" value="" /><button type="submit">搜索任务</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- 头图 -->
+    <div class="banner">
+        <div class="layout">
+            <div class="overviewBox" style="background-color: ">
+                <h1>百科任务</h1>
+                <p class="desc">百科任务是科友发起、编辑、评审任务的平台,参加任务即可获得丰厚的奖励哦</p>
+                <div class="num-wraper">
+                    <div class="dib">
+                        <div class="numDesc">参与人数</div>
+                        <div class="num" id="joinNum"></div>
+                    </div>
+                    <span class="t-separator_l"></span>
+                    <div class="dib">
+                        <div class="numDesc">发布任务数</div>
+                        <div class="num" id="releaseNum"></div>
+                    </div>
+                </div>
+                                <a class="goTask_btn showLogin" nslog-type="10500103">登录参加任务</a>
+                            </div>
+        </div>
+        <div class="viewport">
+            <ul class="innerWrap" id="carouselBox">
+                <li class="wgt_carousel_aniUnit banner-fst"  >
+                   <img src="https://bkssl.bdimg.com/static/wiki-task/widget/taskIndex/banner/resource/img/indexbanner_05d0549.png" height="400" style="margin:0 auto;position: absolute; top: 0; left: 0; bottom: 0; right: 0; ">
+                </li>
+                            </ul>
+                    </div>
+</div>
+
+    <!-- 用户信息 -->
+    <div class="layout">
+        <div class="notLoggedIn"> 
+        <a href="javascript:void(0)" class="login_button showLogin">登录</a>
+        <span class="f18">参加任务可获得财富值和经验值哦~</span>
+    </div>
+    </div>
+
+    <!-- 推荐任务、大家都在做-->
+    <div class="bcf5f">
+        <div class="layout-pv40">
+            <a name="recommendTask" id="recommendTask" > </a>
+<div class="pr mb30">
+    <a class="pa-r-b0 h-more" href="/usertask/list#simple" target="_blank" nslog-type="10500203">更多</a>
+    <h1 class="fwn">推荐任务</h1>
+</div>
+<div class="w990 cmn-clearfix">
+    <div class="lCardWrap tra-curlRight">
+        <a class="lCardImg" href="/task/205234" target="_blank" nslog-type="10500201"><img src="https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D485/sign=2d0ccc1935f33a879e6d0112f35c1018/b90e7bec54e736d1d71bc32194504fc2d562698b.jpg"></a>
+        <div class="lCardDetail">
+            <div class="pr">
+                <div class="f16">拨雾见月、福至中秋</div>
+                <div class="f14">
+                    775人参与
+
+                                           <span class="ml15">任务已结束</span>
+
+                                    </div>
+                            </div>
+        </div>
+    </div>
+        <div class="cardWrap tra-boxShadow">
+        <a class="nCardImg" href="/task/205246" target="_blank" nslog-type="10500202"><img src="https://gss3.bdstatic.com/-Po3dSag_xI4khGkpoWK1HF6hhy/baike/crop%3D0%2C0%2C460%2C275%3BeWH%3D238%2C142/sign=4e1137ce3601213fdb7c149c69d71ae1/f703738da9773912701a8676f7198618367ae2ed.jpg" width="238" height="142"></a>
+        <div class="nCardDetail">
+            <div class="pr">
+                <a href="/task/205246" class="c-taskName" target="_blank" nslog-type="10500202">捉虫行动第56期</a>
+
+
+                                    <div class="f14 recomtime" data-time="832486">
+                    </div>
+                
+                                <span class="pa-r-b0 wNum-yellow">6</span>
+                            </div>
+        </div>
+    </div>
+            <div class="cardWrap tra-boxShadow">
+        <a class="nCardImg" href="/task/205249" target="_blank" nslog-type="10500202"><img src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/crop%3D0%2C15%2C1199%2C714%3BeWH%3D238%2C142/sign=aea41f6cde1373f0e17035df993f67ca/91529822720e0cf3a82dc9ec0546f21fbf09aacb.jpg" width="238" height="142"></a>
+        <div class="nCardDetail">
+            <div class="pr">
+                <a href="/task/205249" class="c-taskName" target="_blank" nslog-type="10500202">热词鲁班奖创建更新</a>
+
+
+                                    <div class="f14 recomtime" data-time="870782">
+                    </div>
+                
+                                <span class="pa-r-b0 wNum-yellow">7</span>
+                            </div>
+        </div>
+    </div>
+            <div class="cardWrap tra-boxShadow">
+        <a class="nCardImg" href="/task/205267" target="_blank" nslog-type="10500202"><img src="https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/crop%3D26%2C0%2C744%2C445%3BeWH%3D238%2C142/sign=fb78b2ce8d8ba61ecba1926f7c06a126/dcc451da81cb39dbfcb0d352df160924ab183045.jpg" width="238" height="142"></a>
+        <div class="nCardDetail">
+            <div class="pr">
+                <a href="/task/205267" class="c-taskName" target="_blank" nslog-type="10500202">周任务&amp;信息栏1/2</a>
+
+
+                                    <div class="f14 recomtime" data-time="1784058">
+                    </div>
+                
+                            </div>
+        </div>
+    </div>
+            <div class="cardWrap tra-boxShadow">
+        <a class="nCardImg" href="/task/205266" target="_blank" nslog-type="10500202"><img src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/crop%3D22%2C2%2C740%2C443%3BeWH%3D238%2C142/sign=2aa2363435f33a878a225a5afb6e2214/77c6a7efce1b9d1602612f65fcdeb48f8c546414.jpg" width="238" height="142"></a>
+        <div class="nCardDetail">
+            <div class="pr">
+                <a href="/task/205266" class="c-taskName" target="_blank" nslog-type="10500202">周任务&amp;信息栏2/2</a>
+
+
+                                    <div class="f14 recomtime" data-time="1784163">
+                    </div>
+                
+                            </div>
+        </div>
+    </div>
+            <div class="cardWrap tra-boxShadow">
+        <a class="nCardImg" href="/task/205268" target="_blank" nslog-type="10500202"><img src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/crop%3D0%2C15%2C700%2C418%3BeWH%3D238%2C142/sign=7da6722aa7d3fd1f2246f87a0d7e092e/aa18972bd40735fa19e0afbd91510fb30f2408a6.jpg" width="238" height="142"></a>
+        <div class="nCardDetail">
+            <div class="pr">
+                <a href="/task/205268" class="c-taskName" target="_blank" nslog-type="10500202">明星团·娱乐概述完善</a>
+
+
+                                    <div class="f14 recomtime" data-time="1916848">
+                    </div>
+                
+                                <span class="pa-r-b0 wNum-yellow">5</span>
+                            </div>
+        </div>
+    </div>
+            <div class="cardWrap tra-boxShadow">
+        <a class="nCardImg" href="/task/205163" target="_blank" nslog-type="10500202"><img src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/crop%3D0%2C98%2C940%2C561%3BeWH%3D238%2C142/sign=44f413564910b912ab8eacbefecdd03a/024f78f0f736afc3f0d46b88bd19ebc4b6451206.jpg" width="238" height="142"></a>
+        <div class="nCardDetail">
+            <div class="pr">
+                <a href="/task/205163" class="c-taskName" target="_blank" nslog-type="10500202">史地组——数据更新</a>
+
+
+                                    <div class="f14 recomtime" data-time="102467">
+                    </div>
+                
+                                <span class="pa-r-b0 wNum-yellow">30</span>
+                            </div>
+        </div>
+    </div>
+    </div>
+
+            <div class="pr mb30">
+    <a class="pa-r-b0 h-more" href="/usertask/list" target="_blank" nslog-type="10500205">更多</a>
+    <h1 class="fwn mv30">大家都在做</h1>
+</div>
+<div class="w990 cmn-clearfix">
+        <div class="cardWrap tra-boxShadow">
+        <a class="nCardImg tra-scale" href="/task/205163" target="_blank" nslog-type="10500204"><img src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/crop%3D0%2C98%2C940%2C561%3BeWH%3D238%2C142/sign=44f413564910b912ab8eacbefecdd03a/024f78f0f736afc3f0d46b88bd19ebc4b6451206.jpg" width="238" height="142"></a>
+        <div class="nCardDetail">
+            <div class="pr">
+                <a href="/task/205163" class="c-taskName" target="_blank" nslog-type="10500204">史地组——数据更新</a>
+                <div class="c-joinNum">208人参与</div>
+                                <span class="pa-r-b0 wNum-grey">30</span>
+                            </div>
+        </div>
+    </div>
+        <div class="cardWrap tra-boxShadow">
+        <a class="nCardImg tra-scale" href="/task/205246" target="_blank" nslog-type="10500204"><img src="https://gss3.bdstatic.com/-Po3dSag_xI4khGkpoWK1HF6hhy/baike/crop%3D0%2C0%2C460%2C275%3BeWH%3D238%2C142/sign=4e1137ce3601213fdb7c149c69d71ae1/f703738da9773912701a8676f7198618367ae2ed.jpg" width="238" height="142"></a>
+        <div class="nCardDetail">
+            <div class="pr">
+                <a href="/task/205246" class="c-taskName" target="_blank" nslog-type="10500204">捉虫行动第56期</a>
+                <div class="c-joinNum">141人参与</div>
+                                <span class="pa-r-b0 wNum-grey">6</span>
+                            </div>
+        </div>
+    </div>
+        <div class="cardWrap tra-boxShadow">
+        <a class="nCardImg tra-scale" href="/task/205266" target="_blank" nslog-type="10500204"><img src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/crop%3D22%2C2%2C740%2C443%3BeWH%3D238%2C142/sign=2aa2363435f33a878a225a5afb6e2214/77c6a7efce1b9d1602612f65fcdeb48f8c546414.jpg" width="238" height="142"></a>
+        <div class="nCardDetail">
+            <div class="pr">
+                <a href="/task/205266" class="c-taskName" target="_blank" nslog-type="10500204">周任务&amp;信息栏2/2</a>
+                <div class="c-joinNum">72人参与</div>
+                            </div>
+        </div>
+    </div>
+        <div class="cardWrap tra-boxShadow">
+        <a class="nCardImg tra-scale" href="/task/205249" target="_blank" nslog-type="10500204"><img src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/crop%3D0%2C15%2C1199%2C714%3BeWH%3D238%2C142/sign=aea41f6cde1373f0e17035df993f67ca/91529822720e0cf3a82dc9ec0546f21fbf09aacb.jpg" width="238" height="142"></a>
+        <div class="nCardDetail">
+            <div class="pr">
+                <a href="/task/205249" class="c-taskName" target="_blank" nslog-type="10500204">热词鲁班奖创建更新</a>
+                <div class="c-joinNum">72人参与</div>
+                                <span class="pa-r-b0 wNum-grey">7</span>
+                            </div>
+        </div>
+    </div>
+    </div>
+        </div>
+    </div>
+
+    <!-- 每周任务 -->
+    <div class="layout-pv40">
+        <h1 class="fwn mb30">每周任务</h1>
+<div class="pr pl10 cmn-clearfix" id="each-phase" data-stage="0" data-tk="72d146a97b8e4e4c8bacf021ac408fdf">
+        <div class="phase phase0" data-week="phase0" data-finish="0" data-stage="0">
+                第一阶段
+        
+        <span class="signSpot tra-scale1-2"></span>
+    </div>
+            <div class="phase phase1 not-d" data-week="phase1" data-finish="0" data-stage="1">
+                第二阶段
+                <span class="signSpot tra-scale1-2"></span>
+    </div>
+            <div class="phase phase2 not-d" data-week="phase2" data-finish="0" data-stage="2">
+                第三阶段
+                <span class="signSpot tra-scale1-2"></span>
+    </div>
+            <div class="phase phase3 not-d" data-week="phase3" data-finish="0" data-stage="3">
+                第四阶段
+                <span class="signSpot tra-scale1-2"></span>
+    </div>
+            <div class="phase phase4 not-d" data-week="phase4" data-finish="0" data-stage="4">
+                第五阶段
+                <span class="signSpot tra-scale1-2"></span>
+    </div>
+        <div class="completedLine"></div>
+    <div class="notCompleteLine"></div>
+</div>
+<div class="weeklyTaskMain-container">
+    <div class="weeklyTaskMain cmn-clearfix content phase0">
+        <div class="fl">
+            <p class="f24 mb15">任务</p>
+            <p class="f16 mb30">编辑并达标5个词条<span class="ml5 c459">0/5</span></p>
+                                    <div class="cardWrap tra-boxShadow">
+                <a class="nCardImg" href="/task/205266" target="_blank" nslog-type="10500301"><img src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/crop%3D22%2C2%2C740%2C443%3BeWH%3D238%2C142/sign=2aa2363435f33a878a225a5afb6e2214/77c6a7efce1b9d1602612f65fcdeb48f8c546414.jpg" width="238" height="142"></a>
+                <div class="nCardDetail">
+                    <a href="/task/205266" class="c-taskName lh42" target="_blank" nslog-type="10500301">周任务&amp;信息栏2/2</a>
+                </div>
+            </div>
+            <!-- <div class="cardWrap tra-boxShadow">
+                <a class="nCardImg" href="javascript:void(0)" style="background-image:url(/static/wiki-task/taskBase/resource/img/normalRecommond.png)"></a>
+                <div class="nCardDetail">
+                    <a href="javascript:void(0)" class="c-taskName lh42">名宠</a>
+                </div>
+            </div> -->
+                        <div class="cardWrap tra-boxShadow">
+                <a class="nCardImg" href="/task/205267" target="_blank" nslog-type="10500301"><img src="https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/crop%3D26%2C0%2C744%2C445%3BeWH%3D238%2C142/sign=fb78b2ce8d8ba61ecba1926f7c06a126/dcc451da81cb39dbfcb0d352df160924ab183045.jpg" width="238" height="142"></a>
+                <div class="nCardDetail">
+                    <a href="/task/205267" class="c-taskName lh42" target="_blank" nslog-type="10500301">周任务&amp;信息栏1/2</a>
+                </div>
+            </div>
+            <!-- <div class="cardWrap tra-boxShadow">
+                <a class="nCardImg" href="javascript:void(0)" style="background-image:url(/static/wiki-task/taskBase/resource/img/normalRecommond.png)"></a>
+                <div class="nCardDetail">
+                    <a href="javascript:void(0)" class="c-taskName lh42">名宠</a>
+                </div>
+            </div> -->
+                    </div>
+        <div class="fr w318">
+            <p class="wt-h3 mb15">奖励</p>
+            <div class="forLeftBorder">
+                <p class="f16 mb30">完善本阶段指定任务即可获得以下奖励</p>
+                <div class="cmn-clearfix">
+                                        <div class="wealthPrize" style="margin:0 auto;float: none;">
+                            <div class="num"><em class="cmn-icon wiki-task-icon wiki-task-icon_fortune"></em>25</div>
+                            <div class="mt15 preline">财富值</div>
+                    </div>
+                                    </div>
+                                <span href="javascript:;" class="btn no-btn" data-curstage="0">暂不能领取</span>
+                            </div>
+        </div>
+    </div>
+    <div class="weeklyTaskMain cmn-clearfix content phase1">
+        <div class="fl">
+            <p class="f24 mb15">任务<span style="color:#ff9600;font-size:16px;padding-left: 20px;">任务尚未开启，完成上一阶段即可开启</span></p>
+            <p class="f16 mb30">编辑并达标10个词条<span class="ml5 c459">0/10</span></p>
+                                    <div class="cardWrap tra-boxShadow">
+                <a class="nCardImg" href="/task/205266" target="_blank" nslog-type="10500301"><img src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/crop%3D22%2C2%2C740%2C443%3BeWH%3D238%2C142/sign=2aa2363435f33a878a225a5afb6e2214/77c6a7efce1b9d1602612f65fcdeb48f8c546414.jpg" width="238" height="142"></a>
+                <div class="nCardDetail">
+                    <a href="/task/205266" class="c-taskName lh42" target="_blank" nslog-type="10500301">周任务&amp;信息栏2/2</a>
+                </div>
+            </div>
+            <!-- <div class="cardWrap tra-boxShadow">
+                <a class="nCardImg" href="javascript:void(0)" style="background-image:url(/static/wiki-task/taskBase/resource/img/normalRecommond.png)"></a>
+                <div class="nCardDetail">
+                    <a href="javascript:void(0)" class="c-taskName lh42">名宠</a>
+                </div>
+            </div> -->
+                        <div class="cardWrap tra-boxShadow">
+                <a class="nCardImg" href="/task/205267" target="_blank" nslog-type="10500301"><img src="https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/crop%3D26%2C0%2C744%2C445%3BeWH%3D238%2C142/sign=fb78b2ce8d8ba61ecba1926f7c06a126/dcc451da81cb39dbfcb0d352df160924ab183045.jpg" width="238" height="142"></a>
+                <div class="nCardDetail">
+                    <a href="/task/205267" class="c-taskName lh42" target="_blank" nslog-type="10500301">周任务&amp;信息栏1/2</a>
+                </div>
+            </div>
+            <!-- <div class="cardWrap tra-boxShadow">
+                <a class="nCardImg" href="javascript:void(0)" style="background-image:url(/static/wiki-task/taskBase/resource/img/normalRecommond.png)"></a>
+                <div class="nCardDetail">
+                    <a href="javascript:void(0)" class="c-taskName lh42">名宠</a>
+                </div>
+            </div> -->
+                    </div>
+        <div class="fr w318">
+            <p class="wt-h3 mb15">奖励</p>
+            <div class="forLeftBorder">
+                <p class="f16 mb30">完善本阶段指定任务即可获得以下奖励</p>
+                <div class="cmn-clearfix">
+                                        <div class="wealthPrize" style="margin:0 auto;float: none;">
+                            <div class="num"><em class="cmn-icon wiki-task-icon wiki-task-icon_fortune"></em>60</div>
+                            <div class="mt15 preline">财富值</div>
+                    </div>
+                                    </div>
+                                <span href="javascript:;" class="btn no-btn" data-curstage="1">暂不能领取</span>
+                            </div>
+        </div>
+    </div>
+    <div class="weeklyTaskMain cmn-clearfix content phase2">
+        <div class="fl">
+            <p class="f24 mb15">任务<span style="color:#ff9600;font-size:16px;padding-left: 20px;">任务尚未开启，完成上一阶段即可开启</span></p>
+            <p class="f16 mb30">编辑并达标30个词条<span class="ml5 c459">0/30</span></p>
+                                    <div class="cardWrap tra-boxShadow">
+                <a class="nCardImg" href="/task/205266" target="_blank" nslog-type="10500301"><img src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/crop%3D22%2C2%2C740%2C443%3BeWH%3D238%2C142/sign=2aa2363435f33a878a225a5afb6e2214/77c6a7efce1b9d1602612f65fcdeb48f8c546414.jpg" width="238" height="142"></a>
+                <div class="nCardDetail">
+                    <a href="/task/205266" class="c-taskName lh42" target="_blank" nslog-type="10500301">周任务&amp;信息栏2/2</a>
+                </div>
+            </div>
+            <!-- <div class="cardWrap tra-boxShadow">
+                <a class="nCardImg" href="javascript:void(0)" style="background-image:url(/static/wiki-task/taskBase/resource/img/normalRecommond.png)"></a>
+                <div class="nCardDetail">
+                    <a href="javascript:void(0)" class="c-taskName lh42">名宠</a>
+                </div>
+            </div> -->
+                        <div class="cardWrap tra-boxShadow">
+                <a class="nCardImg" href="/task/205267" target="_blank" nslog-type="10500301"><img src="https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/crop%3D26%2C0%2C744%2C445%3BeWH%3D238%2C142/sign=fb78b2ce8d8ba61ecba1926f7c06a126/dcc451da81cb39dbfcb0d352df160924ab183045.jpg" width="238" height="142"></a>
+                <div class="nCardDetail">
+                    <a href="/task/205267" class="c-taskName lh42" target="_blank" nslog-type="10500301">周任务&amp;信息栏1/2</a>
+                </div>
+            </div>
+            <!-- <div class="cardWrap tra-boxShadow">
+                <a class="nCardImg" href="javascript:void(0)" style="background-image:url(/static/wiki-task/taskBase/resource/img/normalRecommond.png)"></a>
+                <div class="nCardDetail">
+                    <a href="javascript:void(0)" class="c-taskName lh42">名宠</a>
+                </div>
+            </div> -->
+                    </div>
+        <div class="fr w318">
+            <p class="wt-h3 mb15">奖励</p>
+            <div class="forLeftBorder">
+                <p class="f16 mb30">完善本阶段指定任务即可获得以下奖励</p>
+                <div class="cmn-clearfix">
+                                        <div class="wealthPrize" style="margin:0 auto;float: none;">
+                            <div class="num"><em class="cmn-icon wiki-task-icon wiki-task-icon_fortune"></em>240</div>
+                            <div class="mt15 preline">财富值</div>
+                    </div>
+                                    </div>
+                                <span href="javascript:;" class="btn no-btn" data-curstage="2">暂不能领取</span>
+                            </div>
+        </div>
+    </div>
+    <div class="weeklyTaskMain cmn-clearfix content phase3">
+        <div class="fl">
+            <p class="f24 mb15">任务<span style="color:#ff9600;font-size:16px;padding-left: 20px;">任务尚未开启，完成上一阶段即可开启</span></p>
+            <p class="f16 mb30">编辑并达标50个词条<span class="ml5 c459">0/50</span></p>
+                                    <div class="cardWrap tra-boxShadow">
+                <a class="nCardImg" href="/task/205266" target="_blank" nslog-type="10500301"><img src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/crop%3D22%2C2%2C740%2C443%3BeWH%3D238%2C142/sign=2aa2363435f33a878a225a5afb6e2214/77c6a7efce1b9d1602612f65fcdeb48f8c546414.jpg" width="238" height="142"></a>
+                <div class="nCardDetail">
+                    <a href="/task/205266" class="c-taskName lh42" target="_blank" nslog-type="10500301">周任务&amp;信息栏2/2</a>
+                </div>
+            </div>
+            <!-- <div class="cardWrap tra-boxShadow">
+                <a class="nCardImg" href="javascript:void(0)" style="background-image:url(/static/wiki-task/taskBase/resource/img/normalRecommond.png)"></a>
+                <div class="nCardDetail">
+                    <a href="javascript:void(0)" class="c-taskName lh42">名宠</a>
+                </div>
+            </div> -->
+                        <div class="cardWrap tra-boxShadow">
+                <a class="nCardImg" href="/task/205267" target="_blank" nslog-type="10500301"><img src="https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/crop%3D26%2C0%2C744%2C445%3BeWH%3D238%2C142/sign=fb78b2ce8d8ba61ecba1926f7c06a126/dcc451da81cb39dbfcb0d352df160924ab183045.jpg" width="238" height="142"></a>
+                <div class="nCardDetail">
+                    <a href="/task/205267" class="c-taskName lh42" target="_blank" nslog-type="10500301">周任务&amp;信息栏1/2</a>
+                </div>
+            </div>
+            <!-- <div class="cardWrap tra-boxShadow">
+                <a class="nCardImg" href="javascript:void(0)" style="background-image:url(/static/wiki-task/taskBase/resource/img/normalRecommond.png)"></a>
+                <div class="nCardDetail">
+                    <a href="javascript:void(0)" class="c-taskName lh42">名宠</a>
+                </div>
+            </div> -->
+                    </div>
+        <div class="fr w318">
+            <p class="wt-h3 mb15">奖励</p>
+            <div class="forLeftBorder">
+                <p class="f16 mb30">完善本阶段指定任务即可获得以下奖励</p>
+                <div class="cmn-clearfix">
+                                        <div class="wealthPrize" style="margin:0 auto;float: none;">
+                            <div class="num"><em class="cmn-icon wiki-task-icon wiki-task-icon_fortune"></em>500</div>
+                            <div class="mt15 preline">财富值</div>
+                    </div>
+                                    </div>
+                                <span href="javascript:;" class="btn no-btn" data-curstage="3">暂不能领取</span>
+                            </div>
+        </div>
+    </div>
+    <div class="weeklyTaskMain cmn-clearfix content phase4">
+        <div class="fl">
+            <p class="f24 mb15">任务<span style="color:#ff9600;font-size:16px;padding-left: 20px;">任务尚未开启，完成上一阶段即可开启</span></p>
+            <p class="f16 mb30">编辑并达标80个词条<span class="ml5 c459">0/80</span></p>
+                                    <div class="cardWrap tra-boxShadow">
+                <a class="nCardImg" href="/task/205266" target="_blank" nslog-type="10500301"><img src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/crop%3D22%2C2%2C740%2C443%3BeWH%3D238%2C142/sign=2aa2363435f33a878a225a5afb6e2214/77c6a7efce1b9d1602612f65fcdeb48f8c546414.jpg" width="238" height="142"></a>
+                <div class="nCardDetail">
+                    <a href="/task/205266" class="c-taskName lh42" target="_blank" nslog-type="10500301">周任务&amp;信息栏2/2</a>
+                </div>
+            </div>
+            <!-- <div class="cardWrap tra-boxShadow">
+                <a class="nCardImg" href="javascript:void(0)" style="background-image:url(/static/wiki-task/taskBase/resource/img/normalRecommond.png)"></a>
+                <div class="nCardDetail">
+                    <a href="javascript:void(0)" class="c-taskName lh42">名宠</a>
+                </div>
+            </div> -->
+                        <div class="cardWrap tra-boxShadow">
+                <a class="nCardImg" href="/task/205267" target="_blank" nslog-type="10500301"><img src="https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/crop%3D26%2C0%2C744%2C445%3BeWH%3D238%2C142/sign=fb78b2ce8d8ba61ecba1926f7c06a126/dcc451da81cb39dbfcb0d352df160924ab183045.jpg" width="238" height="142"></a>
+                <div class="nCardDetail">
+                    <a href="/task/205267" class="c-taskName lh42" target="_blank" nslog-type="10500301">周任务&amp;信息栏1/2</a>
+                </div>
+            </div>
+            <!-- <div class="cardWrap tra-boxShadow">
+                <a class="nCardImg" href="javascript:void(0)" style="background-image:url(/static/wiki-task/taskBase/resource/img/normalRecommond.png)"></a>
+                <div class="nCardDetail">
+                    <a href="javascript:void(0)" class="c-taskName lh42">名宠</a>
+                </div>
+            </div> -->
+                    </div>
+        <div class="fr w318">
+            <p class="wt-h3 mb15">奖励</p>
+            <div class="forLeftBorder">
+                <p class="f16 mb30">完善本阶段指定任务即可获得以下奖励</p>
+                <div class="cmn-clearfix">
+                                        <div class="wealthPrize" style="margin:0 auto;float: none;">
+                            <div class="num"><em class="cmn-icon wiki-task-icon wiki-task-icon_fortune"></em>999</div>
+                            <div class="mt15 preline">财富值</div>
+                    </div>
+                                    </div>
+                                <span href="javascript:;" class="btn no-btn" data-curstage="4">暂不能领取</span>
+                            </div>
+        </div>
+    </div>
+    <div class="task_overlay" id="someHostId"></div>
+</div>
+<!-- 邮寄信息弹层 -->
+<form action="" class="mailInfo" id="mailPop">
+    <p class="fstline">请输入信息</p>
+    <label>百度ID</label><p class="dib">城市猎人</p>
+    <br>
+    <label for="receiver">收件人姓名</label><input type="text" id="receiver" required autofocus>
+    <br>
+    <label>所在地区</label>
+    省：<select id="cmbProvince" class="mail-select"></select>
+    市：<select id="cmbCity" class="mail-select"></select>
+    区：<select id="cmbArea" class="mail-select"></select>
+    <br>
+    <label for="address">详细地址</label><input type="text" id="address" required>
+    <br>
+    <label for="phoneNumber">收件人手机</label><input type="text" id="phoneNumber" required pattern="^1\d{10}$">
+    <br>
+    <div class="btnline">
+        <input type="submit" value="提交">
+        <a href="javascript:;" class="mail-cancel">取消</a>
+    </div>
+</form>
+    </div>
+
+    <!-- 任务达人、每周排行 -->
+    <div class="bcf5f">
+        <div class="layout-pv40 cmn-clearfix">
+            <!-- 任务达人数据由wikicms配置 -->
+<div class="fl">
+    <h1 class="fwn mb30">任务达人</h1>
+    <ul>
+            <li class="guru tra-rotate">
+                        <div class="bg gType-other">编辑达人</div>
+                        <div class="guruDetail">
+                <a href="/usercenter/userpage?uname=%E5%8D%A1%E4%B8%8D%E6%8F%90%E8%AF%BA04&from=task" target="_blank"><img class="user-img" src="https://gss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D100/sign=1663f13d62224f4a5799771339f69044/5243fbf2b211931314e678ab6a380cd791238d00.jpg" width="100"></a>
+                <a class="f18 c333" href="/usercenter/userpage?uname=%E5%8D%A1%E4%B8%8D%E6%8F%90%E8%AF%BA04&from=task" target="_blank">卡不提诺04</a>
+                                <div class="lh24">上周编辑量第一名</div>
+                                <div class="lh24">上周共达标4018个词条</div>
+            </div>
+        </li>
+            <li class="guru tra-rotate">
+                        <div class="bg gType-auditor">特色达人</div>
+                        <div class="guruDetail">
+                <a href="/usercenter/userpage?uname=%E6%A4%BF%E5%85%AE%E5%A6%82%E9%9C%96&from=task" target="_blank"><img class="user-img" src="https://gss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D100/sign=5f7f7e7100b30f24359ae803f894d192/2f738bd4b31c8701857d67f6287f9e2f0608ffd3.jpg" width="100"></a>
+                <a class="f18 c333" href="/usercenter/userpage?uname=%E6%A4%BF%E5%85%AE%E5%A6%82%E9%9C%96&from=task" target="_blank">椿兮如霖</a>
+                                <div class="lh24">上周特色达标第一名</div>
+                                <div class="lh24">上周共达标85个特色词条</div>
+            </div>
+        </li>
+            <li class="guru tra-rotate">
+                        <div class="bg gType-editor">评审达人</div>
+                        <div class="guruDetail">
+                <a href="/usercenter/userpage?uname=zoujunchuan198&from=task" target="_blank"><img class="user-img" src="https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D100/sign=e94c35bfabc27d1ea5263fc42bd4adaf/b219ebc4b74543a9bf557dd711178a82b901145a.jpg" width="100"></a>
+                <a class="f18 c333" href="/usercenter/userpage?uname=zoujunchuan198&from=task" target="_blank">zoujunchuan198</a>
+                                <div class="lh24">上周评审量第一名</div>
+                                <div class="lh24">上周共评审5936个词条</div>
+            </div>
+        </li>
+        </ul>
+</div>
+
+<!-- 每周排行 -->
+<div class="weeklyRanking">
+    <div class="pr mb30">
+        <h1 class="fwn">每周排行</h1>
+        <div class="pa-r0-b5 f14" id="rank-title">
+            <a href="javascript:void(0)" class="t-type t-typeSelected" data-selected="allEdit">全部编辑</a>
+            <span class="t-separator"></span>
+            <a href="javascript:void(0)" class="t-type" data-selected="feaEdit">特色编辑</a>
+            <span class="t-separator"></span>
+            <a href="javascript:void(0)" class="t-type" data-selected="allAudit">全部评审</a>
+            <span class="t-separator"></span>
+            <a href="javascript:void(0)" class="t-type" data-selected="feaAudit">特色评审</a>
+        </div>
+    </div>
+                   <!--  全部编辑 -->
+    <ul data-selected="allEdit" class="allEdit content show">
+                    <li class="lh52 ani-wobbleUp" >
+            <span class="rank1 rankNum-l">1</span>
+            <span class="user"><img src="https://gss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/a732e788b1e7ac91e79a84e59ca8e79a8489f4.jpg" alt="爱笑的在的" width="50" height="50">
+                <a href="/usercenter/userpage?uname=%E7%88%B1%E7%AC%91%E7%9A%84%E5%9C%A8%E7%9A%84&from=task" class="wr-uName-l" target="_blank">爱笑的在的</a>
+            </span>
+            <span class="complete">达标词条数：
+                <span class="completeNum">359</span>
+            </span>
+            <em class="upArrow"></em>
+        </li>
+       
+                     <li class="lh52 ani-wobbleUp" >
+            <span class="rank2 rankNum-l">2</span>
+            <span class="user"><img src="https://gss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/bf51e6bbb4e6bbb4e58fade58fade79a84e6af9be8a3a4b8e8.jpg" alt="滴滴叭叭的毛裤" width="50" height="50">
+                <a href="/usercenter/userpage?uname=%E6%BB%B4%E6%BB%B4%E5%8F%AD%E5%8F%AD%E7%9A%84%E6%AF%9B%E8%A3%A4&from=task" class="wr-uName-l" target="_blank">滴滴叭叭的毛裤</a>
+            </span>
+            <span class="complete">达标词条数：
+                <span class="completeNum">278</span>
+            </span>
+            <em class="upArrow"></em>
+        </li>
+       
+                     <li class="lh52 ani-wobbleUp" >
+            <span class="rank3 rankNum-l">3</span>
+            <span class="user"><img src="https://gss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/c0e8e58092e890a8e9ab98e5b1828b61.jpg" alt="倒萨高层" width="50" height="50">
+                <a href="/usercenter/userpage?uname=%E5%80%92%E8%90%A8%E9%AB%98%E5%B1%82&from=task" class="wr-uName-l" target="_blank">倒萨高层</a>
+            </span>
+            <span class="complete">达标词条数：
+                <span class="completeNum">273</span>
+            </span>
+            <em class="upArrow"></em>
+        </li>
+       
+                    <!-- <li class="ani-wobbleUp">
+            <span class="rankNum">5</span>
+            <a href="javascript:void(0)" class="wr-uName">来自星星的你</a>
+            <span class="complete up">
+                <span class="completeNum">989</span>
+            </span>
+            <em class="upArrow"></em>
+        </li> -->
+       <!--  <li class="">
+            <span class="rank rankNum">4</span>
+            <a href="javascript:void(0)" class="wr-uName">banzhipochuan</a>
+            <span class="complete">
+                <span class="completeNum">263</span>
+            </span>
+            <em class=""></em>
+        </li> -->
+        <li class="ani-wobbleDown" >
+            <span class="rank rankNum">4</span>
+            <a href="/usercenter/userpage?uname=banzhipochuan&from=task" class="wr-uName" target="_blank">banzhipochuan</a>
+            <span class="complete">263</span>
+            <em class="downArrow"></em>
+        </li>
+       
+                    <!-- <li class="ani-wobbleUp">
+            <span class="rankNum">5</span>
+            <a href="javascript:void(0)" class="wr-uName">来自星星的你</a>
+            <span class="complete up">
+                <span class="completeNum">989</span>
+            </span>
+            <em class="upArrow"></em>
+        </li> -->
+       <!--  <li class="">
+            <span class="rank rankNum">5</span>
+            <a href="javascript:void(0)" class="wr-uName">bschoolk</a>
+            <span class="complete">
+                <span class="completeNum">261</span>
+            </span>
+            <em class=""></em>
+        </li> -->
+        <li class="ani-wobbleUp" >
+            <span class="rank rankNum">5</span>
+            <a href="/usercenter/userpage?uname=bschoolk&from=task" class="wr-uName" target="_blank">bschoolk</a>
+            <span class="complete">261</span>
+            <em class="upArrow"></em>
+        </li>
+       
+                    <!-- <li class="ani-wobbleUp">
+            <span class="rankNum">5</span>
+            <a href="javascript:void(0)" class="wr-uName">来自星星的你</a>
+            <span class="complete up">
+                <span class="completeNum">989</span>
+            </span>
+            <em class="upArrow"></em>
+        </li> -->
+       <!--  <li class="">
+            <span class="rank rankNum">6</span>
+            <a href="javascript:void(0)" class="wr-uName">泗洪古徐城</a>
+            <span class="complete">
+                <span class="completeNum">222</span>
+            </span>
+            <em class=""></em>
+        </li> -->
+        <li class="ani-wobbleUp" >
+            <span class="rank rankNum">6</span>
+            <a href="/usercenter/userpage?uname=%E6%B3%97%E6%B4%AA%E5%8F%A4%E5%BE%90%E5%9F%8E&from=task" class="wr-uName" target="_blank">泗洪古徐城</a>
+            <span class="complete">222</span>
+            <em class="upArrow"></em>
+        </li>
+       
+                    <!-- <li class="ani-wobbleUp">
+            <span class="rankNum">5</span>
+            <a href="javascript:void(0)" class="wr-uName">来自星星的你</a>
+            <span class="complete up">
+                <span class="completeNum">989</span>
+            </span>
+            <em class="upArrow"></em>
+        </li> -->
+       <!--  <li class="">
+            <span class="rank rankNum">7</span>
+            <a href="javascript:void(0)" class="wr-uName">Even丶Just</a>
+            <span class="complete">
+                <span class="completeNum">206</span>
+            </span>
+            <em class=""></em>
+        </li> -->
+        <li class="ani-wobbleUp" >
+            <span class="rank rankNum">7</span>
+            <a href="/usercenter/userpage?uname=Even%E4%B8%B6Just&from=task" class="wr-uName" target="_blank">Even丶Just</a>
+            <span class="complete">206</span>
+            <em class="upArrow"></em>
+        </li>
+       
+                    <!-- <li class="ani-wobbleUp">
+            <span class="rankNum">5</span>
+            <a href="javascript:void(0)" class="wr-uName">来自星星的你</a>
+            <span class="complete up">
+                <span class="completeNum">989</span>
+            </span>
+            <em class="upArrow"></em>
+        </li> -->
+       <!--  <li class="">
+            <span class="rank rankNum">8</span>
+            <a href="javascript:void(0)" class="wr-uName">徐菡0121</a>
+            <span class="complete">
+                <span class="completeNum">195</span>
+            </span>
+            <em class=""></em>
+        </li> -->
+        <li class="ani-wobbleUp" >
+            <span class="rank rankNum">8</span>
+            <a href="/usercenter/userpage?uname=%E5%BE%90%E8%8F%A10121&from=task" class="wr-uName" target="_blank">徐菡0121</a>
+            <span class="complete">195</span>
+            <em class="upArrow"></em>
+        </li>
+       
+                    <!-- <li class="ani-wobbleUp">
+            <span class="rankNum">5</span>
+            <a href="javascript:void(0)" class="wr-uName">来自星星的你</a>
+            <span class="complete up">
+                <span class="completeNum">989</span>
+            </span>
+            <em class="upArrow"></em>
+        </li> -->
+       <!--  <li class="">
+            <span class="rank rankNum">9</span>
+            <a href="javascript:void(0)" class="wr-uName">问花小睡go</a>
+            <span class="complete">
+                <span class="completeNum">187</span>
+            </span>
+            <em class=""></em>
+        </li> -->
+        <li class="ani-wobbleUp" >
+            <span class="rank rankNum">9</span>
+            <a href="/usercenter/userpage?uname=%E9%97%AE%E8%8A%B1%E5%B0%8F%E7%9D%A1go&from=task" class="wr-uName" target="_blank">问花小睡go</a>
+            <span class="complete">187</span>
+            <em class="upArrow"></em>
+        </li>
+       
+                    <!-- <li class="ani-wobbleUp">
+            <span class="rankNum">5</span>
+            <a href="javascript:void(0)" class="wr-uName">来自星星的你</a>
+            <span class="complete up">
+                <span class="completeNum">989</span>
+            </span>
+            <em class="upArrow"></em>
+        </li> -->
+       <!--  <li class="">
+            <span class="rank rankNum">10</span>
+            <a href="javascript:void(0)" class="wr-uName">ytfrivjh</a>
+            <span class="complete">
+                <span class="completeNum">179</span>
+            </span>
+            <em class=""></em>
+        </li> -->
+        <li class="ani-wobbleUp" >
+            <span class="rank rankNum">10</span>
+            <a href="/usercenter/userpage?uname=ytfrivjh&from=task" class="wr-uName" target="_blank">ytfrivjh</a>
+            <span class="complete">179</span>
+            <em class="upArrow"></em>
+        </li>
+       
+      
+    </ul>
+    <!-- 特色编辑 -->
+    <ul data-selected="feaEdit" class="feaEdit content">
+                    <li class="lh52 ani-wobbleUp" >
+            <span class="rank1 rankNum-l">1</span>
+            <span class="user"><img src="https://gss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/7f36e6a4bfe585aee5a682e99c96baa4.jpg" alt="椿兮如霖" width="50" height="50">
+                <a href="/usercenter/userpage?uname=%E6%A4%BF%E5%85%AE%E5%A6%82%E9%9C%96&from=task" class="wr-uName-l" target="_blank">椿兮如霖</a>
+            </span>
+            <span class="complete">达标词条数：
+                <span class="completeNum">37</span>
+            </span>
+            <em class="upArrow"></em>
+        </li>
+       
+                     <li class="lh52 ani-wobbleUp" >
+            <span class="rank2 rankNum-l">2</span>
+            <span class="user"><img src="https://gss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/89bde69c8be58f8ce596864208.jpg" alt="朋双喆" width="50" height="50">
+                <a href="/usercenter/userpage?uname=%E6%9C%8B%E5%8F%8C%E5%96%86&from=task" class="wr-uName-l" target="_blank">朋双喆</a>
+            </span>
+            <span class="complete">达标词条数：
+                <span class="completeNum">29</span>
+            </span>
+            <em class="upArrow"></em>
+        </li>
+       
+                     <li class="lh52 ani-wobbleUp" >
+            <span class="rank3 rankNum-l">3</span>
+            <span class="user"><img src="https://gss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/722ee796afe5a5b3e4baba333237014c.jpg" alt="疯女人327" width="50" height="50">
+                <a href="/usercenter/userpage?uname=%E7%96%AF%E5%A5%B3%E4%BA%BA327&from=task" class="wr-uName-l" target="_blank">疯女人327</a>
+            </span>
+            <span class="complete">达标词条数：
+                <span class="completeNum">19</span>
+            </span>
+            <em class="upArrow"></em>
+        </li>
+       
+                     <li class="ani-wobbleUp" >
+            <span class="rank rankNum">4</span>
+            <a href="/usercenter/userpage?uname=dj9735215&from=task" class="wr-uName" target="_blank">dj9735215</a>
+            <span class="complete">8</span>
+            <em class="upArrow"></em>
+        </li>
+       
+                     <li class="ani-wobbleUp" >
+            <span class="rank rankNum">5</span>
+            <a href="/usercenter/userpage?uname=%E4%B8%89%E6%98%9F%E5%93%A5%E8%8B%B9%E6%9E%9C%E5%A6%B9&from=task" class="wr-uName" target="_blank">三星哥苹果妹</a>
+            <span class="complete">6</span>
+            <em class="upArrow"></em>
+        </li>
+       
+                     <li class="ani-wobbleUp" >
+            <span class="rank rankNum">6</span>
+            <a href="/usercenter/userpage?uname=%E6%9C%9D%E9%98%B3%E5%B1%B1%E4%BA%BA&from=task" class="wr-uName" target="_blank">朝阳山人</a>
+            <span class="complete">6</span>
+            <em class="upArrow"></em>
+        </li>
+       
+                     <li class="ani-wobbleDown" >
+            <span class="rank rankNum">7</span>
+            <a href="/usercenter/userpage?uname=%E5%91%A8%E5%A4%A7%E5%A4%B451&from=task" class="wr-uName" target="_blank">周大头51</a>
+            <span class="complete">6</span>
+            <em class="downArrow"></em>
+        </li>
+       
+                     <li class="ani-wobbleUp" >
+            <span class="rank rankNum">8</span>
+            <a href="/usercenter/userpage?uname=%E9%9B%85%E4%BF%97%E5%85%B1%E8%B5%8F2002&from=task" class="wr-uName" target="_blank">雅俗共赏2002</a>
+            <span class="complete">6</span>
+            <em class="upArrow"></em>
+        </li>
+       
+                     <li class="ani-wobbleUp" >
+            <span class="rank rankNum">9</span>
+            <a href="/usercenter/userpage?uname=%E5%BE%90%E8%8F%A10121&from=task" class="wr-uName" target="_blank">徐菡0121</a>
+            <span class="complete">5</span>
+            <em class="upArrow"></em>
+        </li>
+       
+                     <li class="ani-wobbleUp" >
+            <span class="rank rankNum">10</span>
+            <a href="/usercenter/userpage?uname=hshkjyt&from=task" class="wr-uName" target="_blank">hshkjyt</a>
+            <span class="complete">5</span>
+            <em class="upArrow"></em>
+        </li>
+       
+      
+    </ul>
+   <!--  全部评审 -->
+    <ul data-selected="allAudit" class="allAudit content">
+                    <li class="lh52 ani-wobbleUp" >
+            <span class="rank1 rankNum-l">1</span>
+            <span class="user"><img src="https://gss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/e5b94a44e890a4e781abe899ab303033bba4.jpg" alt="JD萤火虫003" width="50" height="50">
+                <a href="/usercenter/userpage?uname=JD%E8%90%A4%E7%81%AB%E8%99%AB003&from=task" class="wr-uName-l" target="_blank">JD萤火虫003</a>
+            </span>
+            <span class="complete">达标词条数：
+                <span class="completeNum">1832</span>
+            </span>
+            <em class="upArrow"></em>
+        </li>
+       
+                     <li class="lh52 ani-wobbleDown" >
+            <span class="rank2 rankNum-l">2</span>
+            <span class="user"><img src="https://gss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/fa0753616e647261e983ad1446.jpg" alt="Sandra郭" width="50" height="50">
+                <a href="/usercenter/userpage?uname=Sandra%E9%83%AD&from=task" class="wr-uName-l" target="_blank">Sandra郭</a>
+            </span>
+            <span class="complete">达标词条数：
+                <span class="completeNum">1745</span>
+            </span>
+            <em class="downArrow"></em>
+        </li>
+       
+                     <li class="lh52 ani-wobbleHorizontal" >
+            <span class="rank3 rankNum-l">3</span>
+            <span class="user"><img src="https://gss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/c26e7a6f756a756e636875616e3139381404.jpg" alt="zoujunchuan198" width="50" height="50">
+                <a href="/usercenter/userpage?uname=zoujunchuan198&from=task" class="wr-uName-l" target="_blank">zoujunchuan198</a>
+            </span>
+            <span class="complete">达标词条数：
+                <span class="completeNum">809</span>
+            </span>
+            <em class="flat"></em>
+        </li>
+       
+                     <li class="ani-wobbleUp" >
+            <span class="rank rankNum">4</span>
+            <a href="/usercenter/userpage?uname=%E5%B2%B3%E4%B8%80%E6%97%A0%E6%B3%95%E8%A7%A3%E9%87%8A&from=task" target="_blank" class="wr-uName">岳一无法解释</a>
+            <span class="complete">584</span>
+            <em class="upArrow"></em>
+        </li>
+       
+                     <li class="ani-wobbleDown" >
+            <span class="rank rankNum">5</span>
+            <a href="/usercenter/userpage?uname=%E7%A8%9A%E5%A3%B0%E7%A8%9A%E6%B0%94%E7%A8%9A%E5%A8%83%E5%A8%83&from=task" target="_blank" class="wr-uName">稚声稚气稚娃娃</a>
+            <span class="complete">368</span>
+            <em class="downArrow"></em>
+        </li>
+       
+                     <li class="ani-wobbleUp" >
+            <span class="rank rankNum">6</span>
+            <a href="/usercenter/userpage?uname=%E5%BE%A1%E7%AC%94%E5%AE%B8%E7%BF%B0&from=task" target="_blank" class="wr-uName">御笔宸翰</a>
+            <span class="complete">178</span>
+            <em class="upArrow"></em>
+        </li>
+       
+                     <li class="ani-wobbleUp" >
+            <span class="rank rankNum">7</span>
+            <a href="/usercenter/userpage?uname=Dickinzz&from=task" target="_blank" class="wr-uName">Dickinzz</a>
+            <span class="complete">176</span>
+            <em class="upArrow"></em>
+        </li>
+       
+                     <li class="ani-wobbleUp" >
+            <span class="rank rankNum">8</span>
+            <a href="/usercenter/userpage?uname=gfy326956493&from=task" target="_blank" class="wr-uName">gfy326956493</a>
+            <span class="complete">162</span>
+            <em class="upArrow"></em>
+        </li>
+       
+                     <li class="ani-wobbleUp" >
+            <span class="rank rankNum">9</span>
+            <a href="/usercenter/userpage?uname=ttt45412&from=task" target="_blank" class="wr-uName">ttt45412</a>
+            <span class="complete">150</span>
+            <em class="upArrow"></em>
+        </li>
+       
+                     <li class="ani-wobbleUp" >
+            <span class="rank rankNum">10</span>
+            <a href="/usercenter/userpage?uname=%E5%A4%A7%E7%BD%97%E4%B8%8E%E4%BA%92%E8%81%94%E7%BD%91&from=task" target="_blank" class="wr-uName">大罗与互联网</a>
+            <span class="complete">149</span>
+            <em class="upArrow"></em>
+        </li>
+       
+      
+    </ul>
+    <!-- 特色评审 -->
+    <ul data-selected="feaAudit" class="feaAudit content">
+                    <li class="lh52 ani-wobbleUp" >
+            <span class="rank1 rankNum-l">1</span>
+            <span class="user"><img src="https://gss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/7ddfe9ad94e59f9f68616e9e2f.jpg" alt="魔域han" width="50" height="50">
+                <a href="/usercenter/userpage?uname=%E9%AD%94%E5%9F%9Fhan&from=task" target="_blank" class="wr-uName-l">魔域han</a>
+            </span>
+            <span class="complete">达标词条数：
+                <span class="completeNum">76</span>
+            </span>
+            <em class="upArrow"></em>
+        </li>
+       
+                     <li class="lh52 ani-wobbleUp" >
+            <span class="rank2 rankNum-l">2</span>
+            <span class="user"><img src="https://gss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/2255e99b85e4bf97e585b1e8b58f323030320b94.jpg" alt="雅俗共赏2002" width="50" height="50">
+                <a href="/usercenter/userpage?uname=%E9%9B%85%E4%BF%97%E5%85%B1%E8%B5%8F2002&from=task" target="_blank" class="wr-uName-l">雅俗共赏2002</a>
+            </span>
+            <span class="complete">达标词条数：
+                <span class="completeNum">74</span>
+            </span>
+            <em class="upArrow"></em>
+        </li>
+       
+                     <li class="lh52 ani-wobbleDown" >
+            <span class="rank3 rankNum-l">3</span>
+            <span class="user"><img src="https://gss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/c29ee5a4a2e99aa8e9a39be7b5aea424.jpg" alt="夢隨飛絮" width="50" height="50">
+                <a href="/usercenter/userpage?uname=%E5%A4%A2%E9%9A%A8%E9%A3%9B%E7%B5%AE&from=task" target="_blank" class="wr-uName-l">夢隨飛絮</a>
+            </span>
+            <span class="complete">达标词条数：
+                <span class="completeNum">72</span>
+            </span>
+            <em class="downArrow"></em>
+        </li>
+       
+                     <li class="ani-wobbleUp" >
+            <span class="rank rankNum">4</span>
+            <a href="/usercenter/userpage?uname=%E7%99%BE%E7%A7%91%E6%9F%94%E5%A6%83&from=task" target="_blank" class="wr-uName">百科柔妃</a>
+            <span class="complete">71</span>
+            <em class="upArrow"></em>
+        </li>
+       
+                     <li class="ani-wobbleUp" >
+            <span class="rank rankNum">5</span>
+            <a href="/usercenter/userpage?uname=%E8%BF%B7%E8%8C%AB%E7%9A%84%E5%A4%A7%E5%B0%86%E5%86%9B&from=task" target="_blank" class="wr-uName">迷茫的大将军</a>
+            <span class="complete">56</span>
+            <em class="upArrow"></em>
+        </li>
+       
+                     <li class="ani-wobbleUp" >
+            <span class="rank rankNum">6</span>
+            <a href="/usercenter/userpage?uname=Y_suer&from=task" target="_blank" class="wr-uName">Y_suer</a>
+            <span class="complete">48</span>
+            <em class="upArrow"></em>
+        </li>
+       
+                     <li class="ani-wobbleUp" >
+            <span class="rank rankNum">7</span>
+            <a href="/usercenter/userpage?uname=%E6%BE%A1%E6%BE%A1%E5%B0%8F%E7%86%8A%E7%8C%AB&from=task" target="_blank" class="wr-uName">澡澡小熊猫</a>
+            <span class="complete">44</span>
+            <em class="upArrow"></em>
+        </li>
+       
+                     <li class="ani-wobbleUp" >
+            <span class="rank rankNum">8</span>
+            <a href="/usercenter/userpage?uname=%E6%84%BF%E5%92%B8%E4%B8%8E%E6%81%92&from=task" target="_blank" class="wr-uName">愿咸与恒</a>
+            <span class="complete">37</span>
+            <em class="upArrow"></em>
+        </li>
+       
+                     <li class="ani-wobbleUp" >
+            <span class="rank rankNum">9</span>
+            <a href="/usercenter/userpage?uname=%E4%B8%8D%E8%A6%81%E9%A6%92%E5%A4%B4&from=task" target="_blank" class="wr-uName">不要馒头</a>
+            <span class="complete">27</span>
+            <em class="upArrow"></em>
+        </li>
+       
+                     <li class="ani-wobbleUp" >
+            <span class="rank rankNum">10</span>
+            <a href="/usercenter/userpage?uname=%E6%A4%BF%E5%85%AE%E5%A6%82%E9%9C%96&from=task" target="_blank" class="wr-uName">椿兮如霖</a>
+            <span class="complete">24</span>
+            <em class="upArrow"></em>
+        </li>
+       
+      
+    </ul>
+</div>
+
+        </div>
+    </div>
+
+    <!-- 积分商城 -->
+     <div class="layout-pv40 cmn-clearfix">
+        <div class="mall">
+            <div class="t-header">
+                <h3 class="fwn">礼品推荐</h3>
+                <a class="more" href="/mall" target="_blank" nslog-type="10500402">去商城逛逛<span>></span></a>
+            </div>
+            <div class="recommondW cmn-clearfix">
+                            <div class="goods">
+                    <div class="tip">
+                   <!--  1抽奖,2秒杀,3拍卖, -->
+                                            <img src="https://bkssl.bdimg.com/static/wiki-task/widget/taskIndex/integralMall/resource/img/tip4_b748441.png">
+                                        </div>
+                    <a href="/mall/item?id=7373" target="_blank" nslog-type="10500401"><img src="https://gss3.bdstatic.com/-Po3dSag_xI4khGkpoWK1HF6hhy/baike/wh%3D200%2C200/sign=c9d2c22d7c8da9774e7a8e298061d42b/d000baa1cd11728bc4528d3cc7fcc3cec3fd2cb4.jpg" class="good-img" width="180"></a>
+                    <div class="good-desc">
+                        <h4 class="good-name"><a href="/mall/item?id=7373" target="_blank" nslog-type="10500401"> iPhone 11</a></h4>
+                        <span class="wealth">8</span>
+                        <span>财富值</span>
+                    </div>
+                </div>
+                            <div class="goods">
+                    <div class="tip">
+                   <!--  1抽奖,2秒杀,3拍卖, -->
+                                            <img src="https://bkssl.bdimg.com/static/wiki-task/widget/taskIndex/integralMall/resource/img/tip4_b748441.png">
+                                        </div>
+                    <a href="/mall/item?id=7374" target="_blank" nslog-type="10500401"><img src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/wh%3D200%2C200/sign=fea2162f2e3fb80e0c8469d506e1031c/21a4462309f7905267695d2003f3d7ca7bcbd5be.jpg" class="good-img" width="180"></a>
+                    <div class="good-desc">
+                        <h4 class="good-name"><a href="/mall/item?id=7374" target="_blank" nslog-type="10500401">华为P30 Pro</a></h4>
+                        <span class="wealth">8</span>
+                        <span>财富值</span>
+                    </div>
+                </div>
+                            <div class="goods">
+                    <div class="tip">
+                   <!--  1抽奖,2秒杀,3拍卖, -->
+                                            <img src="https://bkssl.bdimg.com/static/wiki-task/widget/taskIndex/integralMall/resource/img/tip4_b748441.png">
+                                        </div>
+                    <a href="/mall/item?id=7375" target="_blank" nslog-type="10500401"><img src="https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/wh%3D200%2C200/sign=3d48d4c3a464034f0f98ca049ff35503/a71ea8d3fd1f4134e1b91f602a1f95cad1c85e25.jpg" class="good-img" width="180"></a>
+                    <div class="good-desc">
+                        <h4 class="good-name"><a href="/mall/item?id=7375" target="_blank" nslog-type="10500401">MacbookPro</a></h4>
+                        <span class="wealth">8</span>
+                        <span>财富值</span>
+                    </div>
+                </div>
+                            <div class="goods">
+                    <div class="tip">
+                   <!--  1抽奖,2秒杀,3拍卖, -->
+                                            <img src="https://bkssl.bdimg.com/static/wiki-task/widget/taskIndex/integralMall/resource/img/tip4_b748441.png">
+                                        </div>
+                    <a href="/mall/item?id=7376" target="_blank" nslog-type="10500401"><img src="https://gss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/baike/wh%3D200%2C200/sign=ead9e517b9003af34defd462051aea6e/060828381f30e9246493992f43086e061d95f7fd.jpg" class="good-img" width="180"></a>
+                    <div class="good-desc">
+                        <h4 class="good-name"><a href="/mall/item?id=7376" target="_blank" nslog-type="10500401">iPad Pro</a></h4>
+                        <span class="wealth">8</span>
+                        <span>财富值</span>
+                    </div>
+                </div>
+                            <div class="goods">
+                    <div class="tip">
+                   <!--  1抽奖,2秒杀,3拍卖, -->
+                                            <img src="https://bkssl.bdimg.com/static/wiki-task/widget/taskIndex/integralMall/resource/img/tip4_b748441.png">
+                                        </div>
+                    <a href="/mall/item?id=6533" target="_blank" nslog-type="10500401"><img src="https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/wh%3D200%2C200/sign=d3610469fb03738dde1f0420832b9c63/f9dcd100baa1cd1118eb09e9b412c8fcc2ce2d9d.jpg" class="good-img" width="180"></a>
+                    <div class="good-desc">
+                        <h4 class="good-name"><a href="/mall/item?id=6533" target="_blank" nslog-type="10500401">iPhone XSM</a></h4>
+                        <span class="wealth">8</span>
+                        <span>财富值</span>
+                    </div>
+                </div>
+                        </div>
+        </div>
+    </div>
+
+    <!-- 页面引导 -->
+
+
+
+  <div class="wgt-footer-main">
+<div class="content">
+<dl class="fresh">
+<dt><em class="cmn-icon cmn-icons cmn-icons_footer-fresh"></em>新手上路</dt>
+<dd>
+<div><a target="_blank" href="/usercenter/tasks#guide">成长任务</a></div>
+<div><a target="_blank" href="/help#main01">编辑入门</a></div>
+<div><a target="_blank" href="/help#main06">编辑规则</a></div>
+<div><a target="_blank" href="/item/%E7%99%BE%E5%BA%A6%E7%99%BE%E7%A7%91%EF%BC%9A%E6%9C%AC%E4%BA%BA%E8%AF%8D%E6%9D%A1%E7%BC%96%E8%BE%91%E6%9C%8D%E5%8A%A1/22442459?bk_fr=pcFooter">本人编辑</a><img src="https://bkssl.bdimg.com/static/wiki-common/widget/component/footer/img/new-icon_a64774d.png" class="new-icon" alt="new"></div>
+</dd>
+</dl>
+<dl class="question">
+<dt><em class="cmn-icon cmn-icons cmn-icons_footer-question"></em>我有疑问</dt>
+<dd>
+<div><a target="_blank" href="/user/question">常见问题</a></div>
+<div><a target="_blank" href="http://zhiqiu.baidu.com/baike/passport/html/baikechat.html" nslog-type="10000003">在线客服</a></div>
+<div><a target="_blank" href="http://tieba.baidu.com/f?ie=utf-8&fr=bks0000&kw=%E7%99%BE%E5%BA%A6%E7%99%BE%E7%A7%91">官方贴吧</a></div>
+<div><a id="J-bk-feedback-main" href="javascript:void(0);">意见反馈</a></div>
+</dd>
+</dl>
+<dl class="suggestion">
+<dt><em class="cmn-icon cmn-icons cmn-icons_footer-suggestion"></em>投诉建议</dt>
+<dd>
+<div><a target="_blank" href="http://help.baidu.com/newadd?prod_id=10&category=1">举报不良信息</a></div>
+<div><a target="_blank" href="http://help.baidu.com/newadd?prod_id=10&category=2">未通过词条申诉</a></div>
+<div><a target="_blank" href="http://help.baidu.com/newadd?prod_id=10&category=6">投诉侵权信息</a></div>
+<div><a target="_blank" href="http://help.baidu.com/newadd?prod_id=10&category=5">封禁查询与解封</a></div>
+</dd>
+</dl>
+</div>
+<div class="copyright">©2019&nbsp;Baidu&nbsp;<a href="http://www.baidu.com/duty/" target="_blank">使用百度前必读</a>&nbsp;|&nbsp;<a href="http://help.baidu.com/question?prod_en=baike&class=89&id=1637" target="_blank">百科协议</a>&nbsp;|&nbsp;<a href="http://help.baidu.com/question?prod_id=10&class=690&id=1001779" target="_blank">隐私政策</a>&nbsp;|&nbsp;<a href="/operation/cooperation" target="_blank">百度百科合作平台</a>&nbsp;|&nbsp;<span>京ICP证030173号&nbsp;</span><img class="copyright-img" width="13" height="16" src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/copy_rignt_24.png"></div>
+<p class="recordcode"><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000001" target="_blank"><i class="icon-police"></i>京公网安备11000002000001号</a></p>
+</div>
+
+
+     <script>
+        window.tplData = {
+            isLogin: '',
+            userType: 'unlogin'
+        };
+    </script>
+    <script>
+      window['__abbaidu_2020_subidgetf'] = function () {
+          var subid = 01000000;
+          return subid;
+      };
+    </script>
+<script async src="https://dlswbr.baidu.com/heicha/mw/abclite-2020-s.js"></script>
+
+</body><script type="text/javascript" src="https://bkssl.bdimg.com/static/wiki-common/js/mod_4302fe0.js"></script>
+<script type="text/javascript" src="https://bkssl.bdimg.com/static/wiki-common/pkg/wiki-common-base_0ce23c8.js"></script>
+<script type="text/javascript" src="https://bkssl.bdimg.com/static/wiki-common/widget/component/userbar/userbar_3077484.js"></script>
+<script type="text/javascript" src="https://bkssl.bdimg.com/static/wiki-task/widget/taskUtil/jsmart_bece4ee.js"></script>
+<script type="text/javascript" src="https://bkssl.bdimg.com/static/wiki-task/widget/taskIndex/banner/banner_acb106a.js"></script>
+<script type="text/javascript" src="https://bkssl.bdimg.com/static/wiki-task/widget/taskIndex/userInfo/userInfo_10542d9.js"></script>
+<script type="text/javascript" src="https://bkssl.bdimg.com/static/wiki-task/widget/taskIndex/weeklyTask/weeklyTask_b38a6f7.js"></script>
+<script type="text/javascript" src="https://bkssl.bdimg.com/static/wiki-task/taskIndex/taskIndex_8f24d1a.js"></script>
+<script type="text/javascript">!function(){  var $ = require('wiki-common:widget/lib/jquery/jquery'),
+    userbar = require('wiki-common:widget/component/userbar/userbar');
+    
+  $(function() {
+    userbar.buildUserbar($('.wgt-userbar'), null);
+  });
+}();
+!function(){    var $ = require('wiki-common:widget/lib/jquery/jquery'),
+      initSearchbar = require('wiki-common:widget/component/searchbar/searchbar');  
+    initSearchbar($('.wgt-searchbar-simple'));
+  }();
+!function(){  require('wiki-task:widget/taskIndex/banner/banner.js');
+}();
+!function(){  var $ = require('wiki-common:widget/lib/jquery/jquery.js'),
+      numExtend = require('wiki-common:widget/util/number.js'),
+      timeFormater = require('wiki-common:widget/util/timeFormater.js'),
+      Counter = require('wiki-common:widget/ui/counter/counter.js');
+
+  require('wiki-task:widget/taskIndex/banner/banner.js');
+
+  var joinNumCounter = new Counter({
+      container: '#joinNum',
+      numHeight: 26,
+      value: 0,
+      duration: 2000
+  });
+  var releaseNumCounter = new Counter({
+      container: '#releaseNum',
+      numHeight: 26,
+      value: 0,
+      duration: 2000
+  });
+
+  setTimeout(function() {
+    joinNumCounter.countUpTo(259377);
+    releaseNumCounter.countUpTo(3717);
+
+    var times = 0;
+    setInterval(function() {
+      if (times < 10) {
+        $.getJSON('/api/usertask/gettaskcounter?r=' + Math.random(), function(res) {
+             if (!res.errno) {
+                times ++;
+                res.data.joinUserNum && joinNumCounter.countUpTo(res.data.joinUserNum);
+                res.data.taskNum && releaseNumCounter.countUpTo(res.data.taskNum);
+             } else {
+                times = 10;
+             }
+        });
+      }
+    }, 10000);
+  }, 500);
+}();
+!function(){  require('wiki-task:widget/taskIndex/userInfo/userInfo.js');  
+}();
+!function(){  require('wiki-task:widget/taskIndex/weeklyTask/weeklyTask.js');
+  <!-- addressInit('cmbProvince', 'cmbCity', 'cmbArea', '陕西', '宝鸡市', '金台区');  -->
+}();
+!function(){ 
+  require.async(['wiki-common:widget/lib/jquery/jquery.js'], function($) {
+    $("#rank-title").on('click','a',function(){
+        var cur = $(this).attr('data-selected');
+        $('#rank-title a').removeClass('t-typeSelected');
+        $('.weeklyRanking ul').removeClass('show');
+        $(this).addClass('t-typeSelected');
+        $('.weeklyRanking ul.' + cur).addClass('show');
+    });
+  });
+}();
+!function(){  require.async(["wiki-common:widget/lib/jquery/jquery","wiki-common:widget/component/footer/footer_feedback"], function($, feedback){
+    feedback({el: '#J-bk-feedback-main',
+      proData: {
+        "extend_feedback_channel": null
+      }
+    });
+    feedback({el: '#J-bk-feedback-query', config: {
+        appid: 215645,
+        productLine: 20184,
+        needContactWay: true,
+        issuePlaceholder: '亲爱的百度百科用户，请在此填写您的质疑内容及原因哦～'
+      },
+      proData: {
+        "kw": $('#J-bk-feedback-query').data('lemma')
+      }
+    });
+  });
+}();
+!function(){      require('wiki-common:widget/component/psLink/psLink');
+    }();</script></html>
