@@ -11,17 +11,18 @@ FILTER_OUT_PICS = True  # .png .jpg .gif .jpeg
 FILTER_OUT_COMPRESSED = True  # .zip .rar
 ADVANCED_ENCODING = True
 # [User] Paths
-WEB_PAGE_PREFIX = "crawled/"
+WEB_PAGE_PREFIX = "crawled_pic/"
 WEB_PAGE_INDEX_SUBFIX = "index.txt"
 WEB_PAGE_SITE_SUBFIX = "src.txt"
 WEB_PAGES_SUBFIX = "html/"
 INDEX_FILE_PATH = "index"
 # [Developer]
-DEBUG_MODE = True
+DEBUG_MODE = False
 # Encodings List: for a less advanced encoding method
 ENCODINGS = ["ascii", "utf-8", "utf-16", "gb2312", "URL", "base64", "BIG5", "GBK", "GB18030"]
 # # [Developer] Test Paths
-# WEB_PAGE_PREFIX = "crawled_test2/"
+# WEB_PAGE_PREFIX = "crawled_pic_test/"
+# DEX_FILE_PATH = "index_pic"
 
 import sys, os, lucene, threading, time
 from datetime import datetime
@@ -111,6 +112,11 @@ class IndexFiles(object):
                 if SHOW_LOGS:
                     print "adding", filename
                 try:
+                    # get the original url from the <dict> and omit error cases
+                    src_site, url_original = get_info_of_file_name(filename)
+                    if not src_site or not url_original:
+                        continue
+
                     path = os.path.join(root, filename)
                     with open(path, 'r') as file:
                         contents_raw = file.read()
@@ -119,62 +125,55 @@ class IndexFiles(object):
                     if not contents_raw:
                         print "Encode Error"
                         continue
-                    # filter the title of the web page
-                    title_iter = re.finditer("<title>.*</title>", contents_raw)
-                    title = ""
-                    for i in title_iter:
-                        title = i.group().split('<title>')[-1].split("</title>")[0]
-                        if title:
-                            break
-                    # filter out the tags on the html
-                    contents_text = BeautifulSoup(contents_raw, features="html.parser").get_text()
-                    # analyze the contents using "jieba"
-                    contents_text = " ".join(jieba.cut(contents_text))
-                    # replace all the '\n' in the text
-                    contents = contents_text.replace('\n', "")
-                    # get the original url from the <dict> and omit error cases
-                    src_site, url_original = get_info_of_file_name(filename)
-                    if not src_site or not url_original or not title:
-                        '''
+
+                    # filter the url and title or the images
+                    soup = BeautifulSoup(contents_raw, features="html.parser")
+                    for i in soup.findAll("img"):
+                        # print i
+                        img_src = i.get("data-original")
+                        img_title = i.get("alt")
+                        if not img_src or not img_title:
+                            # print "none"
+                            continue
+                        # Chinese word splitter
+                        img_title_contents = " ".join(jieba.cut(img_title))
+
+                        # '''
                         if DEBUG_MODE:
-                            print "\t*** NOT INFORMATIVE PAGE ***\n====================="
-                        '''
-                        continue
+                            print "\t", img_title
+                            print "\t", img_src
+                            print "\t", url_original
+                            print "\t", src_site
+                            print "\t", filename
+                            print "\t", root
+                            print "\t", img_title_contents
+                            print "====================="
+                        # '''
 
-                    '''
-                    if DEBUG_MODE:
-                        print "\t", filename
-                        print "\t", root
-                        print "\t", src_site
-                        print "\t", title
-                        print "\t", url_original
-                        # print contents
-                        print "====================="
-                    '''
-
-                    doc = Document()
-                    doc.add(Field("name", filename,
-                                  Field.Store.YES,
-                                  Field.Index.NOT_ANALYZED))
-                    doc.add(Field("path", root,
-                                  Field.Store.YES,
-                                  Field.Index.NOT_ANALYZED))
-                    doc.add(Field("site", src_site,
-                                  Field.Store.NO,
-                                  Field.Index.ANALYZED))
-                    doc.add(Field("title", title,
-                                  Field.Store.YES,
-                                  Field.Index.ANALYZED))
-                    doc.add(Field("url", url_original,
-                                  Field.Store.YES,
-                                  Field.Index.NOT_ANALYZED))
-                    if len(contents) > 0:
-                        doc.add(Field("contents", contents,
+                        doc = Document()
+                        doc.add(Field("img_title", img_title,
+                                      Field.Store.YES,
+                                      Field.Index.NOT_ANALYZED))
+                        doc.add(Field("img_src", img_src,
+                                      Field.Store.YES,
+                                      Field.Index.NOT_ANALYZED))
+                        doc.add(Field("url", url_original,
+                                      Field.Store.YES,
+                                      Field.Index.NOT_ANALYZED))
+                        doc.add(Field("site", src_site,
                                       Field.Store.NO,
                                       Field.Index.ANALYZED))
-                    else:
-                        print "warning: no content in %s" % filename
-                    writer.addDocument(doc)
+                        doc.add(Field("name", filename,
+                                      Field.Store.YES,
+                                      Field.Index.NOT_ANALYZED))
+                        doc.add(Field("path", root,
+                                      Field.Store.YES,
+                                      Field.Index.NOT_ANALYZED))
+                        doc.add(Field("contents", img_title_contents,
+                                      Field.Store.NO,
+                                      Field.Index.ANALYZED))
+                        writer.addDocument(doc)
+
                 except Exception, e:
                     print "Failed in indexDocs:", e
         if DEBUG_MODE:

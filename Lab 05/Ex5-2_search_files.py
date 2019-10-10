@@ -4,6 +4,8 @@ INDEX_DIR = "IndexFiles.index"
 
 # [User] limits
 MAX_ITEMS_PER_PAGE = 20
+# [User] Paths
+INDEX_FILE_PATH = "index"
 # [Developer]
 DEBUG_MODE = False
 
@@ -87,10 +89,11 @@ def run(searcher, analyzer):
             doc = searcher.doc(scoreDoc.doc)
             # # explanation = searcher.explain(query, scoreDoc.doc)
             print "-- #", str(idx + 1), "--"
-            print '\ttitle:\t', doc.get("title")
-            print '\turl:\t', doc.get("url")
-            print '\tpath:\t', doc.get("path")
-            print '\tname:\t', doc.get("name")
+            print '\timg_title:\t', doc.get("img_title")
+            print '\timg_src:\t', doc.get("img_src")
+            print '\turl:\t\t', doc.get("url")
+            print '\tpath:\t\t', doc.get("path")
+            print '\tname:\t\t', doc.get("name")
             print
 
 
@@ -98,7 +101,7 @@ def run(searcher, analyzer):
 
 
 if __name__ == '__main__':
-    STORE_DIR = "index"
+    STORE_DIR = INDEX_FILE_PATH
     lucene.initVM(vmargs=['-Djava.awt.headless=true'])
     print 'lucene', lucene.VERSION
     # base_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
