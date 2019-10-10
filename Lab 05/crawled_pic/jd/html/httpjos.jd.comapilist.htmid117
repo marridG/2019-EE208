@@ -1,0 +1,561 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="%20%20%20%20%20%20%20%20%20%20%20%20%E8%8B%A5%E6%8E%A5%E5%8F%A3%E7%94%B3%E8%AF%B7%E6%88%90%E5%8A%9F%E5%90%8E%E4%BE%9D%E6%97%A7%E6%8F%90%E7%A4%BA%E6%97%A0%E6%9D%83%E8%B0%83%E7%94%A8%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6%E5%88%B0cps%40jd%2Ecom%E7%94%B3%E8%AF%B7%E6%9D%83%E9%99%90%20%20%20"  />
+<title>&#x4eac;&#x4e1c;&#x8054;&#x76df;API&#xff08;&#x65e7;&#xff09; - 京东宙斯</title>
+<!-- add by zhaoyg 2013/3/24-->
+	<link rel="stylesheet" type="text/css" href="/css/base.css" />
+	<link rel="stylesheet" type="text/css" href="/css/API.css" />
+	<script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="/js/html5.min.js"></script>
+	<script type="text/javascript" src="/js/josAPI.js"></script>
+	<!-- add end-->
+</head>
+
+<body>
+<div class="wrapper">
+	<header>
+        <div id="logo">
+            <a href="//open.jd.com/"><img src="/images/open-jos-logo.png" alt="无界开放·宙斯" /></a>
+        </div>            
+        <div class="serachDiv">
+        	<input type="text" id="searchInput"
+				 value="请输入您要搜索的内容..." class="searchInput" />
+			<input type="button" id="searchBtn" class="searchBtn" value="搜 索" />
+        </div>
+    </header>
+
+<script type="text/javascript">
+    $(function() {
+        
+        /**
+         * 检索
+         */
+        $("#searchBtn").click(function() {
+																																							            									window.location.href = 'https://open.jd.com/home/home#/doc/common';
+        });
+		
+		$(document).keyup(function(event){
+          if(event.keyCode ==13){
+            $("#searchBtn").trigger("click");
+          }
+		});
+    });
+	
+</script>	<nav class="josNav">
+	<ul>
+    	<li ><a href="//open.jd.com/">首页</a></li>
+    	<li  class="current" ><a href="//open.jd.com/home/home#/doc/api">API</a></li>
+		<!-- li class="line"></li>
+    	<li ><a href="/topic/index.html">TOPIC文档</a></li -->
+
+    	<li ><a href="//open.jd.com/home/home#/doc/common">文档</a></li>
+
+    	<li ><a href="//open.jd.com/home/home#/support/index" target="_blank">支持中心<sup style="display: inline-block;background: url(../images/new_icon.gif) no-repeat;width: 28px;height: 9px;"></sup></a></li>
+
+    	<li ><a href="//open-console.jd.com">控制台</a></li>
+    </ul>
+</nav>    <p class="pageCrumb"><a href="/api/index.htm">首页</a><i>></i>&#x4eac;&#x4e1c;&#x8054;&#x76df;API&#xff08;&#x65e7;&#xff09;</p>
+    <section class="josLeft indexLeft">
+    	<h2>API <span class="normal">列表</span></h2>
+        <ul>
+																		<li><a href="/api/list.htm?id=566">&#x5f00;&#x666e;&#x52d2;&#x5165;&#x9a7b;&#x6a21;&#x5f0f;API</a></li>
+																				<li><a href="/api/list.htm?id=572">&#x5f00;&#x666e;&#x52d2;&#x5546;&#x54c1;API</a></li>
+																				<li><a href="/api/list.htm?id=573">&#x5f00;&#x666e;&#x52d2;&#x8425;&#x9500;&#x80fd;&#x529b;API</a></li>
+																				<li><a href="/api/list.htm?id=62">&#x7c7b;&#x76ee;API</a></li>
+																				<li><a href="/api/list.htm?id=576">&#x5f00;&#x666e;&#x52d2;&#x4e70;&#x65ad;&#x6a21;&#x5f0f;API</a></li>
+																				<li><a href="/api/list.htm?id=582">&#x5f00;&#x666e;&#x52d2;&#x5bfc;&#x8d2d;&#x6a21;&#x5f0f;API</a></li>
+																				<li><a href="/api/list.htm?id=351">&#x65e0;&#x754c;&#x95e8;&#x5e97;API</a></li>
+																				<li><a href="/api/list.htm?id=352">&#x4eac;&#x4e1c;&#x4e07;&#x5bb6;API</a></li>
+																				<li><a href="/api/list.htm?id=611">&#x4eac;&#x51c6;&#x901a;-&#x4eac;&#x4e1c;&#x76f4;&#x6295;API</a></li>
+																				<li><a href="/api/list.htm?id=356">&#x65e0;&#x754c;&#x7535;&#x5b50;&#x9762;&#x5355;</a></li>
+																				<li><a href="/api/list.htm?id=361">&#x5546;&#x54c1;&#x901a;API</a></li>
+																				<li><a href="/api/list.htm?id=621">&#x6d3b;&#x52a8;&#x5bf9;&#x5916;&#x7f51;&#x5173;API</a></li>
+																				<li><a href="/api/list.htm?id=382">&#x62cd;&#x62cd;&#x4e1a;&#x52a1;</a></li>
+																				<li><a href="/api/list.htm?id=642">&#x5168;&#x6e20;&#x9053;&#x5f00;&#x653e;&#x5e73;&#x53f0;API-&#x9274;&#x6743;</a></li>
+																				<li><a href="/api/list.htm?id=391">B2B&#x5f00;&#x653e;API</a></li>
+																				<li><a href="/api/list.htm?id=647">&#x5546;&#x54c1;&#x6807;&#x7b7e;API</a></li>
+																				<li><a href="/api/list.htm?id=396">&#x533a;&#x5757;&#x94fe;&#x5e73;&#x53f0;API</a></li>
+																				<li><a href="/api/list.htm?id=147">&#x5e73;&#x53f0;API</a></li>
+																				<li><a href="/api/list.htm?id=151">&#x4eac;&#x51c6;&#x901a;-&#x5feb;&#x8f66;API</a></li>
+																				<li><a href="/api/list.htm?id=421">&#x4ef7;&#x503c;&#x4f9b;&#x5e94;&#x94fe;&#x7b97;&#x6cd5;</a></li>
+																				<li><a href="/api/list.htm?id=431">&#x5f00;&#x666e;&#x52d2;&#x8425;&#x9500;API</a></li>
+																				<li><a href="/api/list.htm?id=461">&#x4eac;&#x4e1c;&#x8054;&#x76df;API</a></li>
+																				<li><a href="/api/list.htm?id=466">&#x4eac;&#x51c6;&#x901a;-&#x901a;&#x7528;API</a></li>
+																				<li><a href="/api/list.htm?id=472">&#x5546;&#x4e8b;&#x521b;&#x65b0;API</a></li>
+																				<li><a href="/api/list.htm?id=243">&#x5de5;&#x5177;API</a></li>
+																				<li><a href="/api/list.htm?id=244">&#x5168;&#x6e20;&#x9053;&#x5f00;&#x653e;&#x5e73;&#x53f0;API</a></li>
+																				<li><a href="/api/list.htm?id=341">&#x4eac;&#x51c6;&#x901a;-&#x54c1;&#x724c;&#x805a;&#x6548;API&#xff08;&#x5c55;&#x4f4d;&#xff09;</a></li>
+																				<li><a href="/api/list.htm?id=88">&#x5e97;&#x94fa;API</a></li>
+																				<li><a href="/api/list.htm?id=48">&#x5546;&#x54c1;API</a></li>
+																				<li><a href="/api/list.htm?id=126">FBP&#x4ed3;&#x50a8;API</a></li>
+																				<li><a href="/api/list.htm?id=127">SOP&#x4ed3;&#x50a8;API</a></li>
+																				<li><a href="/api/list.htm?id=253">&#x4eac;&#x4e1c;&#x623f;&#x4ea7;</a></li>
+																				<li><a href="/api/list.htm?id=55">&#x8ba2;&#x5355;API</a></li>
+																				<li><a href="/api/list.htm?id=54">&#x4fc3;&#x9500;API</a></li>
+																				<li><a href="/api/list.htm?id=49">&#x5546;&#x57ce;API</a></li>
+																				<li><a href="/api/list.htm?id=192">&#x7269;&#x6d41;&#x4e91;-WMS-API</a></li>
+																				<li><a href="/api/list.htm?id=218">&#x5feb;&#x9012;&#x7ba1;&#x5bb6;API</a></li>
+																				<li><a href="/api/list.htm?id=59">&#x5ba2;&#x6237;&#x5173;&#x7cfb;&#x7ba1;&#x7406;API&#x20;</a></li>
+																				<li><a href="/api/list.htm?id=195">&#x91d1;&#x7b97;&#x76d8;API</a></li>
+																				<li><a href="/api/list.htm?id=69">&#x6570;&#x636e;API</a></li>
+																				<li><a href="/api/list.htm?id=191">&#x963f;&#x5c14;&#x6cd5;API</a></li>
+																				<li><a href="/api/list.htm?id=61">&#x56fe;&#x7247;&#x7a7a;&#x95f4;API</a></li>
+																				<li><a href="/api/list.htm?id=67">&#x89c6;&#x9891;&#x670d;&#x52a1;API</a></li>
+																				<li><a href="/api/list.htm?id=131">&#x666f;&#x70b9;&#x95e8;&#x7968;API</a></li>
+																				<li><a href="/api/list.htm?id=75">&#x914d;&#x9001;API</a></li>
+																				<li><a href="/api/list.htm?id=64">&#x4eac;&#x4e1c;&#x5feb;&#x9012;API</a></li>
+																				<li><a href="/api/list.htm?id=68">&#x4eac;&#x4e1c;&#x5730;&#x5740;&#x5e93;API</a></li>
+																				<li><a href="/api/list.htm?id=56">&#x4eac;&#x4e91;&#x4ed3;API</a></li>
+																				<li><a href="/api/list.htm?id=216">&#x4f01;&#x60a6;&#x5bf9;&#x5916;&#x5f00;&#x653e;API</a></li>
+																				<li><a href="/api/list.htm?id=71">&#x9000;&#x6b3e;API</a></li>
+																				<li><a href="/api/list.htm?id=153">&#x4e8c;&#x7ef4;&#x7801;API</a></li>
+																				<li><a href="/api/list.htm?id=53">&#x549a;&#x549a;API</a></li>
+																				<li><a href="/api/list.htm?id=86">&#x4f9b;&#x5e94;&#x5546;API</a></li>
+																				<li><a href="/api/list.htm?id=136">&#x5927;&#x5bb6;&#x7535;&#x670d;&#x52a1;API</a></li>
+																				<li><a href="/api/list.htm?id=111">&#x5b50;&#x8d26;&#x53f7;API</a></li>
+																				<li><a href="/api/list.htm?id=66">&#x670d;&#x52a1;&#x5e02;&#x573a;API</a></li>
+																				<li><a href="/api/list.htm?id=221">&#x4e91;&#x9f0e;API</a></li>
+																				<li><a href="/api/list.htm?id=65">&#x54c1;&#x63a7;&#x8d28;&#x68c0;API</a></li>
+																				<li><a href="/api/list.htm?id=263">&#x96c6;&#x8fd0;&#x5546;API</a></li>
+																				<li><a href="/api/list.htm?id=70">&#x4e91;&#x6d77;API</a></li>
+																				<li><a href="/api/list.htm?id=137">EPT&#x5168;&#x7403;&#x552e;API</a></li>
+																				<li><a href="/api/list.htm?id=112">&#x4ea4;&#x6613;API</a></li>
+																				<li><a href="/api/list.htm?id=138">ECLP&#x4ed3;&#x6d77;API</a></li>
+																				<li><a href="/api/list.htm?id=202">&#x79fb;&#x52a8;&#x5e97;&#x94fa;API</a></li>
+																				<li><a href="/api/list.htm?id=241">&#x5546;&#x5bb6;&#x552e;&#x540e;&#x670d;&#x52a1;&#x5f00;&#x653e;API</a></li>
+																				<li><a href="/api/list.htm?id=106">&#x7528;&#x6237;API&#x20;</a></li>
+																				<li><a href="/api/list.htm?id=257">&#x751f;&#x9c9c;&#x52a0;&#x5de5;&#x4e2d;&#x5fc3;API</a></li>
+																				<li><a href="/api/list.htm?id=376">&#x65e0;&#x5fe7;&#x4e0b;&#x5355;API</a></li>
+												        </ul>
+    </section>
+    <section class="josList">
+    	<h2 class="title">&#x4eac;&#x4e1c;&#x8054;&#x76df;API&#xff08;&#x65e7;&#xff09;</h2>
+    	<p>查询推广产品，获取推广链接。</p>
+        
+    		<article>
+            	<h3><i></i>接口地图</h3>
+                <div class="articleCon">
+                	<p><p>     <style>  </style>     <b><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif; color: red; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">若接口申请成功后依旧提示无权调用</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">，请发送</span><span style="background-image: initial;background-position:initial;background-size: initial;background-repeat: initial;background-attachment:initial;background-origin: initial;background-clip: initial">邮件到</span><span style="font-size: 18pt; font-family: 微软雅黑, sans-serif; color: red; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;" lang="EN-US">cps@jd.com</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">申请权限</span></b>   </p><p><br></p></p>
+                </div>
+            </article>
+        
+		<article>
+        	<h3><i></i>API 列表</h3>
+            <div class="articleCon">
+            	<p>
+                    <table class="apiListTable">
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.UnionService.queryPerformanceForReverseWithKey&id=1884">jingdong.UnionService.queryPerformanceForReverseWithKey</a></td>
+    					     <td>工具商逆向数据查询接口(即将下线)</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.service.promotion.goodsInfo&id=1413">jingdong.service.promotion.goodsInfo</a></td>
+    					     <td>获取推广商品信息接口</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.service.rebate.external.getOrderExt&id=2706">jingdong.service.rebate.external.getOrderExt</a></td>
+    					     <td>获取订单行扩展字段</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.service.promotion.pid.getPid&id=3988">jingdong.service.promotion.pid.getPid</a></td>
+    					     <td>获取联盟PID</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.UnionService.queryCommissionOrders&id=1713">jingdong.UnionService.queryCommissionOrders</a></td>
+    					     <td>查询业绩订单(即将下线)</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.UnionService.queryImportOrders&id=1714">jingdong.UnionService.queryImportOrders</a></td>
+    					     <td>查询引入订单(即将下线)</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.UnionService.queryPerformanceWithPid&id=2014">jingdong.UnionService.queryPerformanceWithPid</a></td>
+    					     <td>PID业绩订单查询(即将下线)</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.UnionService.queryPullInWithPid&id=2015">jingdong.UnionService.queryPullInWithPid</a></td>
+    					     <td>PID引入订单查询(即将下线)</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.union.search.goods.category.query&id=2016">jingdong.union.search.goods.category.query</a></td>
+    					     <td>商品类目查询</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.service.promotion.queryDesignboomGoods&id=1883">jingdong.service.promotion.queryDesignboomGoods</a></td>
+    					     <td>联盟设计帮内容推广</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.UnionDoubanBookService.queryBookUrlList&id=1324">jingdong.UnionDoubanBookService.queryBookUrlList</a></td>
+    					     <td>图书包url地址查询</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.service.promotion.content.getcode&id=1877">jingdong.service.promotion.content.getcode</a></td>
+    					     <td>内容推广获取转链接口</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.service.promotion.app.getcode&id=1047">jingdong.service.promotion.app.getcode</a></td>
+    					     <td>APP领取代码接口</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.service.promotion.batch.getcode&id=1647">jingdong.service.promotion.batch.getcode</a></td>
+    					     <td>批量获取代码接口</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.service.promotion.getcode&id=1648">jingdong.service.promotion.getcode</a></td>
+    					     <td>自定义链接转换</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.CreatePromotionSiteJos.saveAppPromtionSiteInfo&id=1336">jingdong.CreatePromotionSiteJos.saveAppPromtionSiteInfo</a></td>
+    					     <td>创建app推广位jos接口</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.service.promotion.pid.getPid&id=2018">jingdong.service.promotion.pid.getPid</a></td>
+    					     <td>获取联盟PID</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.service.promotion.appReport&id=1046">jingdong.service.promotion.appReport</a></td>
+    					     <td>APP效果数据接口</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.service.promotion.wxsq.getCodeBySubUnionId&id=1875">jingdong.service.promotion.wxsq.getCodeBySubUnionId</a></td>
+    					     <td>联盟微信手q通过subUnionId获取推广链接【申请】</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.service.promotion.wxsq.getCodeByUnionId&id=1874">jingdong.service.promotion.wxsq.getCodeByUnionId</a></td>
+    					     <td>联盟微信手q通过unionId获取推广链接【申请】</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.service.yhd.promotion.getInfo&id=1937">jingdong.service.yhd.promotion.getInfo</a></td>
+    					     <td>一号店生成推广链接接口【申请】</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.service.promotion.coupon.getCodeBySubUnionId&id=1879">jingdong.service.promotion.coupon.getCodeBySubUnionId</a></td>
+    					     <td>优惠券,商品二合一转接API-通过subUnionId获取推广链接【申请】</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.service.promotion.coupon.getCodeByUnionId&id=1878">jingdong.service.promotion.coupon.getCodeByUnionId</a></td>
+    					     <td>优惠券,商品二合一转接API-通过unionId获取推广链接【申请】</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.union.search.goods.keyword.query&id=2017">jingdong.union.search.goods.keyword.query</a></td>
+    					     <td>关键词查询选品接口【申请】</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.UnionThemeGoodsService.queryExplosiveGoods&id=1814">jingdong.UnionThemeGoodsService.queryExplosiveGoods</a></td>
+    					     <td>获取爆款商品【申请】</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.UnionThemeGoodsService.queryCouponGoods&id=1815">jingdong.UnionThemeGoodsService.queryCouponGoods</a></td>
+    					     <td>获取优惠商品【申请】</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.union.search.queryCouponGoods&id=2593">jingdong.union.search.queryCouponGoods</a></td>
+    					     <td>优惠券商品查询【申请】</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.service.promotion.createPromotionSiteBatch&id=2360">jingdong.service.promotion.createPromotionSiteBatch</a></td>
+    					     <td>批量创建推广位【申请】</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.service.promotion.queryPromotionSite&id=2371">jingdong.service.promotion.queryPromotionSite</a></td>
+    					     <td>批量查询推广位【申请】</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.service.goods.queryStuPriceGoods&id=2390">jingdong.service.goods.queryStuPriceGoods</a></td>
+    					     <td>学生价商品查询【申请】</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.service.goods.querySecKillGoods&id=2401">jingdong.service.goods.querySecKillGoods</a></td>
+    					     <td>秒杀商品查询【申请】</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.service.coupon.importCoupon&id=2582">jingdong.service.coupon.importCoupon</a></td>
+    					     <td>优惠券导入</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.service.promotion.coupon.getInfo&id=1876">jingdong.service.promotion.coupon.getInfo</a></td>
+    					     <td>优惠券领取情况查询接口【申请】</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.UnionService.queryOrderList&id=2172">jingdong.UnionService.queryOrderList</a></td>
+    					     <td>订单查询</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.UnionService.queryOrderListWithPid&id=2174">jingdong.UnionService.queryOrderListWithPid</a></td>
+    					     <td>PID订单查询</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.UnionService.queryOrderListWithKey&id=2173">jingdong.UnionService.queryOrderListWithKey</a></td>
+    					     <td>工具商订单查询</td>
+                            </tr>
+    					    						<tr>
+    							<td width="76">
+                                    
+									    							</td>
+    						 <td width="300"><a href="/api/detail.htm?apiName=jingdong.union.search.goods.param.query&id=2145">jingdong.union.search.goods.param.query</a></td>
+    					     <td>获取拼购商品接口</td>
+                            </tr>
+    										</table>
+                </p>
+            </div>
+        </article>
+        <article>
+        	<h3><i></i>数据结构列</h3>
+            <div class="articleCon">
+            	<p>
+					<table class="apiDataTable">
+    					 							<tr>
+								<td width="300" style="padding-left:90px;"><a href="/api/complexTemplate.htm?webPamer=getorderext_result&restName=jingdong.service.rebate.external.getOrderExt&groupName=&#x4eac;&#x4e1c;&#x8054;&#x76df;API&#xff08;&#x65e7;&#xff09;&id=117">getorderext_result</a></td>
+								<td>返回结果</td>
+							</tr>
+    					 							<tr>
+								<td width="300" style="padding-left:90px;"><a href="/api/complexTemplate.htm?webPamer=orderExtRespVo&restName=jingdong.service.rebate.external.getOrderExt&groupName=&#x4eac;&#x4e1c;&#x8054;&#x76df;API&#xff08;&#x65e7;&#xff09;&id=117">orderExtRespVo</a></td>
+								<td>订单行信息</td>
+							</tr>
+    					 					</table>  
+                </p>
+            </div>
+        </article>
+    </section>
+    <div class="clr"></div>
+    <div id="BackTop" style="display:none;">
+    	<div class="backBtn" id="backBtn"></div>
+    </div>
+
+</div>
+	<div id="bottom-bar">
+    <div class="o-footer-wrap">
+        <div class="o-inner">
+            <div class="o-copyright">
+                <div class="of-logo"></div>
+                <div class="of-official-channel"></div>
+                <div class="of-version">Copyright © 2004-2019 京东JD.com 版权所有</div>
+            </div>
+            <div class="o-relative-link">
+                <ul class="orl-link">
+                    <li>
+                        <a href="//fw.jd.com" target="_blank" clstag="pageclick|keycount|wjkf_homePage_20180507|71">京麦服务市场</a>
+                    </li>
+                    <li>
+                        <a href="//zx.jd.com" target="_blank" clstag="pageclick|keycount|wjkf_homePage_20180507|72">京东装修市场</a>
+                    </li>
+                    <li>
+                        <a href="//open.jd.com" target="_blank" clstag="pageclick|keycount|wjkf_homePage_20180507|73">京东宙斯开放平台</a>
+                    </li>
+                    <li>
+                        <a href="//xue.jd.com" target="_blank" clstag="pageclick|keycount|wjkf_homePage_20180507|74">商家学习中心</a>
+                    </li>
+                    <li>
+                        <a href="//wx.jdcloud.com" target="_blank" clstag="pageclick|keycount|wjkf_homePage_20180507|75">数据市场</a>
+                    </li>
+                    <li>
+                        <a href="//market.jdcloud.com" target="_blank" clstag="pageclick|keycount|wjkf_homePage_20180507|76">京东云市场</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    /*footer-s*/
+    .o-footer-wrap {
+        width:100%;
+        height:155px;
+        font-size: 14px;
+        background-color:rgb(38,43,57);
+        position:relative;
+        min-width: 1210px;
+    }
+    .o-inner {
+        width: 1210px;
+        margin: 0 auto;
+    }
+    .o-copyright {
+        width: 400px;
+        margin-top: 40px;
+        float: left;
+        opacity: 0.5;
+        position: relative;
+    }
+
+    .o-relative-link {
+        min-width: 720px;
+        margin-top: 40px;
+        float: left;
+        position: relative;
+    }
+
+    .orl-link {
+        margin-top: 17px;
+    }
+
+    .orl-link li{
+        padding:0 20px;
+        height: 10px;
+        line-height: 7px;
+        border-left: 1px solid rgb(59,59,59);
+        float: left;
+    }
+
+    .orl-link a{
+        -webkit-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+        -webkit-transition-property: color;
+        transition-property: color;
+        color: #92959C;
+
+    }
+
+    .orl-link a:hover{
+        color: #0090FF;
+    }
+
+    .orl-link li:first-child{
+        border-left: 0px;
+    }
+
+    .of-logo {
+        width: 200px;
+        height: 42px;
+        background: url("/images/logo.png") no-repeat center center;
+        background-size: contain;
+        float: left;
+    }
+
+    .of-official-channel {
+        width: 200px;
+        height: 42px;
+        float: left;
+    }
+
+    .of-version {
+        width: 100%;
+        color: rgb(255,255,255);
+        line-height: 40px;
+        height: 40px;
+    }
+
+    /*footer-end*/
+</style>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " https://");
+//document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F712d47542b5e719c28e25e3e9546808a' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>
+<script>
+$(document).ready(function(){
+	$("#BackTop").css({"position":"fixed","bottom":"0","right":"0"})
+	goTopEx();
+	})
+</script>

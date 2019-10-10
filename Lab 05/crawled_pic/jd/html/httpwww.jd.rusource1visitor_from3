@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Интернет-магазин JD.RU – качественные товары со скидкой и бесплатной доставкой.</title>
+<meta name="keywords" content="интернет магазин, китай">
+<meta name="description" content="JD.ru – подразделение гиганта китайской электронной торговли JD.com. В интернет-магазине JD.ru представлены качественные товары со скидкой: смартфоны, электроники, товары для дома, одежды и так далее. Купон со скидками.">
+<meta name="yandex-verification" content="b1cfea25b4c34174" />
+<meta name="google-site-verification" content="LUd5hlOr019JZhhAFs7kQ9AL8jwCDe8jkElU0XAxGJw" />
+<link rel="icon" href="//static.joybuy.com/ept/header/1.1.0/components/base/i/favicon.ico" mce_href="//static.joybuy.com/ept/header/1.1.0/components/base/i/favicon.ico" type="image/x-icon" />
+<link rel="canonical" href="//www.jd.ru/" />
+<link rel="dns-prefetch" href="//static.joybuy.com" />
+<link rel="dns-prefetch" href="//misc.joybuy.com" />
+<link rel="dns-prefetch" href="//img10.joybuy.com" />
+
+<link href="//static.joybuy.com/??/ept/home-en/1.2.0/components/top/top.css,/aui/1.0.0/css/aui.css,/ept/header/1.1.0/components/base/base.css,/ept/header/1.1.0/components/shortcut/shortcut.css,/ept/header/1.1.0/components/footer/footer.css,/ept/home-ru/1.2.0/components/header1/header1.css,/ept/home-ru/1.2.0/components/home-ru/home-ru.css,/ept/home-en/1.2.0/components/base/base.css,/ept/home-ru/1.2.0/components/base/base.css,/ept/home-ru/1.2.0/components/nav1/nav1.css,/ept/home-ru/1.2.0/components/seckill/seckill.css,/ept/home-en/1.2.0/components/terms-service/terms-service.css,/ept/home-ru/1.2.0/components/base/jian.css,/ept/home-ru/1.2.0/components/aside/aside.css,/ept/home-ru/1.2.0/components/tip-float/tip-float.css?a=1" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="//static.joybuy.com/??/ept/lib/jquery.js,/ept/lib/seajs.js,/ept/lib/seajs.combo.js,/ept/home-en/1.2.0/components/top/top.js,/ept/home-ru/1.2.0/components/nav1/nav1.js,/ept/home-ru/1.2.0/components/seckill/seckill.js,/ept/home-ru/1.2.0/components/tip-float/tip-float.js"></script>
+<style>.top-container .icon-cross2 {
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: url("//img11.360buyimg.com/devfe/jfs/t1/31708/20/7686/5099/5c9884c3E1151aea3/7daab11e31e14430.png") no-repeat;
+    text-align: center;
+    cursor: pointer;
+}
+</style>
+<style>._ru {
+  background: #fff;
+}</style>
+<script type="text/javascript">
+if(/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+    if(window.location.href.indexOf("?mobile")<0){
+        try{
+            if(/Android|webOS|iPhone|iPod|BlackBerry|iPad/i.test(navigator.userAgent)){
+                window.location.href="//m.jd.ru" + (window.location.search||"");
+            }
+        }catch(e){}
+    }
+}
+
+window.pageConfig = {
+    pageType: 'home'
+}
+seajs.config({
+    paths: {
+        AUI: '//static.joybuy.com/aui/1.0.0',
+        EPT_LIB: '//static.joybuy.com/ept/lib',
+        MOD_ROOT: '//static.joybuy.com/ept/home-ru/1.2.0/components',
+        GLOBAL_ROOT: '//static.joybuy.com/ept/header/1.1.0/components'
+    }
+})
+if (document.cookie.indexOf('loggedIn=1') < 0) new Image().src = '//sso.jd.com/setCookie?biz_code=2&rd=' + new Date().getTime()
+
+
+
+define('MOD_ROOT/header/header', function (require, exports) {
+    var cookie = require('MOD_ROOT/base/cookie');
+
+    function getLoginStatus() {
+        $.ajax({
+            dataType: 'jsonp',
+            url: '//passport.jd.ru/new/helloService.html',
+            contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+            data: { _m: Math.random() },
+            success: loginCallBack
+        })
+
+        function loginCallBack(data) {
+            // 保证只执行一次 callback
+
+            var usernamehtml = $(data.info)
+                .find('.user-name')
+                .html();
+
+            var username = ''
+            if (usernamehtml && usernamehtml.indexOf('Hello,') > -1) {
+                username = $.trim(
+                    usernamehtml.substring(
+                        usernamehtml.indexOf('Hello,') + 6,
+                        usernamehtml.indexOf('!') + 1
+                    )
+                )
+            }
+
+            //login
+            if (username) {
+                //修改显示
+                $('.my-account-label').html('Мой аккаунт');
+            } else {
+                var cookiedname = cookie.read('ept_username');
+            }
+        }
+    }
+
+    function init(cfg) {
+        getLoginStatus(cfg);
+    }
+
+    exports.init = init;
+});
+seajs.use('MOD_ROOT/header/header', function(e){e.init(pageConfig)});
+</script>
+<style>.nav .categorys .second-content {
+   height: 580px!important;
+   z-index: 11;
+   top:25px;
+}
+
+
+.nav .navlist>li:hover {
+    font-weight: normal;
+}
+
+.categorys-li {
+   z-index: 11;
+}
+
+.j_first_cate {
+   background: #fbfbfb;
+   min-height: 580px;
+   box-shadow: 0 0 20px 0 rgba(42,42,42,.16)
+}
+
+.j_first_cate>li {
+   background: #fbfbfb!important;
+}
+
+
+.j_first_cate>li:hover {
+   background: #efefef!important;
+}
+
+.nav li.categorys-li {
+   width: 250px;
+}
+
+.nav .categorys {
+    background: transparent!important;
+}</style>
+<style>.top-slider .ctrl-more .ctrl {
+    margin-top: 170px!important
+}
+
+.top-slider .slider-content {
+    width:1900px;
+}</style>
+<style>.promotion{
+    margin-top: 60px;
+    padding-bottom: 6px;
+    height: 550px;
+}
+.promotion .t-w {
+    height: 400px;
+    padding: 116px 12px 10px 11px;
+    overflow: hidden;
+}
+.promotion .t-b {
+    float: left;
+    height: 200px;
+    left: 3px;
+    position: relative;
+    overflow: hidden;
+}
+.promotion .t-s {
+    float: left;
+    height: 200px;
+    left: 3px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.promotion .t-big{
+    float: left;
+    width: 180px;
+    height: 200px;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 0px;
+    overflow: hidden;
+}
+
+
+.promotion .t-samll{
+    float: left;
+    width: 370px;
+    height: 200px;
+    text-align: center;
+    position: relative;
+    margin-left: 10px;
+    overflow: hidden;
+}</style>
+<style>.terms-service .title {
+    font-family: inherit!important;
+}</style>
+<style>      .jptj .img1 .sku,
+        .jptj .img1 .g_title,
+        .jptj .img23 .g_title,
+        .jptj .cxy_content,
+        .whcp .cxy,
+        .whcp .commentator,
+        .whcp .comments,
+        .show-now:hover .show-now-text {
+            font-family: Roboto, Helvetica, Verdana, Arial !important;
+        }</style>
+<script type="text/javascript">
+define('MOD_ROOT/coupons/coupons', function (require, exports) {
+    var Carousel = require('AUI/Carousel')
+
+    function init() {
+        if ($('.coupon-item').length > 3) {
+            new Carousel($('.coupons-list'));
+            $('.j_coupons_swiper_button').show();
+        }
+    }
+  
+    exports.init = init;
+});
+seajs.use("MOD_ROOT/coupons/coupons",function(main) {
+  main.init(); 
+})</script>
+<script type="text/javascript">
+    seajs.use(['MOD_ROOT/aside/aside'], function(App) {
+
+        App.init();
+    })</script>
+
+</head>
+<body>
+ 
+<script>
+window.jdpts={};jdpts._st=new Date().getTime();
+  var jaq = window.jaq || [];
+    jaq.push(['account', 'JA2015_161293']);
+    jaq.push(['domain', 'jd.ru']);
+    jaq.push(['erp_account', '']);
+    function __joya() {
+        var ja = document.createElement('script');
+        ja.type = 'text/javascript';
+        ja.async = true;
+        ja.src = '//wl.joybuy.com/joya.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ja, s);
+    }
+
+    function __tagManger(){
+ (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5DS654');
+}
+
+(function(win, cfg) {
+    var pageConfig = {
+        site: 2,
+        langId: 3,
+        siteId: 2285,
+        lang: 'ru',
+        domain: 'www.jd.ru',
+        currency: 'RUB',
+        currencys: ["USD","EUR","RUB","GBP","CAD","CHF","AUD","PLN","MXN","BRL"],
+        currencyMap: {
+            USD: "US$", EUR: "\u20ac", RUB: "\u0440\u0443\u0431.",
+            GBP: "\uffe1", CAD: "C$", CHF: "CHF", AUD: "AU$",
+            PLN: "z\u0142", "MXN":"MXN$","BRL":"R$"
+        }
+
+    }
+    if (cfg) { for (var key in cfg) pageConfig[key] = cfg[key] }
+
+    win.pageConfig = pageConfig
+})(window, window.pageConfig);
+
+(function() {
+    if (window.BOOMR && window.BOOMR.version) {
+        return;
+    }
+    var dom, doc, where, iframe = document.createElement("iframe"),
+        win = window;
+
+    function boomerangSaveLoadTime(e) {
+        win.BOOMR_onload = (e && e.timeStamp) || new Date().getTime();
+        console.log(new Date().getTime())
+        __joya();
+        __tagManger();
+    }
+    if (win.addEventListener) {
+        win.addEventListener("load", boomerangSaveLoadTime, false);
+    } else if (win.attachEvent) {
+        win.attachEvent("onload", boomerangSaveLoadTime);
+    }
+
+    iframe.src = "javascript:false";
+    iframe.title = "";
+    iframe.role = "presentation";
+    (iframe.frameElement || iframe).style.cssText = "width:0;height:0;border:0;display:none;";
+    where = document.getElementsByTagName("script")[0];
+    where.parentNode.insertBefore(iframe, where);
+
+    try {
+        doc = iframe.contentWindow.document;
+    } catch (e) {
+        dom = document.domain;
+        iframe.src = "javascript:var d=document.open();d.domain='" + dom + "';void(0);";
+        doc = iframe.contentWindow.document;
+    }
+    doc.open()._l = function() {
+        var js = this.createElement("script");
+        if (dom) this.domain = dom;
+        js.id = "boomr-if-as";
+        js.src = "https://s.go-mpulse.net/boomerang/" +
+            "S2T33-JAXDW-JT5YS-EA58S-CWVX9";
+        BOOMR_lstart = new Date().getTime();
+        this.body.appendChild(js);
+    };
+    doc.write('<body onload="document._l();">');
+    doc.close();
+})();
+
+</script>
+
+
+<div class="shortcut">
+    <div class="sc w">
+        <ul class="sc-list">
+            <li class="sc-item sc-site">
+                <a>Перейти на сайт <span class="triangle"></span></a>
+                <ul class="sc-site-list">
+                    <li class="sc-site-item" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|133_002">
+                        <a class="clstag" href="//www.joybuy.com" title="joybuy.com" tagindex="4">Global Site</a>
+                    </li>
+                    <li class="sc-site-item" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|133_003">
+                        <a class="clstag" href="//www.jd.com" title="JD.com">中国站</a>
+                    </li>
+                    <li class="sc-site-item" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|133_004">
+                        <a class="clstag" href="//www.joybuy.es" title="joybuy.es">Sitio de España</a>
+                    </li>
+                    <li class="sc-site-item" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|133_005">
+                        <a class="clstag" href="//www.jd.id" title="JD.id">Situs Indonesia</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sc-item">
+                <span class="sc-line"></span>
+            </li>
+            <li class="sc-item sc-site" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|133_005">
+                <a>Вход для продавцов<span class="triangle"></span></a>
+                <ul class="sc-site-list">
+                    <li class="sc-site-item" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|133_006">
+                        <a class="clstag" clstag="pageclick|keycount|ibg_en_homepage_201510221|001" href="//join.jd.com/app/welcome.html#/" title="Информация для продавцов" tagindex="1">Информация для продавцов</a>
+                    </li>
+                    <li class="sc-site-item" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|133_0061">
+                        <a class="clstag" clstag="pageclick|keycount|ibg_en_homepage_201510221|002" href="//helpcenter.joybuy.com/" title="Помощь" tagindex="2">Помощь</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sc-item" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|133_008">
+                <span class="sc-line"></span>
+            </li>
+             <li class="sc-item sc-help">
+                <a>Помощь <span class="triangle"></span></a>
+                <ul class="sc-help-list">
+                    <li class="sc-help-item" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|133_012">
+                        <a href="//help.jd.ru/help/question-list.html">Центр помощи</a>
+                    </li>
+                    <li class="sc-help-item" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|133_009">
+                        <a href="//support.jd.ru/support/index?source=3" target="_blank">Онлайн чат</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sc-item" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|133_010">
+                <a href="//sale.jd.ru/pc/SzXDFolEpYaV.html" rel="nofollow"><i></i>Краткое руководство</a>
+            </li>
+            <li class="sc-item sc-item-translate  hide">
+                <div id="google_translate_element"></div>
+            </li>
+            <li class="sc-item sc-ship j_sc_ship_w" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|133_011">
+                <a class="j_sc_ship">Страны доставки
+                    <span class="ept_country_flag j_country"></span>
+                    <!--<span class="j_sc_ship_text"></span>-->
+                    <span class="triangle"></span>
+                </a>
+
+                <!-- shipto floating modal -->
+                <div class="floating j_f_ship panel-ship-to">
+                    <div class="floating-w">
+                        <div class="sc-m-content">
+                            <div class="sc-f-content aui">
+                                <span class="close ficon fi-close-large" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|133_102"></span>
+                                <div class="floating-select-country">
+                                    <div class="title">Страна или регион доставки</div>
+
+                                    <!-- select country  -->
+                                    <dl class="select head-country-sel" tabindex="0" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|133_103"></dl>
+                                </div>
+                                <!--<div class="floating-select-language">-->
+                                    <!--<div class="title">Язык</div>-->
+                                    <!--<div id="google_translate_element"></div>-->
+                                <!--</div>-->
+                                <div class="floating-select-currency">
+                                    <div class="title">Валюта</div>
+
+                                    <!-- select currency -->
+                                    <div class="custom-select currency-select"  clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|133_104">
+                                        <div class="choosen" name=""></div>
+                                        <span class="open-icon ficon fi-bottom"></span>
+                                        <ul class="options ui-hide"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sc-f-submit">
+                                <button class="j_ship_submit" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|133_101" type="button">Сохранить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<header class="header">
+    <div class="header-container">
+        <div class="w">
+            <!-- LOGO -->
+            <div class="logo-w">
+                <div class="logo">
+                                                                                 <a href="//www.jd.ru/" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|133_001">
+                                                           <img src="//img10.joybuy.com/tuangou/jfs/t1/11922/2/12504/6420/5c924ce5E5f997d36/8af39af49373ba27.png" alt="jd.ru" class="logo-img header-logo-prom">
+                                                        </a>
+                </div>
+                <script>
+                    (function(doc, cfg) {
+                        var el = doc.body
+                        if (el && cfg && cfg.showCategory) {
+                            el.className += ' show-category'
+                        }
+                    })(document, pageConfig)
+                </script>
+            </div>
+
+            <!-- 搜索 -->
+            <div class="suggest-form search-form">
+                <div class="field suggest-field left">
+                    <div class="cate-w">
+                        <div class="search-cate-title" data-all="Все">
+                            <div class="search-cate-title-inner">
+                                <span id="search-category-value" catid="">Все</span>
+                                <span class="ficon fi-bottom"></span>
+                            </div>
+                        </div>
+                        <!-- 分类列表 -->
+                        <div class="search-cate-list">
+                            <ul class="container j-select-opts">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="search-key-w">
+                        <input id="searchKeyWord" class="search-key" type="text" autocomplete="off" name="" value="" placeholder="Поиск" />
+                    </div>
+                    <div class="suggest-key-list J-search-suggest hide"
+                         data-in="в"
+                         data-search="Популярные запросы"
+                         data-history="История поиска"
+                         data-clear="Очистить все"
+                         data-delete="Удалить"
+                         data-sale="Нам уже 3 года">
+                         <div class="hide J-suggest-banner"></div>
+                        <div class="hide J-suggest-hot"></div>
+                        <div class="hide J-suggest-list"></div>
+                    </div>
+                </div>
+                <button id="doSearchShop" class="search-button search-shop-button hide" type="button">
+                    <span class="text">В этом магазине</span>
+                </button>
+                <button id="doSearch" class="search-button" type="button" data-search="//www.jd.ru/search?keywords={k}&arriveCountry={c}&filterTypes=expand" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|search">
+                    <i class="ficon fi-search"></i>
+                    <span class="text hide">На JD.RU</span>
+                </button>
+                <script>
+                    (function(doc, cfg) {
+                        var get = function(id) { return doc.getElementById(id) }
+
+                        var el = get('doSearchShop')
+                        if (el && cfg.shopSearch) {
+                            el.onclick = function() {
+                                window.location.href = cfg.shopSearch.replace('{KEYWORD}', (cfg.kw || ''))
+                            }
+                        }
+
+                        var inp = get('searchKeyWord')
+                        var btn = get('doSearch')
+                        var url = btn.getAttribute('data-search')
+                        var C = function(k){return(doc.cookie.match('(^|; )'+k+'=([^;]*)')||0)[2]}
+
+                        if (btn && url) {
+                            btn.onclick = function() {
+                                var eptCountry = C('eptCountry'), cid = ''
+                                try { cid = JSON.parse(decodeURIComponent(eptCountry)).id } catch (e) {}
+                                location.href = url.replace('{k}', inp.value).replace('{c}', cid)
+                            }
+                        }
+                    })(document, pageConfig);
+                </script>
+            </div>
+
+            <!-- 右边 -->
+            <div class="header-right">
+                <ul>
+                    <li class="h-r-item item-cartnum">
+                        <a href="//cart.jd.ru/cart/cart.html" rel="nofollow" title="Корзина" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|header_cart">
+                            <i class="ficon fi-cart my-cart"></i>Корзина</a>
+                    </li>
+                    <li class="h-r-item item-sign">
+                        <span class="text">
+                            <i class="ficon fi-user my-account"></i>
+                            <span class="my-account-label">
+                            <a href="javascript:login();"  clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|133_sign_in_2">Войти</a><em class="driver">|</em><a href="javascript:register();"  clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|133_sing_up_2">Регистрация</a></span>
+                        </span>
+                        </span>
+                        <div class="floating-account j_f_account">
+                            <!-- 登录 -->
+                            <div style="display: none" class="sign-box s-1">
+                                <div class="mt">
+                                    <div class="myaccount">
+                                        <span class="sign-myaccount-icon">
+                                            <i class="ficon fi-user"></i>
+                                        </span>
+                                        <p class="sign-myaccount-name">
+                                            <span class="username"></span>
+                                            <span></span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <ul class="sign-in-list">
+                                    <li clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|account_my">
+                                        <a href="//my.jd.ru/home/home.do" title="Мой JD.RU" rel="nofollow">Мой JD.RU</a>
+                                    </li>
+                                    <li clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|account_order">
+                                        <a href="//my.jd.ru/order/orderList.do" title="Мои заказы" rel="nofollow">Мои заказы</a>
+                                    </li>
+                                    <li clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|account_wish">
+                                        <a href="//my.jd.ru/wishlist/myWishlist.do" title="Мой список желаний" rel="nofollow">Мой список желаний</a>
+                                    </li>
+                                    <li clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|account_coupon">
+                                        <a href="//my.jd.ru/coupon/myCoupon.do" title="Мои купоны" rel="nofollow">Мои купоны</a>
+                                    </li>
+				<li clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|account_invite">
+					<a href="//my.jd.ru/invite/myinvitecode.do" title="Пригласить друзей" rel="nofollow">Пригласить друзей</a>
+				</li>
+                                    <li clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|account_profile">
+                                        <a href="//p.jd.ru/user/initBasicInfo.do" title="Настройки аккаунта" rel="nofollow">Настройки аккаунта</a>
+                                    </li>
+                                    <li clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|account_message">
+                                        <a href="//imsg.jd.ru/usercenter/news/importantList.html" title="Сообщения"
+                                            rel="nofollow" class="unread-message">Сообщения
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="mc" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|account_signout">
+                                    <a href="javascript:logout();" class="btn-sign" title="Выйти" rel="nofollow">Выйти</a>
+                                </div>
+                            </div>
+
+                            <!-- 未登录 -->
+                            <div class="sign-box s-2" id="sign-panle">
+                                <div class="mt">
+                                    <div class="myaccount">
+                                        <p class="sign-myaccount-noname">Приветствуем на JD.ru!</p>
+                                        <p class="sign-myaccount-name" style="display: none;">
+                                            <span class="username"></span>
+                                            <span>JD.RU</span>
+                                        </p>
+                                    </div>
+                                    <a class="btn-sign" href="javascript:login();" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|133_sign_in_3" rel="nofollow">Войти</a>
+                                    <div class="sign-open">
+                                        <p>Войти через</p>
+                                        <div class="ac sn-icon">
+                                            <a class="sprite-ico sprite-fb" href="javascript:login4FacebookUnion();"></a>
+                                            <a class="sprite-ico sprite-pin" href="javascript:login4PinterestUnion();"></a>
+                                            <a class="sprite-ico sprite-twi" href="javascript:login4TwitterUnion();"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mc">
+                                    <p>Новый покупатель?</p>
+                                    <a class="sing-up" href="javascript:register();"  clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|133_sign_3">Регистрация</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="category-mask" class="category-mask"></div>
+</header>
+
+<script>
+    function handleSessionResponse(response) {
+        FB.logout(function (response) {
+            //TODO
+        });
+    }
+    function lout() {
+        try {
+            FB.getLoginStatus(function (response) {
+                handleSessionResponse(response);
+            });
+        } catch (e) { }
+    }
+
+    function login() {
+        window.location.href = '//passport.jd.ru/new/facade.html?ReturnUrl=' + encodeURIComponent(location.href);
+    }
+    function register() {
+        window.location.href = '//reg.jd.ru/reg/person.html?t=1&ReturnUrl=' + encodeURIComponent(location.href);
+    }
+    function logout() {
+        try {
+            lout();
+        } catch (e) {
+
+        }
+        window.location.href = '//passport.jd.ru/new/logoutService.html';
+    }
+    function message() {
+        window.location.href = '//s.jd.ru/usercenter/message/showMessage.html';
+    }
+
+    function getFirstLevelDomain() {
+        var host = location.host;
+        var regex = new RegExp(".+\\.(.+\\..+)");
+        return host.match(regex)[1];
+    }
+
+    function login4FacebookUnion() {
+        var url = '//unionen.jd.com/new/facebook/login.html?ReturnUrl=' + escape(location.href).replace(/\//g, "%2F");
+        window.location.href = url;
+    };
+
+    function login4VkUnion() {
+        var returnUrl = '//unionen.jd.com/new/vk/login.html?ReturnUrl=' + escape(location.href).replace(/\//g, "%2F");
+        window.location.href = returnUrl;
+    };
+
+    function login4OkUnion() {
+        var returnUrl = '//unionen.jd.com/new/ok/login.html?ReturnUrl=' + escape(location.href).replace(/\//g, "%2F");
+        window.location.href = returnUrl;
+    }
+
+    function login4PinterestUnion() {
+        window.location.href = '//unionen.jd.com/new/pinterest/login.html?ReturnUrl=' + escape(location.href).replace(/\//g, "%2F");
+    }
+
+    function login4InstagramUnion() {
+        window.location.href = '//unionen.jd.com/new/instagram/login.html?ReturnUrl=' + escape(location.href).replace(/\//g, "%2F");
+    }
+
+    function login4TwitterUnion() {
+        window.location.href = '//unionen.jd.com/thirdparty/twitter.html?ReturnUrl=' + escape(location.href).replace(/\//g, "%2F");
+    }
+</script>
+
+<script>
+    seajs.use('GLOBAL_ROOT/base/base', function(App) {
+        App.init(pageConfig)
+    })
+    $('body').addClass('_ru')
+</script>
+<style type="text/css">
+.p-jd {
+  height: 14px!important;
+}
+</style><!-- 频道页 -->
+<div class="nav w">
+    <ul class="navlist">
+        <li class="categorys-li">
+            <div class="category-select"><em class="category-icon"></em>Каталог товаров<em class="triangle"></em></div>
+            <div class="categorys" id="category">
+                <div class="allcate">
+                    <ul class="j_first_cate first">
+                                                                                                                    <li data-index="0">
+                                    <a href="//www.jd.ru/category/875064285-phones-accessories.html" title="Cмартфоны и аксессуары" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|_10" target="_blank">Cмартфоны и аксессуары</a>
+                                </li>
+                                                                                                                            <li data-index="1">
+                                    <a href="//www.jd.ru/category/875065256-consumer-electronics.html" title="Электроника" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|_11" target="_blank">Электроника</a>
+                                </li>
+                                                                                                                            <li data-index="2">
+                                    <a href="//www.jd.ru/category/875064192-computer-office.html" title="Компьютеры и оргтехника" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|_12" target="_blank">Компьютеры и оргтехника</a>
+                                </li>
+                                                                                                                            <li data-index="3">
+                                    <a href="//www.jd.ru/category/875072078-home-appliances.html" title="Бытовая техника" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|_13" target="_blank">Бытовая техника</a>
+                                </li>
+                                                                                                                            <li data-index="4">
+                                    <a href="//www.jd.ru/category/875064188-men-clothing-accessories.html" title="Мужская одежда" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|_14" target="_blank">Мужская одежда</a>
+                                </li>
+                                                                                                                            <li data-index="5">
+                                    <a href="//www.jd.ru/category/875064568-women-clothing-accessories.html" title="Женская одежда" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|_15" target="_blank">Женская одежда</a>
+                                </li>
+                                                                                                                            <li data-index="6">
+                                    <a href="//www.jd.ru/category/875063307-sports-outdoors.html" title="Спорт и активный отдых" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|_16" target="_blank">Спорт и активный отдых</a>
+                                </li>
+                                                                                                                            <li data-index="7">
+                                    <a href="//www.jd.ru/category/875063305-health-beauty.html" title="Красота и здоровье" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|_17" target="_blank">Красота и здоровье</a>
+                                </li>
+                                                                                                                            <li data-index="8">
+                                    <a href="//www.jd.ru/category/875063304-home-garden.html" title="Для дома и сада" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|_18" target="_blank">Для дома и сада</a>
+                                </li>
+                                                                                                                            <li data-index="9">
+                                    <a href="//www.jd.ru/category/875065324-shoes-bags.html" title="Обувь и сумки" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|_19" target="_blank">Обувь и сумки</a>
+                                </li>
+                                                                                                                            <li data-index="10">
+                                    <a href="//www.jd.ru/category/875065568-toys-kids-baby.html" title="Все для детей" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|_110" target="_blank">Все для детей</a>
+                                </li>
+                                                                                                                            <li data-index="11">
+                                    <a href="//www.jd.ru/category/875065203-jewelry-watches.html" title="Украшения и часы" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|_111" target="_blank">Украшения и часы</a>
+                                </li>
+                                                                                                                            <li data-index="12">
+                                    <a href="//www.jd.ru/category/875063308-automotive-accessories.html" title="Автотовары" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|_112" target="_blank">Автотовары</a>
+                                </li>
+                                                                                                                            <li data-index="13">
+                                    <a href="//www.jd.ru/category/875072014-wigs-hair-extensions.html" title="Парики" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|_113" target="_blank">Парики</a>
+                                </li>
+                                                                                                            <li>
+                            <a href="//www.jd.ru/map/sitemap.html" title="увидеть все" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|132_115" target="_blank">увидеть все</a>
+                        </li>
+                    </ul>
+                    <!-- 一级分类浮层 -->
+                    <div class="second j_contents contents" style="display: none">
+                        <!-- 二级分类 container -->
+                    </div>
+                    <!-- 一级分类浮层 END-->
+                </div>
+            </div>
+        </li>
+                                                            <li data-index="0">
+                    <h2>
+                        <a href="//www.jd.ru/superdeals/detail.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|_20" title="Успей купить" target="_blank">Успей купить</a>
+                    </h2>
+                </li>
+                                                                            <li data-index="1">
+                    <h2>
+                        <a href="//www.jd.ru/sale/pc/S7QW6eVgjBHr8.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|_21" title="Смартфоны" target="_blank">Смартфоны</a>
+                    </h2>
+                </li>
+                                                                            <li data-index="2">
+                    <h2>
+                        <a href="//www.jd.ru/sale/pc/IdHeu7cxKlJGr.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|_22" title="Xiaomi" target="_blank">Xiaomi</a>
+                    </h2>
+                </li>
+                                                                            <li data-index="3">
+                    <h2>
+                        <a href="//www.jd.ru/sale/pc/d3Miz7FGD5TRSZhp.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|_23" title="Новинки" target="_blank">Новинки</a>
+                    </h2>
+                </li>
+                                                                            <li data-index="4">
+                    <h2>
+                        <a href="//mall.jd.ru/pc/index-217.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|_24" title="Коллекция JD" target="_blank">Коллекция JD</a>
+                    </h2>
+                </li>
+                                                                            <li data-index="5">
+                    <h2>
+                        <a href="//www.jd.ru/sale/pc/CWAsUH0VOu8aLN.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|_25" title="Приглашай друзей" target="_blank">Приглашай друзей</a>
+                    </h2>
+                </li>
+                                                                            <li data-index="6">
+                    <h2>
+                        <a href="https://www.jd.ru/sale/pc/bMomK4OjFUVEnh.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|_26" title="Оптом" target="_blank">Оптом</a>
+                    </h2>
+                </li>
+                                                </ul>
+</div><div class="top-slider J-top-slider">
+                    	    <div data-content="0" class="slider-content" style="background:">
+	        <div class="w">
+	            <a href="//www.jd.ru/sale/pc/8XNSzqKjGCOYtQ.html" target="_blank" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45140_21">
+	                <img width="1900" height="510" src="//img10.joybuy.com/tuangou/jfs/t1/76807/7/11417/233787/5d901edaE72dd3d49/6f8451fb0924cb15.png" alt="">
+	            </a>
+	        </div>
+	    </div>
+	                 	    <div data-content="1" class="slider-content hide" style="background:">
+	        <div class="w">
+	            <a href="//www.jd.ru/651104291.html" target="_blank" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45140_22">
+	                <img width="1900" height="510" src="//img10.joybuy.com/tuangou/jfs/t1/69780/19/11696/116624/5d901f12E790c614c/204c1ad70c839211.png" alt="">
+	            </a>
+	        </div>
+	    </div>
+	                 	    <div data-content="2" class="slider-content hide" style="background:">
+	        <div class="w">
+	            <a href="//www.jd.ru/600912890.html" target="_blank" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45140_23">
+	                <img width="1900" height="510" src="//img10.joybuy.com/tuangou/jfs/t1/55259/23/12054/101149/5d901f54E042f2c09/1441026348d010f4.png" alt="">
+	            </a>
+	        </div>
+	    </div>
+	                 	    <div data-content="3" class="slider-content hide" style="background:">
+	        <div class="w">
+	            <a href="//www.jd.ru/600969718.html" target="_blank" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45140_24">
+	                <img width="1900" height="510" src="//img10.joybuy.com/tuangou/jfs/t1/47509/5/12188/465959/5d901f7fE62d4edbb/9d9655b537bc8a7a.jpg.dpg" alt="">
+	            </a>
+	        </div>
+	    </div>
+	                 <div class="w ctrl ctrl-btn">
+        <div class="ctrl-img">
+            <em class="icon-left"></em>
+        </div>
+        <div class="ctrl-img1">
+            <em class="icon-right"></em>
+        </div>
+    </div>
+    <div class="w ctrl-more">
+        <ul class="ctrl">
+                                                                  <li data-trigger="0" class="curr">0</li>
+                                                                        <li data-trigger="1">1</li>
+                                                                        <li data-trigger="2">2</li>
+                                                                        <li data-trigger="3">3</li>
+                                                      </ul>
+    </div>
+</div>
+<div class="clb"></div>
+
+
+
+<!-- seckill today -->
+<div class="seckill w">
+    <div class="content">
+    <div class="sk-title">
+        <div class="sk-name"><div>Быстрые сделки</div><div class="sk-tip">До конца акции</div></div>
+        <div class="sk-time clearfix">
+            <div class="sk-t-block">
+                <div class="sk-t-time j-sk-hr"></div>
+                <div class="sk-t-unit">HR</div>
+            </div>
+            <div class="sk-t-block">
+                <div class="sk-t-time j-sk-min"></div>
+                <div class="sk-t-unit">MIN</div>
+            </div>
+            <div class="sk-t-block">
+                <div class="sk-t-time j-sk-sec"></div>
+                <div class="sk-t-unit">SEC</div>
+            </div>
+        </div>
+                    <div class="sk-all">
+                <a href="https://www.jd.ru/superdeals/detail.html" target="_blank" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45141_2">
+                    Больше <i class="icon-right"></i>
+                </a>
+            </div>
+            </div>
+    <ul class="sk-column">
+                                	                <li class="sk-item" data-sku="600947373" data-promoid="11532830">
+                    <a href="//www.jd.ru/600947373.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45141_21" class="sk-img-w">
+                          <img src="//img11.joybuy.com/N0/s300x300_jfs/t29275/77/1449238640/202537/7f7ff8b7/5ce27f3aNbdb18f22.jpg.dpg" alt="" width="300" height="300">
+                    <div class="solds hide J-som-600947373 J-sop-11532830">
+                      <img src="//img20.360buyimg.com/devfe/jfs/t1/32583/17/10128/15583/5cad5532E85ad497c/85d1bf4dcb85aae1.png" style="width: 90px;height: 90px;margin: 0px;">
+                 </div>
+                      </a>
+                    <div class="sk-info">
+                        <div class="price-container">
+                            <p class="price J-p-600947373 J-p-11532830">$ 5768.51</p>
+                            <p class="price-ori"><span class="decoration J-jdp-600947373 J-jdp-11532830"></span>  |（<span class="J-dr-600947373"></span>）</p>
+                        </div>
+                    </div>
+                    <a href="//www.jd.ru/600947373.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45141_21" class="over-layer" target="_blank">
+                        <div class="content-text">Coolpad Cool Play 7C 4 ГБ + 64 ГБ на весь экран мобильного Unicom Telecom Netcom 4G мобильный телефон двойной карточки двойной режим ожидания голубой</div>
+                    </a>
+                </li>
+                                        	                <li class="sk-item" data-sku="600893221" data-promoid="11532828">
+                    <a href="//www.jd.ru/600893221.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45141_22" class="sk-img-w">
+                          <img src="//img11.joybuy.com/N0/s300x300_jfs/t1/19799/28/11452/91443/5c8f86aeEb9264f79/f545e3fcbee1c55a.jpg.dpg" alt="" width="300" height="300">
+                    <div class="solds hide J-som-600893221 J-sop-11532828">
+                      <img src="//img20.360buyimg.com/devfe/jfs/t1/32583/17/10128/15583/5cad5532E85ad497c/85d1bf4dcb85aae1.png" style="width: 90px;height: 90px;margin: 0px;">
+                 </div>
+                      </a>
+                    <div class="sk-info">
+                        <div class="price-container">
+                            <p class="price J-p-600893221 J-p-11532828">$ 24820.22</p>
+                            <p class="price-ori"><span class="decoration J-jdp-600893221 J-jdp-11532828"></span>  |（<span class="J-dr-600893221"></span>）</p>
+                        </div>
+                    </div>
+                    <a href="//www.jd.ru/600893221.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45141_22" class="over-layer" target="_blank">
+                        <div class="content-text">Смартфон Black Shark 2, 6 Гб+128 Гб</div>
+                    </a>
+                </li>
+                                        	                <li class="sk-item" data-sku="600907403" data-promoid="11529358">
+                    <a href="//www.jd.ru/600907403.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45141_23" class="sk-img-w">
+                          <img src="//img13.joybuy.com/N0/s300x300_jfs/t1/33012/17/6108/87002/5cbd2e58Ecc463fcc/45d32c148ce72b7d.jpg.dpg" alt="" width="300" height="300">
+                    <div class="solds hide J-som-600907403 J-sop-11529358">
+                      <img src="//img20.360buyimg.com/devfe/jfs/t1/32583/17/10128/15583/5cad5532E85ad497c/85d1bf4dcb85aae1.png" style="width: 90px;height: 90px;margin: 0px;">
+                 </div>
+                      </a>
+                    <div class="sk-info">
+                        <div class="price-container">
+                            <p class="price J-p-600907403 J-p-11529358">$ 2078.92</p>
+                            <p class="price-ori"><span class="decoration J-jdp-600907403 J-jdp-11529358"></span>  |（<span class="J-dr-600907403"></span>）</p>
+                        </div>
+                    </div>
+                    <a href="//www.jd.ru/600907403.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45141_23" class="over-layer" target="_blank">
+                        <div class="content-text">MI весы 2 домашние медицинские весы электронные весы под названием высокоточные человеческие весы двойного режима изме</div>
+                    </a>
+                </li>
+                                        	                <li class="sk-item" data-sku="653918813" data-promoid="11464826">
+                    <a href="//www.jd.ru/653918813.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45141_24" class="sk-img-w">
+                          <img src="//img10.joybuy.com/N0/s300x300_jfs/t1/68100/19/6677/35514/5d4ec05cE91fbf19b/4a040a75fe39b88d.jpg.dpg" alt="" width="300" height="300">
+                    <div class="solds hide J-som-653918813 J-sop-11464826">
+                      <img src="//img20.360buyimg.com/devfe/jfs/t1/32583/17/10128/15583/5cad5532E85ad497c/85d1bf4dcb85aae1.png" style="width: 90px;height: 90px;margin: 0px;">
+                 </div>
+                      </a>
+                    <div class="sk-info">
+                        <div class="price-container">
+                            <p class="price J-p-653918813 J-p-11464826">$ 1003.57</p>
+                            <p class="price-ori"><span class="decoration J-jdp-653918813 J-jdp-11464826"></span>  |（<span class="J-dr-653918813"></span>）</p>
+                        </div>
+                    </div>
+                    <a href="//www.jd.ru/653918813.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45141_24" class="over-layer" target="_blank">
+                        <div class="content-text">Sonax Pro Электрическая машинка для стрижки волос Борода для стрижки волос Бритва для укладки волос Бритва</div>
+                    </a>
+                </li>
+                                        	                <li class="sk-item" data-sku="651291490" data-promoid="11528004">
+                    <a href="//www.jd.ru/651291490.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45141_25" class="sk-img-w">
+                          <img src="//img11.joybuy.com/N0/s300x300_jfs/t24208/122/1916214402/122761/649f15c1/5b6d5de1N89ded90e.jpg.dpg" alt="" width="300" height="300">
+                    <div class="solds hide J-som-651291490 J-sop-11528004">
+                      <img src="//img20.360buyimg.com/devfe/jfs/t1/32583/17/10128/15583/5cad5532E85ad497c/85d1bf4dcb85aae1.png" style="width: 90px;height: 90px;margin: 0px;">
+                 </div>
+                      </a>
+                    <div class="sk-info">
+                        <div class="price-container">
+                            <p class="price J-p-651291490 J-p-11528004">$ 523.25</p>
+                            <p class="price-ori"><span class="decoration J-jdp-651291490 J-jdp-11528004"></span>  |（<span class="J-dr-651291490"></span>）</p>
+                        </div>
+                    </div>
+                    <a href="//www.jd.ru/651291490.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45141_25" class="over-layer" target="_blank">
+                        <div class="content-text">новая продажа 250g Бесплатная доставка Знаменитый чай здравоохранения Тайвань Донг Дин Женьшень Oolong чай Женьшень Oolong женьшеня чай + подарок Бесплатный shipp</div>
+                    </a>
+                </li>
+                                        	                <li class="sk-item" data-sku="600517989" data-promoid="11533748">
+                    <a href="//www.jd.ru/600517989.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45141_26" class="sk-img-w">
+                          <img src="//img14.joybuy.com/N0/s300x300_jfs/t1/2606/10/9785/155126/5bae0b5bE438d3d13/9cdf497bbf07e573.jpg.dpg" alt="" width="300" height="300">
+                    <div class="solds hide J-som-600517989 J-sop-11533748">
+                      <img src="//img20.360buyimg.com/devfe/jfs/t1/32583/17/10128/15583/5cad5532E85ad497c/85d1bf4dcb85aae1.png" style="width: 90px;height: 90px;margin: 0px;">
+                 </div>
+                      </a>
+                    <div class="sk-info">
+                        <div class="price-container">
+                            <p class="price J-p-600517989 J-p-11533748">$ 2883.92</p>
+                            <p class="price-ori"><span class="decoration J-jdp-600517989 J-jdp-11533748"></span>  |（<span class="J-dr-600517989"></span>）</p>
+                        </div>
+                    </div>
+                    <a href="//www.jd.ru/600517989.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45141_26" class="over-layer" target="_blank">
+                        <div class="content-text">Компьютерная мышь Logitech (G) MX518</div>
+                    </a>
+                </li>
+                                        	                <li class="sk-item" data-sku="600262670" data-promoid="11525559">
+                    <a href="//www.jd.ru/600262670.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45141_27" class="sk-img-w">
+                          <img src="//img12.joybuy.com/N0/s300x300_jfs/t17791/272/4548710/49559/762064c/5a571febN9ad1d8db.jpg.dpg" alt="" width="300" height="300">
+                    <div class="solds hide J-som-600262670 J-sop-11525559">
+                      <img src="//img20.360buyimg.com/devfe/jfs/t1/32583/17/10128/15583/5cad5532E85ad497c/85d1bf4dcb85aae1.png" style="width: 90px;height: 90px;margin: 0px;">
+                 </div>
+                      </a>
+                    <div class="sk-info">
+                        <div class="price-container">
+                            <p class="price J-p-600262670 J-p-11525559">$ 200.58</p>
+                            <p class="price-ori"><span class="decoration J-jdp-600262670 J-jdp-11525559"></span>  |（<span class="J-dr-600262670"></span>）</p>
+                        </div>
+                    </div>
+                    <a href="//www.jd.ru/600262670.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45141_27" class="over-layer" target="_blank">
+                        <div class="content-text">Ортопедические стельки ELEFT</div>
+                    </a>
+                </li>
+                                        	                <li class="sk-item" data-sku="600137702" data-promoid="11532845">
+                    <a href="//www.jd.ru/600137702.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45141_28" class="sk-img-w">
+                          <img src="//img11.joybuy.com/N0/s300x300_jfs/t6265/174/580418271/84245/48933633/5941f79aN0ffd7185.jpg.dpg" alt="" width="300" height="300">
+                    <div class="solds hide J-som-600137702 J-sop-11532845">
+                      <img src="//img20.360buyimg.com/devfe/jfs/t1/32583/17/10128/15583/5cad5532E85ad497c/85d1bf4dcb85aae1.png" style="width: 90px;height: 90px;margin: 0px;">
+                 </div>
+                      </a>
+                    <div class="sk-info">
+                        <div class="price-container">
+                            <p class="price J-p-600137702 J-p-11532845">$ 871.41</p>
+                            <p class="price-ori"><span class="decoration J-jdp-600137702 J-jdp-11532845"></span>  |（<span class="J-dr-600137702"></span>）</p>
+                        </div>
+                    </div>
+                    <a href="//www.jd.ru/600137702.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45141_28" class="over-layer" target="_blank">
+                        <div class="content-text">Лампочка Xiaomi Philips Smart Bulb E27, 6.5Вт</div>
+                    </a>
+                </li>
+                                        	                        	                        </ul>
+    </div>
+</div>
+<div class="terms-service">
+    <div class="title">Наш сервис</div>
+    <div class="content">
+        <a class="item" href="//help.jd.ru/help/question-325.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45142_0" target="_blank">
+            <div class="free-icon"></div>
+            <div style="flex: 1;">
+                <div class="label" >Бесплатная доставка<i class="icon-right"></i></div>
+                <div class="des">
+                    Бесплатная доставка товаров Коллекции  JD
+                </div>
+            </div>
+        </a>
+        <a class="item" href="//help.jd.ru/help/question-388.html"  clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45142_1" t target="_blank">
+            <div class="pay-icon"></div>
+            <div style="flex: 1;">
+                <div class="label">Безопасная оплата<i class="icon-right"></i></div>
+                <div class="des">
+                    Самые безопасные способы оплаты
+                </div>
+            </div>
+        </a>
+        <a class="item" href="//help.jd.ru/help/question-list-255.html" target="_blank"  clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45142_2">
+            <div class="day-icon"></div>
+            <div style="flex: 1;">
+                <div class="label" >Возврат товаров<i class="icon-right"></i></div>
+                <div class="des">
+                    Быстрый возврат бракованных товаров
+                </div>
+            </div>
+        </a>
+        <a class="item" href="//help.jd.ru/help/question-73.html" target="_blank"  clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45142_3">
+            <div class="cus-icon"></div>
+            <div style="flex: 1;">
+                <div class="label">Ответ в течение 24ч<i class="icon-right"></i></div>
+                <div class="des">
+                    Ответ на все вопросы в течение 24ч.
+                </div>
+            </div>
+        </a>
+    </div>
+</div><div class="w  jian">
+    <div class="hover c_title">
+        Каталог товаров
+           </div>
+</div>
+    <div class="tjlm">
+                 <a class="tjlm-content" href="//www.jd.ru/category/875064285-phones-accessories.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45154_2a1"  target="_blank">
+            <div class="tjlm-title">Смартфоны</div>
+            <img src="//img10.joybuy.com/tuangou/jfs/t1/23152/33/11803/12763/5c924c9fEf477ad65/e85458ee7ff5e111.png" width="198" height="200">
+            <span></span>
+        </a>
+                <a class="tjlm-content" href="//www.jd.ru/category/875072078-home-appliances.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45154_2a2"  target="_blank">
+            <div class="tjlm-title">Бытовая техника</div>
+            <img src="//img10.joybuy.com/tuangou/jfs/t1/27489/35/11561/8783/5c924ca9E697953e1/4ec32e16f7d26681.png" width="198" height="200">
+            <span></span>
+        </a>
+                <a class="tjlm-content" href="//www.jd.ru/category/875065256-consumer-electronics.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45154_2a3"  target="_blank">
+            <div class="tjlm-title">Электроника</div>
+            <img src="//img10.joybuy.com/tuangou/jfs/t1/20606/6/11749/7310/5c924cb1Eba9d19d3/2119d14235a10366.png" width="198" height="200">
+            <span></span>
+        </a>
+                <a class="tjlm-content" href="//www.jd.ru/category/875063304-home-garden.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45154_2a4"  target="_blank">
+            <div class="tjlm-title">Товары для дома</div>
+            <img src="//img10.joybuy.com/tuangou/jfs/t1/32065/23/6878/22988/5c924cb9E27f45b54/4253c4741e291719.png" width="198" height="200">
+            <span></span>
+        </a>
+                <a class="tjlm-content" href="//www.jd.ru/category/875063307-sports-outdoors.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45154_2a5"  target="_blank">
+            <div class="tjlm-title">Спорт и отдых</div>
+            <img src="//img10.joybuy.com/tuangou/jfs/t1/21373/21/11764/9851/5c924cc0E746356f7/96e5a853b83e6c73.png" width="198" height="200">
+            <span></span>
+        </a>
+                <a class="tjlm-content" href="//www.jd.ru/category/875063305-health-beauty.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45154_2a6"  target="_blank">
+            <div class="tjlm-title">Красота и здоровье</div>
+            <img src="//img10.joybuy.com/tuangou/jfs/t1/20821/9/11777/13677/5c924cc8E98455eef/01beefc87e8bc3fc.png" width="198" height="200">
+            <span></span>
+        </a>
+             </div><div class="boss-intro-wrap jptj jian">
+    <div class="c_title">
+        Рекомендуем
+    </div>
+    <div class="pr">
+       <div class="leftimg" style="background-image: url(http://static.joybuy.com/ept/home-ru/1.2.0/components/base/i/img1-left.png);"></div>
+        <div class="oh">
+                         <a class="img1" target="_blank"  href="https://www.jd.ru/600917419.html" style="background: url(//img10.joybuy.com/N0/s590x520_jfs/t1/47823/7/12122/62112/5d902040E962fa677/9a1fc9e72f88d755.png) no-repeat; "    clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45156_20">
+                <div class="sku">
+                    <span class="c_redline"></span>
+                    <span data-sku="600917419" data-promoid="0">Портативный микрофон со скидкой</span>
+                </div>
+                <div class="g_title" title="Cтерео-микрофон ZOOM iQ7 для iPhone, iPad, iPod Touch">
+                    Cтерео-микрофон ZOOM iQ7 для iPhone, iPad, iPod Touch</div>
+                <div class="price J-p-600917419" data-sku="600917419">
+                    5366.01</div>
+
+            </a>
+                           <a class="img23" target="_blank" href="https://www.jd.ru/600961650.html"    clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45156_2a1">
+                <img src="//img13.360buyimg.com/tuangou/jfs/t1/56503/35/12165/14806/5d9020ffE78252a6b/c15da4f62a8cff76.png" width="270px" height="520px">
+                <span class="cxy">
+                <span class="c_redline"></span>
+                <span class="cxy_content">Новое поступление</span>
+                <span class="g_title" title="Электрическая зубная щетка SID PT703 (работает от батарейки)">
+                    Электрическая зубная щетка SID PT703 (работает от батарейки)
+                </span>
+                <span class="g_price J-p-600961650"  data-sku="600961650">
+                   737.25
+                </span>
+                </span>
+            </a>
+                        <a class="img23" target="_blank" href="https://www.jd.ru/600125153.html"    clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45156_2a2">
+                <img src="//img12.360buyimg.com/tuangou/jfs/t1/70312/5/11585/6880/5d902105Ef330dc1b/dd59bd94c51d9992.png" width="270px" height="520px">
+                <span class="cxy">
+                <span class="c_redline"></span>
+                <span class="cxy_content">Скидка 28%</span>
+                <span class="g_title" title="Светодиодная лампа Panasonic HHLA0417CB 5Вт">
+                    Светодиодная лампа Panasonic HHLA0417CB 5Вт
+                </span>
+                <span class="g_price J-p-600125153"  data-sku="600125153">
+                   2347.92
+                </span>
+                </span>
+            </a>
+                     </div>
+    </div>
+</div>
+<script type="text/javascript">
+define('MOD_ROOT/seckill1/seckill1', function (require, exports) {
+    var utils = require('MOD_ROOT/base/utils');
+    function init() {
+        utils.loadPrice($('.jptj'))
+    }
+    exports.init = init;
+});
+seajs.use('MOD_ROOT/seckill1/seckill1',function(t){
+t.init()
+})
+</script><div class="coupons w floor jian whcp clearfix">
+    <div class="c_title"> Обсуждаемые товары </div>
+    <div class="coupons-list swiper-container" data-visible="3" data-loop="true">
+        <div data-wrap>
+            <ul class="swiper-wrapper" data-body>
+                                <li data-item class="coupon-item swiper-carousel  show-now">
+                    <a target="_blank" title="Настольная лампа Xiaomi Philips Eyecare Smart Lamp 2" href="https://www.jd.ru/3297497.html"   clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45157_11">
+                        <img src="//img13.joybuy.com/tuangou/jfs/t1/80408/4/11592/30958/5d9021e2E4380bde2/0aca9640dbcc4897.png"  width="390" height="160" />
+                        <div class="lb-content">
+                            <div class="cxy">
+                                Настольная лампа Xiaomi Philips Eyecare Smart Lamp 2
+                            </div>
+                            <div class="commentator"><span class="c_redline"></span> о***а</div>
+                            <div class="comments"> Заказ доставили быстро, в заводской запечатанной упаковке. Очень доволен покупкой, все оригинальное. Прошил самостоятельно</div>
+                        </div>
+                    </a>
+                    <a target="_blank" title="Настольная лампа Xiaomi Philips Eyecare Smart Lamp 2" class="show-now-text" href="https://www.jd.ru/3297497.html"  clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45157_11">
+                        <span class="j-biankuang" style="left:0;top:0;  ">  </span>
+                        <span class="j-biankuang" style="right:0;top:0; transform: rotate(90deg); ">  </span>
+                        <span class="j-biankuang" style="left:0;bottom:0; transform: rotate(-90deg); ">  </span>
+                        <span class="j-biankuang" style="right:0;bottom:0; transform: rotate(180deg); ">  </span>
+                        <span class="goodtitle">Настольная лампа Xiaomi Philips Eyecare Smart Lamp 2</span>
+                        <span class="shownow">Купить <i class="icon-right"></i></span>
+                    </a>
+                </li>
+                                <li data-item class="coupon-item swiper-carousel  show-now">
+                    <a target="_blank" title="Хлопковое полотенце Xiaomi ZSH A-life, зеленое 34cm*34cm" href="https://www.jd.ru/600188144.html"   clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45157_12">
+                        <img src="//img11.joybuy.com/tuangou/jfs/t1/75707/36/11723/25052/5d9021cfEf3446862/5eff42ccdb1238cd.png"  width="390" height="160" />
+                        <div class="lb-content">
+                            <div class="cxy">
+                                Полотенце Xiaomi ZSH A-life
+                            </div>
+                            <div class="commentator"><span class="c_redline"></span> А***й</div>
+                            <div class="comments"> Отличные маленькие полотенца от известного бренда. Быстрая доставка. Отличное качество.</div>
+                        </div>
+                    </a>
+                    <a target="_blank" title="Хлопковое полотенце Xiaomi ZSH A-life, зеленое 34cm*34cm" class="show-now-text" href="https://www.jd.ru/600188144.html"  clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45157_12">
+                        <span class="j-biankuang" style="left:0;top:0;  ">  </span>
+                        <span class="j-biankuang" style="right:0;top:0; transform: rotate(90deg); ">  </span>
+                        <span class="j-biankuang" style="left:0;bottom:0; transform: rotate(-90deg); ">  </span>
+                        <span class="j-biankuang" style="right:0;bottom:0; transform: rotate(180deg); ">  </span>
+                        <span class="goodtitle">Хлопковое полотенце Xiaomi ZSH A-life, зеленое 34cm*34cm</span>
+                        <span class="shownow">Купить <i class="icon-right"></i></span>
+                    </a>
+                </li>
+                                <li data-item class="coupon-item swiper-carousel  show-now">
+                    <a target="_blank" title="Сумка для бизнеса OIWAS 14-дюймовый рюкзак для ноутбука Водонепроницаемый нейлон 29L Casual Shoulder Bag" href="https://www.jd.ru/650473483.html"   clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45157_13">
+                        <img src="//img11.joybuy.com/tuangou/jfs/t1/60556/24/11545/30585/5d9021dcE6de5f37c/02cb97d0143efb67.png"  width="390" height="160" />
+                        <div class="lb-content">
+                            <div class="cxy">
+                                Многофункциональный 14-дюймовый рюкзак OIWAS
+                            </div>
+                            <div class="commentator"><span class="c_redline"></span> A***i</div>
+                            <div class="comments"> Быстрая доставка, качественный рюкзак полностью соответствующий описанию. Удобная твёрдая спинка и много отделений!</div>
+                        </div>
+                    </a>
+                    <a target="_blank" title="Сумка для бизнеса OIWAS 14-дюймовый рюкзак для ноутбука Водонепроницаемый нейлон 29L Casual Shoulder Bag" class="show-now-text" href="https://www.jd.ru/650473483.html"  clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45157_13">
+                        <span class="j-biankuang" style="left:0;top:0;  ">  </span>
+                        <span class="j-biankuang" style="right:0;top:0; transform: rotate(90deg); ">  </span>
+                        <span class="j-biankuang" style="left:0;bottom:0; transform: rotate(-90deg); ">  </span>
+                        <span class="j-biankuang" style="right:0;bottom:0; transform: rotate(180deg); ">  </span>
+                        <span class="goodtitle">Сумка для бизнеса OIWAS 14-дюймовый рюкзак для ноутбука Водонепроницаемый нейлон 29L Casual Shoulder Bag</span>
+                        <span class="shownow">Купить <i class="icon-right"></i></span>
+                    </a>
+                </li>
+                            </ul>
+        </div>
+        <div data-prev class="s_button">
+            <em class="icon-left"></em>
+        </div>
+        <div data-next   class="s_button s_button-next">
+            <em class="icon-left"></em>
+        </div>
+    </div>
+</div>
+  
+                <a  href="//www.jd.ru/sale/pc/dbH84GXsOrIvD.html" target="_blank"   clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45155_1tl"  class="boss-intro-wrap tlgg"> 
+                    <img data-fscreen src="//img10.joybuy.com/tuangou/jfs/t1/30393/7/8237/180573/5c9dd792Ee2b11fb4/c8e409075e371527.png">
+                </a> 
+ 
+<div class="keywords  w">
+          <h3 class="title">Популярные запросы</h3>
+    <p>
+                    <a href="//www.jd.ru/discount/power-banks.html"  clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45158_2a1"  title=" ">зарядные устройства</a>,                    <a href="//www.jd.ru/discount/headphones.html"  clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45158_2a2"  title=" ">наушники</a>,                    <a href="//www.jd.ru/discount/power-tools.html"  clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45158_2a3"  title=" ">электроинструменты</a>,                    <a href="//www.jd.ru/discount/sports-shoes.html"  clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45158_2a4"  title=" ">спортивная обувь</a>,                    <a href="//www.jd.ru/discount/socks-shoes.html"  clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45158_2a5"  title=" ">носки и обувь</a>,                    <a href="//www.jd.ru/discount/men-coats.html"  clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45158_2a6"  title=" ">мужские куртки</a>,                    <a href="//www.jd.ru/discount/underwater-murals.html"  clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45158_2a7"  title=" ">настенные обои</a>,                    <a href="//www.jd.ru/discount/baby-shoes.html"  clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45158_2a8"  title=" ">детская обувь</a>,                    <a href="//www.jd.ru/discount/baby-thermometer.html"  clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45158_2a9"  title=" ">детский термометр</a>,                    <a href="//www.jd.ru/discount/hair-clippers.html"  clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45158_2a10"  title=" ">заколки для волос</a>,                    <a href="//www.jd.ru/discount/business-luggage.html"  clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45158_2a11"  title=" ">чемоданы</a>            </p>
+</div>
+ <!-- 吸底宣传图 -->
+
+
+<div class="aside" data-a="a">
+        <ul class="aside-list clearfix">
+            <li class="aside-item aside-item-show aside-cart" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45160_17">
+                <div class="aside-item-container">
+                    <p><i  class="jian-icon-card"  oldclass="icon-cart"></i></p>
+                </div>
+                <div class="aside-floating">
+                    <a href="//cart.jd.ru/cart/cart.html" class="aside-f-onlywords">Мои покупки</a>
+                </div>
+            </li>
+            <li class="aside-item" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45160_18">
+                <div class="aside-item-container">
+                    <p><i class="icon-get-coupons"></i></p>
+                </div>
+                <div class="aside-floating">
+                    <a href="//my.jd.ru/coupon/myCoupon.do" class="aside-f-onlywords">Мои купоны</a>
+                </div>
+            </li>
+            <li class="aside-item aside-wish" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45160_19">
+                <div class="aside-item-container">
+                    <p><i class="icon-wish"></i></p>
+                </div>
+                <div class="aside-floating">
+                    <a href="//my.jd.ru/wishlist/myWishlist.do" class="aside-f-onlywords">Любимые товары</a>
+                </div>
+            </li>
+            <li class="aside-item" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45160_20">
+                <div class="aside-item-container">
+                    <p><i class="icon-subscrlbe"></i></p>
+                </div>
+                <div class="aside-floating">
+                    <header class="aside-f-header">Подписка: информация о самых новых скидках</header>
+                    <div class="aside-f-content">
+                        <p><span class="red">*</span>Ваш email:</p>
+                        <input type="text" class="aside-f-input aside-subscription-val" />
+                        <p class="aside-subscription-result"></p>
+                        <button class="aside-f-btn aside-subscription" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45160_24">Подписаться</button>
+                    </div>
+                </div>
+            </li>
+            <li class="aside-item aside-feedback" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45160_21">
+                <div class="aside-item-container">
+                    <p><i class="icon-feedback"></i></p>
+                </div>
+                <div class="aside-floating">
+                    <header class="aside-f-header">
+                            Обратная связь:
+                        <p class="aside-f-header-tip">Что вы думаете о нашем сайте? Помогите сделать его лучше</p>
+                    </header>
+                    <div class="aside-f-content">
+                        <p>
+                            <span class="red">*</span>Оставьте ваши комментарии внизу:
+                            <span class="aside-fdk-number">0/1000</span>
+                        </p>
+                        <textarea class="aside-fdk-text"></textarea>
+                        <p class="floating-fdk-warn sub-error"><span class="red">*</span>Пожалуйста введите существующий электронный адрес</p>
+                        <p><span class="red">*</span>Ваш email</p>
+                        <input type="text" class="aside-f-input aside-fdk-email" />
+                        <div class="aside-fdk-email-warn sub-error"></div>
+                        <button class="aside-f-btn aside-fdk-submit" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45160_25">Отправить</button>
+                        <div class="aside-fdk-result"></div>
+                    </div>
+                </div>
+            </li>
+            <li class="aside-item aside-shopon" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45160_22">
+                <div class="aside-item-container">
+                    <p><i class="icon-app"></i></p>
+                </div>
+                <div class="aside-floating">
+                    <header class="aside-f-header">
+                            Скачать приложение：
+                        <p class="aside-f-header-tip">Быстрый доступ к лучшим товарам в вашем кармане</p>
+                    </header>
+                    <div class="aside-f-content">
+                        <div clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45160_26">
+                            <a href="//play.google.com/store/apps/details?id=jd.cbt.android.market.russia&ddl=1&pcampaignid=web_ddl_1&rdid=jd.cbt.android.market.russia"><img src="//static.joybuy.com/aui/1.0.0/css/i/blank.png" data-source="//img10.joybuy.com/N0/s120x35_jfs/t13879/231/1421370200/3667/636ea0c5/5a1fd0ccN54abfcc1.jpg.dpg" alt=""></a>
+                        </div>
+                        <div clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45160_27">
+                            <a href="//itunes.apple.com/us/app/jd.ru/id1070047683?mt=8"><img src="//static.joybuy.com/aui/1.0.0/css/i/blank.png" data-source="//img10.joybuy.com/N0/s120x35_jfs/t13249/15/30768682/3887/e5739f6b/5a1fd0beN2080f158.jpg.dpg" alt=""></a>
+                        </div>
+                        <div>
+                            <img src="//static.joybuy.com/aui/1.0.0/css/i/blank.png" data-source="//img10.joybuy.com/devfe/jfs/t26257/175/938616406/1733/f8e4fd30/5bbc5591N79fb074f.png" width="120" height="120" alt="">
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="aside-backtop aside-item-show" clstag="ept_ru_homepage|keycount|ept_ru_homepage_4796|45160_23">
+            <i class="tri"></i>
+            <p>TOP</p>
+        </div>
+    </div>
+<footer class="footer">
+    <div class="w footer-w">
+        <div class="mod-service">
+            <div class="mod-service-item">
+                <div class="item-icon payment"> </div>
+                <div class="item-title">
+                    <h4>Безопасная оплата</h4>
+                </div>
+                <div class="item-desc">
+                    <p>Совершайте платежи с популярными и безопасными методами</p>
+                </div>
+            </div>
+            <div class="mod-service-item">
+                <div class="item-icon day"> </div>
+                <div class="item-title">
+                    <h4>Возврат товаров в течение 30 дней</h4>
+                </div>
+                <div class="item-desc">
+                    <p>Мы гарантируем возврат товара, если он не соответствует описанию или плохого качества</p>
+                </div>
+            </div>
+            <div class="mod-service-item">
+                <div class="item-icon help"> </div>
+                <div class="item-title">
+                    <h4>Ответ в течение 24 часов</h4>
+                </div>
+                <div class="item-desc">
+                    <p>Мы ответим на все ваши вопросы в течение 24 ч.</p>
+                </div>
+            </div>
+            <div class="mod-service-item">
+                <div class="item-icon delivery"> </div>
+                <div class="item-title">
+                    <h4>Доставка по всему миру</h4>
+                </div>
+                <div class="item-desc">
+                    <p>Доставка в более 200 стран и регионов</p>
+                </div>
+            </div>
+            <div class="mod-service-item">
+                <div class="item-icon brands"> </div>
+                <div class="item-title">
+                    <h4>Выбор международных брендов</h4>
+                </div>
+                <div class="item-desc">
+                    <p>100% Производители брендов</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="mod-about mod-joybuy">
+            <h6>О JD.RU</h6>
+            <div class="about-joybuy">
+                <p>JD.com- крупнейшая китайская компания, занимающаяся электронной торговлей и коммерцией,
+                    расположенная в г. Пекин. JD.ru – это русскоязычная версия сайта JD.com.</p>
+                <p>JD.ru предлагает широкий ассортимент товаров по самым выгодным ценам! На нашем сайте вы найдете
+                    <a href="//www.jd.ru/category/875061538-phones-accessories.html">смартфоны</a>, <a href="//www.jd.ru/category/875061487-laptops-tablets.html">ноутбуки</a>,
+                    <a href="//www.jd.ru/category/875062507-digital.html">смарт и бытовую технику для дома</a>, <a href="//www.jd.ru/category/875061819-women-clothing.html">одежду и аксессуары</a>,
+                    <a href="//www.jd.ru/category/875062819-toys-kids-baby.html">детские игрушки</a> и многое
+                    другое!</p>
+                <p>Будучи крупнейшей компанией в сфере электронной торговли и коммерции в Китае, JD.com предлагает
+                    совершенно инновационное видение <a href="//www.jd.ru">онлайн-шоппинга</a> для своих пользователей, число которых сейчас
+                    составляет около 200 миллионов человек.</p>
+                <p>В мае 2014 года JD.com провела первичное размещение акций на фондовой бирже NASDAQ. В ходе
+                    размещения компании удалось привлечь $1,78 млрд., выставив цену акции выше предполагаемой. JD.com
+                    была оценена в $25,7 млрд, проведя крупнейшее китайское IPO в США.</p>
+                <p>Компания JD.com прилагает значительные усилия для разработки надежной масштабной интернет-платформы,
+                    которая не только обеспечит быстрый рост компании, но и предоставит лучшие передовые технологии и
+                    услуги своим бизнес-партнерам и клиентам.</p>
+                <i class="ficon fi-bottom" onclick="$(this).parent().toggleClass('open')"></i>
+            </div>
+        </div>
+        <div class="mod-about mod-keywords">
+            <h6>Узнать больше</h6>
+            <div class="find-more">
+                <p>
+                    Просмотреть По Алфавиту :
+                    <a href="//www.jd.ru/discount/sitemap-a.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_1">A</a>
+                    <a href="//www.jd.ru/discount/sitemap-b.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_2">B</a>
+                    <a href="//www.jd.ru/discount/sitemap-c.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_3">C</a>
+                    <a href="//www.jd.ru/discount/sitemap-d.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_4">D</a>
+                    <a href="//www.jd.ru/discount/sitemap-e.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_5">E</a>
+                    <a href="//www.jd.ru/discount/sitemap-f.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_6">F</a>
+                    <a href="//www.jd.ru/discount/sitemap-g.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_7">G</a>
+                    <a href="//www.jd.ru/discount/sitemap-h.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_8">H</a>
+                    <a href="//www.jd.ru/discount/sitemap-i.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_9">I</a>
+                    <a href="//www.jd.ru/discount/sitemap-j.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_10">J</a>
+                    <a href="//www.jd.ru/discount/sitemap-k.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_11">K</a>
+                    <a href="//www.jd.ru/discount/sitemap-l.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_12">L</a>
+                    <a href="//www.jd.ru/discount/sitemap-m.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_13">M</a>
+                    <a href="//www.jd.ru/discount/sitemap-n.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_14">N</a>
+                    <a href="//www.jd.ru/discount/sitemap-o.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_15">O</a>
+                    <a href="//www.jd.ru/discount/sitemap-p.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_16">P</a>
+                    <a href="//www.jd.ru/discount/sitemap-q.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_17">Q</a>
+                    <a href="//www.jd.ru/discount/sitemap-r.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_18">R</a>
+                    <a href="//www.jd.ru/discount/sitemap-s.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_19">S</a>
+                    <a href="//www.jd.ru/discount/sitemap-t.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_20">T</a>
+                    <a href="//www.jd.ru/discount/sitemap-u.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_11">U</a>
+                    <a href="//www.jd.ru/discount/sitemap-v.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_22">V</a>
+                    <a href="//www.jd.ru/discount/sitemap-w.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_23">W</a>
+                    <a href="//www.jd.ru/discount/sitemap-x.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_24">X</a>
+                    <a href="//www.jd.ru/discount/sitemap-y.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_25">Y</a>
+                    <a href="//www.jd.ru/discount/sitemap-z.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_26">Z</a>
+                    <a href="//www.jd.ru/discount/sitemap-0~9.html" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|21_27">0~9</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="mod-help clearfix">
+            <div class="mod-help-item-w">
+                <div class="mod-help-item">
+                    <div class="item-title">
+                        <h4>Компания JD</h4>
+                    </div>
+                    <div class="item-desc">
+                        <ul>
+                            <li><a href="//help.jd.ru/help/question-65.html" target="_blank" rel="nofollow" clstag="homepage|keycount|ept|footer_link1_bottom1" title="О нас">О нас</a></li>
+                            <li><a href="//help.jd.ru/help/question-254.html" target="_blank" rel="nofollow" clstag="homepage|keycount|ept|footer_link1_bottom2" title="О коллекции JD">О коллекции JD</a></li>
+                            <li><a href="//ir.jd.com/phoenix.zhtml?c=253315&p=irol-IRHome" target="_blank" rel="nofollow" clstag="homepage|keycount|ept|footer_link1_bottom3" title="Для инвесторов">Для инвесторов</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mod-help-item-w">
+                <div class="mod-help-item">
+                    <div class="item-title">
+                        <h4>Зарабатывайте вместе с нами</h4>
+                    </div>
+                    <div class="item-desc">
+                        <ul>
+                            <li><a href="//help.jd.ru/preview/7d49ea75ee490fe698cc17c780e7cc39/68/3/view.html" rel="nofollow" clstag="homepage|keycount|ept|footer_link2_bottom1" title="Продавайте на JD">Продавайте на JD</a></li>
+                            <li><a href="//help.jd.ru/preview/bce6ead3bcf35d7b03b7ed427f04696d/76/3/view.html" rel="nofollow" clstag="homepage|keycount|ept|footer_link2_bottom2" title="Стать партнерами">Стать партнерами</a></li>
+                            <li><a href="//help.jd.ru/preview/913520ec2c8563f0c0674c765a545e61/80/3/view.html" rel="nofollow" clstag="homepage|keycount|ept|footer_link2_bottom3" title="Ищем блоггеров">Ищем блоггеров</a></li>
+                            <li><a href="//www.jd.ru/sale/pc/Make-Money-Online_yvbBJpdm1uSn0YxI.html" rel="nofollow" clstag="homepage|keycount|ept|footer_link2_bottom4" title="JD справочник  заработок">JD справочник  заработок</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mod-help-item-w">
+                <div class="mod-help-item">
+                    <div class="item-title">
+                        <h4>Помощь</h4>
+                    </div>
+                    <div class="item-desc">
+                        <ul>
+                            <li><a href="//help.jd.ru/help/question-list-137.html" rel="nofollow" clstag="homepage|keycount|ept|footer_link3_bottom1" title="Мой аккуант">Мой аккуант</a></li>
+                            <li><a href="//help.jd.ru/help/question-list-142.html" rel="nofollow" clstag="homepage|keycount|ept|footer_link3_bottom2" title="Мои заказы">Мои заказы</a></li>
+                            <li><a href="//help.jd.ru/help/question-list-70.html" rel="nofollow" clstag="homepage|keycount|ept|footer_link3_bottom3" title="Оплата">Оплата</a></li>
+                            <li><a href="//help.jd.ru/help/question-list-211.html" rel="nofollow" clstag="homepage|keycount|ept|footer_link3_bottom4" title=" Доставка"> Доставка</a></li>
+                            <li><a href="//help.jd.ru/help/question-list-178.html" rel="nofollow" clstag="homepage|keycount|ept|footer_link3_bottom5" title="Возврат и обмен товаров ">Возврат и обмен товаров </a></li>
+                            <li><a href="//help.jd.ru/preview/23514309eee59f252bebaa410277d27e/485/3/view.html" rel="nofollow" clstag="homepage|keycount|ept|footer_link3_bottom5" title="Программа глобального партнерства JD.RU (ПГП)">Программа глобального партнерства JD.RU (ПГП)</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mod-help-item-w item-help_center">
+                <div class="mod-help-item">
+                    <div class="item-title">
+                        <h4>Условия и положения</h4>
+                    </div>
+                    <div class="item-desc">
+                        <ul>
+                            <li><a href="//help.jd.ru/help/question-166.html" rel="nofollow" clstag="homepage|keycount|ept|footer_link4_bottom1" title="Политика Конфиденциальности">Политика Конфиденциальности</a></li>
+                            <li><a href="//help.jd.ru/help/question-141.html" rel="nofollow" clstag="homepage|keycount|ept|footer_link4_bottom2" title="Правила и условия">Защита интеллектуальной собственности</a></li>
+                            <li><a href="//help.jd.ru/help/question-140.html" rel="nofollow" clstag="homepage|keycount|ept|footer_link4_bottom3" title="Правила полъзования сайтом для пользователей">Правила полъзования сайтом для пользователей</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mod-help-item-w">
+                <div class="mod-help-item">
+                    <div class="item-title">
+                        <h4>JD.com группа</h4>
+                    </div>
+                    <div class="item-desc">
+                        <ul>
+                            <li class="sc-site-item" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|133_002">
+                                <a class="clstag" href="//www.joybuy.com" title="joybuy.com" tagindex="4">Global Site</a>
+                            </li>
+                            <li class="sc-site-item" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|133_003">
+                                <a class="clstag" href="//www.jd.com" title="JD.com">中国站</a>
+                            </li>
+                            <li class="sc-site-item" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|133_004">
+                                <a class="clstag" href="//www.joybuy.es" title="joybuy.es">Sitio de España</a>
+                            </li>
+                            <li class="sc-site-item" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|133_005">
+                                <a class="clstag" href="//www.jd.id" title="JD.id">Situs Indonesia</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mod-info">
+            <div class="clearfix">
+                <div class="left">
+                    <div class="link line">
+                        <span>Следите за нами:</span>
+                        <a class="sprite-ico sprite-fb" href="//www.facebook.com/pages/JDCOM/861644700572405" title="FaceBook" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|330_023"></a>
+                        <a class="sprite-ico sprite-vk" href="//vk.com/jd" title="vk" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|330_026"></a>
+                        <a class="sprite-ico sprite-ok" href="//ok.ru/group/52653393641653" title="ok" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|330_027"></a>
+                        <a class="sprite-ico sprite-tel" href="//t.me/jdgoodsku" title="telegram" clstag="ept_ru_homepage|keycount|ept_ru_homepage_395|330_030"></a>
+                    </div>
+                    <br />
+                    <div class="paywith line">
+                        <div class="line-left">Способы оплаты:</div>
+                        <div class="line-right">
+                            <img src="//static.joybuy.com/aui/1.0.0/css/i/blank.png" data-src="//img10.joybuy.com/devfe/jfs/t1/8057/2/9618/10950/5c18b9a1Ece528c5e/e94c7bad5e58109a.png" alt="Способы оплаты">
+                            <i class="ficon fi-bottom" onclick="$(this).parent().toggleClass('open')"></i>
+                        </div>
+                    </div>
+                     <div class="verified-by line">
+                        <span>Проверено: </span>
+                        <span class="sprite-ico sprite-verified"></span>
+                    </div>
+                </div>
+                <div class="right clearfix">
+                    <div class="right-container">
+                        <div class="eme line"><span class="title"></span>
+                            <div class="eme-form" id="eme-form" data-tip="Пожалуйста введите существующий электронный адрес." data-success="Подписка успешно завершена." data-error="Подписка не удалась." data-thanks="Спасибо за подписку!">
+                                <button class="btn-subscribing" clstag="ept_ru_homepage|keycount|ept_ru_homepage_345|330_028">Подписаться</button>
+                                <input class="subscribe-email" type="text" placeholder="Введите адрес эл. почты" />
+                                <div class="subscribe-email-status"> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mod-copyright">
+            <p>Copyright © 2004-<span id="cr-full-year">2018</span> Jd.com, Inc. или ее филиалы. Все права защищены</p>
+            <script>document.getElementById('cr-full-year').innerText=(new Date()).getFullYear()</script>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+    seajs.use('MOD_ROOT/home-ru/home-ru', function(App) {
+        App.init(pageConfig)
+    });
+    $('body').addClass('_ru')
+</script>
+ 
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WFSLVN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<script>
+window.pageConfig2 = {
+        webPushUrl: {
+            notify: '//imsg.jd.com/webpush/push/notify.do',
+            authorize: '//imsg.jd.com/webpush/setting/auth.do',
+            forbid: 'https://imsg.jd.com/webpush/setting/forbid.do',
+            clickcallback: '//imsg.jd.com/webpush/click/callback.do'
+        }
+    };
+    seajs.config({
+        paths: {
+            MOD_WEB_PUSH_ROOT: '//static.360buyimg.com/ept/webpush/1.0.0/components'
+        }
+    });
+    seajs.use(['MOD_WEB_PUSH_ROOT/webpush/webpush'], function(FB) {
+        FB.init({
+            url: window.pageConfig2.webPushUrl
+        })
+    });
+</script>
+</body>
+</html>

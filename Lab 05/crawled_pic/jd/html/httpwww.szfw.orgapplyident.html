@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">		
+		<title>互联网信用认证平台-APP认证申请</title>
+		<meta name="keywords" content="诚信网站认证，诚信网站，网络诚信，诚信认证申请">
+		<meta name="description" content="北京盘石信用管理有限公司 互联网信用认证平台。互联网信用认证平台是由中国电子商务协会批准成立、并授权第三方负责运行管理的权威网站身份信息验证服务；是网站的“诚信身份证”，也是网民判别网站是否诚信的权威认证标识。">
+		<link href="/public/css/base.css" rel="stylesheet" type="text/css">
+		<link href="/public/css/sub.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="/public/js/jquery.js"></script>
+		<script type="text/javascript">
+		
+
+			function reloadCode(){
+				var src = $(".captcha").attr("src");
+				src += "?" + Math.random();
+				$(".captcha").attr("src", src);
+			}
+			function checkForm() {
+				var vcode = $("#vcode").val();
+				if($.trim(vcode).length != 4) {
+					alert("请正确输入验证码！");
+					return false;
+				}
+				
+				
+				var cpname = $.trim($("#cpname").val());
+				
+				var leng_name = cpname.match(/[^ -~]/g) == null ? cpname.length : cpname.length + cpname.match(/[^ -~]/g).length;
+
+				if(cpname == ""){
+					alert("公司名称不能为空！");
+					return false;
+				}
+				else if(leng_name<4 || leng_name>50){
+					alert("公司名称字符数量为4-50个！");
+					return false;
+				}
+				else if(((cpname.replace(/\s/g,'')).length != cpname.length)||(cpname.split(" ")).length == 0){
+					alert("公司名称中不能包含空格!");
+					return false;
+				}
+				
+				var cpaddr = $.trim($("#cpaddr").val());
+				if(cpaddr == ""){
+					alert("公司地址信息不能为空！");
+					return false;
+				}
+
+                var domain = $.trim($("#domain").val());
+                if(domain == ""){
+                    alert("认证网址不能为空！");
+                    return false;
+                }
+
+                var companytype = $.trim($("#companytype").val());
+                if(isNaN(companytype)){
+                    alert("企业性质不能为空！");
+                    return false;
+                }
+
+                var capital = $.trim($("#capital").val());
+                if(isNaN(capital)){
+                    alert("注册资金不能为空！");
+                    return false;
+                }
+
+				var linkman = $.trim($("#linkman").val());
+				if(linkman == ""){
+					alert("联系人信息不能为空！");
+					return false;
+				}
+				
+				var linkmanphone = $.trim($("#linkmanphone").val());
+				var isPhone = /^([0-9]{3,4})?-?[0-9]{7,8}$/;
+				var isMob=/^1\d{10}$/;
+				var isfof=/^400([0-9-]{8})\d{1}$/;
+				if(linkmanphone == "") {
+					alert("联系信电话号不能为空！");
+					return false;
+				}
+				else if(!isPhone.test(linkmanphone) && !isMob.test(linkmanphone) && !isfof.test(linkmanphone)){
+					alert("联系人电话号码格式不正确！");
+					return false;
+				}
+				
+				return  true;
+			}
+		
+		</script>		
+	</head>
+	<body>
+	<style>
+	/*新增*/
+	.header{
+		overflow: visible;
+	}
+	#navcontainer{
+		overflow: visible;
+	}
+	#nav{
+		overflow: visible;
+	}
+	#nav>li{
+		position: relative;
+		overflow: visible;
+		display: inline-block;
+	}
+	#nav li a{
+		overflow: visible;
+	}
+	#nav li:hover ul{
+		display: block;
+	}
+
+	#nav li ul{
+		position: absolute;
+		top: 38px;
+		left: -22px;
+		background: #cd0011;
+		display: none;
+		width: 120px;
+		z-index: 1;
+	}
+	#nav li ul li{
+		display: block;
+	}
+	#psnav li a{
+		float: none!important;
+	}
+</style>
+<div class="cont">
+<div class="header">
+	<div class="logo">
+					<div class="l-sign-register"><span class="l-sign"><a href="/Sass_Login/loginList.html">登录/注册</a></span></div>
+				<img src="/public/images/logo.jpg"></div>
+		<div id="navcontainer" style="background:#db0111">
+			<ul id="nav">
+				<li><a href="/" target="_self" >首页</a></li>
+				<li><a href="/article/list2/70/page.html" target="_self" >组织机构</a></li>
+				<li><a href="/article/list1/50/page.html" target="_self" >政策法规</a></li>
+				<li><a href="/article/list5/50/page.html" target="_self">产品介绍</a></li>
+				<li><a href="/article/list2/20/page.html" target="_self">认证申请</a></li>
+				<li><a href="/article/list2/80/page.html" target="_self" >认证服务案例</a></li>
+				<li><a href="/Rank/province.html" target="_self" >信用品牌排名</a></li>
+				<li><a href="/article/list/17/page.html" target="_self" >公告通知</a></li>
+				<li><a href="/query/credit.html" target="_self" >信用查询</a></li>
+				<li><a href="" target="_blank" >研究机构</a>
+					<ul id="psnav">
+						<li><a href="http://www.research.adyun.com" target="_blank">信用研究院</a></li>
+						<li><a href="http://research.cecdc.com/" target="_blank">金融研究院</a></li>
+						<li><a href="http://blockchain.cecdc.com" target="_blank">区块链研究院</a></li>
+						<li><a href="http://finance.cecdc.com/">反欺诈中心</a></li>
+						<li><a href="http://app.cecdc.com" target="_blank">移动安全认证</a></li>
+					</ul>
+				</li>
+
+				<li><a href="http://www.tianyant.com/dist/index.html" target="_blank" >在线曝光台</a></li>
+				<li><a href="/article/list4/50/page.html" target="_self" >媒体关注</a></li>
+				<!--<li><a href="/query/faith.html" target="_self" >失信查询</a></li>
+				<li><a href="http://shixin.court.gov.cn" target="_blank" >失信查询</a></li>
+				<li><a href="http://www.adyun.com/" target="_blank" >诚信电商导航</a></li>-->
+			</ul>
+		</div>
+</div>	<div id="main">
+		<div id="home">您当前位置：首页>APP认证申请</div>
+		<div class="mcnn">
+			
+<script type="text/javascript">
+		$(document).ready(function(){
+			$(".navtop").each(function(){
+				  $(this).click(function(){
+					  $(this).next(".navsub").toggle();
+				  });
+			  });
+		});
+</script>
+
+<div id="nav_sub3">
+				<div class="nav3_left">
+					<div class="nav3_left_in">
+				    	<ul>			
+				    					    						    							    														<li><a href="/article/list2/3010/page.html"><span>项目背景</span></a></li>
+																																		    						    							    														<li><a href="/article/list2/3030/page.html"><span>诚信网站认证核心价值</span></a></li>
+																																		    						    							    														<li><a href="/article/list2/3060/page.html"><span>诚信认证版本分类</span></a></li>
+																																		    						    							    														<li><a href="/article/list2/3062/page.html"><span>APP认证</span></a></li>
+																																		    						    							    														<li><a href="/article/list2/3040/page.html"><span>互联网3.15诚信认证版本分类</span></a></li>
+																																		    						    							    														<li><a href="/article/list2/3050/page.html"><span>互联网金融认证版本分类</span></a></li>
+																																										<li><a href="/apply/ident.html"><span>诚信认证申请</span></a></li>
+						<li><a href="/apply/appident.html"><span>APP认证申请</span></a></li>
+						<li><a href="/apply/auth.html"><span>申请全国授权服务机构</span></a></li>
+						<li><a href="/query/credit.html"><span>认证查询服务</span></a></li>
+						<li><a href="/article/list2/3070/page.html"><span>授牌走访</span></a></li>
+						<li><a href="/comment/comment.html"><span>精彩评论</span></a></li>
+										        </ul>
+				    </div>
+				</div>
+			</div>
+			<div class="conn">
+				<div class="connborder">	
+					<div class="conn_title">
+						<h3>APP认证申请</h3>
+					</div>
+					<div class="for_xycx" style="width: 570px";>
+						<h3>请留下您的联系方式，工作人员稍后会和您联系</h3>
+						<form action="/apply/save.html" method="post" onsubmit="return checkForm();">
+						<input type="hidden" name="aplytype" id="aplytype" value="1" />
+						<table class="for_xycx_tb">
+
+							<tr>
+								<td align="right"><span>*</span>单位/公司名称：</td>
+								<td class="long"><input type="text" name="cpname" id="cpname" maxlength="30" /></td>
+							</tr>
+							<tr>
+								<td align="right"><span>*</span>单位/公司地址：</td>
+								<td class="long"><input type="text" name="cpaddr" id="cpaddr" maxlength="50" /></td>
+							</tr>
+							<tr>
+								<td align="right"><span>*</span>需要认证的APP或小程序名称：</td>
+								<td class="long"><input type="text" name="domain" id="domain" maxlength="50" /></td>
+							</tr>
+							<tr>
+
+
+								<td align="right"><span>*</span>所要认证的类别：</td>
+
+
+								<td class="long">
+
+
+									<select name="source" id="source" maxlength="50" style="width:352px;height:34px;">
+
+
+										<option selected>请选择</option>
+
+
+										<option value="6">APP实名认证</option>
+
+
+										<option value="7">APP安全认证</option>
+
+
+										<option value="8">诚信小程序认证</option>
+
+									</select>
+
+
+								</td>
+
+
+							</tr>
+							<tr>
+								<td align="right"><span>*</span>企业性质：</td>
+								<td class="long"><select name="companytype" id="companytype" maxlength="50" style="width:352px;height:34px;">
+										<option selected>请选择</option>
+										<option value="1">国有企业</option>
+										<option value="2">集体企业</option>
+										<option value="3">联营企业</option>
+										<option value="4">股份合作制企业</option>
+										<option value="5">私营企业</option>
+										<option value="6">个体户</option>
+										<option value="7">合伙企业</option>
+										<option value="8">有限责任公司</option>
+										<option value="9">股份有限公司</option>
+									</select></td>
+							</tr>
+							<tr>
+								<td align="right"><span>*</span>注册资金：</td>
+								<td class="long"><select name="capital" id="capital" maxlength="50" style="width:352px;height:34px;">
+										<option selected>请选择</option>
+										<option value="1">100万以下</option>
+										<option value="2">100万至500万</option>
+										<option value="3">500万至1000万</option>
+										<option value="4">1000万至3000万</option>
+										<option value="5">3000万以上</option>
+									</select></td>
+							</tr>
+							<tr>
+								<td align="right"><span>*</span>联系人姓名：</td>
+								<td class="long"><input type="text" name="linkman" id="linkman" maxlength="10" /></td>
+							</tr>
+							<tr>
+								<td align="right"><span>*</span>联系人电话：</td>
+								<td class="long"><input type="text" name="linkmanphone" id="linkmanphone" maxlength="20" /></td>
+							</tr>
+							<tr>
+								<td align="right"><span></span>验证码：</td>
+								<td class="shot" colspan="2" ><input type="text" name="vcode" id="vcode" style="float:left;margin-top:10px;" maxlength="4"/><a href="javascript:reloadCode();"" style="float:left;margin-top:10px;_margin-top:12px;*margin-top:12px;margin-left:5px;"><img src="/captcha/default" width="120" height="30" alt="Captcha" class="captcha" /></a></td>
+								
+							</tr>
+							<tr>
+								<td colspan="2" align="center" id="btn">
+									<input type="submit" class="btn-submit" value="提交" />
+									<input type="reset" class="btn-submit" value="重置" />
+								</td>					
+							</tr>
+						</table>
+						</form>
+					</div>	
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>		
+	</div>
+	<div class="footer">
+		<div class="ft_navlist">
+			<ul>
+				<li style="margin:0px;"><a href="/article/list2/7010/page.html">关于我们</a></li>
+				<li style="margin:0px;">|</li>
+				<li style="margin:0px;"><a href="/article/list2/7020/page.html">联系我们</a></li>
+				<li style="margin:0px;">|</li>
+				<li style="margin:0px;"><a href="/article/list2/30/page.html">网站安全信用认证</a></li>
+				<li style="margin:0px;">|</li>
+				<li style="margin:0px;"><a href="http://shixin.court.gov.cn" target="_blank">失信查询</a></li>
+				<li style="margin:0px;">|</li>
+				<li style="margin:0px;"><a href="http://www.315.gov.cn/" target="_blank">质量监督</a></li>				
+				<li style="margin:0px;">|</li>
+				<li style="margin:0px;"><a href="http://media.adyun.com/medianav/web" target="_blank">安全信用联盟网址导航</a></li>
+				<li style="margin:0px;">|</li>
+				<li style="margin:0px;"><a href="/article/list2/10/page.html">帮助中心</a></li>
+			</ul>
+		</div>
+		<div style="width:300px;margin:0 auto; padding:20px 0;">
+		 		<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010702001519" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/public/images/national.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备 11010702001519号</p></a>
+		 	</div>
+	<a id='___szfw_logo___' href='https://credit.szfw.org/CX20171010036838050352.html' target='_blank'>
+		<img src='http://icon.szfw.org/cxshifan.png' style="height:42px;width:135px;" border='0' />
+	</a>
+	<a id='___szfw_logo___' href='https://credit.szfw.org/CX20181222036838074483.html' target='_blank'><img src='http://icon.szfw.org/jindungw.png' width="135px" height="42" border='0' /></a>
+		<div class="foot">
+			<p>北京市海淀区万寿路27号院                  北京市石景山区古城西街94号 邮编：100043<br />
+				认证服务咨询电话：400-847-0006  邮箱：szfw@szfw.org <br />
+				版权所有：北京盘石信用管理有限公司      <br />
+				Copyright 2000-2020 CECA. All Rights Reserved  京ICP备15016997号-2       京公网安备11010702001519号<br />
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+			document.write(unescape("%3Cspan id='cnzz_stat_icon_1255442897'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255442897%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+		</script><BR>
+			</p>
+		</div>
+</div>
+</div>
+	</body>
+</html>

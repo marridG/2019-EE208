@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/public/css/apply.css">
+	<script type="text/javascript" src="/public/js/jquery-1.10.2.js"></script>
+	<link href="/public/css/product.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<style>
+	/*新增*/
+	.header{
+		overflow: visible;
+	}
+	#navcontainer{
+		overflow: visible;
+	}
+	#nav{
+		overflow: visible;
+	}
+	#nav>li{
+		position: relative;
+		overflow: visible;
+		display: inline-block;
+	}
+	#nav li a{
+		overflow: visible;
+	}
+	#nav li:hover ul{
+		display: block;
+	}
+
+	#nav li ul{
+		position: absolute;
+		top: 38px;
+		left: -22px;
+		background: #cd0011;
+		display: none;
+		width: 120px;
+		z-index: 1;
+	}
+	#nav li ul li{
+		display: block;
+	}
+	#psnav li a{
+		float: none!important;
+	}
+</style>
+<div class="cont">
+<div class="header">
+	<div class="logo">
+					<div class="l-sign-register"><span class="l-sign"><a href="/Sass_Login/loginList.html">登录/注册</a></span></div>
+				<img src="/public/images/logo.jpg"></div>
+		<div id="navcontainer" style="background:#db0111">
+			<ul id="nav">
+				<li><a href="/" target="_self" >首页</a></li>
+				<li><a href="/article/list2/70/page.html" target="_self" >组织机构</a></li>
+				<li><a href="/article/list1/50/page.html" target="_self" >政策法规</a></li>
+				<li><a href="/article/list5/50/page.html" target="_self">产品介绍</a></li>
+				<li><a href="/article/list2/20/page.html" target="_self">认证申请</a></li>
+				<li><a href="/article/list2/80/page.html" target="_self" >认证服务案例</a></li>
+				<li><a href="/Rank/province.html" target="_self" >信用品牌排名</a></li>
+				<li><a href="/article/list/17/page.html" target="_self" >公告通知</a></li>
+				<li><a href="/query/credit.html" target="_self" >信用查询</a></li>
+				<li><a href="" target="_blank" >研究机构</a>
+					<ul id="psnav">
+						<li><a href="http://www.research.adyun.com" target="_blank">信用研究院</a></li>
+						<li><a href="http://research.cecdc.com/" target="_blank">金融研究院</a></li>
+						<li><a href="http://blockchain.cecdc.com" target="_blank">区块链研究院</a></li>
+						<li><a href="http://finance.cecdc.com/">反欺诈中心</a></li>
+						<li><a href="http://app.cecdc.com" target="_blank">移动安全认证</a></li>
+					</ul>
+				</li>
+
+				<li><a href="http://www.tianyant.com/dist/index.html" target="_blank" >在线曝光台</a></li>
+				<li><a href="/article/list4/50/page.html" target="_self" >媒体关注</a></li>
+				<!--<li><a href="/query/faith.html" target="_self" >失信查询</a></li>
+				<li><a href="http://shixin.court.gov.cn" target="_blank" >失信查询</a></li>
+				<li><a href="http://www.adyun.com/" target="_blank" >诚信电商导航</a></li>-->
+			</ul>
+		</div>
+</div>	<div id="all" class="w">
+
+		<div class="now_po">
+			<span>您的当前位置：</span>
+			<a href="">首页></a><a href="">诚信认证申请</a>
+		</div>
+		<div class="apply_cont">
+			<div class="apply_online">
+				<div class="txt">在线申请</div>
+			</div>
+			<div class="step_img"></div>
+			<div class="step_form">
+				<div class="tel">
+					<span class="l">*</span><p class="l">输入手机号：</p><input maxlength="11" class="l" type="text" name="apply_tel" id="apply_tel" onblur="onblurs()"><span class="err_tip"></span>
+				</div>
+				<div class="code">
+					<span class="l">*</span><p class="l">输入验证码：</p><input onchange="check_code();" maxlength="4" id="vcode" class="l" type="text" name="vcode">
+					<a href="javascript:reloadCode();" class="code_txt l"><img src="/captcha/default" width="120" height="30" alt="Captcha" class="captcha" /></a><span class="code_err"></span>
+				</div>
+				<div class="code">
+					<span class="l">*</span><p class="l">输入手机验证码：</p><input maxlength="6" id="pcode" class="l" type="text" name="pcode"><button style="margin-left:10px;" class="pray l" disabled="disabled" id="tel_code" >获取手机验证码</button>
+				</div>
+			</div>
+			<div class="n_btn">
+				<div class="next_btn" id="next_btn">下一步</div>
+			</div>
+			<script type="text/javascript">		
+				function reloadCode(){
+					var src = $(".captcha").attr("src");
+					src += "?" + Math.random();
+					$(".captcha").attr("src", src);
+				}
+			</script>
+		    <script type="text/javascript">
+				
+			    function onblurs(){ 
+			    	var apply_tel = $("#apply_tel").val();
+					if(apply_tel==""){
+					    $(".err_tip").html("*请输入手机号！");
+						return false;
+					}else if(!(/^1[34578]\d{9}$/.test(apply_tel))){
+                        $(".err_tip").html("*请填写正确的手机号！");
+                        return false;
+					}else{
+                        $(".err_tip").html(" ");
+                    }
+				}
+                $('#tel_code').click(function() {
+                    var o = this;
+					o.setAttribute("disabled", true);
+					$("#tel_code").addClass("pray");
+					$("#tel_code").removeClass("tel_code");
+                    $.ajax({
+                        url:"http://www.cecdc.com/claim/pcode.html",
+                        type:"post",
+                        data: {
+                            apply_tel: $("#apply_tel").val(),
+                            code: $("#vcode").val()
+                        },
+                        success: function (data) {
+                            if(data == 1){
+                                get_code_time(o);
+                            } else {
+
+                                    alert("短信验证码发送失败1111");
+
+                            }
+                        },
+                        error: function (data) {
+                            if(data == -1) {
+
+                                alert("短信验证码发送失败22222");
+
+                            }
+                        }
+                    });
+                });
+                var wait = 60;
+                get_code_time = function (o) {
+                    if (wait == 0) {
+                        o.removeAttribute("disabled");
+                        o.innerHTML = "获取手机验证码";
+                        $("#tel_code").addClass("tel_code");
+                        $("#tel_code").removeClass("pray");
+                        wait = 60;
+                    } else {
+                        o.setAttribute("disabled", true);
+                        $("#tel_code").addClass("pray");
+                        $("#tel_code").removeClass("tel_code");
+                        o.innerHTML = "重新获取(" + wait + ")";
+                        wait--;
+                        setTimeout(function() {
+                            get_code_time(o)
+                        }, 1000)
+                    }
+                }
+                function check_code() {
+//					var code_input = $("#vcode").val();
+					$.ajax({
+						type: 'post',
+						url: 'http://www.cecdc.com/claim/vcheck.html',
+						data: {
+							vcode: $("#vcode").val()
+						},
+						success: function (data) {
+						    if(data == 1){
+								$("#tel_code").removeClass("pray");
+								$("#tel_code").addClass("tel_code");
+                                $('#tel_code').removeAttr("disabled");
+                                $(".code_err").html(" ");
+                            }else{
+								$(".code_err").html("*请输入正确的验证码");
+							}
+                        },
+						error: function (data) {
+                            $(".code_err").html("*获取验证码失败，请稍后再试");
+                        }
+					})
+                }
+				function checkForm(){
+					$.ajax({
+					     type:'post', // method get or post
+					     url:"http://www.cecdc.com/claim/pcheck.html",
+					     // dataType: "json", // 这个是返回值的形式，json, text, xml
+					     data: {
+					     	mobile: $("#apply_tel").val(),
+							pcode: $("#pcode").val()
+							},
+					    success: function(data){
+					         if(data == 2){
+					             window.location.href = 'http://www.cecdc.com/claim/company.html';
+							 }else if(data == 1){
+                                 window.location.href = 'http://www.cecdc.com/claim/information.html?a=1';
+							 }else if(data == -1){
+								alert("请正确输入验证码");
+							} else if(data == -2){
+								alert("请正确输入手机号");
+							}
+					    },
+					    error: function(data) {
+					    }
+					});
+				}
+				window.onload = init;
+				function init() {
+					document.getElementById("next_btn").onclick = checkForm;
+				}
+				
+			</script>
+		</div>
+	</div>
+<div class="footer">
+		<div class="ft_navlist">
+			<ul>
+				<li style="margin:0px;"><a href="/article/list2/7010/page.html">关于我们</a></li>
+				<li style="margin:0px;">|</li>
+				<li style="margin:0px;"><a href="/article/list2/7020/page.html">联系我们</a></li>
+				<li style="margin:0px;">|</li>
+				<li style="margin:0px;"><a href="/article/list2/30/page.html">网站安全信用认证</a></li>
+				<li style="margin:0px;">|</li>
+				<li style="margin:0px;"><a href="http://shixin.court.gov.cn" target="_blank">失信查询</a></li>
+				<li style="margin:0px;">|</li>
+				<li style="margin:0px;"><a href="http://www.315.gov.cn/" target="_blank">质量监督</a></li>				
+				<li style="margin:0px;">|</li>
+				<li style="margin:0px;"><a href="http://media.adyun.com/medianav/web" target="_blank">安全信用联盟网址导航</a></li>
+				<li style="margin:0px;">|</li>
+				<li style="margin:0px;"><a href="/article/list2/10/page.html">帮助中心</a></li>
+			</ul>
+		</div>
+		<div style="width:300px;margin:0 auto; padding:20px 0;">
+		 		<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010702001519" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/public/images/national.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备 11010702001519号</p></a>
+		 	</div>
+	<a id='___szfw_logo___' href='https://credit.szfw.org/CX20171010036838050352.html' target='_blank'>
+		<img src='http://icon.szfw.org/cxshifan.png' style="height:42px;width:135px;" border='0' />
+	</a>
+	<a id='___szfw_logo___' href='https://credit.szfw.org/CX20181222036838074483.html' target='_blank'><img src='http://icon.szfw.org/jindungw.png' width="135px" height="42" border='0' /></a>
+		<div class="foot">
+			<p>北京市海淀区万寿路27号院                  北京市石景山区古城西街94号 邮编：100043<br />
+				认证服务咨询电话：400-847-0006  邮箱：szfw@szfw.org <br />
+				版权所有：北京盘石信用管理有限公司      <br />
+				Copyright 2000-2020 CECA. All Rights Reserved  京ICP备15016997号-2       京公网安备11010702001519号<br />
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+			document.write(unescape("%3Cspan id='cnzz_stat_icon_1255442897'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255442897%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+		</script><BR>
+			</p>
+		</div>
+</div>
+</div>
+</body>
+</html>

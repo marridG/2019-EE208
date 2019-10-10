@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <title>neuhub-搜索详情</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="icon" href="/static/portal/images/logo_ico.png" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1158034_xmwzcinyxpq.css" />
+  <script src="//wl.jd.com/boomerang.min.js"></script>
+  <script type="text/javascript">
+    //全局常量
+    var GLOBAL_V="1570612545470";
+    var GLOBAL_DOMAIN="https://neuhub.jd.com";
+    var GLOBAL_LOGIN_URL="https://passport.jd.com/uc/login";
+    var GLOBAL_FULL_LOGIN_URL_AND_RETURN_PREFIX="https://passport.jd.com/uc/login?ReturnUrl=";
+    var PIC_LINK_BASE="https://rosetta.jd.com/";
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?389dc36fabdb882878bdffb89a8d3747";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+  <link href="/static/portal/css/searchResultApplication.3e006f8a0b105032af71.css" rel="stylesheet">
+</head>
+
+<body 10>
+  <div class="header">
+    <div class="top-bar">
+    <div class="menu">
+        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjFweCIgaGVpZ2h0PSIxOHB4IiB2aWV3Qm94PSIwIDAgMjEgMTgiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUyLjMgKDY3Mjk3KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5pY29uPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgb3BhY2l0eT0iMC43MDQ3MDYxMDEiPgogICAgICAgIDxnIGlkPSLpppbpobVfMTQwMCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTE3LjAwMDAwMCwgLTE2LjAwMDAwMCkiIGZpbGw9IiNCMkIyQjIiPgogICAgICAgICAgICA8ZyBpZD0i54Sm54K55Zu+Ij4KICAgICAgICAgICAgICAgIDxnIGlkPSJpY29uIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNy41MDAwMDAsIDI1LjAwMDAwMCkgcm90YXRlKC0xODAuMDAwMDAwKSB0cmFuc2xhdGUoLTI3LjUwMDAwMCwgLTI1LjAwMDAwMCkgdHJhbnNsYXRlKDE3LjAwMDAwMCwgMTYuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgPHJlY3QgaWQ9IuefqeW9oiIgeD0iMCIgeT0iMCIgd2lkdGg9IjIxIiBoZWlnaHQ9IjMuMTc2NDcwNTkiIHJ4PSIxLjU4ODIzNTI5Ij48L3JlY3Q+CiAgICAgICAgICAgICAgICAgICAgPHJlY3QgaWQ9IuefqeW9oiIgeD0iMCIgeT0iNy40MTE3NjQ3MSIgd2lkdGg9IjIxIiBoZWlnaHQ9IjMuMTc2NDcwNTkiIHJ4PSIxLjU4ODIzNTI5Ij48L3JlY3Q+CiAgICAgICAgICAgICAgICAgICAgPHJlY3QgaWQ9IuefqeW9oiIgeD0iMCIgeT0iMTQuODIzNTI5NCIgd2lkdGg9IjIxIiBoZWlnaHQ9IjMuMTc2NDcwNTkiIHJ4PSIxLjU4ODIzNTI5Ij48L3JlY3Q+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==" />
+    </div>
+    <div class="logo">
+        <a href="/"><img src="/static/portal/images/logo1.svg" /></a>
+    </div>
+    <ul class="right">
+        <li class="search">
+            <img class="neu-sousuo1 left" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4IiB2aWV3Qm94PSIwIDAgMTYgMTYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUyLjMgKDY3Mjk3KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT7liIbnu4QgNTwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSLpppbpobUtaG92ZXIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xNDQxLjAwMDAwMCwgLTE3LjAwMDAwMCkiIGZpbGw9IiNGRkZGRkYiPgogICAgICAgICAgICA8ZyBpZD0i54Sm54K55Zu+IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxLjAwMDAwMCwgMC4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxnIGlkPSLmkJzntKIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyNTQuMDAwMDAwLCAwLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgIDxnIGlkPSLliIbnu4QtNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTg2LjAwMDAwMCwgMTcuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik02LjI4NzIzMTk4LDEyLjc4MDc1MiBDMy4wMDExMzc3MiwxMi43ODA3NTIgMC4zMzcyMzE5ODUsMTAuMTE2ODQ2MiAwLjMzNzIzMTk4NSw2LjgzMDc1MTk4IEMwLjMzNzIzMTk4NSwzLjU0NDY1NzcyIDMuMDAxMTM3NzIsMC44ODA3NTE5NzkgNi4yODcyMzE5OCwwLjg4MDc1MTk3OSBDOS41NzMzMjYyNSwwLjg4MDc1MTk3OSAxMi4yMzcyMzIsMy41NDQ2NTc3MiAxMi4yMzcyMzIsNi44MzA3NTE5OCBDMTIuMjM3MjMyLDEwLjExNjg0NjIgOS41NzMzMjYyNSwxMi43ODA3NTIgNi4yODcyMzE5OCwxMi43ODA3NTIgWiBNNi4yODcyMzE5OCwxMS4zODA3NTIgQzguODAwMTI3NiwxMS4zODA3NTIgMTAuODM3MjMyLDkuMzQzNjQ3NTkgMTAuODM3MjMyLDYuODMwNzUxOTggQzEwLjgzNzIzMiw0LjMxNzg1NjM3IDguODAwMTI3NiwyLjI4MDc1MTk4IDYuMjg3MjMxOTgsMi4yODA3NTE5OCBDMy43NzQzMzYzNywyLjI4MDc1MTk4IDEuNzM3MjMxOTgsNC4zMTc4NTYzNyAxLjczNzIzMTk4LDYuODMwNzUxOTggQzEuNzM3MjMxOTgsOS4zNDM2NDc1OSAzLjc3NDMzNjM3LDExLjM4MDc1MiA2LjI4NzIzMTk4LDExLjM4MDc1MiBaIiBpZD0i5ZCI5bm25b2i54q2IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2LjI4NzIzMiwgNi44MzA3NTIpIHJvdGF0ZSgtMzYwLjAwMDAwMCkgdHJhbnNsYXRlKC02LjI4NzIzMiwgLTYuODMwNzUyKSAiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTEyLjYwODMzMzUsOS4yMzQ2ODYyNSBMMTIuNjA4MzMzNSw5LjIzNDY4NjI1IEMxMy4xODgyMzI1LDkuMjM0Njg2MjUgMTMuNjU4MzMzNSw5LjcwNDc4NzI2IDEzLjY1ODMzMzUsMTAuMjg0Njg2MiBMMTMuNjU4MzMzNSwxNS4xODQ2ODYyIEMxMy42NTgzMzM1LDE1Ljc2NDU4NTIgMTMuMTg4MjMyNSwxNi4yMzQ2ODYyIDEyLjYwODMzMzUsMTYuMjM0Njg2MiBMMTIuNjA4MzMzNSwxNi4yMzQ2ODYyIEMxMi4wMjg0MzQ2LDE2LjIzNDY4NjIgMTEuNTU4MzMzNSwxNS43NjQ1ODUyIDExLjU1ODMzMzUsMTUuMTg0Njg2MiBMMTEuNTU4MzMzNSwxMC4yODQ2ODYyIEMxMS41NTgzMzM1LDkuNzA0Nzg3MjYgMTIuMDI4NDM0Niw5LjIzNDY4NjI1IDEyLjYwODMzMzUsOS4yMzQ2ODYyNSBaIiBpZD0i55+p5b2iIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMi42MDgzMzQsIDEyLjczNDY4Nikgcm90YXRlKC00OS4wMDAwMDApIHRyYW5zbGF0ZSgtMTIuNjA4MzM0LCAtMTIuNzM0Njg2KSAiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==" />
+            <img class="neu-sousuo1 right" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4IiB2aWV3Qm94PSIwIDAgMTYgMTYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUyLjMgKDY3Mjk3KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT7liIbnu4QgNTwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSLpppbpobUtaG92ZXIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xNDQxLjAwMDAwMCwgLTE3LjAwMDAwMCkiIGZpbGw9IiNGRkZGRkYiPgogICAgICAgICAgICA8ZyBpZD0i54Sm54K55Zu+IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxLjAwMDAwMCwgMC4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxnIGlkPSLmkJzntKIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEyNTQuMDAwMDAwLCAwLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgIDxnIGlkPSLliIbnu4QtNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTg2LjAwMDAwMCwgMTcuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik02LjI4NzIzMTk4LDEyLjc4MDc1MiBDMy4wMDExMzc3MiwxMi43ODA3NTIgMC4zMzcyMzE5ODUsMTAuMTE2ODQ2MiAwLjMzNzIzMTk4NSw2LjgzMDc1MTk4IEMwLjMzNzIzMTk4NSwzLjU0NDY1NzcyIDMuMDAxMTM3NzIsMC44ODA3NTE5NzkgNi4yODcyMzE5OCwwLjg4MDc1MTk3OSBDOS41NzMzMjYyNSwwLjg4MDc1MTk3OSAxMi4yMzcyMzIsMy41NDQ2NTc3MiAxMi4yMzcyMzIsNi44MzA3NTE5OCBDMTIuMjM3MjMyLDEwLjExNjg0NjIgOS41NzMzMjYyNSwxMi43ODA3NTIgNi4yODcyMzE5OCwxMi43ODA3NTIgWiBNNi4yODcyMzE5OCwxMS4zODA3NTIgQzguODAwMTI3NiwxMS4zODA3NTIgMTAuODM3MjMyLDkuMzQzNjQ3NTkgMTAuODM3MjMyLDYuODMwNzUxOTggQzEwLjgzNzIzMiw0LjMxNzg1NjM3IDguODAwMTI3NiwyLjI4MDc1MTk4IDYuMjg3MjMxOTgsMi4yODA3NTE5OCBDMy43NzQzMzYzNywyLjI4MDc1MTk4IDEuNzM3MjMxOTgsNC4zMTc4NTYzNyAxLjczNzIzMTk4LDYuODMwNzUxOTggQzEuNzM3MjMxOTgsOS4zNDM2NDc1OSAzLjc3NDMzNjM3LDExLjM4MDc1MiA2LjI4NzIzMTk4LDExLjM4MDc1MiBaIiBpZD0i5ZCI5bm25b2i54q2IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2LjI4NzIzMiwgNi44MzA3NTIpIHJvdGF0ZSgtMzYwLjAwMDAwMCkgdHJhbnNsYXRlKC02LjI4NzIzMiwgLTYuODMwNzUyKSAiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTEyLjYwODMzMzUsOS4yMzQ2ODYyNSBMMTIuNjA4MzMzNSw5LjIzNDY4NjI1IEMxMy4xODgyMzI1LDkuMjM0Njg2MjUgMTMuNjU4MzMzNSw5LjcwNDc4NzI2IDEzLjY1ODMzMzUsMTAuMjg0Njg2MiBMMTMuNjU4MzMzNSwxNS4xODQ2ODYyIEMxMy42NTgzMzM1LDE1Ljc2NDU4NTIgMTMuMTg4MjMyNSwxNi4yMzQ2ODYyIDEyLjYwODMzMzUsMTYuMjM0Njg2MiBMMTIuNjA4MzMzNSwxNi4yMzQ2ODYyIEMxMi4wMjg0MzQ2LDE2LjIzNDY4NjIgMTEuNTU4MzMzNSwxNS43NjQ1ODUyIDExLjU1ODMzMzUsMTUuMTg0Njg2MiBMMTEuNTU4MzMzNSwxMC4yODQ2ODYyIEMxMS41NTgzMzM1LDkuNzA0Nzg3MjYgMTIuMDI4NDM0Niw5LjIzNDY4NjI1IDEyLjYwODMzMzUsOS4yMzQ2ODYyNSBaIiBpZD0i55+p5b2iIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMi42MDgzMzQsIDEyLjczNDY4Nikgcm90YXRlKC00OS4wMDAwMDApIHRyYW5zbGF0ZSgtMTIuNjA4MzM0LCAtMTIuNzM0Njg2KSAiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==" />
+            <i class="neu-icon neu-close"></i>
+            <input id="search-input" type="text" placeholder="搜索" autocomplete="off" />
+            <div class="search-box">
+                <div class="search-list">
+                                            <div class="search-item"><a onclick="jumpKeyWordIndex('语音合成')">语音合成</a></div>
+                                            <div class="search-item"><a onclick="jumpKeyWordIndex('拍照购')">拍照购</a></div>
+                                            <div class="search-item"><a onclick="jumpKeyWordIndex('智能对话')">智能对话</a></div>
+                                            <div class="search-item"><a onclick="jumpKeyWordIndex('身份证识别')">身份证识别</a></div>
+                                    </div>
+            </div>
+        </li>
+        <li class="language-select">
+            <span>中国站</span><i class="neu-icon neu-xiajiantou"></i>
+            <div class="online-menu">
+                <ul>
+                    <li><a href="http://neuhub.jd.com/">中国站</a></li>
+                    <li><a href="http://jddoversea-neuhub.jd.com/index.html">International</a></li>
+                </ul>
+            </div>
+        </li>
+        <!-- <li class="forum"><a href="">论坛</a></li> -->
+        <li class="console">
+            <a href="/user/baseInfo"><span>控制台</span></a>
+                    </li>
+                    <li class="login"><a href="">登录</a></li>
+            <li class="register"><a href="">注册</a></li>
+            </ul>
+</div>
+<div class="navigation">
+    <ul class="nav nav-items">
+        <li><a href="/advanced?pageNum=1" data-click="side_advanced_enter">前沿动态</a></li>
+        <li class="nav-items-product">产品及服务</li>
+        <li><a href="/app" data-click="side_app_enter">应用平台</a></li>
+        <li><a href="/dev" data-click="side_dev_enter">开发平台</a></li>
+        <li class="nav-items-ecology">平台生态</li>
+        <li><a target="_blank" href="http://air.jd.com" data-click="side_air_enter">AI研究院</a></li>
+        <li class="nav-items-support">支持与服务</li>
+    </ul>
+</div>
+<script>
+    function jumpKeyWordIndex(data) {
+        console.log(data)
+        location.href = "/searchResult?text="+ encodeURI(data) +"&source=0&pageNum=1"
+    }
+</script>    <div class="menu-pannel">
+    <div class="menu-wraper c1">
+        <dl>
+            <dd><a href="/advanced?pageNum=1" data-click="side_advanced_enter">前沿动态</a></dd>
+            <dd data-index="1">产品及服务<span class="gt">&gt;</span></dd>
+            <dd><a href="/app" data-click="side_app_enter">应用平台</a></dd>
+            <dd><a href="/dev" data-click="side_dev_enter">开发平台</a></dd>
+            <dd data-index="4">平台生态<span class="gt">&gt;</span></dd>
+            <dd><a target="_blank" href="http://air.jd.com" data-click="side_air_enter">AI研究院</a></dd>
+            <dd data-index="5">支持与服务<span class="gt">&gt;</span></dd>
+        </dl>
+    </div>
+    <div class="menu-wraper c2">
+        <dl data-father="1">
+            <dd data-index="1">创新应用<span class="gt">&gt;</span></dd>
+            <dd data-index="2">AI服务<span class="gt">&gt;</span></dd>
+            <dd data-index="3">AI工具<span class="gt">&gt;</span></dd>
+            <dd data-index="4">解决方案<span class="gt">&gt;</span></dd>
+        </dl>
+        <dl data-father="4">
+            <dd><a href="/ecology" data-click="side_partner_enter">京东 AI生态圈</a></dd>
+            <dd><a href="/accelerator" data-click="side_accelerator_enter">京东 AI加速器</a></dd>
+            <dd><a href="/goodCase" data-click="side_goodCase_enter">合作案例</a></dd>
+        </dl>
+        <dl data-father="5">
+            <dd>
+                <a target="_blank" href="/guide" data-click="side_guide_enter">文档中心</a>
+            </dd>
+            <dd>
+                <a target="_blank" href="/workorder/init/5/0" data-click="side_workorder_contactUs">联系我们</a>
+            </dd>
+        </dl>
+    </div>
+    <div class="menu-wraper c3">
+        <dl data-father="1-1">
+                                                            <dd><a href="//neuhub.jd.com/innovation/type/NeuScan" data-click="side_innovations_1">NeuScan智能结算台</a></dd>
+                                                                <dd><a href="//neuhub.jd.com/innovation/type/NeuHive" data-click="side_innovations_2">NeuHive蜂巢空间机器人</a></dd>
+                                                                <dd><a href="//neuhub.jd.com/innovation/type/NeuGlass" data-click="side_innovations_3">NeuGlass京东超级眼镜</a></dd>
+                                                                <dd><a href="//neuhub.jd.com/innovation/type/NeuBot" data-click="side_innovations_4">NeuBot京灵服务机器人</a></dd>
+                                                                <dd><a href="//neuhub.jd.com/innovation/type/AGV" data-click="side_innovations_5">地狼搬运AGV</a></dd>
+                                                                <dd><a href="//neuhub.jd.com/innovation/type/BionicHand" data-click="side_innovations_6">智能可穿戴仿生手</a></dd>
+                                    </dl>
+        <dl data-father="1-2">
+            <dd data-index="1">文字识别<span class="gt">&gt;</span></dd>
+            <dd data-index="2">人脸与人体识别<span class="gt">&gt;</span></dd>
+            <dd data-index="3">图像及视频理解<span class="gt">&gt;</span></dd>
+            <dd data-index="4">自然语言处理<span class="gt">&gt;</span></dd>
+            <dd data-index="5">语音技术<span class="gt">&gt;</span></dd>
+            <dd data-index="6">内容审核<span class="gt">&gt;</span></dd>
+            <dd data-index="7">商品理解<span class="gt">&gt;</span></dd>
+            <dd data-index="8">知识图谱<span class="gt">&gt;</span></dd>
+        </dl>
+        <dl data-father="1-3">
+            <dd>
+                <a target="_blank" href="http://quickai.jd.com/#/index" data-click="side_aitools_quickai">QuickAI 自动化模型训练</a>
+            </dd>
+            <dd><a href="/ai/tool/intro/pai">PAI 模型训练平台</a></dd>
+            <dd>
+                <a target="_blank" href="/neuCube" data-click="side_aitools_neuCube">NeuFoundry 神铸平台</a>
+            </dd>
+        </dl>
+        <dl data-father="1-4">
+            <dd><a href="/solution/znkf" data-click="side_solution_0">智能客服</a></dd>
+            <dd><a href="/solution/zhmd" data-click="side_solution_1">智能门店</a></dd>
+            <dd><a href="/solution/zhrk" data-click="side_solution_2">智慧入口</a></dd>
+            <dd><a href="/solution/dhjqr" data-click="side_solution_3">电话机器人</a></dd>
+            <dd><a href="/solution/lsjjfa" data-click="side_solution_5">AIRS AI 零售解决方案</a></dd>
+            <dd><a href="/solution/c2b" data-click="side_solution_6">智能C2B</a></dd>
+        </dl>
+    </div>
+    <div class="menu-wraper c4">
+        <dl data-father="1-2-1">
+            <dd><a class="hot" href="/ai/api/ocr/general" data-click="side_api_ocr_general">通用文字识别</a></dd>
+            <dd><a href="/ai/api/ocr/idcard" data-click="side_api_ocr_idcard">身份证识别</a></dd>
+            <dd><a href="/ai/api/ocr/receipt" data-click="side_api_ocr_receipt">增值税发票识别</a></dd>
+            <dd><a href="/ai/api/ocr/vehicle" data-click="side_api_ocr_vehicle">行驶证识别</a></dd>
+            <dd><a href="/ai/api/ocr/business" data-click="side_api_ocr_business">营业执照识别</a></dd>
+            <dd><a href="/ai/api/ocr/bankcard" data-click="side_api_ocr_bankcard">银行卡识别</a></dd>
+        </dl>
+        <dl data-father="1-2-2">
+            <dd><a class="hot" href="/ai/api/body/detect" data-click="side_api_body_detect">人体检测</a></dd>
+            <dd><a href="/ai/api/face/compare?by=jdai" data-click="side_api_face_compare">人脸对比</a></dd>
+            <dd><a href="/ai/api/face/search" data-click="side_api_face_search">人脸搜索</a></dd>
+            <dd><a href="/ai/api/face/detect" data-click="side_api_face_detect">人脸检测与属性分析</a></dd>
+            <dd><a href="/ai/api/face/faceliveness" data-click="side_api_face_faceliveness">人脸活体检测</a></dd>
+            <dd><a href="/ai/api/body/pose" data-click="side_api_face_pose">人体关键点检测</a></dd>
+            <dd><a href="/ai/api/face/seg" data-click="side_api_face_seg">人像分割</a></dd>
+            <dd><a class="new" href="/ai/api/body/personreid" data-click="side_api_face_personreid">行人重识别</a></dd>
+            <dd><a class="new" href="/ai/api/image/humanParsing" data-click="side_api_face_humanParsing">细粒度人像分割</a></dd>
+        </dl>
+        <dl data-father="1-2-3">
+            <dd><a class="new" href="/ai/api/image/garbageClassify" data-click="side_api_image_garbageClassify">垃圾分类</a></dd>
+            <dd><a href="/ai/api/image/vehicle" data-click="side_api_image_vehicle">车辆检测</a></dd>
+            <dd><a href="/ai/api/image/food" data-click="side_api_image_food">菜品识别</a></dd>
+            <dd><a class="hope" href="/ai/api/video/abstract" data-click="side_api_video_abstract">视频摘要</a></dd>
+            <dd><a class="hope" href="/ai/api/video/tag" data-click="side_api_video_tag">视频内容分析</a></dd>
+        </dl>
+        <dl data-father="1-2-4">
+            <dd><a class="hot" href="/ai/api/nlp/sentiment" data-click="side_">情感分析</a></dd>
+            <dd><a class="hot" href="/ai/api/nlp/comment" data-click="side_api_nlp_comment">评论观点抽取</a></dd>
+            <dd><a class="hot" href="/ai/api/nlp/similarity" data-click="side_api_nlp_similarity">短文本相似度</a></dd>
+            <dd><a href="/ai/api/nlp/lexer" data-click="side_api_nlp_lexer">词法分析</a></dd>
+            <dd><a href="/ai/api/nlp/systax" data-click="side_api_nlp_systax">句法分析</a></dd>
+            <dd><a class="api_nlp_classification" href="/ai/api/nlp/classification" data-click="side_">文本分类</a></dd>
+            <dd><a class="hope" href="/ai/api/nlp/intelligentwriting" data-click="side_api_nlp_intelligentwriting">智能写作</a></dd>
+        </dl>
+        <dl data-father="1-2-5">
+            <dd><a class="hot" href="/ai/api/speech/tts" data-click="side_api_speech_tts">语音合成</a></dd>
+            <dd><a href="/ai/api/speech/asr" data-click="side_api_speech_asr">语音识别</a></dd>
+            <dd><a class="hope" href="/ai/api/speech/customized-tts" data-click="side_api_speech_customized-tts">语音合成声音定制</a></dd>
+        </dl>
+        <dl data-father="1-2-6">
+            <dd><a href="/ai/api/image/pornIdentification" data-click="side_api_image_pornIdentification">智能鉴黄</a></dd>
+            <dd><a href="/ai/api/image/pep" data-click="side_api_image_pep">特定人物识别</a></dd>
+        </dl>
+        <dl data-father="1-2-7">
+            <dd><a class="hot" href="/ai/api/image/snapshop" data-click="side_api_image_snapshop">拍照购</a></dd>
+            <dd><a class="new" href="/ai/api/image/productRecognize" data-click="side_api_image_product_recognize">通用商品识别</a></dd>
+            <dd><a class="new" href="/ai/api/image/winelabel" data-click="side_api_image_winelabel">酒标识别</a></dd>
+            <dd><a class="hope" href="/workorder/init/3/商品图搜" data-click="side_api_image_goodsImageSearch">商品图搜</a></dd>
+            <dd><a class="hope" href="/workorder/init/3/商品命名实体识别" data-click="side_api_image_goodsName">商品命名实体识别</a></dd>
+        </dl>
+        <dl data-father="1-2-8">
+            <dd><a class="hope" href="/ai/api/kg/pharmacy" data-click="side_api_kg_pharmacy">药学知识图谱</a></dd>
+        </dl>
+    </div>
+</div>    <div class="nav-bg"></div>
+<!-- nav 产品及服务 -->
+<div class="nav-product">
+    <div class="nav-product-innovation">
+        <div class="nav-product-title">
+            创新应用
+        </div>
+        <ul class="nav-product-innovation-list">
+                                                            <li>
+                        <a href="//neuhub.jd.com/innovation/type/NeuScan" data-click="top_innovations_1">
+                            <img src="http://jdai.s3.cn-north-1.jcloudcs.com/_cloud/6c697579756a69653138/images/20190614/2e60df71f034412a8ce39edd36e18073.jpg?x-oss-process=img/sb/154/110" alt=""/>
+                            <p>NeuScan智能结算台</p></a
+                        >
+                    </li>
+                                                                <li>
+                        <a href="//neuhub.jd.com/innovation/type/NeuHive" data-click="top_innovations_2">
+                            <img src="http://jdai.s3.cn-north-1.jcloudcs.com/_cloud/6c697578756574696e67/images/20190612/75594bd0436a49c28b1cb972577278fb.png?x-oss-process=img/sb/154/110" alt=""/>
+                            <p>NeuHive蜂巢空间机器人</p></a
+                        >
+                    </li>
+                                                                <li>
+                        <a href="//neuhub.jd.com/innovation/type/NeuGlass" data-click="top_innovations_3">
+                            <img src="http://jdai.s3.cn-north-1.jcloudcs.com/_cloud/6c697578756574696e67/images/20190612/ac38ea477b2e476ab5e5571795c4fcc7.png?x-oss-process=img/sb/154/110" alt=""/>
+                            <p>NeuGlass京东超级眼镜</p></a
+                        >
+                    </li>
+                                                                <li>
+                        <a href="//neuhub.jd.com/innovation/type/NeuBot" data-click="top_innovations_4">
+                            <img src="http://jdai.s3.cn-north-1.jcloudcs.com/_cloud/6c697578756574696e67/images/20190612/bc2abc1d098a48c3973b0b4ac8cd9e22.png?x-oss-process=img/sb/154/110" alt=""/>
+                            <p>NeuBot京灵服务机器人</p></a
+                        >
+                    </li>
+                                                                <li>
+                        <a href="//neuhub.jd.com/innovation/type/AGV" data-click="top_innovations_5">
+                            <img src="http://jdai.s3.cn-north-1.jcloudcs.com/_cloud/796574696e6774696e673131/images/20190629/dda13b877a0f4a22b44f0d91ab3b1974.png?x-oss-process=img/sb/154/110" alt=""/>
+                            <p>地狼搬运AGV</p></a
+                        >
+                    </li>
+                                                                <li>
+                        <a href="//neuhub.jd.com/innovation/type/BionicHand" data-click="top_innovations_6">
+                            <img src="http://jdai.s3.cn-north-1.jcloudcs.com/_cloud/796574696e6774696e673131/images/20190629/2c2a617e822e45b9a01907b85ef71e25.png?x-oss-process=img/sb/154/110" alt=""/>
+                            <p>智能可穿戴仿生手</p></a
+                        >
+                    </li>
+                                        <li><a href="/together">了解更多</a></li>
+        </ul>
+    </div>
+    <div class="nav-product-api">
+        <div class="nav-product-title">AI服务</div>
+        <div class="nav-product-api-col4">
+            <dl>
+                <dt>文字识别</dt>
+                <dd><a class="hot" href="/ai/api/ocr/general" data-click="top_api_ocr_general">通用文字识别</a></dd>
+                <dd><a href="/ai/api/ocr/idcard" data-click="top_api_ocr_idcard">身份证识别</a></dd>
+                <dd><a href="/ai/api/ocr/receipt" data-click="top_api_ocr_receipt">增值税发票识别</a></dd>
+                <dd><a href="/ai/api/ocr/vehicle" data-click="top_api_ocr_vehicle">行驶证识别</a></dd>
+                <dd><a href="/ai/api/ocr/business" data-click="top_api_ocr_business">营业执照识别</a></dd>
+                <dd><a href="/ai/api/ocr/bankcard" data-click="top_api_ocr_bankcard">银行卡识别</a></dd>
+            </dl>
+            <dl class="line">
+                <dt>语音技术</dt>
+                <dd><a class="hot" href="/ai/api/speech/tts" data-click="top_api_speech_tts">语音合成</a></dd>
+                <dd><a href="/ai/api/speech/asr" data-click="top_api_speech_asr">语音识别</a></dd>
+                <dd><a class="hope" href="/ai/api/speech/customized-tts" data-click="top_api_speech_customized-tts">语音合成声音定制</a></dd>
+            </dl>
+        </div>
+        <div class="nav-product-api-col4">
+            <dl>
+                <dt>人脸与人体识别</dt>
+                <dd><a class="hot" href="/ai/api/body/detect" data-click="top_api_body_detect">人体检测</a></dd>
+                <dd><a href="/ai/api/face/compare?by=jdai" data-click="top_api_face_compare">人脸对比</a></dd>
+                <dd><a href="/ai/api/face/search" data-click="top_api_face_search">人脸搜索</a></dd>
+                <dd><a href="/ai/api/face/detect" data-click="top_api_face_detect">人脸检测与属性分析</a></dd>
+                <dd><a href="/ai/api/face/faceliveness" data-click="top_api_face_faceliveness">人脸活体检测</a></dd>
+                <dd><a href="/ai/api/body/pose" data-click="top_api_face_pose">人体关键点检测</a></dd>
+                <dd><a href="/ai/api/face/seg" data-click="top_api_face_seg">人像分割</a></dd>
+                <dd><a class="new" href="/ai/api/body/personreid" data-click="top_api_face_personreid">行人重识别</a></dd>
+                <dd><a class="new" href="/ai/api/image/humanParsing" data-click="top_api_face_humanParsing">细粒度人像分割</a></dd>
+            </dl>
+            <dl class="line">
+                <dt>内容审核</dt>
+                <dd><a href="/ai/api/image/pornIdentification" data-click="top_api_image_pornIdentification">智能鉴黄</a></dd>
+                <dd><a href="/ai/api/image/pep" data-click="top_api_image_pep">特定人物识别</a></dd>
+            </dl>
+        </div>
+        <div class="nav-product-api-col4">
+            <dl>
+                <dt>图像及视频理解</dt>
+                <dd><a class="new" href="/ai/api/image/garbageClassify" data-click="top_api_image_garbageClassify">垃圾分类</a></dd>
+                <dd><a href="/ai/api/image/vehicle" data-click="top_api_image_vehicle">车辆检测</a></dd>
+                <dd><a href="/ai/api/image/food" data-click="top_api_image_food">菜品识别</a></dd>
+                <dd><a class="hope" href="/ai/api/video/abstract" data-click="top_api_video_abstract">视频摘要</a></dd>
+                <dd><a class="hope" href="/ai/api/video/tag" data-click="top_api_video_tag">视频内容分析</a></dd>
+            </dl>
+            <dl class="line">
+                <dt>商品理解</dt>
+                <dd><a class="hot" href="/ai/api/image/snapshop" data-click="top_api_image_snapshop">拍照购</a></dd>
+                <dd><a class="new" href="/ai/api/image/productRecognize" data-click="top_api_image_product_recognize">通用商品识别</a></dd>
+                <dd><a class="new" href="/ai/api/image/winelabel" data-click="top_api_image_winelabel">酒标识别</a></dd>
+                <dd><a class="hope" href="/workorder/init/3/商品图搜" data-click="top_api_image_goodsImageSearch">商品图搜</a></dd>
+                <dd><a class="hope" href="/workorder/init/3/商品命名实体识别" data-click="top_api_image_goodsName">商品命名实体识别</a></dd>
+            </dl>
+        </div>
+        <div class="nav-product-api-col4">
+            <dl>
+                <dt>自然语言处理</dt>
+                <dd><a class="hot" href="/ai/api/nlp/sentiment" data-click="top_">情感分析</a></dd>
+                <dd><a class="hot" href="/ai/api/nlp/comment" data-click="top_api_nlp_comment">评论观点抽取</a></dd>
+                <dd><a class="hot" href="/ai/api/nlp/similarity" data-click="top_api_nlp_similarity">短文本相似度</a></dd>
+                <dd><a href="/ai/api/nlp/lexer" data-click="top_api_nlp_lexer">词法分析</a></dd>
+                <dd><a href="/ai/api/nlp/systax" data-click="top_api_nlp_systax">句法分析</a></dd>
+                <dd><a class="api_nlp_classification" href="/ai/api/nlp/classification" data-click="top_">文本分类</a></dd>
+                <dd><a class="hope" href="/ai/api/nlp/intelligentwriting" data-click="top_api_nlp_intelligentwriting">智能写作</a></dd>
+            </dl>
+            <dl class="line">
+                <dt>知识图谱</dt>
+                <dd><a class="hope" href="/ai/api/kg/pharmacy" data-click="top_api_kg_pharmacy">药学知识图谱</a></dd>
+            </dl>
+        </div>
+    </div>
+    <div class="nav-product-other">
+        <div class="nav-product-other-up">
+            <div class="nav-product-title">解决方案</div>
+            <ul class="inline">
+                <li><a href="/solution/znkf" data-click="top_solution_0">智能客服</a></li>
+                <li><a href="/solution/zhmd" data-click="top_solution_1">智慧门店</a></li>
+                <li><a href="/solution/zhrk" data-click="top_solution_2">智慧入口</a></li>
+                <li><a href="/solution/dhjqr" data-click="top_solution_3">电话机器人</a></li>
+                <li><a href="/solution/lsjjfa" data-click="top_solution_5">AIRS AI 零售解决方案</a></li>
+                <li><a href="/solution/c2b" data-click="top_solution_6">智能C2B</a></li>
+            </ul>
+        </div>
+        <div class="nav-product-other-down">
+            <div class="nav-product-title">AI工具</div>
+            <ul>
+                <li>
+                    <a href="http://quickai.jd.com/#/index" target="_blank" data-click="top_aitools_quickai">QuickAI <span>自动化模型训练平台</span></a>
+                </li>
+                <li>
+                    <a href="/ai/tool/intro/pai" data-click="top_aitools_pai">PAI <span>模型训练平台</span></a>
+                </li>
+                <li>
+                    <a href="/neuCube" data-click="top_aitools_neuCube">NeuFoundry <span>神铸平台</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- nav 平台生态 -->
+<div class="nav-ecology">
+    <ul>
+        <li><a href="/partner">京东 AI生态圈</a></li>
+        <li><a href="/accelerator">京东 AI加速器</a></li>
+        <li><a href="/goodCase">客户案例</a></li>
+    </ul>
+</div>
+<!-- nav 支持与服务 -->
+<div class="nav-support">
+    <ul>
+        <li>
+            <a target="_blank" href="/guide">文档中心</a>
+        </li>
+        <li>
+            <a target="_blank" href="/workorder/init/5/0">联系我们</a>
+        </li>
+    </ul>
+</div>
+<script>
+    window.addEventListener('load',function(){
+        var curUrl=location.href;
+
+        var js_login=document.getElementsByClassName('login')[0]
+        if(js_login){
+            var js_login_href=js_login.getElementsByTagName('a')[0]
+            js_login_href.setAttribute("href",'https://passport.jd.com/new/login.aspx?ReturnUrl='+curUrl)
+        }
+
+        var curUrl=location.href;
+
+        var js_reg=document.getElementsByClassName('register')[0]
+        if(js_reg){
+            var js_login_href=js_reg.getElementsByTagName('a')[0]
+            js_login_href.setAttribute("href",'https://reg.jd.com/reg/person?ReturnUrl='+curUrl)
+        }
+
+        var curUrl=location.href;
+
+        var js_logout=document.getElementsByClassName('logout')[0]
+
+        // console.log("js_login",js_login)
+
+        if(js_logout){
+            var js_login_href=js_logout.getElementsByTagName('a')[0]
+            js_login_href.setAttribute("href",'https://passport.jd.com/uc/login?ltype=logout&ReturnUrl='+curUrl)
+        }
+
+        $('#search-input').on('keyup',function (e) {
+            var searchUrl =$("#search-input").val();
+            if (e.keyCode === 13) {
+                window.location.href = "/searchResult?text="+encodeURI(searchUrl)+"&source=0&pageNum=1";
+                //alert($("#search-input").val())
+            }
+        })
+    })
+
+</script>
+</div>
+  <div class="searchResult">
+    <div class="resultTop">
+      <a href="/app">
+        <div class="marketLogo"></div>
+      </a>
+      <div class="marketLogo-right">
+        <div class="allsearch-top">
+          <div class="row">
+            <div class="search_wraper">
+              <input id="seachinput" type="text" placeholder="输入您所需要的服务..." value="" />
+              <div class="btn" onclick="search();">搜索</div>
+            </div>
+            <a href="/ai-proxy" class="emitbtn">
+              渠道系统管理
+            </a>
+            <div class="btns">
+              <div class="btn" onclick="userinfo();">买家中心</div>
+              <div class="btn forsale">
+                <span>卖家中心</span> <i class="neu-icon neu-xiajiantou"></i>
+                <div class="btn-slide">
+                  <ul>
+                    <li><a href="/workorder/init/6/0">商家入驻</a></li>
+                    <li><a href="http://ai-isv.jd.com">商家中心</a></li>
+                    <li><a href="/college">帮助中心</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row2">
+            <a href="/appSearchResult?cat1=智能供应链">智能供应链</a>
+            <a href="/appSearchResult?cat1=智能运营">智能运营</a>
+            <a href="/appSearchResult?cat1=智能营销">智能营销</a>
+            <a href="/appSearchResult?cat1=智能零售">智能零售</a>
+            <a href="/appSearchResult?cat1=智慧城市">智慧城市</a>
+            <a href="/appSearchResult?cat1=智能硬件">智能硬件</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 搜索标签 -->
+    <div class="searchTag">
+      <span class="search-title">搜索标签：</span>
+      <ul class="searchTag-list js-searchTag-list-top">
+              </ul>
+    </div>
+    <!-- 分类类目 -->
+    <ul class="search-classify">
+      <li>
+        <span class="search-title">一级分类：</span>
+        <ul class="searchTag-list" id="catOne" index="1">
+          <ol >全部</ol>
+                    <ol >智能供应链</ol>
+                    <ol >智能运营</ol>
+                    <ol >智能营销</ol>
+                    <ol >智能零售</ol>
+                    <ol >智慧城市</ol>
+                    <ol class="active" >智能硬件</ol>
+                  </ul>
+      </li>
+      <li>
+        <span class="search-title">二级分类：</span>
+        <ul class="searchTag-list" id="catTwo" index="2">
+                      <ol class="active">全部</ol>
+                          <ol>智能家居</ol>
+                          <ol>可穿戴设备</ol>
+                          <ol>Robot</ol>
+                          <ol>消费级硬件</ol>
+                          <ol>智能物流设备</ol>
+                          <ol>智能摄像头</ol>
+                              </ul>
+      </li>
+      <li>
+        <span class="search-title">交付方式：</span>
+        <ul class="searchTag-list" id="catThree" index="3">
+          <ol class="active" >全部</ol>
+          <ol >线上交付</ol>
+          <ol >线下交付</ol>
+        </ul>
+      </li>
+      <li>
+        <span class="search-title">商品价格：</span>
+        <ul class="searchTag-list" id="catFour" index="4">
+          <ol class="active" >全部</ol>
+          <ol >免费</ol>
+          <ol >1-98</ol>
+          <ol >99-198</ol>
+          <ol >199-1998</ol>
+          <ol >1999-2998</ol>
+          <ol >2998以上</ol>
+        </ul>
+      </li>
+    </ul>
+    <!-- 排序方式按钮 -->
+    <div class="sort-buttons">
+      <div class="sort-button sort-all  active ">
+        综合排序 <i class="neu-icon neu-xiangxia"></i>
+      </div>
+      <div class="sort-button sort-time ">
+        上架时间
+        <div class="td-arrow">
+          <svg width="9px" height="10px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <path d="M0.47989468,4.575 L8.09239468,4.575 C8.44864468,4.575 8.69239468,4.35 8.50489468,4.14375 C8.29864468,3.9375 4.84864468,0.3 4.69864468,0.15 C4.52989468,-0.0375 4.07989468,-0.05625 3.85489468,0.15 C3.70489468,0.3375 0.34864468,3.84375 0.0673946795,4.14375 C-0.12010532,4.33125 0.10489468,4.575 0.47989468,4.575 Z" id="time-up" fill="#000000" fill-rule="nonzero"></path>
+              <path d="M8.09239468,7.425 L0.47989468,7.425 C0.10489468,7.425 -0.12010532,7.66875 0.0673946795,7.85625 C0.34864468,8.15625 3.70489468,11.6625 3.87364468,11.83125 C4.07989468,12.05625 4.52989468,12.01875 4.71739468,11.83125 C4.84864468,11.7 8.29864468,8.0625 8.50489468,7.85625 C8.69239468,7.65 8.44864468,7.44375 8.09239468,7.425 Z" id="time-down" fill="#000000" fill-rule="nonzero"></path>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="sort-button sort-price  ">
+        商品价格
+        <div class="td-arrow">
+          <svg width="9px" height="10px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <path d="M0.47989468,4.575 L8.09239468,4.575 C8.44864468,4.575 8.69239468,4.35 8.50489468,4.14375 C8.29864468,3.9375 4.84864468,0.3 4.69864468,0.15 C4.52989468,-0.0375 4.07989468,-0.05625 3.85489468,0.15 C3.70489468,0.3375 0.34864468,3.84375 0.0673946795,4.14375 C-0.12010532,4.33125 0.10489468,4.575 0.47989468,4.575 Z" id="price-up" fill="#000000" fill-rule="nonzero"></path>
+              <path d="M8.09239468,7.425 L0.47989468,7.425 C0.10489468,7.425 -0.12010532,7.66875 0.0673946795,7.85625 C0.34864468,8.15625 3.70489468,11.6625 3.87364468,11.83125 C4.07989468,12.05625 4.52989468,12.01875 4.71739468,11.83125 C4.84864468,11.7 8.29864468,8.0625 8.50489468,7.85625 C8.69239468,7.65 8.44864468,7.44375 8.09239468,7.425 Z" id="price-down" fill="#000000" fill-rule="nonzero"></path>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+            <ul class="result-list">
+                      <li>
+              <a href="/market/hardware/43" target="_blank"><div class="result-list-bg" style="background-image: url(http://jdai.s3.cn-north-1.jcloudcs.com/_cloud/31333932373535373431315f70/images/20190902/8af884d3831d41308125319c686ff78a.png)"></div></a>
+              <div class="result-list-mid">
+                <h1><a href="/market/hardware/43" target="_blank">智能开票机器人</a></h1>
+                <p>智能开票机器人是一款新型产品，为了解决财务对发票处理一系列的工作任务量身定做，通过机器人协助财务完成发票打印、裁切、分联、盖章及留存一系列的工作任务。</p>
+                <div class="mid-time">
+                                      <div class="mid-time-cnt">
+                      上架时间： <span>2019-09-18 14:07:17</span>
+                    </div>
+                                    <div class="mid-time-cnt">交付方式：<span>线下交付</span></div>
+                </div>
+                <div class="mid-business">
+                  服务商： <span>上海云砺信息科技有限公司</span>
+                </div>
+                <ul class="mid-tags">
+                                      <li>个人助理</li>
+                                      <li>企业效率</li>
+                                      <li>财务管理</li>
+                                      <li>税务发票</li>
+                                      <li>智能工业</li>
+                                  </ul>
+              </div>
+              <div class="result-list-right">
+                <a href="/market/hardware/43" target="_blank">
+                                                      <div>￥150000 /套</div>
+                                                </a>
+              </div>
+            </li>
+                      <li>
+              <a href="/market/hardware/24" target="_blank"><div class="result-list-bg" style="background-image: url(http://jdai.s3.cn-north-1.jcloudcs.com/_cloud/6c65657a736263/images/20190724/4b5f0cf85a28410687d0609c5f5ef1b1.png)"></div></a>
+              <div class="result-list-mid">
+                <h1><a href="/market/hardware/24" target="_blank">Leez P710行业智能开发板</a></h1>
+                <p>联想 Leez P710 采用RK3399六核64位芯片方案，双Cortex-A72大核+四Cortex-A53小核。拥有4GB LPDDR4内存，16GB eMMC。支持双路摄像头及双路4K输出。</p>
+                <div class="mid-time">
+                                      <div class="mid-time-cnt">
+                      上架时间： <span>2019-09-16 14:49:36</span>
+                    </div>
+                                    <div class="mid-time-cnt">交付方式：<span>线下交付</span></div>
+                </div>
+                <div class="mid-business">
+                  服务商： <span>联想（北京）有限公司</span>
+                </div>
+                <ul class="mid-tags">
+                                      <li>语音识别</li>
+                                      <li>深度学习</li>
+                                      <li>人工智能芯片</li>
+                                      <li>人脸识别</li>
+                                      <li>图像识别</li>
+                                  </ul>
+              </div>
+              <div class="result-list-right">
+                <a href="/market/hardware/24" target="_blank">
+                                                      <div>￥999 /件</div>
+                                                </a>
+              </div>
+            </li>
+                      <li>
+              <a href="/market/hardware/9" target="_blank"><div class="result-list-bg" style="background-image: url(http://jdai.s3.cn-north-1.jcloudcs.com/_cloud/e58c97e4baace5a4a7e6a4bd/images/20190703/dca586412164439bb8eb428af0bed286.png)"></div></a>
+              <div class="result-list-mid">
+                <h1><a href="/market/hardware/9" target="_blank">大椽车载360全景环视</a></h1>
+                <p>大椽360°全景环视子系统能够与视觉传感器相互协同配合，形成全车周围的一整套的视频图像，让驾驶员清楚查看车辆周边是否存在行人、移动物体、非机动车、障碍物并了解其相对方位与距离，帮助驾驶员轻松停泊车辆。</p>
+                <div class="mid-time">
+                                      <div class="mid-time-cnt">
+                      上架时间： <span>2019-08-16 20:28:41</span>
+                    </div>
+                                    <div class="mid-time-cnt">交付方式：<span>线下交付</span></div>
+                </div>
+                <div class="mid-business">
+                  服务商： <span>北京大椽科技有限公司</span>
+                </div>
+                <ul class="mid-tags">
+                                      <li>智能驾驶</li>
+                                      <li>智能交通</li>
+                                      <li>辅助驾驶</li>
+                                      <li>车载系统</li>
+                                  </ul>
+              </div>
+              <div class="result-list-right">
+                <a href="/market/hardware/9" target="_blank">
+                                                      <div>￥2000 /套</div>
+                                                </a>
+              </div>
+            </li>
+                      <li>
+              <a href="/market/hardware/31" target="_blank"><div class="result-list-bg" style="background-image: url(http://jdai.s3.cn-north-1.jcloudcs.com/_cloud/e59f83e5858be890a8e696afe992a5e58c99e69f9c/images/20190730/78133991426f4633a2c7edb912acf9a8.jpg)"></div></a>
+              <div class="result-list-mid">
+                <h1><a href="/market/hardware/31" target="_blank">埃克萨斯智能钥匙柜EKey5Mi</a></h1>
+                <p>埃克萨斯E-Key5采用独立的CPU对钥匙信息进行控制，可以通过手机APP、网页、PC进行用户申请授权，拥有权限的用户可以对设备进行操作</p>
+                <div class="mid-time">
+                                      <div class="mid-time-cnt">
+                      上架时间： <span>2019-08-16 18:57:31</span>
+                    </div>
+                                    <div class="mid-time-cnt">交付方式：<span>线下交付</span></div>
+                </div>
+                <div class="mid-business">
+                  服务商： <span>北京一江致远科技有限公司 </span>
+                </div>
+                <ul class="mid-tags">
+                                      <li>智能安防</li>
+                                      <li>智能家居</li>
+                                      <li>智慧城市</li>
+                                      <li>智能安防</li>
+                                      <li>智能工业</li>
+                                  </ul>
+              </div>
+              <div class="result-list-right">
+                <a href="/market/hardware/31" target="_blank">
+                                                      <div>￥12800 /套</div>
+                                                </a>
+              </div>
+            </li>
+                      <li>
+              <a href="/market/hardware/38" target="_blank"><div class="result-list-bg" style="background-image: url(http://jdai.s3.cn-north-1.jcloudcs.com/_cloud/e59f83e5858be890a8e696afe992a5e58c99e69f9c/images/20190814/7a77aa096c494ae087ed0023d6d74039.png)"></div></a>
+              <div class="result-list-mid">
+                <h1><a href="/market/hardware/38" target="_blank">埃克萨斯智能钥匙柜EKey4</a></h1>
+                <p>埃克萨斯智能钥匙柜E-Key4是北京一江致远科技有限公司推出的一款高端智能钥匙柜，它被广泛的应用于交通、安防、物业、地产、商超等行业。</p>
+                <div class="mid-time">
+                                      <div class="mid-time-cnt">
+                      上架时间： <span>2019-08-16 18:57:21</span>
+                    </div>
+                                    <div class="mid-time-cnt">交付方式：<span>线下交付</span></div>
+                </div>
+                <div class="mid-business">
+                  服务商： <span>北京一江致远科技有限公司 </span>
+                </div>
+                <ul class="mid-tags">
+                                      <li>智能安防</li>
+                                      <li>智能金融</li>
+                                      <li>智能交通</li>
+                                      <li>智能仓储</li>
+                                      <li>智能快递柜</li>
+                                  </ul>
+              </div>
+              <div class="result-list-right">
+                <a href="/market/hardware/38" target="_blank">
+                                                      <div>￥9600 /件</div>
+                                                </a>
+              </div>
+            </li>
+                      <li>
+              <a href="/market/hardware/35" target="_blank"><div class="result-list-bg" style="background-image: url(http://jdai.s3.cn-north-1.jcloudcs.com/_cloud/e59f83e5858be890a8e696afe992a5e58c99e69f9c/images/20190802/1ed0efae7b784da7b115b615a7aba9ac.jpg)"></div></a>
+              <div class="result-list-mid">
+                <h1><a href="/market/hardware/35" target="_blank">埃克萨斯EKey1</a></h1>
+                <p>埃克萨斯智能钥匙柜E-Key1是北京一江致远科技有限公司推出的一款高端智能钥匙柜，它使用独立射频芯片进行钥匙标记，拥有较高的容纳量，相对较低的价格。适用于公司内部，拥有专员进行钥匙操作和记录场所。</p>
+                <div class="mid-time">
+                                      <div class="mid-time-cnt">
+                      上架时间： <span>2019-08-07 12:47:41</span>
+                    </div>
+                                    <div class="mid-time-cnt">交付方式：<span>线下交付</span></div>
+                </div>
+                <div class="mid-business">
+                  服务商： <span>北京一江致远科技有限公司 </span>
+                </div>
+                <ul class="mid-tags">
+                                      <li>智能安防</li>
+                                      <li>智能交通</li>
+                                      <li>智慧交通</li>
+                                      <li>交通运输</li>
+                                      <li>智能仓储</li>
+                                  </ul>
+              </div>
+              <div class="result-list-right">
+                <a href="/market/hardware/35" target="_blank">
+                                                      <div>￥5600 /件</div>
+                                                </a>
+              </div>
+            </li>
+                      <li>
+              <a href="/market/hardware/30" target="_blank"><div class="result-list-bg" style="background-image: url(http://jdai.s3.cn-north-1.jcloudcs.com/_cloud/e59f83e5858be890a8e696afe992a5e58c99e69f9c/images/20190730/8985e69684994d80845f9b33d8e87ca0.jpg)"></div></a>
+              <div class="result-list-mid">
+                <h1><a href="/market/hardware/30" target="_blank">埃克萨斯推拉式钥匙柜TL1</a></h1>
+                <p>埃克萨斯推拉式钥匙柜TL-1是北京一江致远科技有限公司推出的一款机械式钥匙柜，它可以满足高达2000位的钥匙管理需求，同时可以通过软件进行数据记录、查询。</p>
+                <div class="mid-time">
+                                      <div class="mid-time-cnt">
+                      上架时间： <span>2019-08-02 16:06:58</span>
+                    </div>
+                                    <div class="mid-time-cnt">交付方式：<span>线下交付</span></div>
+                </div>
+                <div class="mid-business">
+                  服务商： <span>北京一江致远科技有限公司 </span>
+                </div>
+                <ul class="mid-tags">
+                                      <li>智能安防</li>
+                                      <li>智能家居</li>
+                                      <li>智能交通</li>
+                                      <li>智慧交通</li>
+                                      <li>轨道交通设备</li>
+                                  </ul>
+              </div>
+              <div class="result-list-right">
+                <a href="/market/hardware/30" target="_blank">
+                                                      <div>￥1300 /套</div>
+                                                </a>
+              </div>
+            </li>
+                      <li>
+              <a href="/market/hardware/32" target="_blank"><div class="result-list-bg" style="background-image: url(http://jdai.s3.cn-north-1.jcloudcs.com/_cloud/e59f83e5858be890a8e696afe992a5e58c99e69f9c/images/20190802/c8b9790b31ac4d1f88f23643c351c358.png)"></div></a>
+              <div class="result-list-mid">
+                <h1><a href="/market/hardware/32" target="_blank">埃克萨斯EKey4Intro版</a></h1>
+                <p>埃克萨斯智能钥匙柜E-Key4是北京一江致远科技有限公司推出的一款高端智能钥匙柜，它被广泛的应用于交通、安防、物业、地产、商超等行业。</p>
+                <div class="mid-time">
+                                      <div class="mid-time-cnt">
+                      上架时间： <span>2019-08-02 16:06:49</span>
+                    </div>
+                                    <div class="mid-time-cnt">交付方式：<span>线下交付</span></div>
+                </div>
+                <div class="mid-business">
+                  服务商： <span>北京一江致远科技有限公司 </span>
+                </div>
+                <ul class="mid-tags">
+                                      <li>智能安防</li>
+                                      <li>智能交通</li>
+                                      <li>汽车后市场</li>
+                                      <li>智能仓储</li>
+                                      <li>智慧物流</li>
+                                  </ul>
+              </div>
+              <div class="result-list-right">
+                <a href="/market/hardware/32" target="_blank">
+                                                      <div>￥9600 /套</div>
+                                                </a>
+              </div>
+            </li>
+                      <li>
+              <a href="/market/hardware/33" target="_blank"><div class="result-list-bg" style="background-image: url(http://jdai.s3.cn-north-1.jcloudcs.com/_cloud/e59f83e5858be890a8e696afe992a5e58c99e69f9c/images/20190802/d6163021aa7044d8bcb01b932f6508c2.jpg)"></div></a>
+              <div class="result-list-mid">
+                <h1><a href="/market/hardware/33" target="_blank">埃克萨斯推拉式钥匙柜TL5</a></h1>
+                <p>埃克萨斯推拉式钥匙柜TL-5是北京一江致远科技有限公司推出的一款机械式钥匙柜，它可以满足高达2000位的钥匙管理需求，同时可以通过软件进行数据记录、查询。</p>
+                <div class="mid-time">
+                                      <div class="mid-time-cnt">
+                      上架时间： <span>2019-08-02 15:08:07</span>
+                    </div>
+                                    <div class="mid-time-cnt">交付方式：<span>线下交付</span></div>
+                </div>
+                <div class="mid-business">
+                  服务商： <span>北京一江致远科技有限公司 </span>
+                </div>
+                <ul class="mid-tags">
+                                      <li>身份识别</li>
+                                      <li>智能安防</li>
+                                      <li>智能交通</li>
+                                      <li>智慧交通</li>
+                                      <li>轨道交通设备</li>
+                                  </ul>
+              </div>
+              <div class="result-list-right">
+                <a href="/market/hardware/33" target="_blank">
+                                                      <div>￥1300 /件</div>
+                                                </a>
+              </div>
+            </li>
+                      <li>
+              <a href="/market/hardware/41" target="_blank"><div class="result-list-bg" style="background-image: url(http://jdai.s3.cn-north-1.jcloudcs.com/_cloud/6a61636b3139383831323235/images/20190819/d3ab916bd4ec42bea43bba8b426c4acf.png)"></div></a>
+              <div class="result-list-mid">
+                <h1><a href="/market/hardware/41" target="_blank">机械手臂履带车</a></h1>
+                <p>6自由度机械手臂履带车Tankbot比赛LOBOT循迹避障开源搬运小车，可以满足多种教学任务</p>
+                <div class="mid-time">
+                                      <div class="mid-time-cnt">
+                      上架时间： <span>2019-08-21 11:52:33</span>
+                    </div>
+                                    <div class="mid-time-cnt">交付方式：<span>线下交付</span></div>
+                </div>
+                <div class="mid-business">
+                  服务商： <span>楚门智能</span>
+                </div>
+                <ul class="mid-tags">
+                                      <li>智能教育</li>
+                                  </ul>
+              </div>
+              <div class="result-list-right">
+                <a href="/market/hardware/41" target="_blank">
+                                                      <div>面议</div>
+                                                </a>
+              </div>
+            </li>
+                  </ul>
+                <section class="sr-pagination" style="text-align:left;">
+          <div class="m-style sr-pagination-cnt"></div>
+        </section>
+      </div>
+  <div class="footer">
+    <div class="container">
+        <div class="top">
+            <a href="/"><img src="/static/portal/images/logo1.svg" /></a>
+            <div class="language-select">
+                <span>中国站</span><i class="neu-icon neu-xiajiantou"></i>
+                <div class="online-menu">
+                    <ul>
+                        <li><a href="http://neuhub.jd.com/">中国站</a></li>
+                        <li><a href="http://jddoversea-neuhub.jd.com/index.html" target="_blank">International</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="sf">
+                <div class="list">
+                    <dl>
+                        <dt>买家快速入口</dt>
+                        <dd><a href="/user/baseInfo">控制台</a></dd>
+                        <dd><a href="/order/historylist">订单中心</a></dd>
+                        <dd><a href="/workorder/workOrderList">工单中心</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>服务商快速入口</dt>
+                        <dd><a href="/ecology">服务商入驻</a></dd>
+                        <dd><a href="http://ai-isv.jd.com/user/userCenter" target="_blank">服务商中心</a></dd>
+                        <dd><a href="http://ai-isv.jd.com/api/apiList" target="_blank">产品管理</a></dd>
+                        <dd><a href="http://ai-isv.jd.com/order/isplist?math=67" target="_blank">订单中心</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>支持与服务</dt>
+                        <dd><a href="https://aidoc.jd.com/user/flow.html" target="_blank">新手指南</a></dd>
+                        <dd><a href="/comingSoon">社区论坛</a></dd>
+                        <dd><a href="https://aidoc.jd.com/user/platformProtocol.html" target="_blank">服务协议</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>生态与市场</dt>
+                        <dd><a href="/dev" target="_blank">开发平台</a></dd>
+                        <dd><a href="/app" target="_blank">应用平台</a></dd>
+                        <dd><a href="/accelerator">京东AI加速器</a></dd>
+                        <dd><a href="/ecology">京东AI生态圈</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>关于我们</dt>
+                        <dd><a href="/advanced">前沿动态</a></dd>
+                        <dd><a href="http://air.jd.com" target="_blank">AI研究院</a></dd>
+                        <dd><a href="http://zhaopin.jd.com/home" target="_blank">加入我们</a></dd>
+                        <dd><a href="/goodCase">合作案例</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>联系我们</dt>
+                        <dd>售前咨询邮箱申请</dd>
+                        <dd>ai-presale@jd.com </dd>
+                        <dd>加盟合作邮箱申请</dd>
+                        <dd>ai-partner@jd.com</dd>
+                    </dl>
+                </div>
+                <div class="ewms">
+                    <div class="bk">
+                        <img data-src="/static/portal/images/footer/e-1.jpg" alt="公众号" />
+                        <p class="title">公众号</p>
+                    </div>
+                    <div class="bk">
+                        <img data-src="/static/portal/images/footer/e-2.jpeg" alt="今日头条" />
+                        <p class="title">今日头条</p>
+                    </div>
+                    <div class="bk">
+                        <img data-src="/static/portal/images/footer/e-3.jpg" alt="小程序" />
+                        <p class="title">小程序</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cp-tj">
+                <ul>
+                    <li>热门产品</li>
+                    <li><a href="/ai/api/image/snapshop">拍照购</a></li>
+                    <li><a href="/ai/api/speech/asr">语音识别</a></li>
+                    <li><a href="/ai/api/speech/tts">语音合成</a></li>
+                    <li><a href="/ai/solution/customerServiceRobot">智能对话</a></li>
+                    <li><a href="/ai/api/ocr/general">文字识别</a></li>
+                    <li><a href="/ai/api/face/search">人脸识别</a></li>
+                    <li><a href="/ai/api/nlp/sentiment">情感分析</a></li>
+                    <li><a href="/ai/api/nlp/comment">评论观点抽取</a></li>
+                    <li><a href="/ai/api/nlp/lexer">词法分析</a></li>
+                </ul>
+                <ul>
+                    <li>更多推荐</li>
+                    <li><a href="http://quickai.jd.com/#/index" target="_blank">QuickAI</a></li>
+                    <li><a href="/ai/tool/intro/pai">PAI</a></li>
+                    <li><a href="/market/packet/100">智能机器人</a></li>
+                    <li><a href="/market/packet/96">智能货架</a></li>
+                    <li><a href="/market/packet/71">智能微信营销</a></li>
+                    <li><a href="/market/packet/72">智能短视频营销</a></li>
+                    <li><a href="/market/packet/95">社交电商营销</a></li>
+                    <li><a href="/market/packet/93">智慧教育</a></li>
+                </ul>
+            </div>
+        </div>
+        <ul class="yqlj">
+            <li>友情链接</li>
+            <li><a href="https://www.jdcloud.com/cn/" target="_blank">京东云</a></li>
+            <li><a href="http://fw.jd.com/main/" target="_blank">京麦服务市场</a></li>
+            <li><a href="https://wx.jdcloud.com/" target="_blank">京东万象</a></li>
+            <li><a href="https://k.jd.com/" target="_blank">京东开普勒</a></li>
+            <li><a href="http://open.jd.com/home/home#/index" target="_blank">京东无界开放平台</a></li>
+            <li><a href="https://www.jd.com/" target="_blank">京东商城</a></li>
+            <li><a href="https://www.jddglobal.com" target="_blank">京东数科</a></li>
+            <li><a href="http://www.jdwl.com/" target="_blank">京东物流</a></li>
+            <li><a href="http://x.jdwl.com/" target="_blank">京东X事业部</a></li>
+            <li><a href="https://union.jd.com/index" target="_blank">京东联盟</a></li>
+            <li><a href="https://www.i-search.com.cn" target="_blank">艺赛旗RPA</a></li>
+        </ul>
+    </div>
+    <div class="bottom">
+        <div class="container end">
+            Copyright © 2004 - 2019 北京京东尚科信息技术有限公司 版权所有 联系电话：010-89117076
+        </div>
+    </div>
+</div>
+<!-- 浮标 -->
+<div class="side2">
+    <!-- <div class="side2-box">
+      <img  alt="" />
+    </div> -->
+    <div class="side2-joy">
+        <img src="/static/portal/images/qrcode/joy.png" />
+    </div>
+    <div class="side2-hzzx">合作·咨询</div>
+    <div class="side2-ewm">
+        <img src="/static/portal/images/qrcode/ewm.svg" />
+    </div>
+    <ul class="side2-lp">
+        <li>
+            <div><img src="/static/portal/images/qrcode/phone.svg" /> 服务热线</div>
+            <p>010-57656045</p>
+        </li>
+        <li>
+            <img src="/static/portal/images/qrcode/contect.svg" />
+            <a href="/workorder/init/5/0">联系我们</a>
+        </li>
+    </ul>
+    <div class="side2-qrcode">
+        <img src="/static/portal/images/qrcode/qrcode.png" />
+    </div>
+    <div class="side2-go-top">
+        <img src="/static/portal/images/qrcode/top.svg" />
+    </div>
+</div>
+<script src="/static/portal/dll/vendor.dll.js?v=3e006f8a0b105032af71"></script>
+<script>
+    var enableBoomer = document.location.host!=="localhost";
+    BOOMR.init({
+        siteid: "JA2018_1131446",
+        autorun: false,
+        log: null,
+        History: {
+            auto: enableBoomer
+        },
+        Errors: {
+            monitorGlobal: enableBoomer,
+            monitorNetwork: enableBoomer,
+            monitorConsole: enableBoomer,
+            monitorEvents: enableBoomer,
+            monitorTimeout: enableBoomer
+        }
+    });
+</script>
+<script type="text/javascript">
+    //埋点1
+    var jaq = jaq || [];
+    jaq.push(['account', 'JA2018_1131446']); //站点编号
+    jaq.push(['domain', 'jd.com']); //站点域名
+    ;(function() {
+        var ja = document.createElement('script')
+        ja.type = 'text/javascript'
+        ja.async = true
+        ja.src = '//wl.jd.com/joya.js'
+        var s = document.getElementsByTagName('script')[0]
+        s.parentNode.insertBefore(ja, s)
+    })();
+
+    //埋点2 百度统计
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?389dc36fabdb882878bdffb89a8d3747";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+  <script type="text/javascript" src="/static/portal/js/searchResultApplication.3e006f8a0b105032af71.js"></script>
+</body>
+<script>
+    var jsCategories = new Array();
+            var subCategories = new Array();
+                  subCategories.push("智能质检");
+                  subCategories.push("仓储管理");
+                  subCategories.push("库存管理");
+                  subCategories.push("ERP");
+                var temp = {
+          name:"智能供应链",
+          subCategories:subCategories
+        };
+        jsCategories.push(temp);
+            var subCategories = new Array();
+                  subCategories.push("客户数据/市场分析");
+                  subCategories.push("企业效率");
+                  subCategories.push("企业建站");
+                  subCategories.push("CRM");
+                  subCategories.push("项目管理");
+                  subCategories.push("企业服务");
+                  subCategories.push("财务管理");
+                  subCategories.push("OA协同");
+                  subCategories.push("人力HR");
+                  subCategories.push("税务发票");
+                var temp = {
+          name:"智能运营",
+          subCategories:subCategories
+        };
+        jsCategories.push(temp);
+            var subCategories = new Array();
+                  subCategories.push("用户画像");
+                  subCategories.push("智能推荐");
+                  subCategories.push("精准营销");
+                  subCategories.push("客流分析");
+                  subCategories.push("微信营销");
+                  subCategories.push("小程序");
+                  subCategories.push("智能获客");
+                  subCategories.push("投放工具");
+                  subCategories.push("SEO优化");
+                  subCategories.push("DSP");
+                  subCategories.push("社群广告投放");
+                  subCategories.push("智能搜索");
+                  subCategories.push("销量预测");
+                  subCategories.push("客服营销");
+                var temp = {
+          name:"智能营销",
+          subCategories:subCategories
+        };
+        jsCategories.push(temp);
+            var subCategories = new Array();
+                  subCategories.push("智能门店");
+                  subCategories.push("智能货架");
+                  subCategories.push("智能售货机");
+                  subCategories.push("智能商品");
+                var temp = {
+          name:"智能零售",
+          subCategories:subCategories
+        };
+        jsCategories.push(temp);
+            var subCategories = new Array();
+                  subCategories.push("智慧公共服务");
+                  subCategories.push("智慧社区管理");
+                  subCategories.push("智慧交通");
+                  subCategories.push("智慧健康保障");
+                  subCategories.push("智慧安居服务");
+                  subCategories.push("智慧文化服务");
+                  subCategories.push("智慧医疗");
+                  subCategories.push("智能教育");
+                  subCategories.push("智慧园区");
+                  subCategories.push("智能安防");
+                  subCategories.push("智慧法务");
+                var temp = {
+          name:"智慧城市",
+          subCategories:subCategories
+        };
+        jsCategories.push(temp);
+            var subCategories = new Array();
+                  subCategories.push("智能家居");
+                  subCategories.push("可穿戴设备");
+                  subCategories.push("Robot");
+                  subCategories.push("消费级硬件");
+                  subCategories.push("智能物流设备");
+                  subCategories.push("智能摄像头");
+                var temp = {
+          name:"智能硬件",
+          subCategories:subCategories
+        };
+        jsCategories.push(temp);
+        // 综合排序
+    sortObj = {
+       time: 1, //0，降序，1，升序
+       price: 1 //0，降序，1，升序
+    }
+        
+    window.initArrows();
+
+    var cat1 = "智能硬件";
+    var cat2 = "";
+    var payType = "";
+    var price = "";
+    var text = "";
+    var searchTag = "";
+    var sortColumn = "";
+    var sortType = "0";
+    var pageSize = "10";
+
+    // 排序按钮点击
+    $('.sort-button').click(function() {
+      $(this).addClass('active').siblings().removeClass('active');
+
+      // 综合排序
+      if ($(this).hasClass('sort-all')) {
+        var query = getSearchCondition();
+        window.location.href = "/appSearchResult?" + query;
+      }
+
+      // 按时间排序
+      if ($(this).hasClass('sort-time')) {
+        sortObj.time = sortObj.time == 0 ? 1 : 0;
+        sortType = sortObj.time;
+        sortColumn = "time";
+        var query = getSearchCondition();
+        if (query != "") {
+          query += "&";
+        }
+        if (sortObj.time == 1) {
+          query += "sortByPublish=asc";
+        } else {
+          query += "sortByPublish=desc";
+        }
+        window.location.href = "/appSearchResult?" + query;
+      }
+
+      // 按价格排序
+      if ($(this).hasClass('sort-price')) {
+        sortObj.price = sortObj.price == 0 ? 1 : 0
+        sortType = sortObj.price;
+        sortColumn = "price";
+        var query = getSearchCondition();
+        if (query != "") {
+          query += "&";
+        }
+        if (sortObj.price == 1) {
+          query += "sortByPrice=asc";
+        } else {
+          query += "sortByPrice=desc";
+        }
+        window.location.href = "/appSearchResult?" + query;
+      }
+
+      // 按成交量排序
+      if ($(this).hasClass('sort-num')) {
+      }
+
+      // 上下箭头颜色变化
+      window.initArrows();
+
+    })
+
+    //删除标签
+    window.tagRemoveClickCallback = function () {
+      // alert("tagRemoveClickCallback");
+      // alert(getQuery());
+      //window.location.href = getQuery();
+    }
+
+    $(".js-searchTag-list-top .neu-close").click(function () {
+      $(this).parent().remove();
+      window.location.href = getQuery();
+    })
+
+    //点击标签
+    window.tagClickCallback = function () {
+      window.location.href = getQuery();
+    }
+
+    //筛选条件点击
+    window.filterClickCallback = function () {
+      window.location.href = getQuery();
+    }
+
+
+    function getQuery() {
+      var query = getSearchCondition();
+      var tag = getTag();
+      var text = getSearchText();
+
+      if (tag != "") {
+        if (query != "") {
+          query += "&";
+        }
+        query += "tag=" + encodeURI(tag);
+        text = "";
+      }
+
+      if (text != "") {
+        if (query != "") {
+          query += "&";
+        }
+        query += "text=" + encodeURI(text);
+      }
+
+      if (query == "") {
+        return "/appSearchResult";
+      } else {
+        return "/appSearchResult?" + query;
+      }
+    }
+
+    function addUrlConnectCode(href) {
+      if (!href.endsWith("?")) {
+        href += "&";
+      }
+      return href;
+    }
+
+    function getUrlParam(name) {
+      var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)') //构造一个含有目标参数的正则表达式对象
+      var r = window.location.search.substr(1).match(reg) //匹配目标参数
+      if (r != null) return unescape(r[2])
+      return null //返回参数值
+    }
+
+    function getSearchCondition() {
+      var catNew1 = "";
+
+      var query = "";
+      catNew1 = $("#catOne ol.active").html().trim();
+      cat2 = $("#catTwo ol.active").html().trim();
+      payType = $("#catThree ol.active").html().trim();
+      price = $("#catFour ol.active").html().trim();
+
+      if (cat1 != "" && cat1 != catNew1 && catNew1 == "全部") {
+        catNew1 = "";
+        cat2 = "";
+      }
+
+      if (catNew1 != "" && cat2 != "") {
+        if (catNew1 == "全部") {
+          if (cat2 != "全部") {
+            query += "cat1=" + encodeURI(jsCategories[0].name) +"&cat2=" + encodeURI(cat2);;
+          }
+        } else {
+          query += "cat1=" + encodeURI(catNew1);
+          if (cat2 != "全部") {
+            query += "&cat2=" + encodeURI(cat2);
+          }
+        }
+      }
+
+      if (payType != "全部" && payType != "") {
+        if (query == "") {
+          query += "payType=" + encodeURI(payType);
+        } else {
+          query += "&payType=" + encodeURI(payType);
+        }
+      }
+
+      if (price != "全部" && price != "") {
+        if (query == "") {
+          query += "price=" + encodeURI(price);
+        } else {
+          query += "&price=" + encodeURI(price);
+        }
+      }
+
+      return query;
+    }
+
+    function getTag() {
+      var tag = $(".js-searchTag-list-top .tag .searchTag-list-txt").html();
+      if (typeof(tag) == "undefined") {
+        tag = "";
+      }
+
+      if (tag != "" || tag.trim() != "") {
+        return tag;
+      } else {
+        return "";
+      }
+    }
+
+    function getSearchText() {
+      var text = $("#seachinput").val();
+      if (text != "" || text.trim() != "") {
+        return text;
+      } else {
+        return "";
+      }
+    }
+
+    function search() {
+
+      var query = getSearchCondition();
+      var text = getSearchText();
+
+      if (text != "") {
+        if (query != "") {
+          query += "&";
+        }
+        query += "text=" + encodeURI(text);
+      }
+
+      if (query == "") {
+        query = "/appSearchResult";
+      } else {
+        query = "/appSearchResult?" + query;
+      }
+
+      window.location.href = query;
+    }
+
+    function wordorder() {
+      window.location.href = "/workorder/init/8/0";
+    }
+
+    function userinfo() {
+      window.location.href = "/user/baseInfo";
+    }
+
+    $('.sr-pagination-cnt').pagination({
+
+      showData: 10,
+      current: 1,
+      totalData: 22,
+      jump: true,
+      coping: true,
+      homePage: '首页',
+      endPage: '末页',
+      prevContent: '上页',
+      nextContent: '下页',
+      callback: function(api) {
+        var cur = api.getCurrent()
+
+        var href = "/appSearchResult?";
+        if (cat1 != "") {
+          href += "cat1=" + encodeURI(cat1);
+        }
+        if (cat2 != "") {
+          href = addUrlConnectCode(href);
+          href += "cat2=" + encodeURI(cat2);
+        }
+        if (text != "") {
+          href = addUrlConnectCode(href);
+          href += "text=" + encodeURI(text);
+        }
+        if (searchTag != "") {
+          href = addUrlConnectCode(href);
+          href += "tag=" + encodeURI(searchTag);
+        }
+        if (payType != "") {
+          href = addUrlConnectCode(href);
+          href += "payType=" + payType;
+        }
+        if (price != "") {
+          href = addUrlConnectCode(href);
+          href += "price=" + price;
+        }
+
+        if (sortColumn != "" && (sortColumn == "price" || sortColumn == "time")) {
+          href = addUrlConnectCode(href);
+          if (sortColumn == "price") {
+            if (sortType == 1) {
+              href += "sortByPrice=asc";
+            } else {
+              href += "sortByPrice=desc";
+            }
+          } else if (sortColumn == "time") {
+            if (sortType == 1) {
+              href += "sortByPublish=asc";
+            } else {
+              href += "sortByPublish=desc";
+            }
+          }
+        }
+
+        href = addUrlConnectCode(href) + "pageSize=" + pageSize;
+        location.href = href + "&pageNum=" + cur;
+      }
+    })
+
+  </script>
+</html>

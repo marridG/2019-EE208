@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="京东金融综合互联网理财服务，基金理财,金融服务，敬请享受! "/>
+    <meta name="Keywords" content="京东理财,网上理财,基金理财,金融服务,马上有钱,理财规划,个人理财,家庭理财,第三方理财,投资理财/"/>
+    <title> 探密京保贝之旅 </title>
+    <link rel="icon" href="//www.jd.com/favicon.ico" type="image/x-icon"/>
+            <link rel="stylesheet" href="//static.360buyimg.com/finance/base/biz/1.0.0/css/base.css"/>
+<link rel="stylesheet" type="text/css" href="//static.360buyimg.com/finance/supplyChain/JBaby/2.0.0/css/index.css"
+      media="all"/>
+
+                    
+    
+</head>
+<body>
+<!--头部页面片内容-->
+<!--测试环境和线上使用公共头尾系统-->
+<!-- header.jd.com -->
+
+          <!--header-->
+<!--topbar-->
+<div class="header">
+	<!--topbar-->
+	<div class="topbar" id="topbar">
+		<div class="grid-1200 topbar-wrap clearfix">
+			<div class="topbar-left">
+				<ul class="toplink">
+					<li class="toplink-link">
+						<i class="icon icon-home"></i>
+						<span class="tel"><a href="https://jtalk.jd.com/?entrance=10001&source=web&companyId=1">我的客服</a>  (每天9:00-22:00) </span>
+					</li>
+				</ul>
+			</div>
+			<div class="topbar-right">
+				<ul class="topmenu fl">
+					<li class="topmenu-item topmenu-userinfo">
+						<span id="loginbar">
+                            <span class="g-link">
+                                <span>
+                                    <a href="//biz.jd.com/register/toEnterpriseRegister.do" class="j-register j-log"
+                                       data-log>注册</a>
+                                </span>
+						</span>
+						<span class="g-link">
+                                <span>
+                                    <a href="javascript:login()" class="j-login">登录</a>
+                                </span>
+						</span>
+						</span>
+						<span class="g-link">
+                                <span></span>
+						<span class="app-qrcode">
+                                    <!-- <a target="_blank" href="//resource-static.jd.com/jdpay/download.html">企业金融APP</a>
+<i style="position:relative;width:15px;display: inline-block;top: 0;">&nbsp;<img
+	src="//img30.360buyimg.com/jr_image/jfs/t18766/140/2617189500/199/120b7956/5b03c0f4Nfa8cca26.png" style="
+    position: absolute;
+    left: 0;
+    top: -2px;
+"></i>
+                                    <div class="qrcode-wrap"></div> -->
+                                </span>
+						</span>
+						<span class="g-link">
+                                <span class="">
+                                    <a target="_blank" href="//bnews.jd.com/index">京企资讯</a>
+<span style="position:relative;width:20px;display: inline-block;top: 0;">&nbsp;<img
+	src="http://static.360buyimg.com/finance/base/1.2.0/css/i/topbar-new.png" style="
+    position: absolute;
+    left: 0;
+    top: 3px;
+"></span>
+						</span>
+						<span class="help-center">
+                                 <a target="_blank" href="//help.jdpay.com/helpCenterNew.htm">帮助中心</a>
+                                 <div class="help-list">
+                                     <ul style="border:none; padding:0; margin:0;">
+                                         <li><a href="//help.jdpay.com/helpCenterNew.htm">自助客服</a></li>
+                                         <li><a
+	                                         href="//jtalk.jd.com?entrance=10001&source=web&companyId=1">在线客服</a></li>
+                                     </ul>
+                                 </div>
+                             </span>
+						</span>
+						<span class="g-link">
+                            <span><a target="_blank" href="//ims.jdpay.com/suggestion/index.do">意见反馈</a></span>
+						</span>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+	<!--topbar end-->
+	<!--main-nav-->
+	<div class="main-nav">
+		<div class="grid-1200 nav-wrap pr clearfix">
+			<div class="main-nav-logo fl">
+				<a href="//biz.jd.com/index.html" clstag="jr|keycount|qyjr_biz|jdjrqyb">
+					<img src="//storage.jd.com/base/images/jdjr-logo/logo-biz.png" width="239" height="36" alt="京东金融">
+				</a>
+			</div>
+			<div class="main-nav-userCenter-wrap fr">
+				<div id="J_userCenter" class="userCenter-main">
+					<div class="userCenter-portal">
+						<i class="userCenter-portal-icon"></i>
+						<a href="//ims.jdpay.com/index.do" class="userCenter-portal-text" clstag="jr|keycount|qyjr_biz|home">商户中心</a>
+						<i class="userCenter-portal-right"></i>
+						<span style="display: none;" class="msg-icon">0</span>
+					</div>
+					<div id="J_userCenterBoard" class="userCenter-board">
+						<div class="userCenter-list">
+							<ul>
+								<li>
+									<a class="list-item-wrap" href="//ims.jdpay.com/accountmanagement/index.do" clstag="jr|keycount|qyjr_biz|ims_account"><span class="list-item-left">账户管理</span></a>
+								</li>
+								<li>
+									<a class="list-item-wrap" href="//ims.jdpay.com/layout/frame.do?callBackUrl=/fundapp/accountquery/toAccountBalance.do"
+									 clstag="jr|keycount|qyjr_biz|ims_capital"><span class="list-item-left">资金账户</span></a>
+								</li>
+								<li>
+									<a class="list-item-wrap" href="//prms.jdpay.com/product/order/index.do" clstag="jr|keycount|qyjr_biz|ims_product"><span class="list-item-left">支付产品</span></a>
+								</li>
+								<li>
+									<a target="_blank" class="list-item-wrap" href="//8.jd.com/jk" clstag="jr|keycount|qyjr_biz|ims_wdlc"><span class="list-item-left">我的理财</span></a>
+								</li>
+								<li>
+									<a target="_blank" class="list-item-wrap" href="//loan.jd.com/home/member.htm " clstag="jr|keycount|qyjr_biz|ims_wdrz"><span class="list-item-left">我的融资</span></a>
+								</li>
+								<li>
+									<a class="list-item-wrap" href="//ims.jdpay.com/layout/frame.do?enterFlag=old_sys&module=capital" clstag="jr|keycount|qyjr_biz|ims_shjs"><span class="list-item-left">商户结算</span></a>
+								</li>
+								<!-- <li>
+									<a target="_blank" class="list-item-wrap" href="//jdbk.jd.com/reservation/reservRecord" clstag="jr|keycount|qyjr_biz|ims_wdsub"><span class="list-item-left">我的预约</span></a>
+								</li> -->
+								<li>
+									<a target="_blank" class="list-item-wrap" href="//ims.jdpay.com/message/messageList.do?type=todo" clstag="jr|keycount|qyjr_biz|ims_xxzx"><span class="list-item-left">消息中心</span><span style="display: none;" class="msg-icon">0</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<i class="userCenter-mask"></i>
+				</div>
+			</div>
+			<div class="nav fr" style="width: 650px;">
+				<ul class="nav-box nav-box121 fl clearfix" id="navBox">
+					<li id="nav-index" class="nav-item">
+						<a class="nav-item-primary" href="//biz.jd.com/index.html" clstag="jr|keycount|qyjr_biz|biz">首页<i></i></a>
+					</li>
+					<li id="nav-pay" class="nav-item nav-col4">
+						<a class="nav-item-primary" href="//biz.jd.com/index.html#jdpay" clstag="jr|keycount|qyjr_biz|jdpay">京东支付<i></i><b></b></a>
+						<div class="dropbox sub-box biz-jdpay">
+							<a href="//biz.jd.com/index.html#jdpay" clstag="jr|keycount|qyjr_biz|jdpay_kjpay">
+								<dl>
+									<dt>京东支付<i class="sub-line"></i></dt>
+									<dd>
+										<p class="sub-text">支持银行卡、京东小金库、京东余额、白条等多种渠道的一键支付</p>
+									</dd>
+								</dl>
+							</a>
+							<a href="//biz.jd.com/index.html#codepay" clstag="jr|keycount|qyjr_biz|jdpay_codepay">
+								<dl>
+									<dt>码支付<i class="sub-line"></i></dt>
+									<dd>
+										<p class="sub-text">商家扫描用户的付款码，或用户扫描商家的二维码完成支付</p>
+									</dd>
+								</dl>
+							</a>
+							<a href="//biz.jd.com/index.html#gateway" clstag="jr|keycount|qyjr_biz|jdpay_gateway">
+								<dl>
+									<dt>网关支付<i class="sub-line"></i><b class="nav-tag"><em></em></b></dt>
+									<dd>
+										<p class="sub-text">使用银行U盾登录网上银行验证支付，安全高效</p>
+									</dd>
+								</dl>
+							</a>
+							<a href="//biz.jd.com/index.html#payment" clstag="jr|keycount|qyjr_biz|jdpay_payment">
+								<dl>
+									<dt>代付款<i class="sub-line"></i></dt>
+									<dd>
+										<p class="sub-text">单笔或批量付款至一个或多个银行账户的资金结算服务</p>
+									</dd>
+								</dl>
+							</a>
+							<a href="//biz.jd.com/index.html#deduct" clstag="jr|keycount|qyjr_biz|jdpay_deduct">
+								<dl>
+									<dt>代扣款<i class="sub-line"></i></dt>
+									<dd>
+										<p class="sub-text">首次银行卡签约后可供商户端多次免密扣取用户银行卡的便捷收单服务</p>
+									</dd>
+								</dl>
+							</a>
+							<a href="//biz.jd.com/index.html#abroad" clstag="jr|keycount|qyjr_biz|jdpay_abroad">
+								<dl>
+									<dt>跨境支付<i class="sub-line"></i></dt>
+									<dd>
+										<p class="sub-text">为跨境进口电商提供收单、外币结算、实名认证、报送海关、还原申报等多项服务</p>
+									</dd>
+								</dl>
+							</a>
+						</div>
+					</li>
+					<li id="nav-financing" class="nav-item nav-col3">
+						<a class="nav-item-primary" href="//8.jd.com/newIndex" clstag="jr|keycount|qyjr_biz|qylc">企业理财<i></i><b></b></a>
+						<div class="dropbox sub-box biz-lc">
+							<a href="//8.jd.com/newIndex" clstag="jr|keycount|qyjr_biz|qylc_qyjk">
+								<dl>
+									<dt>企业金库<i class="sub-line"></i></dt>
+									<dd>
+										<div class="b-lc-t">0.01元起投，操作灵活，取出T+1到账</div>
+										<table width="100%" class="b-lc-list">
+											<colgroup>
+												<col width="50%">
+												<col width="50%">
+											</colgroup>
+											<tr>
+												<td>
+													<div class="val yield"><b id="xjkYieldRate"></b><span>%</span></div>
+													<div class="y-text">近7日年化收益率</div>
+												</td>
+												<td>
+													<div class="val money"><b>0.01</b><span>元</span></div>
+													<div class="y-text">起投金额(元)</div>
+												</td>
+											</tr>
+											<!--<tr>
+													<td>
+															<div class="val money"><b>7</b><span>天</span></div>
+															<div class="y-text">投资期限</div>
+													</td>
+											</tr>-->
+										</table>
+									</dd>
+								</dl>
+							</a>
+							<a target="_blank" href="//8.jd.com" clstag="jr|keycount|qyjr_biz|qylc_dqlc">
+								<dl>
+									<dt>定期理财<i class="sub-line"></i></dt>
+									<dd>
+										<div class="b-lc-t">收益稳健，安心优选</div>
+										<table width="100%" class="b-lc-list">
+											<colgroup>
+												<col width="50%">
+												<col width="50%">
+											</colgroup>
+											<tr>
+												<td>
+													<div class="val yield"><b>4.6-7.0</b><span>%</span></div>
+													<div class="y-text">预期年化收益率</div>
+												</td>
+												<td>
+													<!--<div class="val money"><b>--</b><span>元</span></div>-->
+													<div class="y-text">历史本息全额承兑</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<!--<div class="val money"><b>7</b><span>天</span></div>-->
+													<!--<div class="y-text">敬请期待</div>-->
+												</td>
+											</tr>
+										</table>
+									</dd>
+								</dl>
+							</a>
+							<!--<div class="subbox-ad" data-adid="1766322"></div>-->
+						</div>
+					</li>
+					<li id="nav-loan" class="nav-item nav-col5">
+						<a class="nav-item-primary" href="//scf.jd.com" clstag="jr|keycount|qyjr_biz|qyrz">企业融资<i></i><b></b></a>
+						<div class="dropbox sub-box biz-lc">
+							<a href="//loan.jd.com/home.htm" clstag="jr|keycount|qyjr_biz|qyrz_jxd">
+								<dl>
+									<dt>京小贷<i class="sub-line"></i></dt>
+									<dd>
+										<div class="b-lc-t">服务对象：京东开放平台商家</div>
+										<p class="sub-text">
+											无需抵押<br> 线上申请，三步完成贷款
+											<br> 最高额度500万
+											<br> 随借随还，提前还款免手续费
+										</p>
+									</dd>
+								</dl>
+							</a>
+							<a href="//loan.jd.com/scf/" clstag="jr|keycount|qyjr_biz|qyrz_jbb">
+								<dl>
+									<dt>京保贝<i class="sub-line"></i></dt>
+									<dd>
+										<div class="b-lc-t">服务对象：通过应收账融资的企业</div>
+										<p class="sub-text">
+											无需担保抵押<br> 入库即可融资
+											<br> 按每日计息，随借随还
+											<br> 融资期限长达1年，一次签约长期有效
+										</p>
+									</dd>
+								</dl>
+							</a>
+							<a href="//loan.jd.com/dist/guide.htm" clstag="jr|keycount|qyjr_biz|qyrz_dxrz">
+								<dl>
+									<dt>动产融资<i class="sub-line"></i></dt>
+									<dd>
+										<div class="b-lc-t">服务对象：面向全网企业商户</div>
+										<p class="sub-text">
+											超全品类，灵活替换<br> 额度最高可达3000万
+											<br> 按日计息，随借随还
+											<br> 额度有效期一年，单笔最长90天
+										</p>
+									</dd>
+								</dl>
+							</a>
+							<a href="//jc.jd.com/" clstag="jr|keycount|qyjr_biz|qyrz_qyjc">
+								<dl>
+									<dt>企业金釆<i class="sub-line"></i></dt>
+									<dd>
+										<div class="b-lc-t">服务对象：京东企业采购客户</div>
+										<p class="sub-text">
+											为企业采购客户提供信用采购、分期支付及账户管理服务费<br> 实现企业客户先采购、后付款的支付方式
+											<br> 周结、月结账期灵活配置
+											<br> 最长21天免息及90天超低息分期付款
+										</p>
+									</dd>
+								</dl>
+							</a>
+							<a target="_blank" href="//loan.jd.com/ky/qaccess/indexUnion.htm" clstag="jr|keycount|qyjr_biz|qyrz_jdky">
+								<dl>
+									<dt>京东快银<i class="sub-line"></i></dt>
+									<dd>
+										<div class="b-lc-t">服务对象：正常纳税企业</div>
+										<p class="sub-text">
+											无需抵押<br> 线上审批
+											<br> 贷款自主灵活
+											<br> 随借随还
+										</p>
+									</dd>
+								</dl>
+							</a>
+							<a target="_blank" href="//eshare.jd.com/" clstag="jr|keycount|qyjr_biz|qyrz_jdex">
+								<dl>
+									<dt>京小租<i class="sub-line"></i></dt>
+									<dd>
+										<div class="b-lc-t">服务对象：个人和企业客户、租赁商家</div>
+										<p class="sub-text">
+											面向个人和企业的全品类租赁<br> 面向企业的定制化租赁解决方案
+											<br> 提供押金管理、争议仲裁、租借场景数据化智能风控体系以及金融赋能
+											<br> 提供双向配送、仓储后维一体化、供应链整合的共享供应链服务
+										</p>
+									</dd>
+								</dl>
+							</a>
+							<a target="_blank" href="//piaoju.jd.com?ADTAG=jd.jr.qyjr.dhl&ticket=mtjrqyz" clstag="jr|keycount|qyjr_biz|qyrz_jdpj">
+								<dl>
+									<dt>票据秒贴<i class="sub-line"></i></dt>
+									<dd>
+										<div class="b-lc-t">服务对象：面向全网企业商户</div>
+										<p class="sub-text">
+											票据贴现<br> 半日放款
+											<br> 专业金融服务
+											<br> 票据管理工具
+										</p>
+									</dd>
+								</dl>
+							</a>
+							<a target="_blank" href="//cbf.jd.com" clstag="jr|keycount|qyjr_biz|qyrz_kjjr">
+								<dl>
+									<dt>跨境金融<i class="sub-line"></i></dt>
+									<dd>
+										<div class="b-lc-t">服务对象：面向全网外贸行业的各类企业</div>
+										<p class="sub-text">
+											安全可靠的线上专属账户及跨境支付体系<br> 外贸服务企业信息发布平台
+											<br> 基于真实跨境贸易背景的多场景定制化金融产品
+											<br> 线上审批，动态额度，按日计息，随借随还
+										</p>
+									</dd>
+								</dl>
+							</a>
+							<!--<div class="subbox-ad" data-adid="1766322"></div>-->
+						</div>
+					</li>
+					<li id="nav-credit" class="nav-item nav-col4">
+						<a class="nav-item-primary" href="//biz.jd.com/credit.html " clstag="jr|keycount|qyjr_biz|biz_qyzx">企业征信<i></i><b></b></a>
+						<div class="dropbox sub-box biz-lc">
+							<a target="_blank" href="//icredit.jd.com/" clstag="jr|keycount|qyjr_biz|biz_qyzx_qyzx">
+								<dl>
+									<dt>企业征信<i class="sub-line"></i></dt>
+									<dd>
+										<div class="b-lc-t">恒于积累 信用为先</div>
+										<p class="sub-text">
+											汇聚多维海量数据与独有核心数据，为用户提供企业征信数据的查询、认证；信用评估，风险模型建设、风险体系构建等产品和服务。
+										</p>
+									</dd>
+								</dl>
+							</a>
+							<a target="_blank" href="//icredit.jd.com/user/console/product" clstag="jr|keycount|qyjr_biz|jrkj_ljqyzx">
+								<dl>
+									<dt>蓝鲸企业征信<i class="sub-line"></i></dt>
+									<dd>
+										<div class="b-lc-t">信用畅联 因度而控</div>
+										<p class="sub-text">
+											以多维度的海量数据为基础，分层次、实时跟踪、监测、预警目标企业的发展变化，降低潜在的信用和资金风险。
+										</p>
+									</dd>
+								</dl>
+							</a>
+							<a target="_blank" href="//icredit.jd.com/shop" clstag="jr|keycount|qyjr_biz|jrkj_hlwjrjjfa">
+								<dl>
+									<dt>互联网金融解决方案<i class="sub-line"></i></dt>
+									<dd>
+										<div class="b-lc-t">信用融通 决策前瞻</div>
+										<p class="sub-text">
+											通过企业图谱、舆情监控、信用报告、企业营销响应等多项迭代产品和服务，为客户优化针对不同风险用户群体的经营策略，构建全方位金融解决方案。
+										</p>
+									</dd>
+								</dl>
+							</a>
+							<!--<div class="subbox-ad" data-adid="1766322"></div>-->
+						</div>
+					</li>
+					<li id="nav-science" class="nav-item nav-col5">
+						<a class="nav-item-primary" href="//biz.jd.com/index.html#jrkj" clstag="jr|keycount|qyjr_biz|jrkj">金融科技<i></i><b></b></a>
+						<div class="dropbox sub-box biz-lc">
+							<div class="sub-box-row">
+								<a href="//ft.jd.com/portal/product-detail-50.htm" clstag="jr|keycount|qyjr_biz|jrkj_qyzhfw">
+									<dl>
+										<dt>企业账户服务<i class="sub-line"></i></dt>
+										<dd>
+											<div class="b-lc-t">一站式综合现金管理方案</div>
+											<p class="sub-text">
+												为SaaS服务商提供基于企业资金账户的多场景解决方案的标准化产品，包括账户建设，支付产品介入，场景实现等模块服务
+											</p>
+										</dd>
+									</dl>
+								</a>
+								<a href="//ft.jd.com/portal/product-detail-51.htm" clstag="jr|keycount|qyjr_biz|jrkj_grxdpt">
+									<dl>
+										<dt>个人信贷平台<i class="sub-line"></i></dt>
+										<dd>
+											<div class="b-lc-t">链接资金方、场景方的信贷平台</div>
+											<p class="sub-text">
+												面向银行、消费金融、互联网小贷公司的智能借款平台、开放自身的大数据风控能力降低信贷风险、共享平台旺盛的个人借贷需求，创造多方供应的优良生态
+											</p>
+										</dd>
+									</dl>
+								</a>
+								<a href="//ft.jd.com/portal/product-intro.htm" clstag="jr|keycount|qyjr_biz|jrkj_hlwjrypt">
+									<dl>
+										<dt>互联网金融云平台<i class="sub-line"></i></dt>
+										<dd>
+											<div class="b-lc-t">直销银行整体解决方案</div>
+											<p class="sub-text">
+												为银行提供直销银行整体解决方案、包括系统建设、产品提供和合作运营等
+											</p>
+										</dd>
+									</dl>
+								</a>
+								<a href="//fintech-scf.jd.com" clstag="jr|keycount|qyjr_biz|jrkj_jpesd">
+									<dl>
+										<dt>京浦e商贷<i class="sub-line"></i></dt>
+										<dd>
+											<div class="b-lc-t">京东金融与浦发银行联合打造</div>
+											<p class="sub-text">
+												面向小微商户的信用贷款服务，具有低日息、线上申请和放款、自动审批和决策、资金实时到账等特点
+											</p>
+										</dd>
+									</dl>
+								</a>
+							</div>
+							<div class="sub-box-row">
+								<a href="//fintech-scf-cg.jd.com" clstag="jr|keycount|qyjr_biz|jrkj_cgddrz">
+									<dl>
+										<dt>采购订单融资<i class="sub-line"></i></dt>
+										<dd>
+											<div class="b-lc-t">为经销商量身定制的融资产品</div>
+											<p class="sub-text">
+												基于经销商与卖方核心企业真实的采购贸易订单提供纯信用贷款，全面满足经销商在商品采购环节短、平、快的资金需求
+											</p>
+										</dd>
+									</dl>
+								</a>
+							</div>
+							<!--<div class="subbox-ad" data-adid="1766322"></div>-->
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--main-nav end-->
+	<!--sub-nav 如果页面项目需要二级导航 才需添加 否则此段落请删除-->
+	<!--<div class="sub-nav">
+			<div class="grid-1200 sub-nav-wrap">
+					<a id="nav-sub-gqzc" class="sub-nav-item" href="//dcrz.jd.com">私募股权</a>
+					<a id="nav-sub-djsq" class="sub-nav-item" href="//zbbs.jd.com/portal.php?mod=list&catid=1">东家社区</a>
+					<a id="nav-sub-jdzc" class="sub-nav-item" href="//y.jd.com/forum-73-1.html">京东众创</a>
+			</div>
+	</div>-->
+	<!--sub-nav-end-->
+</div>
+<!--topbar end-->
+<script>
+	var _qd = _qd || {};
+      _qd['module'] = '1000000';
+      // 打开曝光开关
+      _qd['imp'] = true;
+      (function () {
+        var qd = document.createElement("script");
+        qd.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'jrclick.jd.com/qidian.js';
+        qd.async = 1;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(qd, s);
+      })();
+</script>
+<script type="text/javascript">
+	(function () {
+		if (typeof jrBase !== 'undefined') {
+			if (typeof jrBase.navId !== 'undefined') {
+				var mainNav = document.getElementById(jrBase.navId);
+				if (mainNav) {
+					mainNav.className += ' current'
+				}
+			}
+			if (typeof jrBase.navSubId !== 'undefined') {
+				var subNav = document.getElementById(jrBase.navSubId);
+				if (subNav) {
+					subNav.className += ' current'
+				}
+			}
+		}
+	})();
+	var protocol = window.location.protocol === 'https:' ? 'https:' : 'http:';
+	var login = function () {
+		return location.href = protocol + "//passport.jdpay.com/login/index.do?show=jdpin&return=" + escape(location.href).replace(/\//g, "%2F"), !1
+	}, regist = function () {
+		return location.href = protocol + "//reg.jd.com/reg/person?ReturnUrl=" + escape(location.href), !1
+	}, logout = function () {
+		return location.href = protocol + "//passport.jdpay.com/login/toLogout.do?show=jdpin&return=" + escape(location.href).replace(/\//g, "%2F"), !1
+	}
+
+</script>
+<!--header end-->
+         
+
+<script type="text/javascript">
+    (function(){if(typeof jrBase!=='undefined'){if(typeof jrBase.navId!=='undefined'){var mainNav=document.getElementById(jrBase.navId);if(mainNav){mainNav.className+=' current'}}if(typeof jrBase.navSubId!=='undefined'){var subNav=document.getElementById(jrBase.navSubId);if(subNav){subNav.className+=' current'}}}})();
+
+    var _jraq = _jraq || [];
+    _jraq.push(['account','UA-J2011-12']);
+    (function() {
+        var ja = document.createElement('script'); ja.type = 'text/javascript'; ja.async = true;
+        ja.src = ('https:' == document.location.protocol ? 'https://jrclick' : 'http://jrclick') + '.jd.com/wl.dev.js';
+        var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ja,s);
+    })();
+</script>
+<script type="text/javascript">
+    var jaq = jaq || [];
+    jaq.push(['account','UA-J2011-12']);
+    jaq.push(['domain','jr.jd.com']);
+    (function() {
+        var ja = document.createElement('script'); ja.type = 'text/javascript'; ja.async = true;
+        ja.src = ('https:' == document.location.protocol ? 'https://wlssl' : '//wl') + '.jd.com/joya.js';
+        var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ja,s);
+    })();
+</script>
+<script src="//static.360buyimg.com/finance/common/lib/jquery/1.8.3/jquery.js"></script>
+<script src="//static.360buyimg.com/finance/base/biz/1.0.0/js/base-jrid.js"></script>
+
+<!--header end--><div class="loan-banner">
+    <div class="loan-box">
+        <h2 class="fadeInUp">京保贝</h2>
+        <h3 class="fadeInUp">一 站 式 供 应 链 金 融 服 务 &nbsp;&nbsp;&nbsp;&nbsp; 全 线 上 便 捷 融 资 体 验</h3>
+        <ul class="clearfix ">
+            <li class="fadeInLeft">
+                <i></i>
+                <p>融资成本低</p>
+            </li>
+            <li class="fadeInLeft">
+                <i class="i-bg2"></i>
+                <p>融资期限长</p>
+            </li>
+            <li class="fadeInLeft">
+                <i class="i-bg3"></i>
+                <p>操作便捷</p>
+            </li>
+            <li class="fadeInLeft">
+                <i class="i-bg4"></i>
+                <p>额度实时更新</p>
+            </li>
+        </ul>
+        <a class="loan-btn bounceIn" href="/scf/jdScfQueryView/queryView">立即申请融资</a>
+    </div>
+</div>
+<div class="apply">
+    <div class="apply-box">
+        <h2>申请流程</h2>
+        <span class="apply-font">
+            <i></i>
+            <p>在线申请，仅需四步，简单快捷</p>
+        </span>
+        <div class="lc-box">
+            <span class="step fl">
+                <h3>线上签约</h3>
+                <p>在线签署融资协议</p>
+                <i></i>
+            </span>
+            <span class="step step2 fl">
+                <h3>融资申请</h3>
+                <p>实时额度随借随还</p>
+                <i class="ipo2"></i>
+            </span>
+            <div class="clear"></div>
+            <span class="step step3 fl">
+                <h3>注册开通</h3>
+                <p>上传资料实名认证</p>
+                <i class="ipo3"></i>
+            </span>
+            <span class="step step4 fl">
+                <h3>结算还款</h3>
+                <p>按日计息自动结算</p>
+                <i class="ipo4"></i>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="contact">
+    <h2>寻求合作伙伴</h2>
+    <span class="apply-font">
+        <i></i>
+        <p>京保贝现已全面对外开放，向希望构建供应链金融能力的核心企业提供解决方案，<br/>我们将为您提供以下服务：</p>
+    </span>
+    <div class="blue-box">
+        <div class="b-box">
+            <i></i>
+            <span class="blue-font fl">
+            <h3>平台搭建</h3>
+            <P>融合多种金融工具</P>
+            <P>搭建线上金融服务平台</P>
+            </span>
+        </div>
+        <div class="b-box">
+            <i class="i-con2"></i>
+            <span class="blue-font fl">
+                <h3>数据处理</h3>
+                <P>全方位梳理整合</P>
+                <P>贸易流、资金流、信息流</P>
+            </span>
+        </div>
+        <div class="b-box">
+            <i class="i-con3"></i>
+            <span class="blue-font fl">
+                <h3>风控建模</h3>
+                <P>标准化输出动态额度模型</P>
+                <P>及精准策略引擎</P>
+            </span>
+        </div>
+        <div class="clear"></div>
+        <div class="b-box">
+            <i class="i-con4"></i>
+            <span class="blue-font fl">
+                <h3>高能账户</h3>
+                <P>多功能线上账户体系</P>
+                <P>实时掌握资金流向</P>
+            </span>
+        </div>
+        <div class="b-box">
+            <i class="i-con5"></i>
+            <span class="blue-font fl">
+                <h3>资金支持</h3>
+            <P>资金流持续注入</P>
+            <P>加速供应链高效运转</P>
+            </span>
+        </div>
+        <div class="b-box">
+            <i class="i-con6"></i>
+            <span class="blue-font fl">
+               <h3>资产处置</h3>
+               <P>多元化模式处理量级资产</P>
+               <P>整体优化财务结构</P>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="rightNow">
+    <h2 class="ah2">目前已合作行业</h2>
+    <span class="apply-font">
+        <i></i>
+        <p>我们不断开拓新领域，让更多的企业拥有自己的供应链金融能力</p>
+    </span>
+    <ul class="clearfix">
+        <li>
+            <img src="//img30.360buyimg.com/jr_image/jfs/t3385/191/388942161/14451/11cd0b9b/5808741bN656cde2f.jpg"/>
+            <p class="long">消费品分销</p>
+        </li>
+        <li>
+            <img src="//img30.360buyimg.com/jr_image/jfs/t3607/211/411344216/15678/37b01d71/5808741bNf19b7f39.jpg"/>
+            <p>物流运输</p>
+        </li>
+        <li>
+            <img src="//img30.360buyimg.com/jr_image/jfs/t3511/35/351815310/11893/3a62f2c1/5808741cNd15e1781.jpg"/>
+            <p>医药分销</p>
+        </li>
+        <li>
+            <img src="//img30.360buyimg.com/jr_image/jfs/t3505/226/386735028/16007/2ec396c8/5808741cNb9fe6590.jpg"/>
+            <p>航空差旅</p>
+        </li>
+        <li>
+            <img src="//img30.360buyimg.com/jr_image/jfs/t3679/150/371954757/16031/f5975d44/5808741cNa8e3ddf9.jpg"/>
+            <p>商超零售</p>
+        </li>
+        <li class="noright w145">
+            <img src="//img30.360buyimg.com/jr_image/jfs/t3664/357/391478896/6005/19ab731c/5808741cN42b2d996.jpg"/>
+            <p class="short">更多行业</p>
+        </li>
+    </ul>
+</div>
+<div class="phone">
+    <div class="phone-box">
+        <i class="phone-logo fl"></i>
+        <p class="phone-font fl">联系电话：<em>010-89189099</em>（工作日：9:00-18:00） <em> </em></p>
+        <a href="mailto:jdf@jd.com;" class="mail-logo fr">
+            <i class="fl"></i>
+            <p class="mail-font fl">电子邮箱：jdf@jd.com</p>
+        </a>
+    </div>
+</div>
+
+<script>
+
+    $('.step i').hover(
+            function () {
+                $(this).parent().find('h3').addClass('move');
+                $(this).parent().find('p').addClass('move');
+            }, function () {
+                $(this).parent().find('h3').removeClass("move");
+                $(this).parent().find('p').removeClass("move");
+            });
+</script>
+<script src="//help.jdpay.com/js/elfin/min/elfin.min.js"></script>
+<script>
+    // 奇点
+    var moduleNo = '9920008';
+        var _qd = _qd || {};
+    _qd['module'] = moduleNo;
+    (function () {
+        var qd = document.createElement("script");
+        qd.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'jrclick.jd.com/qidian.js';
+        qd.async = 1
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(qd, s);
+    })();
+    // 小京灵
+    var entranceId = '20767';
+                entranceId = '20765';
+            var qaData = {
+        url: 'https://jtalk.jd.com?entrance=' + entranceId + '&source=web&companyId=1',
+        entranceId: entranceId,
+        systemId: 'scf'
+    };
+    $.elfinTalk(qaData);
+</script>
+
+          <!--footer-->
+<div class="f-copyright">
+    <div class="grid-1200 footerHolder">
+        <div class="footer-nav">
+            <p>
+                <a href="//www.chinabank.com.cn/company/aboutus.jsp" target="_blank" clstag="jr|keycount|jr_shouye|footer1">关于我们</a><span class="footer-nav-cut">|</span>
+                <a href="//www.chinabank.com.cn/company/contact.jsp" target="_blank" clstag="jr|keycount|jr_shouye|footer4">联系我们</a><span class="footer-nav-cut">|</span>
+                <a href="//www.chinabank.com.cn/company/jobs.jsp" target="_blank" clstag="jr|keycount|jr_shouye|footer3">人才招聘</a><span class="footer-nav-cut">|</span>
+                <a href="//help.jdpay.com/helpCenterNew.htm" target="_blank">帮助中心</a>
+                <span class="footer-nav-cut">|</span>
+                <a href="//jr.jd.com" target="_blank" clstag="jr|keycount|jr_shouye|footer5">京东金融个人站</a><span class="footer-nav-cut">|</span>
+                <a href="//qianbao.jd.com/p/page/OX35YYSLsADz.htm" target="_blank" clstag="jr|keycount|jr_shouye|footer2">平台协议</a><span class="footer-nav-cut">|</span>
+                <a href="//qianbao.jd.com/p/page/hIkuIKbZiszS.htm" target="_blank" clstag="jr|keycount|jr_shouye|footer5">隐私政策</a>
+            </p>
+            <p>Copyright &copy; 2004-2018 京东JD.com 版权所有</p>
+        </div>
+
+        <div class="footer-contact">
+            <!--<div class="f-contact-time">客服热线</div>-->
+            <div class="f-contact-way">
+                <span class="f-contact-tel">客服热线 400-088-8816</span>
+                <span class="f-contact-type"> (每天9:00-22:00仅收市话费)</span>
+            </div>
+<div class="f-contact-way">
+               
+            </div>
+        </div>
+    </div>
+</div>
+<script src="//static.360buyimg.com/finance/base/1.2.0/js/jdjrflow.js"></script>
+<!--footer end-->
+   
+    
+
+
+
+    </body>
+<!--小京灵-->
+
+</html>

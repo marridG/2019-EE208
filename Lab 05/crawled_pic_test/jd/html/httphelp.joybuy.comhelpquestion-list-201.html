@@ -1,0 +1,975 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 	<link href="/resources/img/favicon.ico" type="image/x-icon" rel="shortcut icon">
+ 	<!-- 引入依赖的公共样式脚本 -->
+  	<link href="//static.joybuy.com/ept/newapp/ept/static/ui/common/base.css" type="text/css" rel="stylesheet" />
+  	<link type="text/css" rel="stylesheet" href="//static.360buyimg.com/??/aui/1.0.0/css/aui.css,/ept/header/1.1.0/components/base/base.css,/ept/header/1.1.0/components/shortcut/shortcut.css,/ept/header/1.1.0/components/header/header.css,/ept/header/1.1.0/components/footer/footer.css" />
+    <script src="//static.360buyimg.com/ept/lib/??jquery.js,seajs.js,seajs.combo.js"></script>
+ 	<link href="/static/css/base.css" type="text/css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title> Shipping and Delivery </title>
+<meta name="google-translate-customization" content="4a59cc671fcf82c6-dde0ca028c594a15-g7518baae2bd23516-e"></meta>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="//www.jd.com/favicon.ico" />
+
+<script>
+    contextPath = "";
+    seajs.config({
+        base : "//static.joybuy.com/ept/newapp/ept/static/"
+    });
+</script>    <input type="hidden" id="lang" value="en"/>
+<input type="hidden" id="current_lang" value="en"/>
+
+ <script type="text/javascript" language="javascript" src="//static.joybuy.com/ept/newapp/ept/static/js/lib/utils/jquery.i18n.properties.js"></script>
+
+<script>
+    var lan = $("#current_lang").val();
+//    var lan = getCookie("locale");
+  // console.info("current_lang:"+lan);
+    function loadI18nProperties(callbackAfterLoad) {
+        // 优先使用cookie中的语言,若未指定,则默认英语
+        jQuery.i18n.properties({//加载资浏览器语言对应的资源文件
+            name: 'messages', //资源文件名称
+            path: '/resources/i18n/', //资源文件路径
+            mode: 'map', //用Map的方式使用资源文件中的值
+            language: lan,
+            cache: true,
+            callback: function () {//加载成功后设置显示内容
+                //console.info("load i18n ok.");
+                if (callbackAfterLoad) {
+                    callbackAfterLoad();
+                }
+            }
+        });
+    };
+
+    //读取cookies
+    function getCookie(name) {
+        var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+        if (arr = document.cookie.match(reg)) {
+            return decodeURIComponent(arr[2]);
+        } else {
+            return null;
+        }
+    }
+    loadI18nProperties();
+</script>	<link type="text/css" rel="stylesheet" href="/static/css/eptHelpCenter.css"/>
+    <!-- Google Tag Manager  -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-5DS654" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5DS654');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- 站点配置参数 -->
+	<script>
+		window.pageConfig = {
+			langId: "2",
+			siteId: "2456",
+			lang: "en",
+			domain: "www.joybuy.com",
+			currency: "USD"
+		}
+		seajs.config({
+			paths: {
+				AUI: '//static.360buyimg.com/aui/1.0.0',
+				EPT_LIB: '//static.360buyimg.com/ept/lib',
+				GLOBAL_ROOT: '//static.360buyimg.com/ept/header/1.1.0/components'
+			}
+		})
+	</script>
+</head>
+
+<body class="_en">
+    <script>
+window.jdpts={};jdpts._st=new Date().getTime();
+
+
+(function(win, cfg) {
+    var pageConfig = {
+        site: 1,
+        pageId:  395,
+        langId:  2,
+        siteId:  2456,
+        lang:  'en',
+        domain:  'www.joybuy.com',
+        currency: 'USD',
+        
+        currencys: ["USD","EUR","RUB","GBP","CAD","CHF","AUD","PLN","MXN","BRL"],
+        currencyMap: {
+            USD: "US$", EUR: "\u20ac", RUB: "\u0440\u0443\u0431.",
+            GBP: "\uffe1", CAD: "C$", CHF: "CHF", AUD: "AU$",
+            PLN: "z\u0142", "MXN":"MXN$","BRL":"R$"
+        }
+
+    }
+    if (cfg) { for (var key in cfg) pageConfig[key] = cfg[key] }
+
+    win.pageConfig = pageConfig
+    win._errIMG_ = function(img) { img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';img.className += ' err-img' }
+})(window, window.pageConfig);
+
+(function() {
+    if (window.BOOMR && window.BOOMR.version) {
+        return;
+    }
+    var dom, doc, where, iframe = document.createElement("iframe"),
+        win = window;
+
+    function boomerangSaveLoadTime(e) {
+        win.BOOMR_onload = (e && e.timeStamp) || new Date().getTime();
+    }
+    if (win.addEventListener) {
+        win.addEventListener("load", boomerangSaveLoadTime, false);
+    } else if (win.attachEvent) {
+        win.attachEvent("onload", boomerangSaveLoadTime);
+    }
+
+    iframe.src = "javascript:false";
+    iframe.title = "";
+    iframe.role = "presentation";
+    (iframe.frameElement || iframe).style.cssText = "width:0;height:0;border:0;display:none;";
+    where = document.getElementsByTagName("script")[0];
+    where.parentNode.insertBefore(iframe, where);
+
+    try {
+        doc = iframe.contentWindow.document;
+    } catch (e) {
+        dom = document.domain;
+        iframe.src = "javascript:var d=document.open();d.domain='" + dom + "';void(0);";
+        doc = iframe.contentWindow.document;
+    }
+    doc.open()._l = function() {
+        var js = this.createElement("script");
+        if (dom) this.domain = dom;
+        js.id = "boomr-if-as";
+        js.src = "https://s.go-mpulse.net/boomerang/" +
+            "CC4EN-SLBFB-D4N24-CU66R-HJLTT";
+        BOOMR_lstart = new Date().getTime();
+        this.body.appendChild(js);
+    };
+    doc.write('<body onload="document._l();">');
+    doc.close();
+})();
+
+</script>
+
+<div class="shortcut">
+    <div class="sc w">
+        <ul class="sc-list">
+            <li class="sc-item sc-site">
+                <a>Site <span class="triangle"></span></a>
+                <ul class="sc-site-list">
+                    <li class="sc-site-item" clstag="ept_en_homepage|keycount|ept_en_homepage_395|133_002">
+                        <a class="clstag" href="//www.jd.ru" title="JD.ru">Сайт России</a>
+                    </li>
+                    <li class="sc-site-item" clstag="ept_en_homepage|keycount|ept_en_homepage_395|133_003">
+                        <a class="clstag" href="//www.jd.com" title="JD.com">中国站</a>
+                    </li>
+                    <li class="sc-site-item" clstag="ept_en_homepage|keycount|ept_en_homepage_395|133_004">
+                        <a class="clstag" href="//www.joybuy.es" title="joybuy.es">Sitio de España</a>
+                    </li>
+                    <li class="sc-site-item" clstag="ept_en_homepage|keycount|ept_en_homepage_395|133_005">
+                        <a class="clstag" href="//www.jd.id" title="JD.id">Situs Indonesia</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sc-item" clstag="ept_en_homepage|keycount|ept_en_homepage_395|133_005">
+                <span class="sc-line"></span>
+            </li>
+            <li class="sc-item sc-site">
+                <a>Sell With Us<span class="triangle"></span></a>
+                <ul class="sc-site-list">
+                    <li class="sc-site-item" clstag="ept_en_homepage|keycount|ept_en_homepage_395|133_006">
+                        <a class="clstag" href="//join.jd.com/app/welcome.html#/ " title="Become a Seller">Become a Seller</a>
+                    </li>
+                    <li class="sc-site-item" clstag="ept_en_homepage|keycount|ept_en_homepage_395|133_0061">
+                        <a class="clstag" href="//helpcenter.joybuy.com/" title="Seller Center">Seller Center</a>
+                    </li>
+
+                </ul>
+            </li>
+            <li class="sc-item" clstag="ept_en_homepage|keycount|ept_en_homepage_395|133_007">
+                <a href="//corporate.jd.com/" rel="nofollow">Media & Investing</a>
+            </li>
+            <li class="sc-item" clstag="ept_en_homepage|keycount|ept_en_homepage_395|133_008">
+                <span class="sc-line"></span>
+            </li>
+            <li class="sc-item sc-help">
+                <a>Help <span class="triangle"></span></a>
+                <ul class="sc-help-list">
+                    <li class="sc-help-item" clstag="ept_en_homepage|keycount|ept_en_homepage_395|133_012">
+                        <a href="//help.joybuy.com/help/question-list.html">Help Center</a>
+                    </li>
+                    <li class="sc-help-item" clstag="ept_en_homepage|keycount|ept_en_homepage_395|133_009">
+                        <a href="//support.joybuy.com/support/index?source=3" target="_blank">Chat</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sc-item" clstag="ept_en_homepage|keycount|ept_en_homepage_395|133_010">
+                <a href="//sale.joybuy.com/pc/uMVGRZN7HoWyOjDd.html" rel="nofollow"><i></i>Quick Guide</a>
+            </li>
+            <li class="sc-item sc-item-translate hide">
+                <div id="google_translate_element"></div>
+            </li>
+            <li class="sc-item sc-ship j_sc_ship_w" clstag="ept_en_homepage|keycount|ept_en_homepage_395|133_011">
+                <a class="j_sc_ship">Ship to
+                    <span class="ept_country_flag j_country"></span>
+                    <!-- <span class="j_sc_ship_text">US/EN/USD</span> -->
+                    <span class="j_sc_ship_text"></span>
+                    <span class="triangle"></span>
+                </a>
+
+                <!-- shipto floating modal -->
+                <div class="floating j_f_ship panel-ship-to">
+                    <div class="floating-w">
+                        <div class="sc-m-content">
+                            <div class="sc-f-content aui">
+                                <span class="close ficon fi-close-large" clstag="ept_en_homepage|keycount|ept_en_homepage_395|133_102"></span>
+                                <div class="floating-select-country">
+                                    <div class="title">Country/Region</div>
+                                    <!-- select country  -->
+                                    <dl class="select head-country-sel" tabindex="0" clstag="ept_en_homepage|keycount|ept_en_homepage_395|133_103"></dl>
+                                </div>
+                                <!--<div class="floating-select-language">-->
+                                    <!--<div class="title">Language</div>-->
+                                    <!--<div id="google_translate_element"></div>-->
+                                <!--</div>-->
+                                <div class="floating-select-currency">
+                                    <div class="title">Currency</div>
+
+                                    <!-- select currency -->
+                                    <div class="custom-select currency-select" clstag="ept_en_homepage|keycount|ept_en_homepage_395|133_104">
+                                        <div class="choosen" name=""></div>
+                                        <span class="open-icon ficon fi-bottom"></span>
+                                        <ul class="options ui-hide"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sc-f-submit">
+                                <button class="j_ship_submit" clstag="ept_en_homepage|keycount|ept_en_homepage_395|133_101" type="button">SAVE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+ 
+<header class="header">
+    <div class="header-container">
+        <div class="w">
+            <!-- LOGO -->
+            <div class="logo-w">
+                <div class="logo">
+                    <a href="//www.joybuy.com">
+                        <img src="https://img13.joybuy.com/devfe/jfs/t12529/75/1661573614/7068/95ad6bf/5a24dfe9N3e8f15d1.jpg" alt="joybuy" class="logo-img">
+                    </a>
+                </div>
+
+                <!-- 分类导航 -->
+                <div class="category" data-curr="show-category" data-event="click" data-url="//mstone-api.jd.com/page/getPage?id=622">
+                    <div class="category-hd">
+                        <a href="#none"><s></s> Categories</a>
+                    </div>
+                    <div class="allcate hide" id="category">
+                        <s class="triangle-bottom-right"></s>
+                        <ul class="j_first_cate first">
+                            <li data-index="0">
+                                <a href="#" title="Phones & Accessories" clstag="ept_en_homepage|keycount|ept_en_homepage_395|132_10">Phones & Accessories</a>
+                            </li>
+                            <li data-index="1">
+                                <a href="#" title="Consumer Electronics" clstag="ept_en_homepage|keycount|ept_en_homepage_395|132_11">Consumer Electronics</a>
+                            </li>
+                            <li data-index="2">
+                                <a href="#" title="Computer & Office" clstag="ept_en_homepage|keycount|ept_en_homepage_395|132_12">Computer & Office</a>
+                            </li>
+                            <li data-index="3">
+                                <a href="#" title="Wigs & Hair Extensions" clstag="ept_en_homepage|keycount|ept_en_homepage_395|132_13">Wigs & Hair Extensions</a>
+                                <span class="bubble bubble-h"></span>
+                            </li>
+                            <li data-index="4">
+                                <a href="#" title="Women's Clothing" clstag="ept_en_homepage|keycount|ept_en_homepage_395|132_14">Women's Clothing</a>
+                            </li>
+                            <li data-index="5">
+                                <a href="#" title="Men's Clothing" clstag="ept_en_homepage|keycount|ept_en_homepage_395|132_15">Men's Clothing</a>
+                            </li>
+                            <li data-index="6">
+                                <a href="#" title="Sports & Outdoors" clstag="ept_en_homepage|keycount|ept_en_homepage_395|132_16">Sports & Outdoors</a>
+                            </li>
+                            <li data-index="7">
+                                <a href="#" title="Home , Garden & Furniture" clstag="ept_en_homepage|keycount|ept_en_homepage_395|132_17">Home , Garden & Furniture</a>
+                            </li>
+                            <li data-index="8">
+                                <a href="#" title="Health & Beauty" clstag="ept_en_homepage|keycount|ept_en_homepage_395|132_18">Health & Beauty</a>
+                            </li>
+                            <li data-index="9">
+                                <a href="#" title="Toys, Kids & Babies" clstag="ept_en_homepage|keycount|ept_en_homepage_395|132_19">Toys, Kids & Babies</a>
+                                <span class="bubble bubble-n"></span>
+                            </li>
+                            <li data-index="10">
+                                <a href="#" title="Shoes & Bags" clstag="ept_en_homepage|keycount|ept_en_homepage_395|132_110">Shoes & Bags</a>
+                            </li>
+                            <li data-index="11">
+                                <a href="#" title="Jewelry & Watches" clstag="ept_en_homepage|keycount|ept_en_homepage_395|132_111">Jewelry & Watches</a>
+                            </li>
+                            <li data-index="12">
+                                <a href="#" title="Automotive & Motorcycles" clstag="ept_en_homepage|keycount|ept_en_homepage_395|132_112">Automotive & Motorcycles</a>
+                            </li>
+                            <li data-index="13">
+                                <a href="#" title="Home Appliances" clstag="ept_en_homepage|keycount|ept_en_homepage_395|132_113">Home Appliances</a>
+                            </li>
+                            <li data-index="14">
+                                <a href="#" title="Books" clstag="ept_en_homepage|keycount|ept_en_homepage_395|132_114">Books</a>
+                            </li>
+                            <li>
+                                <a href="//www.joybuy.com/map/sitemap.html" title="All CATEGORIES" clstag="ept_en_homepage|keycount|ept_en_homepage_395|132_115">All CATEGORIES</a>
+                            </li>
+                        </ul>
+                        <div class="second j_contents contents"></div>
+                    </div>
+                </div>
+                <script>
+                    (function(doc, cfg) {
+                        var el = doc.body
+                        if (el && cfg && cfg.showCategory) {
+                            el.className += ' show-category'
+                        }
+                    })(document, pageConfig)
+                </script>
+            </div>
+
+            <!-- 搜索 -->
+            <div class="suggest-form">
+                <div class="field suggest-field">
+                    <div class="cate-w">
+                        <div class="search-cate-title" data-all="ALL" clstag="ept_en_homepage|keycount|ept_en_homepage_395|chooselist">
+                            <div class="search-cate-title-inner">
+                                <span id="search-category-value" catid="0">ALL</span>
+                                <span class="ficon fi-bottom"></span>
+                            </div>
+                        </div>
+                        <!-- 分类列表 -->
+                        <div class="search-cate-list">
+                            <ul class="container j-select-opts">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="search-key-w">
+                        <input id="searchKeyWord" class="search-key" type="text" autocomplete="off" name="" value="" placeholder="Search" />
+                    </div>
+                    <div class="suggest-key-list J-search-suggest hide"
+                         data-in="in"
+                         data-search="Hot Searches"
+                         data-history="Search History"
+                         data-clear="Clear all"
+                         data-delete="Delete"
+                         data-sale="618 Anniversary Sale">
+                        <div class="hide J-suggest-banner"></div>
+                        <div class="hide J-suggest-hot"></div>
+                        <div class="hide J-suggest-list"></div>
+                    </div>
+                </div>
+                <button id="doSearchShop" class="search-button search-shop-button hide" type="button">
+                    <span class="text">Store&nbsp;Search</span>
+                </button>
+                <button id="doSearch" class="search-button" type="button" data-search="//www.joybuy.com/search?keywords={k}&arriveCountry={c}&filterTypes=expand">
+                    <i class="ficon fi-search"></i>
+                    <span class="text hide">Search</span>
+                </button>
+                <script>
+                    (function(doc, cfg) {
+                        var get = function(id) { return doc.getElementById(id) }
+
+                        var el = get('doSearchShop')
+                        if (el && cfg.shopSearch) {
+                            el.onclick = function() {
+                                window.location.href = cfg.shopSearch.replace('{KEYWORD}', (cfg.kw || ''))
+                            }
+                        }
+
+                        var btn = get('doSearch')
+                        var url = btn.getAttribute('data-search')
+                        var C = function(k){return(doc.cookie.match('(^|; )'+k+'=([^;]*)')||0)[2]}
+
+                        if (btn && url) {
+                            btn.onclick = function() {
+                                var eptCountry = C('eptCountry'), cid = ''
+                                try { cid = JSON.parse(decodeURIComponent(eptCountry)).id } catch (e) {}
+                                if (cfg.kw) {
+                                    location.href = url.replace('{k}', cfg.kw).replace('{c}', cid)
+                                } else {
+                                    console.error('pageConfig.kw not found.')
+                                }
+                            }
+                        }
+                    })(document, pageConfig);
+                </script>
+            </div>
+
+            <!-- 右边 -->
+            <div class="header-right">
+                <ul>
+                    <li class="item-cartnum">
+                        <a href="//cart.joybuy.com/cart/cart.html" rel="nofollow" title="Cart" clstag="ept_en_homepage|keycount|ept_en_homepage_395|header_cart">
+                            <i class="ficon fi-cart my-cart"></i>Cart</a>
+                    </li>
+                    <li class="item-sign">
+                        <span class="text">
+                            <i class="ficon fi-user my-account"></i>My Account
+                        </span>
+                        <div class="floating-account j_f_account">
+                            <!-- 登录 -->
+                            <div style="display: none" class="sign-box s-1">
+                                <div class="mt">
+                                    <div class="myaccount">
+                                        <span class="sign-myaccount-icon">
+                                            <i class="ficon fi-user"></i>
+                                        </span>
+                                        <p class="sign-myaccount-name">
+                                            <span class="username"></span>
+                                            <span>JoyBuy</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <ul class="sign-in-list">
+                                    <li clstag="ept_en_homepage|keycount|ept_en_homepage_395|account_my">
+                                        <a href="//my.joybuy.com/home/home.do" title="My Joybuy" rel="nofollow">My Joybuy</a>
+                                    </li>
+                                    <li clstag="ept_en_homepage|keycount|ept_en_homepage_395|account_order">
+                                        <a href="//my.joybuy.com/order/orderList.do" title="My Orders" rel="nofollow">My Orders</a>
+                                    </li>
+                                    <li clstag="ept_en_homepage|keycount|ept_en_homepage_395|account_wish">
+                                        <a href="//my.joybuy.com/wishlist/myWishlist.do" title="My Wish List"
+                                            rel="nofollow">My Wish List</a>
+                                    </li>
+                                    <li clstag="ept_en_homepage|keycount|ept_en_homepage_395|account_coupon">
+                                        <a href="//my.joybuy.com/coupon/myCoupon.do" title="My Coupon" rel="nofollow">My Coupons</a>
+                                    </li>
+									<li clstag="ept_en_homepage|keycount|ept_en_homepage_395|account_invite">
+										<a href="//my.joybuy.com/invite/myinvitecode.do" title="Invite Friends" rel="nofollow">Invite Friends</a>
+									</li>
+                                    <li clstag="ept_en_homepage|keycount|ept_en_homepage_395|account_profile">
+                                        <a href="//p.joybuy.com/user/initBasicInfo.do" title="Account Settings" rel="nofollow">My Profile</a>
+                                    </li>
+                                    <li clstag="ept_en_homepage|keycount|ept_en_homepage_395|account_message">
+                                        <a href="//imsg.joybuy.com/usercenter/news/importantList.html" title="Message"
+                                            rel="nofollow" class="unread-message">Message Center
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="mc" clstag="ept_en_homepage|keycount|ept_en_homepage_395|account_signout">
+                                    <a href="javascript:logout();" title="Sign out" rel="nofollow">Sign out</a>
+                                </div>
+                            </div>
+
+                            <!-- 未登录 -->
+                            <div class="sign-box s-2" id="sign-panle">
+                                <div class="mt">
+                                    <div class="myaccount">
+                                        <span class="sign-myaccount-icon">
+                                            <i class="ficon fi-user"></i>
+                                        </span>
+                                        <p class="sign-myaccount-noname">My Account</p>
+                                        <p class="sign-myaccount-name" style="display: none;">
+                                            <span class="username"></span>
+                                            <span>JoyBuy</span>
+                                        </p>
+                                    </div>
+                                    <a class="btn-sign" clstag="ept_en_homepage|keycount|ept_en_homepage_395|account_signin" href="javascript:login();" rel="nofollow">Sign in</a>
+                                    <div class="sign-open">
+                                        <p>Or Sign in With</p>
+                                        <div class="ac sn-icon">
+                                            <a clstag="ept_en_homepage|keycount|ept_en_homepage_395|account_fb" class="sprite-ico sprite-fb" href="javascript:login4FacebookUnion();"></a>
+                                            <a clstag="ept_en_homepage|keycount|ept_en_homepage_395|account_pin" class="sprite-ico sprite-pin" href="javascript:login4PinterestUnion();"></a>
+                                            <a clstag="ept_en_homepage|keycount|ept_en_homepage_395|account_twi" class="sprite-ico sprite-twi" href="javascript:login4TwitterUnion();"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mc">
+                                    <p>New Customer?</p>
+                                    <a href="javascript:register();" clstag="ept_en_homepage|keycount|ept_en_homepage_395|account_join">Join Free Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="category-mask" class="category-mask"></div>
+</header>
+
+<script>
+    function handleSessionResponse(response) {
+        FB.logout(function (response) {
+            //TODO
+        });
+    }
+    function lout() {
+        try {
+            FB.getLoginStatus(function (response) {
+                handleSessionResponse(response);
+            });
+        } catch (e) { }
+    }
+
+    function login() {
+        window.location.href = '//passport.joybuy.com/new/facade.html?ReturnUrl=' + encodeURIComponent(location.href);
+    }
+    function register() {
+        window.location.href = '//reg.joybuy.com/reg/person.html?ReturnUrl=' + encodeURIComponent(location.href);
+    }
+    function logout() {
+        try {
+            lout();
+        } catch (e) {
+
+        }
+        window.location.href = '//passport.joybuy.com/new/logoutService.html';
+    }
+    function message() {
+        window.location.href = '//s.joybuy.com/usercenter/message/showMessage.html';
+    }
+
+    function getFirstLevelDomain() {
+        var host = location.host;
+        var regex = new RegExp(".+\\.(.+\\..+)");
+        return host.match(regex)[1];
+    }
+
+    function login4FacebookUnion() {
+        var url = '//unionen.jd.com/new/facebook/login.html?ReturnUrl=' + escape(location.href).replace(/\//g, "%2F");
+        window.location.href = url;
+    };
+
+    function login4VkUnion() {
+        var returnUrl = '//unionen.jd.com/new/vk/login.html?ReturnUrl=' + escape(location.href).replace(/\//g, "%2F");
+        window.location.href = returnUrl;
+    };
+
+    function login4OkUnion() {
+        var returnUrl = '//unionen.jd.com/new/ok/login.html?ReturnUrl=' + escape(location.href).replace(/\//g, "%2F");
+        window.location.href = returnUrl;
+    }
+
+    function login4PinterestUnion() {
+        window.location.href = '//unionen.jd.com/new/pinterest/login.html?ReturnUrl=' + escape(location.href).replace(/\//g, "%2F");
+    }
+
+    function login4InstagramUnion() {
+        window.location.href = '//unionen.jd.com/new/instagram/login.html?ReturnUrl=' + escape(location.href).replace(/\//g, "%2F");
+    }
+
+    function login4TwitterUnion() {
+        window.location.href = '//unionen.jd.com/thirdparty/twitter.html?ReturnUrl=' + escape(location.href).replace(/\//g, "%2F");
+    }
+</script>
+
+<script>
+    seajs.use('GLOBAL_ROOT/base/base', function(App) {
+        App.init(pageConfig)
+    })
+</script>
+ 	 <div class="eptHelpCenter w">
+	 	<!-- 轮播图 -->
+		<!--banner-->
+<div class="slideBannerBox">
+    <div class="bannerWrapper">
+        <ul class="clearfix">
+        	        		        			<li>
+        						               		<a href="#" class="bannerLink" style="background-image: url('http://img10.360buyimg.com/epthelpcenter/jfs/t1/16554/10/5084/88015/5c389b29E91d039ab/b36b92f67cb116fb.png')"></a>
+		               			        	</li>
+        		                    </ul>
+        <div class="bannerTrigger">
+            <ol>
+															<li></li>
+									            </ol>
+        </div>
+        <div class="pageBtn prevBtn">
+            <i></i>
+        </div>
+        <div class="pageBtn nextBtn">
+            <i></i>
+        </div>
+    </div>
+</div>
+<!--/banner-->		<!-- 公告 -->
+		<!--noteSlider-->
+<div class="noteSliderBox clearfix">
+    <i class="noteIcon"></i>
+    <div class="noteSliderWrap">
+        <ul>
+                                                                    	<li><a href="http://help.joybuy.com/preview/6c038aac495f28d60a2d56ebeef64353/59/3/view.html" target="_blank" class="noteTxt">Still need help? Feel free to contact us. We will respond within 24 hours.</a></li>
+                                                                            	<li><a href="https://o.joybuy.com/order/orderList.html" target="_blank" class="noteTxt">To track your order, please go to My orders (https://o.joybuy.com/order/orderList.html), click Track Order.</a></li>
+                                                        </ul>
+    </div>
+</div>
+<!--/noteSlider-->		<!-- 类目 -->
+        <!--content-->
+<div class="pageContent clearfix">
+    <!--nav-->
+    <div class="eptNav">
+        <h3>Help Center</h3>
+        <div class="navList">
+                	        		<dl>
+        				               		<dt style="display:none;"><span title="About Joybuy" >About Joybuy</span><i class="dropBtn"></i></dt>
+	                	                
+	                	                	 		                			                			                					                					<a href="/help/question-32.html"><dd title="About Joybuy" style="font-size: 14px;padding-left: 18px;margin-top: 30px;font-weight: bold;">About Joybuy</dd></a>
+	                						                			
+		                				                			                	                            	</dl>
+        	        		<dl>
+        				                	<dt><span title="Account">Account</span><i class="dropBtn"></i></dt>
+	               		                
+	                		               		                			                	
+		                				                			<a href="/help/question-list-127.html"><dd title="Registration and Login">Registration and Login</dd></a>
+		                				                		
+		                			                	
+		                				                			<a href="/help/question-list-128.html"><dd title="Account Information">Account Information</dd></a>
+		                				                		
+		                			                	                            	</dl>
+        	        		<dl>
+        				                	<dt><span title="My Orders">My Orders</span><i class="dropBtn"></i></dt>
+	               		                
+	                		               		                			                	
+		                				                			<a href="/help/question-list-190.html"><dd title="Placing Orders">Placing Orders</dd></a>
+		                				                		
+		                			                	
+		                				                			<a href="/help/question-list-191.html"><dd title="Cancelling Orders">Cancelling Orders</dd></a>
+		                				                		
+		                			                	
+		                				                			<a href="/help/question-list-192.html"><dd title="Leaving Feedback">Leaving Feedback</dd></a>
+		                				                		
+		                			                	                            	</dl>
+        	        		<dl>
+        				                	<dt><span title="Payments">Payments</span><i class="dropBtn"></i></dt>
+	               		                
+	                		               		                			                	
+		                				                			<a href="/help/question-list-197.html"><dd title="Secure Payment">Secure Payment</dd></a>
+		                				                		
+		                			                	
+		                				                			<a href="/help/question-list-198.html"><dd title="Coupons and Promotions">Coupons and Promotions</dd></a>
+		                				                		
+		                			                	                            	</dl>
+        	        		<dl>
+        				                	<dt><span title="Shipping">Shipping</span><i class="dropBtn"></i></dt>
+	               		                
+	                		               		                			                	
+		                				                			<a href="/help/question-list-201.html">
+		                				<dd class="cur" title="Shipping and Delivery">Shipping and Delivery</dd>
+		                			</a>
+		                				                		
+		                			                	                            	</dl>
+        	        		<dl>
+        				                	<dt><span title="Returns and Refunds">Returns and Refunds</span><i class="dropBtn"></i></dt>
+	               		                
+	                		               		                			                	
+		                				                			<a href="/help/question-list-253.html"><dd title="Policy of Returns and Refunds">Policy of Returns and Refunds</dd></a>
+		                				                		
+		                			                	
+		                				                			<a href="/help/question-list-194.html"><dd title="Processes">Processes</dd></a>
+		                				                		
+		                			                	
+		                				                			<a href="/help/question-list-195.html"><dd title="Disputes">Disputes</dd></a>
+		                				                		
+		                			                	                            	</dl>
+        	        		<dl>
+        				                	<dt><span title="Terms and Conditions">Terms and Conditions</span><i class="dropBtn"></i></dt>
+	               		                
+	                	                	 		                			                			                					                					<a href="/help/question-310.html"><dd title="Terms and Conditions">Terms and Conditions</dd></a>
+	                						                			
+		                				                			                			                					                					<a href="/help/question-311.html"><dd title="Website Terms of Use (User Notice)">Website Terms of Use (User Notice)</dd></a>
+	                						                			
+		                				                			                			                					                					<a href="/help/question-312.html"><dd title="Intellectual Property Rights Protection">Intellectual Property Rights Protection</dd></a>
+	                						                			
+		                				                			                			                					                					<a href="/help/question-535.html"><dd title="Privacy Policy">Privacy Policy</dd></a>
+	                						                			
+		                				                			                	                            	</dl>
+        	        		<dl>
+        				               		<dt style="display:none;"><span title="Contact Us" >Contact Us</span><i class="dropBtn"></i></dt>
+	                	                
+	                	                	 		                			                			                					                					<a href="/help/question-59.html"><dd title="Contact Us" style="font-size: 14px;padding-left: 18px;margin-top: 30px;font-weight: bold;">Contact Us</dd></a>
+	                						                			
+		                				                			                	                            	</dl>
+        	                </div>
+    </div>
+    <!--/nav-->
+
+    <!--container-->
+    <div class="eptContainer eptPageContainer" id="ept-page-container">
+    		        <div class="eptTitBox">
+	            <h3 id="parent-category" parentId="201">Shipping and Delivery</h3>
+	        </div>
+	        <div class="queList">
+	            <ul>
+	            		            			            						    				<li><a href="/help/question-309.html">Shipping Policy</a></li>
+			    				            			            						    				<li><a href="/help/question-288.html">How are customs duties and import taxes handled?</a></li>
+			    				            			            						    				<li><a href="/help/question-290.html">After I place an order, when will the seller ship my item?</a></li>
+			    				            			            						    				<li><a href="/help/question-291.html">What should I do if the seller doesn't ship my item on time?</a></li>
+			    				            			            						    				<li><a href="/help/question-353.html">How do I check the order status?</a></li>
+			    				            			            						    				<li><a href="/help/question-354.html">How can I get the tracking number?</a></li>
+			    				            			            						    				<li><a href="/help/question-292.html">How can I track my order?</a></li>
+			    				            			            						    				<li><a href="/help/question-293.html">What if I don't receive my item on time?</a></li>
+			    				            			            						    				<li><a href="/help/question-294.html">How long does it take for my order to be delivered?</a></li>
+			    				            			            						    				<li><a href="/help/question-296.html">Can I cancel an order at any time?</a></li>
+			    				            			            		            </ul>
+	        </div>
+	        <div class="pageBox">
+	            <i id="pre-page" class="fl pbBtn pbPrevBtn "><em></em></i>
+	            <i id="next-page" class="fl pbBtn pbNextBtn  cur "><em></em></i>
+	            <span class="fl pageTxt">page<em id="category-currentPage">1</em>/<em id="category-pageCount">2</em></span>
+	            <input type="text" value="1" class="fl" id="go-page-num" onkeyup="value=value.replace(/[^\d]/g,'')">
+	            <i class="fl goBtn" id="go-page">GO</i>
+	        </div>
+            </div>
+    <!--/container-->
+</div>
+<!--/content-->    </div>
+    <footer class="footer">
+    <div class="w footer-w">
+        <div class="mod-service">
+            <div class="mod-service-item">
+                <div class="item-icon payment"></div>
+                <div class="item-title">
+                    <h4>Secure Payments</h4>
+                </div>
+                <div class="item-desc">
+                    <p>Pay with secure payment methods</p>
+                </div>
+            </div>
+            <div class="mod-service-item">
+                <div class="item-icon day"></div>
+                <div class="item-title">
+                    <h4>30-day Return Policy</h4>
+                </div>
+                <div class="item-desc">
+                    <p>If your item is damaged or not as described, you may return it within 30 days after delivery.</p>
+                </div>
+            </div>
+            <div class="mod-service-item">
+                <div class="item-icon help"></div>
+                <div class="item-title">
+                    <h4>24/7 Customer Service</h4>
+                </div>
+                <div class="item-desc">
+                    <p>We'll respond to you within 24 hours</p>
+                </div>
+            </div>
+            <div class="mod-service-item">
+                <div class="item-icon delivery"></div>
+                <div class="item-title">
+                    <h4>Worldwide Delivery</h4>
+                </div>
+                <div class="item-desc">
+                    <p>Covers more than 200 countries and regions worldwide</p>
+                </div>
+            </div>
+            <div class="mod-service-item">
+                <div class="item-icon brands"></div>
+                <div class="item-title">
+                    <h4>International Brands</h4>
+                </div>
+                <div class="item-desc">
+                    <p>Guaranteed authenticity</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mod-help clearfix">
+            <div class="mod-help-item-w">
+                <div class="mod-help-item">
+                    <div class="item-title">
+                        <h4>Customer Service</h4>
+                    </div>
+                    <div class="item-desc">
+                        <ul>
+                            <li clstag="ept_en_homepage|keycount|ept_en_homepage_395|330_001">
+                                <a href="//help.joybuy.com/help/question-list-190.html">My Orders</a>
+                            </li>
+                            <li clstag="ept_en_homepage|keycount|ept_en_homepage_395|330_002">
+                                <a href="//help.joybuy.com/help/question-list-197.html">Payments</a>
+                            </li>
+                            <li clstag="ept_en_homepage|keycount|ept_en_homepage_395|330_003">
+                                <a href="//help.joybuy.com/help/question-list-194.html">Refunds and Returns</a>
+                            </li>
+                            <li clstag="ept_en_homepage|keycount|ept_en_homepage_395|330_004">
+                                <a href="//help.joybuy.com/help/question-list-201.html">Shipping</a>
+                            </li>
+                            <li clstag="ept_en_homepage|keycount|ept_en_homepage_395|330_004">
+                                <a href="//help.joybuy.com/help/question-list.html">Help Center</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mod-help-item-w">
+                <div class="mod-help-item">
+                    <div class="item-title">
+                        <h4>Get to Know Us</h4>
+                    </div>
+                    <div class="item-desc">
+                        <ul>
+                            <li clstag="ept_en_homepage|keycount|ept_en_homepage_395|330_005">
+                                <a href="//help.joybuy.com/help/question-32.html">About JoyBuy</a>
+                            </li>
+                            <li clstag="ept_en_homepage|keycount|ept_en_homepage_395|330_006">
+                                <a href="//ir.jd.com/phoenix.zhtml?c=253315&p=irol-IRHome">Investor Relations</a>
+                            </li>
+                            <li clstag="ept_en_homepage|keycount|ept_en_homepage_395|330_007">
+                                <a href="//help.joybuy.com/help/question-310.html">Terms and Conditions</a>
+                            </li>
+                            <li clstag="ept_en_homepage|keycount|ept_en_homepage_395|330_0018">
+                                <a target="_blank" href="//help.joybuy.com/help/question-535.html">Privacy Policy</a>
+                            </li>
+                            <li clstag="ept_en_homepage|keycount|ept_en_homepage_395|330_008">
+                                <a href="//help.joybuy.com/help/question-59.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mod-help-item-w item-help_center">
+                <div class="mod-help-item">
+                    <div class="item-title">
+                        <h4>Partner Promotion</h4>
+                    </div>
+                    <div class="item-desc">
+                        <ul>
+                            <li clstag="ept_en_homepage|keycount|ept_en_homepage_395|330_009">
+                                <a href="//help.joybuy.com/preview/9d7a4e6ca117817fbfdeae6ec98613bf/79/3/view.html">Become an Influencer</a>
+                            </li>
+                            <li clstag="ept_en_homepage|keycount|ept_en_homepage_395|330_010">
+                                <a href="//help.joybuy.com/preview/983a0bddd01f6f0e69abea66b940e0e2/55/3/view.html">Join Affiliate Program</a>
+                            </li>
+                            <li clstag="ept_en_homepage|keycount|ept_en_homepage_395|330_011">
+                                <a href="//help.joybuy.com/preview/1a40fe5f228979110e994720d05d1655/47/3/view.html">Partnership Coopration</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mod-help-item-w">
+                <div class="mod-help-item">
+                    <div class="item-title">
+                        <h4>Make Money with Us</h4>
+                    </div>
+                    <div class="item-desc">
+                        <ul>
+                            <li clstag="ept_en_homepage|keycount|ept_en_homepage_395|330_014">
+                                <a href="//help.joybuy.com/preview/d480ea27836f019e481f2a170383c7b7/364/3/view.html">Sell on joybuy.com</a>
+                            </li>
+                            <li clstag="ept_en_homepage|keycount|ept_en_homepage_395|330_015">
+                                <a href="//help.joybuy.com/preview/520cff8fea0294db974413d00c45f8e5/322/3/view.html">Restricted Products</a>
+                            </li>
+                            <li clstag="ept_en_homepage|keycount|ept_en_homepage_395|330_016">
+                                <a href="//help.joybuy.com/preview/a054223929e94a8fdb6c5735bc11dfff/323/3/view.html">Selling Policies</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mod-help-item-w">
+                <div class="mod-help-item">
+                    <div class="item-title">
+                        <h4>JD.com Group</h4>
+                    </div>
+                    <div class="item-desc">
+                        <ul>
+                            <li class="sc-site-item" clstag="ept_en_homepage|keycount|ept_en_homepage_395|330_017">
+                                <a class="clstag" href="//www.jd.ru" title="jd.ru">Сайт России</a>
+                            </li>
+                            <li class="sc-site-item" clstag="ept_en_homepage|keycount|ept_en_homepage_395|133_004">
+                                <a class="clstag" href="//www.jd.com" title="JD.com">中国站</a>
+                            </li>
+                            <li clstag="ept_en_homepage|keycount|ept_en_homepage_395|330_018">
+                                <a class="clstag" href="//www.joybuy.es" title="joybuy.es">Sitio de España</a>
+                            </li>
+                            <li clstag="ept_en_homepage|keycount|ept_en_homepage_395|330_019">
+                                <a class="clstag" href="//www.jd.id" title="JD.id">Situs Indonesia</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mod-info">
+            <div class="clearfix">
+                <div class="left">
+                    <div class="shopgo line">
+                        <span>Get the App: </span>
+                        <a class="sprite-ico sprite-appstore" clstag="ept_en_homepage|keycount|ept_en_homepage_395|330_020" href="//itunes.apple.com/us/app/jd.ru/id1070047683?mt=8"></a>
+                        <a class="sprite-ico sprite-googleplay" clstag="ept_en_homepage|keycount|ept_en_homepage_395|330_021" href="//play.google.com/store/apps/details?id=jd.cbt.android.market.russia&ddl=1&pcampaignid=web_ddl_1&rdid=jd.cbt.android.market.russia"></a>
+                    </div>
+                    <div class="parterships line">
+                        <span>Partners: </span>
+                        <span class="sprite-ico sprite-walmart"></span>
+                    </div>
+                    <div class="verified-by line">
+                        <span>Verified by: </span>
+                        <span class="sprite-ico sprite-verified"></span>
+                    </div>
+                    
+                </div>
+
+                <div class="right clearfix">
+                    <div class="right-container">
+                        <div class="paywith line">
+                            <div class="line-left">
+                                <span>Pay with: </span>
+                            </div>
+                            <div class="line-right" clstag="ept_en_homepage|keycount|ept_en_homepage_395|330_027">
+                                <img src="//img11.joybuy.com/devfe/jfs/t24214/168/241856753/49882/dc7a89a6/5b29b95eNb76d89f4.png" alt="payments">
+                                <i class="ficon fi-bottom" onclick="$(this).parent().toggleClass('open')"></i>
+                            </div>
+                        </div>
+                        <div class="eme line">
+                            <span class="title">Sign up: </span>
+                            <div class="eme-form" id="eme-form" data-tip="Please Enter A Valid E-mail Address." data-success="Subscribe Successful." data-error="Subscribe Fail." data-thanks="Thanks for subscribing!">
+                                <button class="btn-subscribing" clstag="ept_en_homepage|keycount|ept_en_homepage_395|330_028">Subscribe</button>
+                                <input class="subscribe-email" type="text" placeholder="Enter your email address">
+                                <div class="subscribe-email-status" clstag="ept_en_homepage|keycount|ept_en_homepage_395|330_029"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mod-copyright">
+            <p>Copyright &copy; 2016-<span id="cr-full-year">2018</span> Jd.com, Inc. or its affiliates. All Rights Reserved</p>
+            <script>document.getElementById('cr-full-year').innerText=(new Date()).getFullYear()</script>
+        </div>
+    </div>
+</footer>
+
+<script>
+    var jaq = jaq || [];
+    jaq.push(['account','UA-J2011-6']);
+    jaq.push(['domain','joybuy.com']);
+    jaq.push(['erp_account', '']);
+    (function () {
+        var ja = document.createElement('script');
+        ja.type = 'text/javascript';
+        ja.async = true;
+        ja.src = '//wl.joybuy.com/joya.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ja, s);
+    })();
+</script>
+    	<script type="text/javascript" src="/static/js/slider.js"></script>
+   	<script type="text/javascript" src="/static/js/ajaxFactory.js"></script>
+   	<script type="text/javascript" src="/static/js/eptHelpCenter.js"></script>
+    <script type="text/javascript" src="//wl.joybuy.com/joya.js"></script>
+</body>
+</html>
+

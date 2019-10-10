@@ -20,12 +20,12 @@ FINAL_SUBMISSION = False
 MAX_PATH = 200
 MODE_QUEUE_THREADING = 1  # using ? to join: queue=0, [faster]threading=1
 # [control - for users] source and path
-SOURCE_SITE = "www.sjtu.edu.cn"
+SOURCE_SITE = "jd.com"
 FOLDER_PREFIX = "crawled"
-FOLDER_SUB_PREFIX = "sjtu"
+FOLDER_SUB_PREFIX = "jd"
 FOLDER_SUB_SUB_PREFIX = "html"
 # EASY USE
-easy_use_target = "http://www.sjtu.edu.cn"
+easy_use_target = "http://food.jd.com/"
 easy_use_max_page = 1000
 easy_use_max_depth = 5
 # ********** CHECK BEFORE UPLOAD !!! **********

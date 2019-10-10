@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>中央纪委国家监委举报网站</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+		
+		<link rel="stylesheet" type="text/css" href="./css/index.css" />
+		<link rel="stylesheet" type="text/css" href="./css/public.css" />
+		<link rel="stylesheet" type="text/css" href="./css/head.css" />
+		<link rel="stylesheet" type="text/css" href="./css/foot.css" />
+		<script type="text/javascript" src="./js/jquery/jquery.js"></script>
+		<script type="text/javascript" src="./js/jquery/jquery-migrate.min.js"></script>
+		<script src="./js/common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var protocolInfo = document.location.protocol;
+				if(protocolInfo == 'https:') {
+					window.location.href = 'http://www.12388.gov.cn';
+				}
+				$("#IFrame120").bind("load",function(){
+					var $page_main=$(".page_main",this.contentWindow.document);
+					function reszieWindow(win,obj){
+						var h=obj.height()+5;
+						h=h<150? 150:h;
+						win.height(h);
+					}
+					reszieWindow($(this),$page_main);
+				}).attr("src","html/jbxz.html");
+			});
+		</script>
+	</head>
+
+	<body>
+		<div class="page">
+			<div class="left head">
+				<div class="left banner"></div>
+				<div class="left nav_bg3">
+					<div class="left nav_bg_L3">
+					</div>
+					<div class="left nav_bg_M3">
+						<div class="left nav_def3" id="index">
+							<a href="./html/jbxz.html" target="IFrame120">首&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;页</a>
+						</div>
+						<div class="left nav_def3" id="rule">
+							<a href="./html/law_list.html" target="IFrame120">相关法律法规</a>
+						</div>
+						<div class="left nav_def3" id="notice">
+							<a href="./html/jbxz.html" target="IFrame120">网上举报须知</a>
+						</div>
+						<div class="left nav_def3" id="search">
+							<a href="https://www.12388.gov.cn/index_search.html" target="_parent">举&nbsp;报&nbsp;查&nbsp;询</a>
+						</div>
+						<div class="left nav_def3" id="example">
+							<a href="./html/example_list.html" target="IFrame120">相&nbsp;关&nbsp;案&nbsp;例</a>
+						</div>
+					</div>
+					<div class="left nav_bg_R3">
+					</div>
+				</div>
+			</div>
+			<!------iframe--------begin-->
+			<iframe id='IFrame120' name='IFrame120' FRAMEBORDER='0'
+				marginwidth="0" marginheight="5" class="left iframe_style"
+				allowTransparency='true' style="background-color: #ffffff;"
+				SCROLLING='NO'>
+			</iframe>
+			<!------iframe--------end-->
+			<div class="left foot_bg">
+				<div class="left foot_con">
+					版权所有 &copy; 中共中央纪律检查委员会 中华人民共和国国家监察委员会
+					<br />
+					京ICP备 18029465-1
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

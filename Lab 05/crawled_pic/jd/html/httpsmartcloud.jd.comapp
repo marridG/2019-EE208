@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="Keywords" content="京东智能App，微联App，京东微联App，智能，物联网，开放平台,超级APP,互联互通,硬件开发,智能硬件，智能家居，健康设备" />
+    <meta name="Description" content="中国物联网与智能硬件行业领先的技术平台，为硬件厂商和用户提供智能硬件生成指导和使用的快捷通道，智能生活从京东开始。" />
+    <title>京东微联 -超级APP</title>
+    <link rel="stylesheet" href="/css/devsmart/smart.css"/>
+    <script type="text/javascript" src="/js/libs/jquery-3.1.1.min.js"></script>
+    <!--[if lte IE 9]>
+    <script type="text/javascript" src="/js/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<!-- header begin -->
+<header class="wrapper header">
+    <div class="wrapper">
+        <div class="logo"><a href="//smartcloud.jd.com"><img src="images/devsmart/sc-logo.png" /></a></div>
+        <div class="menu">
+            <a href="//smartcloud.jd.com">首页</a>
+            <a href="//smarthome.jd.com" target="_blank">智能生活馆</a>
+            <a href="//smartdev.jd.com" target="_blank">开发者中心</a>
+            <a href="/app" class="cur">超级APP下载</a>
+        </div>
+    </div>
+</header>
+<!-- header end -->
+<div class="dowbanner">
+    <div class="dow_bancon">
+        <div class="codebox">
+            <a href="app/webDownloadIOS" target="_blank">App Store</a>
+            <a href="app/webDownloadAndroid" class="andr">Android下载</a>
+        </div>
+    </div>
+</div>
+<!---->
+<div class="dowbox">
+    <div class="dowcon">
+        <dl>
+            <dt><i class="ico1"></i>京东微联，一手掌控</dt>
+            <dd>从无数遥控器的杂乱中解放出来，凡是带有“京东微联”标志的产品，均可用京东微联超级APP管理控制。</dd>
+        </dl>
+        <div class="imgbox"><img src="images/devsmart/dowtu1.jpg"></div>
+    </div>
+</div>
+<!---->
+<div class="dowbox grey">
+    <div class="dowcon">
+        <dl>
+            <dt><i class="ico2"></i>衣食住行，智能互联</dt>
+            <dd>智能家居、健康生活、汽车服务， 各种使用场景、各类智能设备在京东微联互联互通，为您开启智能生活新时代。</dd>
+        </dl>
+        <div class="imgbox"><img src="images/devsmart/dowtu2.jpg"></div>
+    </div>
+</div>
+<!---->
+<div class="dowbox">
+    <div class="dowcon">
+        <dl>
+            <dt><i class="ico3"></i>京东账号，智绘生活</dt>
+            <dd>使用京东账号登录京东微联超级APP，管理众多智能设备；也可以将设备控制分享给家人好友，与他们共享智能体验；还可一键下单便捷购买新款设备。</dd>
+        </dl>
+        <div class="imgbox"><img src="/images/devsmart/dowtu3.jpg"></div>
+    </div>
+</div>
+<!---->
+<div class="dowbox grey">
+    <div class="dowcon">
+        <dl>
+            <dt><i class="ico4"></i>云端服务，随心掌控</dt>
+            <dd>在对设备进行智能控制的同时，我们还为您提供个性化服务。健康服务、营养膳食、爱车管护，从云端到身边，我们为您提供定制化智能生活。</dd>
+        </dl>
+        <div class="imgbox"><img src="/images/devsmart/dowtu4.jpg"></div>
+    </div>
+</div>
+<footer class="footer">
+    <p>
+        <a href="//www.jd.com/intro/about.aspx" target="_blank">关于京东</a>
+        <a href="//smart.jd.com" target="_blank">京东智能</a>
+        <a href="//smarthome.jd.com" target="_blank">微联生活馆</a>
+        <a href="/dev/contactUs">联系我们</a>
+    <p class="pt20">Copyright &copy; 2004-2019  京东JD.com 版权所有</p>
+</footer>
+<script type="text/javascript">
+    // 埋点代码
+    var jaq = jaq || [];
+    jaq.push(['account', 'JA2015_143137']);
+    jaq.push(['domain', 'smartcloud.jd.com']);
+    jaq.push(['erp_account', '']);
+    (function () {
+        var ja = document.createElement('script');
+        ja.type = 'text/javascript';
+        ja.async = true;
+        ja.src = ('https:' == document.location.protocol ? '//cscssl' : '//csc') + '.jd.com/joya.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ja, s);
+    })();
+</script>
+</body>
+</html>
+<script>
+    var offHeight=$(".header").offset().top;
+    $(window).scroll(function(){
+        var scrollHeight=$(this).scrollTop();
+        if(scrollHeight>offHeight){
+            $(".header").css({"position":"fixed","top":"0"});
+        }else{
+            $(".header").css("position","static");
+        }
+    })
+</script>

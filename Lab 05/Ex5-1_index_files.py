@@ -15,6 +15,7 @@ WEB_PAGE_PREFIX = "crawled/"
 WEB_PAGE_INDEX_SUBFIX = "index.txt"
 WEB_PAGE_SITE_SUBFIX = "src.txt"
 WEB_PAGES_SUBFIX = "html/"
+INDEX_FILE_PATH = "index"
 # [Developer]
 DEBUG_MODE = True
 # Encodings List: for a less advanced encoding method
@@ -301,7 +302,7 @@ if __name__ == '__main__':
             print "analyzer set"
         # [ {sub:sub_path, src:src_path, index:index_path, html:html_path} ]
         for paths in web_page_sub_prefix_paths:
-            IndexFiles(paths["html"], "index", analyzer)
+            IndexFiles(paths["html"], INDEX_FILE_PATH, analyzer)
         end = datetime.now()
         print end - start
     except Exception, e:

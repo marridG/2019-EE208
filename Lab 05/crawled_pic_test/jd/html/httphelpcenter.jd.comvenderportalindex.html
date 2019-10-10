@@ -1,0 +1,713 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <script>var pageConfig = {
+        jdfVersion:'2.0.0',
+        navId: "home"
+    };
+    </script>
+            <title>帮助中心-京东</title>
+        
+    <link type="text/css" rel="stylesheet"  href="//static.360buyimg.com/shop/pop_help/css/help.css" source="widget"/>
+    <link type="text/css" rel="stylesheet"  href="//static.360buyimg.com/shop/pop_help/css/index.css"/>
+    <script type="text/javascript" src="//misc.360buyimg.com/jdf/??lib/jquery-1.6.4.js,1.0.0/unit/base/1.0.0/base.js"></script>
+    <script type="text/javascript" src="/static/js/xdate.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/issueLeft.css">
+            <script src="//jm-static.jd.com/growth/jingling/jimi.min.js"></script>
+        <script type="text/javascript" src="/static/js/jingling.js"></script>
+        <link rel="stylesheet" type="text/css" href="/static/css/jingling.css">
+</head>
+<body style="background: rgb(243, 243, 243);font: 12px/1 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;">
+    <link rel="stylesheet" type="text/css" href="/static/css/header.css">
+<div class="header">
+    <div class="header-top">
+        <div class="top-main">
+            <div class="notices" style="display: none">
+                <p class="notices-latest txt1">最新公告：</p>
+                            <ul class="notices-list">
+                </ul>
+                                    <a href="http://mjbbs.jd.com/forum-2-1.html" clstag="pageclick|keycount|helpcenter_home|150" class="more-notices txt1">更多></a>
+                            </div>
+            <div class="user-state">
+                <i class="user-img"></i>
+                                                            <div class="nologin-state" style="display: inline-block;">
+                                                    <a id="help_login" href="//helpcenter.jd.com/login/login.action" clstag="pageclick|keycount|helpcenter_home|156" class="link-login">登录</a>
+                                                <span class="dashed-line"></span>
+                        <a href="javascript:regist();" class="register txt1">注册</a>
+                    </div>
+                            </div>
+        </div>
+    </div>
+    <div class="header-banner">
+        <div class="banner-main">
+            <div class="helpcenter-logo">
+                <a href="javascript:;">
+                    <img src="/static/img/shouye/8.png" alt="京东帮助中心">
+                </a>
+            </div>
+                                        <ul class="select-version">
+                    <li class="select-item">商家版<i class="arrow-icon"></i></li>
+                    <li class="select-item select-second">
+                        <a href="//helpcenter.jd.com/switch/switchBusinessType.action" clstag="pageclick|keycount|helpcenter_change|1">供应商版</a>
+                    </li>
+                </ul>
+                        <div class="helpcenter-search">
+                <h1 class="time-tit">
+                    <span>上午好</span>，京东和您一起成长！
+                </h1>
+                <div class="search-box">
+    <div class="search-main">
+                    <form id="searchForm" action="/issue/search" method="post">
+                <input id="siteId" type="hidden" name="siteId" value="9">
+                <input type="text" id="keyword" class="text-search" name="keyword" placeholder="请输入问题关键词，如：入驻">
+                <input type="submit" class="btn-search" clstag="pageclick|keycount|helpcenter_home|158" value="">
+            </form>
+            </div>
+    <ul class="search-mindKey">
+    </ul>
+</div>
+<p class="hot-sosuo">
+</p>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#keyword").val("");
+        var tags = {
+            key: "",
+            bizTypeIds:"1 2 3",
+            label1Ids: "",
+            label2Ids: "",
+            page: "",
+            pagesize: "",
+            contentTypes: "",
+            sort: "",
+            bizIds: "",
+            categoryType: "0 516",
+            qpDisable: 0
+        };
+        //  点击记录热搜词
+        $('body').delegate('.hot-text', 'click', function(e){
+            // if(e.target.className == 'hot-text'){
+                var hotText = $(this).text();
+                hotSearch(hotText)
+            // }
+        })
+
+        //  点击搜索按钮，跳转页面并记录关键词
+        $(".btn-search").click(function () {
+            goSearch()
+        })
+
+        //输入框keyup事件获取联想词
+        var timer = null, currentSearch = "";
+        $('.text-search').keyup(function(){
+            if($(this).val().trim() && (1 == 1)){
+                clearTimeout(timer);
+                timer = setTimeout(function () {
+                    currentSearch = $('.text-search').val().trim()
+                    jQuery.ajax({
+                        url: '/help/knowledge/mindSearchKey',
+                        type: 'POST',
+                        data: {
+                            key: currentSearch
+                        },
+                        success: function (data) {
+                            if(data.key == currentSearch){
+                                render(data.mindResult)
+                            }
+                        }
+                    })
+                },200)
+            }else{
+                $('.search-mindKey').hide()
+            }
+        })
+
+        //点击联想词
+        document.body.addEventListener('click', function(e){
+            if(e.target.className.indexOf('search-main') < 0
+                    && e.target.className.indexOf('text-search') < 0
+                    && e.target.className.indexOf('btn-search') < 0
+                    && e.target.className.indexOf('search-mindKey') < 0
+                    && e.target.className.indexOf('mind') < 0){
+                $('.search-mindKey').hide()
+            }
+            if(e.target.className == 'mind'){
+                hotSearch(e.target.outerText)
+            }
+        }, false)
+
+        //渲染联想词
+        function render(mind){
+            if(mind.length) {
+                var mindHtml = ''
+                mind && mind.forEach(function (item, index) {
+                    mindHtml += '<li class="mind" clstag="pageclick|keycount|home_search_1564556824498|'+(index+2)+'">' + item + '</li>'
+                })
+                $('.search-mindKey').show().html(mindHtml)
+            }else{
+                $('.search-mindKey').hide()
+            }
+        }
+
+        $(document).keypress(function (e) {
+            if (e.keyCode == 13) {
+                e.preventDefault();
+                // 子午线log方式埋点
+                log('helpcenter_home','158');
+                goSearch();
+            }
+        })
+
+        //搜索按钮搜索
+        function goSearch() {
+            var hotText =  $("#keyword").val();
+            tags.key = hotText;
+            sessionStorage.setItem("tags", JSON.stringify(tags));
+                        window.location.href = "/issue/search";
+        }
+
+        //热搜词和联想词搜索
+        function hotSearch(hotText){
+            $("#keyword").val("");
+            tags.key = hotText;
+            sessionStorage.setItem("tags", JSON.stringify(tags));
+                        window.location.href = "/issue/search";
+        }
+
+        //热搜词
+        jQuery.ajax({
+            url: '/help/knowledge/hotSearchKey',
+            type: 'POST',
+            data: {
+            },
+            success: function (data) {
+                if(data && data.length){
+                    if(1 == 1){
+                        var searchHtml = '<span>热门搜索：</span>'
+                        data.forEach(function(item, index){
+                            searchHtml += '<a href="javascript:;" clstag="pageclick|keycount|helpcenter_home|1' + (59 + index) + '" class="hot-text">' + item + '</a>'
+                            if(index != data.length-1){
+                                searchHtml += ', '
+                            }
+                        })
+                        $('.hot-sosuo').html(searchHtml)
+                    }else{
+                        var searchHtml = '<span>热门搜索：</span>'
+                        data.forEach(function(item, index){
+                            searchHtml += '<a href="javascript:;" clstag="pageclick|keycount|helpcenter_GY_home|1' + (59 + index) + '" class="hot-text">' + item + '</a>'
+                            if(index != data.length-1){
+                                searchHtml += ', '
+                            }
+                        })
+                        $('.hot-sosuo').html(searchHtml)
+                    }
+                }
+            }
+        })
+    });
+
+</script>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $(function () {
+        // 切换供应商版本
+        $('.select-item').click(function(e){
+            $('.select-second').toggleClass('show');
+            $('.arrow-icon').toggleClass('invert');
+        });
+        // 点击除按钮和弹框之外任意地方隐藏表情
+        $("body").click(function (e) {
+            if (!$(e.target).closest(".select-item").length) {
+                $(".select-second").removeClass('show');
+                $('.arrow-icon').removeClass('invert');
+            }
+        });
+
+        $('.helpcenter-logo').click(function () {
+            sessionStorage.removeItem('item_index')
+            window.location.href = '/venderportal/index.html';
+        });
+
+        var loginUrl =  $(".link-login").attr('href');
+        var returnUrl1 = window.location.href;
+        returnUrl1 = returnUrl1.replace("https","http");
+        $(".link-login").attr('href',loginUrl+"?toDirectUrl="+returnUrl1);
+        // $(".link-login").click(function () {
+        //     if(pageConfig.navId){
+        //         var object = jQuery("#nav-"+pageConfig.navId);
+        //         if(object){
+        //             object.addClass("on");
+        //         }
+        //     }
+        //     var loginActionUrl = jQuery("#help_login").attr("href");
+        //     var logoutActionUrl = jQuery("#help_logout").attr("href");
+        //     jQuery("#help_login").attr("href",loginActionUrl+"?toDirectUrl="+window.location.href);
+        //     jQuery("#help_logout").attr("href",logoutActionUrl+"?toDirectUrl="+window.location.href);
+        // })
+
+        /*------------------*/
+        //  最新公告轮播
+        function timer(opj) {
+            $(opj).find('ul').animate({
+                marginTop: "-30px"
+            }, 500, function () {
+                $(this).css({marginTop: "0px"}).find("li:first").appendTo(this);
+            })
+        }
+        //  最新公告轮播数据
+        jQuery.ajax({
+            url: "/import/notice/queryImportNotice.action",
+            data: null,
+            dataType: "json",
+            type: "post",
+            success: function (result) {
+                var item = result.content;
+                var ul = $(".notices-list");
+                if(item.length > 0){
+                    $(".notices").show();
+                    for (var i = 0; i<item.length; i++) {
+                        var item = result.content;
+                        if(1 == 1){
+                            var li = "<li><a href='" + item[i].noticeUrl + "' clatag='pageclick|keycount|helpcenter_home|" + (154) + "' title='" + item[i].noticeName + "' target='_blank'>" + item[i].noticeName + "</a></li>"
+                        }else{
+                            var li = "<li><a href='" + item[i].noticeUrl + "' clatag='pageclick|keycount|helpcenter_GY_home|" + (154) + "' title='" + item[i].noticeName + "' target='_blank'>" + item[i].noticeName + "</a></li>"
+                        }
+                        ul.append(li);
+                    }
+                    var len = ul.find("li").length;
+                    $(".notices-list").css("height", len * 30 + "px");
+                    var count = 0,timer = null;;
+                    function goSlide() {
+                        timer = setInterval(function(){
+                            count++;
+                            if(count == $('.page-num li').length){
+                                count = 0;
+                            }
+                            $('.notices-list').stop().animate({"top":"-30px"},function(){
+                                $('.notices-list li').eq(0).appendTo('.notices-list');
+                                $('.notices-list').css('top',0);
+                            })
+                        },3000)
+                    }
+                    goSlide();
+                    $('.notices-list li').mousemove(function () {
+                        clearInterval(timer);
+                    }).mouseout(function () {
+                        goSlide();
+                    });
+                } else {
+                    $(".notices").hide();
+                }
+            }
+        });
+        /*-----------------*/
+
+        //  根据时间切换banner
+        var now = new Date();
+        var hour = now.getHours();
+        if (hour >= 5 && hour < 12) {
+            $(".time-tit span").text("上午好");
+            $(".header-banner").css("background-image", "url('/static/img/shouye/morning.jpg')");
+        }
+        if (hour >= 12 && hour < 18) {
+            $(".time-tit span").text("下午好");
+            $(".header-banner").css("background-image", "url('/static/img/shouye/noon.jpg')");
+        }
+        if ((hour >= 18 && hour < 24) || (hour >= 0 && hour < 5)) {
+            $(".time-tit span").text("晚上好");
+            $(".header-banner").css("background-image", "url('/static/img/shouye/evening.jpg')");
+        }
+    });
+</script>
+
+    <div class="l-wrap" style="width: 100%;">
+        <div class="l-main" style="width: 100%;">
+            <body style="font: 12px/1 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;">
+
+    <link rel="stylesheet" type="text/css" href="/static/css/home/home.css">
+<script>
+    function goContent(){
+        sessionStorage.setItem("hc-nav1", "");
+        sessionStorage.setItem("hc-nav2", "");
+        sessionStorage.setItem("item_index", "");
+    }
+</script>
+<div class="home-mains">
+    <div class="home-one">
+        <div class="one-answer">
+            <ul class="learn-list">
+                <li class="learn-content">
+                                            <a href="/vender/index.html" target="_blank">
+                            <img src="/static/img/shouye/25.jpg" alt="知识学习" clstag="pageclick|keycount|helpcenter_home|162">
+                            <h2 class="learn-tit" clstag="pageclick|keycount|helpcenter_home|162">热门问题</h2>
+                            <p class="learn-txt" clstag="pageclick|keycount|helpcenter_home|162">一分钟京东常见问题速揽</p>
+                            <span class="learn-btn" clstag="pageclick|keycount|helpcenter_home|163">我要了解</span>
+                        </a>
+                                    </li>
+                <li class="learn-content">
+                                            <a href="http://mjbbs.jd.com/forum-50-1.html" target="_blank">
+                            <img src="/static/img/shouye/20.jpg" alt="问商友"  clstag="pageclick|keycount|helpcenter_home|164">
+                            <h2 class="learn-tit" clstag="pageclick|keycount|helpcenter_home|164">问商友</h2>
+                            <p class="learn-txt" clstag="pageclick|keycount|helpcenter_home|164">专家坐诊，百位志愿者竭力为您答疑解惑</p>
+                            <span class="learn-btn" clstag="pageclick|keycount|helpcenter_home|165">我要提问</span>
+                        </a>
+                                    </li>
+                <li class="learn-content">
+                                            <a href="https://xue.jd.com" target="_blank">
+                            <img src="/static/img/shouye/18.jpg" alt="培训班" clstag="pageclick|keycount|helpcenter_home|166">
+                            <h2 class="learn-tit" clstag="pageclick|keycount|helpcenter_home|166">培训班</h2>
+                            <p class="learn-txt" clstag="pageclick|keycount|helpcenter_home|166">直播课程，多样学习体验更丰富的授课方式</p>
+                            <span class="learn-btn" clstag="pageclick|keycount|helpcenter_home|167">我要报名</span>
+                        </a>
+                                    </li>
+            </ul>
+        </div>
+    </div>
+    <div class="home-two">
+                    <h2 class="user-tit"><span>商家</span>专题</h2>
+                <p class="user-English">Business topics</p>
+        <div class="two-user">
+
+            <div class="topic-slide">
+                <ul class="topic-list">
+                                    <li class="topic-content">
+                        <a href="https://zhaoshang.jd.com/index"  clstag="pageclick|keycount|helpcenter_home|168" target="_blank">
+                            <div class="topic-img">
+                                <img src="/static/img/shouye/24.png" alt="">
+                            </div>
+                            <div class="topic-message">
+                                <h3 class="topic-tit">招商入驻</h3>
+                                <p class="topic-English">Inviting investment</p>
+                                <span class="topic-line"></span>
+                                <p class="topic-txt">总览开放平台规则，引导商家正向提升，创建良好平台</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="topic-content">
+                        <a href="https://pro.jd.com/mall/active/CAfEp5Y9VHDDbkromGwfvQxgyAB/index.html"  clstag="pageclick|keycount|helpcenter_home|169" target="_blank">
+                            <div class="topic-img">
+                                <img src="/static/img/shouye/32.png" alt="">
+                            </div>
+                            <div class="topic-message">
+                                <h3 class="topic-tit">产品大全</h3>
+                                <p class="topic-English">Products center</p>
+                                <span class="topic-line"></span>
+                                <p class="topic-txt">京东赋能商家的产品聚集地，官方产品发布地，汇集京东各种产品工具，让您第一时间了解并参与</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="topic-content">
+                        <a href="https://rule.jd.com/rule/index.action" clstag="pageclick|keycount|helpcenter_home|170" target="_blank">
+                            <div class="topic-img">
+                                <img src="/static/img/shouye/15.png" alt="">
+                            </div>
+                            <div class="topic-message">
+                                <h3 class="topic-tit">规则平台</h3>
+                                <p class="topic-English">Rule platform</p>
+                                <span class="topic-line"></span>
+                                <p class="topic-txt">总览开放平台规则，引导商家正向提升，创建良好平台秩序。</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="topic-content">
+                        <a href="https://sale.jd.com/act/a0dPlEMz6nei.html" target="_blank">
+                            <div class="topic-img">
+                                <img src="/static/img/shouye/31.jpg" alt="">
+                            </div>
+                            <div class="topic-message">
+                                <h3 class="topic-tit">京商联盟</h3>
+                                <p class="topic-English">JD Merchant union</p>
+                                <span class="topic-line"></span>
+                                <p class="topic-txt">京东官方发起商家游学交流活动,以商带商，传播商道。</p>
+                            </div>
+                        </a>
+                    </li>
+                                </ul>
+            </div>
+                    <div class="slide-page">
+                <span class="prev-btn slide-circle">
+                    <i class="arrow"></i>
+                </span>
+                <span class="next-btn slide-circle">
+                    <i class="arrow"></i>
+                </span>
+            </div>
+                </div>
+    </div>
+            <div class="home-three">
+            <div class="three-tool">
+                <div class="tool-main">
+                    <h2 class="tool-tit">常用自助工具</h2>
+                    <p class="tool-English">Self-help tools</p>
+                    <ul class="tool-list">
+                        <li class="tool-messages">
+                            <a href="http://wl.jdwl.com/main.html" target="_blank" clstag="pageclick|keycount|helpcenter_home|199">
+                                <img src="/static/img/shouye/22.png" alt="运单信息查询">
+                                <h3 class="tool-title">运单信息查询</h3>
+                                <p class="tool-text">查询运单运输信息、包裹重量等</p>
+                            </a>
+                        </li>
+                        <li class="tool-messages">
+                            <a href="//preorder.shop.jd.com/order/abnormal/malicious/index" target="_blank" clstag="pageclick|keycount|helpcenter_home|200">
+                                <img src="/static/img/shouye/21.png" alt="装修异常反馈">
+                                <h3 class="tool-title">异常订单反馈</h3>
+                                <p class="tool-text">异常/协商订单线上反馈渠道</p>
+                            </a>
+                        </li>
+                        <li class="tool-messages">
+                            <a target="_blank" href="https://account.shop.jd.com/venderAccountSecurity/venderAccountSecurity_mainAccountSecurity.action#" clstag="pageclick|keycount|helpcenter_home|201">
+                                <img src="/static/img/shouye/19.png" alt="手机号换绑申诉">
+                                <h3 class="tool-title">手机号换绑申诉</h3>
+                                <p class="tool-text">修改绑定手机号时无法接收验证码，线上申诉</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-four">
+            <div class="four-hot">
+                <div class="hot-main">
+                    <h2 class="hot-tit"><span>近期</span>热门问题</h2>
+                    <p class="hot-English">Recent hot issues</p>
+                    <ul class="hot-list">
+                        <li class="hot-message">
+                            <a href="//helpcenter.jd.com/vender/issue/830-3033.html" onclick="goContent()" target="_blank">
+                                                                    <div class="hot-title" clstag="pageclick|keycount|helpcenter_home|174">京东无界电子面单服务《商家手册》</div>
+                                    <div class="hot-content" clstag="pageclick|keycount|helpcenter_home|175">
+                                        <p class="hot-cont">京东无界电子面单服务，是指由快递公司通过京东向卖家提供的一种通过热敏纸打印输出纸质物流面单的物流服务（京东提供技术和系统支持）。与目前传统的纸质面单相比，最直接的区别在于电子面单是通过热敏纸、热敏打印机<span>...阅读更多</span></p>
+                                    </div>
+                                                                <div class="hot-time">
+                                    <span class="hot-date">2018-04-08</span>
+                                    <span class="hot-from">来自：我的配送</span>
+                                    <span class="see-message">
+                                        <i class="see-img"></i>
+                                        <b class="see-nums">已浏览 11576次</b>
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="hot-message">
+                            <a href="//helpcenter.jd.com/vender/issue/836-3773.html" onclick="goContent()" target="_blank">
+                                                                    <div class="hot-title" clstag="pageclick|keycount|helpcenter_home|176">入驻开通钱包操作指南</div>
+                                    <div class="hot-content" clstag="pageclick|keycount|helpcenter_home|177">
+                                        <p class="hot-cont">提前开通京东钱包可在入驻审核后的开店任务中直接使用，可提高您的开店时效。注册京东钱包及钱包实名认证预计需2个工作日。重要提示：入驻审核与开通京东钱包可同时进行，开通京东钱包不影响您店铺入驻资质的审核；请使用<span>...阅读更多</span></p>
+                                    </div>
+                                                                <div class="hot-time">
+                                    <span class="hot-date">2017-09-26</span>
+                                    <span class="hot-from">来自：结算管理</span>
+                                    <span class="see-message">
+                                        <i class="see-img"></i>
+                                        <b class="see-nums">已浏览 8503次</b>
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="hot-message">
+                            <a href="https://helpcenter.jd.com/vender/issue/836-3072.html" onclick="goContent()" target="_blank">
+                                                                    <div class="hot-title" clstag="pageclick|keycount|helpcenter_home|178">商家在线入驻有哪些注意事项？</div>
+                                    <div class="hot-content" clstag="pageclick|keycount|helpcenter_home|179">
+                                        <p class="hot-cont">如果商家已在京东开通过店铺或者正在入驻审核流程中，则无法使用商家入驻系统。您可通过商家后台申请开通新店铺。关于商家提交的资质信息，我司将在7个工作日内进行初审，商家可随时登陆商家后台“在线入驻系统“查询<span>...阅读更多</span></p>
+                                    </div>
+                                                                <div class="hot-time">
+                                    <span class="hot-date">2018-01-10</span>
+                                    <span class="hot-from">来自：招商入驻</span>
+                                    <span class="see-message">
+                                        <i class="see-img"></i>
+                                        <b class="see-nums">已浏览 16394次</b>
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="hot-message">
+                            <a href="http://helpcenter.jd.com/vender/issue/830-3117.html" onclick="goContent()" target="_blank">
+                                                                    <div class="hot-title" clstag="pageclick|keycount|helpcenter_home|180">Promise时效模板设置《商家手册》</div>
+                                    <div class="hot-content" clstag="pageclick|keycount|helpcenter_home|181">
+                                        <p class="hot-cont">为使京东平台SOP商家更合理设置promise到货时效，展示更准确的到货时效描述，提升至与京东自营商品一样的物流购物体验。意义：提升商家订单转化率；提高消费者购物体验。登陆地址：https://shop.jd.com/<span>...阅读更多</span></p>
+                                    </div>
+                                                                <div class="hot-time">
+                                    <span class="hot-date">2018-05-24</span>
+                                    <span class="hot-from">来自：售后管理</span>
+                                    <span class="see-message">
+                                        <i class="see-img"></i>
+                                        <b class="see-nums">已浏览 5894次</b>
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p class="see-more">
+                                            <a href="/vender/index.html"  clstag="pageclick|keycount|helpcenter_home|182"  target="_blank"><span class="seeMore-btn">查看更多</span></a>
+                                    </p>
+            </div>
+        </div>
+    
+</div>
+<script>
+    $(function () {
+        var liW = $(".topic-list li").width();
+        var len = $(".topic-list li").length;
+        //  计算ul的总宽度
+        var ulW = len*liW;
+        //  设置ul的宽度
+        $(".topic-slide").width(ulW);
+        function btnDom(){
+            var sL = Math.abs(parseInt($(".topic-slide").css("left")));
+            var lastW = ulW - liW * 3;
+            if(sL == 0){
+                // alert(1)
+                $(".prev-btn").removeClass("bg");
+                $(".next-btn").addClass("bg");
+            } else if(lastW > sL > 0){
+                // alert(2)
+                $(".prev-btn").addClass("bg");
+                $(".next-btn").addClass("bg");
+            } else {
+                // alert(3)
+                $(".prev-btn").addClass("bg");
+                $(".next-btn").removeClass("bg");
+            }
+        }
+        btnDom();
+        var index = 0;
+        $(".prev-btn").click(function () {
+            btnDom();
+            if (index == 1){
+                $(".prev-btn").removeClass("bg");
+                $(".next-btn").addClass("bg");
+            }
+            if (index == 0) {//判断如果索引为-1
+                return false;
+            }
+            index --;
+            showLi(index);
+        });
+        $(".next-btn").click(function () {
+            btnDom();
+            if (index == (len - 4)) {
+                $(".next-btn").removeClass("bg");
+                $(".prev-btn").addClass("bg");
+            }
+            if (index == (len - 3)) {//判断如果索引超过长度
+                return false;
+            }
+            index ++;
+            showLi(index);
+        });
+        function showLi(index){
+            var move = -index * (liW);
+            $(".topic-slide").stop().animate({"left": move},300)
+        }
+    })
+</script>
+
+<script type="text/javascript">
+
+    $(function(){
+        jQuery.ajax({
+            url:"/import/notice/queryImportNotice.action",
+            data:null,
+            dataType:"json",
+            type:"post",
+            success:function(result){
+                $("#noticeId").html(result.content);
+            }
+        });
+    });
+    var jaq = jaq || [];
+    jaq.push(['account', 'JA2017_113662']); //站点编号
+    jaq.push(['domain', 'jd.com']);  //站点域名
+    (function () {
+        var ja = document.createElement('script');
+        ja.type = 'text/javascript';
+        ja.async = true;
+        ja.src = ('https:' == document.location.protocol ? 'https://cscssl' : 'http://csc') + '.jd.com/joya.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ja, s);
+    })();
+</script>
+        </div>
+    </div>
+   
+
+     <div class="b-gotop" :class="{'b-gotop-index': isIndex}">
+        <div class="jl-window">
+            <a href="https://arbit.shop.jd.com/consult/consult_consultList.action" class="help-online" target="_blank">
+                <img class="online" src="/static/img/shouye/28.png"/>
+                <span class="window-text">咨询建议</span>
+            </a>
+            <a href="https://answer.jd.com/answer/AfAMFSWnErG/1597010.htm" class="help-survey" target="_blank">
+                <img class="survey" src="/static/img/shouye/29.png"/>
+                <span class="window-text">有奖调研</span>
+            </a>
+        </div>
+    </div>
+    <input type="hidden" value="" id="hadLogin">
+
+
+ <!--  /widget/h-footer/h-footer.vm -->
+<link rel="stylesheet" type="text/css" href="/static/css/footer.css">
+<div class="footer">
+    <div class="footer-box">
+        <div class="footer-left">
+                            <ul class="link-list">
+                    <li class="list-cont"><a href="https://sz.jd.com/" clstag="pageclick|keycount|helpcenter_home|186"  target="_blank">京东商智</a></li>
+                    <li class="list-cont"><a href="https://jzt.jd.com/"   clstag="pageclick|keycount|helpcenter_home|187" target="_blank">京准通</a></li>
+                    <li class="list-cont"><a href="http://rec.ql.jd.com/index" clstag="pageclick|keycount|helpcenter_home|188" target="_blank">青龙平台</a></li>
+                    <li class="list-cont"><a href="http://dr.jd.com/" clstag="pageclick|keycount|helpcenter_home|189" target="_blank">达人平台</a></li>
+                    <li class="list-cont"><a href="https://jshopx.jd.com/" clstag="pageclick|keycount|helpcenter_home|190" target="_blank">店铺装修</a></li>
+                    <li class="list-cont"><a href="https://jshopx.jd.com/" clstag="pageclick|keycount|helpcenter_home|191" target="_blank">活动装修</a></li>
+                    <li class="list-cont"><a href="https://jshopx.jd.com/zhuangba/productList" clstag="pageclick|keycount|helpcenter_home|192" target="_blank">商详装修</a></li>
+                    <li class="list-cont"><a href="//psm.jd.com" target="_blank">京东行业运营标准</a></li>
+                </ul>
+                <ul class="link-list">
+                    <li class="list-cont"><a href="https://win.shop.jd.com/main.action" clstag="pageclick|keycount|helpcenter_home|193" target="_blank">营销中心</a></li>
+                    <li class="list-cont"><a href="https://bang.jd.com/agent/index.action" clstag="pageclick|keycount|helpcenter_home|194" target="_blank">京东服务帮</a></li>
+                    <li class="list-cont"><a href="https://fw.jd.com/main.action" clstag="pageclick|keycount|helpcenter_home|195" target="_blank">京麦服务市场</a></li>
+                    <li class="list-cont"><a href="https://loan.jd.com/home.htm" clstag="pageclick|keycount|helpcenter_home|196" target="_blank">京小贷</a></li>
+                    <li class="list-cont"><a href="https://8.jd.com/newIndex" target="_blank">京东金库</a></li>
+                    <li class="list-cont"><a href="https://zhaoshang.jd.com/index" target="_blank">招商入驻</a></li>
+                    <li class="list-cont"><a href="https://rule.jd.com/rule/index.action" target="_blank">规则平台</a></li>
+                    <li class="list-cont"><a href="https://shop.jd.com/customer_service.html" clstag="pageclick|keycount|helpcenter_home|197" target="_blank">商家客服</a></li>
+                </ul>
+                        <p class="jd-copyright">Copyright@2004-2018 JD.com 京东版权所有</p>
+            <p class="jd-number">京ICP证070359 北京市公安局朝阳分局备案编号110105014669</p>
+        </div>
+        <div class="footer-right">
+            <ul class="help-list">
+                <li class="help-method">
+                    <div class="help-img"><img src="/static/img/shouye/13.png" alt=""></div>
+                    <div class="help-content">
+                        <p class="help-tit">帮助热线</p>
+                        <p class="help-text">400-622-9068</p>
+                    </div>
+                </li>
+                <li class="help-method">
+                    <div class="help-img"><img src="/static/img/shouye/23.png" alt=""></div>
+                    <div class="help-content">
+                        <p class="help-tit">在线客服</p>
+                        <p class="help-text">周一至周日9:00-21:00</p>
+                    </div>
+                </li>
+                <li class="help-method">
+                    <div class="help-img"><img src="/static/img/shouye/17.png" alt=""></div>
+                    <div class="help-content">
+                        <p class="help-tit">联系我们</p>
+                        <p class="help-text">guize@jd.com</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="//static.360buyimg.com/shop/pop_help/js/helpcenter.js" source="widget"></script>
+</body>
+</html>

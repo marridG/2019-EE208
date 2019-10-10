@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>互联网信用认证平台-信息查询</title>
+	<meta name="keywords" content="互联网信用认证平台,北京盘石信用管理有限公司,诚信网站认证,可信网站,企业诚信认证,企业征信,企业评级">
+	<meta name="description" content="北京盘石信用管理有限公司 互联网信用认证平台。互联网信用认证平台是由中国电子商务协会批准成立、并授权第三方负责运行管理的权威网站身份信息验证服务；是网站的“诚信身份证”，也是网民判别网站是否诚信的权威认证标识。">
+	<link href="/public/css/base.css" rel="stylesheet" type="text/css">
+	<link href="/public/css/sub.css?v=2" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="/public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/public/js/scriptnew.js"></script>
+</head>
+<body>
+<style>
+	/*新增*/
+	.header{
+		overflow: visible;
+	}
+	#navcontainer{
+		overflow: visible;
+	}
+	#nav{
+		overflow: visible;
+	}
+	#nav>li{
+		position: relative;
+		overflow: visible;
+		display: inline-block;
+	}
+	#nav li a{
+		overflow: visible;
+	}
+	#nav li:hover ul{
+		display: block;
+	}
+
+	#nav li ul{
+		position: absolute;
+		top: 38px;
+		left: -22px;
+		background: #cd0011;
+		display: none;
+		width: 120px;
+		z-index: 1;
+	}
+	#nav li ul li{
+		display: block;
+	}
+	#psnav li a{
+		float: none!important;
+	}
+</style>
+<div class="cont">
+<div class="header">
+	<div class="logo">
+					<div class="l-sign-register"><span class="l-sign"><a href="/Sass_Login/loginList.html">登录/注册</a></span></div>
+				<img src="/public/images/logo.jpg"></div>
+		<div id="navcontainer" style="background:#db0111">
+			<ul id="nav">
+				<li><a href="/" target="_self" >首页</a></li>
+				<li><a href="/article/list2/70/page.html" target="_self" >组织机构</a></li>
+				<li><a href="/article/list1/50/page.html" target="_self" >政策法规</a></li>
+				<li><a href="/article/list5/50/page.html" target="_self">产品介绍</a></li>
+				<li><a href="/article/list2/20/page.html" target="_self">认证申请</a></li>
+				<li><a href="/article/list2/80/page.html" target="_self" >认证服务案例</a></li>
+				<li><a href="/Rank/province.html" target="_self" >信用品牌排名</a></li>
+				<li><a href="/article/list/17/page.html" target="_self" >公告通知</a></li>
+				<li><a href="/query/credit.html" target="_self" >信用查询</a></li>
+				<li><a href="" target="_blank" >研究机构</a>
+					<ul id="psnav">
+						<li><a href="http://www.research.adyun.com" target="_blank">信用研究院</a></li>
+						<li><a href="http://research.cecdc.com/" target="_blank">金融研究院</a></li>
+						<li><a href="http://blockchain.cecdc.com" target="_blank">区块链研究院</a></li>
+						<li><a href="http://finance.cecdc.com/">反欺诈中心</a></li>
+						<li><a href="http://app.cecdc.com" target="_blank">移动安全认证</a></li>
+					</ul>
+				</li>
+
+				<li><a href="http://www.tianyant.com/dist/index.html" target="_blank" >在线曝光台</a></li>
+				<li><a href="/article/list4/50/page.html" target="_self" >媒体关注</a></li>
+				<!--<li><a href="/query/faith.html" target="_self" >失信查询</a></li>
+				<li><a href="http://shixin.court.gov.cn" target="_blank" >失信查询</a></li>
+				<li><a href="http://www.adyun.com/" target="_blank" >诚信电商导航</a></li>-->
+			</ul>
+		</div>
+</div><div id="main">
+	<div id="home">您当前位置：首页 > 信用查询</div>
+	<div class="mcnn">
+		<div id="nav_sub3">
+			<div class="nav3_left">
+				<div class="nav3_left_sx">
+					<ul>
+						<li><a href="credit.html"><span>全国诚信网站认证权威数据库</span></a></li>
+						<li><a href="icp.html"><span>全国企业网站站长工具查询</span></a></li>
+						<li><a href="plaque.html"><span>诚信网站用户牌匾查询</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="conn">
+			<div class="connborder">
+				<img src="/public/images/xfre06.jpg?1" />
+				<div class="for_sxborder">
+					<div class="company_con">
+						<form action="/query/searchCode.html" id='form1' method="get" target="_blank" name="form1" enctype="application/x-www-form-urlencoded">
+							<input type="hidden" id="attr" name="type" value="1" />
+							<ul id="yonghuBtn" class="yonghuBtn">
+								<li arg='code' class="choose" onclick="company();"><a href="javascript:void(0);" >证书编号</a></li>
+								<li arg='code' onclick="person();"><a href="javascript:void(0);" >公司名称</a></li>
+								<li arg='code' onclick="persons();"><a href="javascript:void(0);" >公司域名</a></li>
+							</ul>
+							<div id="companyList">
+								<div class="company_b2b clearfix for_sqcx" style="border-top: 0;background: #eeeeee">
+									<table class="for_sqcx_tb" style="margin-left: 70px;">
+										<tr>
+											<td class="long" colspan="2">
+												<input class="line" type="text" name="code" id="code" placeholder="请填写完整的授权编码" />
+											</td>
+										</tr>
+										<tr>
+											<td class="shot" width="160">
+												<span><input class="line" type="text" name="vcode" id="vcode" maxlength="4" placeholder="请填写验证码" /></span>
+											</td>
+											<td><a title="看不清楚？换一个" href="javascript:reloadCode();" style="line-height:30px;float:left;margin-top:10px;_margin-top:12px;*margin-top:12px;margin-left:5px;">
+													<img class="captcha" width="90" height="33" src="/captcha/index" alt="Captcha">
+												</a></td>
+										</tr>
+										<tr>
+											<td id="btn" align="left" colspan="2">
+												<input class="btn-submit" type="button" onclick="checkQuery()" value="查询">
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer">
+		<div class="ft_navlist">
+			<ul>
+				<li style="margin:0px;"><a href="/article/list2/7010/page.html">关于我们</a></li>
+				<li style="margin:0px;">|</li>
+				<li style="margin:0px;"><a href="/article/list2/7020/page.html">联系我们</a></li>
+				<li style="margin:0px;">|</li>
+				<li style="margin:0px;"><a href="/article/list2/30/page.html">网站安全信用认证</a></li>
+				<li style="margin:0px;">|</li>
+				<li style="margin:0px;"><a href="http://shixin.court.gov.cn" target="_blank">失信查询</a></li>
+				<li style="margin:0px;">|</li>
+				<li style="margin:0px;"><a href="http://www.315.gov.cn/" target="_blank">质量监督</a></li>				
+				<li style="margin:0px;">|</li>
+				<li style="margin:0px;"><a href="http://media.adyun.com/medianav/web" target="_blank">安全信用联盟网址导航</a></li>
+				<li style="margin:0px;">|</li>
+				<li style="margin:0px;"><a href="/article/list2/10/page.html">帮助中心</a></li>
+			</ul>
+		</div>
+		<div style="width:300px;margin:0 auto; padding:20px 0;">
+		 		<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010702001519" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/public/images/national.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备 11010702001519号</p></a>
+		 	</div>
+	<a id='___szfw_logo___' href='https://credit.szfw.org/CX20171010036838050352.html' target='_blank'>
+		<img src='http://icon.szfw.org/cxshifan.png' style="height:42px;width:135px;" border='0' />
+	</a>
+	<a id='___szfw_logo___' href='https://credit.szfw.org/CX20181222036838074483.html' target='_blank'><img src='http://icon.szfw.org/jindungw.png' width="135px" height="42" border='0' /></a>
+		<div class="foot">
+			<p>北京市海淀区万寿路27号院                  北京市石景山区古城西街94号 邮编：100043<br />
+				认证服务咨询电话：400-847-0006  邮箱：szfw@szfw.org <br />
+				版权所有：北京盘石信用管理有限公司      <br />
+				Copyright 2000-2020 CECA. All Rights Reserved  京ICP备15016997号-2       京公网安备11010702001519号<br />
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+			document.write(unescape("%3Cspan id='cnzz_stat_icon_1255442897'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255442897%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+		</script><BR>
+			</p>
+		</div>
+</div>
+</div>
+<script type="text/javascript">
+    function checkQuery(){
+        var vcode = $("#vcode").val().trim();
+        if($('#companyList').find(':text:first').val().trim() == "" ) {
+            alert("请输入信息进行查询!");
+            return false;
+        }
+        if(vcode.length != 4){
+            alert("请正确输入验证码!");
+            return false;
+        }
+        $('#form1').submit();
+    }
+
+    function reloadCode(){
+        var src = $(".captcha").attr("src");
+        src += "?" + Math.random();
+        console.log(src)
+        $(".captcha").attr("src", src);
+    }
+    function company() {
+        $("#attr").val('1');
+        $('#code').attr("placeholder", '请填写完整的授权编号');
+    }
+    function person() {
+        $("#attr").val('2');
+        $('#code').attr("placeholder", '请填写完整的公司名称');
+    }
+    function persons() {
+        $("#attr").val('3');
+        $('#code').attr("placeholder", '请填写完整的公司域名');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,1276 @@
+
+    
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>全国互联网安全管理服务平台</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=9" >
+	<link rel="shortcut icon" href="/img/ico.ico" type="image/x-icon" />
+	<link href="/css/bootstrap.css?v=2018.11.26" rel="stylesheet" media="screen">
+	<link href="/css/bootstrap-responsive.css?v=2018.11.26" rel="stylesheet" media="screen">
+	<link href="/css/css.css?v=2018.11.26" rel="stylesheet" media="screen">
+	<link href="/css/css2.css?v=2018.11.26" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="/css/custom/milk.css?v=2018.11.26"> 
+	<!-- 表单验证 -->
+	<script src="/js/jquery.js"></script>
+	<script type="text/javascript">
+		var taken_for_user = '68b9534b-62be-4dd6-9db0-45829dcdec79';
+	</script>
+	<script type="text/javascript" src="/js/custom/defaultToken.js?v=2018.11.26"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/jquery-validation-1.13.1/lib/jquery.mockjax.js?v=2018.11.26"></script>
+	<script src="/js/jquery-validation-1.13.1/dist/jquery.validate.js"></script>
+	<script type="text/javascript" src="/js/custom/login.js?v=2018.11.26"></script> 
+	<script type="text/javascript" src="/js/custom/recordquery.js?v=2018.11.26"></script>
+	<script type="text/javascript" src="/js/custom/md5.min.js?v=2018.11.26"></script>
+	<style>
+		.error{
+		position:absolute;
+		top:5px;
+		left:278px;
+		width:300px;
+		}
+		.error2{
+		position:absolute;
+		top:103px;
+		left:278px;
+		width:300px;
+		}
+		.error3{
+		position:absolute;
+		top:140px;
+		left:278px;
+		width:300px;
+		}
+		.error4{
+		position:absolute;
+		top:105px;
+		left:278px;
+		width:300px;
+		}
+		.errors{
+		position:absolute;
+		top:65px;
+		left:278px;
+		width:300px;
+		}
+		a:hover {text-decoration:none;}
+		h5{
+				color:#666666 !important;
+			}
+  	</style>
+</head>
+<body>
+<div class="wrapper" style="position:relative;">
+	<!-- 页面头 -->
+	
+	<!-- start:头部 -->
+      <div class="container container1">
+        <div class="navbar-header page-scroll">
+          <a class="logo">
+            <img id="govImg" src="/img/logo.png" width="247"/>
+          </a>
+          <div class="logo-right index-top">
+            <div class="input-append pull-right">
+              <input class="span2" type="text" style="border-right:0px;" placeholder="备案查询">
+              <span class="add-on" onclick="window.location.href='/portal/recordQuery?token=68b9534b-62be-4dd6-9db0-45829dcdec79'"><i class="icon-search"></i></span>
+            </div>
+            <ul class="nav nav-pills z-index" >
+              <li class='active'><a href="/portal/index">首页</a></li>
+              <li ><a href="/portal/recordQuery">公共查询</a></li>
+              <li ><a href="/portal/recordInform">后台通知公告</a></li>
+              <li ><a href="/portal/recordIssue">常见问题</a></li>
+              <li ><a href="/portal/recordNotice">法规文件</a></li>
+              <li ><a href="/portal/recordPolicies">通知公告</a></li>
+              <li ><a href="/portal/recordShow" onclick="loading()">备案展厅</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>    
+      <div class="heng"></div>
+    <!-- end:头部 -->
+     <div id="over" class="over"></div>
+    <div id="layout" class="layout"><img src="/img/loading2.gif" /></div>
+   <script type="text/javascript">
+	   function loading(){
+		   document.getElementById("over").style.display = "block";
+		   document.getElementById("layout").style.display = "block";
+	   }
+	</script>
+	<!-- start:登录 -->
+	<div class="z_indexk">
+    <div class="z_adbg" id="cbg"> 
+      <div class="container container1 J_login" style="position:relative; z-index:1;">
+        <div class="z_adleft">
+          <div class="xuanch" style="margin-bottom:0px;"><img src="/img/xcy.png" /></div>
+          <div class="liucheng" style="margin-top:10px; width:424px; height:247px;">
+          	<img src="/img/liucheng.png" />
+          	<a href="javascript:;" style="margin-top:-10px;" class="btn_login" onclick="showLogin(this, 'right')">评估报告登录</a>
+          </div>
+        </div>
+        <!-- start:登录框 -->
+        <div class="loginbg" style="position:relative; margin-top:92px; width:424px; height:247px; background:transparent; border:0px;">
+          <div class="liucheng">
+          	<img style="margin-left:20px;" src="/img/liuchengRight.png" />
+          	<a href="javascript:;" class="btn_login" onclick="showLogin(this, 'left')">联网备案登录</a>
+          </div>
+        </div>
+        <!-- end:登录框 -->
+        <!-- start:二维码 -->
+        <div id="ewm" style="display: none;">
+         	 <div><img id="u1_img" src="/img/ewm1.jpg" /><img id="u2_img" src="/img/ewm2.jpg" /></div>
+        	 <div class="sao_sao">使用手机扫一扫对应版本的二维码<br/><br/>
+        	 	下载<span style="color: #FFCC00;">智慧IDC</span>移动应用软件
+        	 	<br/><br/><a onclick="djfh();"><span style="color:#ffffff;margin-left:194px;cursor: pointer;">点击返回登录页面<span></a>
+        	 </div>
+        </div>
+        <!-- end:二维码 -->
+      </div>
+    	
+    	
+    	<!-- 第一种登录方式  start -->
+    	 <div class="container container1 J_loginRight" style="display:none; position:relative; z-index:2; left:936px;">
+        <div class="z_adleft">
+          <div class="xuanch" style="margin-bottom:0px;"><img src="/img/xcy.png" /></div>
+          <div class="liucheng"><img src="/img/liucheng.png" /></div>
+        </div>
+        <!-- start:登录框 -->
+        <div class="loginbg" style="position:relative;width:330px;" id="dlk">
+          <!-- start:tab页内容 -->
+          <div id="myTabContent" class="">
+          	<!-- 普通用户 -->
+          	<div class="tab-pane  active in"  id="sec" style="display:block;">
+          	<form id="loginformSEC" autocomplete="off" action="/user/loginSEC" method="post" >
+          	<input type="hidden" name="token" value="68b9534b-62be-4dd6-9db0-45829dcdec79" />
+               <ul class="unstyled controls logink">
+                <li class="row-fluid" style="position:relative;">
+                  <label id="laccount" for="account" class=" text-right z_color">用户名</label>&nbsp;
+                  <input class="z_input" type="text" name="accountSEC" id="accountSEC" maxlength="30" onkeyup="accountCheckSEC()"/>
+                  <input type="hidden" id="accountFlagSEC"/> 
+                  <span id="accountRequired" class="error" style="display:none;"><img src="/img/unchecked.gif"><font color="red">请输入账号</font></span>
+	              <span id="accountNum" class="error" style="display:none;"><img src="/img/unchecked.gif"><font color="red">账号最少六位</font></span>
+				  <span id="accountRule" class="error" style="display:none;"><img src="/img/unchecked.gif"><font color="red">账号为字母、数字、下划线</font></span>
+                  <span id="accountR" class="error" style="display:none;"><img src="/img/checked.gif"></span>
+                  <span class="status error"></span>
+                </li>
+                <li class="row-fluid">
+                  <label id="lpwd" for="pwd" class="text-right z_color">密码</label>&nbsp;
+                  <input class="z_input" type="password" onpaste="return false" name="pwdSEC" id="pwdSEC" maxlength="20" onkeyup="pwdCheckSEC()"/>
+                  <input type="hidden" id="pwdFlagSEC"/>
+                  <span id="pwdRequired" class="error2" style="display:none;"><img src="/img/unchecked.gif"><font color="red">请输入密码</font></span>
+		          <span id="pwdNum" class="error2" style="display:none;"><img src="/img/unchecked.gif"><font color="red">密码最少六位</font></span>
+                  <span id="pwdR" class="error2" style="display:none;"><img src="/img/checked.gif"></span>
+                  <span class="status error2"></span>
+                </li>
+                <li class="row-fluid">
+                  <label id="lvalidCodeSEC" class=" text-right z_color">验证码</label>&nbsp;
+                  <input  class="z_input" type="text" name="validCodeSEC" maxlength="4" id="validCodeSEC" style="width:70px;" onkeyup="validCodeCheckSEC()"/>
+                  <span><img alt="点击刷新" id="imgs" src="/common/image.jsp?t=101" style="cursor: pointer;" onclick="this.src='/common/image.jsp?t=101&tim='+new Date().getTime()"></span>
+                  <input type="hidden" id="validCodeFlagSEC"/>
+		          <span id="validCodeRequiredSEC" class="error4" style="display:none;"><img src="/img/unchecked.gif"><font color="red">请输入验证码</font></span>
+				  <span id="validCodeESEC" class="error4" style="display:none;"><img src="/img/unchecked.gif"><font color="red">验证码错误</font></span>
+                  <span id="validCodeRSEC" class="error4" style="display:none;"><img src="/img/checked.gif"></span>
+               	  <span class="status error4"></span>
+                </li>
+                <li class="row-fluid"></li>
+                <li class="row-fluid" style="margin-top:10px; height:20px;">
+                	<label  class="" style="line-height:20px; margin-left:30px;width:90px;" >
+	                </label>
+                    <label class="text-right"  style="margin-left:80px;"><a href="../portal/findpwd">忘记密码？</a></label>
+                </li>
+                <li class="row-fluid" style="margin-top:5px;">
+                	<input type="hidden" value="" name="zzSEC" id="zzSEC" />
+                  <a href="javascript:void(0)" class="btn btn-danger btn-large" style="width:230px; margin-left:35px;" id="btn" onclick="loggingSEC()">登录</a>
+                </li>
+                <li class="row-fluid" style="">
+                  <label  class="text-left z_color "  style="width:140px;margin-left:40px;">没有账号？<a href="/user/registerurl?userType=ptyh">注册</a></label>
+                  <a href="javascript:;" class="backLogin" onclick="backLogin(this, 'right')">返回</a>
+                </li>
+              </ul>
+              </form>
+            </div>
+
+           
+  
+          <!-- end:tab页内容 -->
+        </div>
+        <!-- end:登录框 -->
+        <!-- start:二维码 -->
+
+        <!-- end:二维码 -->
+      </div>
+    	<!-- 第一种登录方式 end -->
+    	
+    	</div>
+    	<!-- 第二种登录方式  start -->
+    	 <div class="container container1 J_loginLeft" style="display:none; position:relative; z-index:2; left:-930px;">
+        <div class="z_adleft">
+          <div class="xuanch" style="margin-bottom:0px;"><img src="/img/xcy.png" /></div>
+          <div class="liucheng" style="width:424px; height:247px;"><img id="imgliucheng" src="/img/liuchengRight.png" /></div>
+        </div>
+        <!-- start:登录框 -->
+        <div class="loginbg" style="position:relative;width:330px;" id="dlk">
+          <!-- start:tab页 -->
+          <ul class="nav nav-tabs login_tab" id="myTab" style="margin-top:-16px;font-size: 10px;"> 
+            <li id="dl1" class="active">
+            	<a href="#ptyh" data-toggle="tab" id="PTUSER" title="网站用户">网站用户</a>
+           	</li>
+           	<li id="dl2">
+           		<a href="#jrs" data-toggle="tab" id="qyLoginA" title="IDC/ISP/CDN">IDC/ISP/CDN</a>
+       		</li>
+       		<li id="dl3">
+           		<a href="#appMarket" data-toggle="tab" id="APPMarket" title="APP商店">APP商店</a>
+       		</li>
+           	<!-- <li id="dl8">
+           		<a href="#xcPanel" data-toggle="tab" id="xc" title="服务商用户">用户</a>
+       		</li> -->
+          </ul>
+          <!-- start:tab页 -->
+          <!-- start:tab页内容 -->
+          <div id="myTabContent" class="">
+          	<!-- 普通用户 -->
+          	<div class="tab-pane  active in" id="ptyh">
+          	<form id="loginform" autocomplete="off" action="/user/login" method="post" >
+          	<input type="hidden" name="token" value="68b9534b-62be-4dd6-9db0-45829dcdec79" />
+               <ul class="unstyled controls logink">
+                <li class="row-fluid" style="position:relative;">
+                  <label id="laccount" for="account" class=" text-right z_color">用户名</label>&nbsp;
+                  <input class="z_input" type="text" name="account" id="account" maxlength="30" onkeyup="accountCheck()"/>
+                  <input type="hidden" id="accountFlag"/> 
+                  <span id="accountRequired" class="error" style="display:none;"><img src="/img/unchecked.gif"><font color="red">请输入账号</font></span>
+	              <span id="accountNum" class="error" style="display:none;"><img src="/img/unchecked.gif"><font color="red">账号最少六位</font></span>
+				  <span id="accountRule" class="error" style="display:none;"><img src="/img/unchecked.gif"><font color="red">账号为字母、数字、下划线</font></span>
+                  <span id="accountR" class="error" style="display:none;"><img src="/img/checked.gif"></span>
+                  <span class="status error"></span>
+                </li>
+                <li class="row-fluid">
+                  <label id="lpwd" for="pwd" class="text-right z_color">密码</label>&nbsp;
+                  <input class="z_input" type="password" onpaste="return false" name="pwd" id="pwd" maxlength="20" onkeyup="pwdCheck()"/>
+                  <input type="hidden" id="pwdFlag"/>
+                  <span id="pwdRequired" class="error2" style="display:none;"><img src="/img/unchecked.gif"><font color="red">请输入密码</font></span>
+		          <span id="pwdNum" class="error2" style="display:none;"><img src="/img/unchecked.gif"><font color="red">密码最少六位</font></span>
+                  <span id="pwdR" class="error2" style="display:none;"><img src="/img/checked.gif"></span>
+                  <span class="status error2"></span>
+                </li>
+                <li class="row-fluid">
+                  <label id="lvalidCode" class=" text-right z_color">验证码</label>&nbsp;
+                  <input  class="z_input" type="text" name="validCode" maxlength="4" id="validCode" style="width:70px;" onkeyup="validCodeCheck()"/>
+                  <span><img alt="点击刷新" id="imgs" src="/common/image.jsp?t=4" style="cursor: pointer;" onclick="this.src='/common/image.jsp?t=4&tim='+new Date().getTime()"></span>
+                  <input type="hidden" id="validCodeFlag"/>
+		          <span id="validCodeRequired" class="error3" style="display:none;"><img src="/img/unchecked.gif"><font color="red">请输入验证码</font></span>
+				  <span id="validCodeE" class="error3" style="display:none;"><img src="/img/unchecked.gif"><font color="red">验证码错误</font></span>
+                  <span id="validCodeR" class="error3" style="display:none;"><img src="/img/checked.gif"></span>
+               	  <span class="status error3"></span>
+                </li>
+                <li class="row-fluid" style="margin-top:10px; height:20px;">
+                	<label  class="" style="line-height:20px; margin-left:30px;width:90px;" >
+	                </label>
+                    <label class="text-right"  style="margin-left:80px;"><a href="../portal/findpwd">忘记密码？</a></label>
+                </li>
+                <li class="row-fluid" style="margin-top:5px;">
+                	<input type="hidden" value="" name="zz" id="zz" />
+                  <a href="javascript:void(0)" class="btn btn-danger btn-large" style="width:230px; margin-left:35px;" id="btn" onclick="logging()">登录</a>
+                </li>
+                <li class="row-fluid" style="">
+                  <label  class="text-left z_color "  style="width:140px;margin-left:40px;">没有账号？<a href="/user/registerurl?userType=ptyh">注册</a></label>
+                  <a href="javascript:;" class="backLogin" onclick="backLogin(this, 'left')">返回</a>
+                </li>
+              </ul>
+              </form>
+            </div>
+            <!-- 普通用户 -->
+            <!-- IDC用户 -->
+            <div class="tab-pane " id="jrs" style="display: none;">
+              <form id="loginformIDC" autocomplete="off" action="/user/loginIdc" method="post" >
+              <input type="hidden" name="token" value="68b9534b-62be-4dd6-9db0-45829dcdec79" />
+               <ul class="unstyled controls logink">
+                <li class="row-fluid">
+                  <label id="laccount" for="account" class=" text-right z_color">用户名</label>&nbsp;
+                  <input class="z_input" type="text" name="accountIDC" id="accountIDC" maxlength="30" onkeyup="accountCheckIDC()"/>
+                  <input type="hidden" id="accountFlagIDC"/> 
+                  <span id="accountRequiredIDC" class=" errors" style="display:none;"><img src="/img/unchecked.gif"><font color="red">请输入账号</font></span>
+	              <span id="accountNumIDC" class="error" style="display:none;"><img src="/img/unchecked.gif"><font color="red">账号最少六位</font></span>
+				  <span id="accountRuleIDC" class="error" style="display:none;"><img src="/img/unchecked.gif"><font color="red">账号为字母、数字、下划线</font></span>
+                  <span id="accountRIDC" class="error" style="display:none;"><img src="/img/checked.gif"></span>
+                  <span class="status error"></span>
+                </li>
+                <li class="row-fluid">
+                  <label id="lpwd" for="pwd" class="text-right z_color">密码</label>&nbsp;
+                  <input class="z_input" type="password" onpaste="return false" name="pwdIDC" id="pwdIDC" maxlength="20" onkeyup="pwdCheckIDC()"/>
+                  <input type="hidden" id="pwdFlagIDC"/>
+                  <span id="pwdRequiredIDC" class="error2" style="display:none;"><img src="/img/unchecked.gif"><font color="red">请输入密码</font></span>
+		          <span id="pwdNumIDC" class="error2" style="display:none;"><img src="/img/unchecked.gif"><font color="red">密码最少六位</font></span>
+                  <span id="pwdRIDC" class="error2" style="display:none;"><img src="/img/checked.gif"></span>
+                  <span class="status error2"></span>
+                </li>
+                <li class="row-fluid">
+                  <label id="lvalidCode" class=" text-right z_color">验证码</label>&nbsp;
+                  <input  class="z_input" type="text" name="validCodeIDC" maxlength="4" id="validCodeIDC" style="width:70px;" onkeyup="validCodeCheckIDC()"/>
+                  <span><img alt="点击刷新" id="imgs" src="/common/image.jsp?t=7" style="cursor: pointer;" onclick="this.src='/common/image.jsp?t=7&tim='+new Date().getTime()"></span>
+                  <input type="hidden" id="validCodeFlagIDC"/>
+		          <span id="validCodeRequiredIDC" class="error3" style="display:none;"><img src="/img/unchecked.gif"><font color="red">请输入验证码</font></span>
+				  <span id="validCodeEIDC" class="error3" style="display:none;"><img src="/img/unchecked.gif"><font color="red">验证码错误</font></span>
+                  <span id="validCodeRIDC" class="error3" style="display:none;"><img src="/img/checked.gif"></span>
+               	  <span class="status error3"></span>
+                </li>
+                <li class="row-fluid" style="margin-top:10px; height:20px;">
+                	<label  class="" style="line-height:20px; margin-left:30px;width:90px;" >
+	                </label>
+                    <label class="text-right"  style="margin-left:80px;"><a href="../portal/idcfindpwd">忘记密码？</a></label>
+                </li>
+                <li class="row-fluid" style="margin-top:5px;">
+                	<input type="hidden" value="" name="zz" id="zz" />
+                  <a href="javascript:void(0)" class="btn btn-danger btn-large" style="width:230px;margin-left:35px;" id="btn" onclick="loggingIDC()">登录</a>
+                </li>
+                <li class="row-fluid" style="">
+                  <label  class="text-left z_color "  style="width:260px;margin-left:13px;">
+                 	 <a onclick="idcEwm()">显示二维码</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  	没有账号？<a href="/user/registerurl?userType=idc">注册</a>
+                  </label>
+                  <a href="javascript:;" class="backLogin" onclick="backLogin(this, 'left')">返回</a>
+                </li>
+              </ul>
+              </form>
+            </div>
+            <!-- IDC用户 -->
+            <!-- app市场 -->
+			<div class="tab-pane " id="appMarket" style="display: none;">
+          	<form id="loginformApp" autocomplete="off" action="/user/loginAPP" method="post" >
+          	<input type="hidden" name="token" value="68b9534b-62be-4dd6-9db0-45829dcdec79" />
+               <ul class="unstyled controls logink">
+                <li class="row-fluid" style="position:relative;">
+                  <label id="laccount" for="account" class=" text-right z_color">用户名</label>&nbsp;
+                  <input class="z_input" type="text" name="accountApp" id="accountApp" maxlength="30" onkeyup="accountCheckApp()"/>
+                  <input type="hidden" id="accountFlagApp"/> 
+                  <span id="accountRequiredApp" class="error" style="display:none;"><img src="/img/unchecked.gif"><font color="red">请输入账号</font></span>
+	              <span id="accountNumApp" class="error" style="display:none;"><img src="/img/unchecked.gif"><font color="red">账号最少六位</font></span>
+				  <span id="accountRuleApp" class="error" style="display:none;"><img src="/img/unchecked.gif"><font color="red">账号为字母、数字、下划线</font></span>
+                  <span id="accountRApp" class="error" style="display:none;"><img src="/img/checked.gif"></span>
+                  <span class="status error"></span>
+                </li>
+                <li class="row-fluid">
+                  <label id="lpwd" for="pwd" class="text-right z_color">密码</label>&nbsp;
+                  <input class="z_input" type="password" onpaste="return false" name="pwdApp" id="pwdApp" maxlength="20" onkeyup="pwdCheckApp()"/>
+                  <input type="hidden" id="pwdFlagApp"/>
+                  <span id="pwdRequiredApp" class="error2" style="display:none;"><img src="/img/unchecked.gif"><font color="red">请输入密码</font></span>
+		          <span id="pwdNumApp" class="error2" style="display:none;"><img src="/img/unchecked.gif"><font color="red">密码最少六位</font></span>
+                  <span id="pwdRApp" class="error2" style="display:none;"><img src="/img/checked.gif"></span>
+                  <span class="status error2"></span>
+                </li>
+                <li class="row-fluid">
+                  <label id="lvalidCode" class=" text-right z_color">验证码</label>&nbsp;
+                  <input  class="z_input" type="text" name="validCodeApp" maxlength="4" id="validCodeApp" style="width:70px;" onkeyup="validCodeCheckApp()"/>
+                  <span><img alt="点击刷新" id="imgs" src="/common/image.jsp?t=100" style="cursor: pointer;" onclick="this.src='/common/image.jsp?t=100&tim='+new Date().getTime()"></span>
+                  <input type="hidden" id="validCodeFlagApp"/>
+		          <span id="validCodeRequiredApp" class="error3" style="display:none;"><img src="/img/unchecked.gif"><font color="red">请输入验证码</font></span>
+				  <span id="validCodeEApp" class="error3" style="display:none;"><img src="/img/unchecked.gif"><font color="red">验证码错误</font></span>
+                  <span id="validCodeRApp" class="error3" style="display:none;"><img src="/img/checked.gif"></span>
+               	  <span class="status error3"></span>
+                </li>
+                <li class="row-fluid" style="margin-top:10px; height:20px;">
+                	<label  class="" style="line-height:20px; margin-left:30px;width:90px;" >
+	                </label>
+                    <label class="text-right"  style="margin-left:80px;"><a href="../portal/appfindpwd">忘记密码？</a></label>
+                </li>
+                <li class="row-fluid" style="margin-top:5px;">
+                	<input type="hidden" value="" name="zz" id="zz" />
+                  <a href="javascript:void(0)" class="btn btn-danger btn-large" style="width:230px; margin-left:35px;" id="btn" onclick="loggingApp()">登录</a>
+                </li>
+                <li class="row-fluid" style="">
+                  <label  class="text-left z_color "  style="width:140px;margin-left:40px;">没有账号？<a href="/user/registerurl?userType=app">注册</a></label>
+                  <a href="javascript:;" class="backLogin" onclick="backLogin(this, 'left')">返回</a>
+                </li>
+              </ul>
+              </form>
+            </div>            
+          </div>
+          <div id="huangYing" class="loginbg_xia" style="position:absolute;right:0px;bottom:-32px;width:330px;">
+	       		欢迎IDC用户下载<a onclick="djxs();"><span style="color: #FFCC00;">智慧IDC</span></a>移动应用软件
+	      </div>
+          <!-- end:tab页内容 -->
+        </div>
+        <!-- end:登录框 -->
+        <!-- start:二维码 -->
+        <div id="ewm" style="display: none;">
+         	 <div><img id="u1_img" src="/img/ewm1.jpg" /><img id="u2_img" src="/img/ewm2.jpg" /></div>
+        	 <div class="sao_sao">使用手机扫一扫对应版本的二维码<br/><br/>
+        	 	下载<span style="color: #FFCC00;">智慧IDC</span>移动应用软件
+        	 	<br/><br/><a onclick="djfh();"><span style="color:#ffffff;margin-left:194px;cursor: pointer;">点击返回登录页面<span></a>
+        	 </div>
+        </div>
+        <!-- end:二维码 -->
+      </div>
+    	<!-- 第二种登录方式 end -->
+      	
+    
+    </div>
+     <!-- end:登录 -->
+    <div id="over" class="over"></div>
+    <div id="layout" class="layout"><img src="/img/loading2.gif" /></div>
+    
+ 
+    <div class="container container1 index_content">
+      <div class="index_left">
+      
+         <div class="tongzhi" style="overflow:hidden;">
+          <p class="z_p"> 
+            <span class="tit">安全风险提示</span>
+          </p>
+          <marquee behavior="scroll" direction="down" loop="-1" scrollamount="2" onMouseOut="this.start()" onMouseOver="this.stop()" vspace="10" height="211">
+          <ul class="tz_list">
+
+         	
+         		<li>
+         			<a href="/apply/selectSecurityRisk?id=6171cb7fc531439885f34ec300fa2e6b">
+						 <span class="tz_tit">上古奇迹</span>
+		             	 <span class="tz_tit_url"><font size="1">20190624</font> </span>
+
+	             	 </a>
+             	</li>
+			
+         		<li>
+         			<a href="/apply/selectSecurityRisk?id=b8fba6534fa84fdf9e3d8c8c87a832df">
+						 <span class="tz_tit">大国战</span>
+		             	 <span class="tz_tit_url"><font size="1">20190624</font> </span>
+
+	             	 </a>
+             	</li>
+			
+         		<li>
+         			<a href="/apply/selectSecurityRisk?id=5a24cfebff234cc59342b3fc61223bed">
+						 <span class="tz_tit">罗马帝国</span>
+		             	 <span class="tz_tit_url"><font size="1">20190624</font> </span>
+
+	             	 </a>
+             	</li>
+			
+         		<li>
+         			<a href="/apply/selectSecurityRisk?id=6667277c798f40f8b1454ba500e1b774">
+						 <span class="tz_tit">救急钱袋</span>
+		             	 <span class="tz_tit_url"><font size="1">20190624</font> </span>
+
+	             	 </a>
+             	</li>
+			
+         		<li>
+         			<a href="/apply/selectSecurityRisk?id=714e860b61a84dceaabab4f670053288">
+						 <span class="tz_tit">白菜优惠券</span>
+		             	 <span class="tz_tit_url"><font size="1">20190624</font> </span>
+
+	             	 </a>
+             	</li>
+			
+         		<li>
+         			<a href="/apply/selectSecurityRisk?id=d3a09d3c6c8a4f27bbba89977668e824">
+						 <span class="tz_tit">91城市通</span>
+		             	 <span class="tz_tit_url"><font size="1">20190624</font> </span>
+
+	             	 </a>
+             	</li>
+			
+         		<li>
+         			<a href="/apply/selectSecurityRisk?id=e79ad1cc9f464bf392b8ffd6c04e82df">
+						 <span class="tz_tit">嘀嘀修车</span>
+		             	 <span class="tz_tit_url"><font size="1">20190624</font> </span>
+
+	             	 </a>
+             	</li>
+			
+         		<li>
+         			<a href="/apply/selectSecurityRisk?id=3095007ddb9b4d0fa64d052ead48adee">
+						 <span class="tz_tit">环球出行</span>
+		             	 <span class="tz_tit_url"><font size="1">20190624</font> </span>
+
+	             	 </a>
+             	</li>
+			
+         		<li>
+         			<a href="/apply/selectSecurityRisk?id=7BCC7C97A8C06315E0530A2D10AC5D7C">
+						 <span class="tz_tit">阴阳师掌游宝</span>
+		             	 <span class="tz_tit_url"><font size="1">20190624</font> </span>
+
+	             	 </a>
+             	</li>
+			
+         		<li>
+         			<a href="/apply/selectSecurityRisk?id=39473f328327473aab96692a05588025">
+						 <span class="tz_tit">帝国勇士</span>
+		             	 <span class="tz_tit_url"><font size="1">20190623</font> </span>
+
+	             	 </a>
+             	</li>
+			
+         		<li>
+         			<a href="/apply/selectSecurityRisk?id=970bd734dc124b83b71905ab777f59df">
+						 <span class="tz_tit">字母圈</span>
+		             	 <span class="tz_tit_url"><font size="1">20190623</font> </span>
+
+	             	 </a>
+             	</li>
+			
+         		<li>
+         			<a href="/apply/selectSecurityRisk?id=40d64d5081a842f482c426cbdc3c1a21">
+						 <span class="tz_tit">母星系</span>
+		             	 <span class="tz_tit_url"><font size="1">20190623</font> </span>
+
+	             	 </a>
+             	</li>
+			
+         		<li>
+         			<a href="/apply/selectSecurityRisk?id=2e48db61b1194c23bbb382c888d962c2">
+						 <span class="tz_tit">夜聊</span>
+		             	 <span class="tz_tit_url"><font size="1">20190623</font> </span>
+
+	             	 </a>
+             	</li>
+			
+         		<li>
+         			<a href="/apply/selectSecurityRisk?id=e25e4db667874983a4eabbcb89ce7cd6">
+						 <span class="tz_tit">讲堂360</span>
+		             	 <span class="tz_tit_url"><font size="1">20190623</font> </span>
+
+	             	 </a>
+             	</li>
+			
+         		<li>
+         			<a href="/apply/selectSecurityRisk?id=2642e9abc8f341e8b01ad68b1e3397d4">
+						 <span class="tz_tit">和县四通驾校学校</span>
+		             	 <span class="tz_tit_url"><font size="1">20190623</font> </span>
+
+	             	 </a>
+             	</li>
+			
+         		<li>
+         			<a href="/apply/selectSecurityRisk?id=7e91a27d2dd64c8db6f1c46af2a42455">
+						 <span class="tz_tit">91城市通</span>
+		             	 <span class="tz_tit_url"><font size="1">20190531</font> </span>
+
+	             	 </a>
+             	</li>
+			
+         		<li>
+         			<a href="/apply/selectSecurityRisk?id=7BCC7C97AD086315E0530A2D10AC5D7C">
+						 <span class="tz_tit">老兵出行</span>
+		             	 <span class="tz_tit_url"><font size="1">20190531</font> </span>
+
+	             	 </a>
+             	</li>
+			
+         		<li>
+         			<a href="/apply/selectSecurityRisk?id=66c6a70370ec4c49a968731d7a2721f9">
+						 <span class="tz_tit">新会吃货</span>
+		             	 <span class="tz_tit_url"><font size="1">20190531</font> </span>
+
+	             	 </a>
+             	</li>
+			
+         		<li>
+         			<a href="/apply/selectSecurityRisk?id=e33f24e3bd9448c7994a6da1330e2e7f">
+						 <span class="tz_tit">嘀嘀修车维修端</span>
+		             	 <span class="tz_tit_url"><font size="1">20190531</font> </span>
+
+	             	 </a>
+             	</li>
+			
+         		<li>
+         			<a href="/apply/selectSecurityRisk?id=9c8dab791ad54b8780df0105d262c956">
+						 <span class="tz_tit">济源圈子</span>
+		             	 <span class="tz_tit_url"><font size="1">20190531</font> </span>
+
+	             	 </a>
+             	</li>
+			
+          </ul>
+         </marquee>
+        </div>
+      
+        <div class="tongzhi" style="overflow:hidden;">
+          <p class="z_p"> 
+            <span class="tit">联网备案公示</span>
+          </p>
+          <marquee behavior="scroll" direction="down" loop="-1" scrollamount="2" onMouseOut="this.start()" onMouseOver="this.stop()" vspace="10" height="211">
+          <ul class="tz_list">
+          
+         	 
+         		<li>
+         			<a href="/apply/selectBeiAn?id=634966">
+						 <span class="tz_tit">siping.gov.cn</span> 
+		             	 <span class="tz_tit_url"> <font size="1">20191010</font> </span>
+	             	</a> 	 
+             	</li>
+			 
+         		<li>
+         			<a href="/apply/selectBeiAn?id=634965">
+						 <span class="tz_tit">110tk.cn</span> 
+		             	 <span class="tz_tit_url"> <font size="1">20191010</font> </span>
+	             	</a> 	 
+             	</li>
+			 
+         		<li>
+         			<a href="/apply/selectBeiAn?id=634964">
+						 <span class="tz_tit">tjmade.com</span> 
+		             	 <span class="tz_tit_url"> <font size="1">20191010</font> </span>
+	             	</a> 	 
+             	</li>
+			 
+         		<li>
+         			<a href="/apply/selectBeiAn?id=634963">
+						 <span class="tz_tit">jicang.com.cn</span> 
+		             	 <span class="tz_tit_url"> <font size="1">20191010</font> </span>
+	             	</a> 	 
+             	</li>
+			 
+         		<li>
+         			<a href="/apply/selectBeiAn?id=634962">
+						 <span class="tz_tit">harsjx.cn</span> 
+		             	 <span class="tz_tit_url"> <font size="1">20191010</font> </span>
+	             	</a> 	 
+             	</li>
+			 
+         		<li>
+         			<a href="/apply/selectBeiAn?id=634961">
+						 <span class="tz_tit">cxwspj.com</span> 
+		             	 <span class="tz_tit_url"> <font size="1">20191010</font> </span>
+	             	</a> 	 
+             	</li>
+			 
+         		<li>
+         			<a href="/apply/selectBeiAn?id=634960">
+						 <span class="tz_tit">kmqjh.com</span> 
+		             	 <span class="tz_tit_url"> <font size="1">20191010</font> </span>
+	             	</a> 	 
+             	</li>
+			 
+         		<li>
+         			<a href="/apply/selectBeiAn?id=634959">
+						 <span class="tz_tit">gcmuseum.net</span> 
+		             	 <span class="tz_tit_url"> <font size="1">20191010</font> </span>
+	             	</a> 	 
+             	</li>
+			 
+         		<li>
+         			<a href="/apply/selectBeiAn?id=634958">
+						 <span class="tz_tit">nthlfy.com</span> 
+		             	 <span class="tz_tit_url"> <font size="1">20191010</font> </span>
+	             	</a> 	 
+             	</li>
+			 
+         		<li>
+         			<a href="/apply/selectBeiAn?id=634957">
+						 <span class="tz_tit">jjlngy.com</span> 
+		             	 <span class="tz_tit_url"> <font size="1">20191010</font> </span>
+	             	</a> 	 
+             	</li>
+			 
+         		<li>
+         			<a href="/apply/selectBeiAn?id=634956">
+						 <span class="tz_tit">pgydream.com</span> 
+		             	 <span class="tz_tit_url"> <font size="1">20191010</font> </span>
+	             	</a> 	 
+             	</li>
+			 
+         		<li>
+         			<a href="/apply/selectBeiAn?id=634955">
+						 <span class="tz_tit">tongyimusic.com</span> 
+		             	 <span class="tz_tit_url"> <font size="1">20191010</font> </span>
+	             	</a> 	 
+             	</li>
+			 
+         		<li>
+         			<a href="/apply/selectBeiAn?id=634954">
+						 <span class="tz_tit">wlzyworld.com</span> 
+		             	 <span class="tz_tit_url"> <font size="1">20191010</font> </span>
+	             	</a> 	 
+             	</li>
+			 
+         		<li>
+         			<a href="/apply/selectBeiAn?id=634953">
+						 <span class="tz_tit">yaoxigu.cn</span> 
+		             	 <span class="tz_tit_url"> <font size="1">20191010</font> </span>
+	             	</a> 	 
+             	</li>
+			 
+         		<li>
+         			<a href="/apply/selectBeiAn?id=634952">
+						 <span class="tz_tit">dangjianwriting.com</span> 
+		             	 <span class="tz_tit_url"> <font size="1">20191010</font> </span>
+	             	</a> 	 
+             	</li>
+			 
+         		<li>
+         			<a href="/apply/selectBeiAn?id=634951">
+						 <span class="tz_tit">lookte.com</span> 
+		             	 <span class="tz_tit_url"> <font size="1">20191010</font> </span>
+	             	</a> 	 
+             	</li>
+			 
+         		<li>
+         			<a href="/apply/selectBeiAn?id=634950">
+						 <span class="tz_tit">xsjrc.com</span> 
+		             	 <span class="tz_tit_url"> <font size="1">20191010</font> </span>
+	             	</a> 	 
+             	</li>
+			 
+         		<li>
+         			<a href="/apply/selectBeiAn?id=634949">
+						 <span class="tz_tit">scwntrq.com</span> 
+		             	 <span class="tz_tit_url"> <font size="1">20191010</font> </span>
+	             	</a> 	 
+             	</li>
+			 
+         		<li>
+         			<a href="/apply/selectBeiAn?id=634948">
+						 <span class="tz_tit">dyzsax.com</span> 
+		             	 <span class="tz_tit_url"> <font size="1">20191010</font> </span>
+	             	</a> 	 
+             	</li>
+			 
+         		<li>
+         			<a href="/apply/selectBeiAn?id=634947">
+						 <span class="tz_tit">baidu-tuiguang.top</span> 
+		             	 <span class="tz_tit_url"> <font size="1">20191010</font> </span>
+	             	</a> 	 
+             	</li>
+			
+          </ul>
+         </marquee>
+        </div>
+
+      </div>
+     
+      <div class="index_right">
+        
+        <!--      <div class="content" style="margin-top:10px;">
+          <h5>常见问题<span><a href="../portal/recordIssue"><img src="../img/more.gif"></a></span></h5>
+          <ul class="tz_list listr">
+            
+            	
+           		<li>
+           			<a title="开办者常见问题FAQ" href="/portal/topicDetail?id=50"><span style="float: right;font-size: 8px;">20181211 </span>开办者常见问题FAQ 
+           			</a>
+	            </li>
+	            
+           
+            	
+           		<li>
+           			<a title="哪些属于违反九不准的有害信息" href="/portal/topicDetail?id=26"><span style="float: right;font-size: 8px;">20180805 </span>哪些属于违反九不准的有害信息 
+           			</a>
+	            </li>
+	            
+           
+            	
+           		<li>
+           			<a title="如何举报和处理互联网违法和不良信息" href="/portal/topicDetail?id=25"><span style="float: right;font-size: 8px;">20180730 </span>如何举报和处理互联网违法和不良信息 
+           			</a>
+	            </li>
+	            
+           
+            	
+           		<li>
+           			<a title="哪些属于网络敲诈和有偿删帖有害信息" href="/portal/topicDetail?id=24"><span style="float: right;font-size: 8px;">20180629 </span>哪些属于网络敲诈和有偿删帖有害信息 
+           			</a>
+	            </li>
+	            
+           
+            	
+           		<li>
+           			<a title="办理互联网备案手续" href="/portal/topicDetail?id=10"><span style="float: right;font-size: 8px;">20180604 </span>办理互联网备案手续 
+           			</a>
+	            </li>
+	            
+           
+            	
+           
+          </ul>
+       </div> --> 
+        
+        <div class="content">
+          <h5>技术标准<span><a href="../portal/recordStandard"><img src="../img/more.gif"></a></span></h5>
+          <ul class="tz_list listr">
+          	
+          		
+           		<li>
+           			<a title="互联网服务安全评估基本程序及要求" href="/portal/topicDetail?id=74"><span style="float: right;font-size: 8px;">20181214</span>互联网服务安全评估基本程序及要求</a>
+
+	             </li>
+	            
+           
+          		
+           		<li>
+           			<a title="互联网交互式服务安全保护要求" href="/portal/topicDetail?id=73"><span style="float: right;font-size: 8px;">20181115</span>互联网交互式服务安全保护要求</a>
+
+	             </li>
+	            
+           
+          </ul>
+        </div> 
+        <div class="content">
+          <h5>法规文件<span><a href="../portal/recordNotice"><img src="../img/more.gif"></a></span></h5>
+          <ul class="tz_list listr">
+          	
+          		
+           		<li>
+           			<a title="国家互联网信息办公室发布《区块链信息服务管理规定》" href="/portal/topicDetail?id=86"><span style="float: right;font-size: 8px;">20190322</span>国家互联网信息办公室发布《区块链信息服务管理规定》</a>
+
+	             </li>
+	            
+           
+          		
+           		<li>
+           			<a title="国家互联网信息办公室有关负责人就《金融信息服务管理规定》答记者问" href="/portal/topicDetail?id=85"><span style="float: right;font-size: 8px;">20190322</span>国家互联网信息办公室有关负责人就《金融信息服务管理规定》答记者问</a>
+
+	             </li>
+	            
+           
+          		
+           		<li>
+           			<a title="《具有舆论属性或社会动员能力的互联网信息服务安全评估规定》" href="/portal/topicDetail?id=79"><span style="float: right;font-size: 8px;">20181121</span>《具有舆论属性或社会动员能力的互联网信息服务安全评估规定》</a>
+
+	             </li>
+	            
+           
+          		
+           		<li>
+           			<a title="互联网新闻信息服务新技术新应用安全评估管理规定" href="/portal/topicDetail?id=76"><span style="float: right;font-size: 8px;">20181121</span>互联网新闻信息服务新技术新应用安全评估管理规定</a>
+
+	             </li>
+	            
+           
+          		
+           		<li>
+           			<a title="中华人民共和国网络安全法" href="/portal/topicDetail?id=54"><span style="float: right;font-size: 8px;">20180828</span>中华人民共和国网络安全法</a>
+
+	             </li>
+	            
+           
+          		
+           
+          		
+           
+          		
+           
+          		
+           
+          		
+           
+          		
+           
+          		
+           
+          		
+           
+          		
+           
+          		
+           
+          </ul>
+        </div>
+         
+        <div class="content" style="margin-top:10px;">
+          <h5>下载中心<span><a href="../portal/downloadcenter"><img src="../img/more.gif"></a></span></h5>
+          <ul class="tz_list listr">
+          	
+          		
+          			<li>
+	          			<a href="/portal/downloadFile?token=68b9534b-62be-4dd6-9db0-45829dcdec79&id=75">
+		          			<span style="float: right;font-size: 8px;">20190709</span>关于举办2019年中国技能大赛全国信息安全管理职业技能竞赛的通知
+	          			</a>
+          			</li>
+          		
+          	
+          		
+          			<li>
+	          			<a href="/portal/downloadFile?token=68b9534b-62be-4dd6-9db0-45829dcdec79&id=72">
+		          			<span style="float: right;font-size: 8px;">20190410</span>互联网个人信息安全保护指南
+	          			</a>
+          			</li>
+          		
+          	
+          		
+          			<li>
+	          			<a href="/portal/downloadFile?token=68b9534b-62be-4dd6-9db0-45829dcdec79&id=71">
+		          			<span style="float: right;font-size: 8px;">20190328</span>区块链信息服务管理规定
+	          			</a>
+          			</li>
+          		
+          	
+          		
+          			<li>
+	          			<a href="/portal/downloadFile?token=68b9534b-62be-4dd6-9db0-45829dcdec79&id=63">
+		          			<span style="float: right;font-size: 8px;">20190116</span>2018年度工作报表
+	          			</a>
+          			</li>
+          		
+          	
+          		
+          			<li>
+	          			<a href="/portal/downloadFile?token=68b9534b-62be-4dd6-9db0-45829dcdec79&id=62">
+		          			<span style="float: right;font-size: 8px;">20181214</span>互联网服务安全评估基本程序及要求附录A
+	          			</a>
+          			</li>
+          		
+          	
+          		
+          	
+          		
+          	
+          		
+          	
+          		
+          	
+          		
+          	
+          		
+          	
+          		
+          	
+          		
+          	
+          		
+          	
+          		
+          	
+          		
+          	
+          		
+          	
+          		
+          	
+          		
+          	
+          		
+          	
+          		
+          	
+          		
+          	
+          		
+          	
+          		
+          	
+          		
+          	
+          		
+          	
+          		
+          	
+          		
+          	
+          </ul>
+        </div>
+        
+        <div class="content" style="margin-top:10px;">
+          <h5>通知公告<span><a href="../portal/recordPolicies"><img src="../img/more.gif"></a></span></h5>
+          <ul class="tz_list listr">
+             
+             	
+           		<li>
+           			<a title="我国将对违法违规收集使用个人信息进行专项治理" href="/portal/topicDetail?id=84"><span style="float: right;font-size: 8px;">20190823 </span>我国将对违法违规收集使用个人信息进行专项治理</a>
+	            </li>
+	            
+           
+             	
+           		<li>
+           			<a title="全国信息安全管理员知识与技能竞赛正式启动新闻稿" href="/portal/topicDetail?id=89"><span style="float: right;font-size: 8px;">20190508 </span>全国信息安全管理员知识与技能竞赛正式启动新闻稿</a>
+	            </li>
+	            
+           
+             	
+           		<li>
+           			<a title="互联网个人信息安全保护指南" href="/portal/topicDetail?id=88"><span style="float: right;font-size: 8px;">20190410 </span>互联网个人信息安全保护指南</a>
+	            </li>
+	            
+           
+             	
+           		<li>
+           			<a title="全国第十八次计算机和移动终端病毒疫情调查活动启动" href="/portal/topicDetail?id=83"><span style="float: right;font-size: 8px;">20190322 </span>全国第十八次计算机和移动终端病毒疫情调查活动启动</a>
+	            </li>
+	            
+           
+             	
+           		<li>
+           			<a title="公安部网络安全保卫局组织开展 2019年互联网安全治理优秀论文征集活动" href="/portal/topicDetail?id=82"><span style="float: right;font-size: 8px;">20190222 </span>公安部网络安全保卫局组织开展 2019年互联网安全治理优秀论文征集活动</a>
+	            </li>
+	            
+           
+             	
+           
+             	
+           
+             	
+           
+             	
+           
+             	
+           
+             	
+           
+             	
+           
+             	
+           
+             	
+           
+             	
+           
+             	
+           
+             	
+           
+             	
+           
+             	
+           
+             	
+           
+             	
+           
+             	
+           
+             	
+           
+             	
+           
+             	
+           
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="friendLink">
+   		<div>
+        	<a href="http://www.cac.gov.cn/" target="_blank"><img alt="中央网信办"  style="height:35px;width:290px;"  src="../img/wangxinban.png"></a>
+        </div>
+        <div>
+        	<a href="http://www.mps.gov.cn/" target="_blank"><img alt="公安部"  style="height:35px;width:290px;"  src="../img/gab.png"></a>
+        </div>
+        <div>
+        	<a href="http://www.gov.cn/hudong/100dudian/index.htm" target="_blank"><img alt="" style="height:35px;width:290px;" src="../img/baishi.png"></a>
+        </div>
+        <div>
+        	<a href="http://www.12377.cn/" target="_blank"><img alt="违法不良举报" style="height:35px;width:290px;" src="../img/wxjb.png"></a>
+        </div>
+        <div>
+        	<a href="http://cyberpolice.mps.gov.cn/wfjb" target="_blank"><img alt="网络违法犯罪举报" style="height:35px;width:290px;" src="../img/jubao.png"></a>
+        </div>
+        <div>
+        	<a href="http://app.beian.gov.cn" target="_blank"><img alt="app安全与版权通报平台" style="height:35px;width:290px;" src="../img/apptb.png"></a>
+        </div>
+        <div>
+        	<a href="https://waf.islab.cn/" target="_blank"><img alt=""  style="height:35px;width:290px;"  src="../img/aqfwpt.png"></a>
+        </div>
+        <div>
+        	<a href="http://www.weishi110.cn" target="_blank"><img alt="国防G01"  style="height:35px;width:290px;"  src="../img/g01.png"></a>
+        </div>
+      </div>
+    </div>
+	</div>
+    <input type="hidden" id="dengLuType" value="">
+	
+
+ <div class="z_footerk">
+ 	  <p class="z_gap"></p>
+ 	  <div class="z_footer" style="padding-bottom: 15px;"> 
+ 	  	<!-- <div style="text-align: center;margin:0 auto;width: 550px;"> -->
+ 	  	<div style="text-align: center;margin:0 auto;width: 950px;height: 79px;">
+ 	  		<div style="width: 700px;height: 79px;margin:0 auto;">
+ 	  			<div style="float:left;padding-right:26px">
+				 	  	<script type="text/javascript">
+							document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/33/000/0000/60573107/CA330000000605731070007.js' type='text/javascript'%3E%3C/script%3E"));
+						</script> 
+		 	  	</div>
+		 	  	<div style="float:left;font-size:12px;text-align:center;">
+						 <p class="text-center" style="color:#666666;">
+					        Copyright 公安部网络安全保卫局 All Rights Reserved<br/>
+					       <a href="http://beian.miit.gov.cn/">京ICP备05070602号&nbsp;&nbsp;&nbsp;</a>	
+					        邮箱：<a href="mailto:support@beian.gov.cn">support@beian.gov.cn</a><br/>
+					       <div style="width:440px;margin:0 auto; padding: 0;">
+                             <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010102002019" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;width: 100%;">
+                                     <img src="/img/ghs.png" style="float:left;"/>
+                                     <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 15px; color:#666666;">
+                                     		京公网安备 11010102002019号
+                                     </p>
+                                     &nbsp;&nbsp;&nbsp;网站标识码：bm09000026
+                             </a>
+		                   </div>
+						   <div><p> 建议使用1024*768以上分辨率浏览</p></div>
+						</p>
+
+					      <form id="recordform" action="/portal/registerSystemInfo" method="post"><input type="hidden" name="recordcode" value="京ICP备030173号"/>
+					      <input type="hidden" name="token" value="68b9534b-62be-4dd6-9db0-45829dcdec79" />
+					      </form> 	  		
+		 	  	</div> 	
+		 	  	<div style="float:left;padding-right:26px;padding-top:10px;">
+				 	  	<script id="_jiucuo_" sitecode='bm09000026' src='http://pucha.kaipuyun.cn/exposure/jiucuo.js'></script>
+		 	  	</div>  		
+ 	  		</div>
+ 	  	</div>
+      </div>
+   </div>
+<script type="text/javascript">
+	$("a").each(function(index,obj){  
+		if($(obj).attr("href") != undefined){
+			if(($(obj).attr("href")).indexOf('/')>=0){
+			    if($(obj).attr("href").indexOf("?")>=0){
+					 $(obj).attr("href",$(obj).attr("href")+"&token="+taken_for_user);
+		 	    }else{
+		 	    	$(obj).attr("href",$(obj).attr("href")+"?token="+taken_for_user);
+		 	    }
+			}
+		}
+	});
+	
+	$("a").on("click",function(event){
+	//	    event.preventDefault();//使a自带的方法失效，即无法调整到href中的URL(http://www.baidu.com)
+	//	    $.ajax({
+	//	           type: "POST",
+	//	           url: "url地址",
+	//	           contentType:"application/json",
+	//	           data: JSON.stringify({param1:param1,param2:param2}),//参数列表
+	//	           dataType:"json",
+	//	           success: function(result){
+	//	              //请求正确之后的操作
+	//	           },
+	//	           error: function(result){
+	//	              //请求失败之后的操作
+	//	           }
+	//	    });
+	});	
+</script>
+</body>
+<script type="text/javascript">
+        var imgPath='';
+		window.onload = function(){//判断是否是idc登陆
+			//dl1:网站用户；dl2:IDC用户；dl3:APP商店；dl4:CDN用户
+			$("#ewm").hide();
+			$("#huangYing").hide();
+			if($("#dengLuType").val()=='idc'){
+				idcLogin();
+			}else if($("#dengLuType").val()=='app'){
+				appLogin();
+			}else if($("#dengLuType").val()=='cdn'){
+				cdnLogin();
+			}else if($("#dengLuType").val()=='ptyh'){
+				ptwzLogin();
+			}else if($("#dengLuType").val()=='xcyh'){
+				xcLogin();
+			}
+		}
+		//dl2:IDC用户
+		$('#qyLoginA').on('click',function(){
+			idcLogin();
+		})
+		//dl1:网站用户
+		$('#PTUSER').on('click',function(){
+			ptwzLogin();
+		});
+		//dl3:APP商店
+		$('#APPMarket').on('click',function(){
+			appLogin();
+		});
+		//dl4:cdn用户
+		$('#CDN').on('click',function(){
+			cdnLogin();
+		});
+		//dl8:域名服务商、搜索引擎厂商、浏览器厂商、音视频服务商
+		$('#xc').on('click',function(){
+			xcLogin();
+		});
+		function idcEwm(){
+			$("#dlk").hide();
+			$("#ewm").show();
+		}
+		function djfh(){
+			$("#dlk").show();
+			$("#ewm").hide();
+		}
+		function djxs(){
+			$("#dlk").hide();
+			$("#ewm").show();
+		}
+		//idc登陆
+		function idcLogin(){
+			$('#dl1').attr("class","");
+			$('#dl2').attr("class","active");
+			$('#dl3').attr("class","");
+			$('#dl8').attr("class","");
+			$("#jrs").show();
+			$("#ptyh").hide();
+			$("#appMarket").hide();
+			$("#xcPanel").hide();
+			$("#ewm").hide();
+			//$("#sec").hide();
+			$("#huangYing").show();
+			//$("#cbg").css("background-image","url(../img/adbg_idc.png)");
+			$("#imgliucheng").attr("src","/iscs_upgrade/img/liuchengIdc.png");
+		}
+		//APP商店用户登陆
+		function appLogin(){
+			$('#dl1').attr("class","");
+			$('#dl2').attr("class","");
+			$('#dl3').attr("class","active");
+			$('#dl8').attr("class","");
+			$("#appMarket").show();
+			$("#ptyh").hide();
+			$("#jrs").hide();
+			//$("#sec").hide();
+			$("#xcPanel").hide();
+			$("#ewm").hide();
+			$("#huangYing").hide();
+			$("#cbg").css("background-image","url(../img/adbg.png)");
+			$("#imgliucheng").attr("src",imgPath+"/img/appBg.png");
+		}
+		//CDN用户登陆
+		function cdnLogin(){
+			$('#dl1').attr("class","");
+			$('#dl2').attr("class","");
+			$('#dl3').attr("class","");
+			$('#dl8').attr("class","active");
+			$("#xcPanel").show();
+			$("#appMarket").hide();
+			$("#ptyh").hide();
+			$("#jrs").hide();
+			//$("#sec").hide();
+			$("#ewm").hide();
+			$("#huangYing").hide();
+			$("#cbg").css("background-image","url(../img/adbg.png)");
+			$("#imgliucheng").attr("src",imgPath+"/img/appBg.png");
+		}
+		//普通网站用户登陆
+		function ptwzLogin(){
+			$('#dl1').attr("class","active");
+			$('#dl2').attr("class","");
+			$('#dl3').attr("class","");
+			$('#dl8').attr("class","");
+			$("#ptyh").show();
+			$("#jrs").hide();
+			$("#appMarket").hide();
+			$("#xcPanel").hide();
+			$("#ewm").hide();
+			//$("#sec").hide();
+			$("#huangYing").hide();
+			$("#cbg").css("background-image","url(../img/adbg.png)");
+			$("#imgliucheng").attr("src",imgPath+"/img/liuchengRight.png");
+		}
+		
+		//域名服务商、搜索引擎厂商、浏览器厂商、音视频服务商
+		function xcLogin(){
+			$('#dl1').attr("class","");
+			$('#dl2').attr("class","");
+			$('#dl3').attr("class","");
+			$('#dl8').attr("class","active");
+			$("#xcPanel").show();
+			$("#appMarket").hide();
+			$("#ptyh").hide();
+			$("#jrs").hide();
+			$("#ewm").hide();
+			//$("#sec").hide();
+			$("#huangYing").hide();
+			$("#cbg").css("background-image","url(../img/adbg.png)");
+			$("#imgliucheng").attr("src",imgPath+"/img/appBg.png");
+		}
+	</script> 
+</html>
