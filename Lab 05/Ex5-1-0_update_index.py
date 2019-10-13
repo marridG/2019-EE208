@@ -17,7 +17,7 @@ from org.apache.lucene.util import Version
 
 SEARCH_FIELD_NAME = "name"
 NEW_FIELD_NAME = "site"
-NEW_FIELD_VALUE = "www.sjtu.edu.cn"
+NEW_FIELD_VALUE = "sina.com.cn"
 # User defined
 SHOW_LOGS = True  # False
 DEBUG_MODE = False
@@ -198,10 +198,9 @@ class IndexUpdate(object):
                     doc.add(Field("path", root,
                                   Field.Store.YES,
                                   Field.Index.NOT_ANALYZED))
-                    if not INDEX_FILE_PATH == "index_update_del_add":
-                        doc.add(Field("site", "www.sjtu.edu.cn",
-                                      Field.Store.NO,
-                                      Field.Index.ANALYZED))
+                    doc.add(Field(NEW_FIELD_NAME, NEW_FIELD_VALUE,
+                                  Field.Store.NO,
+                                  Field.Index.ANALYZED))
                     doc.add(Field("title", title,
                                   Field.Store.YES,
                                   Field.Index.ANALYZED))
