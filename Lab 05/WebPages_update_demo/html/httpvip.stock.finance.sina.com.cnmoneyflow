@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>资金流向_新浪财经_新浪网</title>
+<meta name="keywords" content="资金流向,实时资金流向分析,板块资金,行业资金,主力罗盘,主力跟踪,股票行情资金流向,实时资金流向分析,板块资金,行业资金,主力罗盘,主力跟踪,股票行情" />
+<meta name="description" content="新浪财经股票资金流向为您提供实时市场、行业、个股资金流向分析,主力罗盘分析市场主力动向。" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link rel="stylesheet" href="//n.sinaimg.cn/finance/cnstock/pc/moneyflow.4.css" type="text/css" media="all" />
+<!--<link rel="stylesheet" href="//www.sinaimg.cn/cj/subject/2010/0608/moneyflow.3.css" type="text/css" media="all"  />-->
+<script type="text/javascript" src="//i3.sinaimg.cn/cj/HKstock2007/IO.Script_1_0_1.js"></script>
+<script type="text/javascript" src="//finance.sina.com.cn/globaltimezone.js"></script>
+<!--<script language="JavaScript" src="http://www.sinaimg.cn/dy/fusioncharts/v3/js/FusionCharts.js"></script>-->
+<script type="text/javascript" src="//n.sinaimg.cn/finance/fusioncharts/v3_4_0/fusioncharts.js"></script>
+<script type="text/javascript" src="//n.sinaimg.cn/finance/fusioncharts/v3_4_0/fusioncharts.charts.js"></script>
+
+<!--<script type="text/javascript" src="//finance.sina.com.cn/basejs/radar.js"></script>-->
+<script src='//n.sinaimg.cn/finance/cnstock/pc/radar.js'></script>
+
+<script src="https://finance.sina.com.cn/sinafinancesdk/js/sf_sdk.js"></script>
+
+
+<script type="text/javascript" src="//n.sinaimg.cn/finance/cnstock/pc/zjlx.z.js?ver=1.1"></script>
+<style></style>
+
+</head>
+
+<body>
+<script type="text/javascript" charset="UTF-8" src="//i.sso.sina.com.cn/js/sinaSSOGetCookie.js"></script>
+<script type="text/javascript" charset="UTF-8" src="//i.sso.sina.com.cn/js/sinaSSOManager.js"></script>
+<div style="display:none;" id="scriptLoader"></div>
+
+<div class="wrap">
+<!-- 标准二级导航_财经 begin -->
+<div>
+<div class="secondaryHeader">
+	<div class="sHBorder">
+		<div class="sHLogo"><span><a href="http://www.sina.com.cn/"><img src="//i1.sinaimg.cn/dy/images/header/2009/standardl2nav_sina_new.gif" alt="新浪网" /></a><a href="http://finance.sina.com.cn/"><img src="//i1.sinaimg.cn/dy/images/header/2009/standardl2nav_finance.gif" alt="新浪财经" /></a></span></div>
+		<div class="sHLinks"><a href="http://finance.sina.com.cn/">财经首页</a>&nbsp;|&nbsp;<a href="http://www.sina.com.cn/">新浪首页</a>&nbsp;|&nbsp;<a href="http://news.sina.com.cn/guide/">新浪导航</a></div>
+
+	</div>
+</div>
+</div>
+<!-- 标准二级导航_财经 end -->
+<dl class="top_nav">
+	<dt class="black"><a href="http://finance.sina.com.cn/">财经首页</a></dt>
+	<dd>
+		<a href="http://finance.sina.com.cn/stock/">股票</a>
+		<a href="http://finance.sina.com.cn/fund/">基金</a><a href="http://finance.sina.com.cn/stock/hkstock/">港股</a><a href="http://finance.sina.com.cn/stock/usstock/">美股</a><a href="http://finance.sina.com.cn/futuremarket/">期货</a><a href="#">外汇</a><a href="http://finance.sina.com.cn/nmetal/">贵金属</a><a href="http://finance.sina.com.cn/bond/">债券</a><a href="http://finance.sina.com.cn/stock/indexfuture">期指</a><a href="http://finance.sina.com.cn/stock/warrant/">权证</a><a href="http://vip.stock.finance.sina.com.cn/portfolio/main.php">我的自选</a>
+
+	</dd>
+	<dt class="blue"><a href="/mkt">行情中心</a></dt>
+</dl>
+
+
+<div><a href="https://finance.sina.com.cn/mobile/comfinanceweb.shtml?source=zijinliuxiang01" target="_blank"><img src="//n.sinaimg.cn/finance/66ceb6d9/20190523/zjlx_app.jpg"/></a></div>
+
+
+<div class="banner">
+	<div class="link_wrap" style="width:90px">
+		<a href="https://gu.sina.cn/pc/feedback/" style="color:#f00;">意见反馈</a> 
+		<a href="http://finance.sina.com.cn/temp/guest4377.shtml" target="_blank">帮助</a>
+
+	</div>
+
+	<div class="lookup_wrap">
+		<!--<script type="text/javascript" src="//www.sinaimg.cn/cj/financewidget/js/SuggestServer_3_0_19.js"></script>-->
+		<script src='//n.sinaimg.cn/finance/cnstock/pc/SuggestServer_3_0_19.js'></script>
+		<form action="#" method="get" style="position:relative; zoom:1; z-index:100; line-height:20px; height: 20px;" onsubmit="IndexesCtrl.SuggestSearch(this);return false;">
+			<span style="line-height: 10px; height: 10px; display:inline-block; ">
+			资金流向搜索：
+			</span>
+			<input type="text" id="inputSuggest" name="q" value="代码/名称/拼音" />
+			<input type="submit" value="查询" />
+		</form>
+
+		<script type="text/javascript">
+			var suggestServer = new SuggestServer();
+			suggestServer.bind({
+				"input": "inputSuggest",
+				"value": "@3@",
+				"type": "111",
+				"max": 10,
+				"width": 270,
+				"link": "javascript:HistoryCtrl.hashJump(\'!ssfx!@3@\')",
+				"head": ["选项", "代码", "中文名称"],
+				"body": [-1, 3, 4],
+				"target" : "",
+				"callback": null
+			});
+		</script>
+	</div>
+
+	<div class="time_wrap">北京时间：<span id="bj_time">读取中...</span> | 更新时间：<span id="upd_time">读取中...</span></div>
+
+</div>
+
+<div class="banner_line"></div>
+
+
+
+
+<div class="content">
+	<div class="navtree" id="treeContainer"></div>
+
+	<div class="list_wrap" id="index_wrap" style="display:none;">
+		<div class="index_top_field">
+			<div class="index_top_left" id="index_top_left">
+			</div>
+			<div class="index_top_right" id="index_top_right">
+				<div class="head">个股资金流向分布</div>
+				<div>
+					<table id="index_top_table">
+						<thead>
+							<tr><th></th><th>沪深300</th><th>沪A</th><th>深A</th></tr>
+						</thead>
+						<tbody>
+							<tr><th>净流入</th><td></td><td></td><td></td></tr>
+							<tr><th>净流出</th><td></td><td></td><td></td></tr>
+							<tr><th>主力流入</th><td></td><td></td><td></td></tr>
+							<tr><th>主力流出</th><td></td><td></td><td></td></tr>
+							<tr><th>散户流入</th><td></td><td></td><td></td></tr>
+							<tr><th>散户流出</th><td></td><td></td><td></td></tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="head">
+					<span class="headtitle">股市雷达</span>
+					<span class="headlink"><a href="http://finance.sina.com.cn/stockradar/" target="_blank">更多 &gt;&gt;</a></span>
+				</div>
+				<div id="stockradar_content" class="stockradar_content">
+					<table><thead><tr><th>异动时间</th><th>股票代码</th><th>股票简称</th><th>异动信息</th></tr></thead></table>
+				</div>
+			</div>
+		</div>
+
+		<div id="div_indexlist">
+			
+		</div>
+
+		<div>
+			<!-- <iframe width="750" height="90" frameborder="0" scrolling="no" src="http://finance.sina.com.cn/244/2007/0330/25.html" marginwidth="0" marginheight="0" style="margin:20px 0 0 30px;" ></iframe> -->
+		</div>
+
+	</div>
+
+
+
+
+
+	<div class="list_wrap" id="list_wrap"> <!--style="display:none;"-->
+		<!--
+		<div class="head">
+			<div class="nav"><a href="javascript:void(0);" id="to_index">资金流向</a> &gt; <span id="list_nav_wrap"></span></div>
+			<div class="amount" style="display:none"><span>每页显示</span><div id="list_amount_ctrl"><a href="javascript:void(0);">20</a><a href="javascript:void(0);">40</a><a href="javascript:void(0);">80</a></div><span>条</span></div>
+		</div>
+		-->
+		<!--
+		<div class="nav2" id="list_nav">
+			<div class="pages" style="margin:0px; width:400px; float:right;" id="list_pages_top"></div>
+			<span style="line-height:30px; padding-left:10px; color:#666;">注：点击每列标题可排序。例如：点击“最新价”可以按价格排序</span>
+		</div>
+		-->
+
+		<div class="tbl_wrap" id="tbl_wrap"></div>
+
+		<div class="iframe_wrap" id="iframe_wrap"></div>
+		<div>
+		<!--	<iframe width="750" height="90" frameborder="0" scrolling="no" src="http://finance.sina.com.cn/iframe/ad/stock_fund_index_TL.html" marginwidth="0" marginheight="0" style="margin:20px 0 0 30px;" ></iframe>-->
+		</div>
+
+	</div>
+
+
+	<div class="clear"></div>
+
+</div>
+
+<!-- 新浪财经标准尾 begin -->
+<div style="color:#333; font-size:12px; line-height:21px; margin:50px auto 10px; text-align:center; width:950px;"><a href="https://gu.sina.cn/pc/feedback/">新浪财经意见反馈留言板</a>　电话：010-82628888-5174　　欢迎批评指正<br /><a href="http://tech.sina.com.cn/focus/sinahelp.shtml" target="_blank">常见问题解答</a>  <a href="http://net.china.cn/chinese/index.htm" target="_blank">互联网违法和不良信息举报</a>　客户服务热线：4000520066 010-82624499<br/><br/><a href="http://corp.sina.com.cn/chn/">新浪简介</a> | <a href="http://corp.sina.com.cn/eng/">About Sina</a> | <a href="http://ads.sina.com.cn/">广告服务</a> | <a href="http://www.sina.com.cn/contactus.html">联系我们</a> | <a href="http://corp.sina.com.cn/chn/sina_job.html">招聘信息</a> | <a href="http://www.sina.com.cn/intro/lawfirm.shtml">网站律师</a> | <a href="http://english.sina.com">SINA English</a> | <a href="http://members.sina.com.cn/apply/">会员注册</a> | <a href="http://tech.sina.com.cn/focus/sinahelp.shtml">产品答疑</a><br /><br />Copyright &copy; 1996-2019 SINA Corporation, All Rights Reserved<br /><br />新浪公司　<a href="http://home.sina.com.cn/intro/copyright.shtml" target="_blank">版权所有</a><br /><br /><span style="color:#aaa;">新浪财经免费提供股票、基金、债券、外汇等行情数据以及其他资料均来自相关合作方，仅作为用户获取信息之目的，并不构成投资建议。<br />新浪财经以及其合作机构不为本页面提供信息的错误、残缺、延迟或因依靠此信息所采取的任何行动负责。市场有风险，投资需谨慎。</span></div>
+
+<!-- 新浪财经标准尾 end -->
+
+</div>
+
+
+<iframe id="hashIframe" src="blank.html" style="width:1px; height:1px; visibility:hidden;"></iframe>
+<!-- SUDA_CODE_START -->
+<script type="text/javascript" src="//www.sinaimg.cn/unipro/pub/suda_s_v851c.js"></script>
+<script type="text/javascript" > 
+_S_pSt(_S_PID_); 
+</script> 
+<noScript>
+<div style='position:absolute;top:0;left:0;width:0;height:0;visibility:hidden'><img width=0 height=0 src='//beacon.sina.com.cn/a.gif?noScript' border='0' alt='' /></div>
+</noScript>
+<!-- SUDA_CODE_END --> 
+
+<!-- START WRating v1.0 -->
+<!--<script type="text/javascript" src="//sina.wrating.com/a1.js"></script>-->
+
+<script type="text/javascript">
+try{
+var vjAcc="860010-0328010000"; 
+var wrUrl="http://sina.wrating.com/";
+vjTrack("");
+}catch(e){};
+</script>
+<noscript><img src="//sina.wrating.com/a.gif?a=&c=860010-0328010000" width="1" height="1" style="display: none;"/></noscript>
+<!-- END WRating v1.0 -->
+
+<script type="text/javascript" charset="UTF-8" src="//i.sso.sina.com.cn/js/sinaSSOUpdateCookie.js"></script>
+</body>
+
+<div id="stockradar_data" style="display:none"></div>
+<div id="__webpush2_box" style="position:absolute; left:0px; top:0px;"></div>
+<script type="text/javascript">
+//<![CDATA[
+loadsrv();
+(new StockRadarMore()).boot({divid: 'stockradar_data', owidth: 948, iwidth: 948, oheight: 25, iheight: 14, 
+		fontsize: 12, scrolldirect: 1, msgcount: 1, scrollstep: 100, scrolltime: 500, matchstop: 20,
+		msgwidth: 144, logowidth: 25}, function(o){new S_SR_MR(o, 'stockradar_content');});
+//main();
+//]]>
+</script>
+<script type="text/javascript" src="//www.sinaimg.cn/unipro/pub/suda_m_v629.js"></script>
+<script type="text/javascript">suds_init(1431,20.00,1015,2);</script>
+<script type="text/javascript" src="//n.sinaimg.cn/tech/66ceb6d9/20180926/zjlx_app.js"></script>
+</html>

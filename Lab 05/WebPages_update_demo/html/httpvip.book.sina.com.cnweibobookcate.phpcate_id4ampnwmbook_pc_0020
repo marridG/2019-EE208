@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>小说阅读推荐--新浪小说</title>
+    <meta name="keywords" content="小说阅读,小说阅读推荐" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="http://vipbookedge.sinaedge.com/static/static/paidRead/assets/css/common.css?v=0.20190125"/>
+	<link rel="stylesheet" type="text/css" href="http://vipbookedge.sinaedge.com/static/static/paidRead/assets/css/list-common.css?v=0.20190125" />
+	<link rel="stylesheet" type="text/css" href="http://vipbookedge.sinaedge.com/static/static/paidRead/assets/css/all-sale.css?v=0.20190125" />
+
+</head>
+<div class="nav">
+    <script type="text/javascript">
+
+var VAR_GLOBAL = {};
+var _cfg = {};
+
+	VAR_GLOBAL['site_static'] = 'http://vipbookedge.sinaedge.com/static/static/';
+	_cfg['static'] =  'http://vipbookedge.sinaedge.com/static/static/';
+	_cfg['uid'] = "0"; 
+	_cfg['i_statbookclieck'] = '/weibobook/ajax/read_count.php';
+    _cfg['i_weibouserinfo'] = '/newcms/i/weibo_userinfo.php';//用户信息
+    _cfg['i_bookshelf'] = '/weibobook/ajax/bookshelf.php';//书架
+ 
+    _cfg['i_checklikes'] = '/ajax/user/checklikes';//关注-点赞数
+    _cfg['i_likesupdate'] = '/ajax/user/likesupdate';//点赞取消赞
+    _cfg['i_action_stat'] = '/weibobook/ajax/stat.php';
+//    _cfg['userSendMsgUrl'] = '/newcms/i/ajax/send_message.php';//发私信
+    _cfg['checkUserSendMsgUrl'] = '/newcms/i/ajax/get_user_log.php';//检测是否发私信
+    _cfg['rechargeChooseUrl'] = '/weibobook/ajax/recharge_choose.php';//获取充值金额
+    _cfg['feedbackUrl'] = '/weibobook/feedback.php';//反馈页
+    _cfg['rechargeUrl'] = '/weibobook/ajax/recharge.php';//充值接口
+</script>
+
+<div class="sr-weibo-top" style="display:none">
+    <div id="weibo_top_public"></div>
+    <script src="http://js.t.sinajs.cn/t4/home/js/public/topInit.js?version=0.0091355821117"></script>
+</div>
+
+
+<div class="WDS_global_nav" id="WDS_TopNav"></div>
+
+<script src="http://vipbookedge.sinaedge.com/static/static/package/WDSTop.js?version=0.20190125"></script>
+	 
+<script type="text/javascript">
+
+
+    var $CONFIG = {
+		
+        name: '',
+        uid: '0',
+        any: '&wvr=4',
+        islogin: 0,
+        icon: '',
+        lang: "zh-cn",
+        verified: "",
+        backurl: "http://weibo.com/login.php?entry=book&url=http://book.weibo.com/",
+        topUserInfo: "http://vip.book.sina.com.cn/weibobook/ajax/top_user_info.php",
+		topCssPath: "http://vipbookedge.sinaedge.com/static/static/write-center/render/assets/css/nav.css?version=0.20190125",
+        verify: "220",
+        entry: "book",
+        top: 1,
+        _wv: '5'
+     
+		
+    };
+    
+    WDSTopGlobal && WDSTopGlobal.init($CONFIG); 
+	
+</script>
+<!--/.WDS_global_nav--></div>
+
+<div class="header">
+
+
+    <div class="wid1000">
+        <div class="header-nav clearfix">
+            <!-- header-logo -->
+            <div class="header-logo">
+                <a href="/weibobook?pos=20001"><h1><img src="http://vipbookedge.sinaedge.com/static/static/paidRead/assets/images/logo-news.png" alt="小说阅读"/></h1></a>
+            </div>
+            <!-- header-seacher -->
+                            <div class="header-seacher">
+                    <input type="text" value="" placeholder="搜索书名作者" />
+                    <span><img src="http://vipbookedge.sinaedge.com/static/static/paidRead/assets/images/search.png" align="middle"></span>
+                </div>
+                    </div>
+    </div>
+    <!-- header-menu -->
+    <div class="header-menu">
+        <div class="wid1000">
+            <ul>
+                <li ><a href="/weibobook?pos=20002">首页</a></li>
+                <li ><h2><span>玄幻小说推荐</span><a href="/weibobook/man.php?pos=20003">男生小说</a></h2></li>
+                <li ><h2><span>言情小说推荐</span><a href="/weibobook/girl.php?pos=20004">女生小说</a></h2></li>
+                <li ><h2><span>出版书籍</span><a href="/weibobook/publish.php?pos=20005">出版图书</a></h2></li>
+                <li ><h2><span>今日限免</span><a href="/weibobook/free.php">今日限免</a></h2></li>
+                <li  ><h2><span>小说推荐排行榜</span><a href="/weibobook/rank.php?pos=20006">排行榜</a></h2></li>
+                <li><h2><span>我要写书</span><a href="http://book.weibo.com/weibobook/userv1/apply_resident_author.php?pos=202001" target="_blank">我要写书</a></h2></li>
+            </ul>
+        </div>
+    </div>
+    <div class="slide_bar">
+        <div class="bookShelf_rt">
+            <a href="javascript:;" target="_blank">我的书架</a>
+        </div>
+        <div class="bookShelf_fl">
+            <a href="http://book.weibo.com/newcms/tp_p4c69t179.html?pos=20032" target="_blank">作者福利</a>
+        </div>
+        <div class="bookShelf_sign">
+            <a href="http://book.weibo.com/newcms/tp_p4c69t200.html?pos=20033" target="_blank">我要签约</a>
+        </div>
+        <div class="bookShelf_download">
+            <a href="JavaScript:;" target="_blank">下载APP
+                <div class="downcode-pic">
+                    <div class="code-warp">
+                        <img src="http://vipbookedge.sinaedge.com/static/static/paidRead/assets/images/s-code-index-1.png">
+                                                <p>扫码下载免费畅读</p>
+                        <span></span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="backToTop">
+            <a href="javascript:;">返回顶部</a>
+        </div>
+        <div class="s-new-opinion">
+            <a href="javascript:;"><i></i>
+                                <p>意见反馈</p></a>
+        </div>
+
+        <!-- 广告位二 -->
+                                                                                                                                                                                                                                                                                                                                                                                        </div>
+</div>	<!-- container -->
+	<div class="container">
+		<div class="wid1000">
+			<!-- banner -->
+			<div class="all-sale ">
+				<!-- left -->
+				<div class="all-s-left fl">
+					<div class="all-fl-title"><a  href="/weibobook/cate.php">作品分类</a></div>
+					<dl>
+						<dt><span>男生</span></dt>
+						<dd>
+                                                            <a  href="?cate_id=1036&w=0&s=0&order=1">都市校园</a>
+                                                            <a  href="?cate_id=1003&w=0&s=0&order=1">玄幻奇幻</a>
+                                                            <a  href="?cate_id=1001&w=0&s=0&order=1">武侠仙侠</a>
+                                                            <a  href="?cate_id=1035&w=0&s=0&order=1">悬疑灵异</a>
+                                                            <a  href="?cate_id=1002&w=0&s=0&order=1">科幻末世</a>
+                                                            <a  href="?cate_id=1031&w=0&s=0&order=1">游戏竞技</a>
+                                                            <a  href="?cate_id=1042&w=0&s=0&order=1">同人小说</a>
+                            						</dd>
+					</dl>
+
+					<dl>
+						<dt><span>女生</span></dt>
+						<dd>
+                                                            <a  href="?cate_id=1006005&w=0&s=0&order=1">穿越重生</a>
+                                                            <a  href="?cate_id=1006003&w=0&s=0&order=1">古风古韵</a>
+                                                            <a  href="?cate_id=1007&w=0&s=0&order=1">浪漫青春</a>
+                                                            <a  href="?cate_id=1006004 &w=0&s=0&order=1">总裁豪门</a>
+                                                            <a  href="?cate_id=1006006&w=0&s=0&order=1">都市情缘</a>
+                                                            <a  href="?cate_id=1006007 &w=0&s=0&order=1">幻想言情</a>
+                                                            <a  href="?cate_id=1043&w=0&s=0&order=1">同人言情</a>
+                            						</dd>
+					</dl>
+
+					<dl>
+						<dt><span>出版</span></dt>
+						<dd>
+                                                            <a  href="?cate_id=50&w=0&s=0&order=1">流行小说</a>
+                                                            <a  href="?cate_id=13&w=0&s=0&order=1">时尚生活</a>
+                                                            <a  href="?cate_id=3&w=0&s=0&order=1">经管励志</a>
+                                                            <a  href="?cate_id=22&w=0&s=0&order=1">社科科普</a>
+                                                            <a class="current" href="?cate_id=4&w=0&s=0&order=1">文学艺术</a>
+                                                            <a  href="?cate_id=48&w=0&s=0&order=1">家庭情感</a>
+                            						</dd>
+					</dl>
+				</div>
+				<!-- right -->
+				<div class="all-s-right fr">
+					<div class="all-fr-title">文学艺术</div>
+					<!-- 分类 -->
+					<div class="all-s-nav">
+						<p>
+							<span>作品字数：</span>
+									                      <a  href="?cate_id=4&w=1&s=0&order=1">30万以下</a>
+		                  			                      <a  href="?cate_id=4&w=2&s=0&order=1">30-50万</a>
+		                  			                      <a  href="?cate_id=4&w=3&s=0&order=1">50-100万</a>
+		                  			                      <a  href="?cate_id=4&w=4&s=0&order=1">100-200万</a>
+		                  			                      <a  href="?cate_id=4&w=5&s=0&order=1">200万以上</a>
+		                  							</p>
+
+						<p>
+							<span>作品状态：</span>
+																	                      <a  href="?cate_id=4&w=0&s=1&order=1">已完结</a>
+										                  											                      <a  href="?cate_id=4&w=0&s=2&order=1">连载中</a>
+										                  											                  							</p>
+
+						<p>
+							<span>排序方式：</span>
+									                      <a class="active" href="?cate_id=4&w=0&s=0&order=1">最热</a>
+		                  			                      <a  href="?cate_id=4&w=0&s=0&order=2">最新</a>
+		                  							</p>
+						
+					</div><!-- 分类-end -->
+										<!-- 列表 -->
+					<div class="all-s-list">
+						<div class="book_list">
+							<ul>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/5391646.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/30/cover_eda952814f05591af3fdf97914186175.jpg?1501658387" alt="红色家书"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/5391646.html">红色家书</a></p>
+										<p class="book_author"><span>恽代英</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/5391646.html">本书收录了近百位革命烈士的一百余封家书，其中包括平常家信、狱中信函、遗书等。书中所选录的烈士家书，按烈士出生时间的先后顺序编排。每封书信后面附有简要注释，对书信的写作时间、背景等加以说明。阅读这些书信，仿佛经历了一次革命的洗礼……</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/5390797.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/205/cover_e149d7cc9b7b8e5f116e2db42e0aad73.jpg?1499755547" alt="国家情愫：中国大援疆全纪实"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/5390797.html">国家情愫：中国大援疆全纪实</a></p>
+										<p class="book_author"><span>裔兆宏</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/5390797.html">本书为国家“十三五”重点出版规划文艺原创精品项目。从国家战略层面，从政治、经济、社会、文化教育、医疗卫生、民族团结等多个侧面展现援疆举措与实绩，讲述了新中国数代援疆人甘于奉献、支援边疆的动人故事。援疆已经上升为国家战略，该书是描述几代援疆人全方位支援新疆建设、发展的长篇纪实，体现了党和国家及全国人民对少数民族的关心支持，突出了民族和谐、共同繁荣富裕、共同实现中国梦的重大主题。既有面的概括，又有线的梳理，更有点与细节的展示，是一部内容深刻、主题突出、具有现实意义充满正能量的厚重之作。</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/5427217.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/17/cover_6bf2f4a4a57aa23ab86c2d2dc7bcc0ce.jpg?1565078186" alt="最深的水是泪水"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/5427217.html">最深的水是泪水</a></p>
+										<p class="book_author"><span>鲍尔吉·原野</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/5427217.html">世界消防史上罕见的火灾，油罐爆炸，流淌火如飙天大浪，金属灯柱烤弯了，天上地下海面大火熊熊，6万平方米过火面积，大连湾危在旦夕。2830名消防官兵，用血肉筑起防火墙赴死扑救，15小时极限鏖战，经历难以想象的煎熬，保住了石油库区，创造中国奇迹，永远彰显消防警官的光荣。根据本书改编的电影《烈火英雄》由刘伟强、李锦文监制，陈国辉导演，黄晓明、杜江、谭卓领衔主演。该片于2019年8月1日在中国内地上映。故事源于“大连7·16大火”真实事件，讲述了沿海油罐区发生火灾，消防队伍上下级团结一致，誓死抵抗，以生命维护国家及人民财产安全的故事。</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/5396130.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/162/cover_2c535620cf8523c6c7833a8fedf368a6.jpg?1510302391" alt="麦客"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/5396130.html">麦客</a></p>
+										<p class="book_author"><span>沈庆保</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/5396130.html">西红柿、山药、南瓜、辣椒、油炸丸子、豆虫、萝卜豆子、咸菜、青萝卜、花样豆腐、邳州臭豆乳、大蒜、高粱烧、山芋秧子、水杉、麦秸、雨夜、炊烟。
+生活在乡下，总要与美食、作物和果树相近。同样可以亲近的还有数不清的故事。茶味已淡，蝉声停歇，远处传来的歌声已经停歇，新鲜的故事却不让我们合眼。谈不完的是是非非，讲不够的幽默笑话，说不尽的风云际会。至于家庭难以实施的计划，工作中的烦恼和迷茫，情感上剪不断、理还乱的困惑，是摆在心头的一个个结。因为这份恬静和闲适，生活中的一些纠结与伤痛一点点悄然释放。
+夜深了，倦意渐浓，人们和村庄一起在恬静与安详中入睡。这里，我想起了诗人胡弦的一句诗：“铁栅上僵硬的黑线开始崩溃，天空收起星光”——是的，我们需要更暗一点的夜，以便找回关于乡村夜晚的记忆。</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/5424869.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/229/cover_7d5ca293b7c53ff8dcd2038a9e087082.jpg?1559195278" alt="美食家"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/5424869.html">美食家</a></p>
+										<p class="book_author"><span>陆文夫</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/5424869.html">本书精心辑选了陆文夫生平的经典小说与散文。小说《美食家》《小贩世家》是陆文夫的代表作，从一个特殊的角度解剖了近半个世纪的中国社会生活，对当年人们的生活有一个丰富的描绘。散文分三个面向，一是关于美食，是日常生活中美食家的经历和思考，二是陆文夫的人生经历，三是陆文夫所写关于苏州的美文。读这本书，可以了解最精致的江南生活与江南文化。</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/41030.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/70/cover_7b9ba8d3ce67128e14ce4dc606fbd09f.jpg?1520322165" alt="李宗吾巨著：厚黑学"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/41030.html">李宗吾巨著：厚黑学</a></p>
+										<p class="book_author"><span>李宗吾</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/41030.html">本书以“台北图书馆”的镇馆精品《厚黑学》为底本，首次将李宗吾的完整手稿整理出版，从字里行间可以真正感悟李宗吾原版《厚黑学》的精髓。</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/5407321.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/89/cover_17902570ac706b7eac5ecf63fe147054.jpg?1537862294" alt="艾青诗选"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/5407321.html">艾青诗选</a></p>
+										<p class="book_author"><span>艾青</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/5407321.html">《艾青诗选(附能力训练手册9上)收入了中国现代著名诗人艾青的五十余首诗歌。在这些诗歌中，诗人艾青以激越抒情的笔触，吟唱多灾多难的祖国大地和旷野农村，礼赞太阳、黎明、火把，表现出艾青对旧社会的黑暗和恐怖的痛恨以及对黎明、光明、希望的向往与追求。</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/5392197.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/69/cover_2b99055856f8f3b1bd9becaa4336a7e9.jpg?1502268972" alt="五十四种孤单"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/5392197.html">五十四种孤单</a></p>
+										<p class="book_author"><span>普玄主编</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/5392197.html">孤寡老人是特殊群体，他们虽然都享有国家的良好福利，但又似乎被社会所遗忘，似乎他们从未在这个社会立足过。事实上，每一位孤寡老人都有着丰富的人生阅历，甚至因为誓要摆脱孤身的命运，他们的阅历更为丰富和令人动容。本书中的54位孤宿老人即是如此，如今他们均已经得到了民政部门的悉心照料，生活舒适安逸，而他们的精神状况则成为相对凸显的问题。从他们的口述中，可以看到他们都有着极为丰富的人生经历，都向往家庭生活、对天伦之乐充满向往，都在遭遇到命运的不公对待后长时间地抗争与奋斗。但“孤寡”似乎有着某种遗传密码，总能在一代代人身上发生，这些孤宿老人的命运与经历，有助于我们更深一步理解孤寡的成因，对如今尚在中青年的人群有着极为宝贵的借鉴意义。
+本书为中国作协、湖北省作协“孤寡老人生存状态调查项目”，旨在通过对福利院等场所的孤宿老人的走访采访，提炼出孤寡的成因，呈现孤宿老人的现状，引发社会各界的高度关注。在老龄化越来越明显的今天，孤宿老人的人生际遇、当下生存和精神状态，是极具社会价值的资料。</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/5388148.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/116/cover_4873d1771e4b68536958c66c23c41ebb.jpg?1495173773" alt="我的阅读与写作"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/5388148.html">我的阅读与写作</a></p>
+										<p class="book_author"><span>梁衡</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/5388148.html">《我的阅读与写作》收录了著名作家梁衡五十年来关于阅读与写作的70篇文章。较为全面的阐述了他的文学创作历程与心得。梁衡在新闻与文学创作方面都是独树一帜，后期创作的政治散文及人物散文善用理性分析和形象表现，因此，作品大多视野宏阔，充满磅礴气势。作品融“大事、大情、大理”于一体，具有强烈的现实感和时代气息。《我的阅读与写作》中的文学研究文章首次结集出版，有着一定的市场号召力。</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/5388144.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/112/cover_61401761ec58f4e3d84a3e1256b6f783.jpg?1495098126" alt="千秋人物"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/5388144.html">千秋人物</a></p>
+										<p class="book_author"><span>梁衡</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/5388144.html">本书精选梁衡最新人物散文50篇，包括对毛泽东、周恩来、彭德怀、张闻天、瞿秋白、方志敏、邓小平、诸葛亮、陶渊明、韩愈、范仲淹、文天祥、柳永、李清照、林则徐、王洛宾、季羡林、赵朴初、吴文季等名人的评点、感悟和思考。梁衡先生为我们讲述了许多不为人知的历史、加上他独到犀利的点评，行文如流水，文字优美，摒弃其他历史书的枯燥乏味，无论是史学专业还是非史学专业皆可拿来一读，老少咸宜，让人受益匪浅。该书采以图配文的编排增加了文本的美感和轻阅读感。</a></p>
+									</div>
+								</li>
+															</ul>
+						</div>
+					</div>
+					<!-- 列表-end -->
+															<!-- page -->
+					<div class="all-s-page">
+												<a class="prev" href="javascript:;">上一页</a>
+						
+								        				        				        		<a href="javascript:;" class="current">1</a>
+		        		<a href="?cate_id=4&amp;amp%3Bnwm=book_pc_0020&amp;vt=4&page=2">2</a>		        		<a href="?cate_id=4&amp;amp%3Bnwm=book_pc_0020&amp;vt=4&page=3">3</a>		        		<a href="?cate_id=4&amp;amp%3Bnwm=book_pc_0020&amp;vt=4&page=4">4</a>		        		<a href="?cate_id=4&amp;amp%3Bnwm=book_pc_0020&amp;vt=4&page=5">5</a>
+		        				        		<a  class="next" href="?cate_id=4&amp;amp%3Bnwm=book_pc_0020&amp;vt=4&page=2">下一页</a>
+		        							</div>
+										<!-- page-end -->
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="spc30"></div>
+
+<div class="sr-foot">
+    <div class="sr-foot-wrap">
+      <div class="sr-foot-main">
+        <p class="sr-business-license"><span>新浪小说在线书城由中文在线提供运营支持</span><a href="http://cms.17k.com/news/182.html" target="_blank">新出网许（京）字045号</a></p>
+        <div class="ft-info"><a href="http://corp.sina.com.cn/chn/">新浪简介</a> ┊ <a href="http://corp.sina.com.cn/eng/">About Sina</a> ┊ <a href="http://emarketing.sina.com.cn/">广告服务</a> ┊ <a href="http://www.sina.com.cn/contactus.html">联系我们</a> ┊ <a href="http://career.sina.com.cn/">诚聘英才</a> ┊ <a href="http://www.sina.com.cn/intro/lawfirm.shtml">网站律师</a> ┊ <a href="http://english.sina.com">SINA English</a> ┊ <a href="https://login.sina.com.cn/signup/signup.php">注册</a> ┊ <a href="http://help.sina.com.cn/">产品答疑</a></div>
+        <p class="ft-copy">Copyright 1996-2017 SINA Corporation, All Rights Reserved</p>
+      </div>
+    </div>
+ </div>
+ 
+ <!-- SUDA_CODE_START -->
+<script type='text/javascript' charset="utf-8">
+
+(function() {
+    var doc = document,
+    wa = doc.createElement('script'),
+    s = doc.getElementsByTagName('script')[0];
+    wa.type = 'text/javascript';
+    wa.charset = 'utf-8';
+    wa.async = true;
+    wa.src = 'http://www.sinaimg.cn/unipro/pub/suda_s_v851c.js';
+    s.parentNode.insertBefore(wa, s);
+})();
+
+</script>
+<!-- SUDA_CODE_END -->
+ <script src="http://vipbookedge.sinaedge.com/static/static/paidRead/assets/js/config.js?v=0.20190125"></script>
+<script src="http://vipbookedge.sinaedge.com/static/static/paidRead/assets/js/require/require.js?v=0.20190125" data-main="base"></script>
+
+</body>
+</html>

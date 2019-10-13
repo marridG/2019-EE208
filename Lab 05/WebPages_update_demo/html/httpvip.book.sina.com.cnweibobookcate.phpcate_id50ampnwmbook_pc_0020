@@ -1,0 +1,387 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>小说阅读推荐--新浪小说</title>
+    <meta name="keywords" content="小说阅读,小说阅读推荐" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="http://vipbookedge.sinaedge.com/static/static/paidRead/assets/css/common.css?v=0.20190125"/>
+	<link rel="stylesheet" type="text/css" href="http://vipbookedge.sinaedge.com/static/static/paidRead/assets/css/list-common.css?v=0.20190125" />
+	<link rel="stylesheet" type="text/css" href="http://vipbookedge.sinaedge.com/static/static/paidRead/assets/css/all-sale.css?v=0.20190125" />
+
+</head>
+<div class="nav">
+    <script type="text/javascript">
+
+var VAR_GLOBAL = {};
+var _cfg = {};
+
+	VAR_GLOBAL['site_static'] = 'http://vipbookedge.sinaedge.com/static/static/';
+	_cfg['static'] =  'http://vipbookedge.sinaedge.com/static/static/';
+	_cfg['uid'] = "0"; 
+	_cfg['i_statbookclieck'] = '/weibobook/ajax/read_count.php';
+    _cfg['i_weibouserinfo'] = '/newcms/i/weibo_userinfo.php';//用户信息
+    _cfg['i_bookshelf'] = '/weibobook/ajax/bookshelf.php';//书架
+ 
+    _cfg['i_checklikes'] = '/ajax/user/checklikes';//关注-点赞数
+    _cfg['i_likesupdate'] = '/ajax/user/likesupdate';//点赞取消赞
+    _cfg['i_action_stat'] = '/weibobook/ajax/stat.php';
+//    _cfg['userSendMsgUrl'] = '/newcms/i/ajax/send_message.php';//发私信
+    _cfg['checkUserSendMsgUrl'] = '/newcms/i/ajax/get_user_log.php';//检测是否发私信
+    _cfg['rechargeChooseUrl'] = '/weibobook/ajax/recharge_choose.php';//获取充值金额
+    _cfg['feedbackUrl'] = '/weibobook/feedback.php';//反馈页
+    _cfg['rechargeUrl'] = '/weibobook/ajax/recharge.php';//充值接口
+</script>
+
+<div class="sr-weibo-top" style="display:none">
+    <div id="weibo_top_public"></div>
+    <script src="http://js.t.sinajs.cn/t4/home/js/public/topInit.js?version=0.0091355821117"></script>
+</div>
+
+
+<div class="WDS_global_nav" id="WDS_TopNav"></div>
+
+<script src="http://vipbookedge.sinaedge.com/static/static/package/WDSTop.js?version=0.20190125"></script>
+	 
+<script type="text/javascript">
+
+
+    var $CONFIG = {
+		
+        name: '',
+        uid: '0',
+        any: '&wvr=4',
+        islogin: 0,
+        icon: '',
+        lang: "zh-cn",
+        verified: "",
+        backurl: "http://weibo.com/login.php?entry=book&url=http://book.weibo.com/",
+        topUserInfo: "http://vip.book.sina.com.cn/weibobook/ajax/top_user_info.php",
+		topCssPath: "http://vipbookedge.sinaedge.com/static/static/write-center/render/assets/css/nav.css?version=0.20190125",
+        verify: "220",
+        entry: "book",
+        top: 1,
+        _wv: '5'
+     
+		
+    };
+    
+    WDSTopGlobal && WDSTopGlobal.init($CONFIG); 
+	
+</script>
+<!--/.WDS_global_nav--></div>
+
+<div class="header">
+
+
+    <div class="wid1000">
+        <div class="header-nav clearfix">
+            <!-- header-logo -->
+            <div class="header-logo">
+                <a href="/weibobook?pos=20001"><h1><img src="http://vipbookedge.sinaedge.com/static/static/paidRead/assets/images/logo-news.png" alt="小说阅读"/></h1></a>
+            </div>
+            <!-- header-seacher -->
+                            <div class="header-seacher">
+                    <input type="text" value="" placeholder="搜索书名作者" />
+                    <span><img src="http://vipbookedge.sinaedge.com/static/static/paidRead/assets/images/search.png" align="middle"></span>
+                </div>
+                    </div>
+    </div>
+    <!-- header-menu -->
+    <div class="header-menu">
+        <div class="wid1000">
+            <ul>
+                <li ><a href="/weibobook?pos=20002">首页</a></li>
+                <li ><h2><span>玄幻小说推荐</span><a href="/weibobook/man.php?pos=20003">男生小说</a></h2></li>
+                <li ><h2><span>言情小说推荐</span><a href="/weibobook/girl.php?pos=20004">女生小说</a></h2></li>
+                <li ><h2><span>出版书籍</span><a href="/weibobook/publish.php?pos=20005">出版图书</a></h2></li>
+                <li ><h2><span>今日限免</span><a href="/weibobook/free.php">今日限免</a></h2></li>
+                <li  ><h2><span>小说推荐排行榜</span><a href="/weibobook/rank.php?pos=20006">排行榜</a></h2></li>
+                <li><h2><span>我要写书</span><a href="http://book.weibo.com/weibobook/userv1/apply_resident_author.php?pos=202001" target="_blank">我要写书</a></h2></li>
+            </ul>
+        </div>
+    </div>
+    <div class="slide_bar">
+        <div class="bookShelf_rt">
+            <a href="javascript:;" target="_blank">我的书架</a>
+        </div>
+        <div class="bookShelf_fl">
+            <a href="http://book.weibo.com/newcms/tp_p4c69t179.html?pos=20032" target="_blank">作者福利</a>
+        </div>
+        <div class="bookShelf_sign">
+            <a href="http://book.weibo.com/newcms/tp_p4c69t200.html?pos=20033" target="_blank">我要签约</a>
+        </div>
+        <div class="bookShelf_download">
+            <a href="JavaScript:;" target="_blank">下载APP
+                <div class="downcode-pic">
+                    <div class="code-warp">
+                        <img src="http://vipbookedge.sinaedge.com/static/static/paidRead/assets/images/s-code-index-1.png">
+                                                <p>扫码下载免费畅读</p>
+                        <span></span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="backToTop">
+            <a href="javascript:;">返回顶部</a>
+        </div>
+        <div class="s-new-opinion">
+            <a href="javascript:;"><i></i>
+                                <p>意见反馈</p></a>
+        </div>
+
+        <!-- 广告位二 -->
+                                                                                                                                                                                                                                                                                                                                                                                        </div>
+</div>	<!-- container -->
+	<div class="container">
+		<div class="wid1000">
+			<!-- banner -->
+			<div class="all-sale ">
+				<!-- left -->
+				<div class="all-s-left fl">
+					<div class="all-fl-title"><a  href="/weibobook/cate.php">作品分类</a></div>
+					<dl>
+						<dt><span>男生</span></dt>
+						<dd>
+                                                            <a  href="?cate_id=1036&w=0&s=0&order=1">都市校园</a>
+                                                            <a  href="?cate_id=1003&w=0&s=0&order=1">玄幻奇幻</a>
+                                                            <a  href="?cate_id=1001&w=0&s=0&order=1">武侠仙侠</a>
+                                                            <a  href="?cate_id=1035&w=0&s=0&order=1">悬疑灵异</a>
+                                                            <a  href="?cate_id=1002&w=0&s=0&order=1">科幻末世</a>
+                                                            <a  href="?cate_id=1031&w=0&s=0&order=1">游戏竞技</a>
+                                                            <a  href="?cate_id=1042&w=0&s=0&order=1">同人小说</a>
+                            						</dd>
+					</dl>
+
+					<dl>
+						<dt><span>女生</span></dt>
+						<dd>
+                                                            <a  href="?cate_id=1006005&w=0&s=0&order=1">穿越重生</a>
+                                                            <a  href="?cate_id=1006003&w=0&s=0&order=1">古风古韵</a>
+                                                            <a  href="?cate_id=1007&w=0&s=0&order=1">浪漫青春</a>
+                                                            <a  href="?cate_id=1006004 &w=0&s=0&order=1">总裁豪门</a>
+                                                            <a  href="?cate_id=1006006&w=0&s=0&order=1">都市情缘</a>
+                                                            <a  href="?cate_id=1006007 &w=0&s=0&order=1">幻想言情</a>
+                                                            <a  href="?cate_id=1043&w=0&s=0&order=1">同人言情</a>
+                            						</dd>
+					</dl>
+
+					<dl>
+						<dt><span>出版</span></dt>
+						<dd>
+                                                            <a class="current" href="?cate_id=50&w=0&s=0&order=1">流行小说</a>
+                                                            <a  href="?cate_id=13&w=0&s=0&order=1">时尚生活</a>
+                                                            <a  href="?cate_id=3&w=0&s=0&order=1">经管励志</a>
+                                                            <a  href="?cate_id=22&w=0&s=0&order=1">社科科普</a>
+                                                            <a  href="?cate_id=4&w=0&s=0&order=1">文学艺术</a>
+                                                            <a  href="?cate_id=48&w=0&s=0&order=1">家庭情感</a>
+                            						</dd>
+					</dl>
+				</div>
+				<!-- right -->
+				<div class="all-s-right fr">
+					<div class="all-fr-title">流行小说</div>
+					<!-- 分类 -->
+					<div class="all-s-nav">
+						<p>
+							<span>作品字数：</span>
+									                      <a  href="?cate_id=50&w=1&s=0&order=1">30万以下</a>
+		                  			                      <a  href="?cate_id=50&w=2&s=0&order=1">30-50万</a>
+		                  			                      <a  href="?cate_id=50&w=3&s=0&order=1">50-100万</a>
+		                  			                      <a  href="?cate_id=50&w=4&s=0&order=1">100-200万</a>
+		                  			                      <a  href="?cate_id=50&w=5&s=0&order=1">200万以上</a>
+		                  							</p>
+
+						<p>
+							<span>作品状态：</span>
+																	                      <a  href="?cate_id=50&w=0&s=1&order=1">已完结</a>
+										                  											                      <a  href="?cate_id=50&w=0&s=2&order=1">连载中</a>
+										                  											                  							</p>
+
+						<p>
+							<span>排序方式：</span>
+									                      <a class="active" href="?cate_id=50&w=0&s=0&order=1">最热</a>
+		                  			                      <a  href="?cate_id=50&w=0&s=0&order=2">最新</a>
+		                  							</p>
+						
+					</div><!-- 分类-end -->
+										<!-- 列表 -->
+					<div class="all-s-list">
+						<div class="book_list">
+							<ul>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/177671.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/7/cover_28e80157ef218bd4b8452ce80bc52c17.jpg" alt="底牌"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/177671.html">底牌</a></p>
+										<p class="book_author"><span>亦客</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/177671.html">混，也是一种生活；混，一定要混得洒脱；混，并不意味着堕落。
+混在官场，混在职场，混在情场，混在地狱的天堂……
+初到新单位，易克赫然发现，女上司竟然是被自己非礼过的绝色美女……</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/108847.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/47/cover_11a5729e241d5ac718b8e1056617f18e.jpg" alt="交易"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/108847.html">交易</a></p>
+										<p class="book_author"><span>亦客</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/108847.html">在欲望的诱惑与利益的驱使下，人与人之间会产生各种不同的交易。
+撒色子组合号码认识了自称小职员的女网友，并在其鼓励下南漂，却浑不知女网友竟然是自己现实中无限倾慕的美女董事长......
+打拼过程中他先后与三位美女董事长相识，并与她们产生了错综复杂、极其微妙的情欲纠结……
+本书让读者淋漓尽致切身地感受到现实社会生活中顺其自然的规则……</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/115380.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/180/cover_4b31c4879c2e5c99b2ab41de038ad89d.jpg" alt="恩宠弃妃冷君王"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/115380.html">恩宠弃妃冷君王</a></p>
+										<p class="book_author"><span>风宸雪</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/115380.html">帝王，在厉兵秣马间，成就霸业；
+嫔妃，在婉转承恩间，征服帝王。
+他，世人景仰的天。所有的嫔妃，曲意逢迎，邀尽恩宠的帝王。
+她，本是亡朝弃妃，后宫的争斗，她不想要，却沦为一枚棋子。</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/5401119.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/31/cover_42e696dd24b84c7a5a92d7952c48c07b.jpg?1523411771" alt="淞沪暗战之挥斩的利剑"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/5401119.html">淞沪暗战之挥斩的利剑</a></p>
+										<p class="book_author"><span>徐晨达</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/5401119.html">本书稿是小说，主要讲述了1941年的上海，时值日美“太平洋战争”全面爆发之前，中共地下党、军统、日本特高课、76号的势力在此汇集，盘根交错。军统上海站行动组组长陆子陵奉命刺杀叛徒董庆锋，不料行动失败，手下士卒损失殆尽。幸得中共地下党“利剑小组”的及时救援方转危为安。经历生死，陆子陵弃暗投明，成为“利剑小组”的新一员。跟随地下党的同志们奇袭宪兵司令部、盗取机密文件、营救被捕同志，与日军宪兵队、特高课斗智斗勇，一次次粉碎了敌特的阴谋。</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/195988.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/148/cover_b069d61a9dde2d42f1dde185760c2ce2.jpg" alt="有多少爱可以重来"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/195988.html">有多少爱可以重来</a></p>
+										<p class="book_author"><span>葡萄架下的小妖</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/195988.html">本书已出版已签约影视
+她的家被小三光顾，偷走的是她最爱男人的心。一次酒醉，她在他的面前，立下了一个宏伟的偷爱计划。谁知酒醒在他床上，该来的终究要来到。抛妻弃子，羞辱的协议，让他出卖了自己的良心换来了如今显赫的地位，同样的错他发誓不能犯第二次，可遇见她后，他不顾一切，无论怎么做终究是错。</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/86297.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/25/cover_247a05f9b535ae99b0f75f55929f2f87.jpg" alt="我在职场的日子"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/86297.html">我在职场的日子</a></p>
+										<p class="book_author"><span>黑暗中的鲨鱼</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/86297.html">职场上求生存，办公室里争名利，金融危机下愈加残酷的生存考验中的职场男女，竞争与合作，对手与友谊，成功与失败，挑战与机遇…… 
+这是我的一段职业生涯的真实记叙，这是把一个普通职员养成“白骨精”的真实历程……
+“我肯定也很渴望能够成为一个在职场上获得成功、拥有炫目光环的女人，所以我也每天都在期待着能够突如其来地得到一次机会，让我崭露头角、异军突起……但是职场就是一座原始森林，每一步都是陷阱和猛兽，只要想迈一步，就会遇到风险，只有畏缩不前一动不动才是最安全的，却也是最没有活力的。所以，必须冒险！”</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/131627.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/43/cover_c49d85e80dab405fadae86843d39dbb6.jpg" alt="凤影重重(全)"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/131627.html">凤影重重(全)</a></p>
+										<p class="book_author"><span>心中有清荷</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/131627.html">灭门之夜，他毁去她的清白，残忍如修罗。当她抽丝剥茧，终于接近真相，却五内俱焚，那个戴青铜面具的恶魔，怎会是他……
+她踏着血泪，一步步走上权力的巅峰，却仍逃不过红鸾帐内，他的无尽掠夺。她在他耳边含恨轻语：“我总会等到杀你那一天。”
+他邪魅低笑：“只怕到了那时，你发现自己早已爱上我。”
+“那我宁可死。”
+爱如黄泉彼岸花，须血堪折……</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/5395185.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/241/cover_ab09c43d2a2bb865b69a910d307ea8e4.jpg?1507707564" alt="大生意人6：针锋"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/5395185.html">大生意人6：针锋</a></p>
+										<p class="book_author"><span>赵之羽</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/5395185.html">在商言商，本是生意人的本份，奈何几千年来，又有谁能真正做到？生意做得越大，受困于各方的擎肘和博弈也就越多，这套夹缝中的“玩法”，不是谁都会玩，也不是谁都玩得起。
+一百五十余年前，帝国的政治时局正值风雨飘摇，商业却开始一步步走向繁盛的*，胡雪岩、乔致庸、盛宣怀、王炽、孟洛川……一批中国历史上著名的大生意人纷纷登场。在这群夺目的商业精英间，*天才、*传奇色彩的，却是个名不见经传的名字：古平原。
+这个后来被《明清商贾奇闻录》尊称为“商王”的年轻人，从贩卖一袋私盐做起，短短数十年里，借势谋局，翻云覆雨，周旋于商帮、政府、买办及三教九流之间，将生意越做越大，直至*后纵横各行各业，通吃政商两界，成为财倾天下的一代首富……其间，进与退，显与藏，顺境与逆袭，阴谋与阳谋，商业手腕与政治心术，人脉运营与处事智慧，一招一式，一言一行，无不将中国生意人几千年来的“玩法”趋于极致。
+翻开《大生意人》，从他的这套“玩法”中，读懂在中国传统政商关系下做生意的至高智慧和隐秘准则。</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/5395184.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/240/cover_97116c66d6955f4715f336c9eee04612.jpg?1507707466" alt="大生意人7：结局"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/5395184.html">大生意人7：结局</a></p>
+										<p class="book_author"><span>赵之羽</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/5395184.html">在商言商，本是生意人的本份，奈何几千年来，又有谁能真正做到？生意做得越大，受困于各方的擎肘和博弈也就越多，这套夹缝中的“玩法”，不是谁都会玩，也不是谁都玩得起。
+一百五十余年前，帝国的政治时局正值风雨飘摇，商业却开始一步步走向繁盛，胡雪岩、乔致庸、盛宣怀、王炽、孟洛川……一批中国历史上著名的大生意人纷纷登场。在这群夺目的商业精英间，颇具传奇色彩的却是个名不见经传的名字：古平原。
+这个后来被《明清商贾奇闻录》尊称为“商王”的年轻人，从贩卖一袋私盐做起，短短数十年里，借势谋局，翻云覆雨，周旋于商帮、政府、买办及三教九流之间，将生意越做越大，直至*后纵横各行各业，通吃政商两界，成为财倾天下的一代首富……其间，进与退，显与藏，顺境与逆袭，阴谋与阳谋，商业手腕与政治心术，人脉运营与处事智慧，一招一式，一言一行，无不将中国生意人几千年来的“玩法”趋于极致。
+翻开《大生意人》，从他的这套“玩法”中，读懂在中国传统政商关系下做生意的至高智慧和隐秘准则。</a></p>
+									</div>
+								</li>
+																<li>
+									<div class="img_box">
+										<a href="/weibobook/book/5424699.html"><img src="http://vipbook.sinaedge.com/bookcover/pics/59/cover_727eb1cfc7d4f4da3d9ad09b7d28e9ce.jpg?1558322188" alt="我和婚姻的战斗"></a>
+									</div>
+									<div class="book_info">
+										<p class="book_name"><a class="a-type-black" href="/weibobook/book/5424699.html">我和婚姻的战斗</a></p>
+										<p class="book_author"><span>姬流觞</span>&nbsp;【已完结】</p>
+										<p class="info">简介：<a href="/weibobook/book/5424699.html">现代独立女性的婚姻价值观：
+活得通透，想得明白；不断改变，重塑自我。
+宁悦的丈夫胡成在她怀孕时出轨，宁悦决定离婚，却发现自己居然没有立身的根本！如果离婚，她可能连基本的谋生能力都没有，更别说小朋友的监护权了！
+宁悦心性沉稳，虽然心如死灰且遭受着产后抑郁症的折磨，她还是努力稳住自己。处于弱势的她，该如何一步一步走出家庭，走向社会？</a></p>
+									</div>
+								</li>
+															</ul>
+						</div>
+					</div>
+					<!-- 列表-end -->
+															<!-- page -->
+					<div class="all-s-page">
+												<a class="prev" href="javascript:;">上一页</a>
+						
+								        				        				        		<a href="javascript:;" class="current">1</a>
+		        		<a href="?cate_id=50&amp;amp%3Bnwm=book_pc_0020&amp;vt=4&page=2">2</a>		        		<a href="?cate_id=50&amp;amp%3Bnwm=book_pc_0020&amp;vt=4&page=3">3</a>		        		<a href="?cate_id=50&amp;amp%3Bnwm=book_pc_0020&amp;vt=4&page=4">4</a>		        		<a href="?cate_id=50&amp;amp%3Bnwm=book_pc_0020&amp;vt=4&page=5">5</a>
+		        				        		<a  class="next" href="?cate_id=50&amp;amp%3Bnwm=book_pc_0020&amp;vt=4&page=2">下一页</a>
+		        							</div>
+										<!-- page-end -->
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="spc30"></div>
+
+<div class="sr-foot">
+    <div class="sr-foot-wrap">
+      <div class="sr-foot-main">
+        <p class="sr-business-license"><span>新浪小说在线书城由中文在线提供运营支持</span><a href="http://cms.17k.com/news/182.html" target="_blank">新出网许（京）字045号</a></p>
+        <div class="ft-info"><a href="http://corp.sina.com.cn/chn/">新浪简介</a> ┊ <a href="http://corp.sina.com.cn/eng/">About Sina</a> ┊ <a href="http://emarketing.sina.com.cn/">广告服务</a> ┊ <a href="http://www.sina.com.cn/contactus.html">联系我们</a> ┊ <a href="http://career.sina.com.cn/">诚聘英才</a> ┊ <a href="http://www.sina.com.cn/intro/lawfirm.shtml">网站律师</a> ┊ <a href="http://english.sina.com">SINA English</a> ┊ <a href="https://login.sina.com.cn/signup/signup.php">注册</a> ┊ <a href="http://help.sina.com.cn/">产品答疑</a></div>
+        <p class="ft-copy">Copyright 1996-2017 SINA Corporation, All Rights Reserved</p>
+      </div>
+    </div>
+ </div>
+ 
+ <!-- SUDA_CODE_START -->
+<script type='text/javascript' charset="utf-8">
+
+(function() {
+    var doc = document,
+    wa = doc.createElement('script'),
+    s = doc.getElementsByTagName('script')[0];
+    wa.type = 'text/javascript';
+    wa.charset = 'utf-8';
+    wa.async = true;
+    wa.src = 'http://www.sinaimg.cn/unipro/pub/suda_s_v851c.js';
+    s.parentNode.insertBefore(wa, s);
+})();
+
+</script>
+<!-- SUDA_CODE_END -->
+ <script src="http://vipbookedge.sinaedge.com/static/static/paidRead/assets/js/config.js?v=0.20190125"></script>
+<script src="http://vipbookedge.sinaedge.com/static/static/paidRead/assets/js/require/require.js?v=0.20190125" data-main="base"></script>
+
+</body>
+</html>

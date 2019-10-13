@@ -1,0 +1,1279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="baidu-tc-cerfication" content="a113dffc55af0edf6e74985c477651ca" />
+<title>汽车媒体社区</title>
+<link rel="stylesheet" type="text/css" href="css/weinews_style.css?v=0.4" />
+<link rel="stylesheet" type="text/css" href="css/feed_style.css?v=0.4" />
+<link rel="stylesheet" type="text/css" href="css/pop_style.css?v=0.4" />
+<!--new nav css-->
+<link type="text/css" rel="stylesheet" href="http://auto.sina.com.cn/683/2012/1221/nh_reset.css" />
+<link type="text/css" rel="stylesheet" href="http://auto.sina.com.cn/683/2012/1221/new_header.css" />
+<!--new nav css end-->
+<script type="text/javascript" src="/js/jquery.js?v=0.4"></script>
+<script type="text/javascript" src="/js/jquery.lazyload.js?v=0.4"></script>
+</head>
+<body style="position: relative;">
+<div class="wn_pop_cover"
+	style="background: #000; position: absolute; opacity: 0.3; filter: alpha(opacity = 30); display: none; width: 100%; z-index: 98;"></div>
+<!-- PUBLIC TOP -->
+<!--pubdt: 2013-01-21 15:12:39-->
+<div id="sa_top">
+        <div class="sa_w">
+            <ul class="nav_left">
+                <li class="h_link h_link2"><a href="http://auto.sina.com.cn/" target="_blank" title="新浪汽车"><img src="http://i2.sinaimg.cn/qc/2012/1221/sa_logo2.png" /></a></li>
+                <li class="c_inf"><div class="c_inf_bg">全国</div><a href="#" target="_blank" class="sa_native"></a> <a href="#" target="_blank" class="sa_nearby"></a> <a href="#" target="_blank">共<i class="sa_city_num"></i>个</a></li>
+                <li class="sa_guide">导航</li>
+                <li class="mobile_links">手机/iPad</li>
+            </ul>
+            <ul class="nav_right">
+                <li class="sa_set"></li>
+                <li class="sa_app">汽车应用</li>
+                <li class="sa_reg"><a href="https://login.sina.com.cn/signup/signup.php">注册</a></li>
+                <li class="sa_login"><a href="#">登录</a></li>
+                <li class="sa_user_menu" style="display:none;"><i class="sa_newlogin_name"></i></li>
+                <li class="sa_user_inf" style="display:none;"><img src="" /><div class="sa_msg fl no_msg"><span></span></div></li>
+            </ul>
+        </div>
+    </div>
+
+<!-- 用户信息弹层 -->
+<div class="sa_user_menu_pop" style="display:none;">
+    <ul>
+        <li style="display:none;"><a href="#" target="_blank">我的车<span>(0)</span></a></li>
+        <li style="display:none;"><a href="#" target="_blank">我喜欢的<span>(0)</span></a></li>
+        <li><a class="my_luntan" href="#" target="_blank">我的论坛</a></li>
+        <li class="sa_last"><a target="_blank" href="http://qa.auto.sina.com.cn/">我的问答</a></li>
+    </ul>
+    <ul style="border-top-width:0;">
+        <li><a href="http://weibo.com/" target="_blank">我的微博</a></li>
+        <li class="sa_last"><a href="http://weiba.weibo.com/qicheba" target="_blank">我的微吧</a></li>
+    </ul>
+    <div class="sa_cover2"></div>
+</div>
+
+<!-- 用户服务弹层 -->
+<div class="sa_user_inf_pop" style="display:none;">
+    <dl>
+        <dt>问答通知</dt>
+        <dd><a href="http://qa.auto.sina.com.cn/" target="_blank"><span class="sa_qa_notice"></span>条新消息</a></dd>
+    </dl>
+    <dl class="sa_msg_notice">
+        <dt>论坛通知</dt>
+        <dd><a href="http://bbs.auto.sina.com.cn/pm.php?folder=inbox" target="_blank"><span class="msg_1"></span>条短消息</a></dd>
+        <dd><a href="http://bbs.auto.sina.com.cn/pm.php?folder=inbox&type=1" target="_blank"><span class="msg_2"></span>条系统消息</a></dd>
+        <dd><a href="http://bbs.auto.sina.com.cn/pm.php?folder=inbox&type=2" target="_blank"><span class="msg_3"></span>帖子被回复</a></dd>
+        <dd class="sa_last"><a href="http://bbs.auto.sina.com.cn/pm.php?folder=inbox&type=3" target="_blank"><span class="msg_4"></span>帖子被评分</a></dd>
+    </dl>
+    <div class="no_notice">暂无消息提示</div>
+    <div class="sa_cover2"></div>
+</div>
+
+<!-- 地方站弹层 -->
+<div class="sa_city_box" style="display:none">
+    <dl><dt>华北</dt><dd><a title="北京" target="_blank" href="http://bj.auto.sina.com.cn/">北京</a>|<a title="天津" target="_blank" href="http://tj.auto.sina.com.cn/">天津</a>|<a title="石家庄" target="_blank" href="http://sjz.auto.sina.com.cn/">石家庄</a>|<a title="济南" target="_blank" href="http://jn.auto.sina.com.cn/">济南</a>|<a title="太原" target="_blank" href="http://ty.auto.sina.com.cn/">太原</a>|<a title="呼和浩特" target="_blank" href="http://auto.sina.com.cn/city/neimenggu/">呼和浩特</a>|<a title="青岛" target="_blank" href="http://qd.auto.sina.com.cn/">青岛</a>|<a title="烟台" target="_blank" href="http://yt.auto.sina.com.cn/">烟台</a>|<a title="淄博" target="_blank" href="http://zb.auto.sina.com.cn/">淄博</a>|<a title="保定" target="_blank" href="http://bd.auto.sina.com.cn/">保定</a><br><a title="唐山" target="_blank" href="http://ts.auto.sina.com.cn/">唐山</a>|<a title="廊坊" target="_blank" href="http://lf.auto.sina.com.cn/">廊坊</a>|<a title="沧州" target="_blank" href="http://czh.auto.sina.com.cn/">沧州</a>|<a title="衡水" target="_blank" href="http://hsh.auto.sina.com.cn/">衡水</a>|<a title="秦皇岛" target="_blank" href="http://qhd.auto.sina.com.cn/">秦皇岛</a>|<a title="承德" target="_blank" href="http://chd.auto.sina.com.cn/">承德</a>|<a title="张家口" target="_blank" href="http://zjk.auto.sina.com.cn/">张家口</a>|<a title="东营" target="_blank" href="http://dy.auto.sina.com.cn/">东营</a>|<a title="威海" target="_blank" href="http://weihai.auto.sina.com.cn/">威海</a>|<a title="潍坊" target="_blank" href="http://wf.auto.sina.com.cn/">潍坊</a><br><a title="阳泉" target="_blank" href="http://yq.auto.sina.com.cn/">阳泉</a>|<a title="临沂" target="_blank" href="http://linyi.auto.sina.com.cn/">临沂</a>|<a title="晋城" target="_blank" href="http://jc.auto.sina.com.cn/">晋城</a>|<a title="邢台" target="_blank" href="http://xingtai.auto.sina.com.cn/">邢台</a>|<a title="邯郸" target="_blank" href="http://hd.auto.sina.com.cn/">邯郸</a>|<a title="济宁" target="_blank" href="http://jining.auto.sina.com.cn/">济宁</a></dd></dl><dl><dt>华南</dt><dd><a title="广州" target="_blank" href="http://gz.auto.sina.com.cn/">广州</a>|<a title="福州" target="_blank" href="http://fz.auto.sina.com.cn/">福州</a>|<a title="厦门" target="_blank" href="http://xm.auto.sina.com.cn/">厦门</a>|<a title="海口" target="_blank" href="http://auto.sina.com.cn/city/haikou/">海口</a>|<a title="南昌" target="_blank" href="http://nc.auto.sina.com.cn/">南昌</a>|<a title="深圳" target="_blank" href="http://sz.auto.sina.com.cn/">深圳</a>|<a title="东莞" target="_blank" href="http://auto.sina.com.cn/city/dongguan/">东莞</a>|<a title="佛山" target="_blank" href="http://auto.sina.com.cn/city/foshan/">佛山</a>|<a title="南宁" target="_blank" href="http://nn.auto.sina.com.cn/">南宁</a>|<a title="泉州" target="_blank" href="http://qz.auto.sina.com.cn/">泉州</a><br><a title="龙岩" target="_blank" href="http://longyan.auto.sina.com.cn/">龙岩</a>|<a title="三明" target="_blank" href="http://sanming.auto.sina.com.cn/">三明</a>|<a title="漳州" target="_blank" href="http://zhangzhou.auto.sina.com.cn/">漳州</a>|<a title="柳州" target="_blank" href="http://liuzhou.auto.sina.com.cn/">柳州</a>|<a title="莆田" target="_blank" href="http://pt.auto.sina.com.cn/">莆田</a></dd></dl><dl><dt>华东</dt><dd><a title="上海" target="_blank" href="http://sh.auto.sina.com.cn/">上海</a>|<a title="杭州" target="_blank" href="http://hz.auto.sina.com.cn/">杭州</a>|<a title="南京" target="_blank" href="http://nj.auto.sina.com.cn/">南京</a>|<a title="合肥" target="_blank" href="http://hf.auto.sina.com.cn/">合肥</a>|<a title="苏州" target="_blank" href="http://szh.auto.sina.com.cn/">苏州</a>|<a title="无锡" target="_blank" href="http://wx.auto.sina.com.cn/">无锡</a>|<a title="徐州" target="_blank" href="http://xz.auto.sina.com.cn/">徐州</a>|<a title="常州" target="_blank" href="http://cz.auto.sina.com.cn/">常州</a>|<a title="连云港" target="_blank" href="http://lyg.auto.sina.com.cn/">连云港</a>|<a title="温州" target="_blank" href="http://wz.auto.sina.com.cn/">温州</a><br><a title="宁波" target="_blank" href="http://nb.auto.sina.com.cn/">宁波</a>|<a title="金华" target="_blank" href="http://jh.auto.sina.com.cn/">金华</a>|<a title="绍兴" target="_blank" href="http://sx.auto.sina.com.cn/">绍兴</a>|<a title="台州" target="_blank" href="http://tz.auto.sina.com.cn/">台州</a>|<a title="嘉兴" target="_blank" href="http://jx.auto.sina.com.cn/">嘉兴</a>|<a title="湖州" target="_blank" href="http://huzhou.auto.sina.com.cn/">湖州</a>|<a title="南通" target="_blank" href="http://nt.auto.sina.com.cn/">南通</a>|<a title="镇江" target="_blank" href="http://zj.auto.sina.com.cn/">镇江</a>|<a title="舟山" target="_blank" href="http://zs.auto.sina.com.cn/">舟山</a>|<a title="扬州" target="_blank" href="http://yz.auto.sina.com.cn/">扬州</a><br><a title="泰州" target="_blank" href="http://taizhou.auto.sina.com.cn/">泰州</a></dd></dl><dl><dt>华中</dt><dd><a title="长沙" target="_blank" href="http://cs.auto.sina.com.cn/">长沙</a>|<a title="武汉" target="_blank" href="http://wh.auto.sina.com.cn/">武汉</a>|<a title="郑州" target="_blank" href="http://zz.auto.sina.com.cn/">郑州</a>|<a title="南阳" target="_blank" href="http://ny.auto.sina.com.cn/">南阳</a>|<a title="洛阳" target="_blank" href="http://ly.auto.sina.com.cn/">洛阳</a>|<a title="新乡" target="_blank" href="http://xx.auto.sina.com.cn/">新乡</a>|<a title="宜昌" target="_blank" href="http://yc.auto.sina.com.cn/">宜昌</a>|<a title="襄阳" target="_blank" href="http://xy.auto.sina.com.cn/">襄阳</a>|<a title="黄石" target="_blank" href="http://hs.auto.sina.com.cn/">黄石</a>|<a title="荆州" target="_blank" href="http://jz.auto.sina.com.cn/">荆州</a><br><a title="孝感" target="_blank" href="http://xg.auto.sina.com.cn/">孝感</a>|<a title="恩施" target="_blank" href="http://es.auto.sina.com.cn/">恩施</a>|<a title="湘潭" target="_blank" href="http://xt.auto.sina.com.cn/">湘潭</a>|<a title="株洲" target="_blank" href="http://zhuzhou.auto.sina.com.cn/">株洲</a>|<a title="十堰" target="_blank" href="http://shiyan.auto.sina.com.cn/">十堰</a></dd></dl><dl><dt>西南</dt><dd><a title="成都" target="_blank" href="http://cd.auto.sina.com.cn/">成都</a>|<a title="重庆" target="_blank" href="http://cq.auto.sina.com.cn/">重庆</a>|<a title="昆明" target="_blank" href="http://km.auto.sina.com.cn/">昆明</a>|<a title="贵阳" target="_blank" href="http://gy.auto.sina.com.cn/">贵阳</a>|<a title="绵阳" target="_blank" href="http://my.auto.sina.com.cn/">绵阳</a>|<a title="南充" target="_blank" href="http://nanchong.auto.sina.com.cn/">南充</a>|<a title="乐山" target="_blank" href="http://ls.auto.sina.com.cn/">乐山</a>|<a title="泸州" target="_blank" href="http://luzhou.auto.sina.com.cn/">泸州</a>|<a title="遵义" target="_blank" href="http://zy.auto.sina.com.cn/">遵义</a>|<a title="曲靖" target="_blank" href="http://qj.auto.sina.com.cn/">曲靖</a></dd></dl><dl><dt>西北</dt><dd><a title="西安" target="_blank" href="http://xa.auto.sina.com.cn/">西安</a>|<a title="兰州" target="_blank" href="http://lz.auto.sina.com.cn/">兰州</a>|<a title="银川" target="_blank" href="http://yinchuan.auto.sina.com.cn/">银川</a>|<a title="乌鲁木齐" target="_blank" href="http://auto.sina.com.cn/city/wlmq/">乌鲁木齐</a>|<a title="西宁" target="_blank" href="http://xn.auto.sina.com.cn/">西宁</a></dd></dl><dl><dt>东北</dt><dd><a title="沈阳" target="_blank" href="http://sy.auto.sina.com.cn/">沈阳</a>|<a title="哈尔滨" target="_blank" href="http://heb.auto.sina.com.cn/">哈尔滨</a>|<a title="长春" target="_blank" href="http://cc.auto.sina.com.cn/">长春</a>|<a title="大连" target="_blank" href="http://dl.auto.sina.com.cn/">大连</a>|<a title="鞍山" target="_blank" href="http://as.auto.sina.com.cn/">鞍山</a>|<a title="大庆" target="_blank" href="http://dq.auto.sina.com.cn/">大庆</a>|<a title="锦州" target="_blank" href="http://jinzhou.auto.sina.com.cn/">锦州</a>|<a title="营口" target="_blank" href="http://yk.auto.sina.com.cn/">营口</a>|<a title="佳木斯" target="_blank" href="http://jms.auto.sina.com.cn/">佳木斯</a></dd></dl><div class="sa_cover2"></div><iframe class="sa_cover_ifr" scrolling="no" frameborder="0" style=""></iframe>
+</div>
+
+<!-- 导航弹层 -->
+<div class="sa_guide_pop" style="display:none;">
+   <p>
+   <strong><a href="http://auto.sina.com.cn/news/" target="_blank">行业</a></strong><i>|</i>
+   <strong><a href="http://auto.sina.com.cn/newcar/" target="_blank">新车</a></strong><i>|</i>
+   <strong><a href="http://auto.sina.com.cn/review/" target="_blank">评测</a></strong><i>|</i>
+   <strong><a href="http://auto.sina.com.cn/guide/" target="_blank">导购</a></strong><i>|</i>
+   <strong><a href="http://photo.auto.sina.com.cn" target="_blank">图片</a></strong><i>|</i>
+   <a href="http://auto.sina.com.cn/video/" target="_blank">视频</a></strong><i>|</i>
+   <strong><a href="http://data.auto.sina.com.cn/baoyang/" target="_blank">养护</a></strong><i>|</i>
+   <strong><a href="http://auto.sina.com.cn/ultratune/" target="_blank">改装</a></strong>
+   </p>
+    <p><strong><a href="http://t.auto.sina.com.cn" target="_blank">微博</a></strong><i>|</i>
+    <strong><a href="http://weiba.weibo.com/qicheba" target="_blank">微吧</a></strong><i>|</i>
+    <strong><a href="http://auto.sina.com.cn/user/" target="_blank">论坛</a></strong><i>|</i>
+    <strong><a href="http://auto.sina.com.cn/driving/" target="_blank">自驾</a></strong><i>|</i>
+    <strong><a href="http://model.auto.sina.com.cn " target="_blank">美女</a></strong><i>|</i>
+    <a href="http://blog.sina.com.cn/lm/auto/" target="_blank">博客</a></strong>
+    </p>
+    <p style="background:none;"><strong><a href="http://data.auto.sina.com.cn" target="_blank">车型大全&emsp;</a></strong><a href="http://data.auto.sina.com.cn/car_comment/" target="_blank">口碑&emsp;</a><a href="http://data.auto.sina.com.cn/oil_use/" target="_blank">油耗&emsp;</a><a href="http://data.auto.sina.com.cn/xlsjk/" target="_blank">销量</a><i>|</i><strong><a href="http://dealer.auto.sina.com.cn/price/" target="_blank">报价&emsp;</a></strong><a href="http://data.auto.sina.com.cn/kjt" target="_blank">砍价团</a><i>|</i><strong><a href="http://dealer.auto.sina.com.cn/dealer/" target="_blank">经销商&emsp;</a></strong><a href="http://supports.auto.sina.com.cn/trade/index.php" target="_blank">地图</a><i>|</i><strong><a href="http://auto.sina.com.cn/service/" target="_blank">用车&emsp;</a></strong><a href="http://data.auto.sina.com.cn/luntai/" target="_blank">轮胎&emsp;</a><a href="http://data.auto.sina.com.cn/jiyou/" target="_blank">机油</a></p>
+    <div class="sa_cover2"></div>
+</div>
+
+<!-- 移动端弹层 -->
+<div class="mobile_links_pop" style="display:none;">
+    <ul>
+        <li class="h_cur">
+            <a href="http://auto.sina.com.cn/iphone/iauto/" target="_blank"><img src="http://i3.sinaimg.cn/qc/2013/0121/aicar.jpg" /></a>
+            <div class="mobile_inf">
+                <a href="http://auto.sina.com.cn/iphone/iauto/" target="_blank"><strong>爱汽车</strong></a>
+                <p><a href="http://auto.sina.com.cn/iphone/iauto/" target="_blank">iPhone</a> / <a href="http://auto.sina.com.cn/android/iauto/" target="_blank">Android</a></p>
+            </div>
+        </li>
+        <li class="h_cur">
+            <a href="http://auto.sina.com.cn/iphone/autogallery/" target="_blank"><img src="http://i2.sinaimg.cn/qc/2013/0121/ico_autogallery.jpg" /></a>
+            <div class="mobile_inf">
+                <a href="http://auto.sina.com.cn/iphone/autogallery/" target="_blank"><strong>汽车图片</strong></a>
+                <p><a href="http://auto.sina.com.cn/iphone/autogallery/" target="_blank">iPhone</a> / <a href="http://auto.sina.com.cn/android/autogallery/" target="_blank">Android</a> / <a href="http://auto.sina.com.cn/ipad/autogallery/ " target="_blank">iPad</a></p>
+            </div>
+        </li>
+        <li class="h_cur">
+            <a href="http://auto.sina.com.cn/iphone/autoshow/" target="_blank"><img src="http://i1.sinaimg.cn/qc/2013/0121/autoshow.jpg" /></a>
+            <div class="mobile_inf">
+                <a href="http://auto.sina.com.cn/iphone/autoshow/" target="_blank"><strong>掌上车展</strong></a>
+                <p><a href="http://auto.sina.com.cn/iphone/autoshow/" target="_blank">iPhone</a> / <a href="http://auto.sina.com.cn/android/autoshow/" target="_blank">Android</a></p>
+            </div>
+        </li>
+        <li class="h_cur">
+            <a href="http://auto.sina.com.cn/iphone/imap/" target="_blank"><img src="http://i1.sinaimg.cn/qc/2013/0121/aicarmap.jpg" /></a>
+            <div class="mobile_inf">
+                <a href="http://auto.sina.com.cn/iphone/imap/" target="_blank"><strong>爱车地图</strong></a>
+                <p><a href="http://auto.sina.com.cn/iphone/imap/" target="_blank">iPhone</a> / <a href="http://auto.sina.com.cn/android/imap/" target="_blank">Android</a> </p>
+            </div>
+        </li>
+        <li class="h_cur">
+            <a href="http://auto.sina.com.cn/iphone/news/" target="_blank"><img src="http://i1.sinaimg.cn/qc/2013/0121/autonews.jpg" /></a>
+            <div class="mobile_inf">
+                <a href="http://auto.sina.com.cn/iphone/news/" target="_blank"><strong>新浪汽车新闻</strong></a>
+                <p><a href="http://auto.sina.com.cn/iphone/news/" target="_blank">iPhone</a></p>
+            </div>
+        </li>
+        <li class="h_cur">
+            <a href="http://auto.sina.com.cn/iphone/autoid/" target="_blank"><img src="http://i1.sinaimg.cn/qc/2013/0121/autoid.jpg" /></a>
+            <div class="mobile_inf">
+                <a href="http://auto.sina.com.cn/iphone/autoid/" target="_blank"><strong>汽车身份证</strong></a>
+                <p><a href="http://auto.sina.com.cn/iphone/autoid/" target="_blank">iPhone</a> / <a href="http://auto.sina.com.cn/android/autoid/ " target="_blank">Android</a></p>
+            </div>
+        </li>
+        <li class="mobile_lit"><a href="http://auto.sina.com.cn/wap/" class="wap_link" target="_blank">新浪汽车wap版</a></li>
+        <li class="mobile_lit"><a href="http://auto.sina.com.cn/ipad/" class="ipad_link" target="_blank">新浪汽车iPad链接</a></li>
+    </ul>
+    <div class="sa_cover2"></div>
+</div>
+
+<!-- 设置按钮弹层 -->
+<div class="set_pop" style="display:none;">
+    <ul class="clearfix">
+        <li><a href="http://login.sina.com.cn/member/my.php" target="_blank" class="account_set">账号设置</a></li>
+        <li style="display:none;"><a href="#" target="_blank" class="msg_set2">消息设置</a></li>
+        <li><a href="https://login.sina.com.cn/sso/logout.php" class="sa_log_out">退出</a></li>
+    </ul>
+    <div class="sa_cover2"></div>
+</div>
+
+<!-- 应用弹层 -->
+<div class="sa_app_pop" style="display:none;">
+    <dl style="margin-right:20px;" class="clearfix">
+        <!--<dt style="display:none;">我的应用</dt>-->
+        <dd><a href="http://data.auto.sina.com.cn/yangche/myOil.php" target="_blank">油耗记录</a></dd>
+        <dd><a href="http://auto.sina.com.cn/inquiry/index.shtml" target="_blank">违章查询
+</a></dd>
+        <dd><a href="http://supports.auto.sina.com.cn/trade/index.php" target="_blank">经销商地图</a></dd>
+        <dd><a href="http://data.auto.sina.com.cn/complaint2012/index.php" target="_blank">投诉平台</a></dd>
+    </dl>
+    <dl>
+        <!--<dt style="display:none;">更多应用</dt>-->
+        <dd><a href="http://data.auto.sina.com.cn/yangche/showinfo.php" target="_blank">费用记录</a></dd>
+        <dd><a href="http://map.tools.sina.com.cn/index.php" target="_blank">路况查询</a></dd>
+        <dd><a href="http://auto.sina.com.cn/insurances/index.shtml" target="_blank">车险计算</a></dd>
+    </dl>
+    <div class="sa_cover2"></div>
+</div>
+<!-- PUBLICK TOP END -->
+
+<!-- HEADER -->
+<div class="header">
+<div class="w"><a href="http://weinews.auto.sina.com.cn" class="logo"><img
+	src="images/wn_logo.png" title="微汽车.媒体"></a>
+</div>
+</div>
+<!-- HEADER END --><div class="sec w clearfix">
+<div class="main"><div class="photo_wall">
+	<div class="photos">
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tp1.sinaimg.cn/1634861800/50/1281531645/1" src_tip="http://tp1.sinaimg.cn/1634861800/180/1281531645/1" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/u/1634861800" target="_blank">唐柳杨</a>
+			        </div>
+			    </td>
+			    			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tp2.sinaimg.cn/1882539621/50/1293022113/1" src_tip="http://tp2.sinaimg.cn/1882539621/180/1293022113/1" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/u/1882539621" target="_blank">许军</a>
+			        </div>
+			    </td>
+			    			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tva4.sinaimg.cn/crop.0.0.180.180.50/67ce5c7djw1e8qgp5bmzyj2050050aa8.jpg" src_tip="http://tva4.sinaimg.cn/crop.0.0.180.180.180/67ce5c7djw1e8qgp5bmzyj2050050aa8.jpg" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/weedlx" target="_blank">李骁</a>
+			        </div>
+			    </td>
+			    			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tp2.sinaimg.cn/1344906257/50/1251877501/1" src_tip="http://tp2.sinaimg.cn/1344906257/180/1251877501/1" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/u/1344906257" target="_blank">刘承重</a>
+			        </div>
+			    </td>
+			    			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tp4.sinaimg.cn/1679013335/50/1296622925/1" src_tip="http://tp4.sinaimg.cn/1679013335/180/1296622925/1" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/williambinli" target="_blank">李斌</a>
+			        </div>
+			    </td>
+			    			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tp1.sinaimg.cn/2609714824/50/5618902227/0" src_tip="http://tp1.sinaimg.cn/2609714824/180/5618902227/0" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/u/2609714824" target="_blank">林晶</a>
+			        </div>
+			    </td>
+			    			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tva4.sinaimg.cn/crop.0.0.180.180.50/7120e1e6jw1e8qgp5bmzyj2050050aa8.jpg" src_tip="http://tva4.sinaimg.cn/crop.0.0.180.180.180/7120e1e6jw1e8qgp5bmzyj2050050aa8.jpg" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/u/1897980390" target="_blank">庄华</a>
+			        </div>
+			    </td>
+			    			    						    			    <td colspan="3" rowspan="3" class="p_big" url="http://weibo.com/u/1095671594">
+			        <div style="position: relative;">
+			            <img class="largeImage" src="http://tp3.sinaimg.cn/1095671594/180/5597655881/1" src_tip="http://tp3.sinaimg.cn/1095671594/180/5597655881/1">
+			            <div class="img_bg"></div>
+			            <a href="javascript:void(0);">岳伟</a>
+			        </div>
+			    </td>
+			    			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tp3.sinaimg.cn/1410901894/50/5653911457/1" src_tip="http://tp3.sinaimg.cn/1410901894/180/5653911457/1" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/u/1410901894" target="_blank">刘啸峰</a>
+			        </div>
+			    </td>
+			    			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tp2.sinaimg.cn/1449714077/50/1283203993/1" src_tip="http://tp2.sinaimg.cn/1449714077/180/1283203993/1" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/menguangyuan" target="_blank">门光远</a>
+			        </div>
+			    </td>
+			    			    			    </tr><tr>
+			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tva2.sinaimg.cn/crop.0.0.511.511.50/681318c1jw8f1cfpm2x6sj20e70e8dg9.jpg" src_tip="http://tva2.sinaimg.cn/crop.0.0.511.511.180/681318c1jw8f1cfpm2x6sj20e70e8dg9.jpg" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/339038789" target="_blank">刘林</a>
+			        </div>
+			    </td>
+			    			    						    			    <td colspan="3" rowspan="3" class="p_big" url="http://weibo.com/u/2693016871">
+			        <div style="position: relative;">
+			            <img class="largeImage" src="http://tp4.sinaimg.cn/2693016871/180/22872405704/1" src_tip="http://tp4.sinaimg.cn/2693016871/180/22872405704/1">
+			            <div class="img_bg"></div>
+			            <a href="javascript:void(0);">李岩</a>
+			        </div>
+			    </td>
+			    			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tp3.sinaimg.cn/1063939434/50/1283203437/0" src_tip="http://tp3.sinaimg.cn/1063939434/180/1283203437/0" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/xq0755" target="_blank">冰糖杨梅</a>
+			        </div>
+			    </td>
+			    			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tp2.sinaimg.cn/1850771921/50/5693399479/0" src_tip="http://tp2.sinaimg.cn/1850771921/180/5693399479/0" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/liuxu1015" target="_blank">刘旭</a>
+			        </div>
+			    </td>
+			    			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tva4.sinaimg.cn/crop.0.0.640.640.50/477d824bjw8epqmxv2xjvj20hs0hs75e.jpg" src_tip="http://tva4.sinaimg.cn/crop.0.0.640.640.180/477d824bjw8epqmxv2xjvj20hs0hs75e.jpg" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/geguangan" target="_blank">戈广安</a>
+			        </div>
+			    </td>
+			    			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tp1.sinaimg.cn/1150143284/50/40038951704/1" src_tip="http://tp1.sinaimg.cn/1150143284/180/40038951704/1" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/yanfei999" target="_blank">张雁飞</a>
+			        </div>
+			    </td>
+			    			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tp2.sinaimg.cn/2052929957/50/5596420067/1" src_tip="http://tp2.sinaimg.cn/2052929957/180/5596420067/1" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/u/2052929957" target="_blank">张海军</a>
+			        </div>
+			    </td>
+			    			    			    </tr><tr>
+			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tva3.sinaimg.cn/crop.0.0.640.640.50/5716f2d9jw8f3q9g01v6bj20hs0hsq3e.jpg" src_tip="http://tva3.sinaimg.cn/crop.0.0.640.640.180/5716f2d9jw8f3q9g01v6bj20hs0hsq3e.jpg" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/huangbabe" target="_blank">黄少华</a>
+			        </div>
+			    </td>
+			    			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tp4.sinaimg.cn/1428106211/50/1300908100/1" src_tip="http://tp4.sinaimg.cn/1428106211/180/1300908100/1" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/u/1428106211" target="_blank">江昭融</a>
+			        </div>
+			    </td>
+			    			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tp4.sinaimg.cn/2757448695/50/5635203439/1" src_tip="http://tp4.sinaimg.cn/2757448695/180/5635203439/1" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/chenmutu" target="_blank">Moto</a>
+			        </div>
+			    </td>
+			    			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tp4.sinaimg.cn/2169890295/50/5624377644/1" src_tip="http://tp4.sinaimg.cn/2169890295/180/5624377644/1" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/u/2169890295" target="_blank">唐辉</a>
+			        </div>
+			    </td>
+			    			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tva3.sinaimg.cn/crop.0.0.205.205.50/53e8765djw1eytgkarbavj205q05r0sy.jpg" src_tip="http://tva3.sinaimg.cn/crop.0.0.205.205.180/53e8765djw1eytgkarbavj205q05r0sy.jpg" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/zhangwx" target="_blank">文娴-DeCulture</a>
+			        </div>
+			    </td>
+			    			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tp3.sinaimg.cn/2216922994/50/5604943837/1" src_tip="http://tp3.sinaimg.cn/2216922994/180/5604943837/1" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/u/2216922994" target="_blank">曹辉</a>
+			        </div>
+			    </td>
+			    			    			    </tr><tr>
+			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tva1.sinaimg.cn/crop.0.0.180.180.50/53725009jw1e8qgp5bmzyj2050050aa8.jpg" src_tip="http://tva1.sinaimg.cn/crop.0.0.180.180.180/53725009jw1e8qgp5bmzyj2050050aa8.jpg" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/asusu" target="_blank">苏雨农</a>
+			        </div>
+			    </td>
+			    			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tp2.sinaimg.cn/274633545/50/5676951241/1" src_tip="http://tp2.sinaimg.cn/274633545/180/5676951241/1" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/uc274633545" target="_blank">黄春棉</a>
+			        </div>
+			    </td>
+			    			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tp2.sinaimg.cn/1714070101/50/5723174754/1" src_tip="http://tp2.sinaimg.cn/1714070101/180/5723174754/1" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/leclercliu" target="_blank">刘洋</a>
+			        </div>
+			    </td>
+			    			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tva4.sinaimg.cn/crop.0.0.180.180.50/5959d952jw1e8qgp5bmzyj2050050aa8.jpg" src_tip="http://tva4.sinaimg.cn/crop.0.0.180.180.180/5959d952jw1e8qgp5bmzyj2050050aa8.jpg" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/yanyupeng" target="_blank">颜宇鹏</a>
+			        </div>
+			    </td>
+			    			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tp4.sinaimg.cn/1071352747/50/1283269077/1" src_tip="http://tp4.sinaimg.cn/1071352747/180/1283269077/1" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/xkblc" target="_blank">李村</a>
+			        </div>
+			    </td>
+			    			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tp4.sinaimg.cn/1879241163/50/5710131386/1" src_tip="http://tp4.sinaimg.cn/1879241163/180/5710131386/1" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/u/1879241163" target="_blank">王锋</a>
+			        </div>
+			    </td>
+			    			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tp2.sinaimg.cn/1761886885/50/1277308429/1" src_tip="http://tp2.sinaimg.cn/1761886885/180/1277308429/1" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/u/1761886885" target="_blank">贾罗威</a>
+			        </div>
+			    </td>
+			    			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tp2.sinaimg.cn/1644243817/50/22843780297/1" src_tip="http://tp2.sinaimg.cn/1644243817/180/22843780297/1" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/mjun" target="_blank">马小愚</a>
+			        </div>
+			    </td>
+			    			    						    			    <td>
+			        <div style="position: relative;">
+			            <img src="http://tp2.sinaimg.cn/1925023513/50/5615211989/1" src_tip="http://tp2.sinaimg.cn/1925023513/180/5615211989/1" onclick="WEINEWS.swap2LargeImg(this);">
+			            <div class="img_bg"></div>
+			            <a href="http://weibo.com/u/1925023513" target="_blank">娄鑫</a>
+			        </div>
+			    </td>
+			    			    						</tr>
+		</table>
+	</div>
+	<div class="slogan">
+			<a class="join" href="javascript:WEINEWS.joinPage();">我要加入</a>
+			<h3>【媒体自留地，大道信息源】</h3>
+		<h4>
+			共有<i><a href="/users.php"><span style="color:#0EA3DA;font-size:22px;">625</span></a></i>位汽车媒体人已加入！
+		</h4>
+	</div>
+</div>
+<div id="join_page"></div>
+<script>
+$(document).ready(function(){
+	//大照片点击跳转个人首页
+	$('.p_big').click(function(){
+	    window.open($(this).attr('url'));
+	});
+	$(".photos td").hover(function(){
+		$(this).find(".img_bg, a").show();
+	}, function(){
+		$(this).find(".img_bg, a").hide();
+	});
+});
+</script> <div class="publisher">
+	<div class="input">
+		<textarea id='weibo_text'></textarea>
+	</div>
+	<div class="btn">
+		<a href="javascript:void(0)" class="disable" id='weibo_submit'></a>
+	</div>
+	<div class="kind W_linkb">
+		<a href="javascript:void(0);" class="face" title="表情" >表情</a> <a href="javascript:void(0);" class="img" title="图片" >图片</a> <a href="javascript:void(0);" class="movie" title="视频">视频</a>
+	</div>
+	<!-- 表情 -->
+        <div class="W_layer" style="margin-top:-20px;display:none;z-index:49" id='weibo_face'>
+            <div class="bg">
+                <table cellspacing="0" cellpadding="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="content">
+                                    <a href="javascript:void(0);" class="W_close" id='weibo_face_close'></a>
+                                    <div>
+                                        <div class="layer_faces clearfix">
+                                            <div class="laMed_tit">插入表情</div>
+                                            <div class="">
+                                                <div class="detail">
+                                                    <ul class="faces_list faces_list_hot clearfix">
+                                                                                                            </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="arrow arrow_t"></div>
+            </div>
+        </div> 
+        <!-- 图片 -->
+        <div style="margin-top:-20px;margin-left:50px;display:none;z-index:50;" class="W_layer" id='weibo_uploadpic'>
+            <div class="bg">
+                <table cellspacing="0" cellpadding="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="content">
+                                    <a class="W_close" href="javascript:void(0);" id='weibo_uploadpic_close'></a>
+                                    <div>
+                                        <div>
+                                            <div class="layer_send_pic">
+                                                <div>
+                                                    <div>
+                                                        <div id='picselect'>
+                                                            <div class="laMed_tit">上传图片</div>
+                                                            <div class="laPic_btn" style="width:230px;">
+                                                                <a href="javascript:void(0);" class="W_btn_a choose_pic">
+                                                                        <input type="file" name='uploadfile'  id='uploadfile' style='width:25px;height:20px;'/>
+                                                                </a>
+                                                            </div>
+                                                            <div class="laPic_con W_textb">请选择小于5M的gif、jpg、png图片</div>
+                                                        </div>
+                                                        <div style="width:230px;display:none" id='picuploading'>
+                                                            <div class="laPic_con">
+                                                                <div class="W_loading">
+                                                                    <span>图片正在上传，请等待...</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div style="display:none;padding:0 10px;" id='picpreview'>
+                                                    <div class="laPic_tit clearfix">
+                                                        <span class="fleft"></span>
+                                                        <img/>
+                                                        <div><span style="margin-top:5px;" class="right"><a href="javascript:void(0);" id='delpic'>删除</a></span></div>
+                                                    </div>
+                                                    <div class="laPic_Pic"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="arrow arrow_t"></div>
+            </div>
+        </div>
+        <!-- 视频 -->
+        <div style="margin-left:100px;margin-top:-20px;display:none;z-index:50;" class="W_layer" id='weibo_video'>
+        	<div class="bg">
+            	<table cellspacing="0" cellpadding="0" border="0">
+                	<tbody>
+                    	<tr>
+                        	<td>
+                            	<div class="content">
+                                	<a class="W_close" href="javascript:void(0);" id='weibo_video_close'></a>
+                                    <div>
+                                    	<div class="layer_send_media" style="width:275px;">
+                                        	<div class="laMed_tit">输入视频网站链接地址</div>
+                                            <div class="laMed_con W_textb W_linkb">目前已支持<a target="_blank" href="http://video.sina.com.cn">新浪播客</a>、<a target="_blank" href="http://www.youku.com">优酷网</a>、<a target="_blank" href="http://www.tudou.com">土豆网</a>、<a target="_blank" href="http://www.ku6.com">酷6网</a>、<a target="_blank" href="http://www.56.com">我乐网</a>等视频网站的视频播放页链接。</div>
+                                            <div class="laMed_inp">
+                                            	<input type="text" class="W_input inp_video" value="http://" style="color:#999">
+                                                <a href="javascript:void(0);" class="W_btn_a" id='createVideoShortUrl'><span>确定</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="arrow arrow_t"></div>
+            </div>
+        </div>
+</div>
+<script language='javascript'>
+	$(document).ready(function(){
+		(function($){ 
+			$.fn.extend({ 
+				insertAtCaret: function(myValue){ 
+					var $t=$(this)[0]; 
+					if (document.selection) { 
+						this.focus(); 
+						sel = document.selection.createRange(); 
+						sel.text = myValue; 
+						this.focus(); 
+					} 
+					else if ($t.selectionStart || $t.selectionStart == '0') { 
+						var startPos = $t.selectionStart; 
+						var endPos = $t.selectionEnd; 
+						var scrollTop = $t.scrollTop; 
+						$t.value = $t.value.substring(0, startPos) + myValue + $t.value.substring(endPos, $t.value.length); 
+						this.focus(); 
+						$t.selectionStart = startPos + myValue.length; 
+						$t.selectionEnd = startPos + myValue.length; 
+						$t.scrollTop = scrollTop; 
+					} else { 
+						this.value += myValue; 
+						this.focus(); 
+					} 
+				} 
+			}) 
+		})(jQuery); 
+
+		var openLayer=function(handler,layer,btnclose,func){
+			$(handler).bind('click',function(){
+				Util.User.loginHtml(function(){
+					$('.W_layer:visible').each(function(){
+						if($(this).find('.W_close').is(':visible')){
+							$(this).hide();
+						}
+					});
+					var flag=null;
+					$(layer).show();
+					$(btnclose).bind('click',function(){
+						func&&func();
+						$(layer).hide().unbind('mouseover','mouseleave');
+						$('body').unbind('click');
+					});
+					$(layer).bind('mouseover',function(){
+						flag=1;
+					}).bind('mouseleave',function(){
+						flag=0;
+					});
+					$('body').bind('click',function(){
+						if($('#mask').length==0){
+							if(flag==0){
+								if($(btnclose).is(":visible")){
+									$(btnclose).click();
+								}
+							}else if(flag==null){
+								flag=0;
+							}else{
+								return false;
+							}
+						}
+					});
+				});
+			});
+		
+		};
+		//表情
+		openLayer($('.publisher .face'),$('#weibo_face'),$('#weibo_face_close'));
+		//图片
+		openLayer($('.publisher .img'),$('#weibo_uploadpic'),$('#weibo_uploadpic_close'),function(){
+			$('#picpreview').hide();
+			$('#picpreview').prev().show();
+			$('#picselect').show().removeAttr('style');
+			$('#picuploading').hide();
+			$("#weibo_uploadpic #uploadfile").uploadify('cancel');
+		});
+		//视频
+		openLayer($('.publisher .movie'),$('#weibo_video'),$('#weibo_video_close'),function(){
+			$('#weibo_video .inp_video').val('http://');
+		});
+		//表情处理
+		$('#weibo_face .faces_list img').each(function(){
+			$(this).click(function(){
+				$('#weibo_text').insertAtCaret($(this).attr('value'));
+				$('#weibo_face_close').click();
+			});
+		});
+		
+		//上传图片处理
+		$("#weibo_uploadpic #uploadfile").uploadify({
+            'swf': '/images/uploadify.swf?v='+Math.random(),
+            'uploader': 'http://weinews.auto.sina.com.cn/ajax/weibo.php?action=uploadpic&v='+Math.random(),
+            'formData' : { 'ssocookie' : '','session_id':'' },
+            'auto': true,
+            'multi': false,
+            'scriptAccess':'always',
+            'width':'70px',
+            'heigth':'20px',
+            'removeCompleted':true,
+            'fileSizeLimit' : '5MB',
+            'fileExt':'*.jpg;*.gif;*.png',
+            'fileDesc':'Web Image Files (.JPG, .GIF, .PNG)',
+            'buttonText':'选择图片',
+            onUploadSuccess : function(file, data, response) {
+            	$('#uploadfile-queue').empty();
+                data=eval("("+data+")");
+                if(data.code==0){
+	                $('#picpreview').show();
+	                data=data.msg.data;
+	                $('#picpreview img').attr('src',data.thumbnail_pic);
+	                $('.publisher').attr('haspic',data.pic_id);
+	                $('#weibo_uploadpic_close').hide();
+	                $('#picpreview').prev().hide();
+	                $('.layer_send_pic').css('padding-bottom','0px');
+                }else if(data.code==1){
+					Util.Layer.Message('提示',data.msg,2000);
+					$('#picpreview').hide();
+					$('#picpreview').prev().show();
+					$('#picselect').removeAttr('style');
+					$('#picuploading').hide();
+					
+                }else if(data.code==-1){
+        			Util.User.loginHtml();
+                }
+            },
+            onUploadError : function(file, errorCode, errorMsg, errorString) {
+            	$('#picpreview').hide();
+				$('#picpreview').prev().show();
+				$('#picselect').show();
+				$('#picuploading').hide();
+            },
+            onUploadProgress : function(file, bytesUploaded, bytesTotal, totalBytesUploaded, totalBytesTotal) {
+            	$('#picuploading').show();
+                $('#picselect').attr('style','filter:alpha(opacity=0);-moz-opacity:0;opacity: 0;height:0px;overflow:hidden;position:relative');
+            }
+        });
+
+		//图片删除处理
+		$('#picpreview #delpic').bind('click',function(){
+        	$('#picpreview img').removeAttr('src');
+        	$('.layer_send_pic').css('padding-bottom','20px');
+        	$('#weibo_uploadpic_close').show();
+        	$('#publisher').removeAttr('haspic');
+        	$('#picpreview').hide();
+        	$('#picpreview').prev().show();
+        	$('#picuploading').hide();
+            $('#picselect').removeAttr('style');
+        });
+        
+        //对object进行位置修订
+		if ($.browser.msie && $.browser.version == "6.0"){
+			$('#SWFUpload_0').css('left','80px').css('heigth','25px').css('overflow','hidden');
+		}else{
+        	$('#SWFUpload_0').css('left','0px').css('heigth','25px').css('overflow','hidden');
+		}
+		//上传视频处理
+		$('#weibo_video #createVideoShortUrl').click(function(){
+			//检查路径是否正确为http路径
+			var url=$.trim($('#weibo_video .inp_video').val());
+			if(url==''){
+				Util.Layer.Message('提示','链接地址不能为空',2000);
+				return;
+			}
+			var reg=/^http:\/\/([a-zA-Z0-9][a-zA-Z0-9_-]*(?:.[a-zA-Z0-9&\/][a-zA-Z0-9_-]*)+):?(d+)?\/?$/g;
+			if(reg.test(url)>0){
+				$.post('/ajax/weibo.php?action=createVideoShortUrl','url='+escape(url),function(data){
+					if(data.code==0){
+						$('#weibo_text').insertAtCaret(" "+data.msg+" ");
+						$('#weibo_video_close').click();
+					}else{
+						$('#weibo_video .inp_video').val('http://');
+						Util.Layer.Message('提示','您输入的链接地址无法识别',2000);
+					}
+				},'json');
+			}else{
+				$('#weibo_video .inp_video').val('http://');
+				Util.Layer.Message('提示','您输入的链接地址无法识别',2000);
+			}
+		});
+
+		//微博发布
+		$('#weibo_submit').click(function(){
+			Util.User.loginHtml(function(){
+				var text=$.trim($('#weibo_text').val());
+				if(text!=''){
+					if($('.publisher').attr('haspic')){
+						$('#picpreview img').removeAttr('src');
+			        	$('.layer_send_pic').css('padding-bottom','20px');
+			        	$('#publisher').removeAttr('haspic');
+			        	$('#picpreview').hide().prev().show();
+			        	$('#picuploading').hide();
+			            $('#picselect').removeAttr('style');
+			            $('#weibo_uploadpic_close').show().click();
+					}
+					var param={};
+					param.text=text;
+					if($('.publisher').attr('haspic')!=null){
+						param.picid=$('.publisher').attr('haspic');
+					}
+					weibo.call('update',param,function(data){
+							$('.publisher').removeAttr('haspic');
+							Util.Layer.Message('提示','发布成功',2000);
+							$('#weibo_text').val("");
+						},
+						function(data){
+							$('.publisher').removeAttr('haspic');
+							switch(data.code){
+								case 1:Util.Layer.Message('提示','发布失败，请稍后再试',2000);
+									break;
+								case -2:
+									$('#weibo_text').val('');
+									Util.Layer.Message('提示','微博内容不能为空',2000);
+								   	break;
+							}
+						}
+					);
+				}else{
+					$('#weibo_text').val('');
+					Util.Layer.Message('提示','微博内容不能为空',2000);
+				}
+			});
+		});
+		function substr(str, len){
+		    if(!str || !len) { return ''; }
+		    var a = 0;
+		    var i = 0;
+		    var temp = '';
+		    for (i=0;i<str.length;i++){
+		        if (str.charCodeAt(i)>255) {
+		            a+=2;
+		        } else{
+		            a++;
+		        }
+		        if(a > len) { return temp; }
+		        temp += str.charAt(i);
+		    }
+		    return str;
+		}
+		var checkNum=function(){
+			var str = $('.publisher #weibo_text').val().replace(/\w/g,"").length;
+	        var abcnum = $('.publisher #weibo_text').val().length-str;
+	        var total = str+abcnum;
+	        if(total>280){
+	        	 $('.publisher #weibo_text').val(substr($('.publisher #weibo_text').val(),280));
+		    }
+		    if(total>0){
+				$('.publisher #weibo_submit').removeClass('disable');
+			}else{
+				$('.publisher #weibo_submit').addClass('disable');
+			}
+		}
+		$('.publisher #weibo_text').bind('propertychange',function(){
+			if($.syncProcessSign) return ;  
+	        $.syncProcessSign = true; 
+			checkNum();
+	        $.syncProcessSign = false; 
+		}).bind('input',function(){
+			checkNum();
+		});
+
+		$('.publisher a[target="_blank"]').click(function(){
+			window.open($(this).attr('href'));
+			return false;
+		});
+
+		//增加专家用户强制授权处理
+			
+	});
+</script>
+<div class="tab">
+<div class="tab_nav">
+<a class="refresh" href="javascript:void(0)" style='display:none;'>刷新评论</a>
+<ul>
+	<li><a href="javascript:void(0);" class="cur">最热</a></li>
+	<li><a href="javascript:void(0);" id='#news'>最新</a></li>
+</ul>
+</div>
+<div class="slide" id='focus_date'>
+<a href="javascript:void(0)" class="prev"></a>
+<div class="slide_con" style="width:532px;padding: 5px 0 0;">
+<ul class="clearfix" style='width:550px;'>
+						<li style='width:71px;'><a href="javascript:void(0);" year='2019'>9月29日</a></li>
+								<li style='width:71px;'><a href="javascript:void(0);" year='2019'>9月30日</a></li>
+								<li style='width:71px;'><a href="javascript:void(0);" year='2019'>10月1日</a></li>
+								<li style='width:71px;'><a href="javascript:void(0);" year='2019'>10月2日</a></li>
+								<li style='width:71px;'><a href="javascript:void(0);" year='2019'>10月3日</a></li>
+								<li style='width:71px;'><a href="javascript:void(0);" year='2019'>10月4日</a></li>
+								<li style='width:71px;'class="cur"><a href="javascript:void(0);" year='2019'>10月5日</a></li>
+			</ul>
+</div>
+<a href="javascript:void(0)" class="next"></a></div>
+<script language='javascript'>
+$(document).ready(function(){
+	var curdate=$('#focus_date li[class="cur"]');
+	curdate=curdate.find('a').attr('year')+'/'+curdate.text().replace('月','/').replace('日','');
+	$('#focus_date').attr('date',curdate);
+	var createDate=function(ele,obj,direct){
+		var date=ele.find('a').attr('year')+'/'+ele.text().replace('月','/').replace('日','');
+		date=new Date(Date.parse(date));
+		date=new Date(date.valueOf()+direct*1000*60*60*24);
+		if(date.valueOf()==new Date(curdate).valueOf()){
+			obj.addClass('cur');
+		}else{
+			obj.removeClass('cur');
+		}
+		obj.find('a').attr('year',date.getFullYear());
+		obj.find('a').text((date.getMonth()+1)+'月'+date.getDate()+'日');
+		return obj;
+	};
+	
+	$('#focus_date li').bind('click',function(){
+		var date=$(this).find('a').attr('year')+'-'+$(this).text().replace('月','-').replace('日','');
+		$('#focus_date li[class="cur"]').removeClass('cur');
+		$(this).addClass('cur');
+		curdate=$(this).find('a').attr('year')+'/'+$(this).text().replace('月','/').replace('日','');
+		$('#focus_date').attr('date',curdate);
+		WEINEWS.showFocus(date);
+	});
+	var interval;
+	var next=function(){
+		var last=$('#focus_date li:last');
+		var lastdate=last.find('a').attr('year')+'/'+last.text().replace('月','/').replace('日','');
+		var now=new Date();
+		now=now.getFullYear()+'/'+(now.getMonth()+1)+'/'+now.getDate();
+		if(Date.parse(now)==Date.parse(lastdate)){
+			return false;
+		}
+		last.after(createDate(last,$('#focus_date li:first'),1));
+	}
+	var prev=function(){
+		var first=$('#focus_date li:first');
+		var firstdate=first.find('a').attr('year')+'/'+first.text().replace('月','/').replace('日','');
+		if(Date.parse(firstdate)==Date.parse('2012/8/1')){
+			return false;
+		}
+		first.before(createDate(first,$('#focus_date li:last'),-1));
+	}
+	
+	$('#focus_date .next').mousedown(function(){
+		next();
+		interval=setInterval(next,200);
+	}).mouseup(function(){
+		clearInterval(interval);
+	}).mouseleave(function(){
+		clearInterval(interval);
+	});
+
+	$('#focus_date .prev').mousedown(function(){
+		prev();
+		interval=setInterval(prev,200);
+	}).mouseup(function(){
+		clearInterval(interval);
+	}).mouseleave(function(){
+		clearInterval(interval);
+	});
+
+});
+</script>
+
+</div>
+<div  style='_overflow:hidden;_width:639px;'>
+<div class="w_holder w">
+<ol>
+	</ol>
+<script type='text/javascript' src='/js/focus.js?v=0.2'></script>
+<script language='javascript'>
+$(document).ready(function(){
+	$('.w_holder .w_list').each(function(){
+		weibo.rich($(this));
+	});
+	//默认展开weibo feed 第一项
+	$(".w_list:first").click();
+	//添加时间走动
+	Util.Timer.init($('.w_holder'));
+});
+</script></div>
+</div>
+<div class="wb_list" style='display:none'>
+<div class="check_more" style="display:none;"><a href="javascript:void(0);">查看更多</a></div>
+</div>
+</div>
+<div class="sidebar"><div class="member">
+	<ul>
+		<li><a href="/users.php" style='cursor:pointer;'><strong>625</strong><em>微博成员</em></a></li>
+		<li><a  style='cursor:pointer;' href='/index.php?type=feed'><strong></strong><em>本周微博</em></a></li>
+	</ul>
+</div>
+<div class="board">
+	<div class="tit"><h3>活动公告板</h3></div>
+    <div class="con p_h hasDatepicker" id="datepicker">
+    <div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="display: block; ">
+    <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all">
+        <a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="上月"><span class="ui-icon ui-icon-circle-triangle-w">上月</span></a>
+        <a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="下月"><span class="ui-icon ui-icon-circle-triangle-e">下月</span></a>
+        <div class="ui-datepicker-title"><span class="ui-datepicker-year"></span>年&nbsp;<span class="ui-datepicker-month"></span>月</div>
+    </div>
+    <table class="ui-datepicker-calendar">
+    <thead>
+    <tr>
+        <th class="ui-datepicker-week-end"><span>日</span></th>
+        <th><span>一</span></th>
+        <th><span>二</span></th>
+        <th><span>三</span></th>
+        <th><span>四</span></th>
+        <th><span>五</span></th>
+        <th class="ui-datepicker-week-end"><span>六</span></th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    </table>
+    </div>
+    </div>
+</div>
+<style type="text/css">
+.ui-datepicker-calendar td a:hover {background:#FF8A00; color:#fff;}
+</style>
+<script language='javascript'>
+$(document).ready(function(){
+	var pop_delay_timer;
+	//当前日期
+	createCalander(new Date().getTime());
+	//要求date格式为可转换为日期的格式
+	function createCalander(time){
+		$('.board').attr('date',time);
+		var date=new Date(time);
+		//年份
+		var year=date.getFullYear();
+		//月
+		var month=date.getMonth()+1;
+		//月天数
+		var days=new Date(year,month,0).getDate();
+		var day=date.getDate();
+		$('.board .ui-datepicker-title .ui-datepicker-month').html(month);
+		$('.board .ui-datepicker-title .ui-datepicker-year').html(year);
+		//第一天为星期几
+		var weeks=new Date(Date.parse(year+'/'+month+'/1')).getDay();
+		var html='';
+		for(var i=0;i<(days+weeks+((days+weeks)%7==0?0:(7-(days+weeks)%7)));i++){
+			if(i%7==0){
+				html+='<tr>';
+			}
+			if(i<weeks || i>=days+weeks){
+				html+='<td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>';
+			}else{
+				/*
+				var todayStyle='';
+				if(year==(new Date()).getFullYear() && month==(new Date()).getMonth()+1 && (i-weeks+1)==(new Date()).getDate()){
+					todayStyle="style='font-weight:700;font-size:25px;'";//当前日期显示
+				}
+				html+="<td data-month='"+month+"' data-year='"+year+"'><a class='ui-state-default' day="+(i-weeks+1)+" href='javascript:void(0);' "+todayStyle+">"+(i-weeks+1)+"</a></td>";
+				*/
+				html+="<td data-month='"+month+"' data-year='"+year+"'><a class='ui-state-default' day="+(i-weeks+1)+" href='javascript:void(0);'>"+(i-weeks+1)+"</a></td>";
+			}
+			if(i%7==6){
+				html+="</tr>";
+			}
+		}
+		$('.board table tbody').html(html);
+
+		$.get('/ajax/weinews.php?action=activities_month&month='+year+'-'+month,function(data){
+		    if(data.code==0){
+			    for(var i in data.content){
+			    	var obj = $('.ui-datepicker-calendar td a[day='+i+']');
+			    	obj.css('background-color',data.content[i]?'#0EA3DA':'#cccccc');
+			    	obj.attr('color',obj.css('background-color'));
+				    dateHover(obj);
+				}
+			}
+		},'json');
+	}
+	$('.board .ui-datepicker-prev,.board .ui-datepicker-next').click(function(){
+		var date = new Date(parseInt($('.board').attr('date')));
+		var time = date.getTime();
+		
+		var year=date.getFullYear();
+		var month=date.getMonth()+1;
+		var days=new Date(year,month,0).getDate();
+		
+		if($(this).hasClass('ui-datepicker-prev')){
+			time=time-days*24*60*60*1000;
+		}else{
+			time=time+days*24*60*60*1000;
+		}
+		createCalander(time);
+	});
+	function dateHover(obj){
+		obj.hover(
+			function(){
+				$('.ui-datepicker-calendar td a').each(function(){
+					$(this).css('background-color',$(this).attr('color'));
+				});
+			    obj.css('background-color','#FF8A00');
+				clearTimeout(pop_delay_timer);
+				$(".add_pop").remove();
+				var year = $.trim(obj.parent().attr('data-year'));
+				var mouth = $.trim(obj.parent().attr('data-month'));
+				var day = $.trim(obj.attr('day'));
+				if(year != '' && mouth  != '' && day != ''){
+					pop_delay_timer = setTimeout(function(){
+						$.get("/ajax/weinews.php?action=activity&date="+(year+'-'+mouth+'-'+day),function(data){
+							if(data.code == 0){
+								$('body').append(data.content);
+								var popObj = $(".add_pop");
+								popObj.hover(
+									function(){
+										clearTimeout(pop_delay_timer);
+										popObj.addClass('mouse');
+									},
+									function(){
+										pop_delay_timer = setTimeout(function(){
+										    popObj.remove();
+					        				obj.css('background-color',obj.attr('color'));
+										},500);
+									}
+								);
+								var top = obj.offset().top + 35;
+								var pObj = obj.parent().parent();
+								var tObj = pObj.parent().parent();
+								var left = pObj.offset().left - popObj.width() + tObj.width();
+								popObj.css('position','absolute').css("top", top).css("left", left);
+							}
+						},'json');
+					},200);
+				}
+			},
+			function(){
+				clearTimeout(pop_delay_timer);
+				var popObj = $(".add_pop");
+				pop_delay_timer = setTimeout(function(){
+				    if($('.mouse').length==0){
+				    	popObj.remove();
+				    	obj.css('background-color',obj.attr('color'));
+					}
+				},500);
+			}
+		);
+	}
+});
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="notice">
+	<div class="tit">
+		<h3>公告栏</h3>
+	</div>
+	<div class="con">
+		<p style="word-break:break-all;word-wrap: break-word;">微汽车·社区 是面向所有汽车媒体从业人员的微博社区，在这里有最新的新闻线索和最热的汽车话题,期待所有汽车媒体老师的加入</p>
+	</div>
+</div>
+<div class="notice">
+	<div class="tit">
+		<h3>热度说明</h3>
+	</div>
+	<div class="con">
+		<p style="text-indent:0em;word-break:break-all;word-wrap: break-word;">通过累计单条微博中，汽车媒体人的参与度，并按照比例与原微博自身热度进行计算得出。</p>
+	</div>
+</div></div>
+</div>
+ <!-- FOOTER 通用 -->
+    <div class="footer w">
+    	<div class="foot_up">
+        	<h2><a title="" target="_blank" href="#"><img src="http://i2.sinaimg.cn/qc/2011img/sina_auto.png" alt="" /></a></h2>
+            <dl>
+            	<dd>
+                	<form>
+                    	<input class="f_txt" type="text" value="关键词" id="bottom-search"/>
+                        <select name="" id="bottom-searchType">
+                        	<option value="search.php">综合</option>
+                            <option value="car.php">车型</option>
+                            <option value="news.php">新闻</option>
+                            <option value="price.php">报价</option>
+                            <option value="topic.php">专题</option>
+                            <option value="photo.php">图片</option>
+                            <option value="video.php">视频</option>
+                        </select>
+                        <input name="" type="button" value="搜索" style="padding:1px 5px" id="bottom-searchBtn"/>
+                    </form>
+                </dd>
+            </dl>
+        </div>
+        <div class="foot_bottom">
+        	<p><a href="http://corp.sina.com.cn/chn/">新浪简介</a> | <a href="http://corp.sina.com.cn/eng/">About Sina</a> | <a href="http://emarketing.sina.com.cn/">广告服务</a> | <a href="http://www.sina.com.cn/contactus.html">联系我们</a> | <a href="http://corp.sina.com.cn/chn/sina_job.html">招聘信息</a> | <a href="http://www.sina.com.cn/intro/lawfirm.shtml">网站律师</a> | <a href="http://english.sina.com">SINA English</a> | <a href="http://members.sina.com.cn/apply/">会员注册</a> | <a href="http://tech.sina.com.cn/focus/sinahelp.shtml">产品答疑</a></p>
+            <p>Copyright &copy; 1996-2012 SINA Corporation, All Rights Reserved</p>
+            <p>新浪公司 <a href="http://www.sina.com.cn/intro/copyright.shtml">版权所有</a></p>
+        </div>
+    </div>
+    <a style="margin-left: 476px;position: fixed;top: 150px;margin: 0;left: 89%;"><img src="/images/qrcode.png" style="height: 120px;"></a>
+    <a href="javascript:void(0);" id="base_scrollToTop" class="W_gotop" style="visibility: visible;display:none; ">
+<span><em class="sj">♦</em><em class="fk">▐</em>返回顶部</span>
+</a>
+
+
+
+<script type="text/javascript" src="js/sso.js?v=0.4"></script>
+<script type="text/javascript" src="js/jquery.ui.min.js?v=0.4"></script>
+<script type="text/javascript" src="/js/jquery.uploadify-3.1.min.js?v=0.4" language='javascript'></script>
+<script type="text/javascript" src="js/common.js?v=0.4"></script>
+<script type="text/javascript" src="js/weibo.js?v=0.4"></script>
+<script type="text/javascript" src="js/weinews.js?v=0.4"></script>
+
+
+<!--new nav js start-->
+<script src="http://t.auto.sina.com.cn/api/getuserinfo.php"></script>
+<script type="text/javascript" src="http://auto.sina.com.cn/683/2012/1227/2012ssoconfig.js"></script>
+<script src="http://i.sso.sina.com.cn/js/ssologin.js"></script>
+<script src="http://supports.auto.sina.com.cn/api/ip.php"></script>
+<script type="text/javascript" src="http://auto.sina.com.cn/683/2012/1227/login2012.js"></script> 
+<script type="text/javascript" src="http://auto.sina.com.cn/683/2012/1226/index_nav.js"></script>
+<!--new nav js end-->
+
+
+
+<script language='javascript'>
+$(document).ready(function(){
+	$('a[target="_blank"]').live('click',function(){
+		window.open($(this).attr('href'));
+		return false;
+	});
+	$(window).scroll(function(){
+		if($(document).scrollTop()>0){
+			$('#base_scrollToTop').show();
+		}else{
+			$('#base_scrollToTop').hide();
+		}
+	});
+	$('#base_scrollToTop').click(function(){
+		$('html,body').animate({scrollTop: '0px'}, 800);
+	});
+});
+</script>
+
+<!-- ga监控 -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33634641-1']);
+  _gaq.push(['_setDomainName', 'sina.com.cn']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+<!-- 频道监控代码 -->
+<!-- SUDA_CODE_START -->
+<script type="text/javascript" src="http://www.sinaimg.cn/unipro/pub/suda_s_v851c.js"></script>
+<script type="text/javascript" >
+$(document).ready(function(){
+	_S_pSt(); 
+});
+</script> 
+<noScript>
+<div style='position:absolute;top:0;left:0;width:0;height:0;visibility:hidden'><img width=0 height=0 src='http://beacon.sina.com.cn/a.gif?noScript' border='0' alt='' /></div>
+</noScript>
+<!-- SUDA_CODE_END --> 
+ 
+<!-- START WRating v1.0 -->
+<script type="text/javascript" src="http://sina.wrating.com/a1.js"></script>
+<script type="text/javascript">
+try{
+var vjAcc="860010-0316010000"; 
+var wrUrl="http://sina.wrating.com/";
+vjTrack("");
+}catch(e){};
+</script>
+<noscript><img src="http://sina.wrating.com/a.gif?a=&c=860010-0316010000" width="1" height="1" style="display: none;"/></noscript>
+<!-- END WRating v1.0 --></body>
+<script language='javascript'>
+$(document).ready(function(){
+	$('.tab_nav a').click(function(){
+		if($(this).hasClass('cur')){
+			return false;
+		}
+		$('.tab_nav a').toggleClass('cur');
+		$('.w_holder .wb_list').toggle();
+		if($(this).text()=='最新'){
+			$('.tab').css('height','49px');
+			$('.notice').hide();
+			if($('.rank_list')==1){
+				$('.rank_list').show();
+			}else{
+				WEINEWS.showUserRank();
+			}
+			WEINEWS.showFeeds();
+		}else{
+			$('.tab').css('height','69px');
+			WEINEWS.showFocus();
+			$('.notice').show();
+			$('.rank_list').hide();
+		}
+	});
+	});
+</script>
+</html>
