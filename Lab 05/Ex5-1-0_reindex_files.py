@@ -10,8 +10,8 @@ ADVANCED_ENCODING = True
 # Encodings List: for a less advanced encoding method
 ENCODINGS = ["ascii", "utf-8", "utf-16", "gb2312", "URL", "base64", "BIG5", "GBK", "GB18030"]
 # Paths
-# INDEX_FILE_PATH = "index_update_reindex"
-INDEX_FILE_PATH = "index_update_del_add"
+INDEX_FILE_PATH = "index_update_reindex"
+# INDEX_FILE_PATH = "index_update_del_add"
 WEB_PAGE_PREFIX = "WebPages_update_demo/"
 WEB_PAGE_INDEX_PATH = WEB_PAGE_PREFIX + "index.txt"
 WEB_PAGES_PATH = WEB_PAGE_PREFIX + "html/"

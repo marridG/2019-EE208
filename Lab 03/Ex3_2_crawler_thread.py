@@ -20,12 +20,15 @@ FINAL_SUBMISSION = False
 MAX_PATH = 200
 MODE_QUEUE_THREADING = 1  # using ? to join: queue=0, [faster]threading=1
 # [control - for users] source and path
-SOURCE_SITE = "eastday.com"
+SOURCE_SITE = "fudan.edu.cn"
 FOLDER_PREFIX = "crawled"
-FOLDER_SUB_PREFIX = "eastday"
+FOLDER_SUB_PREFIX = "fudan"
 FOLDER_SUB_SUB_PREFIX = "html"
+# [control - for users] filters     == NOT TESTED! ==
+FILTER_OUT_COMPRESSED = True  # filter out all the compressed files: .zip .rar
+FILTER_OUT_DOC = True  # filter out all the docs: .doc .docx .xls .xlsx .ppt .pptx .pdf
 # EASY USE
-easy_use_target = "http://www.eastday.com"
+easy_use_target = "http://fudan.edu.cn"
 easy_use_max_page = 1000
 easy_use_max_depth = 5
 # ********** CHECK BEFORE UPLOAD !!! **********
@@ -295,9 +298,20 @@ def get_all_links(content, page_url):
             this_link = i.group().split('"')[1]
 
             this_link = complete_url(this_link, page_url)
+            if not this_link:
+                continue
 
+            if FILTER_OUT_COMPRESSED:  # filter out all the compressed files: .zip .rar
+                if this_link.endswith(".zip") or this_link.endswith(".rar"):
+                    continue
+            if FILTER_OUT_DOC:  # filter out all the docs: .doc .docx .xls .xlsx .ppt .pptx .pdf
+                if this_link.endswith(".doc") or this_link.endswith(".docx") or \
+                        this_link.endswith(".xls") or this_link.endswith(".xlsx") or \
+                        this_link.endswith(".ppt") or this_link.endswith("pptx") or \
+                        this_link.endswith(".pdf"):
+                    continue
             # recheck to ensure that there actually exists a non-duplicate story!
-            if this_link and this_link not in links:
+            if this_link not in links:
                 links.add(this_link)
     else:
         soup = BeautifulSoup(content, "html.parser")
