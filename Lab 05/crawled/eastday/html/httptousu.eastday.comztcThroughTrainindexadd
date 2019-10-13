@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>东方直通车</title>
+    <link href="/ztc/ThroughTrain/images/img/main.css" rel="stylesheet" type="text/css" />
+    <link href="/ztc/ThroughTrain/Scripts/webuploader.css" rel="stylesheet" />
+    <style type="text/css">
+        body, td, th {
+            font-family: SimSun;
+        }
+    </style>
+    <script language="javascript">
+        var BASE_URL = '';
+        var themeID;
+    </script>
+    <script type="text/javascript" src="/ztc/ThroughTrain/images/img/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="/ztc/ThroughTrain/Scripts/webuploader.min.js"></script>
+    <script type="text/javascript" src="/ztc/ThroughTrain/Scripts/config.js"></script>
+    <script type="text/javascript" src="/ztc/ThroughTrain/Scripts/upload.js"></script>
+    <script type="text/javascript" src="/ztc/ThroughTrain/Scripts/post1.js"></script>
+    <script type="text/javascript">
+
+        if (/Android|iPhone/i.test(navigator.userAgent)) {
+            window.location.href = window.location.href.toLowerCase().replace("index", "Mobile");
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+    <form id="form1" action="addSubmit" method="post" enctype="multipart/form-data">
+        <!--顶部-->
+        <div class="topbox">
+            <div class="top"><a href="http://sh.eastday.com/" class="logo"><img src="/ztc/ThroughTrain/images/img/title_sh.jpg" height="40" /></a> <div class="link">|<a href="http://www.eastday.com/" target="_blank">东方网首页</a>|<a href="http://news.eastday.com/" target="_blank">新闻中心</a>|<a href="http://sh.eastday.com/" target="_blank">上海新闻</a>|</div></div>
+        </div>
+        <!--banner-->
+        <div class="banner">
+    <div class="navbox">
+        <div class="nav">
+            <a href="http://www.eastday.com/" target="_blank">东方网首页</a>
+            <a href="http://sh.eastday.com/" target="_blank">上海新闻</a>
+            <a href="http://shzw.eastday.com/" target="_blank">上海政务</a>
+            <a href="http://tousu.eastday.com/ztc/ThroughTrain/index/list" target="_blank">曝光台</a>
+            <a href="http://tousu.eastday.com/ztc/ThroughTrain/index/add" target="_blank">我要投诉</a>
+            <a href="http://sh.eastday.com/2015/summer2016/index.html" target="_blank">热点聚焦</a>
+            <a href="http://people.eastday.com/" target="_blank">回到首页</a>
+        </div>
+    </div>
+</div>
+
+        <!--content-->
+        <div class="content clearfix">
+            <div class="advisebox">
+                <div class="titleline">我要投诉或建议</div>
+                <div class="info">	&nbsp;&nbsp;&nbsp;&nbsp;各位网友：你们好！在发言前，须认真阅读本规定。一经发言，即视为同意接受本规定；如不同意，请谨慎发言。网友发言仅代表作者本人的观点，不代表本网站的观点和看法，与本网站无关，文责自负。<a href="http://sh.eastday.com/m/20160704/u1ai9498329.html" target="_blank">[点击查看东方网“文明在线”栏目管理规定(暂定)]</a></div>
+                <p class="text1">投诉、咨询、建议请留言</p>
+                <p class="text2">[请详细填写资料，以方便我们联系您并解决您的问题]</p>
+                <div class="formbox">
+                    <p><label style="display: inline-block; width: 120px;">姓&nbsp;&nbsp;&nbsp;名：</label><input type="text" name="name" id="name" maxlength="25" /><span>*</span><span class="tips">（带*为必填项）</span></p>
+                    <p><label style="display: inline-block; width: 120px;">联系电话：</label><input type="text" name="phone" id="phone" maxlength="25" /><span>*</span></p>
+                    <p><label style="display: inline-block; width: 120px;">手&nbsp;&nbsp;&nbsp;机：</label><input type="text" name="mobile" id="mobile" maxlength="25" /></p>
+                    <p><label style="display: inline-block; width: 120px;">电子邮箱：</label><input type="text" name="email" id="email" maxlength="50" /></p>
+                    <p>
+                        <label style="display: inline-block; width: 120px;">所&nbsp;在&nbsp;区：</label><select name="countyid" id="countyid">
+                            <option value="0">请选择</option>
+                            <option value="1">浦东新区</option>
+                            <option value="2">黄浦区</option>
+                            <!--卢湾区删除-->
+                            <option value="4">徐汇区</option>
+                            <option value="5">长宁区</option>
+                            <option value="6">静安区</option>
+                            <option value="7">普陀区</option>
+                            <!--闸北区删除-->
+                            <option value="9">虹口区</option>
+                            <option value="10">杨浦区</option>
+                            <option value="11">宝山区</option>
+                            <option value="12">闵行区</option>
+                            <option value="13">嘉定区</option>
+                            <option value="14">金山区</option>
+                            <!--南汇区删除-->
+                            <option value="16">奉贤区</option>
+                            <option value="17">松江区</option>
+                            <option value="18">青浦区</option>
+                            <option value="19">崇明区</option>
+                            <option value="20">其他</option>
+                        </select><span>*</span>
+                    </p>
+                    <p>
+                        <label style="display: inline-block; width: 120px;">类&nbsp;&nbsp;&nbsp;别：</label><select name="categoryid" id="categoryid" onchange="getCity(this.options[this.selectedIndex].text, document.getElementById('industryid'))">
+                            <option value="0">请选择</option>
+                            <option value="1">公共服务</option>
+                            <option value="2">交通运输</option>
+                            <option value="3">综合服务</option>
+                            <option value="4">文体娱乐</option>
+                            <option value="5">城市管理</option>
+                            <option value="6">其他</option>
+                        </select><span>*</span>
+                    </p>
+                    <p><label style="display: inline-block; width: 120px;">投诉行业：</label><select name="industryid" id="industryid"><option value="0">请选择</option></select><span>*</span></p>
+                    <p><label style="display: inline-block; width: 120px;">投诉种类：</label><input type="radio" name="kind" value="1" checked="checked" /><label>建议咨询</label><input type="radio" name="kind" value="2" /><label>投诉求助</label><input type="radio" name="kind" value="3" /><label>表扬批评</label></p>
+                    <p><label style="display: inline-block; width: 120px;">是否为留言当事人：</label><input type="radio" name="isparty" checked="checked" value="1" /><label>是</label><input type="radio" name="isparty" value="0" /><label>否</label></p>
+                    <p><label style="display: inline-block; width: 120px;">主&nbsp;&nbsp;&nbsp;题：</label><input type="text" style="width:416px;" maxlength="50" name="theme" id="theme" /><span>*</span></p>
+                    <p class="tex"><label style="display: inline-block; width: 120px;">留&nbsp;&nbsp;&nbsp;言：</label><textarea name="message" id="message"></textarea><span>*</span></p>
+                    <div id="divFiles">
+                        <p><label style="display: inline-block; width: 120px;">图片上传：</label><input type="file" name="files" /></p>
+                        <p><label style="display: inline-block; width: 120px;">图片说明：</label><input type="text" name="filesinfo" maxlength="1000" style="width:416px;" /></p>
+                    </div>
+                    <p class="tex2"><input type="button" value="再加一张" onclick="addFileInput();" />(作品类型为图片JPG格式，大小不超过2M，最多上传10张。)</p>
+                    <p class="smt"><input type="button" value="确 认" id="btnSubmit" onclick="sumbitForm();" />
+                        <label id="lblSubmit" style="display: none;">提交中...</label><input type="reset" value="重 置" /></p>
+                </div>
+            </div>
+
+            <div class="page_r">
+
+<div class="hot24">
+    <div class="title" ><span>24小时最热投诉</span><div ></div></div>
+    <ul>
+            </ul>
+</div>
+<div class="hot24">
+    <div class="title" ><span>一周不满意率排行</span><div ></div></div>
+    <ul>
+            <li><span class="s">1.</span><a href="http://tousu.eastday.com/ztc/ThroughTrain/index/view?id=15199" target="_blank">龙临路露天篮球场噪音扰民</a></li>            <li><span class="s">2.</span><a href="http://tousu.eastday.com/ztc/ThroughTrain/index/view?id=15200" target="_blank">静安区江宁路道路严重破损</a></li>            <li><span class="s">3.</span><a href="http://tousu.eastday.com/ztc/ThroughTrain/index/view?id=15201" target="_blank">朱家角一小区垃圾堆积</a></li>            </ul>
+</div>
+            </div>
+        </div>
+
+        <!--foot-->
+        <div id="footer" class="grey12b lh30 fc">
+            <a href="http://news.eastday.com/images/ditu/bq.htm" class="grey12b" target="_blank">版权声明</a> | <a href="http://www.eastday.com/images/2007img/07aboutus/index1.htm" class="grey12b" target="_blank">网站简介</a> | <a href="http://news.eastday.com/images/ditu/wzls.htm" class="grey12b" target="_blank">网站律师</a> | <a href="http://news.eastday.com/images/ditu/" class="grey12b" target="_blank">网站导航</a> | <a href="http://i1.eastday.com/images/ad2011/ggkl2011/index.html" class="grey12b" target="_blank">广告刊例</a> | <a href="http://news.eastday.com/images/ditu/lx.htm" class="grey12b" target="_blank">联系方式</a> | <a href="http://www.eastday.com/sitemap/index.html" class="grey12b" target="_blank">Site Map</a><br />
+            东方网(eastday.com)版权所有，未经授权禁止复制或建立镜像
+        </div>
+
+    </form>
+</body>
+</html>
+<script language="javascript">
+    var fileID = -1;
+    var fileLength = 0;
+    function addFileInput() {
+        if (fileLength >= 9) {
+            alert("上传文件数不能大于10个");
+            return;
+        }
+        fileID = fileID + 1;
+        fileLength = fileLength + 1;
+        $("#divFiles").append(
+            "<p id=\"pFile" + fileID + "\"><label>图片上传：</label><input type=\"file\" name=\"files\" id=\"files" + fileID + "\"/><input type=\"button\" value=\"删除本图\" onclick=\"delFileInput(" + fileID + ");\" /></p>" +
+            "<p id=\"pFileInfo" + fileID + "\"><label>图片说明：</label><input type=\"text\" maxlength=\"1000\" name=\"filesinfo\" id=\"filesinfo" + fileID + "\" style=\"width:416px;\"/></p>"
+            );
+    }
+
+    function delFileInput(n) {
+        //arrFiles[n] = 0;
+        //n = n * 2;
+        //$("#divFiles p:eq(" + n + ")").remove();
+        //$("#divFiles p:eq(" + n + ")").remove();
+        $("#pFile" + n).remove();
+        $("#pFileInfo" + n).remove();
+        fileLength = fileLength - 1;
+    }
+
+    function sumbitForm() {
+        if (checkForm() == false) {
+            return;
+        }
+        document.getElementById("btnSubmit").style.display = "none";
+        document.getElementById("lblSubmit").style.display = "inline"; 
+        var infos = document.getElementsByName("filesinfo");
+        var fs = document.getElementsByName("files");
+        var re = new RegExp(",", "g");
+        for (n = 0; n < infos.length; n++) {
+            if (fs[n].value != "") {
+                if (IsBlank(infos[n].value) == true) {
+                    alert("请填写图片说明");
+                    infos[n].focus();
+                    document.getElementById("btnSubmit").style.display = "inline";
+                    document.getElementById("lblSubmit").style.display = "none";
+                    return;
+                } else {
+                    infos[n].value = infos[n].value.replace(re, "，");
+                }
+            }
+        }
+        document.getElementById("form1").submit();
+    }
+</script>

@@ -1,0 +1,2771 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+var sUserAgent = window.navigator.userAgent;
+ var mobileAgents = ['Windows CE', 'iPod', 'Symbian', 'iPhone', 'BlackBerry', 'Android','MicroMessenger'];
+        var isPhone = false;
+for (var i = 0; i < mobileAgents.length; i++) {
+            if (sUserAgent.indexOf(mobileAgents[i]) > -1) {
+              isPhone = true;
+              $("html").css("display","none");
+              break;
+            }
+         }
+if(isPhone){
+   window.location.href="//m.chinanews.com/wap/sp";
+}
+})
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="author" content="chinanews" />
+<meta name="copyright" content="www.chinanews.com,版权所有" /> 
+<meta name="keywords" content="新闻,时事,时政,国际,国内,社会,法治,聚焦,评论,文化,教育,新视点,深度,网评,专题,环球,传播,论坛,图片,军事,焦点,排行,环保,校园,法治,奇闻,真情" />
+<meta name="description" content="中新网新闻中心是中新网最重要的频道之一，24小时滚动报道国内、国际及社会新闻。每日编发新闻数以万计。" />
+
+<title>中新网视频频道</title>
+<!--[883,73,1] published at 2019-10-13 16:02:36 from #10 by 潘力维--> 
+
+<base target="_blank" />
+<!--<base href="//www.chinanews.com/" />-->
+<link href="//www.chinanews.com/shipin/2018/css/csslayout.css" type="text/css" rel="stylesheet" />
+
+<script src="//www.chinanews.com/js/jquery1.4.js"></script>
+<script language="JavaScript">
+
+document.domain = "chinanews.com"; 
+
+</script>
+
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        bp.src = '//push.zhanzhang.baidu.com/push.js';
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+<script type="text/javascript" src='http://www.chinanews.com/pv/js/pvnoju.js'></script>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
+<script>
+
+//tab
+function nTabs(thisObj,Num){
+if(thisObj.className == "active")return;
+var tabObj = thisObj.parentNode.id;
+var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+for(i=0; i <tabList.length; i++)
+{
+  if (i == Num)
+  {
+   thisObj.className = "active"; 
+      document.getElementById(tabObj+"_Content"+i).style.display = "block";
+	   $(".new_right_title").addClass("ywtitle"+i);
+  }else{
+   tabList[i].className = "normal"; 
+   document.getElementById(tabObj+"_Content"+i).style.display = "none";
+   $(".new_right_title").removeClass("ywtitle"+i);
+  }
+} 
+}
+
+/*daohang huaguo*/
+$(document).ready(function(){
+
+	  function topnav1(){
+	var _show = null;
+	  var _hideTimer = null;
+	  var planItems = $('ul.c-fl-ul li.division');
+		planItems.each(function(index) {
+	    var li = $(this);
+		var div = li.find('div.navshow_div');
+			div.css("display","none");
+			li.bind('mouseenter',function() {
+				if (_show != null) {
+					clearTimeout(_show);
+				}
+				_show = setTimeout(function() {
+					$('ul.nav_navcon li').addClass('');
+
+					li.addClass('topnav_sel');
+				}, 0);
+				});
+			  li.bind('mouseleave', function() {
+					if (_show != null) {
+					clearTimeout(_show);
+				}
+				_hideTimer = setTimeout(function() {
+					li.removeClass('topnav_sel');
+
+				}, 0);
+				});
+			});
+	  };
+	topnav1();
+
+});
+   function search_select(id) {
+     document.getElementById("id7").className="dii7"+id;
+  }
+     function weibo(id) {
+     document.getElementById("id8").className="dii8"+id;
+  }
+
+  $(function(){ 
+				 var total_value =  $("#total_page_total0").val();
+	 			//alert (total_value);
+				 if(total_value!=null && total_value!=''){
+				var page_html =  '<div style="width:100%;height:30px;background:#e8e8e8; border:1px solid #ebebeb;clear:both;margin-top:20px; line-height:30px; color:#919191; cursor:pointer; font-size:14px;text-align:center" onclick="ongetpage(2,300,0)">>>更多</div>';
+				$("#page_bar0").html(page_html);
+		//ongetpage(1,total_value);
+					 }
+			});
+
+//jsxw_sp
+	function js_jsxwssp(thisObj,Numa)
+	{
+		//alert(thisObj);
+		//alert(Numa);
+		var top1=$(document).scrollTop();
+		var left_heigt1=$("#enter_top").height();
+		var left_heigt2=$("#daodu").height();
+		var left_heigt3=$("#yaowen").height();
+		var left_heigt4=$("#shipin").height();
+		var left_heigt5=left_heigt1+left_heigt2+left_heigt3+left_heigt4;
+		var pw_heigth=$(window).height();
+
+		if(thisObj.className == "active")return;
+		var tabObj = thisObj.parentNode.id;
+		var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+		for(i=0; i <tabList.length; i++)
+		{
+		if (i == Numa)
+		  {
+			  document.getElementById(tabObj+"_Con"+Numa).style.display = "block";
+			   document.getElementById("jsxw_sp_Con"+Numa).style.display = "block";
+			 // alert(Num);
+			  thisObj.className = "filter-selected"; 
+		     var scrollHeight= document.body.scrollHeight || document.documentElement.scrollHeight;
+
+			  $("#jsxwredbox_biglist2").hide();
+			  $("#jsxw_all_Con0").hide();
+			  createPageHtml(1,300,Numa);
+
+var tChannel = ''; 
+
+			 }else{
+		   document.getElementById(tabObj+"_Con"+i).style.display = "none";
+		   tabList[i].className = "normal"; 
+		  }
+		} 
+}
+
+function createPageHtml(page,total,Numa){
+    var page_html = '';
+
+	if(page!=1){
+		page_html = '';
+	}
+	var startPoint = 1;
+	var endPoint = 10;
+	if(page>=1 && page<=total/14){
+		page_html = page_html + '<div style="width:100%;height:30px;background:#e8e8e8;color:#919191;border:1px solid #ebebeb;clear:both;margin-top:20px; line-height:30px; cursor:pointer; font-size:14px;text-align:center" onclick="ongetpage('+(page+1)+','+total+','+Numa+')">>>更多　</div>';
+	}
+
+	$("#page_bar"+Numa).html(page_html);
+}
+function ongetpage(num,total,Numa){
+	//alert(num);
+  				var specialid= $("#specialid"+Numa).val();
+  				//alert (specialid);
+  				if(num==1){
+    				window.location.href=window.location.href;
+   					 return;
+ 				 }else if(num>1){
+					 if (Numa==0){
+
+						  //$.getScript("//channel.chinanews.com/cns/s/channel:"+specialid+".shtml?pager="+(num-1)+"&pagenum=12", function(){
+						  $.getScript("//channel.chinanews.com/video/cns/roll/yes/4.shtml?pager="+(num-1)+"&pagenum=16", function(){
+				 var html = "";
+		 		var data = specialcnsdata;
+				//alert(data.totalpages);
+				if(data.docs.length==0)
+				{
+					alert('全部加载完！');
+				}
+		 for(var i=0;i<data.docs.length;i++){ 
+			var pubtime = data.docs[i].pubtime;
+			var title = data.docs[i].title;
+			var url = data.docs[i].url;
+			var pic = data.docs[i].img_cns;
+			var content = data.docs[i].content;
+
+		html = html+'<li> <div class="splist_div"><a href="'+url+'"><img src="'+pic+'" alt="'+title+'" ><div class="splist_div_bg"></div><div class="splist_div_video"></div><p>'+title+'</p><div class="splist_div_day">'+pubtime+'</div></a></div></li>';
+
+		  }
+		//alert(html);
+                  $("#ent"+Numa).append(html);
+	});
+					 }
+					 else{
+					  //$.getScript("//channel.chinanews.com/cns/s/"+specialid+".shtml?pager="+(num-1)+"&pagenum=12", function(){
+				 $.getScript("//channel.chinanews.com/video/cns/vclt/" + specialid + "/yes.shtml?pager="+(num-1)+"&pagenum=16", function(){
+
+				 var html = "";
+		 		var data = specialcnsdata;
+				//alert(data.totalpages);
+
+				if(data.docs.length==0)
+				{
+					alert('全部加载完！');
+				}
+		 for(var i=0;i<data.docs.length;i++){ 
+			var pubtime = data.docs[i].pubtime;
+			var title = data.docs[i].title;
+			var url = data.docs[i].url;
+			var pic = data.docs[i].img_cns;
+			var content = data.docs[i].content;
+
+			html = html+'<li><div class="splist_div"><a href="'+url+'"><img src="'+pic+'" alt="'+title+'" ><div class="splist_div_bg"></div><div class="splist_div_video"></div><p>'+title+'</p><div class="splist_div_day">'+pubtime+'</div></a></div></li>';
+
+		  }
+		//alert(html);
+                  $("#ent"+Numa).append(html);
+	});
+					 }
+	createPageHtml(num,total,Numa);
+
+  }
+  //alert(document.documentElement.scrollTop);
+ // $(document).scrollTop(0);
+//$(document).scrollTop()=0;
+}
+
+$(document).ready(function(){
+
+		$("#md_close").click(function(){
+			$("#full").hide();						  
+			})
+
+	});
+</script>
+</head>
+
+<body>
+
+ <!--div id="js_N_nav" class="index-nav" s-->
+<!--[47,21,1] published at 2019-02-14 16:36:42 from #10 by 赵谦-->
+<style>
+.index_icon14 {
+    background: url(http://www.chinanews.com/fileftp/2015/09/2015-09-06/U435P4T47D33340F978DT20150907155559.png) no-repeat ;
+    display: block;
+    height: 13px;
+    width: 18px;
+}
+
+ul.c-fl-ul .topnav_sel .index_icon14 {
+    background: url(http://www.chinanews.com/fileftp/2015/09/2015-09-06/U435P4T47D33340F979DT20150907155559.png) no-repeat ;
+}
+.index_icon_gzh{background:url(http://i2.chinanews.com/2013/news/newnc/images/wx_mo.png) no-repeat;display:block;width:24px;height:19px;}
+ul.c-fl-ul .topnav_sel .index_icon_gzh{background:url(http://i2.chinanews.com/2013/news/newnc/images/wx_sel.png) no-repeat;}
+.index-nav-select-wide .index-nav-select-title-gzh{padding:0px 10px 0px 43px}
+
+</style>
+
+<div id="js_N_nav" class="index-nav" style="height:46px;">
+    <div class="index-nav-main clearfix">
+        <div id="stepflow01" class="c-fl">
+        	<ul class="c-fl-ul">
+            	<li class="division"><div class="index-nav-select    left">
+              	     <a href="//www.chinanews.com" class="index-nav-select-title index-nav-entry-bgblack"><em class="index-nav-select-arr index_icon1"></em>中新网首页</a></div>
+                </li>
+
+                <li id="jrzmdiv" class="division"> <div class="index-nav-select    left">
+               		 <a href="//www.chinanews.com/common/footer/sitemap.shtml" class="index-nav-select-title index-nav-entry-bgblack"><em class="index-nav-select-arr index_icon14"></em>网站地图</a> </div>
+                </li>
+
+               <li class="division"><div class="index-nav-select    left">
+                	<a href="//mail.chinanews.com.cn/" class="index-nav-select-title index-nav-entry-bgblack"><em class="index-nav-select-arr index_icon12"></em>企业邮箱</a></div>
+               </li>
+
+               <li class="division"><div class="index-nav-select    left">
+               		 <a class="index-nav-select-title index-nav-entry-bgblack" href="//www.chinaso.com/"><em class="index-nav-select-arr index_icon11"></em>中国搜索</a></div>
+               </li>
+             </ul>
+        </div>
+        <div class="c-fr">
+            <ul class="c-fl-ul">
+            	<li id="jrzmdiv1" class="division"> <div class="index-nav-select    left">
+                    <a class="index-nav-select-title index-nav-entry-bgblack" href="//m.chinanews.com/home/"><em class="index-nav-select-arr index_icon4"></em>移动版</a></div>
+                 </li>
+                 <li id="jrzmdiv1" class="division"> <div class="index-nav-select    left">
+                     <a href="//www.chinanews.com/app/chinanews/index.shtml" class="index-nav-select-title index-nav-entry-bgblack"><em class="index-nav-select-arr index_icon13"></em>客户端</a></div>
+                 </li>
+                  <li id="jrzmdiv1" class="division"> 
+				 <div class="index-nav-select left">
+                <div class="newpic"></div>
+                <a class="index-nav-select-title index-nav-entry-bgblack" href="//www.chinanews.com/cns2012.shtml"><em class="index-nav-select-arr index_icon_gzh"></em>微信</a>
+
+             </div>
+             </li>
+                 <li id="jrzmdiv2" class="division"> <div class="index-nav-select  index-nav-app left ">
+                      <div style="_width:90px;" class="dii81" id="id8" onmouseover="weibo(0)" onmouseout="weibo(1)">
+                           <div id="navshow_div" class="index-nav-select-pop">
+                                <ul class="index-nav-select-list clearfix">
+                                    <!-- <li><a href="//t.chinanews.com/"><span>中新职务微博</span></a></li>-->
+                                    <li><a href="//weibo.com/chinanewsv"><span>中新网<em>新浪</em>法人微博</span></a></li>
+                                    <li><a href="//t.qq.com/chinanews"><span>中新网<em>腾讯</em>法人微博</span></a></li>
+                                     <li><a href="//weibo.com/u/3604378011"><span>中新社<em>新浪</em>法人微博</span></a></li>
+                                     <li><a href="//t.qq.com/cns"><span>中新社<em>腾讯</em>法人微博</span></a></li>
+
+                                     <!--
+                                     <li><a href="//1.t.qq.com/cns"><span>中新社<em >腾讯</em>法人微博</span></a></li>
+                                    <li><a href="//chinanewsv.t.sohu.com/"><span>中新网<em >搜狐</em>法人微博</span></a></li>
+                                    <li><a href="//t.163.com/chinanews"><span>中新网<em >网易</em>法人微博</span></a></li>-->
+
+                                </ul>
+                            </div>
+                        <a class=" p_relative index-nav-select-title1  index-nav-entry-bgblack " ><em class="index-nav-select-arr1"></em>
+                        <em class="index-nav-select-arr index_icon5"></em>微博
+                         </a>
+                        </div>
+                    </div>
+                 </li>
+                <li class="division"> <a href="//www.ecns.cn/" class="index-nav-entry-wide index-nav-select-title left">English</a></li>
+               <!-- <li class="division">  <a href="//big5.chinanews.com:80/" class="index-nav-entry-wide index-nav-select-title left">繁体</a></li>-->
+				<!--<li class="division"><fjtignoreurl><a id="yx_style_nav" class="index-nav-entry-wide left" href="//wza.chinanews.com/" style="color:#b21112">无障碍</a></fjtignoreurl></li>-->
+            </ul>
+
+        </div>  
+
+        <div class="clear"></div>  
+    </div>
+</div>
+<!--div id="js_N_nav" class="index-nav" e-->
+
+<div id="index_topa">
+
+<div style="width:1000px;margin:0 auto; margin-top:10px;" id="news_top_advert">
+
+
+         <div class="clear"></div>  
+     </div>
+<div class="enter_top" id="enter_top">
+       <div class=" w1000 m_center">
+
+      <div class="enter_banner">
+            <div class="enter_logo"><a href="//www.chinanews.com/shipin/"><img src="http://i8.chinanews.com/2016cns/video/2_03.jpg"/></a></div>
+            <div class="searchnav">
+
+                    <div class="searchinput">
+
+                    <div class="search_listbox"> 
+
+                  					<!---->
+                     <script type="text/javascript"> 
+
+function checksubmit(){
+    var code = event.keyCode;
+    if(code == 13) submitFun();
+  }
+
+function submitFun() {
+
+var hotword=document.getElementsByName('q')[0].value;
+
+if (hotword==''){
+
+alert('请输入关键字!');
+
+return false;
+
+}
+else
+{
+
+$.ajax({
+  type: "GET",
+  url: "http://lc.chinanews.com:8090/rpc/pa.jsp?pid=1&paid=50&u=sousuo&aj="+encodeURI(Math.random()+ (new Date())),
+  dataType: "jsonp"
+});
+
+if(document.getElementsByName('s0')[0].value=='cns')
+{
+
+ window.open("http://sou.chinanews.com/search.do?q="+encodeURIComponent(hotword));
+ }
+ else if(document.getElementsByName('s0')[0].value=='baidu')
+ {
+ window.open("http://www.baidu.com/s?ie=utf-8&bs=%E4%B8+%9B%BD&sr=&z=&cl=3&f=8&wd="+encodeURIComponent(hotword)+"&ct=0");
+ }
+
+}
+
+}
+
+</script>  
+
+                <div style="_position:relative;padding:0px;margin:0px;" onmouseout="search_select(1)" onmouseover="search_select(0)" class="dii7" id="id7">
+                     <div  class="select_border">
+
+<div class="select_container">
+                     <select id="s0" name="s0"  class="selectnews"> 
+<option value="cns">站内搜索</option> 
+<option value="baidu">百度搜索</option> 
+
+</select> 
+</div>
+</div></div>     
+
+                    </div>
+
+                    <input type="text" value="" onclick="this.value='',this.style.color='#000'" name="q" id="q"  class="search_input" onkeydown="checksubmit()">
+                    <a  class="search_a" onclick="submitFun()"><img src="http://i2.chinanews.com/shipin/2018/image/search1.jpg" /></a>
+					<div class="clear"></div>
+              </div>
+                    <div class="clear"></div>
+               </div>
+
+               <div class="ewmright">
+               <a onMouseOver="ddd('cc', 'show');" onMouseOut="ddd('cc', 'hide');" class="erweima_hg">
+               <p>中新网APP</p>
+				<div class="erweima_img" style=" display:none;" id="cc" onMouseOver="ddd('cc', 'show');" onMouseOut="ddd('cc', 'hide');"> 
+					<img src="http://www.chinanews.com/fileftp/2018/06/2018-06-14/U435P4T47D42148F980DT20180615171351.jpg">
+				</div> 
+			</a> 
+
+			<a onMouseOver="ddd('aa', 'show');" onMouseOut="ddd('aa', 'hide');" class="erweima_hg">
+            <p>中新视频</p>
+				<div class="erweima_img" style="display:none;" id="aa" onMouseOver="ddd('aa', 'show');" onMouseOut="ddd('aa', 'hide');">
+					<img src="http://www.chinanews.com/fileftp/2018/08/2018-08-30/U435P4T47D42728F24534DT20180831161455.png">
+				</div> 
+			</a>
+
+			<a onMouseOver="ddd('bb', 'show');" onMouseOut="ddd('bb', 'hide');" class="erweima_hg">
+            <p>中新网</p>
+				<div class="erweima_img" style="display:none;" id="bb" onMouseOver="ddd('bb', 'show');" onMouseOut="ddd('bb', 'hide');">
+					<img src="http://www.chinanews.com/fileftp/2017/02/2017-02-26/U435P4T47D38540F974DT20170227141744.jpg">
+				</div> 
+			</a> 
+
+               <script> 
+		function ddd(obj, sType) { 
+			var oDiv = document.getElementById(obj); 
+			if (sType == 'show') { oDiv.style.display = 'block';} 
+			if (sType == 'hide') { oDiv.style.display = 'none';} 
+		} 
+	</script> 
+</div>
+
+           <div class="clear"></div>
+        </div>
+
+  </div>
+        <div class="inter_navbox mt15" >
+                    <ul class="inter_nav_ul">                                                                                                                                    
+                      <li class="nav_sel"><a href="//www.chinanews.com/shipin/m/gd/views.shtml">最新</a></li><em></em>
+                      <li><a href="//www.chinanews.com/shipin/m/rd/views.shtml">热点</a></li><em></em>
+                      <li><a href="//www.chinanews.com/shipin/m/gn/views.shtml">国内</a></li><em></em>
+                      <li><a href="//www.chinanews.com/shipin/m/sh/views.shtml">社会</a></li><em></em>
+
+                      <li><a href="//www.chinanews.com/shipin/m/gj/views.shtml">国际</a></li><em></em>
+                      <li><a href="//www.chinanews.com/shipin/m/jq/views.shtml">军事</a></li><em></em>
+                      <li><a href="//www.chinanews.com/shipin/m/wy/views.shtml">文娱</a></li><em></em>
+                      <li><a href="//www.chinanews.com/shipin/m/tt/views.shtml">体育</a></li><em></em>
+                      <li><a href="//www.chinanews.com/shipin/m/cj/views.shtml">财经</a></li><em></em>
+                      <li><a href="//www.chinanews.com/live.shtml">直播</a></li><em></em>
+                      <li><a href="//www.chinanews.com/shipin/m/ga/views.shtml">港澳台侨</a></li><em></em>
+                      <li><a href="//www.chinanews.com/shipin/minidocu.shtml">微视界</a></li><em></em>             
+                      <li><a href="//www.chinanews.com/shipin/chinarevealed.shtml">中国新视野</a></li><em></em>   
+                      <li><a href="//www.chinanews.com/shipin/AuthenticChina.shtml">中国风</a></li>
+		      <!--<em></em>                        
+<li><a href="http://www.nhfilm.cn/">南海影业</a>--></li>
+
+               </ul>
+          </div>
+
+ <!--头部结束-->
+
+   </div>
+   </div>
+
+<!--focus-->
+<style>.focus_right_div_info{font-size:13px;line-height:22px;}</style>
+<div class="focus">
+<div class="w1000 m_center">
+<div class="focus_left">
+<!--[883,34,59] published at 2019-10-12 13:28:48 from #202 by 574-->
+<a href="http://www.chinanews.com/shipin/xsy/2019/1012/xsy51.html"><img src="http://www.chinanews.com/2012/part/home/U574P883T34D59F793DT20191012132847.jpg" alt="精彩回顾香港警察代表团北京之行
+" /></a>
+<div class="focus_left_info"><a href="http://www.chinanews.com/shipin/xsy/2019/1012/xsy51.html">精彩回顾香港警察代表团北京之行
+</a></div>
+
+<div class="focus_left_bg"></div>
+<div class="focus_left_video"></div>
+</div>
+
+<div class="focus_right">
+<div class="focus_right_l">
+<div class="focus_right_div focus_right_mar">
+<a href="/sh/shipin/cns-d/2019/10-12/news834440.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/B18587A25B5845E08BCF436EC9F2F77D.jpg" alt="一分钟看雪域“秋妆”" />
+<div class="focus_right_div_bg"></div>
+<div class="focus_right_div_info">一分钟看雪域“秋妆”</div>
+<div class="focus_right_div_video"></div>
+</a>
+
+</div><div class="focus_right_div focus_right_mar">
+<a href="/gj/shipin/cns-d/2019/10-12/news834382.shtml"><img src="//www.chinanews.com/gj/shipin/cns-d/2019/10-12/U574P883T4D834382F158DT20191012103629.jpg" alt="“左宗棠鸡”风靡美国" />
+<div class="focus_right_div_bg"></div>
+<div class="focus_right_div_info">“左宗棠鸡”风靡美国</div>
+<div class="focus_right_div_video"></div>
+</a>
+
+</div>
+
+</div>
+<div class="focus_right_r">
+<!--include virtual="/2012/part/home/60.html"--><!--固定数据-->
+<div class="focus_right_div" style="margin-bottom:9px;">
+<a href="/sh/shipin/cns/2019/10-12/news834342.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/04C37DBD25064F5686510EB8384671D5.jpg" alt="大叔自创新式广场舞" />
+<div class="focus_right_div_bg"></div>
+<div class="focus_right_div_info">大叔自创新式广场舞</div>
+<div class="focus_right_div_video"></div>
+</a>
+
+</div><div class="focus_right_div" style="margin-bottom:9px;">
+<a href="/yl/shipin/cns/2019/10-11/news834254.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5da003d56de2220d07fa01db_big.jpg" alt="龚琳娜自创方法培训老师" />
+<div class="focus_right_div_bg"></div>
+<div class="focus_right_div_info">龚琳娜自创方法培训老师</div>
+<div class="focus_right_div_video"></div>
+</a>
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div class="clear"></div>
+<!--今日-->
+<div class="splm">
+<div class="splm_bt">今日推荐</div>
+</div>
+<div class="splist">
+<div class="jrleft">
+
+<div class="splist_div">
+<a href="/yl/shipin/cns/2019/10-12/news834443.shtml"><img src="//www.chinanews.com/yl/shipin/cns/2019/10-12/U574P883T4D834443F158DT20191012160404.jpg" alt="北京人艺开办“表演学员培训班” 蓝天野濮存昕宋丹丹将授课" />
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>北京人艺开办“表演学员培训班” 蓝天野濮存昕宋丹丹将授课</p>
+<div class="splist_div_day">2019年10月12日</div>
+</a>
+</div>               
+<div class="splist_div">
+<a href="/sh/shipin/cns-d/2019/10-12/news834439.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/C8776EF5564548BF978E5FD4DC9C07E4.jpg" alt="青海祁连首次拍摄到10只中白鹭“做客”人工湖" />
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>青海祁连首次拍摄到10只中白鹭“做客”人工湖</p>
+<div class="splist_div_day">2019年10月12日</div>
+</a>
+</div>               
+<div class="splist_div">
+<a href="/sh/shipin/cns/2019/10-12/news834438.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/95E064784A6E4649B5ED374CB3CBF8B3.jpg" alt="江苏无锡桥面侧翻路段：连夜抢修 路面交通基本恢复" />
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>江苏无锡桥面侧翻路段：连夜抢修 路面交通基本恢复</p>
+<div class="splist_div_day">2019年10月12日</div>
+</a>
+</div>               
+<div class="splist_div">
+<a href="/sh/shipin/cns-d/2019/10-12/news834436.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/9B978E87E217413EB889CF65F2816C56.jpg" alt="工资上交老婆 酒驾男子报警求被抓：压力大想逃避 " />
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>工资上交老婆 酒驾男子报警求被抓：压力大想逃避 </p>
+<div class="splist_div_day">2019年10月12日</div>
+</a>
+</div>               
+<div class="splist_div">
+<a href="/sh/shipin/cns-d/2019/10-12/news834397.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/284481D37C364332B862C5BD539768A4.jpg" alt="广东茂名700警力跨省抓捕涉黑恶犯罪团伙成员" />
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>广东茂名700警力跨省抓捕涉黑恶犯罪团伙成员</p>
+<div class="splist_div_day">2019年10月12日</div>
+</a>
+</div>               
+<div class="splist_div">
+<a href="/shipin/cns/2019/10-12/news834383.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/708181D7888648F6B9684471CA77340F.jpg" alt="探寻《攀登者》原型邬宗岳：他把“登山精神”留给后来人" />
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>探寻《攀登者》原型邬宗岳：他把“登山精神”留给后来人</p>
+<div class="splist_div_day">2019年10月12日</div>
+</a>
+</div>
+
+</div>
+<div class="jrright">
+<div class="spphb">
+<p>视频排行榜</p>
+<ul class="life_left_ul_ph">
+                             <li>
+              <a href="//www.chinanews.com/cj/shipin/cns/2019/10-11/news834299.shtml" target="_blank" title="宁启铁路全线贯通 首次开行CR200J“绿巨人”动车组">宁启铁路全线贯通 首次开行CR200J“绿巨人”动...</a>
+        	</li><li>
+              <a href="//www.chinanews.com/sh/shipin/cns-d/2019/10-11/news834285.shtml" target="_blank" title="盲哑学校听障学生的升旗仪式：用手“唱”国歌">盲哑学校听障学生的升旗仪式：用手“唱”国歌</a>
+        	</li><li>
+              <a href="//www.chinanews.com/gj/shipin/cns-d/2019/10-11/news834332.shtml" target="_blank" title="小新纽约街头邀路人吃臭豆腐 美国人的反应绝了">小新纽约街头邀路人吃臭豆腐 美国人的反应绝了</a>
+        	</li><li>
+              <a href="//www.chinanews.com/shipin/cns/2019/10-11/news834320.shtml" target="_blank" title="广西集中公开销毁涉嫌走私“三无”船舶700余艘">广西集中公开销毁涉嫌走私“三无”船舶700余艘</a>
+        	</li><li>
+              <a href="//www.chinanews.com/sh/shipin/cns/2019/10-11/news834287.shtml" target="_blank" title="黑龙江国际大米节：日本“煮饭仙人”背锅到现场煮饭">黑龙江国际大米节：日本“煮饭仙人”背锅到现场煮饭</a>
+        	</li><li>
+              <a href="//www.chinanews.com/hr/shipin/cns/2019/10-11/news834333.shtml" target="_blank" title="第十届世界华文传媒论坛举行在即 华媒领军者齐聚河北共襄盛举">第十届世界华文传媒论坛举行在即 华媒领军者齐聚河北...</a>
+        	</li><li>
+              <a href="//www.chinanews.com/shipin/2019/10-11/news834281.shtml" target="_blank" title="车主从出口上高速：我第一次走没经验">车主从出口上高速：我第一次走没经验</a>
+        	</li><li>
+              <a href="//www.chinanews.com/gj/shipin/2019/10-11/news834290.shtml" target="_blank" title="一架飞机在内罗毕起飞时发生事故">一架飞机在内罗毕起飞时发生事故</a>
+        	</li><li>
+              <a href="//www.chinanews.com/shipin/2019/10-11/news834291.shtml" target="_blank" title="外交部：欢迎各国运动员来华参加冬奥会">外交部：欢迎各国运动员来华参加冬奥会</a>
+        	</li><li>
+              <a href="//www.chinanews.com/hr/shipin/cns/2019/10-11/news834326.shtml" target="_blank" title="“老十届”寄语世界华文传媒论坛：像回娘家过年 冀越办越好">“老十届”寄语世界华文传媒论坛：像回娘家过年 冀越...</a>
+        	</li><!--published at 1570952701 -->
+                          </ul>
+
+</div>
+</div>
+</div>
+
+<div class="clear"></div>
+<!--zxyc-->
+
+<div class="splm">
+<div class="splm_bt"><img src="http://i2.chinanews.com/shipin/2018/image/zxyc.jpg"  /></div>
+<div class="splm_more"><a href="http://www.chinanews.com/shipin/m/cnstv/views.shtml">...</a></div>
+</div>
+
+<div class="splist">
+
+<div class="splist_div">
+<a href="/tw/shipin/cns/2019/10-13/news834540.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/33F383255C724DF59DCEBB7674D73004.jpg" alt="两岸中医药学者专家携手打造中医药交流平台" />
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>两岸中医药学者专家携手打造中医药交流平台</p>
+<div class="splist_div_day">2019年10月13日</div>
+</a>
+</div>               
+<div class="splist_div">
+<a href="/cj/shipin/cns/2019/10-13/news834536.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/B12DA3C1F7E94234B96A045A188EF9FC.jpg" alt="青海三江源地区实现清洁采暖 年减碳排近20万吨" />
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>青海三江源地区实现清洁采暖 年减碳排近20万吨</p>
+<div class="splist_div_day">2019年10月13日</div>
+</a>
+</div>               
+<div class="splist_div">
+<a href="/cj/shipin/cns/2019/10-13/news834534.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/57BA5776406D40E59418679FE29AD45D.jpg" alt="曲周家的“阳光存折”：光伏脱贫 阳光“变现”" />
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>曲周家的“阳光存折”：光伏脱贫 阳光“变现”</p>
+<div class="splist_div_day">2019年10月13日</div>
+</a>
+</div>               
+<div class="splist_div">
+<a href="/sh/shipin/cns/2019/10-13/news834533.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/C51F9C73470C4C53B08DDD3E42218E11.jpg" alt="华南首台达芬奇XI手术机器人在广西开机" />
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>华南首台达芬奇XI手术机器人在广西开机</p>
+<div class="splist_div_day">2019年10月13日</div>
+</a>
+</div>
+</div>
+
+<div class="clear"></div>
+<!--dsp-->
+
+<div class="splm">
+<div class="splm_bt"><img src="http://i2.chinanews.com/shipin/2018/image/zxdsp.jpg"  /></div>
+<div class="splm_more"><a href="http://www.chinanews.com/shipin/m/duan/views.shtml">...</a></div>
+</div>
+
+<div class="splist">
+
+<div class="splist_div">
+<a href="/shipin/cns-d/2019/10-13/news834541.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/8C3DA4F78D9742D89A99C9A214ECFB82.jpg" alt="郑国光：中国超过58%国土和55%人口处地震高风险区" />
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>郑国光：中国超过58%国土和55%人口处地震高风险区</p>
+<div class="splist_div_day">2019年10月13日</div>
+</a>
+</div>               
+<div class="splist_div">
+<a href="/mil/shipin/cns-d/2019/10-13/news834535.shtml"><img src="//www.chinanews.com/mil/shipin/cns-d/2019/10-13/U738P883T4D834535F158DT20191013155335.jpg" alt="第一视角带你体验武警特战队员专属“下楼”方式" />
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>第一视角带你体验武警特战队员专属“下楼”方式</p>
+<div class="splist_div_day">2019年10月13日</div>
+</a>
+</div>               
+<div class="splist_div">
+<a href="/sh/shipin/cns-d/2019/10-13/news834532.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/FE5AAFFAEFC04F94A6520901FAEB29CB.jpg" alt="广西萌娃上演Cosplay秀 萌翻众人" />
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>广西萌娃上演Cosplay秀 萌翻众人</p>
+<div class="splist_div_day">2019年10月13日</div>
+</a>
+</div>               
+<div class="splist_div">
+<a href="/sh/shipin/cns-d/2019/10-13/news834516.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/1405FCF0E9794D7A82FE7A7CF521101E.jpg" alt="轮椅老人误入机动车道 3辆警用摩托一路护航" />
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>轮椅老人误入机动车道 3辆警用摩托一路护航</p>
+<div class="splist_div_day">2019年10月13日</div>
+</a>
+</div>
+</div>
+
+<div class="clear"></div>
+<!--zgxsy-->
+
+<div class="splm">
+<div class="splm_bt"><img src="http://i2.chinanews.com/shipin/2018/image/zgxsy.jpg" style="margin-top:0;" /></div>
+<div class="splm_more"><a href="http://www.chinanews.com/shipin/chinarevealed.shtml">...</a></div>
+</div>
+<div class="splist">
+
+<div class="splist_div">
+<a href="//www.chinanews.com/shipin/xsy/2019/1012/xsy51.html"><img src="//www.chinanews.com/shipin/2019/10-12/U574P883T4D834374F158DT20191012094538.jpg" alt="【中国新视野】香港阿SIR北京行：十四亿同胞给我们打了强心针" />
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>【中国新视野】香港阿SIR北京行：十四亿同胞给我们打了强心针</p>
+<div class="splist_div_day">2019年10月12日</div>
+</a>
+</div>               
+<div class="splist_div">
+<a href="//www.chinanews.com/shipin/xsy/2019/0929/xsy50.html"><img src="//www.chinanews.com/shipin/2019/09-29/U574P883T4D833146F158DT20190929161436.jpg" alt="【中国新视野】70年中国治沙显功：森林植被覆盖率由8.6%提升到22.9%" />
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>【中国新视野】70年中国治沙显功：森林植被覆盖率由8.6%提升到22.9%</p>
+<div class="splist_div_day">2019年9月29日</div>
+</a>
+</div>               
+<div class="splist_div">
+<a href="//www.chinanews.com/shipin/xsy/2019/0925/xsy49.html"><img src="//www.chinanews.com/shipin/2019/09-25/U574P883T4D832623F158DT20190925111155.jpg" alt="【中国新视野】中国“点亮”夜经济 多地推新规为其“掌灯”" />
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>【中国新视野】中国“点亮”夜经济 多地推新规为其“掌灯”</p>
+<div class="splist_div_day">2019年9月25日</div>
+</a>
+</div>               
+<div class="splist_div">
+<a href="//www.chinanews.com/shipin/xsy/2019/0802/xsy48.html"><img src="//www.chinanews.com/shipin/2019/08-02/U684P883T4D825957F158DT20190802102507.jpg" alt="【中国新视野】垃圾分类成中国“新时尚” 各地出招紧扣“公众参与” " />
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>【中国新视野】垃圾分类成中国“新时尚” 各地出招紧扣“公众参与” </p>
+<div class="splist_div_day">2019年8月2日</div>
+</a>
+</div>
+</div>
+
+<div class="clear"></div>
+<!--wsj-->
+
+<div class="splm">
+<div class="splm_bt"><img src="http://www.chinanews.com/fileftp/2019/08/2019-08-15/U865P4T47D44970F24533DT20190815104827.png" style="margin-top:0;" /></div>
+<div class="splm_more"><a href="http://www.chinanews.com/shipin/minidocu.shtml">...</a></div>
+</div>
+
+<div class="splist">
+
+<div class="splist_div">
+<a href="//www.chinanews.com/shipin/wsj/2019/1008/wsj299.html"><img src="//www.chinanews.com/shipin/2019/10-08/U574P883T4D833923F158DT20191008170403.jpg" alt="摩尔多瓦美女在重庆当网红 流利方言最爱火锅" />
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>摩尔多瓦美女在重庆当网红 流利方言最爱火锅</p>
+<div class="splist_div_day">2019年10月8日</div>
+</a>
+</div>               
+<div class="splist_div">
+<a href="//www.chinanews.com/shipin/wsj/2019/0930/wsj298.html"><img src="//www.chinanews.com/shipin/2019/09-30/U574P883T4D833286F158DT20190930173157.jpg" alt="塞尔维亚姑娘少林学艺 只为圆儿时的功夫梦" />
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>塞尔维亚姑娘少林学艺 只为圆儿时的功夫梦</p>
+<div class="splist_div_day">2019年9月30日</div>
+</a>
+</div>               
+<div class="splist_div">
+<a href="//www.chinanews.com/shipin/wsj/2019/0930/wsj297.html"><img src="//www.chinanews.com/shipin/2019/09-30/U574P883T4D833285F158DT20190930172737.jpg" alt="加拿大小伙攻读山水画博士为写生走遍中国" />
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>加拿大小伙攻读山水画博士为写生走遍中国</p>
+<div class="splist_div_day">2019年9月30日</div>
+</a>
+</div>               
+<div class="splist_div">
+<a href="//www.chinanews.com/shipin/wsj/2019/0927/wsj296.html"><img src="//www.chinanews.com/shipin/2019/09-27/U738P883T4D832921F158DT20190927101830.jpg" alt="兵马俑修复师：这工作不是扫尘粘胶那么简单" />
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>兵马俑修复师：这工作不是扫尘粘胶那么简单</p>
+<div class="splist_div_day">2019年9月27日</div>
+</a>
+</div>
+</div>
+
+<!--gundong-->
+<div class="clear"></div>
+
+<div class="w1000 m_center">
+        <!---->
+
+              <div class="enter_listtitle">
+
+                      <div id="jsxwredbox_Con1" style="display:block;" class="enter_listtitle_layer">
+                       <ul class="tab-list" id="jsxw_sp">                                                                                                
+                                <li class="filter-item d-ib filter-selected" onClick="js_jsxwssp(this,0);">    
+                                    <a class="filter-name" >最新</a></li>
+                                <li class="filter-item d-ib" onClick="js_jsxwssp(this,1);" >    
+                                     <a class="filter-name" >热点</a></li>
+                                <li  class="filter-item d-ib" onClick="js_jsxwssp(this,2);">    
+                                    <a class="filter-name" >社会</a></li>
+                                <li  class="filter-item d-ib" onClick="js_jsxwssp(this,3);">    
+                                     <a class="filter-name" >国际</a></li>
+                                <li class="filter-item d-ib" onClick="js_jsxwssp(this,4);">    
+                                     <a class="filter-name" >军事</a></li>
+                               <li class="filter-item d-ib" onClick="js_jsxwssp(this,5);">    
+                                     <a class="filter-name" >文娱</a></li>
+                                <li class="filter-item d-ib" onClick="js_jsxwssp(this,6);">    
+                                     <a class="filter-name" >体育</a></li>
+                                <li class="filter-item d-ib" onClick="js_jsxwssp(this,7);">    
+                                     <a class="filter-name" >财经</a></li>
+
+                                <li class="filter-item d-ib" onClick="js_jsxwssp(this,8);" >    
+                                     <a class="filter-name" >港澳台侨</a></li>
+                             </ul>
+
+                              <div class="clear"></div>
+                        </div>
+                      </div>
+
+                     <div class="news_list_ulbox">
+
+                          <!--视频新闻分类start--> 
+                          <!--社会s-->
+                         <div id="jsxw_sp_Con1" style="display:none;"><ul class="news_list_ul" id="ent1"><!--法治-->
+
+						<!--法治-->
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/shipin/2019/10-12/news834425.shtml"><img src="//www.chinanews.com/shipin/2019/10-12/U574P883T4D834425F158DT20191012151240.jpg" alt="两名旅客在飞机滑行期间吸电子烟被拘" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>两名旅客在飞机滑行期间吸电子烟被拘</p>
+<div class="splist_div_day">2019年10月12日 15:01</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/shipin/2019/10-12/news834417.shtml"><img src="//www.chinanews.com/shipin/2019/10-12/U574P883T4D834417F158DT20191012144241.jpg" alt="【人民记忆 70年70城】记住乌恰！在这里，他们和边防战士一起守护边疆" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>【人民记忆 70年70城】记住乌恰！在这里，他们和边防战士一起守护边疆</p>
+<div class="splist_div_day">2019年10月12日 14:42</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/shipin/2019/10-12/news834416.shtml"><img src="//www.chinanews.com/shipin/2019/10-12/U574P883T4D834416F158DT20191012142739.jpg" alt="惊险一刻 贝加尔湖海豹从熊口脱险" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>惊险一刻 贝加尔湖海豹从熊口脱险</p>
+<div class="splist_div_day">2019年10月12日 14:27</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/shipin/2019/10-12/news834409.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-12/1349033_big.jpg" alt="尼泊尔总理：中尼媒体合作将加深两国人民友谊" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>尼泊尔总理：中尼媒体合作将加深两国人民友谊</p>
+<div class="splist_div_day">2019年10月12日 13:37</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/shipin/2019/10-12/news834408.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-12/1349032_big.jpg" alt="尼泊尔总理：期待会谈和多领域合作协议签署" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>尼泊尔总理：期待会谈和多领域合作协议签署</p>
+<div class="splist_div_day">2019年10月12日 13:37</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/shipin/2019/10-12/news834403.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-12/1349047_big.jpg" alt="江苏无锡上跨桥侧翻事故：倾覆桥面待恢复 桥下交通恢复" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>江苏无锡上跨桥侧翻事故：倾覆桥面待恢复 桥下交通恢复</p>
+<div class="splist_div_day">2019年10月12日 13:10</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/shipin/2019/10-12/news834401.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-12/1349022_big.jpg" alt="探访军运村：温馨舒适的“赛时之家”" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>探访军运村：温馨舒适的“赛时之家”</p>
+<div class="splist_div_day">2019年10月12日 13:10</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/shipin/2019/10-12/news834385.shtml"><img src="//www.chinanews.com/shipin/2019/10-12/U574P883T4D834385F158DT20191012105147.jpg" alt="【人民记忆 70年70城】记住江华！在这里，传承创新瑶族的传统文化" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>【人民记忆 70年70城】记住江华！在这里，传承创新瑶族的传统文化</p>
+<div class="splist_div_day">2019年10月12日 10:51</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/shipin/cns/2019/10-12/news834383.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/708181D7888648F6B9684471CA77340F.jpg" alt="探寻《攀登者》原型邬宗岳：他把“登山精神”留给后来人" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>探寻《攀登者》原型邬宗岳：他把“登山精神”留给后来人</p>
+<div class="splist_div_day">2019年10月12日 10:37</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/shipin/2019/10-12/news834380.shtml"><img src="//www.chinanews.com/shipin/2019/10-12/U574P883T4D834380F158DT20191012102828.jpg" alt="强台风“海贝思”侵袭日本 公共交通将停运" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>强台风“海贝思”侵袭日本 公共交通将停运</p>
+<div class="splist_div_day">2019年10月12日 10:03</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/shipin/2019/10-12/news834379.shtml"><img src="//www.chinanews.com/shipin/2019/10-12/U574P883T4D834379F158DT20191012102037.jpg" alt="游客疯狂投币 汉墓被扔成“钱山”" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>游客疯狂投币 汉墓被扔成“钱山”</p>
+<div class="splist_div_day">2019年10月12日 10:03</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/shipin/2019/10-12/news834378.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-12/1348808_big.jpg" alt="天津国际直升机博览会 陆军“风雷”飞行表演队飞行表演" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>天津国际直升机博览会 陆军“风雷”飞行表演队飞行表演</p>
+<div class="splist_div_day">2019年10月12日 10:03</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/shipin/2019/10-12/news834377.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-12/1348804_big.jpg" alt="天津国际直升机博览会：探访国之重器直-20" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>天津国际直升机博览会：探访国之重器直-20</p>
+<div class="splist_div_day">2019年10月12日 10:03</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/shipin/2019/10-12/news834372.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-12/1348930_big.jpg" alt="四川美姑大风顶保护区拍到大熊猫母子" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>四川美姑大风顶保护区拍到大熊猫母子</p>
+<div class="splist_div_day">2019年10月12日 09:31</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/shipin/2019/10-12/news834368.shtml"><img src="//www.chinanews.com/shipin/2019/10-12/U574P883T4D834368F158DT20191012093036.jpg" alt="向日葵被游人抠成表情包 要创意更要文明旅游" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>向日葵被游人抠成表情包 要创意更要文明旅游</p>
+<div class="splist_div_day">2019年10月12日 09:09</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/shipin/2019/10-12/news834367.shtml"><img src="//www.chinanews.com/shipin/2019/10-12/U574P883T4D834367F158DT20191012091441.jpg" alt="乘客站台坠落 乘警秒救化险" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>乘客站台坠落 乘警秒救化险</p>
+<div class="splist_div_day">2019年10月12日 09:09</div>
+</a>
+</div> 
+
+                    </li>
+
+		 <input type="hidden" name="specialid" id="specialid1" value="rd"/>
+                         <input type="hidden" name="total_page_total" id="total_page_total1" value="300"/></ul>
+                         <div class="news_lookmore"><div id="page_bar1"></div></div>
+                         </div>
+                         <!--社会e-->
+
+                          <!--法治s-->
+                         <div id="jsxw_sp_Con2" style="display:none;"><ul class="news_list_ul" id="ent2"><!--社会-->
+
+						<!--社会-->
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/sh/shipin/2019/10-13/news834539.shtml"><img src="//www.chinanews.com/sh/shipin/2019/10-13/U738P883T4D834539F158DT20191013154148.jpg" alt="与家人斗气 15岁少年扒货车尾部上高速“兜风”" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>与家人斗气 15岁少年扒货车尾部上高速“兜风”</p>
+<div class="splist_div_day">2019年10月13日 15:41</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/sh/shipin/2019/10-13/news834538.shtml"><img src="//www.chinanews.com/sh/shipin/2019/10-13/U738P883T4D834538F158DT20191013152547.jpg" alt="男子财物被盗去派出所做笔录 结果醉驾误入交警队" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>男子财物被盗去派出所做笔录 结果醉驾误入交警队</p>
+<div class="splist_div_day">2019年10月13日 15:25</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/sh/shipin/2019/10-13/news834537.shtml"><img src="//www.chinanews.com/sh/shipin/2019/10-13/U738P883T4D834537F158DT20191013150838.jpg" alt="【人民记忆 70年70城】记住洛阳！在这里，诞生了众多“全国第一”" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>【人民记忆 70年70城】记住洛阳！在这里，诞生了众多“全国第一”</p>
+<div class="splist_div_day">2019年10月13日 15:08</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/sh/shipin/2019/10-13/news834529.shtml"><img src="//www.chinanews.com/sh/shipin/2019/10-13/U738P883T4D834529F158DT20191013145821.jpg" alt="女婿超速被罚 醉酒老丈人“仗义”出马被刑拘" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>女婿超速被罚 醉酒老丈人“仗义”出马被刑拘</p>
+<div class="splist_div_day">2019年10月13日 14:58</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/sh/shipin/2019/10-13/news834520.shtml"><img src="//www.chinanews.com/sh/shipin/2019/10-13/U738P883T4D834520F158DT20191013145137.jpg" alt="无锡高架桥侧翻路段桥下道路恢复通车" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>无锡高架桥侧翻路段桥下道路恢复通车</p>
+<div class="splist_div_day">2019年10月13日 14:51</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/sh/shipin/cns/2019/10-13/news834533.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/C51F9C73470C4C53B08DDD3E42218E11.jpg" alt="华南首台达芬奇XI手术机器人在广西开机" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>华南首台达芬奇XI手术机器人在广西开机</p>
+<div class="splist_div_day">2019年10月13日 14:25</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/sh/shipin/cns-d/2019/10-13/news834532.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/FE5AAFFAEFC04F94A6520901FAEB29CB.jpg" alt="广西萌娃上演Cosplay秀 萌翻众人" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>广西萌娃上演Cosplay秀 萌翻众人</p>
+<div class="splist_div_day">2019年10月13日 14:24</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/sh/shipin/2019/10-13/news834530.shtml"><img src="//www.chinanews.com/sh/shipin/2019/10-13/U738P883T4D834530F158DT20191013142641.jpg" alt="大二女生疑遭搂抱扇打后落水死亡 昆明警方：正核查" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>大二女生疑遭搂抱扇打后落水死亡 昆明警方：正核查</p>
+<div class="splist_div_day">2019年10月13日 14:23</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/sh/shipin/2019/10-13/news834527.shtml"><img src="//www.chinanews.com/sh/shipin/2019/10-13/U738P883T4D834527F158DT20191013150125.jpg" alt="无锡侧翻桥梁压扁空车车主获赔7万 希望以后多陪家人" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>无锡侧翻桥梁压扁空车车主获赔7万 希望以后多陪家人</p>
+<div class="splist_div_day">2019年10月13日 14:23</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/sh/shipin/2019/10-13/news834526.shtml"><img src="//www.chinanews.com/sh/shipin/2019/10-13/U738P883T4D834526F158DT20191013152919.jpg" alt="无锡高架侧翻时女子骑车猛冲躲过一劫：不敢再走事发地" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>无锡高架侧翻时女子骑车猛冲躲过一劫：不敢再走事发地</p>
+<div class="splist_div_day">2019年10月13日 14:23</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/sh/shipin/2019/10-13/news834522.shtml"><img src="//www.chinanews.com/sh/shipin/2019/10-13/U738P883T4D834522F158DT20191013145602.jpg" alt="无锡高架桥侧翻事故召开新闻发布会" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>无锡高架桥侧翻事故召开新闻发布会</p>
+<div class="splist_div_day">2019年10月13日 14:22</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/sh/shipin/cns-d/2019/10-13/news834516.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/1405FCF0E9794D7A82FE7A7CF521101E.jpg" alt="轮椅老人误入机动车道 3辆警用摩托一路护航" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>轮椅老人误入机动车道 3辆警用摩托一路护航</p>
+<div class="splist_div_day">2019年10月13日 12:07</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/sh/shipin/cns-d/2019/10-13/news834515.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/60FAA3EB43234A548167F26610EC4168.jpg" alt="长春迎来今秋初雪“快闪”" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>长春迎来今秋初雪“快闪”</p>
+<div class="splist_div_day">2019年10月13日 12:07</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/sh/shipin/cns-d/2019/10-13/news834514.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/E24E94B6769E416CB3D92B7EA01F1ED0.jpg" alt="3岁男童跌落火车站台缝隙 上海乘警纵身跳下站台营救" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>3岁男童跌落火车站台缝隙 上海乘警纵身跳下站台营救</p>
+<div class="splist_div_day">2019年10月13日 12:06</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/sh/shipin/2019/10-13/news834511.shtml"><img src="//www.chinanews.com/sh/shipin/2019/10-13/U738P883T4D834511F158DT20191013114000.jpg" alt="【人民记忆 70年70城】记住丽江！在这里，让传统工艺焕发新生命" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>【人民记忆 70年70城】记住丽江！在这里，让传统工艺焕发新生命</p>
+<div class="splist_div_day">2019年10月13日 11:40</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/sh/shipin/2019/10-13/news834510.shtml"><img src="//www.chinanews.com/sh/shipin/2019/10-13/U738P883T4D834510F158DT20191013113631.jpg" alt="【人民记忆 70年70城】记住凉山！在这里，从封闭走向了开放的新局面" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>【人民记忆 70年70城】记住凉山！在这里，从封闭走向了开放的新局面</p>
+<div class="splist_div_day">2019年10月13日 11:36</div>
+</a>
+</div> 
+
+                    </li>
+
+		 <input type="hidden" name="specialid" id="specialid2" value="sh"/>
+                         <input type="hidden" name="total_page_total" id="total_page_total2" value="300"/></ul>
+                         <div class="news_lookmore"><div id="page_bar2"></div></div>
+                         </div>
+                         <!--法治e-->
+
+                         <!--国际s-->
+                         <div id="jsxw_sp_Con3" style="display:none;"><ul class="news_list_ul" id="ent3"><!--国际-->
+
+						<!--国际-->
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/gj/shipin/2019/10-13/news834517.shtml"><img src="//www.chinanews.com/gj/shipin/2019/10-13/U738P883T4D834517F158DT20191013131309.jpg" alt="美国纽约布鲁克林发生枪击事件 造成4死3伤" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>美国纽约布鲁克林发生枪击事件 造成4死3伤</p>
+<div class="splist_div_day">2019年10月13日 13:13</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/gj/shipin/2019/10-13/news834509.shtml"><img src="//www.chinanews.com/gj/shipin/2019/10-13/U738P883T4D834509F158DT20191013112516.jpg" alt="巴基斯坦男子高2.33米 腿长出行不便" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>巴基斯坦男子高2.33米 腿长出行不便</p>
+<div class="splist_div_day">2019年10月13日 11:25</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/gj/shipin/2019/10-13/news834504.shtml"><img src="//www.chinanews.com/gj/shipin/2019/10-13/U738P883T4D834504F158DT20191013110144.jpg" alt="波音737MAX被证实存安全漏洞 波音CEO宣布卸任董事长" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>波音737MAX被证实存安全漏洞 波音CEO宣布卸任董事长</p>
+<div class="splist_div_day">2019年10月13日 10:57</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/gj/shipin/2019/10-13/news834497.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-13/1349454_big.jpg" alt="俄军舰在黑海监控美国驱逐舰" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>俄军舰在黑海监控美国驱逐舰</p>
+<div class="splist_div_day">2019年10月13日 10:06</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/gj/shipin/2019/10-13/news834496.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-13/1349445_big.jpg" alt="美国一在建酒店发生垮塌 1死19伤" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>美国一在建酒店发生垮塌 1死19伤</p>
+<div class="splist_div_day">2019年10月13日 10:06</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/gj/shipin/cns-d/2019/10-12/news834486.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/F8E7E9589DCA42F399287CFDEE5BA721.jpg" alt="台风“海贝思”逼近日本 强风吹垮民房致多人受伤" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>台风“海贝思”逼近日本 强风吹垮民房致多人受伤</p>
+<div class="splist_div_day">2019年10月12日 21:50</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/gj/shipin/2019/10-12/news834483.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-12/1349310_big.jpg" alt="伊朗外长：愿意随时与沙特对话" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>伊朗外长：愿意随时与沙特对话</p>
+<div class="splist_div_day">2019年10月12日 21:30</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/gj/shipin/2019/10-12/news834481.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-12/1349307_big.jpg" alt="土耳其出兵叙利亚 普京：极端组织成员逃脱恐难控制" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>土耳其出兵叙利亚 普京：极端组织成员逃脱恐难控制</p>
+<div class="splist_div_day">2019年10月12日 21:22</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/gj/shipin/2019/10-12/news834467.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-12/1349251_big.jpg" alt="湖南吉首市区突现脱疆马匹 交警紧急处置" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>湖南吉首市区突现脱疆马匹 交警紧急处置</p>
+<div class="splist_div_day">2019年10月12日 20:37</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/gj/shipin/2019/10-12/news834465.shtml"><img src="//www.chinanews.com/gj/shipin/2019/10-12/U738P883T4D834465F158DT20191012200543.jpg" alt="尼泊尔驻华大使：尼泊尔人民对中国心存感激" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>尼泊尔驻华大使：尼泊尔人民对中国心存感激</p>
+<div class="splist_div_day">2019年10月12日 20:05</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/gj/shipin/2019/10-12/news834454.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-12/1349157_big.jpg" alt="强台风“海贝思”即将登陆 日本千叶突发龙卷风1死5伤" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>强台风“海贝思”即将登陆 日本千叶突发龙卷风1死5伤</p>
+<div class="splist_div_day">2019年10月12日 16:48</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/gj/shipin/2019/10-12/news834449.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-12/1349152_big.jpg" alt="中国驻尼泊尔大使：习主席访尼具有重要历史意义" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>中国驻尼泊尔大使：习主席访尼具有重要历史意义</p>
+<div class="splist_div_day">2019年10月12日 16:40</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/gj/shipin/2019/10-12/news834430.shtml"><img src="//www.chinanews.com/gj/shipin/2019/10-12/U738P883T4D834430F158DT20191012151630.jpg" alt="聚焦土叙局势 普京：在押极端组织成员或趁乱逃脱" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>聚焦土叙局势 普京：在押极端组织成员或趁乱逃脱</p>
+<div class="splist_div_day">2019年10月12日 15:16</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/gj/shipin/2019/10-12/news834427.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-12/1349062_big.jpg" alt="伊朗油轮在红海海域遭袭 伊朗外交部：相关调查仍在进行" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>伊朗油轮在红海海域遭袭 伊朗外交部：相关调查仍在进行</p>
+<div class="splist_div_day">2019年10月12日 15:06</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/gj/shipin/2019/10-12/news834422.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-12/1349074_big.jpg" alt="美众议院开展针对特朗普的弹劾调查" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>美众议院开展针对特朗普的弹劾调查</p>
+<div class="splist_div_day">2019年10月12日 14:55</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/gj/shipin/2019/10-12/news834421.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-12/1349067_big.jpg" alt="伊朗油轮在红海海域遭袭 伊朗公司否认沙特策划袭击" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>伊朗油轮在红海海域遭袭 伊朗公司否认沙特策划袭击</p>
+<div class="splist_div_day">2019年10月12日 14:55</div>
+</a>
+</div> 
+
+                    </li>
+
+		 <input type="hidden" name="specialid" id="specialid3" value="gj"/>
+                         <input type="hidden" name="total_page_total" id="total_page_total3" value="300"/></ul>
+                         <div class="news_lookmore"><div id="page_bar3"></div></div>
+                         </div>
+                         <!--国际e-->
+
+                         <!--军事s-->
+                         <div id="jsxw_sp_Con4" style="display:none;"><ul class="news_list_ul" id="ent4"><!--军事-->
+
+						<!--军事-->
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/mil/shipin/cns-d/2019/10-13/news834535.shtml"><img src="//www.chinanews.com/mil/shipin/cns-d/2019/10-13/U738P883T4D834535F158DT20191013155335.jpg" alt="第一视角带你体验武警特战队员专属“下楼”方式" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>第一视角带你体验武警特战队员专属“下楼”方式</p>
+<div class="splist_div_day">2019年10月13日 14:26</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/mil/shipin/cns/2019/10-12/news834460.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5da17caf6de2220d07fa036b_big.jpg" alt="西藏受阅官兵回归雪域“故里”" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>西藏受阅官兵回归雪域“故里”</p>
+<div class="splist_div_day">2019年10月12日 18:42</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/mil/shipin/2019/10-11/news834330.shtml"><img src="//www.chinanews.com/mil/shipin/2019/10-11/U738P883T4D834330F158DT20191011210938.jpg" alt="韩空军将从美国接收多架F-35A战机" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>韩空军将从美国接收多架F-35A战机</p>
+<div class="splist_div_day">2019年10月11日 21:09</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/mil/shipin/2019/10-11/news834271.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-11/1348166_big.jpg" alt="天津直博会上陆军“风雷”飞行表演队特技飞行" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>天津直博会上陆军“风雷”飞行表演队特技飞行</p>
+<div class="splist_div_day">2019年10月11日 15:21</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/mil/shipin/2019/10-10/news834154.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-10/1347841_big.jpg" alt="第五届天津直博会开幕 陆军“风雷”飞行表演队飞行表演" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>第五届天津直博会开幕 陆军“风雷”飞行表演队飞行表演</p>
+<div class="splist_div_day">2019年10月10日 13:47</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/mil/shipin/2019/10-10/news834148.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-10/1347861_big.jpg" alt="海军太原舰抵达日本横须贺" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>海军太原舰抵达日本横须贺</p>
+<div class="splist_div_day">2019年10月10日 13:18</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/mil/shipin/cns-d/2019/10-10/news834096.shtml"><img src="//www.chinanews.com/mil/shipin/cns-d/2019/10-10/U684P883T4D834096F158DT20191010085742.jpg" alt="揭秘新兵军营生活 用镜头记录平常的24小时" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>揭秘新兵军营生活 用镜头记录平常的24小时</p>
+<div class="splist_div_day">2019年10月10日 08:48</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/mil/shipin/2019/10-09/news834012.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-09/1347307_big.jpg" alt="俄海军陆战队完成大规模军演" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>俄海军陆战队完成大规模军演</p>
+<div class="splist_div_day">2019年10月9日 14:18</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/mil/shipin/cns-d/2019/10-09/news833994.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/81507D6CCC9547438E4337A30D2E1742.jpg" alt="全是直角！来看武警新兵叠被子比赛" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>全是直角！来看武警新兵叠被子比赛</p>
+<div class="splist_div_day">2019年10月9日 12:13</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/mil/shipin/2019/10-09/news833975.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-09/1347173_big.jpg" alt="天津直博会：陆军风雷飞行表演队抵津" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>天津直博会：陆军风雷飞行表演队抵津</p>
+<div class="splist_div_day">2019年10月9日 10:10</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/mil/shipin/2019/10-08/news833870.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-08/1346480_big.jpg" alt="太原舰赴日本参加国际舰队阅舰式" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>太原舰赴日本参加国际舰队阅舰式</p>
+<div class="splist_div_day">2019年10月8日 09:38</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/mil/shipin/2019/10-08/news833848.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-08/1346482_big.jpg" alt="戚继光舰抵达东帝汶进行友好访问" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>戚继光舰抵达东帝汶进行友好访问</p>
+<div class="splist_div_day">2019年10月8日 08:58</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/mil/shipin/cns/2019/10-07/news833811.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/ABA053ACD9CB4A029044FAD947DE6546.jpg" alt="中国赴黎巴嫩维和扫雷兵国庆坚守雷场" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>中国赴黎巴嫩维和扫雷兵国庆坚守雷场</p>
+<div class="splist_div_day">2019年10月7日 15:21</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/mil/shipin/2019/10-05/news833706.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-05/1345415_big.jpg" alt="阅兵训练场的故事·东风17常规导弹方队 常规新锐 打赢先锋" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>阅兵训练场的故事·东风17常规导弹方队 常规新锐 打赢先锋</p>
+<div class="splist_div_day">2019年10月5日 11:00</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/mil/shipin/2019/10-05/news833703.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-05/1345337_big.jpg" alt="阅兵训练场的故事：多型支援保障机首揭面纱" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>阅兵训练场的故事：多型支援保障机首揭面纱</p>
+<div class="splist_div_day">2019年10月5日 10:57</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/mil/shipin/cns/2019/10-04/news833664.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/08D2DD54E8AB4295A1B33B6ED6D274D0.jpg" alt="80度阶梯爬2000余级！直击大山里的水电站守坝卫士日常" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>80度阶梯爬2000余级！直击大山里的水电站守坝卫士日常</p>
+<div class="splist_div_day">2019年10月4日 18:25</div>
+</a>
+</div> 
+
+                    </li>
+
+		 <input type="hidden" name="specialid" id="specialid4" value="jq"/>
+                         <input type="hidden" name="total_page_total" id="total_page_total4" value="300"/></ul>
+                         <div class="news_lookmore"><div id="page_bar4"></div></div>
+                         </div>
+                         <!--军事e-->
+
+                         <!--文娱s-->
+                         <div id="jsxw_sp_Con5" style="display:none;"><ul class="news_list_ul" id="ent5"><!--文娱-->
+
+						<!--文娱-->
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cul/shipin/cns/2019/10-12/news834485.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/FA594E828BC24C8B838C2AEBFD1651D3.jpg" alt="日本电影《犬鸣村》全球首映 导演清水崇谈恐怖片意义" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>日本电影《犬鸣村》全球首映 导演清水崇谈恐怖片意义</p>
+<div class="splist_div_day">2019年10月12日 21:43</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/yl/shipin/cns/2019/10-12/news834443.shtml"><img src="//www.chinanews.com/yl/shipin/cns/2019/10-12/U574P883T4D834443F158DT20191012160404.jpg" alt="北京人艺开办“表演学员培训班” 蓝天野濮存昕宋丹丹将授课" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>北京人艺开办“表演学员培训班” 蓝天野濮存昕宋丹丹将授课</p>
+<div class="splist_div_day">2019年10月12日 15:59</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cul/shipin/cns/2019/10-12/news834400.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5da11bd56de2220d07fa02fb_big.jpg" alt="北京人艺看家戏《雷雨》再登台 演员畅谈角色感悟" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>北京人艺看家戏《雷雨》再登台 演员畅谈角色感悟</p>
+<div class="splist_div_day">2019年10月12日 13:09</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/yl/shipin/cns/2019/10-12/news834341.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/7CC1207815E74A2AB1F3303A34E34179.jpg" alt="张艺谋：我是中国电影界最忙的一个导演" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>张艺谋：我是中国电影界最忙的一个导演</p>
+<div class="splist_div_day">2019年10月12日 08:06</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cul/shipin/cns/2019/10-11/news834322.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/0170DD558BDB410EA2AC9D97A1C4F832.jpg" alt="4K修复版《开国大典》归来：修复师1天修复1秒" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>4K修复版《开国大典》归来：修复师1天修复1秒</p>
+<div class="splist_div_day">2019年10月11日 19:56</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cul/shipin/cns-d/2019/10-11/news834275.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/B4D87ED51AAA4FD6B45B5AC92A206409.jpg" alt="看《梁祝》作曲家何占豪如何作曲 一目十行堪比程序员" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>看《梁祝》作曲家何占豪如何作曲 一目十行堪比程序员</p>
+<div class="splist_div_day">2019年10月11日 15:22</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/yl/shipin/cns/2019/10-11/news834254.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5da003d56de2220d07fa01db_big.jpg" alt="龚琳娜自创方法培训老师 冀少儿合唱团唱出“中国声音”" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>龚琳娜自创方法培训老师 冀少儿合唱团唱出“中国声音”</p>
+<div class="splist_div_day">2019年10月11日 13:39</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cul/shipin/cns/2019/10-11/news834240.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5d9f223f6de2220d07fa0124_big.jpg" alt="探访浙江大学艺术与考古博物馆 近距离感触国宝颜真卿西亭记残碑" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>探访浙江大学艺术与考古博物馆 近距离感触国宝颜真卿西亭记残碑</p>
+<div class="splist_div_day">2019年10月11日 11:18</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/yl/shipin/cns/2019/10-11/news834237.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5d9fc72a6de2220d07fa0181_big.jpg" alt="第三届平遥国际电影展开幕 将展映54部电影" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>第三届平遥国际电影展开幕 将展映54部电影</p>
+<div class="splist_div_day">2019年10月11日 10:09</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cul/shipin/cns/2019/10-10/news834201.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5d9f21476de2220d07fa0120_big.jpg" alt="澳门工艺美术精品亮相长春 中国传统文化元素突出" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>澳门工艺美术精品亮相长春 中国传统文化元素突出</p>
+<div class="splist_div_day">2019年10月10日 21:38</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cul/shipin/cns/2019/10-10/news834186.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5d9eedba6de2220d07fa00c6_big.jpg" alt="国家文物局通报第八批国保单位情况：新增762处" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>国家文物局通报第八批国保单位情况：新增762处</p>
+<div class="splist_div_day">2019年10月10日 18:28</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cul/shipin/cns-d/2019/10-10/news834165.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/31C5A0A4CD3B48FEB9863A300A639203.jpg" alt="国家文物局局长刘玉珠：第八批国保单位新增762处" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>国家文物局局长刘玉珠：第八批国保单位新增762处</p>
+<div class="splist_div_day">2019年10月10日 15:47</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cul/shipin/cns-d/2019/10-10/news834166.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/70D744CB035F4B628CAB5C4834BE38BE.jpg" alt="国家文物局：第八批国保单位核定情况公布 山西省入选最多" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>国家文物局：第八批国保单位核定情况公布 山西省入选最多</p>
+<div class="splist_div_day">2019年10月10日 15:42</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cul/shipin/cns/2019/10-10/news834157.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/7EA85F90F12F481886C65BEDB7439946.jpg" alt="百件大唐文物现身沈阳 观众近距离感受“大唐盛世”" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>百件大唐文物现身沈阳 观众近距离感受“大唐盛世”</p>
+<div class="splist_div_day">2019年10月10日 14:01</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/shipin/cns-d/2019/10-09/news834076.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/145F267D245640B7BCE0FBA7E3307B8C.jpg" alt="2020春夏上海时装周开幕" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>2020春夏上海时装周开幕</p>
+<div class="splist_div_day">2019年10月9日 23:12</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/shipin/cns/2019/10-09/news834072.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5d9dca9b6de2220d07f9ff92_big.jpg" alt="80岁高龄日本漫画家千叶彻弥做客南京  笑谈“漫画世界”" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>80岁高龄日本漫画家千叶彻弥做客南京  笑谈“漫画世界”</p>
+<div class="splist_div_day">2019年10月9日 22:44</div>
+</a>
+</div> 
+
+                    </li>
+
+		 <input type="hidden" name="specialid" id="specialid5" value="wy"/>
+                         <input type="hidden" name="total_page_total" id="total_page_total5" value="300"/></ul>
+                         <div class="news_lookmore"><div id="page_bar5"></div></div>
+                         </div>
+                         <!--文娱e-->
+
+                         <!--体育s-->
+                         <div id="jsxw_sp_Con6" style="display:none;">
+                <div >
+                    <div  >
+                     <ul class="news_list_ul" id="ent6">
+                    	<!--体育-->
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/ty/shipin/cns/2019/10-13/news834531.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/BBA65B121FED41AC8388BE50EAEB96F4.jpg" alt="2019世界名校龙舟大赛贵州开赛 多国学子水上竞渡" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>2019世界名校龙舟大赛贵州开赛 多国学子水上竞渡</p>
+<div class="splist_div_day">2019年10月13日 14:24</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/ty/shipin/2019/10-13/news834507.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-13/1349517_big.jpg" alt="世界体操锦标赛 肖若腾获得男子自由操铜牌" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>世界体操锦标赛 肖若腾获得男子自由操铜牌</p>
+<div class="splist_div_day">2019年10月13日 11:07</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/shipin/cns-d/2019/10-12/news834491.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5da1de0e6de2226ce486095c_big.jpg" alt="突破极限！马拉松选手基普乔格跑进2小时" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>突破极限！马拉松选手基普乔格跑进2小时</p>
+<div class="splist_div_day">2019年10月12日 22:26</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/ty/shipin/2019/10-12/news834406.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-12/1349053_big.jpg" alt="上海网球大师赛 小德、费德勒爆冷出局" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>上海网球大师赛 小德、费德勒爆冷出局</p>
+<div class="splist_div_day">2019年10月12日 13:29</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/ty/shipin/2019/10-12/news834402.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-12/1349025_big.jpg" alt="中国国际跳绳公开赛 世界“绳”会“跳”出精彩" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>中国国际跳绳公开赛 世界“绳”会“跳”出精彩</p>
+<div class="splist_div_day">2019年10月12日 13:10</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/ty/shipin/2019/10-12/news834395.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-12/1349026_big.jpg" alt="德国乒乓球公开赛 国乒提前锁定混双冠军" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>德国乒乓球公开赛 国乒提前锁定混双冠军</p>
+<div class="splist_div_day">2019年10月12日 11:30</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/ty/shipin/2019/10-12/news834394.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-12/1349018_big.jpg" alt="德国乒乓球公开赛 中国队8人晋级男单女单八强" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>德国乒乓球公开赛 中国队8人晋级男单女单八强</p>
+<div class="splist_div_day">2019年10月12日 11:28</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/ty/shipin/2019/10-12/news834371.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-12/1348914_big.jpg" alt="2019世界体操世锦赛男子全能决赛 俄选手包揽金银牌" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>2019世界体操世锦赛男子全能决赛 俄选手包揽金银牌</p>
+<div class="splist_div_day">2019年10月12日 09:22</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/ty/shipin/cns/2019/10-11/news834325.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/A55AC52F3FC84F2983D05B9D68E3C1C0.jpg" alt="中国代表团入住军运村 李雪芮：希望拿金牌为国争光" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>中国代表团入住军运村 李雪芮：希望拿金牌为国争光</p>
+<div class="splist_div_day">2019年10月11日 20:35</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/ty/shipin/cns-d/2019/10-11/news834239.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5d9f3de16de2220d07fa0175_big.jpg" alt="林书豪正式“登陆”CBA  “林疯狂”砍下40分全场最高" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>林书豪正式“登陆”CBA  “林疯狂”砍下40分全场最高</p>
+<div class="splist_div_day">2019年10月11日 10:14</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/ty/shipin/cns/2019/10-11/news834236.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/AA9E509317E746A3BAC9F30BF5891ABC.jpg" alt="探访广西举重之乡：小村庄走出多位举重世界冠军" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>探访广西举重之乡：小村庄走出多位举重世界冠军</p>
+<div class="splist_div_day">2019年10月11日 10:06</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/ty/shipin/2019/10-11/news834229.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-11/1348206_big.jpg" alt="体操世锦赛女子全能决赛唐茜靖替补摘银 拜尔斯获五冠王" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>体操世锦赛女子全能决赛唐茜靖替补摘银 拜尔斯获五冠王</p>
+<div class="splist_div_day">2019年10月11日 09:24</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/ty/shipin/2019/10-11/news834227.shtml"><img src="//www.chinanews.com/ty/shipin/2019/10-11/U574P883T4D834227F158DT20191011082700.jpg" alt="国足7比0击败关岛 取得世预赛两连胜" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>国足7比0击败关岛 取得世预赛两连胜</p>
+<div class="splist_div_day">2019年10月11日 08:27</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/ty/shipin/cns-d/2019/10-10/news834196.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5d9efacd6de2220d07fa00e7_big.jpg" alt="跨喜马拉雅自行车赛圆满收官 中乌骑手包揽冠亚季军" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>跨喜马拉雅自行车赛圆满收官 中乌骑手包揽冠亚季军</p>
+<div class="splist_div_day">2019年10月10日 20:18</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/ty/shipin/cns/2019/10-10/news834164.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5d9ecc186de2220d07fa006c_big.jpg" alt="第七届世界军人运动会奖牌奖杯正式亮相 " >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>第七届世界军人运动会奖牌奖杯正式亮相 </p>
+<div class="splist_div_day">2019年10月10日 15:41</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/ty/shipin/cns-d/2019/10-10/news834145.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/E944EB6BCB69479EA401FDBABD5E980A.jpg" alt="抢柯洁“风头”！来看看日本10岁围棋天才少女仲邑堇" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>抢柯洁“风头”！来看看日本10岁围棋天才少女仲邑堇</p>
+<div class="splist_div_day">2019年10月10日 12:25</div>
+</a>
+</div> 
+
+                    </li>
+
+                         <input type="hidden" name="specialid" id="specialid6" value="tt"/>
+                         <input type="hidden" name="total_page_total" id="total_page_total6" value="300"/>
+
+                     </ul>
+                    <div class="news_lookmore">		<div id="page_bar6"></div>
+</div>
+                    </div>
+
+                </div>
+                 </div>
+                         <!--体育e-->
+
+                         <!--财经s-->
+                         <div id="jsxw_sp_Con7" style="display:none;">
+                <div >
+                    <div  >
+                     <ul class="news_list_ul" id="ent7">
+                    	<!--财经-->
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cj/shipin/cns/2019/10-13/news834536.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/B12DA3C1F7E94234B96A045A188EF9FC.jpg" alt="青海三江源地区实现清洁采暖 年减碳排近20万吨" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>青海三江源地区实现清洁采暖 年减碳排近20万吨</p>
+<div class="splist_div_day">2019年10月13日 14:26</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cj/shipin/cns/2019/10-13/news834534.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/57BA5776406D40E59418679FE29AD45D.jpg" alt="曲周家的“阳光存折”：光伏脱贫 阳光“变现”" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>曲周家的“阳光存折”：光伏脱贫 阳光“变现”</p>
+<div class="splist_div_day">2019年10月13日 14:25</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cj/shipin/2019/10-13/news834519.shtml"><img src="//www.chinanews.com/cj/shipin/2019/10-13/U738P883T4D834519F158DT20191013141144.jpg" alt="中美经贸摩擦美国普通民众这样看" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>中美经贸摩擦美国普通民众这样看</p>
+<div class="splist_div_day">2019年10月13日 14:11</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cj/shipin/cns/2019/10-12/news834487.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5da1ccac6de2226ce4860946_big.jpg" alt="基里巴斯金枪鱼等海产品有望登上中国民众餐桌" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>基里巴斯金枪鱼等海产品有望登上中国民众餐桌</p>
+<div class="splist_div_day">2019年10月12日 21:51</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cj/shipin/cns/2019/10-12/news834476.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5da192956de2220d07fa03a0_big.jpg" alt="共享轮椅现身成都医院社区 “康复辅助器具租赁”进入市民生活 " >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>共享轮椅现身成都医院社区 “康复辅助器具租赁”进入市民生活 </p>
+<div class="splist_div_day">2019年10月12日 20:58</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cj/shipin/cns/2019/10-12/news834463.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5da1aaa96de2226ce4860905_big.jpg" alt="中国民航局：大兴国际机场运行良好 平均航班放行正常率98.17％" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>中国民航局：大兴国际机场运行良好 平均航班放行正常率98.17％</p>
+<div class="splist_div_day">2019年10月12日 19:34</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cj/shipin/cns-d/2019/10-12/news834459.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/C97906161BF04168AB2D64F9A73DEB20.jpg" alt="中国民航史上最大范围空域调整：涉航路航线超200条 " >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>中国民航史上最大范围空域调整：涉航路航线超200条 </p>
+<div class="splist_div_day">2019年10月12日 18:05</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cj/shipin/cns-d/2019/10-12/news834458.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5da18f986de2220d07fa0396_big.jpg" alt="中国民航局：大兴国际机场投运以来总体运行良好" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>中国民航局：大兴国际机场投运以来总体运行良好</p>
+<div class="splist_div_day">2019年10月12日 18:05</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cj/shipin/cns-d/2019/10-12/news834455.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/97A821E17D604BD6A00B6000109CE1E3.jpg" alt="民航局回应游客“打卡”大兴机场：对旅客出行影响不大" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>民航局回应游客“打卡”大兴机场：对旅客出行影响不大</p>
+<div class="splist_div_day">2019年10月12日 17:29</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cj/shipin/2019/10-12/news834447.shtml"><img src="http://i2.chinanews.com/simg/tvmimg/2019/10-12/1349151_big.jpg" alt="中国普惠金融论坛：风控和监管仍是普惠金融重要环节" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>中国普惠金融论坛：风控和监管仍是普惠金融重要环节</p>
+<div class="splist_div_day">2019年10月12日 16:33</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cj/shipin/cns/2019/10-11/news834321.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5da05c816de2220d07fa0290_big.jpg" alt="梅汕铁路开通运营 每日开行44趟动车组列车" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>梅汕铁路开通运营 每日开行44趟动车组列车</p>
+<div class="splist_div_day">2019年10月11日 19:55</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cj/shipin/cns/2019/10-11/news834299.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5da032256de2220d07fa0230_big.jpg" alt="宁启铁路全线贯通 首次开行CR200J“绿巨人”动车组 " >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>宁启铁路全线贯通 首次开行CR200J“绿巨人”动车组 </p>
+<div class="splist_div_day">2019年10月11日 17:31</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cj/shipin/2019/10-11/news834256.shtml"><img src="//www.chinanews.com/cj/shipin/2019/10-11/U574P883T4D834256F158DT20191011135341.jpg" alt="横行的“纸螃蟹”：券好买蟹难吃 网购蟹券风险不小" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>横行的“纸螃蟹”：券好买蟹难吃 网购蟹券风险不小</p>
+<div class="splist_div_day">2019年10月11日 13:53</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cj/shipin/cns/2019/10-11/news834248.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/880939F7680C4965A5C3B37D04131831.jpg" alt="2019全国工商联主席高端峰会在成都召开" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>2019全国工商联主席高端峰会在成都召开</p>
+<div class="splist_div_day">2019年10月11日 12:38</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cj/shipin/cns/2019/10-10/news834192.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5d9ea62c6de2220d07fa001f_big.jpg" alt="螺蛳粉走红带动相关产业 酸豆角厂商年产近300万斤供不应求" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>螺蛳粉走红带动相关产业 酸豆角厂商年产近300万斤供不应求</p>
+<div class="splist_div_day">2019年10月10日 19:32</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cj/shipin/cns/2019/10-09/news834032.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/8935554E5A7540E0859402BBF60166B5.jpg" alt="远大科技集团总裁：中国的创新前景世界最好" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>远大科技集团总裁：中国的创新前景世界最好</p>
+<div class="splist_div_day">2019年10月9日 15:45</div>
+</a>
+</div> 
+
+                    </li>
+
+                         <input type="hidden" name="specialid" id="specialid7" value="cj"/>
+                         <input type="hidden" name="total_page_total" id="total_page_total7" value="300"/>
+
+                     </ul>
+                    <div class="news_lookmore">		<div id="page_bar7"></div>
+</div>
+                    </div>
+
+                </div>
+                 </div>
+                         <!--财经e-->
+
+                         <!--港澳台侨s-->
+                         <div id="jsxw_sp_Con8" style="display:none;">
+                <div >
+                    <div  >
+                     <ul class="news_list_ul" id="ent8">
+                    	<!--社会-->
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/tw/shipin/cns/2019/10-13/news834540.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/33F383255C724DF59DCEBB7674D73004.jpg" alt="两岸中医药学者专家携手打造中医药交流平台" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>两岸中医药学者专家携手打造中医药交流平台</p>
+<div class="splist_div_day">2019年10月13日 15:43</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/hr/shipin/cns/2019/10-13/news834513.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/690ACC64C2074A36A770B159480A1472.jpg" alt="华媒高层热议“传统媒体转型”：转型求生、融合求变" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>华媒高层热议“传统媒体转型”：转型求生、融合求变</p>
+<div class="splist_div_day">2019年10月13日 12:06</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/tw/shipin/cns/2019/10-12/news834474.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/B5E027DA4AE446B2A6755FE87C8C6689.jpg" alt="万余名海内外客属后裔齐聚石壁祖地祭祖" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>万余名海内外客属后裔齐聚石壁祖地祭祖</p>
+<div class="splist_div_day">2019年10月12日 20:58</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/tw/shipin/cns/2019/10-12/news834472.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5da1bdd96de2226ce4860929_big.jpg" alt="台湾农企在皖“开花结果” 冀深耕大陆市场" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>台湾农企在皖“开花结果” 冀深耕大陆市场</p>
+<div class="splist_div_day">2019年10月12日 20:58</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/hr/shipin/cns/2019/10-12/news834457.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5da198476de2220d07fa03b4_big.jpg" alt="第十届世界华文传媒论坛在石家庄开幕" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>第十届世界华文传媒论坛在石家庄开幕</p>
+<div class="splist_div_day">2019年10月12日 17:51</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/hr/shipin/cns/2019/10-12/news834456.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5da193606de2220d07fa03a2_big.jpg" alt="章新新寄语华文媒体：凝聚华人的纽带 族裔发声的平台" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>章新新寄语华文媒体：凝聚华人的纽带 族裔发声的平台</p>
+<div class="splist_div_day">2019年10月12日 17:34</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/ga/shipin/cns/2019/10-11/news834336.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5da043756de2220d07fa026d_big.jpg" alt="香港模型达人造“高铁微世界” 400平方藏20列“和谐号”" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>香港模型达人造“高铁微世界” 400平方藏20列“和谐号”</p>
+<div class="splist_div_day">2019年10月11日 21:50</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/hr/shipin/cns/2019/10-11/news834333.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/3E31FB4027FF45B2982013505130804A.jpg" alt="第十届世界华文传媒论坛举行在即 华媒领军者齐聚河北共襄盛举" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>第十届世界华文传媒论坛举行在即 华媒领军者齐聚河北共襄盛举</p>
+<div class="splist_div_day">2019年10月11日 21:10</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/hr/shipin/cns/2019/10-11/news834326.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5da069056de2220d07fa02b1_big.jpg" alt="“老十届”寄语世界华文传媒论坛：像回娘家过年 冀越办越好" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>“老十届”寄语世界华文传媒论坛：像回娘家过年 冀越办越好</p>
+<div class="splist_div_day">2019年10月11日 20:35</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/hr/shipin/2019/10-11/news834269.shtml"><img src="//www.chinanews.com/hr/shipin/2019/10-11/U574P883T4D834269F158DT20191011152659.jpg" alt="华裔男子在中国乡村教授口琴 让儿童感受音乐的温暖" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>华裔男子在中国乡村教授口琴 让儿童感受音乐的温暖</p>
+<div class="splist_div_day">2019年10月11日 15:16</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/shipin/cns/2019/10-10/news834216.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5d9f2c9f6de2220d07fa0144_big.jpg" alt="藏在奶茶里的两岸爱情故事：台湾大叔在成都开店做火锅概念奶茶" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>藏在奶茶里的两岸爱情故事：台湾大叔在成都开店做火锅概念奶茶</p>
+<div class="splist_div_day">2019年10月10日 22:56</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/shipin/cns/2019/10-10/news834215.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5d9f30ba6de2220d07fa0152_big.jpg" alt="迁台历史记忆两岸四城巡展台北站开幕" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>迁台历史记忆两岸四城巡展台北站开幕</p>
+<div class="splist_div_day">2019年10月10日 22:56</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/shipin/cns/2019/10-10/news834213.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5d9f234d6de2220d07fa0128_big.jpg" alt="香港特区政府召开跨部门记者会　呼吁珍惜香港停止暴力" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>香港特区政府召开跨部门记者会　呼吁珍惜香港停止暴力</p>
+<div class="splist_div_day">2019年10月10日 22:53</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/tw/shipin/cns-d/2019/10-10/news834187.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5d9ec9a56de2220d07fa0066_big.jpg" alt="探访台北最后一家铸字行" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>探访台北最后一家铸字行</p>
+<div class="splist_div_day">2019年10月10日 18:23</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/ga/shipin/cns/2019/10-10/news834177.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/uploadImage/5d9ee0306de2220d07fa00a8_big.jpg" alt="港交所放弃收购伦交所 李小加：多元化战略不变" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>港交所放弃收购伦交所 李小加：多元化战略不变</p>
+<div class="splist_div_day">2019年10月10日 16:48</div>
+</a>
+</div> 
+
+                    </li>
+
+	<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/hr/shipin/2019/10-10/news834174.shtml"><img src="//www.chinanews.com/hr/shipin/2019/10-10/U574P883T4D834174F158DT20191010163448.jpg" alt="从商人到制琴师 男子在国际大赛中获奖" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>从商人到制琴师 男子在国际大赛中获奖</p>
+<div class="splist_div_day">2019年10月10日 16:27</div>
+</a>
+</div> 
+
+                    </li>
+
+                         <input type="hidden" name="specialid" id="specialid8" value="ga"/>
+                         <input type="hidden" name="total_page_total" id="total_page_total8" value="300"/>
+
+                     </ul>
+                    <div class="news_lookmore">		<div id="page_bar8"></div>
+</div>
+                    </div>
+
+                </div>
+                 </div>
+                         <!--港澳台侨e-->
+
+                            <!--视频新闻分类end-->
+                          <!--全部-->
+
+                             <div id="jsxw_sp_Con0" style="display:block;">
+                <div >
+                    <div  >
+                     <ul class="news_list_ul" id="ent0">
+
+                    <!--滚动新闻-->
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/shipin/cns-d/2019/10-13/news834541.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/8C3DA4F78D9742D89A99C9A214ECFB82.jpg" alt="郑国光：中国超过58%国土和55%人口处地震高风险区" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>郑国光：中国超过58%国土和55%人口处地震高风险区</p>
+<div class="splist_div_day">2019年10月13日 15:44</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/tw/shipin/cns/2019/10-13/news834540.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/33F383255C724DF59DCEBB7674D73004.jpg" alt="两岸中医药学者专家携手打造中医药交流平台" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>两岸中医药学者专家携手打造中医药交流平台</p>
+<div class="splist_div_day">2019年10月13日 15:43</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/sh/shipin/2019/10-13/news834539.shtml"><img src="//www.chinanews.com/sh/shipin/2019/10-13/U738P883T4D834539F158DT20191013154148.jpg" alt="与家人斗气 15岁少年扒货车尾部上高速“兜风”" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>与家人斗气 15岁少年扒货车尾部上高速“兜风”</p>
+<div class="splist_div_day">2019年10月13日 15:41</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/sh/shipin/2019/10-13/news834538.shtml"><img src="//www.chinanews.com/sh/shipin/2019/10-13/U738P883T4D834538F158DT20191013152547.jpg" alt="男子财物被盗去派出所做笔录 结果醉驾误入交警队" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>男子财物被盗去派出所做笔录 结果醉驾误入交警队</p>
+<div class="splist_div_day">2019年10月13日 15:25</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/sh/shipin/2019/10-13/news834537.shtml"><img src="//www.chinanews.com/sh/shipin/2019/10-13/U738P883T4D834537F158DT20191013150838.jpg" alt="【人民记忆 70年70城】记住洛阳！在这里，诞生了众多“全国第一”" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>【人民记忆 70年70城】记住洛阳！在这里，诞生了众多“全国第一”</p>
+<div class="splist_div_day">2019年10月13日 15:08</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/sh/shipin/2019/10-13/news834529.shtml"><img src="//www.chinanews.com/sh/shipin/2019/10-13/U738P883T4D834529F158DT20191013145821.jpg" alt="女婿超速被罚 醉酒老丈人“仗义”出马被刑拘" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>女婿超速被罚 醉酒老丈人“仗义”出马被刑拘</p>
+<div class="splist_div_day">2019年10月13日 14:58</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/sh/shipin/2019/10-13/news834520.shtml"><img src="//www.chinanews.com/sh/shipin/2019/10-13/U738P883T4D834520F158DT20191013145137.jpg" alt="无锡高架桥侧翻路段桥下道路恢复通车" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>无锡高架桥侧翻路段桥下道路恢复通车</p>
+<div class="splist_div_day">2019年10月13日 14:51</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cj/shipin/cns/2019/10-13/news834536.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/B12DA3C1F7E94234B96A045A188EF9FC.jpg" alt="青海三江源地区实现清洁采暖 年减碳排近20万吨" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>青海三江源地区实现清洁采暖 年减碳排近20万吨</p>
+<div class="splist_div_day">2019年10月13日 14:26</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/mil/shipin/cns-d/2019/10-13/news834535.shtml"><img src="//www.chinanews.com/mil/shipin/cns-d/2019/10-13/U738P883T4D834535F158DT20191013155335.jpg" alt="第一视角带你体验武警特战队员专属“下楼”方式" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>第一视角带你体验武警特战队员专属“下楼”方式</p>
+<div class="splist_div_day">2019年10月13日 14:26</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/cj/shipin/cns/2019/10-13/news834534.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/57BA5776406D40E59418679FE29AD45D.jpg" alt="曲周家的“阳光存折”：光伏脱贫 阳光“变现”" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>曲周家的“阳光存折”：光伏脱贫 阳光“变现”</p>
+<div class="splist_div_day">2019年10月13日 14:25</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/sh/shipin/cns/2019/10-13/news834533.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/C51F9C73470C4C53B08DDD3E42218E11.jpg" alt="华南首台达芬奇XI手术机器人在广西开机" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>华南首台达芬奇XI手术机器人在广西开机</p>
+<div class="splist_div_day">2019年10月13日 14:25</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/sh/shipin/cns-d/2019/10-13/news834532.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/FE5AAFFAEFC04F94A6520901FAEB29CB.jpg" alt="广西萌娃上演Cosplay秀 萌翻众人" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>广西萌娃上演Cosplay秀 萌翻众人</p>
+<div class="splist_div_day">2019年10月13日 14:24</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/ty/shipin/cns/2019/10-13/news834531.shtml"><img src="http://poss.videocloud.cns.com.cn/oss/chinanews/MEIZI_YUNSHI/onair/BBA65B121FED41AC8388BE50EAEB96F4.jpg" alt="2019世界名校龙舟大赛贵州开赛 多国学子水上竞渡" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>2019世界名校龙舟大赛贵州开赛 多国学子水上竞渡</p>
+<div class="splist_div_day">2019年10月13日 14:24</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/sh/shipin/2019/10-13/news834530.shtml"><img src="//www.chinanews.com/sh/shipin/2019/10-13/U738P883T4D834530F158DT20191013142641.jpg" alt="大二女生疑遭搂抱扇打后落水死亡 昆明警方：正核查" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>大二女生疑遭搂抱扇打后落水死亡 昆明警方：正核查</p>
+<div class="splist_div_day">2019年10月13日 14:23</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/sh/shipin/2019/10-13/news834527.shtml"><img src="//www.chinanews.com/sh/shipin/2019/10-13/U738P883T4D834527F158DT20191013150125.jpg" alt="无锡侧翻桥梁压扁空车车主获赔7万 希望以后多陪家人" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>无锡侧翻桥梁压扁空车车主获赔7万 希望以后多陪家人</p>
+<div class="splist_div_day">2019年10月13日 14:23</div>
+</a>
+</div> 
+
+                    </li>
+
+						<li>
+ <div class="splist_div">
+<a href="//www.chinanews.com/sh/shipin/2019/10-13/news834526.shtml"><img src="//www.chinanews.com/sh/shipin/2019/10-13/U738P883T4D834526F158DT20191013152919.jpg" alt="无锡高架侧翻时女子骑车猛冲躲过一劫：不敢再走事发地" >
+<div class="splist_div_bg"></div>
+<div class="splist_div_video"></div>
+<p>无锡高架侧翻时女子骑车猛冲躲过一劫：不敢再走事发地</p>
+<div class="splist_div_day">2019年10月13日 14:23</div>
+</a>
+</div> 
+
+                    </li>
+
+                         <input type="hidden" name="specialid" id="specialid0" value="sp"/>
+                         <input type="hidden" name="total_page_total" id="total_page_total0" value="300"/>
+
+                     </ul>
+                    <div class="news_lookmore">		<div id="page_bar0"></div>
+</div>
+                    </div>
+
+                </div>
+                 </div>
+</div>
+
+            <!---->
+      </div>
+
+     <div class="clear"></div>
+
+<div class="w1000 m_center">
+<div class="yqlj">友情链接</div>
+
+<div class="chinese_ggqq">
+                         <ul>
+                            <!--[883,34,53] published at 2019-03-26 23:03:07 from #202 by 33-->
+<li><a href="http://tv.cntv.cn/"><img src="http://www.chinanews.com/fileftp/2018/10/2018-10-15/U435P4T47D42995F967DT20181015153037.jpg"></a></li>
+<li><a href="https://www.smg.cn/review/index.html"><img src="http://www.chinanews.com/fileftp/2018/10/2018-10-15/U435P4T47D42995F968DT20181015153037.jpg"></a></li>
+<li><a href="http://www.bmn.net.cn/"><img src="http://www.chinanews.com/fileftp/2018/10/2018-10-15/U435P4T47D42995F969DT20181015153037.jpg"></a></li>
+<li><a href="http://www.sctv.com/"><img src="http://www.chinanews.com/fileftp/2018/10/2018-10-15/U435P4T47D42995F970DT20181015153037.jpg"></a></li>
+<li><a href="http://www.gdtv.cn/"><img src="http://www.chinanews.com/fileftp/2018/10/2018-10-15/U435P4T47D42995F971DT20181015153037.jpg"></a></li>
+<li><a href="http://www.gzstv.com/"><img src="http://www.chinanews.com/fileftp/2018/10/2018-10-15/U435P4T47D42995F972DT20181015153037.jpg"></a></li>
+<li><a href="http://www.sxtvs.com/"><img src="http://www.chinanews.com/fileftp/2018/10/2018-10-15/U435P4T47D42995F973DT20181015153037.jpg"></a></li>
+<li><a href="https://www.gxtv.cn/"><img src="http://www.chinanews.com/fileftp/2018/10/2018-10-15/U435P4T47D42995F974DT20181015153037.jpg"></a></li>
+<li><a href="http://www.ahtv.cn/"><img src="http://www.chinanews.com/fileftp/2018/10/2018-10-15/U435P4T47D42995F975DT20181015153037.jpg"></a></li>
+<li><a href="http://www.nntv.cn/"><img src="http://www.chinanews.com/fileftp/2018/10/2018-10-15/U435P4T47D42995F976DT20181015153037.jpg"></a></li>
+<li><a href="http://www.yantaitv.cn/"><img src="http://www.chinanews.com/fileftp/2018/10/2018-10-15/U435P4T47D42995F977DT20181015153037.jpg"></a></li>
+<li><a href="http://www.ycgbtv.com.cn/"><img src="http://www.chinanews.com/fileftp/2018/10/2018-10-15/U435P4T47D42995F978DT20181015153037.jpg"></a></li>  
+                      </ul>
+                       <div class="clear"></div>
+
+                   </div>
+
+            </div>
+
+<!--[47,21,10] published at 2019-02-27 10:37:10 from #10 by 赵谦-->
+<div class="pagebottom">
+        <div class="pagebottom_nav">
+
+         <a href="/common/footer/intro.shtml">关于我们</a><span>|</span> <a href="/common/footer/aboutus.shtml">About us</a><span>|</span> <a href="/common/footer/contact.shtml">联系我们</a><span>|</span> <a href="http://ad.chinanews.com.cn/">广告服务</a><span>|</span> <a href="/common/footer/news-service.shtml">供稿服务</a><span>|</span> <a href="/common/footer/law.shtml">法律声明</a><span>|</span> <a href="//www.chinanews.com/hr/">招聘信息</a><span>|</span> <a href="/common/footer/sitemap.shtml">网站地图</a><div style="display:none;"><span>|</span> <a href="/common/footer/feedback.shtml">留言反馈</a></div> </div>
+
+        <div class="pagebottom_nr">
+<p>[<a href="/news/xuke.html">网上传播视听节目许可证（0106168)</a>] [<a href="http://www.miibeian.gov.cn/">京ICP证040655号</a>] [<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002003042" style="display:inline-block;height:20px;line-height:20px;">京公网安备 11000002003042号</a>] [<a href="http://www.miitbeian.gov.cn/">京ICP备05004340号-1</a>] </p>
+<p>总机：86-10-87826688　违法和不良信息举报电话：15699788000   </p>
+        <p>本网站所刊载信息，不代表中新社和中新网观点。 <br />刊用本网站稿件，务经书面授权。</p>
+
+<p>未经授权禁止转载、摘编、复制及建立镜像，违者将依法追究法律责任。</p>
+
+<p style="font-family:arial;"><p style="font-family:arial;">Copyright &copy;1999-
+2019
+
+ chinanews.com. </p>
+<p style="font-family:arial;">All Rights Reserved</p>
+ </p>
+<div style="position:absolute; bottom:20px; left:128px;"><img src="http://i2.chinanews.com/shipin/2018/image/kexin.jpg" /></div>
+</div>
+
+        </div>
+
+</body>
+</html>

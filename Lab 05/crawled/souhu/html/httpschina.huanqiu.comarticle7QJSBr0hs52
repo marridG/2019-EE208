@@ -1,0 +1,287 @@
+
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta name = "format-detection" content = "telephone=no"><script>//dp预览时需要填的参数（域名） 
+        var global_host = {
+            host : "",
+            path : ""
+        }
+        // 判断文章类型
+        var global_type = {
+            article:"article",
+            gallery:"gallery"
+        }
+        // 如不明白 随时沟通
+        var hosts = {
+            'go-test-cs1806.huanqiu.com': 'go.cse3pl8tdbi.huanqiu.com',
+            'go.huanqiu.com': 'go.cse3pl8tdbi.huanqiu.com',
+            'go.cse3pl8tdbi.huanqiu.com': 'go.cse3pl8tdbi.huanqiu.com',
+            'fashion.huanqiu.com': 'fashion.cse3pl8tdbi.huanqiu.com',
+            'fashion.cse3pl8tdbi.huanqiu.com': 'fashion.cse3pl8tdbi.huanqiu.com',
+            'capital.huanqiu.com': 'capital.cse3pl8tdbi.huanqiu.com',
+            'capital.cse3pl8tdbi.huanqiu.com': 'capital.cse3pl8tdbi.huanqiu.com',
+            'movie.huanqiu.com': 'movie.cse3pl8tdbi.huanqiu.com',
+            'movie.cse3pl8tdbi.huanqiu.com': 'movie.cse3pl8tdbi.huanqiu.com',
+            'finance.huanqiu.com': 'finance.cse3pl8tdbi.huanqiu.com',
+            'finance.cse3pl8tdbi.huanqiu.com': 'finance.cse3pl8tdbi.huanqiu.com',
+            'hope.huanqiu.com': 'hope.cse3pl8tdbi.huanqiu.com',
+            'hope.cse3pl8tdbi.huanqiu.com': 'hope.cse3pl8tdbi.huanqiu.com',
+            'cul.huanqiu.com': 'cul.cse3pl8tdbi.huanqiu.com',
+            'cul.cse3pl8tdbi.huanqiu.com': 'cul.cse3pl8tdbi.huanqiu.com',
+            'tech.huanqiu.com': 'tech.cse3pl8tdbi.huanqiu.com',
+            'tech.cse3pl8tdbi.huanqiu.com': 'tech.cse3pl8tdbi.huanqiu.com',
+            'game.huanqiu.com': 'game.cse3pl8tdbi.huanqiu.com',
+            'game.cse3pl8tdbi.huanqiu.com': 'game.cse3pl8tdbi.huanqiu.com',
+            'anquan.huanqiu.com': 'anquan.cse3pl8tdbi.huanqiu.com',
+            'smart.huanqiu.com': 'smart.cse3pl8tdbi.huanqiu.com',
+            'smart.cse3pl8tdbi.huanqiu.com': 'smart.cse3pl8tdbi.huanqiu.com',
+            'anquan.cse3pl8tdbi.huanqiu.com': 'anquan.cse3pl8tdbi.huanqiu.com',
+            'city.huanqiu.com': 'city.cse3pl8tdbi.huanqiu.com',
+            'city.cse3pl8tdbi.huanqiu.com': 'city.cse3pl8tdbi.huanqiu.com',
+            'health.huanqiu.com': 'health.cse3pl8tdbi.huanqiu.com',
+            'health.cse3pl8tdbi.huanqiu.com': 'health.cse3pl8tdbi.huanqiu.com',
+            'lx.huanqiu.com': 'lx.cse3pl8tdbi.huanqiu.com',
+            'lx.cse3pl8tdbi.huanqiu.com': 'lx.cse3pl8tdbi.huanqiu.com',
+            'auto.huanqiu.com': 'auto.cse3pl8tdbi.huanqiu.com',
+            'auto.cse3pl8tdbi.huanqiu.com': 'auto.cse3pl8tdbi.huanqiu.com',
+            'luxury.huanqiu.com': 'luxury.cse3pl8tdbi.huanqiu.com',
+            'luxury.cse3pl8tdbi.huanqiu.com': 'luxury.cse3pl8tdbi.huanqiu.com',
+            'quality.huanqiu.com': 'quality.cse3pl8tdbi.huanqiu.com',
+            'quality.cse3pl8tdbi.huanqiu.com': 'quality.cse3pl8tdbi.huanqiu.com',
+            'zhiku.huanqiu.com': 'zhiku.cse3pl8tdbi.huanqiu.com',
+            'zhiku.cse3pl8tdbi.huanqiu.com': 'zhiku.cse3pl8tdbi.huanqiu.com',
+            'uav.huanqiu.com': 'uav.cse3pl8tdbi.huanqiu.com',
+            'uav.cse3pl8tdbi.huanqiu.com': 'uav.cse3pl8tdbi.huanqiu.com',
+            'women.huanqiu.com': 'women.cse3pl8tdbi.huanqiu.com',
+            'women.cse3pl8tdbi.huanqiu.com': 'women.cse3pl8tdbi.huanqiu.com',
+            'art.huanqiu.com': 'art.cse3pl8tdbi.huanqiu.com',
+            'art.cse3pl8tdbi.huanqiu.com': 'art.cse3pl8tdbi.huanqiu.com',
+            'bigdata.huanqiu.com': 'bigdata.cse3pl8tdbi.huanqiu.com',
+            'bigdata.cse3pl8tdbi.huanqiu.com': 'bigdata.cse3pl8tdbi.huanqiu.com',
+            'ski.huanqiu.com': 'ski.cse3pl8tdbi.huanqiu.com',
+            'ski.cse3pl8tdbi.huanqiu.com': 'ski.cse3pl8tdbi.huanqiu.com',
+            'sports.huanqiu.com': 'sports.cse3pl8tdbi.huanqiu.com',
+            'sports.cse3pl8tdbi.huanqiu.com': 'sports.cse3pl8tdbi.huanqiu.com',
+            'biz.huanqiu.com': 'biz.cse3pl8tdbi.huanqiu.com',
+            'biz.cse3pl8tdbi.huanqiu.com': 'biz.cse3pl8tdbi.huanqiu.com',
+            'ent.huanqiu.com': 'ent.cse3pl8tdbi.huanqiu.com',
+            'ent.cse3pl8tdbi.huanqiu.com': 'ent.cse3pl8tdbi.huanqiu.com',
+            'gteu.huanqiu.com': 'gteu.cse3pl8tdbi.huanqiu.com',
+            'gteu.cse3pl8tdbi.huanqiu.com': 'gteu.cse3pl8tdbi.huanqiu.com',
+            'look.huanqiu.com': 'look.cse3pl8tdbi.huanqiu.com',
+            'look.cse3pl8tdbi.huanqiu.com': 'look.cse3pl8tdbi.huanqiu.com',
+            'world.huanqiu.com': 'world.cse3pl8tdbi.huanqiu.com',
+            'world.cse3pl8tdbi.huanqiu.com': 'world.cse3pl8tdbi.huanqiu.com',
+            'china.huanqiu.com': 'china.cse3pl8tdbi.huanqiu.com',
+            'china.cse3pl8tdbi.huanqiu.com': 'china.cse3pl8tdbi.huanqiu.com',
+            'mil.huanqiu.com': 'mil.cse3pl8tdbi.huanqiu.com',
+            'mil.cse3pl8tdbi.huanqiu.com': 'mil.cse3pl8tdbi.huanqiu.com',
+            'society.huanqiu.com': 'society.cse3pl8tdbi.huanqiu.com',
+            'society.cse3pl8tdbi.huanqiu.com': 'society.cse3pl8tdbi.huanqiu.com',
+            'v.huanqiu.com': 'v.cse3pl8tdbi.huanqiu.com',
+            'v.cse3pl8tdbi.huanqiu.com': 'v.cse3pl8tdbi.huanqiu.com',
+            'oversea.huanqiu.com': 'oversea.cse3pl8tdbi.huanqiu.com',
+            'oversea.cse3pl8tdbi.huanqiu.com': 'oversea.cse3pl8tdbi.huanqiu.com',
+            'taiwan.huanqiu.com': 'taiwan.cse3pl8tdbi.huanqiu.com',
+            'taiwan.cse3pl8tdbi.huanqiu.com': 'taiwan.cse3pl8tdbi.huanqiu.com',
+            'opinion.huanqiu.com': 'opinion.cse3pl8tdbi.huanqiu.com',
+            'opinion.cse3pl8tdbi.huanqiu.com': 'opinion.cse3pl8tdbi.huanqiu.com',
+            'corp.huanqiu.com': 'corp.cse3pl8tdbi.huanqiu.com',
+            'corp.cse3pl8tdbi.huanqiu.com': 'corp.cse3pl8tdbi.huanqiu.com',
+            'scroll.huanqiu.com': 'scroll.cse3pl8tdbi.huanqiu.com',
+            'scroll.cse3pl8tdbi.huanqiu.com': 'scroll.cse3pl8tdbi.huanqiu.com',
+            'house.huanqiu.com': 'house.cse3pl8tdbi.huanqiu.com',
+            'house.cse3pl8tdbi.huanqiu.com': 'house.cse3pl8tdbi.huanqiu.com',
+            'run.huanqiu.com': 'run.cse3pl8tdbi.huanqiu.com',
+            'run.cse3pl8tdbi.huanqiu.com': 'run.cse3pl8tdbi.huanqiu.com'
+        }
+        // 区分稿件归属问题前端处理
+        var channel = {
+            'go-test-cs1806.huanqiu.com': '/e3pmh1tuv',
+            'go.huanqiu.com': '/e3pmh1tuv',
+            'go.cse3pl8tdbi.huanqiu.com': '/e3pmh1tuv',
+            'fashion.huanqiu.com': '/e3pn4vu2g',
+            'fashion.cse3pl8tdbi.huanqiu.com': '/e3pn4vu2g',
+            'capital.huanqiu.com': '/e5d59phvs',
+            'capital.cse3pl8tdbi.huanqiu.com': '/e5d59phvs',
+            'movie.huanqiu.com': '/e5ipl1avc',
+            'movie.cse3pl8tdbi.huanqiu.com': '/e5ipl1avc',
+            'art.huanqiu.com': '/e3pokdnam',
+            'art.cse3pl8tdbi.huanqiu.com': '/e3pokdnam',
+            'women.huanqiu.com': '/e5annnavo',
+            'women.cse3pl8tdbi.huanqiu.com': '/e5annnavo',
+            'ent.huanqiu.com': '/e3pmh1jtb',
+            'ent.cse3pl8tdbi.huanqiu.com': '/e3pmh1jtb',
+            'ski.huanqiu.com': '/e3pn63cna',
+            'ski.cse3pl8tdbi.huanqiu.com': '/e3pn63cna',
+            'sports.huanqiu.com': '/e3pmh3jvm',
+            'sports.cse3pl8tdbi.huanqiu.com': '/e3pmh3jvm',
+            'bigdata.huanqiu.com': '/e3pn606hg',
+            'bigdata.cse3pl8tdbi.huanqiu.com': '/e3pn606hg',
+            'gteu.huanqiu.com': '/e3pn7ff0v',
+            'gteu.cse3pl8tdbi.huanqiu.com': '/e3pn7ff0v',
+            'biz.huanqiu.com': '/e3pmh1rv3',
+            'biz.cse3pl8tdbi.huanqiu.com': '/e3pmh1rv3',
+            'v.huanqiu.com': '/e3pmh2fmu',
+            'v.cse3pl8tdbi.huanqiu.com': '/e3pmh2fmu',
+            'finance.huanqiu.com': '/e3pmh1hmp',
+            'finance.cse3pl8tdbi.huanqiu.com': '/e3pmh1hmp',
+            'tech.huanqiu.com': '/e3pmh164r',
+            'tech.cse3pl8tdbi.huanqiu.com': '/e3pmh164r',
+            'hope.huanqiu.com': '/e3pmh4858',
+            'hope.cse3pl8tdbi.huanqiu.com': '/e3pmh4858',
+            'game.huanqiu.com': '/e3pn52oi7',
+            'game.cse3pl8tdbi.huanqiu.com': '/e3pn52oi7',
+            'smart.huanqiu.com': '/e3pmh140m',
+            'smart.cse3pl8tdbi.huanqiu.com': '/e3pmh140m',
+            'cul.huanqiu.com': '/e3pn677q4',
+            'cul.cse3pl8tdbi.huanqiu.com': '/e3pn677q4',
+            'health.huanqiu.com': '/e3pmt7dq2',
+            'health.cse3pl8tdbi.huanqiu.com': '/e3pmt7dq2',
+            'auto.huanqiu.com': '/e3pmh24qk',
+            'auto.cse3pl8tdbi.huanqiu.com': '/e3pmh24qk',
+            'lx.huanqiu.com': '/e3pmh20mi',
+            'lx.cse3pl8tdbi.huanqiu.com': '/e3pmh20mi',
+            'luxury.huanqiu.com': '/e3pn6189k',
+            'luxury.cse3pl8tdbi.huanqiu.com': '/e3pn6189k',
+            'city.huanqiu.com': '/e3pmh1nv4',
+            'city.cse3pl8tdbi.huanqiu.com': '/e3pmh1nv4',
+            'quality.huanqiu.com': '/e3pmh1m0l',
+            'quality.cse3pl8tdbi.huanqiu.com': '/e3pmh1m0l',
+            'zhiku.huanqiu.com': '/e3pn61tat',
+            'zhiku.cse3pl8tdbi.huanqiu.com': '/e3pn61tat',
+            'anquan.huanqiu.com': '/e3pn61f78',
+            'anquan.cse3pl8tdbi.huanqiu.com': '/e3pn61f78',
+            'china.huanqiu.com': '/e3pmh1nnq',
+            'china.cse3pl8tdbi.huanqiu.com': '/e3pmh1nnq',
+            'world.huanqiu.com': '/e3pmh22ph',
+            'world.cse3pl8tdbi.huanqiu.com': '/e3pmh22ph',
+            'mil.huanqiu.com': '/e3pmh1dm8',
+            'mil.cse3pl8tdbi.huanqiu.com': '/e3pmh1dm8',
+            'society.huanqiu.com': '/e3pmh19vt',
+            'society.cse3pl8tdbi.huanqiu.com': '/e3pmh19vt',
+            'taiwan.huanqiu.com': '/e3pmh1fmg',
+            'taiwan.cse3pl8tdbi.huanqiu.com': '/e3pmh1fmg',
+            'opinion.huanqiu.com': '/e3pmub6h5',
+            'opinion.cse3pl8tdbi.huanqiu.com': '/e3pmub6h5',
+            'oversea.huanqiu.com': '/e3pmt7bdh',
+            'oversea.cse3pl8tdbi.huanqiu.com': '/e3pmt7bdh',
+            'look.huanqiu.com': '/e3pn4q8sp',
+            'look.cse3pl8tdbi.huanqiu.com': '/e3pn4q8sp',
+            'uav.huanqiu.com': '/e3pn5tffs',
+            'uav.cse3pl8tdbi.huanqiu.com': '/e3pn5tffs',
+            'aero.huanqiu.com': '/e3pn7fl9r',
+            'aero.cse3pl8tdbi.huanqiu.com': '/e3pn7fl9r',
+            'scroll.huanqiu.com': '/e3pmh1rv3',
+            'scroll.cse3pl8tdbi.huanqiu.com': '/e3pmh1rv3',
+            'house.huanqiu.com': '/e8nf57tcn',
+            'house.cse3pl8tdbi.huanqiu.com': '/e8nf57tcn',
+            'run.huanqiu.com': '/e3pofvoae',
+            'run.cse3pl8tdbi.huanqiu.com': '/e3pofvoae'
+        }
+        function getURL0(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = decodeURIComponent(window.location.search).substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        }
+        // 判断是dp环境
+        if(global_host.host != ''&&global_host.path != ''&&getURL0('dp_debug') == 1){
+            window.host = 'https://' + global_host.host;
+            window.host1 = '//' + global_host.path;
+        }else{
+            window.host = '//' + window.location.host;
+            window.host1 = '//' + hosts[window.location.host] + window.location.pathname;
+        }</script><meta name="keywords" id='meta-k' content="["Intel","独显","Xe","核显","显卡","架构","报道","支持"]"/><meta name="description"  content="然而，这两个消息恐怕又是乌龙了，PCWorld网站报道称，Intel公司总部日前针对这些报道做了澄清，他们审查了日本活动的简报，确认PPT资料中没有提到Xe架构独显GPU会支持光线追踪，相关报道实际上是由于日文-英文翻译的误会所致" /><title>Xe独显也要支持光线追踪？Intel辟谣：日文翻译错了</title><script type="text/javascript">// 	var article = {
+    //         aid : "7QJSBr0hs52",
+    //         ext_phpcmsv9aid : "",
+    //         title : "Xe独显也要支持光线追踪？Intel辟谣：日文翻译错了",
+    //         author :[],
+    //         keyboarder :{"name":"陶宗瑶","email":"taozongyao@huanqiu.com"},
+    //         source :{"url":"https:\/\/news.mydrivers.com\/1\/651\/651419.htm","name":"快科技"},
+    //         keywords :["Intel","独显","Xe","核显","显卡","架构","报道","支持"],
+    //         ctime : "1570949950163",
+    //         ext_displaytime: "",
+    //         ext_defertime:"",
+    //         catnode : "/e3pmh140m/e3pmh14i1",
+    //         ext_serious : "1",
+    //         ext_relation:[],
+    //         addltype:"normal",
+    //         hosts1:"https://capital.huanqiu.com",
+    //         hosts2:"https://movie.huanqiu.com"
+    //     };
+        var cs_article = "{\"aid\":\"7QJSBr0hs52\",\"ver\":\"7ysohyvn\",\"verdead\":false,\"state\":5,\"flow\":\"fjtr0dbdq\",\"prever\":\"\",\"ctime\":1570949950163,\"utime\":1570949950163,\"step\":\"ju9hny73\",\"lang\":\"zh-Hans\",\"vflag\":\"3\",\"log\":[{\"data\":[{\"field\":\"ext-xtime\",\"value\":1570949950163}],\"time\":1570949952023,\"user\":\"\",\"agent\":\"dpe3plc9q0n\",\"action\":\"update data\"},{\"data\":{\"field\":\"state\",\"value\":5},\"time\":1570949951139,\"user\":\"app\",\"agent\":\"dpe3plc9q0n\",\"action\":\"change state\"},{\"data\":{\"field\":\"step\",\"value\":\"ju9hny73\"},\"time\":1570949950926,\"user\":\"system\",\"agent\":\"cs\",\"action\":\"change step\"},{\"data\":{\"field\":\"state\",\"value\":1},\"time\":1570949950715,\"user\":\"app\",\"agent\":\"cbe3plcka09\",\"action\":\"change state\"},{\"data\":{\"field\":\"step\",\"value\":\"ju81h7t9\"},\"time\":1570949950195,\"user\":\"system\",\"agent\":\"cs\",\"action\":\"change step\"},{\"time\":1570949950163,\"user\":\"taozongyao\",\"agent\":\"e1e652vvqug\",\"action\":\"create new article\"}],\"tags\":[],\"cover\":null,\"title\":\"Xe\\u72ec\\u663e\\u4e5f\\u8981\\u652f\\u6301\\u5149\\u7ebf\\u8ffd\\u8e2a\\uff1fIntel\\u8f9f\\u8c23\\uff1a\\u65e5\\u6587\\u7ffb\\u8bd1\\u9519\\u4e86\",\"author\":[],\"editor\":{\"name\":\"\\u9676\\u5b97\\u7476\",\"email\":\"taozongyao@huanqiu.com\"},\"source\":{\"url\":\"https:\\/\\/news.mydrivers.com\\/1\\/651\\/651419.htm\",\"name\":\"\\u5feb\\u79d1\\u6280\"},\"catnode\":\"\\/e3pmh140m\\/e3pmh14i1\",\"content\":\"<article><section data-type=\\\"rtext\\\"><p>\\u524d\\u4e0d\\u4e45Intel\\u65e5\\u672c\\u516c\\u53f8\\u5728\\u4e1c\\u4eac\\u4e3e\\u884c\\u4e86\\u4e00\\u6b21\\u6d3b\\u52a8\\uff0c\\u4ecb\\u7ecd\\u4e86Intel\\u5904\\u7406\\u5668\\u7684\\u4e00\\u4e9b\\u8fdb\\u5c55\\uff0c\\u5176\\u4e2d\\u8c08\\u5230\\u4e86\\u7b2c\\u4e8c\\u4ee310nm\\u5904\\u7406\\u5668Tiger Lake\\u7684\\u6838\\u663e\\uff0c\\u79f0\\u540e\\u8005\\u7684Gen12\\u6838\\u663e\\u6027\\u80fd\\u4f1a\\u518d\\u6b21\\u7ffb\\u500d\\uff0c\\u800cXe\\u67b6\\u6784\\u72ec\\u663e\\u5c06\\u4f1a\\u652f\\u6301\\u5149\\u7ebf\\u8ffd\\u8e2a\\uff0c\\u8fd9\\u4e24\\u4e2a\\u6d88\\u606f\\u8ba9I\\u996d\\u53ca\\u4e1a\\u754c\\u90fd\\u5f88\\u632f\\u594b\\u3002<\\/p><p>\\u7136\\u800c\\uff0c\\u8fd9\\u4e24\\u4e2a\\u6d88\\u606f\\u6050\\u6015\\u53c8\\u662f\\u4e4c\\u9f99\\u4e86\\uff0cPCWorld\\u7f51\\u7ad9\\u62a5\\u9053\\u79f0\\uff0cIntel\\u516c\\u53f8\\u603b\\u90e8\\u65e5\\u524d\\u9488\\u5bf9\\u8fd9\\u4e9b\\u62a5\\u9053\\u505a\\u4e86\\u6f84\\u6e05\\uff0c\\u4ed6\\u4eec\\u5ba1\\u67e5\\u4e86\\u65e5\\u672c\\u6d3b\\u52a8\\u7684\\u7b80\\u62a5\\uff0c\\u786e\\u8ba4PPT\\u8d44\\u6599\\u4e2d\\u6ca1\\u6709\\u63d0\\u5230Xe\\u67b6\\u6784\\u72ec\\u663eGPU\\u4f1a\\u652f\\u6301\\u5149\\u7ebf\\u8ffd\\u8e2a\\uff0c\\u76f8\\u5173\\u62a5\\u9053\\u5b9e\\u9645\\u4e0a\\u662f\\u7531\\u4e8e\\u65e5\\u6587-\\u82f1\\u6587\\u7ffb\\u8bd1\\u7684\\u8bef\\u4f1a\\u6240\\u81f4\\u3002<\\/p><p>Intel\\u751a\\u81f3\\u8fd8\\u5426\\u8ba4\\u63d0\\u5230\\u4e86Tiger Lake\\u7684Gen12\\u6838\\u663e\\u6027\\u80fd\\u7ffb\\u500d\\u3001\\u53ef\\u5b9e\\u73b01080p 60fps\\u6e38\\u620f\\u7684\\u62a5\\u9053\\uff0c\\u8868\\u793a\\u8fd9\\u4e2a\\u76ee\\u6807\\u4e5f\\u662f\\u4e0d\\u5b58\\u5728\\u7684\\u3002<\\/p><p>\\u603b\\u4e4b\\uff0cIntel\\u7684\\u8f9f\\u8c23\\u8ba9\\u5f88\\u591a\\u70ed\\u5fc3\\u73a9\\u5bb6\\u4e00\\u4e0b\\u5b50\\u6ca1\\u4e86\\u76fc\\u5934\\uff0c\\u4e0d\\u8fc7\\u5b98\\u65b9\\u9488\\u5bf9\\u9519\\u8bef\\u62a5\\u9053\\u8f9f\\u8c23\\u5f88\\u6b63\\u5e38\\uff0c\\u73b0\\u5728\\u4ed6\\u4eec\\u53ea\\u662f\\u5426\\u8ba4\\u76f8\\u5173\\u62a5\\u9053\\uff0c\\u5b9e\\u9645\\u4e0a\\u5e76\\u6ca1\\u6709\\u786e\\u8ba4\\u8fd9\\u4e9b\\u4fe1\\u606f\\u5b8c\\u5168\\u4e0d\\u5bf9\\uff0c\\u5c24\\u5176\\u662f\\u5728\\u5149\\u8ffd\\u8fd9\\u4ef6\\u4e8b\\u4e0a\\uff0cIntel\\u652f\\u6301\\u5149\\u8ffd\\u6ca1\\u6709\\u6280\\u672f\\u95ee\\u9898\\uff0c\\u5c31\\u770b\\u660e\\u5e74\\u7684Xe\\u72ec\\u663e\\u6027\\u80fd\\u5982\\u4f55\\u4e86\\uff0c\\u4e4b\\u524d\\u7206\\u6599\\u79f0\\u6700\\u9ad8\\u7aef\\u7684Xe\\u72ec\\u663e\\u6027\\u80fd\\u53ef\\u8fbeRTX 2080 Ti\\u7ea7\\u522b\\uff0c\\u8fd9\\u6837\\u7684\\u663e\\u5361\\u652f\\u6301\\u5149\\u8ffd\\u6ca1\\u5565\\u95ee\\u9898\\u3002<\\/p><p>\\u73b0\\u5728\\u53ef\\u4ee5\\u786e\\u8ba4\\u7684\\u662fIntel\\u4f1a\\u57282020\\u5e74\\u63a8\\u51faXe\\u67b6\\u6784\\u72ec\\u663e\\uff0c\\u5c4a\\u65f6NVIDIA\\u663e\\u5361\\u65e9\\u5c31\\u652f\\u6301\\u5149\\u8ffd\\u4e86\\uff0cAMD\\u7684RNDA2\\u67b6\\u6784\\u663e\\u5361\\u4e5f\\u4f1a\\u652f\\u6301\\u5149\\u8ffd\\uff0cIntel\\u663e\\u7136\\u4e5f\\u8981\\u8003\\u8651\\u5230\\u8fd9\\u4e9b\\u4e8b\\u3002<\\/p><\\/section><\\/article>\",\"summary\":\"\\u7136\\u800c\\uff0c\\u8fd9\\u4e24\\u4e2a\\u6d88\\u606f\\u6050\\u6015\\u53c8\\u662f\\u4e4c\\u9f99\\u4e86\\uff0cPCWorld\\u7f51\\u7ad9\\u62a5\\u9053\\u79f0\\uff0cIntel\\u516c\\u53f8\\u603b\\u90e8\\u65e5\\u524d\\u9488\\u5bf9\\u8fd9\\u4e9b\\u62a5\\u9053\\u505a\\u4e86\\u6f84\\u6e05\\uff0c\\u4ed6\\u4eec\\u5ba1\\u67e5\\u4e86\\u65e5\\u672c\\u6d3b\\u52a8\\u7684\\u7b80\\u62a5\\uff0c\\u786e\\u8ba4PPT\\u8d44\\u6599\\u4e2d\\u6ca1\\u6709\\u63d0\\u5230Xe\\u67b6\\u6784\\u72ec\\u663eGPU\\u4f1a\\u652f\\u6301\\u5149\\u7ebf\\u8ffd\\u8e2a\\uff0c\\u76f8\\u5173\\u62a5\\u9053\\u5b9e\\u9645\\u4e0a\\u662f\\u7531\\u4e8e\\u65e5\\u6587-\\u82f1\\u6587\\u7ffb\\u8bd1\\u7684\\u8bef\\u4f1a\\u6240\\u81f4\",\"addltype\":\"normal\",\"keywords\":[\"Intel\",\"\\u72ec\\u663e\",\"Xe\",\"\\u6838\\u663e\",\"\\u663e\\u5361\",\"\\u67b6\\u6784\",\"\\u62a5\\u9053\",\"\\u652f\\u6301\"],\"subtitle\":\"Xe\\u72ec\\u663e\\u4e5f\\u8981\\u652f\\u6301\\u5149\\u7ebf\\u8ffd\\u8e2a\\uff1fIntel\\u8f9f\\u8c23\\uff1a\\u65e5\\u6587\\u7ffb\\u8bd1\\u9519\\u4e86\",\"typedata\":null,\"copyright\":null,\"ext-xtime\":1570949950163,\"isdeleted\":false,\"keyboarder\":{\"name\":\"\\u9676\\u5b97\\u7476\",\"email\":\"taozongyao@huanqiu.com\"},\"ext-serious\":1,\"fingerprint\":{\"s0\":\"ea2e\",\"s1\":\"8729\",\"s2\":\"9dc6\",\"s3\":\"9fe1\"},\"ext-relation\":[],\"ext-defertime\":null,\"ext-CommentStatus\":true}";
+        //console.log(JSON.parse(cs_article));
+        var article = JSON.parse(cs_article),
+            article_custom = {
+                    hosts1:"https://capital.huanqiu.com",
+                    hosts2:"https://movie.huanqiu.com"
+            };
+        var articleMore={
+            more1:"",
+            more2:"",
+            more3:"",
+            more4:"",
+            more5:""
+        };
+        window.onload = function(){
+            $('#meta-k').attr('content', article.keywords.join(','));
+        }
+        function getURL0(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = decodeURIComponent(window.location.search).substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        }
+        // 如果是图集字段出现在普通详情页并且不是预览环境跳转
+        // if(article.addltype == 'gallery' && getURL0('dp_debug') != 1){
+        //     window.location.href="/error/404";
+        // }
+        
+        // 判断文章节点
+        if(article.addltype == 'gallery'||article.catnode.indexOf(channel[window.location.host]) == -1){
+            // 判断环境
+            if(window.location.host == 'cs1806.solution9.net'||getURL0('dp_debug') == 1){
+            }else{
+                window.location.href="/error/404";
+            }
+        }</script><!--Ad Survey 广告加载基础代码--><script type="text/javascript" src="https://ipengtai.huanqiu.com/resource/js/base_mobile2.js"></script><link rel="stylesheet" type="text/css" href="//rs1.huanqiucdn.cn/dp/api/assets?dp_csid=cse3pl8tdbi&dp_instanceid=dpe3plc9q0n&dp_commit=49758e4e6712be8a52b1f60758c335d718b61243&dp_path=/layouts/global/global.css,layouts/go_article/go_article.css,controls/go_article_nav/go_article_nav.css,controls/go1_article_content/go1_article_content.css">
+<link href="//himg2.huanqiu.com/statics/images/favicon1.ico" rel="shortcut icon" /></head><body><!-- S 导航--><div class="topIndex" id="header-wrap"><div id="top-ad-wrap" style="display:none;"><div class="onPadding"><div class="topAd_01"><!-- Ad Survey 广告位代码  文章页-顶通--><script type="text/javascript">AD_SURVEY_Add_AdPos("7003383");</script></div></div></div><div class="hdTop"><div class="navClick"></div><div class="navTopSec"><div class="nav-container"><a href="//www.huanqiu.com" target="_self" class="nav-logo"></a><i class="l-line"></i><div class="nav-section"><div class="nav-section-submenu"><!--<a href="#" target="_blank">国际</a><i>›</i><a href="#" target="_blank">国际新闻</a><i>›</i><a href="#" target="_blank">独家</a>--></div><div class="nav-section-article-title"></div></div><form id="search-form" class="search-form" action="" name="headerSearch"><div class="search-form-fields"><input class="search-input" type="text" placeholder="请输入..."><input type="button" class="search-submit-button" value="»"></div><div class="search-button" id="search-button"></div></form><div class="nav-menu" id="menu"></div></div></div><div class="navFlyout"><div class="nav-flyout-container"><div class="nav-flyout-menu-item s-hight"><div class="nav-flyout-menu-item-title"><h3>时政2<span>&</span>博览</h3><h4>Politics<span>&</span>Look</h4></div><ul class="nav-flyout-menu-item-list"><li><a href="#" target="_blank"><span class="name-cn">国际</span><span class="name-en">World</span></a></li><li><a href="#" target="_blank"><span class="name-cn">军事</span><span class="name-en">China</span></a></li><li><a href="#" target="_blank"><span class="name-cn">国内</span><span class="name-en">Military</span></a></li><li><a href="#" target="_blank"><span class="name-cn">台湾</span><span class="name-en">Taiwan</span></a></li><li><a href="#" target="_blank"><span class="name-cn">社会</span><span class="name-en">Society</span></a></li><li><a href="#" target="_blank"><span class="name-cn">博览</span><span class="name-en">Look</span></a></li></ul></div><div class="nav-flyout-menu-item s-hight"><div class="nav-flyout-menu-item-title"><h3>财经<span>&</span>科技</h3><h4>Finance<span>&</span>Technology</h4></div><ul class="nav-flyout-menu-item-list long"><li><a href="#" target="_blank"><span class="name-cn">财经</span><span class="name-en">Financial</span></a></li><li><a href="#" target="_blank"><span class="name-cn">一带一路</span><span class="name-en">Belt and Road</span></a></li><li><a href="#" target="_blank"><span class="name-cn">财观察</span><span class="name-en">Observation</span></a></li><li><a href="#" target="_blank"><span class="name-cn">科技</span><span class="name-en">Technology</span></a></li></ul></div><div class="nav-flyout-menu-item s-hight"><div class="nav-flyout-menu-item-title"><h3>汽车<span>&</span>数码</h3><h4>Auto<span>&</span>Digital</h4></div><ul class="nav-flyout-menu-item-list long3"><li><a href="#" target="_blank"><span class="name-cn">汽车</span><span class="name-en">Auto</span></a></li><li><a href="#" target="_blank"><span class="name-cn">智能</span><span class="name-en">Smart</span></a></li><li><a href="#" target="_blank"><span class="name-cn">数码</span><span class="name-en">Digital</span></a></li><li><a href="#" target="_blank"><span class="name-cn">无人机</span><span class="name-en">UVA</span></a></li><li><a href="#" target="_blank"><span class="name-cn">游戏</span><span class="name-en">Game</span></a></li></ul></div><div class="nav-flyout-menu-item"><div class="nav-flyout-menu-item-title"><h3>生活</h3><h4>Life News</h4></div><ul class="nav-flyout-menu-item-list"><li><a href="#" target="_blank"><span class="name-cn">旅游</span><span class="name-en">Tourism</span></a></li><li><a href="#" target="_blank"><span class="name-cn">健康</span><span class="name-en">Hearth</span></a></li><li><a href="#" target="_blank"><span class="name-cn">教育</span><span class="name-en">Education</span></a></li><li><a href="#" target="_blank"><span class="name-cn">质量</span><span class="name-en">Quality</span></a></li><li><a href="#" target="_blank"><span class="name-cn">体育</span><span class="name-en">Sports</span></a></li><li><a href="#" target="_blank"><span class="name-cn">跑步</span><span class="name-en">Run</span></a></li><li><a href="#" target="_blank"><span class="name-cn">滑雪</span><span class="name-en">Skiing</span></a></li></ul></div><div class="nav-flyout-menu-item"><div class="nav-flyout-menu-item-title"><h3>风尚</h3><h4>Fashion News</h4></div><ul class="nav-flyout-menu-item-list"><li><a href="#" target="_blank"><span class="name-cn">娱乐</span><span class="name-en">Entertainment</span></a></li><li><a href="#" target="_blank"><span class="name-cn">时尚</span><span class="name-en">Fashion</span></a></li><li><a href="#" target="_blank"><span class="name-cn">艺术</span><span class="name-en">Art</span></a></li><li><a href="#" target="_blank"><span class="name-cn">品鉴</span><span class="name-en">Luxury</span></a></li><li><a href="#" target="_blank"><span class="name-cn">文化</span><span class="name-en">Culture</span></a></li><li><a href="#" target="_blank"><span class="name-cn">公益</span><span class="name-en">Commonweal</span></a></li></ul></div><div class="nav-flyout-menu-item"><div class="nav-flyout-menu-item-title"><h3>特色<span>&</span>产品</h3><h4>Featured<span>&</span>Products</h4></div><ul class="nav-flyout-menu-item-list long2"><li><a href="#" target="_blank"><span class="name-cn">环球社评</span><span class="name-en">Editorial</span></a></li><li><a href="#" target="_blank"><span class="name-cn">海外看中国</span><span class="name-en">Oversee</span></a></li><li><a href="#" target="_blank"><span class="name-cn">环球 TIME</span><span class="name-en"></span></a></li><li><a href="#" target="_blank"><span class="name-cn">环游号</span><span class="name-en"></span></a></li></ul></div><div class="nav-flyout-menu-item"><div class="nav-flyout-menu-item-title"><h3>环球时报</h3><h4>Newspaper Products</h4></div><ul class="nav-flyout-menu-item-list"><li><a href="#" target="_blank"><p>版权数据库</p></a></li><li><a href="#" target="_blank"><p>生命时报</p></a></li><li><a href="#" target="_blank"><p>品牌活动</p></a></li><li><a href="#" target="_blank"><p>环球旅游周刊</p></a></li><li><a href="#" target="_blank"><p>环球时报公基金会</p></a></li><li><a href="#" target="_blank"><p>讽刺与幽默</p></a></li><li><a href="#" target="_blank"><p>舆情中心</p></a></li><li><a href="#" target="_blank"><p>Global Times</p></a></li></ul></div><div class="nav-flyout-menu-item"><div class="nav-flyout-menu-item-title"><h3>合作</h3><h4>Cooperation</h4></div><ul class="nav-flyout-menu-item-list long3"><li><a href="#" target="_blank"><span class="name-cn">商协会</span><span class="name-en">Chamber</span></a></li><li><a href="#" target="_blank"><span class="name-cn">大数据</span><span class="name-en">Bigdatat</span></a></li><li><a href="#" target="_blank"><span class="name-cn">商业</span><span class="name-en">Business</span></a></li><li><a href="#" target="_blank"><span class="name-cn">城市</span><span class="name-en">City</span></a></li></ul></div></div></div></div></div><!-- E 导航--><!-- 内容部分 --><div class="all-con"><div class="container"><div class="kong"></div><!-- 标题、信息部分 --><div class="t-container"><div class="t-container-title"><h3>Xe独显也要支持光线追踪？Intel辟谣：日文翻译错了</h3></div><div class="t-container-metadata"><div class="metadata-info"><p><span class="source">来源：<em></em></span><span class="author">作者：<em></em></span></p><p class="time"></p></div><div class="bshare-custom icon-medium-plus metadata-share"><div class="bsPromo bsPromo2"></div><ul><li><a id="l-edit2" class="talk talk-v"><span></span></a></li><li><a title="分享到微信" class="wechat bshare-weixin" href="javascript:void(0);"></a></li><li><a title="分享到新浪微博" class="weibo bshare-sinaminiblog" href="javascript:void(0);"></a></li><li><a title="分享到QQ好友" class="qq bshare-qqim" href="javascript:void(0);"></a></li></ul></div><script type="text/javascript" charset="utf-8" src="https://t1.huanqiucdn.cn/cs/share/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="//static.bshare.cn/b/bshareC0.js"></script></div></div><div class="b-container"><!-- 文章内容部分（左侧） --><div class="l-container"><!--详情页内容区--><div class="l-con clear"><article><section data-type="rtext"><p>前不久Intel日本公司在东京举行了一次活动，介绍了Intel处理器的一些进展，其中谈到了第二代10nm处理器Tiger Lake的核显，称后者的Gen12核显性能会再次翻倍，而Xe架构独显将会支持光线追踪，这两个消息让I饭及业界都很振奋。</p><p>然而，这两个消息恐怕又是乌龙了，PCWorld网站报道称，Intel公司总部日前针对这些报道做了澄清，他们审查了日本活动的简报，确认PPT资料中没有提到Xe架构独显GPU会支持光线追踪，相关报道实际上是由于日文-英文翻译的误会所致。</p><p>Intel甚至还否认提到了Tiger Lake的Gen12核显性能翻倍、可实现1080p 60fps游戏的报道，表示这个目标也是不存在的。</p><div id="content-ad"><!-- Ad Survey 广告位代码  文章内页画中画08--><script type="text/javascript">AD_SURVEY_Add_AdPos("7004636");</script></div><p>总之，Intel的辟谣让很多热心玩家一下子没了盼头，不过官方针对错误报道辟谣很正常，现在他们只是否认相关报道，实际上并没有确认这些信息完全不对，尤其是在光追这件事上，Intel支持光追没有技术问题，就看明年的Xe独显性能如何了，之前爆料称最高端的Xe独显性能可达RTX 2080 Ti级别，这样的显卡支持光追没啥问题。</p><p>现在可以确认的是Intel会在2020年推出Xe架构独显，届时NVIDIA显卡早就支持光追了，AMD的RNDA2架构显卡也会支持光追，Intel显然也要考虑到这些事。</p></section></article><!--<div id="content-ad">--><!--Ad Survey 广告位代码  文章页内嵌画中画--><!--<script type="text/javascript">AD_SURVEY_Add_AdPos("7004636");</script>--><!--</div>--></div><div class="l-edit" id="l-edit"><div class="l-sign"><a href="mailto:jubao@huanqiu.com" ><i class="icon-sign"></i>举报</a><a href="#" id="comment"><i class="icon-comment"></i>我也说两句</a><p class="edit-peo"></p></div><p class="edit-info"></p></div><!-- 相关新闻 --><div class="l-aboutNews"><h3><span></span>相关新闻</h3><ul></ul></div></div><!-- /文章内容部分（左侧） --><!-- 相关部分（右侧） --><div class="r-container"><div class="r-small-l"><div class="r-aboutNews s-box"></div><div class="ad_250"><!-- Ad Survey 广告位代码  文章页画中画01--><script type="text/javascript">AD_SURVEY_Add_AdPos("7003385");</script></div><!--环球时事--><div class="r-hqNews s-box"><h3><span></span>环球时事<a href="//world.huanqiu.com" class="more" target="_blank"></a></h3><ul class="r-hqNews-ul"><li><a href="//world.huanqiu.com/article/9CaKrnKnf1a" target="_blank" dataLink="" class="outside-Link"><p class="oBold">特鲁多有点“惨”：参加竞选集会，还得穿防弹背心！</p><!--<span>1570951620000</span>--></a></li><li><a href="//world.huanqiu.com/article/9CaKrnKnf10" target="_blank" dataLink="" class="outside-Link"><p>日本一直升机实施救援时发生失误 致一女性高空坠落</p><!--<span>1570951560000</span>--></a></li><li><a href="//world.huanqiu.com/article/9CaKrnKneZG" target="_blank" dataLink="" class="outside-Link"><p>日媒：超强台风“海贝思”已致19人死亡</p><!--<span>1570948320000</span>--></a></li><li><a href="//mil.huanqiu.com/article/7QJC11S4GwU" target="_blank" dataLink="" class="outside-Link"><p>贝尔公司将正式展示其下一代攻击侦察无人机项目</p><!--<span>1570936023260</span>--></a></li><li><a href="//mil.huanqiu.com/article/7QJAsLMKnZK" target="_blank" dataLink="" class="outside-Link"><p>美军最新战斗救援直升机亮相 内部油箱容量翻一番</p><!--<span>1570934719692</span>--></a></li><li><a href="//oversea.huanqiu.com/article/9CaKrnKndN2" target="_blank" dataLink="" class="outside-Link"><p>澳学者：不必对华做过多预测 未来必乐观</p><!--<span>1570862040000</span>--></a></li></ul><ul class="r-hqNews-ul"><li><a href="//china.huanqiu.com/article/9CaKrnKnf0Y" target="_blank" dataLink="" class="outside-Link"><p class="oBold">“统促党”总裁张安乐回应何韵诗入台被泼漆：应将其用现行犯身分送“移民局”</p><!--<span>1570951020000</span>--></a></li><li><a href="//china.huanqiu.com/article/9CaKrnKneYX" target="_blank" dataLink="" class="outside-Link"><p>“香港警察非常温柔了！”美国小哥粤语喊话暴徒</p><!--<span>1570948140000</span>--></a></li><li><a href="//society.huanqiu.com/article/9CaKrnKndUq" target="_blank" dataLink="" class="outside-Link"><p>演员叶璇回杭高铁上劝阻外放，反被对方骂神经病！这一次网友评论出奇一致</p><!--<span>1570845540000</span>--></a></li><li><a href="//society.huanqiu.com/article/9CaKrnKndQ3" target="_blank" dataLink="" class="outside-Link"><p>故宫再次喜提热搜，这次瞄准了吃货！</p><!--<span>1570840920000</span>--></a></li><li><a href="//opinion.huanqiu.com/article/9CaKrnKnewD" target="_blank" dataLink="" class="outside-Link"><p>社评：达顿无端挑衅中国，害的是澳大利亚</p><!--<span>1570884660000</span>--></a></li><li><a href="//taiwan.huanqiu.com/article/7QEmJL6D1Ha" target="_blank" dataLink="" class="outside-Link"><p>台湾教师之忧：“台独”历史教科书戕害下一代</p><!--<span>1570662913416</span>--></a></li></ul></div><div class="ad_250"><!-- Ad Survey 广告位代码  文章页画中画02--><script type="text/javascript">AD_SURVEY_Add_AdPos("7003386");</script></div><!--环球业界--><div class="r-hqIndustry s-box"><h3><span></span>环球业界<a href="//finance.huanqiu.com" class="more" target="_blank"></a></h3><div class="hqIndustry-pic"><div class="pic-item right"><a href="//finance.huanqiu.com/article/9CaKrnKmZI8" target="_blank" dataLink="" class="outside-Link"><div class="pic-item-block"><img src="//himg2.huanqiucdn.cn/attachment2010/2019/0924/12/25/20190924122521914.png" title="被资本热捧的RPA，踩在财税管理智能化风口" alt=""></div><p><span>RPA踩在财税管理智能化风口</span></p></a></div><div class="pic-item"><a href="//tech.huanqiu.com/gallery/9CaKrnQhX34" target="_blank" dataLink="" class="outside-Link"><div class="pic-item-block"><img src="https://rs1.huanqiucdn.cn/dp/api/images//fP5N3lTrxYiIvwgi_Cjgza2v.jpg" title="天津直博会亮点" alt=""></div><p><span>天津直博会亮点</span></p></a></div></div><ul><li><a href="//finance.huanqiu.com/article/7QJzdn4oZzO" target="_blank" dataLink="" class="outside-Link">价值两个家乐福中国！入华23年，这家连锁巨头终“卖身”，接盘的是…</a></li><li><a href="//finance.huanqiu.com/article/7QJvHQh9Jbq" target="_blank" dataLink="" class="outside-Link">因存失职行为 浦发、广发总行两家银行负责人被查处</a></li><li><a href="//smart.huanqiu.com/article/7QG8rkz8IJW" target="_blank" dataLink="" class="outside-Link">科普：长时间不关机对电脑损害大么？</a></li><li><a href="//tech.huanqiu.com/gallery/9CaKrnQhX31" target="_blank" dataLink="" class="outside-Link">英展出微型机器人月球车 2021年将其送上月球</a></li><li><a href="//tech.huanqiu.com/gallery/9CaKrnQhX32" target="_blank" dataLink="" class="outside-Link">世界最高10亿像素昆虫照 展现昆虫身体惊人细节</a></li></ul></div><div class="ad_250"><!-- Ad Survey 广告位代码  文章页画中画03--><script type="text/javascript">AD_SURVEY_Add_AdPos("7003387");</script></div><!--环球时尚--><div class="r-hqFashion s-box"><h3><span></span>环球风尚<a href="//fashion.huanqiu.com" class="more" target="_blank"></a></h3><ul><li class="right"><a href="//ent.huanqiu.com/article/9CaKrnKneAz" target="_blank" dataLink="" class="outside-Link"><div class="pic-item"><img src="//himg2.huanqiucdn.cn/attachment2010/2019/1012/20191012100735989.jpg?w=260" alt="AKIRA称期待当爸 爱上林志玲是命中注定赞其完美"></div><p>AKIRA称期待当爸</p></a></li><li><a href="//fashion.huanqiu.com/gallery/7QmJLBmOphe" target="_blank" dataLink="" class="outside-Link"><div class="pic-item"><img src="https://rs1.huanqiucdn.cn/dp/api/images/imageDir/910f59d2219a116d55b89daa42d796a2u5.jpg?w=260" alt="秦海璐秋季身着长裙，更显知性美！"></div><p>秦海璐</p></a></li><li class="right"><a href="//luxury.huanqiu.com/article/9CaKrnKn4mT" target="_blank" dataLink="" class="outside-Link"><div class="pic-item"><img src="//himg2.huanqiucdn.cn/attachment2010/2019/0929/20190929111626177.jpeg?w=260" alt="经典时计，华夏情长  瑞士高级制表品牌宝珀Blancpain的中国情缘"></div><p>Blancpain的中国情缘</p></a></li><li><a href="///article/" target="_blank" dataLink="http://lx.huanqiu.com/lxnews/2019-07/15225738.html" class="outside-Link"><div class="pic-item"><img src="//himg2.huanqiu.com/attachment2010/2019/0731/09/14/20190731091411276.jpg?w=260" alt="丁书媛：永远保持“求知欲”"></div><p>丁书媛：永远保持“求知欲”</p></a></li></ul></div></div><div class="r-small-r"><div class="ad_250"><!-- Ad Survey 广告位代码  文章页画中画04--><script type="text/javascript">AD_SURVEY_Add_AdPos("7003388");</script></div><!--环球产经--><div class="r-hqIndustry s-box"><h3><span></span>环球产经<a href="//lx.huanqiu.com" class="more" target="_blank"></a></h3><div class="hqIndustry-pic"><div class="pic-item right"><a href="//auto.huanqiu.com/article/9CaKrnKnebT" target="_blank" dataLink="" class="outside-Link"><div class="pic-item-block"><img src="//himg2.huanqiucdn.cn/attachment2010/2019/1012/20191012021249462.jpg" title="升维时代！第五届中国汽车品牌发展论坛圆满召开" alt=""></div><p><span>品牌发展论坛圆满召开</span></p></a></div><div class="pic-item"><a href="//health.huanqiu.com/article/9CaKrnKmQBQ" target="_blank" dataLink="" class="outside-Link"><div class="pic-item-block"><img src="//himg2.huanqiucdn.cn/attachment2010/2019/0916/10/23/20190916102314980.jpg" title="寄望新品提振业绩 济川药业消字号产品却涉嫌虚假宣传" alt=""></div><p><span>济川药业涉嫌虚假宣传</span></p></a></div></div><ul class="hqcj-dis"><li><a href="//lx.huanqiu.com/article/9CaKrnKneht" target="_blank" dataLink="" class="outside-Link">重庆大学庆祝建校90周年</a></li><li><a href="//health.huanqiu.com/article/9CaKrnKmROO" target="_blank" dataLink="" class="outside-Link">致癌物质减少其他危害增加 揭开电子烟的真面目</a></li><li><a href="//auto.huanqiu.com/article/9CaKrnKnebT" target="_blank" dataLink="" class="outside-Link">升维时代！第五届中国汽车品牌发展论坛圆满召开</a></li><li><a href="//quality.huanqiu.com/article/7Q2P3389HpK" target="_blank" dataLink="" class="outside-Link">大众汽车在澳大利亚“排放门”新进展：大众与澳车主和解或赔1.27亿澳元</a></li><li><a href="//city.huanqiu.com/article/9CaKrnKmSdA" target="_blank" dataLink="" class="outside-Link">想让消费者买单，“人造肉们”还差得很远</a></li></ul></div><!--体育·旅游--><div class="r-hqFashion s-box"><h3><span></span>体育·旅游</h3><ul><li class="right"><a href="//sports.huanqiu.com/gallery/9CaKrnQhX2t" target="_blank" dataLink="" class="outside-Link"><div class="pic-item"><img src="//himg2.huanqiucdn.cn/attachment2010/2019/1010/11/05/20191010110501212.jpg?w=260" alt="世锦赛男子团体决赛:俄罗斯队夺得冠军"></div><p>俄罗斯队夺得冠军</p></a></li><li><a href="//sports.huanqiu.com/gallery/9CaKrnQhX1M" target="_blank" dataLink="" class="outside-Link"><div class="pic-item"><img src="//himg2.huanqiucdn.cn/attachment2010/2019/1009/09/39/20191009093954810.jpg?w=260" alt="费德勒轻松晋级上海赛16强"></div><p>费德勒轻松晋级上海赛16强</p></a></li><li class="right"><a href="//go.huanqiu.com/article/7QIm0XAFm0g" target="_blank" dataLink="" class="outside-Link"><div class="pic-item"><img src="https://rs1.huanqiucdn.cn/dp/api/images/imageDir/a9e858e2c68a97446b7e90cfa7943b71u5.jpg?w=260" alt="故宫博物院10日迎来94岁生日 “一带一路”人文历史摄影展开幕"></div><p>故宫博物院10日迎来94岁生日 “一带一路”人文历史摄影展开幕</p></a></li><li><a href="//go.huanqiu.com/article/7QHREYZyyE8" target="_blank" dataLink="" class="outside-Link"><div class="pic-item"><img src="https://rs1.huanqiucdn.cn/dp/api/images/imageDir/49131f5fde68e59fa8cd7b991a3f9ce6u5.jpg?w=260" alt="北京环球度假区公布七大主题景区 预计2021年正式开园"></div><p>北京环球度假区公布七大主题景区 预计2021年正式开园</p></a></li></ul></div><div class="ad_250"><!-- Ad Survey 广告位代码  文章页画中画05--><script type="text/javascript">AD_SURVEY_Add_AdPos("7004638");</script></div><!--环球商城--><div class="r-hqFashion s-box"><h3><span></span>环球商城<a href="http://www.worldmall365.com" class="more" target="_blank"></a></h3><ul><li class="right"><a href="https://h5.youzan.com/v2/feature/10txkqrq6" target="_blank"><div class="pic-item"><img src="//rs1.huanqiucdn.cn/dp/api/images//Co9Gq068dToXaPWeA5d6135r.jpg" alt="使命召唤14-二战"></div><p>使命召唤14-二战</p></a></li><li><a href="https://h5.youzan.com/v2/goods/2oiyrmbhyz5v8" target="_blank"><div class="pic-item"><img src="//rs1.huanqiucdn.cn/dp/api/images//IrbDpHE0oVkpIe7ebeWM9-O_.jpg" alt="轻巧 高亮 USB便捷充"></div><p>轻巧 高亮 USB便捷充</p></a></li><li class="right"><a href="https://h5.youzan.com/v2/feature/5GKw9uf8L3" target="_blank"><div class="pic-item"><img src="//rs1.huanqiucdn.cn/dp/api/images//JIwEgkM96gmalV2bBwX29Mk2.jpg" alt="点击免费领取大红包"></div><p>点击免费领取大红包</p></a></li><li><a href="https://h5.youzan.com/v2/showcase/goods?alias=1ydvxtwx4uo90" target="_blank"><div class="pic-item"><img src="//rs1.huanqiucdn.cn/dp/api/images//BcPc_sCxlcQ0CTovk1G4ncGi.jpg" alt="春夏新品穿梭者抓绒套"></div><p>春夏新品穿梭者抓绒套</p></a></li></ul></div><div class="ad_250"><!-- Ad Survey 广告位代码  文章页画中画06--><script type="text/javascript">AD_SURVEY_Add_AdPos("7004639");</script></div><div class="sPosition"></div></div><!-- 接下来浮窗部分 --><div class="r-hqNext" id="winNext"><div class="r-hqNext-ad"><div class="close-ad"></div><div class="r-hqNext-adM"><!-- Ad Survey 广告位代码  文章页-右下浮窗--><script type="text/javascript">AD_SURVEY_Add_AdPos("7004637");</script></div></div><h3>接下来</h3><ul></ul></div><!-- /接下来浮窗部分 --></div><!-- /相关部分（右侧） --><!-- 推荐阅读 --><div class="l_c l_b" id="newsWrap"><h2 class="lc_hd"><strong>推荐阅读</strong></h2><div class="lc_bd"><div id="news"></div><a href="javascript:void(0);" class="lb_btn"></a></div></div></div><!-- /标题、信息部分 --></div></div><!-- S 对联广告位--><div class="fixAd_01 adCon"><!-- Ad Survey 广告位代码  文章页对联--><script type="text/javascript">AD_SURVEY_Add_AdPos("7003389");</script><!--<cs-element data-src="elements/go_article_fixAd/go_article_fixAd"></cs-element>--></div><!-- E 对联广告位--><!-- S 尾部--><!--<cs-control data-src="controls/go_footer/go_footer"></cs-control>--><!-- E 尾部--><!-- 分享 --><div id="wechat-summary" style="display:none">然而，这两个消息恐怕又是乌龙了，PCWorld网站报道称，Intel公司总部日前针对这些报道做了澄清，他们审查了日本活动的简报，确认PPT资料中没有提到Xe架构独显GPU会支持光线追踪，相关报道实际上是由于日文-英文翻译的误会所致</div><!-- 微信分享 begin --><script type="text/javascript">var summary = document.getElementById("wechat-summary").innerHTML;
+    var weChatShare = {"title" : "Xe独显也要支持光线追踪？Intel辟谣：日文翻译错了",    // 分享标题,建议主标题一行 18个字符以内
+        "desc"  : summary,    // 分享描述，建议描述最多两行 36个字符以内
+        "imgUrl"   : 'https://rs1.solution9.net/api/source/huanqiu-releaseStatics/m.huanqiu.com/share.jpg', // 分享图标,200*200
+        "link" : window.location.href}</script><!-- 微信分享 end --><!-- 分享 --><!-- 统计代码 --><script type="text/javascript">var _report = _report || [];
+    _report.push(['_setAccount', 'webGYj6Xe3q91jcs3']);
+
+    _report.push(['_setCustomVar', 1, 'custom1', '7QJSBr0hs52']);
+    _report.push(['_setCustomVar', 2, 'custom2', 'Xe独显也要支持光线追踪？Intel辟谣：日文翻译错了']);
+    _report.push(['_setCustomVar', 3, 'custom3', '']);
+    _report.push(['_setCustomVar', 4, 'custom4', '{"url":"https:\/\/news.mydrivers.com\/1\/651\/651419.htm","name":"快科技"}']);
+    _report.push(['_setCustomVar', 5, 'custom5', '']);
+    _report.push(['_setCustomVar', 6, 'custom6', '[]']);
+    _report.push(['_setCustomVar', 7, 'custom7', '{"name":"陶宗瑶","email":"taozongyao@huanqiu.com"}']);
+    _report.push(['_setCustomVar', 8, 'custom8', '']);
+
+    (function() {
+        var report = document.createElement("script");
+        report.src = "https://analysis-reporting.develenv.com/report.js?id=858d45e1f01f24b9ae02e83792a3ce3c";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(report, s);
+    })();
+    // 百度推送
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+    // 百度统计 
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F1fc983b4c305d209e7e05d96e713939f' type='text/javascript'%3E%3C/script%3E"));
+    // cnzz 统计
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none' id='cnzz_stat_icon_1000010102'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000010102' type='text/javascript'%3E%3C/script%3E"));</script><!-- /end 统计代码 --><script type="text/javascript" src="//rs1.huanqiucdn.cn/dp/api/assets?dp_csid=cse3pl8tdbi&dp_instanceid=dpe3plc9q0n&dp_commit=49758e4e6712be8a52b1f60758c335d718b61243&dp_path=layouts/global/jquery1.9.1.js,layouts/go_article/go_article.js,controls/global_control/global_control.js,controls/go_article_nav/go_article_nav.js,controls/go1_article_content/go1_article_content.js,controls/share/wechat-1.0.0.js,controls/share/weixin-1.0.0.js"></script></body></html>

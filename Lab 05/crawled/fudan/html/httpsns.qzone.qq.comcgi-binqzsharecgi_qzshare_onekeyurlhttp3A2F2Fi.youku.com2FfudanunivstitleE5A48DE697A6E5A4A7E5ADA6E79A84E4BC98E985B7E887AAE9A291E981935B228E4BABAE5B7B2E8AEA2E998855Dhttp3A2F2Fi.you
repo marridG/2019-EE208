@@ -1,0 +1,685 @@
+
+<!DOCTYPE HTML>
+<html  >
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta charset="charset=utf-8" />
+<meta http-equiv="Content-Language" content="zh-cn" />
+<meta name="robots" content="all" />
+<meta name="author" content="Tencent-ISRD" />
+<meta name="Copyright" content="Tencent" />
+<meta name="Description" content="Qzone精彩由你而来" />
+<meta name="Keywords" content="Qzone,QQ空间,Blog,博客,网络日志,播客,腾讯,QQ,Tencent" />
+
+
+<link rel="shortcut icon" href="//qzonestyle.gtimg.cn/aoi/img/logo/favicon.ico" type="image/x-icon" />
+<title>分享到QQ空间</title><script>window.g_qzonetoken='';</script>
+
+<SCRIPT type="text/tmpl" id="shareResultTmpl">
+<div class="mod_result">
+	<div class="tips">
+		<h3><i class="img i_info_correct_32">&nbsp;</i>分享成功!</h3>
+		<p>
+			<span id="countDown">10</span>秒后窗口自动关闭
+		</p>
+		<a href="javascript:void(0);" id="detailLink" class="btn_a btn_s1_h28 btn_go_qzone" target="_blank">
+	                    <i class="img btn_s1_h28_l"></i>
+	                    <span class="btn_s1_h28_r">进入我的空间</span>
+                	</a>
+	</div>
+</div>
+</SCRIPT>
+<script type="text/tmpl" id="shareMainPanelTmpl">
+<label for="" class="reason">理由：</label>
+<div CONTENTEDITABLE=true name="Name" class="inputstyle" id="descriptiontx" ><%if(description){%><%=escHTML(description)%><%}%></div>
+<div class="share_pop_friend_list" id="friendList"></div>
+<p id="wartermark" class="watermark" <%if(description.length>0){%>style="display:none"<%}%>>说点什么吧，您还可以@QQ好友和朋友哦~</p>
+<%if(SHARE.string.countDescLen(description)>120){%>
+<div class="count_txt" id="currentLength" style="color:red;">已超出<strong><%=SHARE.string.countDescLen(description)-120%></strong>字</div>
+<%}else {%>
+<div class="count_txt" id="currentLength">还能输入<strong><%=120- SHARE.string.countDescLen(description)%></strong>字</div>
+<%}%>
+<div class="mod_send" id="sendPanel" style="display:none;">
+	<label>发送：</label>
+	<div class="selector_wrap">
+		<p id="sendEidtorWatermark" >请在这里输入QQ号码、昵称、备注、邮箱地址</p>
+		<div class="item_selected" CONTENTEDITABLE=true id="sendEidtor"></div>
+		<div class="select_list" id="listDiv" style="display:none;width:400px;"></div>
+		<!--<div class="select_hint">在这里输入的是提示信息</div><input type="hidden" name="datas">-->
+			</div>
+		</div>
+		<div class="mod_section">
+		<input id="title" class="view_title" type="text"  MAXLENGTH=50 value="<%=escHTML(title)%>" />
+		<p class="sub_head" id="url"><%if(url){%><a target="_blank" href="<%=escHTML(url)%>"><%=escHTML(url)%></a><%}%></p>
+		<textarea class="view_summary"  id="summary" ><%=escHTML(summary)%></textarea>
+		<%if(urlcount&&urlcount>0){%><p class="share_count" id="shareCount" >已被分享<%=urlcount%>次</p><%}%>
+	</div>
+	<!--这里属于变化区域-->
+	<div id="mod_pic" class="mod_variable few_pic">
+		<div class="check_img" id="checkPanel" <%if(coverurl ||imgsCount===0){%>style="display:none;"<%}%>>
+			<label for="preview" class="mod_arrange">
+			<input type="checkbox" name="preview" id="preview" <%if(imgsCount>0){%>checked="checked"<%}%>  />同时分享选中图片</label>
+		</div>
+	<%if(coverurl){%>
+		<div class="mod_video" id="videoPanel">
+			<div class="mod_play" id="videoPic">
+				<!--文档类型或者是qqshow不显示播放icon-->
+				<%if(type!=11 && type!=12){%><a class="icon_play"><span>播放</span></a><%}%>
+				<img style="vertical-align: middle; " src="//qzonestyle.gtimg.cn/ac/b.gif" onload="reduceImage(escHTML(util.decodeParam('<%=coverurl%>')),120,90,{img:this})" />
+			</div>
+		</div>
+	<%}else if(imgsCount>0){%>
+		<div class="mod_list" id="imgPanel">
+			<ul id="imgList">
+				<%for(var i =0;i<imgsCount;i++){%>
+					<li class="evt_click" data-hottag="imgpanel.preview">
+					<div class="mod_preview" id="preview_img_container_<%=i%>">
+					</div>
+					<span class="icon_select"></span>
+					</li>
+				<%}%>
+			</ul>
+		</div>
+	<%}%>
+	<div class="mod_pages" id="pagePanel" style="">
+		<span class="mod_arrow arrow_back arrow_back_disable" style="<%if(imgsCount<5){%>display:none;<%}%>" id="prePage">
+			<span class="arrow_in"></span>
+			<span class="arrow_out"></span>
+		</span>
+		<span class="mod_arrow arrow_prev" style="<%if(imgsCount<5){%>display:none;<%}%>" id="nextPage">
+			<span class="arrow_in"></span>
+			<span class="arrow_out"></span>
+		</span>
+		<%if(type!=5 && type!=11 && type!=12 && imgsCount>0){%><p class="pic_counts" id="picCounts">共<%=imgsCount%>张图片</p><%}%>
+	</div>
+</div>
+</script>
+<!--[if IE 6]>
+<script type="text/javascript">
+/* <![CDATA[*/
+try{
+document.execCommand("BackgroundImageCache", false, true);
+}
+catch(e){}
+/* ]]> */
+</script>
+<![endif]-->
+<script type="text/javascript">
+var g_timePoints =[new Date()];
+
+window.console || (window.console={
+	log : function(){}
+});
+
+
+function isQZONE(){
+	return window.location.host.indexOf('.qzone.qq.com')>0;
+}
+
+var curHostname = location.hostname;
+if(curHostname.indexOf('pengyou') != -1) {
+    document.domain = curHostname.substring(curHostname.indexOf('pengyou'), curHostname.length);
+} else {
+    document.domain = 'qzone.qq.com';
+}
+
+
+function getParamter(name){
+    var r = new RegExp("(\\?|#|&)" + name + "=([^&#]*)(&|#|$)");
+    var m = location.href.match(r);
+    return (!m?"":m[2]);
+};
+
+(function(){
+	var seed = Math.random() * 10000;
+
+	var onMessage = function(handler){
+		if(window.addEventListener){
+			window.addEventListener('message',handler);
+		}else if(window.attachEvent){
+			window.attachEvent('onmessage',handler);
+		}
+	}
+
+	var isQQDomain = function(url){
+		var link = document.createElement('a');
+		link.href = url;
+		
+		return /\.qq\.com$/.test(link.hostname);
+	}
+
+	if (window.top != window){
+		window.console && console.log('page in a iframe')
+		var p = /\.qq\.com$/;
+		var top_host;
+		try{
+			top_host = window.top.location.host;
+		}
+		catch(err){}
+		
+		var callerOrigin = decodeURIComponent(getParamter('origin'));
+		setTimeout(function(){
+			if (!p.test(top_host)){
+				window.top.location = window.location;
+			}
+		},1000);
+
+		
+		if(!top_host && isQQDomain(callerOrigin)){
+
+			onMessage(function(evt){
+
+				var data = evt.data;
+				if(typeof data =='string'){
+					try{
+						data = JSON.parse(evt.data);	
+					}catch(err){
+						data = {};
+					}
+					
+				}
+				
+				if(data.EVT == 'SET_CALLER_HOST' && seed == data.seed){
+					top_host = data.host;
+				}
+			})
+			parent.postMessage(JSON.stringify({
+				EVT : 'GET_CALLER_HOST',
+				seed : seed
+			}), callerOrigin);
+			
+			
+		}
+		
+	}
+
+})()
+
+function getCookie(name) {
+    var r = new RegExp("(?:^|;+|\\s+)" + name + "=([^;]*)"),
+    m = document.cookie.match(r);
+    return (!m ? "": m[1]);
+}
+
+/**
+ * 一个简单的摘要签名算法
+ * @ignore
+ *
+ */
+function getACSRFToken(url) {
+    var skey;
+    url || (url = '');
+    if(url.indexOf('qzone.qq.com/')>-1){
+        skey = getCookie("p_skey");
+    }else if(url.indexOf('qq.com')>-1){
+        skey =getCookie("skey");  
+    }
+    if(!skey){
+        skey = getCookie("p_skey") || getCookie("skey");
+    }
+    return arguments.callee._DJB(skey);    
+}
+getACSRFToken._DJB = function(str) {
+    var hash = 5381;
+    for (var i = 0,
+    len = str.length; i < len; ++i) {
+        hash += (hash << 5) + str.charAt(i).charCodeAt();
+    }
+    return hash & 0x7fffffff;
+}
+
+var g_bPengyou = 0,
+g_bBweibo = 0,
+g_iPuin = '',
+g_iUin = 0,
+g_sShortUrl = 'http:\x2F\x2Fi.youku.com\x2Ffudanunivs',
+g_sShortUrlAdtag = '',
+g_bIsAlpha = '',
+g_Name = '',
+g_pImage = '';
+var g_retryCount = 0;
+var g_imgcacheDomain ,g_siDomain;
+try{
+	g_imgcacheDomain = parent.imgcacheDomain || 'qzs.qq.com',
+	g_siDomain =  parent.siDomain || 'qzonestyle.gtimg.cn';
+}catch(e){
+	g_imgcacheDomain = 'qzs.qq.com',
+	g_siDomain =  'qzonestyle.gtimg.cn';
+};
+
+function escHTML(str) {
+    return (str + '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\x27/g, '&#039;').replace(/\x22/g, '&quot;');
+}
+
+var getRealLen = function (s,isUTF8){
+	if(typeof(s)!='string'){
+		return 0;
+	}
+	if(!isUTF8){
+		return s.replace(/[^\x00-\xFF]/g,"**").length;
+	}else{
+		var cc=s.replace(/[\x00-\xFF]/g,"")
+		;return(s.length-cc.length)+(encodeURI(cc).length/3);
+	}
+};
+
+var cut = function (str,bitLen,tails){
+	str=String(str);
+	bitLen-=0;
+	tails=tails||'';
+	if(isNaN(bitLen)){
+		return str;
+	}
+	var len=str.length,
+	i=Math.min(Math.floor(bitLen/2),len),
+	cnt=getRealLen(str.slice(0,i));
+	for(;i<len&&cnt<bitLen;i++){
+		cnt+=1+(str.charCodeAt(i)>255);
+	}
+	return str.slice(0,cnt>bitLen?i-1:i)+(i<len?tails:'');
+};
+
+
+
+var reduceImage = function(trueSrc,ew,eh,options){
+
+	var img = new Image();
+	var i =0;
+	img.onload = function(){
+		if(!options.img){
+			
+			window.console && console.log('未指定img');
+			return;
+		}
+		var widthRatio = this.width / ew;
+		var heightRatio = this.height / eh;
+		if(this.width > ew || this.height > eh) {
+			if(widthRatio >= heightRatio){
+				options.img.width = ew;
+			}else{
+				options.img.height = eh;
+			}
+		}
+		options.img.onload=null;
+		options.img.src = this.src;
+		options && options.callback && options.callback(this);
+	}
+	img.src = trueSrc;
+};
+
+var tmpl = (function(){
+	var cache = {};
+	return function tmpl(str, data, key) {
+		var strIsKey = !/\W/.test(str);
+		key = key || (strIsKey ? str : null);
+		var fn = key ? cache[key] = cache[key] || tmpl(strIsKey ? document.getElementById(str).innerHTML : str) :
+		new Function("obj", "var p=[],print=function(){p.push.apply(p,arguments);}; with(obj){p.push('" + str
+			.replace(/[\r\t\n]/g, " ")
+			.split("\\'").join("\\\\'")
+			.split("'").join("\\'")
+			.split("<%").join("\t")
+			.replace(/\t=(.*?)%>/g, "',$1,'")
+			.split("\t").join("');")
+			.split("%>").join("p.push('")
+		+ "');}return p.join('');");
+		return data ? fn( data ) : fn;
+	};
+})();
+var SHARE = window.SHARE || {};
+SHARE.string = (function() {
+    return {
+        /**
+     * 计算分享理由的字数，这里是直接使用微博的计算方法
+     * 其中中文会判断为两个字节，链接将会看作11个中文字符
+     */
+        countDescLen: function(str) {
+            var value = str.replace(/(^\s*)|(\s*$)/g, "");
+            var reg = new RegExp('((news|telnet|nttp|file|http|ftp|https)://){1}(([-A-Za-z0-9]+(\\.[-A-Za-z0-9]+)*(\\.[-A-Za-z]{2,5}))|([0-9]{1,3}(\\.[0-9]{1,3}){3}))(:[0-9]*)?(/[-A-Za-z0-9_\\$\\.\\+\\!\\*\\(\\),;:@&=\\?/~\\#\\%]*)*', 'gi');
+            value = value.replace(reg, '**********************');
+            return Math.ceil(value.replace(/[^\x00-\xff]/ig, "**").length / 2);
+        }
+    };
+})();
+
+
+function ptlogin2_onResize(w, h) {try {if((h-0)<180){h = 180;}document.getElementById('loginFrame').style.height = h + 'px';
+document.getElementById('login_box').style.height = h + 'px';} catch(e) {}};
+
+function onReceiveMessageLoginCallback(evt){
+	if(evt.origin =='http://qzs.qq.com' || evt.origin =='https://qzs.qq.com'){
+		return
+	}
+	if(evt.data.EVT == 'loginCallback'){
+		loginCallback();	
+	}
+	
+}
+
+if(window.addEventListener){
+	window.addEventListener('message',onReceiveMessageLoginCallback);
+}else if(window.attachEvent){
+	window.attachEvent('onmessage',onReceiveMessageLoginCallback);
+
+}
+
+window.loginCallback = function(){
+	
+	var uin = getCookie("uin")||0;
+	if(uin && (/^o([0-9]+)$/).test(uin)){
+		uin = parseFloat(RegExp.$1);
+	}
+	
+	setUin();
+	
+	document.getElementById('login_panel').style.display="none";
+	loginCallback.Callback&&loginCallback.Callback();
+};
+loginCallback.bReload = true;
+window.g_urlinfo = null;
+
+var filteImage = function(imgUrls, notInThisUrls){
+
+	var tempMap = {}, tempUrls = [];
+	var notInThisStr = ('|' + (notInThisUrls||[]).join('|') + '|').toLowerCase();
+	for(var i=0;imgUrls && i<imgUrls.length;i++){
+
+		var url = imgUrls[i];
+		if(!url || url.indexOf('http')!=0){
+			imgUrls.splice(i,1);
+			i--;
+			continue;
+		}
+		url = imgUrls[i];
+		if(!tempMap[url]){
+			tempMap[url]=1;
+			( notInThisStr.indexOf( '|' + url.toLowerCase() + '|') == -1 ) && tempUrls.push(url);
+		}
+	}
+	return tempUrls;
+}
+
+var util = {
+	decodeParam : function(str){
+		if(!str){
+			return '';
+		}
+		var result;
+		try{
+			result = decodeURIComponent(str.replace(/\+/g, ' '));
+		}catch(err){
+			result = '';
+			window.console && console.log('[ERROR] util.decodeParam 发生异常，异常的参数串为:'+str);
+			//TODO:这里还要想想如何做统计上报,把这种异常监控起来
+		}
+		return result;
+	}
+};
+
+window._Callback = function(responseData){
+	g_timePoints[1] = new Date();
+	var useNewSpliter = parseInt(getParamter('use_new_spliter'),10) || 0;
+	var provideOnly = parseInt(getParamter('provide_only'),10)  || 0;
+	var selfProvidedPics;
+	if(useNewSpliter===1){
+		selfProvidedPics = filteImage(util.decodeParam(encodeURIComponent(getParamter('pics'))).replace(/\+/g, '').split('!!'));
+	}else{
+		selfProvidedPics = filteImage(util.decodeParam(encodeURIComponent(getParamter('pics'))).replace(/\+/g, '').split('|'));/*selfProvidedPics作为网站在链接传图时，保存其图片url*/
+	}
+	
+	if(responseData.code!=0){
+		if(g_retryCount==2){
+			g_urlinfo={
+				description : util.decodeParam(getParamter('desc')),
+				title : util.decodeParam(getParamter('title')),
+				url : escHTML(util.decodeParam(g_sShortUrl)),
+				summary : util.decodeParam(getParamter('summary')),
+				pics : [],
+				selfProvidedPics: selfProvidedPics,/**/
+				imgs : [],
+				type : 4
+			}
+		}
+		return;
+	}
+	window._Callback=null;
+	window.g_urlinfo = responseData.data;
+	var title =util.decodeParam(getParamter('title'));
+	
+	var site = util.decodeParam(getParamter('site'));
+
+	var summary = util.decodeParam(getParamter('summary'));
+	var desc = util.decodeParam(getParamter('desc'));
+	var url = window.g_sShortUrlAdtag || window.g_sShortUrl;
+	var adtag = util.decodeParam(getParamter('adtag'));
+	if(url){
+		window.g_urlinfo.url = url;
+	}
+	if(title){
+		window.g_urlinfo.title = title || url;
+	}
+	
+	if(selfProvidedPics){
+		
+		window.g_urlinfo.selfProvidedPics = selfProvidedPics;
+	}
+	if(site){
+		window.g_urlinfo.site = site;
+	}
+	if(summary){
+		window.g_urlinfo.summary = summary;
+	}
+	if(desc){
+		window.g_urlinfo.description = desc;
+	}
+	if(g_urlinfo.pics && !provideOnly){/*imgs保存urlinfo返回的图片，记得去掉用户在链接上自传的图片*/
+		/*分享urlinfo拉取到的图片有+号啊*/
+		g_urlinfo.imgs = filteImage( g_urlinfo.pics.replace(/\+/g, '').split('|'), window.g_urlinfo.selfProvidedPics||[]);
+	}
+	if(adtag){
+		g_urlinfo.adtag = adtag;
+	}
+	if(g_urlinfo && g_urlinfo.summary){
+		g_urlinfo.summary = g_urlinfo.summary
+			.replace(/^\s+|\s+$/g,'')
+			.replace(/[^\S\r\n]*[\r\n]\s*/g, '\r\n');
+	}
+
+	//window.console && console.log('urlinfo:',g_urlinfo);
+};
+
+if(getParamter('title')&&getParamter('summary')&&getParamter('pics')&&util.decodeParam(getParamter('url')).match(/^\s*(https?:\/\/)?[\w-\.]+(\.qq\.com|\.paipai\.com|\.pengyou\.com).*\s*$/ig)){/*暂缓压力*/
+	var selfProvidedPics = filteImage(util.decodeParam(encodeURIComponent(getParamter('pics'))).replace(/\+/g, '').split('|'));
+	window.g_urlinfo = {
+		"nick":"",
+		"pics":getParamter("pics"),
+		selfProvidedPics : selfProvidedPics,
+		"result":{"code":0,"msg":"","now":0},
+		"site":util.decodeParam(getParamter('site')),
+		"summary":util.decodeParam(getParamter('summary')),
+		"title":util.decodeParam(getParamter('title')),
+		description:util.decodeParam(getParamter('desc')),
+		'url':util.decodeParam(getParamter('url')),
+		imgs:[],
+		"type":4,
+		"urlcount":0
+	};
+
+}
+/*加adtag参数，统计用*/
+g_sShortUrlAdtag = g_sShortUrl;
+/*if(g_sShortUrl.indexOf('#adtag=')==-1 && g_sShortUrl.indexOf('&adtag=')==-1){
+	g_sShortUrlAdtag = g_sShortUrl + (g_sShortUrl.indexOf('#')>-1 ? '&': '#') + 'adtag=' + (getParamter('adtag')||'share');
+}*/
+
+var getUrlinfoCGI  = function(seed){
+	seed || (seed = 0);
+	return ['<script type="text/javascript" src="//',(location.hostname.indexOf('pengyou') > -1?'ishare.pengyou.com':'sns.qzone.qq.com'),'/cgi-bin/qzshare/cgi_qzshareget_urlinfo?fupdate=1&random=',seed,'&url=',encodeURIComponent(g_sShortUrlAdtag),'&g_tk=',getACSRFToken('https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshareget_urlinfo'),'" charset="utf-8"><\/script>'].join('');
+}
+document.write([
+'<link rel="stylesheet" rev="stylesheet" href="//', g_siDomain, '/qzone_v6/share_transit.css" type="text/css" media="screen"/>',
+'<link rel="stylesheet" rev="stylesheet" href="//', g_siDomain, '/qzone/app/qzshare/shareqq/shareqq.css" type="text/css" media="screen"/>'
+
+].join(''));
+</script>
+</head>
+
+<body class="mod_qzone" id="normalPanel">
+				<script type="text/javascript">
+					(function(){
+						document.write((window.g_urlinfo?'':getUrlinfoCGI()));
+					})();
+				</script>
+				<script>
+								(function(){
+									if(!g_urlinfo){
+										g_retryCount++;
+										console.log('getUrlinfo')
+										document.write(getUrlinfoCGI(g_retryCount));
+								}
+								})();
+				</script>
+				<script>
+				(function(){
+					if(!g_urlinfo){
+						
+						g_retryCount++;
+						console.log('getUrlinfo')
+						document.write(getUrlinfoCGI(g_retryCount));
+					}
+				})();
+				</script>
+<div class="wrapper" id="main_container">
+		<div class="mod_layout header" id="banner">
+			<h1 class="layout_s"><a class="logo_qzone" href="https://qzone.qq.com" target="_blank">QQ空间</a></h1>
+			<div class="layout_m mod_links" id="login_btn_panel">
+			
+				<a href="javascript:;" target="_blank" id="changeAccounts">登录</a> |
+				<a href="https://imgcache.qq.com/qzone/web/load_login_1.htm" target="_blank">注册</a>
+			
+			</div>
+		</div>
+		
+		<div class="main" id="poster" style="display:none;">
+		
+			<div class="bd act_game" id="share_game_result"></div>
+            	
+		</div>
+		
+		
+		<div class="main" id="share_web_panel">
+			<div class="btn_shareqq_panel" id="btn_shareqq_panel" title="分享给QQ好友、群、讨论组" style="display:none;">
+				<span class="icon_shareqq"></span><a id="btn_shareqq" href="javascript:void(0);" >分享给QQ好友</a><span class="new_shareqq">新!</span>
+			</div>
+			<div class="bd">
+				<h3><strong id="shareToTitle">分享到QQ空间和朋友网</strong></h3>
+				<div id="shareMainPanel" class="mod_conts share_qzone">
+				
+				<script type="text/javascript">
+					(function(){
+						if(!window.g_urlinfo ||  !g_urlinfo.url.match(/^\s*(https?:\/\/)?([\w-]+\.)+[\w-]+(.*)?\s*$/ig)){
+							window.g_urlinfo = {
+								url : getParamter('url') || ''
+							}
+							if(!/^https?:\/\//.test(window.g_urlinfo.url)){
+								window.g_urlinfo.url = 'http://' + window.g_urlinfo.url
+							}
+						}
+						var MAX_DESC_LENGTH = 164;//单位是字节
+
+						
+
+
+						document.write(tmpl(document.getElementById('shareMainPanelTmpl').innerHTML,{
+							description : window.g_urlinfo.description || '',
+							title : cut(window.g_urlinfo.title,90,'..') || '',
+							summary : cut(window.g_urlinfo.summary,MAX_DESC_LENGTH,'...') || '',
+							url : window.g_urlinfo.url || '',
+							coverurl : g_urlinfo.coverurl || '',
+							//imgs : g_urlinfo.imgs || [],
+							imgsCount: (g_urlinfo.imgs||[]).length + (g_urlinfo.selfProvidedPics||[]).length,
+							urlcount : g_urlinfo.urlcount || 0,
+							type : g_urlinfo.type || 4//网页类型
+						}));
+					})();
+				</script>
+				</div>
+			</div>
+			<div class="mod_layout ft">
+				<div class="layout_s" id="sendOpenerPanel" style="display:none;">
+					<p><span class="icon_send">send</span><a id="sendOpener" href="javascript:void(0);">分享给指定好友</a></p>
+					<!--<p><span class="icon_share>要分享？</span><a href="#">分享给好友</a></p>-->
+				</div>
+				<div class="layout_m" id="buttonPanel">
+					<label for="web_weibo" class="mod_arrange" id="shareWeibo" ><input type="checkbox" name="web_weibo" id="web_weibo" />同时转播到我的<a href="//rc.qzone.qq.com/myhome/weibo" target="_blank">腾讯微博</a></label>
+				<a id="postButton" class="btn_a btn_s1_h28 btn_share" href="javascript:void(0);"><i class="img btn_s1_h28_l"></i><span class="btn_s1_h28_r">分享</span> </a>
+				</div>
+			</div>
+		</div>
+		<div class="footer" id="otherLinks">
+			<div class="mod_links">
+				<SCRIPT type="text/javascript">
+				(function(){
+					g_timePoints[2] = new Date();//内容渲染完成的时间
+					var year = new Date().getFullYear();
+					document.write([
+						'Copyright &copy; 1998-',year,' Tencent All Rights Reserved',
+						'<a href="javascript:void(0)" onclick="return false;" class="links">获取分享按钮</a>',
+						'<a href="http://support.qq.com/discuss/780_1.shtml', '" target="_blank">反馈建议</a>'
+					].join(''));				
+				}());
+				</SCRIPT>
+			</div>
+		</div>
+	
+	<div class="pop_wrap arr_up visual_none" id="login_panel">
+		<div  class="mod_verify" >
+			<!--这里插入iframe-->
+			<iframe id="loginFrame" height="320px;" allowTransparency="true" frameborder="0" width="422px;" scrolling="no" ></iframe>
+			<span class="close" id="loginCancel" title="关闭">×</span>
+		</div>
+		<span class="arrow"></span>
+		<!--[if lt IE 9]>
+		<span class="arrow_shadow"></span>
+		<![endif]-->
+	</div>
+	
+	
+	<div class="pop_wrap arr_down" id="verify_panel"  style="display:none;">
+		<div class="mod_verify">
+			<p>为了您数据的安全，请输入验证码：</p>
+			<p class="verify_code">
+				<input type="text" maxlength=4  name="verifyInput" onkeydown="if(event.keyCode==13) $('verifyConfirm').onclick();" id="verifyInput" class="inputstyle"/>
+				<a href="javascript:;" id="verifyConfirm" title="确定" class="mod_bt mod_bt_light"><span>确定</span></a>
+			</p>
+			<p class="txt_warn"><strong class="icon_hint"><span>提示</span></strong>请输入正确的验证码</p>
+			<p>
+				<img class="verify_img" id="verifyImg" alt="看不清请点击图片换一张"/>
+				<a href="javascript:;" onclick="changeVerifyCode();return false;">看不清，换一张</a>
+			</p>
+			<span class="close" id="verifyCancel" title="关闭">×</span>
+		</div>
+		<span class="arrow"></span>
+		<!--&lt;!&ndash;[if lt IE 9]>-->
+		<span class="arrow_shadow"></span>
+		<!--<![endif]&ndash;&gt;-->
+	</div>
+	
+	
+</div>
+
+<div id="msg_panel" style="width:100%;position:absolute;top:260px;left:0;text-align:center;z-index:105;">
+</div>
+
+
+</body>
+<script type="text/javascript">
+var gHideWeibo = getParamter("weibo");
+if(gHideWeibo === "0"){
+  document.getElementById("shareWeibo").style.display = "none";
+}
+</script>
+<script type="text/javascript" src="//qzonestyle.gtimg.cn/ac/qzfl/release/qzfl_for_qzone.js"></script>
+<script type="text/javascript" src="//qzonestyle.gtimg.cn/c/=/qzone/app/qzshare/script/qzshare.onekey.js,/qzone/app/qzshare/shareqq/shareqq.js"></script>
+<script type="text/javascript" src="//tajs.qq.com/stats?sId=17855777" charset="utf-8" ></script>'
+</html>

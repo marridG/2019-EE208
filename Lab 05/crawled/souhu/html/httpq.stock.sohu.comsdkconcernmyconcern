@@ -1,0 +1,493 @@
+
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>我的关注</title>
+  <!-- news sdk meta -->
+  <meta name="keywords" content="股票,财经,搜狐股票,搜狐财经,金罗盘,策略师,胜率榜,排行榜" />
+  <meta name="description" content="股票,财经,搜狐股票,搜狐财经,金罗盘,策略师,胜率榜,排行榜" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="renderer" content="webkit" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- QQ强制竖屏 -->
+  <meta name="x5-orientation" content="portrait" />
+  <meta name="x5-page-mode" content="app" />
+  <!-- UC 强制竖屏 -->
+  <meta name="screen-orientation" content="portrait" />
+   <script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/_common/js/jquery.min.js"></script>
+   <script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/_common/js/ejs.min.js"></script>
+   <script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/_common/js/common.js"></script>
+   <script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/_common/js/gbk.js"></script>
+  <!--[if lt IE 9]>
+    <script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/_common/js/es5-shim.min.js"></script>
+    <script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/_common/js/es5-sham.min.js"></script>
+    <script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/_common/js/respond.min.js"></script>
+    <script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/_common/js/json3.min.js"></script>
+    <script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/_common/js/ie8hack.js"></script>
+    <script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/_common/js/html5shiv.js"></script>
+    <link href="//47f72d130392f.cdn.sohucs.com/web/static/css/ie8hack-9dce3c3b96.css" rel="stylesheet" />
+    <style>  
+    .tips-ok-msg,.tips-error-msg{-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000,endColorstr=#CC000000)";}  
+    </style>  
+  <![endif]-->
+  <link rel="stylesheet" href="//statics.itc.cn/web/static/css/login_bar-1a8b877b43.css">
+
+ 
+ 
+
+<link href="//k.sohu.com/static/node-stock/v1-0-4/concern/css/concern.css" rel="stylesheet" />
+<script type="text/javascript" src="//js.sohu.com/mail/pv/pv_v203_ajax.js"></script>
+</head>
+
+<body id="bodyContent">
+
+<div id="wrapper">
+    <div id="tgHeader" class="common-header">
+		<header id="main-header" class="error-head"></header>
+    </div>
+    <div class="main-nav">
+		<div id="gpMainTop" class="main-top">
+            <div style="padding-top: 1px;">
+	<div class="title-top clearfix">
+		<div class="left">
+			<a href="/" class="logo"></a>
+			<a target="_blank" href="//s.m.sohu.com/t/index.html" class="mobile"></a>
+		</div>
+		<div class="searchbox">
+			<div id="search-content" class="navsea" >
+				<form class="searchForm autoTmp" method=get action=javascript:void(0); target="_blank"><input class="searchInput kw" value=代码/名称/简写 disableautocomplete="" autocomplete="off"> <input class="btn" value=行情查询 type=submit> 
+				</form>
+				<div style="display: none" id="suggestDiv" class="suggestDiv suggestLists"></div>
+			</div>
+		</div>
+		<div class="suggestionbox">
+			<a target="_blank" href="//q.stock.sohu.com/feedback.html" class="suggestion">
+			</a>
+		</div>
+	</div>
+	<div class="stock-nav">
+		<ul class="navlist">
+			
+			<li><a target="_blank" href="//q.stock.sohu.com/cn/mystock.shtml">我的自选</a></li>
+			<li><a target="_blank" href="//q.stock.sohu.com/cn/bk.shtml">热门板块</a></li>
+			<li><a target="_blank" href="//q.stock.sohu.com/cn/ph.shtml">涨跌排行</a></li>
+			<li><a target="_blank" href="//q.stock.sohu.com/cn/zs.shtml">大盘指数</a></li>
+			<li><a  target="_blank" href="//q.stock.sohu.com/fundflow/">资金流向</a></li>
+			<li class=" active "><a href="/sdk/rank">策略师</a></li>
+			<li><a target="_blank" href="//stock.sohu.com/ipo/">IPO新股</a></li>
+			<li><a target="_blank" href="//q.stock.sohu.com/app2/bigdeal2.jsp">大宗交易</a></li>
+			<li><a target="_blank" href="//q.stock.sohu.com/app2/rpsholder.up">内部交易</a></li>
+			<li><a target="_blank" href="//q.stock.sohu.com/app2/mpssTrade.up">融资融券</a></li>
+			<li><a target="_blank" href="//stock.sohu.com/s2011/jlp/">金罗盘</a></li>
+			<li><a target="_blank" href="//q.fund.sohu.com/jzph/zxjz_date_up.shtml">基金净值</a></li>
+			<li><a target="_blank" href="//q.stock.sohu.com/us/zgg.html">中概股</a></li>
+		</ul>
+		<div class="userInfo" id="userInfoIcon" style="display: none;">
+			<div class="menuList" id="userMenu">
+				<ul>
+					<li class="menu-li consultantOnly"><a href="javascript:void(0);" data-href='/sdk/performance'>我的主页</a></li>
+					<li class="menu-li consultantOnly"><a href="/sdk/transfer?page=callin">管理组合</a>
+						<ul class="l2-menu">
+							<li class="menu-li"><a href="/sdk/transfer?page=callin">调入</a></li>
+							<li class="menu-li"><a href="/sdk/transfer?page=callout">调出</a></li>
+							<li class="menu-li"><a href="/sdk/transfer?page=cancel">撤单</a></li>
+							<li class="menu-li"><a href="/sdk/transfer?page=record">调仓记录</a></li>
+						</ul>
+					</li>
+					 <!-- data-href="http://mp.sohu.com" -->
+					<li class="menu-li consultantOnly"><a href="//mp.sohu.com" target="_blank">发布观点</a></li>
+					<li class="menu-li"><a href="javascript:void(0);" data-href="/sdk/concern#myconcern">我的关注</a></li>
+					<li class="menu-li"><a href="javascript:void(0);" data-href="/sdk/concern#mycollection">我的收藏</a></li>
+					<li class="menu-li commonOnly"><a href="javascript:void(0);" data-href="/sdk/concern#application">申请策略师入住</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<script id="userMenuTpl" type="text/template">
+	<ul>
+		{{ if(userLogined && isConsultant){ }}
+		<li class="menu-li"><a href="/person">我的主页</a></li>
+		<li class="menu-li"><a href="javascript:void(0);">管理组合</a>
+<!-- 			<ul class="l2-menu">
+				<li><a href="javascript:void(0);">调入</a></li>
+				<li><a href="javascript:void(0);">调出</a></li>
+				<li><a href="javascript:void(0);">撤单</a></li>
+				<li><a href="javascript:void(0);">调仓记录</a></li>
+			</ul> -->
+		</li>
+		<li class="menu-li"><a href="javascript:void(0);">发布观点</a></li>
+		{{ } }}
+		<li class="menu-li"><a href="javascript:void(0);">我的关注</a></li>
+		<li class="menu-li"><a href="javascript:void(0);">我的收藏</a></li>
+		{{ if(!userLogined || !isConsultant){ }}
+		<!-- <li class="menu-li"><a href="javascript:void(0);">申请策略师入住</a></li> -->
+		{{ } }}
+	</ul>
+</script>
+        </div>
+    </div>
+    <div class="main-content">
+<!--         <div id="gpMainTop" class="main-top">
+
+</div> -->
+        <div class="content-left">
+			<ul style="border-bottom: 1px solid #888888;">
+				<li class="item item-nav" data-area='myconcernBox'>我的关注
+				</li>
+				<li class="item item-nav" data-area='mycollectionBox'>我的收藏
+				</li>
+				<li class="item item-nav" data-area='applicationBox'>申请策略师入驻
+				</li>
+			</ul>
+			<div class="areaBox">
+				<div class="item-content" id="myconcernBox">
+				</div>
+				<div class="item-content list-collect" id="mycollectionBox">
+                    <div id="mycollectionContent">
+                    </div>
+                    <div class="add-more-data more-data">点击加载下10篇</div>
+				</div>
+				<div class="item-content" id="applicationBox">
+				</div>
+			</div>
+		</div>
+    </div>
+</div>
+
+<script type="text/template" id="myconcernTpl">
+{{if (responseStr.length > 0){ }}
+    {{responseStr.forEach(function($value,i){ }}
+        <div class="list-item" email="{{= $value.invester}}">
+            {{if ($value.status != 3){ }}
+            <a href="/sdk/performance?email={{= $value.invester}}">
+            {{ } }}
+                <div class="list-left">
+                    <div class="user-img">
+                        {{if ($value.avatar && $value.avatar!='none'){ }}
+                            <img src="{{= $value.avatar}}" alt="">
+                        {{ }else{ }}
+                            <img src="//k.sohu.com/static/node-stock/v1-0-4/concern/images/userimg-null.png" alt="">
+                        {{ } }}
+                    </div>
+                    <div class="user-name">
+                        <p>{{= $value.realname}}</p>
+                    </div>
+                </div>
+                <div class="list-right">
+                    {{if ($value.status != 3){ }}
+                        订阅期收益:
+                        {{ if(parseFloat($value.radio)>0){ }}
+                        <span class="stock-red">{{= $value.radio}}</span>
+                        {{ }else if(parseFloat($value.radio)<0){ }}
+                        <span class="stock-green">{{= $value.radio}}</span>
+                        {{ }else{ }}
+                        <span>{{= $value.radio}}</span>
+                        {{ } }}
+                        <i>|</i>
+                        近60日回撤:<span">{{= $value.back}}</span>
+                        <p>最近调仓:{{= $value.changedate}}</p>
+                    {{ }else{ }}
+                        <p class="no-service">暂停服务</p>
+                    {{ } }}
+                </div>
+            {{if ($value.status != 3){ }}
+            </a>
+            {{ } }}
+        </div><!--list-item end-->
+    {{ }) }}
+{{ }else{ }}
+    <div class="no-data">暂无数据</div>
+{{ } }}
+</script>
+
+<script type="text/template" id="mycollectionTpl">
+{{if (data && data.length>0){ }}
+    {{data.forEach(function($value,i){ }}
+        <div class="list-item" articleid="{{= $value.newsId}}">
+            {{if ($value.userInfo){ }}
+                {{if ($value.userUrl){ }}
+                    {{if ($value.newsType == 69){ }}
+                        <a href="/sdk/performance?email={{= $value.userInfo.userid}}" target="_blank">
+                            <div class="user-img"><img src="{{= $value.userInfo.avatarurl}}" /></div>
+                            <div class="user-name">{{= $value.userInfo.uniqname}}</div>
+                        </a>
+                    {{ }else if ($value.newsType == 70){ }}
+                        <a href="//q.stock.sohu.com/cn/mystock.shtml" target="_blank">
+                            <div class="user-img"><img src="{{= $value.userInfo.avatarurl}}" /></div>
+                            <div class="user-name">{{= $value.userInfo.uniqname}}</div>
+                        </a>
+                    {{ }else if ($value.newsType == 71){ }}
+                        <a href="//mp.sohu.com/profile?xpt={{= window.commonFunc.strToBase64('shan527002@126.com') }}" target="_blank">
+                            <div class="user-img"><img src="{{= $value.userInfo.avatarurl}}" /></div>
+                            <div class="user-name">{{= $value.userInfo.uniqname}}</div>
+                        </a>
+                    {{ }else if ($value.newsType == 72){ }}
+                        <a href="//mp.sohu.com/profile?xpt={{= window.commonFunc.strToBase64('ppag33538da3bbef@sohu.com')}}" target="_blank">
+                            <div class="user-img"><img src="{{= $value.userInfo.avatarurl}}" /></div>
+                            <div class="user-name">{{= $value.userInfo.uniqname}}</div>
+                        </a>
+                    {{ }else if ($value.newsType == 73){ }}
+                        <a href="//mp.sohu.com/profile?xpt={{= window.commonFunc.strToBase64('pengjuguo@sohu.com')}}" target="_blank">
+                            <div class="user-img"><img src="{{= $value.userInfo.avatarurl}}" /></div>
+                            <div class="user-name">{{= $value.userInfo.uniqname}}</div>
+                        </a>
+                    {{ }else{ }}
+                        <a href="/sdk/performance?email={{= $value.userInfo.userid}}" target="_blank">
+                            <div class="user-img"><img src="{{= $value.userInfo.avatarurl}}" /></div>
+                            <div class="user-name">{{= $value.userInfo.uniqname}}</div>
+                        </a>
+                    {{ } }}
+                {{ }else{ }}
+                    <div class="user-img"><img src="{{= $value.userInfo.avatarurl}}" /></div>
+                    <div class="user-name">{{= $value.userInfo.uniqname}}</div>
+                {{ } }}
+            {{ } }}
+            <a href="{{= window.commonFunc.createLink($value.link,$value.newsId)}}" target="_blank">
+                <div class="list-con">
+                    {{if ($value.showFigure && $value.pics && $value.pics[0]){ }}
+                    <img src="{{= $value.pics[0]}}" />
+                    {{ } }}
+                    {{= $value.title}}
+                </div>
+                <div class="list-bot">
+                	{{ var time = new Date($value.time).Format('MM-dd hh:mm') }}
+                    <span class="time">{{= time}}</span>
+                    {{ if($value.commentNum > 0){ }}
+                        <span class="com-num">{{= $value.commentNum}}</span>
+                    {{ } }}
+                    <span class="sc-num collect-ok">{{= $value.likeNumber}}</span>
+                </div>
+            </a>
+        </div>
+    {{ }) }}
+
+{{ } }}
+</script>
+
+<script type="text/template" id='applicacionTpl'>
+{{if(step == 1){ }}
+    <div class="tab-reg step01">
+        <ul>
+            <li class="current"><span>填写资料</span></li>
+            <li><span>上传身份照片</span></li>
+            <li><span>等待审核</span></li>
+        </ul>
+        <span class="arrow-a">&gt;</span>
+        <span class="arrow-b">&gt;</span>
+    </div>
+    <div class="form-reg">
+        <section class="form-item">
+            <div id="realnameTitle" class="note">真实姓名</div>
+            <input id="realname" type="text" value="{{= realname != '' ?realname: ''}}" placeholder="最多4个字" />
+        </section>
+        <section class="form-item">
+            <div id="identifyNoTitle" class="note">身份证</div>
+            <input id="identifyNo" type="text" value="{{= identifyNo != '' ?identifyNo: ''}}" />
+        </section>
+        <section class="form-item">
+            <div id="tgTitle" class="note">投顾证书号</div>
+            <input id="tg" type="text" value="{{= certificateno != '' ?certificateno: ''}}" />
+        </section>
+        <section class="form-item">
+            <div id="companyTitle" class="note">所在公司</div>
+            <input id="company" type="text" value="{{= company != '' ?company: ''}}" placeholder="7字以内简称" />
+        </section>
+        <section class="form-item">
+            <div id="telnoTitle" class="note">手机号码</div>
+            <input id="telno" type="tel" value="{{= telno != '' ?telno: ''}}" />
+        </section>
+        <section class="form-item">
+            <div id="verificationTitle" class="note">验证码</div>
+            <input id="verification" type="tel" value="" />
+            <div id="getVerification" class="get-code input-gray">
+                <span class="txt">点击获取</span><span class="seconds"></span>
+            </div>
+        </section>
+        <section class="btn-box">
+            <input id="nextBtn" type="button" class="btn-red" value="下一步" />
+        </section>
+
+    </div>
+{{ }else if(step == 2){ }}
+    <div class="tab-reg step02">
+        <ul>
+            <li><span>填写资料</span></li>
+            <li class="current"><span>上传身份照片</span></li>
+            <li><span>等待审核</span></li>
+        </ul>
+        <span class="arrow-a">&gt;</span>
+        <span class="arrow-b">&gt;</span>
+    </div>
+    <section class="upfile-item">
+        <div class="item-name">认证方式</div>
+        <div class="item-con">身份证</div>
+    </section>
+    <section class="upfile-item upfile-box">
+        <div class="item-name">上传认证照片</div>
+        <div class="item-con">
+            <div id="uploadImg" class="file file-bgimg" style="position: relative;">
+                <input id="uploadInput" type="file" accept="image/*" name="logo"
+                           style="opacity:0;top:0;left:0;width:100%;height:100%;cursor:pointer;position: absolute;" />
+                
+            </div>
+
+            <div class="up-tips">照片须本人手持身份证进行拍摄，保证本人头像清晰可辨认，保证身份证信息清晰可见。支持.jpg . jpeg . png格式照片，大小不超过5M。</div>
+        </div>
+    </section>
+    <section class="reg-agreement">
+        <label><input id="agree" type="checkbox" />我已阅读 <a id="showPlatformInfo" href="javascript: void(0);">《搜狐投资服务平台策略师入驻协议》</a></label>
+    </section>
+    <section class="btn-box">
+        <input id="submitBtn" type="button" class="btn-red btn-2" value="提交" />
+    </section>
+    <div id="loading" style="display: none;"></div>
+    <div id="modalImgbox" class="upimgbox" style="display: none;">
+        <div class="imgbox"></div>
+        <div class="btb-up">
+            <a id="modalNo" href="javascript: void(0);" class="btn-no">取消</a>
+            <a id="modalOk" href="javascript: void(0);" class="btn-ok">确定</a>
+        </div>
+        <div id="modalWait" class="upimg-msg" style="display: none;">请稍候...</div>
+    </div>
+    <div id="platformInfo" class="pop-content" style="display:none">
+        <a id="pInfoClose" class="close" href="javascript: void(0);"></a>
+        <div class="hd">“搜狐股票策略师”投顾平台使用协议</div>
+        <div class="bd">
+            <p>搜狐股票策略师平台入驻协议是北京搜狐互联网信息服务有限公司和北京搜狐新媒体信息技术有限公司(以下简称“搜狐”)与策略师(以下简称“您”)就您使用搜狐股票策略师平台（以下简称“本平台”）事宜所订立的有效合约。您通过网络页面点击提交确认并通过搜狐审核，即表示您与搜狐已达成协议并同意接受本协议的全部约定内容以及与本协议有关的已经发布或将来可能发布的各项规则、页面提示、操作流程、公告和通知（以下统称“本协议”）, 效力视同为甲、乙双方签字及盖章。</p> 
+            <p>在接受本协议之前，请您仔细阅读本协议的全部内容 （特别是以粗体字标注的内容）。如果您不同意本协议的任意内容，或者无法准确理解搜狐对条款的解释，请不要进行后续操作。如果您继续使用搜狐服务，则视为您已经接受本协议全部内容，包括搜狐对本协议所做的任何修改。</p>
+            <p>一、定义</p>
+            <p>1、搜狐股票策略师平台：本平台系搜狐依托搜狐新闻客户端搭建的普及证券市场基本知识、帮助用户树立正确投资理念的信息资讯平台。搜狐仅为本平台提供软硬件及技术支持，并不参与本平台上任何具体股票、投资、理财内容的提供。</p>
+            <p>2、搜狐服务协议和搜狐公众平台服务协议：本协议是搜狐服务协议和搜狐公众平台服务协议不可分割的组成部分，您接受本协议视为您同意搜狐服务协议https://passport.sohu.com/signup/show_agreement和《搜狐公众平台服务协议》http://mp.sohu.com/web/agreement。本协议未尽事宜按照《搜狐服务协议》和《搜狐公众平台服务协议》相关条款执行。本条款与该使用协议之间约定相冲突的，以本协议内容为准。</p>
+            <p>二、  您的权利与义务</p>
+            <p>1、您向本平台提供的个人信息（包括但不限于真实姓名、身份证号、证券投资咨询执业资格证书、所在证券公司名称、手机号码等）均须真实准确，不得以虚假居民身份或虚假公司等不实信息进行申请策略师资格；若您提交的个人信息有任何变动，您应及时更新。因个人信息不真实、不准确或不完整而引起的任何问题及其后果，由您本人自行承担。</p>
+            <p>2、您应保证：您加入本平台已获您所属公司的同意，您所属公司承诺为您在平台上发布的内容的真实性、合法性负责。</p>
+            <p>3、您应按照平台公布和提示的规则、流程进行注册操作。注册完成后，应妥善保管、正确和安全的使用账号和密码，您同意在任何情况下不向他人透露账号和密码信息，因您保管不善导致账号密码被盗的，责任由您自行承担。如账号和密码遭到第三方使用或发生其他任何问题，您有义务及时通知搜狐。</p>
+            <p>4、您有权根据本平台提供的实时数据在本平台进行投资组合模拟操作、与用户围绕股票、投资的话题进行互动交流、在本平台免费发布评论性文章。</p>
+            <p>5、您应与用户保持良好交流互动，及时做好用户咨询回答，异议和投诉处理等，涉及双方利益的重要事项需经本平台审核后方可进行。</p>
+            <p>6. 您理解并同意，为保证本平台的正常运营及您和用户的良好体验，您不得利用本平台制作、上传、发布、传播任何法律、法规和政策禁止的信息，或含有其他干扰搜狐正常运营和侵犯第三方合法权益的内容；您保证对在搜狐公众平台上传、发布的所有内容享有合法权益，不侵犯任何第三方的权利，必要时，搜狐有权要求您提供相应的权属证明。</p>
+            <p>7、您使用本平台从事任何活动、发布任何言论均应：</p>
+            <p>7.1 符合国家现行法律、行政法规及政府规章、行业秩序、公序良俗、社会道德风尚的要求；</p>
+            <p>7.2 发布的言论（包括发布的观点、回答用户的咨询）应符合监管部门的要求，仅供用户参考。应做到有理有据，本着对用户负责的态度，给出专业、中肯的咨询建议，应当主动、明确地对用户进行客观的风险揭示，对潜在的投资风险提示到位，不得作出绝对的、确定性的判断，努力向用户倡导正确的投资理念；</p>
+            <p>7.3 发布的任何言论-应当完整、客观、准确地运用有关信息、资料向用户提供投资分析、预测和建议，不得断章取义地引用或者篡改有关信息、资料；引用有关信息、资料时，应当注明出处和著作权人； </p>
+            <p>7.4 不得在本平台发布对自身服务能力和过往业绩进行虚假、不实、误导性的营销宣传，不得发布以任何方式承诺或者保证投资收益的言论；不得诱导诱导带盘操作，明示或暗示"带你赚钱"、"跟我操作"等；不得通过本平台发表煽动性言论操纵市场或者进行内幕交易、利益输送；</p>
+            <p>7.5 不得制造虚假数据：包括但不限于日志阅读数、点赞数、评论、直播室人气等；</p>
+            <p>7.6  不得或鼓动他人贬低或诋毁本平台、不得明示或暗示的方式贬损其他策略师、不得辱骂用户，通过各种方式骚扰用户，不得泄露用户信息；</p>
+            <p>7.7不得以“搜狐股票策略师”平台名义开展各种活动；未经本平台同意，不得向他人或在公共平台上公开泄露您和本平台之间合作信息及其他商业信息；</p>
+            <p>7.8不得向用户收取费用、或诱导用户到平台外的渠道收取咨询服务费；</p>
+            <p>7.9  不得主动询问，或以任何方式获取用户私人联系方式，用户联系方式包括但不限于电话号码、电子邮箱、地址、MSN帐号、QQ帐号等；主动或被动情况下，以任何方式将您私人联系方式告知给用户，包含但不限于手机号码、座机号码、电子邮箱、地址、MSN帐号、QQ帐号等；</p>
+            <p>7.10  不得有其他中国证监会、中国证券业协会及本平台禁止的行为。</p>
+            <p>8、通过本平台发布的任何信息和任何观点，均系您的个人行为，不代表本平台之立场，本平台亦不对其完整性、真实性、准确性或可靠性进行担保或负责。</p>
+            <p>9、您的言论应对用户造成损失的，您应自行与用户协商或通过司法途径解决处理，与平台无任何关联；由此给本平台造成损失的，应向本平台承担损害赔偿责任。</p>
+            <p>三、  搜狐的权利和义务</p>
+            <p>1、搜狐将对您所提供的个人信息资料进行严格的管理及保护，本平台将使用相应的技术，防止您的个人信息丢失、被盗用或遭篡改。</p>
+            <p>2、本平台不负责审核您提供的个人信息的真实性、准确性或完整性，因信息不真实、不准确或不完整而引起的任何问题及其后果，由您自行承担，且您应保证搜狐免受由此而产生的任何损害或责任。</p>
+            <p>3、您知悉并同意，为维护本平台的良好秩序，更好的为您提供服务，本平台有权根据自身运营需要决定或变更平台提供服务的方式或模式，亦可以对您使用本平台的行为、发表的言论进行监督、审查及管理，但对上述文件的审核或审查不表示搜狐对您的行为和言论承担任何的担保或连带责任。</p>
+            <p>4、本平台根据您在本平台进行的投资组合模拟操作，由机器自动生成收益榜，胜率榜和新人榜，搜狐不进行任何干预，前述榜单及排名不代表搜狐观点，不代表搜狐对您个人能力和业绩的评价，您无权就前述榜单要求搜狐对您承担任何责任。</p>
+            <p>5、如您违反本协议，本平台有权随时采取不予认证、通知限期改正、取消认证、删除您在本平台发布的言论、中止或终止向您提供本服务等措施。以上措施的选择、适用不以事前通知您为前提，若您对上述处理方式存在异议，可通过本平台意见反馈入口向本平台提出。</p>
+            四、违约责任及免责声明</p>
+            <p>1、如您丧失证照、资质、发布的内容不符合法律法规的规定或者违反本协议约定等，搜狐有权根据一般人的认识自行独立判断选择立即删除您发布的言论，冻结您的账号，终止本协议，并且无需承担任何违约责任，但应及时通知您。</p>
+            <p>2、如您违反本协议导致搜狐遭受任何行政、司法处置、第三方追索等，您应赔偿搜狐遭受的全部损失，包括但不限于被判赔的赔偿金、和解金或罚金以及律师费、公证费等相关支出等。</p>
+            <p>3、本平台明确表示不提供任何类型的担保，无论是明确的或隐含的。包括并不限于：</p>
+            <p>（1）不担保服务一定能满足您的要求；</p>
+            <p>（2）不担保服务的及时性、安全性；</p>
+            <p>（3）不担信息能完整、准确、及时、顺利地传送；</p>
+            <p>4、因下列情形导致您损失的，搜狐不承担责任： </p>
+            <p>（1）法律、政策重大变化，或搜狐不可预测或控制的因素导致您损失的。 </p>
+            <p>（2）因您对设备的错误操作和对有关信息的错误理解导致您损失的。 </p>
+            <p>（3）因您的故意或疏忽导致您损失的。  </p>
+            <p>（4）非因搜狐原因造成的您的损失。 </p>
+            <p>（5）法律规定和本协议约定的其他搜狐免责事项。</p>
+            <p>五、协议终止</p>
+            您或搜狐可随时根据实际情况中断服务。搜狐不需对任何个人或第三方负责而随时中断服务。您若反对任何服务条款的建议或对后来的条款修改有异议，或对搜狐服务不满，您有权不再使用搜狐服务。结束您服务后，您使用搜狐服务的权利立即终止，搜狐亦不再对您承担任何义务。</p>
+            <p>六、知识产权</p>
+            <p>1. 搜狐在本服务中提供的内容（包括但不限于网页、文字、图片、音频、视频、图表等）的知识产权归搜狐所有，搜狐提供本服务时所依托软件的著作权、专利权及其他知识产权均归搜狐所有，搜狐在本服务中所使用的“搜狐”等商业标识的著作权或商标权归搜狐所有。</p>
+            <p>2. 您通过本平台上传、发布的任何内容的知识产权仍然属于您或原始版权人所有。</p>
+            <p>3. 对于您通过本平台上传、编辑或发布的任何内容，搜狐在全世界范围内不限形式和载体地享有永久的、不可撤销的、免费的、非独家的使用权和转授权的权利，包括但不限于修改、复制、发行、展览、改编、汇编、出版、翻译、信息网络传播、广播、表演和再创作及著作权法等法律法规确定的其他权利，您特别授权搜狐以自己名义单独对第三方的侵权行为提起诉讼并获得全额赔偿。搜狐无须为此向您给予任何报酬或承担任何义务，也无须另行通知。</p>
+            <p>4. 上述及其他任何本服务包含的内容的知识产权均受到法律保护，其他未经搜狐、您或相关权利人许可的第三人，不得以任何形式进行使用或创造相关衍生作品。</p>
+            <p>七、通知</p>
+            <p>关于本协议条款和其他协议、告示或其他有关您使用本平台的通知，均于本平台发布，自发布之日起生效。</p>
+            <p>八、法律适用及争议解决 </p>
+            <p>本协议的成立、生效、履行和解释，均适用中华人民共和国法律；法律无明文规定的，应适用搜狐制定的业务规则和通行商务惯例。 </p>
+            <p>本协议履行过程中发生争议的，可由当事人协商解决。如果当事人不愿协商解决或协商不成的，任何一方均可向搜狐所在地有管辖权的人民法院提起诉讼。</p>
+            <p>如本协议中的任何条款完全或部分无效，本协议的其余条款仍有效并且有约束力。</p>
+        </div>
+    </div>
+    <div id="platformBg" class="pop-bg-black" style="display: none;"></div>
+{{ }else if(step == 3){ }}
+    <div class="tab-reg step02">
+        <ul>
+            <li><span>填写资料</span></li>
+            <li><span>上传身份照片</span></li>
+            <li class="current"><span>等待审核</span></li>
+        </ul>
+        <span class="arrow-a">&gt;</span>
+        <span class="arrow-b">&gt;</span>
+    </div>
+    <ul class="reg-ok-text">
+        <li>您的资料已提交，感谢您的支持！</li>
+        <li>我们将会在5个工作日内给出审核意见，</li>
+    </ul>
+    <section class="btn-box">
+        <input id="completeBtn" type="button" class="btn-red btn-2" value="完成" />
+    </section>
+{{ } }}
+</script>
+
+<script id="tipsTpl" type="text/template">
+	{{ if(tips.tipsType == 'tips' ){ }}
+		{{ if(tips.msgType == 'ok' ){ }}
+		<div class="tipsBox tips-ok-msg concern-ok">
+			<div class="msg-ico-ok"></div>
+			<p>{{= tips.msg }}</p>
+		</div>
+		{{ }else if(tips.msgType == 'error' ){ }}
+		<div class="tipsBox tips-error-msg concern-error">
+			<div class="msg-ico-error"></div>
+			<p>{{= tips.msg }}</p>
+		</div>
+		{{ }else if(tips.msgType == 'text' ){ }}
+		<div class="tipsBox tips-text-msg">
+			<p>{{= tips.msg }}</p>
+		</div>
+		{{ } }}
+	{{ }else if(tips.tipsType == 'confirm' ){ }}
+		<div class="tipsBox tips-confirm-msg">
+			<div class=""></div>
+			<p>{{= tips.msg }}</p>
+		</div>
+	{{ } }}
+</script>
+<script id="confirmTpl" type="text/template">
+<div class="pop-tips">
+	{{if(tipMsg && tipMsg.length>0){ }}
+		{{ tipMsg.forEach(function(val,i){  }}
+			<div class="tips-text">{{= val}}</div>
+		{{ }); }}	    
+	{{ } }}
+	
+	{{if(tipOk){ }}
+	    <a id="tipOk" href="javascript: void(0);" class="{{= tipCancel?'btn-ok':'btn-enter'}}" action="{{= action? action : ''}}">确定</a>
+	{{ } }}
+	{{if(tipCancel){ }}
+	    <a id="tipCancel" href="javascript: void(0);" class="btn-no">取消</a>
+	{{ } }}
+</div>
+</script>
+<div style="height:50px;">
+</div>
+<div style="display: none;" id="staticPath" data-path="//k.sohu.com/static/node-stock/v1-0-4"></div>
+<div class="tipsMask" id="tipsMaskBox">
+</div>
+<script src="//statics.itc.cn/web/static/js/lib-111eab4f1d.js"></script>
+<script src="//statics.itc.cn/web/static/js/login_bar-f5d124e80f.js"></script>
+<script>
+LoginBar();
+</script>
+<script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/concern/js/cropper.js"></script>
+<script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/concern/js/index.js"></script>
+</body>
+</html>

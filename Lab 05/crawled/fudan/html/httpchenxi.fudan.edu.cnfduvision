@@ -1,0 +1,511 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fudan Vision</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
+    <meta name="description" content="mcob application">
+    <meta name="author" content="Fred Hu">
+
+
+     <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/typography.css" rel="stylesheet">
+    <link href="assets/css/extension.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/prettyPhoto.css">
+    <link rel="stylesheet" href="stylesheets/isotope.css">
+    <link rel="stylesheet" href="stylesheets/graph.css">	
+    
+    <!-- BANNER CSS SETTINGS -->
+    
+
+	<!-- Edit the following style.css file to change the theme look and feel -->
+	<link rel="stylesheet" href="stylesheets/themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="stylesheets/nivo-slider.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/home1.css">
+    
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/my_favicon2.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<link rel="stylesheet" href="stylesheets/ie8.css">
+	<![endif]-->
+	<style type="text/css">
+	#imageDiv {height:140%; width:140%; position:fixed;
+		margin-left:-100px;
+		margin-top:-200px;
+		margin-right:-100px;
+		background:black;filter:alpha(opacity=80);-moz-opacity:0.8; opacity:0.8;
+		z-index:10000;
+		display:none;
+	}
+	#targetImage{
+		position:fixed;
+		top:0px;
+		right:20px;
+	}
+</style>
+</head>
+<body>
+	<div id="imageDiv">
+		<img id="targetImage" src="images/liulanqi.png"/>
+	</div>
+	<div>
+
+	<!-- Primary Page Layout
+	===============================
+	
+	
+	=================== -->
+	
+	<header class="top_header">
+    	<div class="container-fluid">
+        	<div class="row-fluid">
+            	<div class="container">
+                	<div class="row">
+                    	<div class="logo_holder">
+                            <a id="logo" href="index.html"><img alt="Skroll by designova" title="Skroll" src="images/logo.png"/></a>
+                        </div>
+                        <nav class="links desktop-nav visible-desktop visible-tablet">
+                            <a class="def-link" title="home" href="#intro"></a>
+                            <a title="about" href="#about">复旦印象</a>
+                            <a title="foot" href="#foot">关于我们</a>
+                        </nav>
+                        
+                        <nav class="mobile-nav visible-phone">
+                        	<!-- Start Dropmenu for mobile -->  
+                            <select class="dropmenu" name="dropmenu" onChange="moveTo(this.value)">
+                              <option value="" selected="#about">复旦印象</option>
+                              <option value="" selected="#about">关于我们</option>
+                            </select>
+                            <!-- End Dropmenu for mobile -->
+                        </nav>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="clear"></div>
+    
+    <section class="intro page" id="intro">
+    	<div class="container-fluid">
+        	<div class="row-fluid">
+            	<div class="container">
+                	<div class="row">
+                    	
+                        <div class="span4 welcome_txt text_align_center">
+                        	<div class="page_title">复旦印象</div>
+                            <div class="clear"></div>
+                           <p>采用图像识别技术，增强现实技术，移动互联网技术，献给复旦大学110周年礼物</p>
+                            <br/>
+                            <a id="jumper" style="margin-left:40px; width:200px; height:40px;font-size:20px;line-height:40px;cursor:pointer;" class="small_btn visible-desktop visible-tablet">点击查看电子版相册
+							</a>
+
+							<div class="clear"></div>
+							<div class="sub_heading visible-phone stand_center">立即下载</div>
+							<div class="clear"></div>
+							<span id="click1" class="small_btn2 margin-top20 visible-phone">Android 版</span>
+							<div class="clear"></div>
+							<span id="click2" class="small_btn2 margin-top40 visible-phone">IOS 版</span>
+                        </div>
+                        <div class="span8 welcome_promo">
+                        	<div class="big_circle visible-desktop visible-tablet">
+                            	 <div class="sub_heading">下载</div>
+                                 <p>
+                                     <br/><br/>
+                                     <a href="FDUVision20170517.apk" class="small_btn my_btn">Android</a>
+                                     <a href="https://itunes.apple.com/cn/app/id991913611?mt=8#" class="small_btn my_btn" >IOS</a>
+                                 </p>
+                            </div>
+                            
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="clear"></div>
+    
+	<section class="about page" id="about">
+    	<div class="container-fluid">
+        	<div class="row-fluid">
+            	<div class="container">
+                	<div class="row">
+                    	<div class="page_title">开发人员</div>
+                        <div class="promo_txt"></div>
+                    </div>
+                    <div class="row process">
+                    	<div class="span3">
+                        	<div class="icon">
+                            	<img src="images/avatar/chenyifan.png" title="Skroll HTML5 Premium Responsive Theme by Designova" alt="Designova HTML5 Responsive Theme Development" />
+                            </div>
+                            <div class="clear"></div>
+                            <div class="sub_heading">陈一凡</div>
+                            <div class="clear"></div>
+                            <p>11级软件工程本科生</p>
+                        </div>
+                        <div class="span3">
+                        	<div class="icon">
+                            	<img src="images/avatar/mahuixin.png" title="Skroll HTML5 Premium Responsive Theme by Designova" alt="Designova HTML5 Responsive Theme Development" />
+                            </div>
+                            <div class="clear"></div>
+                            <div class="sub_heading">马会心</div>
+                            <div class="clear"></div>
+                            <p>11级信息安全本科生</p>
+                        </div>
+                        <div class="span3">
+                        	<div class="icon">
+                            	<img src="images/avatar/zhangxiao.png" title="Skroll HTML5 Premium Responsive Theme by Designova" alt="Designova HTML5 Responsive Theme Development" />
+                            </div>
+                            <div class="clear"></div>
+                            <div class="sub_heading">张潇</div>
+                            <div class="clear"></div>
+                            <p>14级药学院研究生</p>
+                        </div>
+                        <div class="span3">
+                        	<div class="icon">
+                            	<img src="images/avatar/zhangxinyu.png" title="Skroll HTML5 Premium Responsive Theme by Designova" alt="Designova HTML5 Responsive Theme Development" />
+                            </div>
+                            <div class="clear"></div>
+                            <div class="sub_heading">张新宇</div>
+                            <div class="clear"></div>
+                            <p>13级计算机科学技术本科生</p>
+                        </div>
+                    </div>
+
+					 <div class="row process">
+                    	<div class="span3">
+                        	<div class="icon">
+                            	<img src="images/avatar/huxiaoyan.png" title="Skroll HTML5 Premium Responsive Theme by Designova" alt="Designova HTML5 Responsive Theme Development" />
+                            </div>
+                            <div class="clear"></div>
+                            <div class="sub_heading">胡笑颜</div>
+                            <div class="clear"></div>
+                            <p>14级软件工程研究生</p>
+                        </div>
+                        <div class="span3">
+                        	<div class="icon">
+                            	<img src="images/avatar/wudong.png" title="Skroll HTML5 Premium Responsive Theme by Designova" alt="Designova HTML5 Responsive Theme Development" />
+                            </div>
+                            <div class="clear"></div>
+                            <div class="sub_heading">吴东</div>
+                            <div class="clear"></div>
+                            <p>14级软件工程研究生</p>
+                        </div>
+                        <div class="span3">
+                        	<div class="icon">
+                            	<img src="images/avatar/zhubingjing.png" title="Skroll HTML5 Premium Responsive Theme by Designova" alt="Designova HTML5 Responsive Theme Development" />
+                            </div>
+                            <div class="clear"></div>
+                            <div class="sub_heading">朱冰晶</div>
+                            <div class="clear"></div>
+                            <p>13级软件学院本科生</p>
+                        </div>
+                        <div class="span3">
+                        	<div class="icon">
+                            	<img src="images/avatar/qinhaifeng.png" title="Skroll HTML5 Premium Responsive Theme by Designova" alt="Designova HTML5 Responsive Theme Development" />
+                            </div>
+                            <div class="clear"></div>
+                            <div class="sub_heading">秦海峰</div>
+                            <div class="clear"></div>
+                            <p>13级软件学院本科生</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    
+	
+  	
+	
+    <div class="clear"></div>
+    
+    <footer>
+    	<div class="container-fluid" id="foot">
+        	<div class="row-fluid">
+            	<div class="container">
+                	<div class="row">
+                    	<div class="span8 offset2">
+                        	<img src="images/logo_small.png" title="Skroll HTML5 Premium Responsive Theme by Designova" alt="Designova HTML5 Responsive Theme Development" />
+                            <div class="clear"></div>
+                            <div class="connect">
+							    <span>.</span>
+                            	<a href="http://danshi.fudan.edu.cn/contentus.html">http://danshi.fudan.edu.cn</a>
+								</br>
+                                <span>.</span>
+                                <a href="#">微信公共账号：复旦大学晨曦网络工作室</a>
+								</br>
+                                <span>.</span>
+                                <a href="#">邮箱：fdu_chenxi@163.com</a>
+                            </div>
+                            <div class="clear"></div>
+                            <p>Copyright © 2015 MCOB. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+	<!-- JS
+	================================================== -->
+	<script src="javascripts/jquery-1.7.2.min.js"></script>
+	<script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
+  	<script src="javascripts/jquery.localscroll-1.2.7-min.js"></script>
+  	<script src="javascripts/jquery.scrollTo-1.4.2-min.js"></script>
+    <script src="javascripts/jquery.prettyPhoto.js"></script> 
+	  <script src="javascripts/jquery.easing.1.3.js"></script>
+    <script src="javascripts/jquery.isotope.min.js"></script>
+    <script src="javascripts/fake-element.js"></script>
+    <script src="javascripts/form-validation.js"></script>
+    <script src="javascripts/waypoints.min.js"></script>
+  	<script src="javascripts/scroll.js"></script>
+
+    
+    
+    <script type="text/javascript" src="javascripts/jquery.ba-cond.min.js"></script>
+	<script type="text/javascript" src="javascripts/jquery.slitslider.js"></script>
+    
+    <script type="text/javascript">
+
+	function is_weixin(){
+			var ua = navigator.userAgent.toLowerCase();
+			if(ua.match(/MicroMessenger/i)=="micromessenger") {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+    $(window).load(function() {
+		
+		var win_height = window.innerHeight;
+		$('.page').css('min-height',win_height-166+'px');
+        
+		$('.big_circle').mouseenter(function(){
+			$(this).children('p').delay(250).fadeIn(500);
+		});
+		
+		$('.big_circle').mouseleave(function(){
+			$(this).children('p').fadeOut(300);
+		});
+		
+		var no_of_testimonials = $('.testimonial_collection .testimonial').length;
+		
+		for(i=1;i<=no_of_testimonials;i++)
+		{	
+			
+			if(i==1)
+			$('.testimonial_nav').append('<a href="#" class="active_nav" data-index="'+i+'"></a>');
+			else
+			$('.testimonial_nav').append('<a href="#" data-index="'+i+'"></a>');
+		}
+		
+		$('.testimonial_nav a').click(function(){
+			$('.testimonial').hide();
+			$('.testimonial_nav a').removeClass('active_nav');
+			$(this).addClass('active_nav');
+			var target_index = $(this).attr('data-index');
+			$('.testimonial_collection .testimonial:nth-child('+target_index+')').fadeIn(1000);
+			return false;
+		});
+		
+		$('.nav-tabs a').click(function (e) {
+		  e.preventDefault();
+		  $(this).tab('show');
+		})
+
+		
+		$('#jumper').click(function (e) {
+			window.location.href="./image.html";
+			
+		})
+
+		$('#imageDiv').click(function (e) {
+			$('#imageDiv').css("display","none");
+		})
+
+		$('#click1').click(function (e) {
+			if(is_weixin()==true){
+				$('#imageDiv').css("display","block");
+			}else{
+				window.location.href="FDUVision20170517.apk";
+			}
+		})
+		
+
+		$('#click2').click(function (e) {
+			if(is_weixin()==true){
+				$('#imageDiv').css("display","block");
+			}else{
+				window.location.href="https://itunes.apple.com/cn/app/id991913611?mt=8#";
+			}
+		})
+		
+		$('#f-none').trigger('click');
+		
+		$('.welcome_txt a').click(function(){
+			$('.links a:nth-child(2)').trigger('click');
+			return false;
+		});
+		
+		$('.quick_connect a').click(function(){
+			$('.links a:last-child').trigger('click');
+			return false;
+		});
+		
+    });
+    </script>
+
+    
+
+  	<!-- Mobile Navigation Scroll Setup -->
+	<script type="text/javascript">
+    	function moveTo(contentArea){
+        	var goPosition = $(contentArea).offset().top;
+        	$('html,body').animate({ scrollTop: goPosition}, 'slow');
+        }
+    </script>
+
+
+	<!-- Sticky nav -->
+	<script>
+
+  
+	$(window).load(function(){
+
+      //NAVIGATION MENU COLOR CHANGE ON CLILCK
+      $('.desktop-nav a').click(function(){
+        var colIndex = $(this).attr('title');
+        $('.desktop-nav a').removeClass('def-link');
+        $(this).addClass('def-link');
+        $(this).addClass(colIndex+'-link');
+      })
+
+  			
+			//PORTFOLIO IMAGE HOVER
+			$('.element').mouseenter(function(){
+				$(this).find('img').stop().animate({opacity:'0'},'slow')
+				$(this).find('.gallery-caps').stop().animate({opacity:'1'},'slow')
+			})
+
+			$('.element').mouseleave(function(){
+				$('.element').find('.gallery-caps').stop().animate({opacity:'0'},'slow')
+				$('.element').find('img').stop().animate({opacity:'1'},'slow')
+			})
+
+			//PORTFOLIO FILTER ON CLICK
+			$('.inner-link a').click(function(){
+				$('.inner-link a').removeClass('selected');
+				$(this).addClass('selected');
+			})
+
+			//Services More Content triggering
+			$('.services-more').click(function(){
+				var servIndex = $(this).attr('data-services');
+				//alert(servIndex);
+				$('#'+servIndex+'-content').slideToggle();
+			})
+
+		});
+	</script>
+	
+	<script>
+
+// Initialize prettyPhoto plugin
+	$(".portfolio a[data-gal^='prettyPhoto']").prettyPhoto({
+		theme:'light_square', 
+		autoplay_slideshow: false, 
+		overlay_gallery: false, 
+		show_title: true
+	});
+
+
+  
+		
+//MASONRY PORTFOLIO INIT:
+    $(window).load(function(){
+      
+      var $container = $('#container');
+
+      $container.isotope({
+        itemSelector : '.element',
+        layoutMode : 'masonry' 
+      });
+      
+      
+      var $optionSets = $('#options .option-set'),
+          $optionLinks = $optionSets.find('a');
+
+      $optionLinks.click(function(){
+        
+		var $this = $(this);
+        // don't proceed if already selected
+        /*if ( $this.hasClass('selected') ) {
+          return false;
+        }*/
+		
+        var $optionSet = $this.parents('.option-set');
+        $optionSet.find('.selected').removeClass('selected');
+        $this.addClass('selected');
+  
+        // make option object dynamically, i.e. { filter: '.my-filter-class' }
+        var options = {},
+            key = $optionSet.attr('data-option-key'),
+            value = $this.attr('data-option-value');
+        // parse 'false' as false boolean
+        value = value === 'false' ? false : value;
+        options[ key ] = value;
+        if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
+          // changes in layout modes need extra logic
+          changeLayoutMode( $this, options )
+        } else {
+          // creativewise, apply new options
+          $container.isotope( options );
+        }
+        
+		
+        return false;
+      });
+
+
+		
+      
+    });
+  </script>	
+  
+  
+  
+<!-- End Document
+================================================== -->
+</body>
+</html>

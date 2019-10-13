@@ -1,0 +1,427 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7; IE=EDGE;IE=EmulateIE7"/>
+        <title>MessageBoard</title>
+        <link rel="stylesheet" type="text/css" href="../../_js/themes/default/easyui.css" />
+        <link rel="stylesheet" type="text/css" href="../../_js/themes/icon.css" />
+        <script type="text/javascript" src="../../_js/jquery.min.js"></script>
+        <script type="text/javascript" src="../../_js/jquery.easyui.min.js"></script>
+        
+		<script type="text/javascript" src="../../_js/easyui-lang-zh_CN.js"></script>
+		
+        <script type="text/javascript" src="../../_js/common.js"></script>
+        <script type="text/javascript" src="../../_js/jquery.query.js"></script>
+       	<link rel="stylesheet" type="text/css" href="../../_css/content.css" />
+        <link rel="stylesheet" type="text/css" href="../../_css/messageboard/messageboard.css" />
+        
+	        <link rel="stylesheet" type="text/css" href="/_upload/tpl/00/c7/199/template199/css/custom/messageboard.css" />
+        
+        <script>
+            var isViewJson;
+            var keyWord ;
+            var beginDate ;
+            var endDate ;
+            var isFirst = true;
+            
+            $().ready(function(){
+                initMsgBoard();
+                initCategory();
+                initViewControl();
+                
+                $('#search').click(function() {
+                	keyWord = $('#keyword').val();
+                    beginDate = $('#beginDate').datetimebox("getValue");
+                    endDate = $('#endDate').datetimebox("getValue");
+                	fetchMessageContent(1);
+                });
+            });
+            
+            document.onreadystatechange = function(){
+            	if(document.readyState == 'complete'){ //当页面加载状态
+    	    		var msgCount = '0';
+    	    		msgCount = Number(msgCount);
+    	    		if(msgCount != 0){
+    	    			fetchMessageContent(Math.ceil(msgCount/10));
+    	    		}else{
+    	    			fetchMessageContent(1);
+    	    		}
+                }
+    	    }
+            
+            function initScroll(){
+    	    	var openAddMessage = '';
+    		    var messageAllow = '1';
+    		    var maodian = '';
+    		    if(maodian != ''){
+    		    	if(maodian != 'post_message'){
+    		    		var inde = $('#'+maodian).attr('index_id');
+    		    		var scroll_offset = 0;
+    		    		$('#message_list').children('li').each(function(){
+    		    			if($(this).attr('index_id') < inde){
+    		    				scroll_offset += 18*2+$(this).height();
+    		    			}
+    		    		});
+    			    	$("body,html").animate({
+    			    		scrollTop:scroll_offset //让body的scrollTop等于pos的top，就实现了滚动
+    			    	},0);
+    		    	}else{
+    		    		var scroll_offset = 0;
+    		    		$('#message_list').children('li').each(function(){
+    		    			scroll_offset += 18*2+$(this).height();
+    		    		});
+    		    		$("body,html").animate({
+    			    		scrollTop:scroll_offset+80 //让body的scrollTop等于pos的top，就实现了滚动
+    			    	},0);
+    		    	}
+    		    }
+    		    
+    		    if (openAddMessage == "1" && messageAllow == 1) {
+    		        /* location.href = "#post_message"; 
+    		        $('#iLeaveMsg').click();*/
+    		    	var scroll_offset = 0;
+		    		$('#message_list').children('li').each(function(){
+		    			scroll_offset += 18*2+$(this).height();
+		    		});
+		    		$("body,html").animate({
+			    		scrollTop:scroll_offset+80 //让body的scrollTop等于pos的top，就实现了滚动
+			    	},0);
+    		    }
+    	    }
+            
+            var msgBoard = {};
+            var replyStatus = "";
+            var category = "";
+            function initMsgBoard() {
+                msgBoard.query = function() {
+                    $(".filters li.term").each(function(i, e) {
+                        var key = $(this).attr("data-type-filter");
+                        if (key == 'replyStatus') {
+                            replyStatus = $(this).attr("data_val");
+                        } else if (key == 'category') {
+                            category = $(this).attr("data_val");
+                        }
+                    });
+                    fetchMessageContent(1);
+                };
+                initOptionsEvents('status_options');
+            }
+            
+            function initOptionsEvents(elementId) {
+                $("#" + elementId).click(function() {
+                    $(this).children(".options_list").slideToggle(150);
+                }).mouseleave(function() {
+                    $(this).children(".options_list").slideUp(150);
+                });
+                $("#" + elementId + " .options_list li").click(function() {
+                    $(this).addClass("selected").siblings().removeClass("selected");
+                    var txt = $(this).text(), val = $(this).attr("option_val");
+                    $(this).parent().siblings(".options_handle").children(".option_cur").text(txt);
+                    $(this).parent().parent().parent().attr("data_val", val);
+                    msgBoard.query(); // 请求查询
+                });    
+            }
+            
+            function initCategory() {
+                if ($('#category').length == 0) {
+                    return;
+                }
+                $.ajax({
+                    type: "post",
+                    url: 'fetchMessageCategoryList.do?_p=YXM9NjcmdD0xOTkmcD0xJm09TiY_&act=search',
+                    dataType: 'JSON',
+                    success: function(result) {
+                        var htmlData = '';
+                        for (var i = 0; i < result.length; i++) {
+                            if (result[i].selected) {
+                                htmlData += ('<li value="' + result[i].id + '" class="selected" option_val="'+result[i].id+'"><a href="javascript:;">' + result[i].displayName + '</a></li>');
+                                $('#category').find('.option_cur').append(result[i].displayName);
+                            } else {
+                                htmlData += ('<li value="' + result[i].id + '" option_val="'+result[i].id+'"><a href="javascript:;">' + result[i].displayName + '</a></li>');
+                            }
+                        }
+                        $('#category').find('.options_list').append(htmlData);
+                        initOptionsEvents('category_options');
+                    }
+                });
+            }
+            
+            function initMoreContent() {
+            	msgBoard.element = $("#wp_guestbook");
+            	if(msgBoard.element.hasClass("title_list")){
+            		$(".msg_title",msgBoard.element).click(function(){
+            			$(this).parent().children(".msg_detail").slideToggle();
+            		});
+            	}
+            	$(".read_more",msgBoard.element).click(function(){
+            		$(this).toggleClass("active").parent().toggleClass("open_content");
+            	});
+            }
+            
+            
+            /**
+             * 加载留言列表
+             * 时间：2014-01-21
+             * 作者：ysjiang
+             */
+            function fetchMessageContent(pageIndex) {
+                $.ajax({
+                    type: "post",
+                    url: 'fetchMessage.do?_p=YXM9NjcmdD0xOTkmcD0xJm09TiY_&localeCH=false',
+                    data: {
+                        replyStatus: replyStatus,
+                        category: category,
+                        keyWord:keyWord,
+                        beginDate:beginDate,
+                        endDate:endDate,
+                        page: pageIndex,
+                        rows: 10
+                    },
+                    dataType:'JSON',
+                    success: function(result) {
+                    	$('#wp_guestbook_pagination_p').html(htmldecode(result.pagination));
+                    	if(result.total <= 10) {
+                    		$('#wp_guestbook_pagination_p').hide() ;
+                    	} else {
+                    		$('#wp_guestbook_pagination_p').show() ;
+                    	}
+                    	$('#message_num').html(result.total);
+                        // 遍历留言内容
+                        var data = '';
+                        for (var i = 0; i < result.rows.length; i++) {
+                            var row = result.rows[i];
+                            data += '<li class="list_item" id="message_' + row.id + '" index_id='+i+'>';
+                            data += '<div class="icon"><div class="icon_box"></div></div>';
+                            if (isViewJson.viewTitle == '1') {
+	                            var title = row.title;
+	                            title = title.replace(/&/g, "&#38;");
+	                            title = title.replace(/</g,'&lt;');
+	                            title = title.replace(/>/g,'&gt;');
+	                        	title = title.replace(/'/g, "&#39;");
+	                        	title = title.replace(/"/g, "&#34;");
+                            	data += '<a class="msg_item msg_title">' + title + '</a>';
+                            }
+                            if (isViewJson.viewAskTime == '1') {
+                                data += '<span class="msg_item msg_time">Time:[' + row.createTime + ']</span>';
+                            }
+                            if (isViewJson.viewAsker == '1') {
+                                data += '<span class="msg_item msg_author">From:' + row.createrUserName;
+                                /*if(isViewJson.viewTel == '1' && row.phone != ''){// 这里是电话和邮箱，需要怎么展示？
+                                    data += "&nbsp;" + row.phone + "&nbsp;&nbsp;";
+                                }
+                                if(isViewJson.viewEmail == '1'){
+                                    data += row.email;
+                                    if (row.email != '') {// 后面加点间隔
+                                        data += "&nbsp;&nbsp;";
+                                    }
+                                }*/
+                                data += '</span>';
+                            }
+                            if (isViewJson.viewEmail == '1') {
+                            	if (row.email != '') {
+	                                data += '<span class="msg_item msg_email">Email:' + row.email;
+	                                data += '</span>';
+                                }
+                            }
+                            if (isViewJson.viewTel == '1') {
+                            	if (row.phone != '') {
+                            		data += '<span class="msg_item msg_tel">Telephone:' + row.phone;
+                                    data += '</span>';
+                                }
+                            }
+                            if(isViewJson.viewProvince == '1'){
+                                data += '<span class="msg_item msg_province">Province:' + row.province + '</span>';
+                            }
+                            if(isViewJson.viewCategory == '1'){
+                                data += '<span class="msg_item msg_type">Category:' + row.category + '</span>';
+                            }
+                            if(isViewJson.viewIP == '1'){
+                                data += '<span class="msg_item msg_ip">IP:' + row.ip + '</span>';
+                            }
+                            if(isViewJson.viewAnswerStatus == '1'){
+                                data += '<span class="msg_item msg_state">Status:' + row.replyStatus + '</span>';
+                            }
+                            data += '<div class="msg_detail">';
+                            data += '<div class="msg_item msg_content"><i class="read_more"></i>';
+                            var content = row.content;
+                            /* content = content.replace(/</g,'&lt;');
+                            content = content.replace(/>/g,'&gt;'); */
+                            data += '<p class="msg_text">'+content+'</p>';
+                            data += '</div>';
+                            var isReply = row.isReply;//isReply等于0的时候属于未回复（新到或待回复），等于1的时候是 已回复
+                            if(isReply == "1") {
+	                           	data += '<div class="msg_reply"><p class="reply_meta">';
+	                           	if(isViewJson.viewAnswerer == '1'){
+	                            	data += '<span class="reply_item reply_author">Replier:'+row.replyerUserName+'</span>';
+	                           	}
+	                           	if(isViewJson.viewAnswerTime == '1'){
+	                            	data += '<span class="reply_item reply_time">Reply Time:['+row.replyTime+']</span>';
+	                           	}
+	                            data += '</p><i class="read_more"></i>';
+	                            var replyContent = row.replyContent;
+	                            /* replyContent = replyContent.replace(/</g,'&lt;');
+	                            replyContent = replyContent.replace(/>/g,'&gt;'); */
+	                            data += '<p class="reply_text">'+replyContent+'</p></div>';
+                            }
+                            data += '</div>';
+                            data += '</li>';
+                        }
+                        $('#message_list').html(data);
+                        initMoreContent();
+                        if(isFirst){
+    	                    initScroll(); //表单提交
+    	                    isFirst = false;
+                        }
+                    }
+                });
+            }
+            
+            
+            /**
+             * 加载留言配置
+             **/
+            function initViewControl(){
+                $.ajax({
+                    type: "post",
+                    url: 'fetchModuleConfig.do?_p=YXM9NjcmdD0xOTkmcD0xJm09TiY_',
+                    dataType:'json',
+                    success: function(result) {
+                        isViewJson = result[0];
+                    }
+                });
+            }
+            
+            // 我要留言
+            function iLeaveMsg() {
+                checkOpenUrl('', 'loadMessageAdd.do?_p=YXM9NjcmdD0xOTkmcD0xJm09TiY_', 560, 450, 'Leave Message', '', function(){
+                    fetchMessageContent(1);
+                });
+            }
+            
+            function userLogin() {
+                var url = encodeURIComponent('//_web/messageboard/loadMessageView.do?_p=YXM9NjcmdD0xOTkmcD0xJm09TiY_&openAddMessage=1&banner=1&localeCH=false&request_locale=zh_CN');
+                openWindow("../../innerLogin.jsp?parentUrl=" + url, 408, 234, 'Do not allow anonymous leave message', ', please login first');
+            }
+
+			function htmldecode(value) {
+                var div = document.createElement('div');
+                div.innerHTML = value;
+                return div.innerText || div.textContent;
+            }
+        </script>
+    </head>
+    <body>
+        <div region="center" border="false">
+        <!---留言板开始---->
+        <div class="wp_guestbook" id="wp_guestbook">
+        	<div class="wp_guestbook_head_fixed">
+            <div class="wp_guestbook_head" id="wp_guestbook_head">
+                <h1 class="wp_guestbook_title"><span id="wp_guestbook_name">MessageBoard</span></h1>
+            </div>
+            <div class="wp_guestbook_panel clearfix" id="wp_guestbook_panel">
+            
+                <ul class="filters clearfix">
+                    
+	                    <li class="term t1" data-type-filter="replyStatus" value="0" id="status" data_val="0"><span class="term_name">Status：</span>
+	                        <div class="options" id="status_options">
+	                            <a class="options_handle"><span class="option_cur">All</span><i class="arrow">&or;</i></a>
+	                            <ul class="options_list">
+	                                <li value="0" class="selected" option_val="0"><a href="javascript:void(0);">All</a></li>
+	                                <li value="1" option_val="1"><a href="javascript:void(0);">New</a></li>
+	                                <li value="2" option_val="2"><a href="javascript:void(0);">To Reply</a></li>
+	                                <li value="3" option_val="3"><a href="javascript:void(0);">Replied</a></li>
+	                            </ul>
+	                        </div>
+	                    </li>
+                    
+                    
+                    <li class="term t3" data-type-filter="keyword"><span class="term_name">Keyword：</span>
+			        	<div class="options">
+			          	<div class="options_input"><input id="keyword" name="keyword" type="text" value="" /></div>
+			          	</div>
+			        </li>
+			        <li class="term t4" data-type-filter="time_begin"><span class="term_name">From：</span>
+			        	<div class="options">
+				          	<div class="options_input" style="border:0px solid #d9d9d9;">
+				          		<input id="beginDate" class="easyui-datetimebox" style="width: 160px;" editable='false'/>
+				          	</div>
+			          	</div>
+			        </li>
+			        <li class="term t5" data-type-filter="time_en"><span class="term_name">To：</span>
+			        	<div class="options">
+				          	<div class="options_input" style="border:0px solid #d9d9d9;">
+				          		<input id="endDate" class="easyui-datetimebox" style="width: 160px;" editable='false' />
+				          	</div>
+			            </div>
+			        </li>
+			        <li class="term t5" data-type-filter="time_search">
+			        	<div class="options">
+				          	<div class="options_input" style="border:0px solid #d9d9d9;">
+				          		<a class="easyui-linkbutton" iconCls="icon-search" id="search">Search</a>
+				          	</div>
+			            </div>
+			        </li>
+                </ul>
+                
+                
+                    <a class="iLeaveMsg" href="#post_message" onclick=""><span>Leave Message</span></a>
+                
+                
+            </div>
+            </div>
+            
+            <div class="wp_guestbook_lists" id="wp_guestbook_list">
+                <ul class="message_list" id="message_list">
+                </ul>
+                <p class="message_count">A total of <span id="message_num">0</span> messages</p>
+            </div>
+            <div class="wp_guestbook_paging" id="wp_guestbook_pagination">
+                <p class="wp_pagenavi" id="wp_guestbook_pagination_p">
+                </p>
+            </div>
+            
+            
+            <div class="wp_guestbook_post" id="wp_guestbook_post">
+                <p class="post_title" id="post_message"><span id="post_name">Leave Message</span></p>
+                <div class="post_box">
+                    <iframe name="msgIframe" id='msgIframe' onload="dyniframesize('msgIframe');" src="loadMessageAdd.do?_p=YXM9NjcmdD0xOTkmcD0xJm09TiY_&act=msgForm&localeCH=false" allowtransparency="true" marginheight="0" marginwidth="0" frameborder="0" scrolling="no" width="100%" height="100%"></iframe>
+                    <script type="text/javascript">
+                    function dyniframesize(down) {
+                    	var pTar = null; 
+                    	if (document.getElementById){ 
+                    		pTar = document.getElementById(down);
+                    	}else{
+                    		eval('pTar = ' + down + ';');
+                    	}
+                    	if (pTar && !window.opera){
+                    		pTar.style.display="block";
+                    		if (pTar.contentDocument && pTar.contentDocument.body.offsetHeight){
+                    			pTar.height = pTar.contentDocument.body.offsetHeight +20;
+                    		}else if (pTar.Document && pTar.Document.body.scrollHeight){
+                    			pTar.height = pTar.Document.body.scrollHeight; 
+                    		}
+                    	}
+                    }
+                    </script>
+                </div>
+            </div>
+            
+        </div>
+        <!---end://留言板结束---->
+        </div>
+    </body>
+</html>

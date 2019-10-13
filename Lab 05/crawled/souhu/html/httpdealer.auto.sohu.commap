@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="搜狐汽车,经销商地图"/>
+    <meta name="keywords" content="搜狐汽车,经销商地图"/>
+    <title>搜狐汽车_经销商地图</title>
+    <!--ip定向-->
+    <script type="text/javascript">
+        //车型页行情
+        //db用的ip对象类
+        //----------------------cookie缓存cn码30分钟-----------------------------
+        var AutoCookie = {
+            set: function (n, v, e, p, d, s) {
+                var t = new Date();
+                e = e || 30;
+                t.setTime(t.getTime() + (1000 * 60 * e));
+                document.cookie = n + "=" + escape(v) + "; expires=" + t.toGMTString() +
+                    ((p) ? "; path=" + p : "; path=/") +
+                    ((d) ? "; domain=" + d : "; domain=.auto.sohu.com") +
+                    ((s) ? "; secure" : "");
+            },
+            get: function (n) {
+                var arr = document.cookie.match(new RegExp("(^| )" + n + "=([^;]*)(;|$)"));
+                if (arr != null) {
+                    return unescape(arr[2]);
+                }
+                return null;
+            },
+            clear: function (n, p, d) {
+                document.cookie = n + "=" +
+                    ((p) ? "; path=" + p : "; path=/") +
+                    ((d) ? "; domain=" + d : "; domain=.auto.sohu.com") +
+                    ";expires=Fri, 02-Jan-1970 00:00:00 GMT";
+            }
+        };
+
+        //window.sohu_IP_Loc 表示当前地区的标示
+        window.sohuIpCnCode = null;
+        var AutoCheckIp = {
+            initList: [],
+            url: "http://iploc.auto.sohu.com/ip/soip", // "http://iploc.auto.sohu.com/ip/soip"
+            jsload: function (url, func, cset) {
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.charset = cset || "gb2312";
+                if (script.readyState) {
+                    script.onreadystatechange = function () {
+                        if (script.readyState == "loaded" || script.readyState == "complete") {
+                            script.onreadystatechange = null;
+                            func && func();
+                        }
+                    };
+                } else {
+                    script.onload = function () {
+                        func && func();
+                    };
+                }
+                script.src = url;
+                document.getElementsByTagName('head')[0].appendChild(script);
+            },
+            ipLoaded: function () {
+                var k = this;
+                for (var i = 0, j = k.initList.length; i < j; i++) {
+                    try {
+                        if (typeof k.initList[i] == "function") {
+                            k.initList[i]();
+                        } else {
+                            k.initList[i].init('loading');
+                        }
+                        k.initList.splice(i, 1);
+                    } catch (e) {
+                    }
+
+                }
+            },
+            loadIp: function () {
+                var k = this;
+                if (AutoCookie.get('ipcncode')) {
+                    return;
+                }
+                k.jsload(k.url, function () {
+                    if (sohu_IP_Loc == 'unknown') {
+                        AutoCookie.set('ipcncode', 'CN110000', 30);
+                        window.sohuIpCnCode = 'CN110000';
+                    } else {
+                        AutoCookie.set('ipcncode', sohu_IP_Loc, 30);
+                        window.sohuIpCnCode = sohu_IP_Loc;
+                    }
+                    AutoCookie.set('sohu_user_ip', window.sohu_user_ip, 30);
+                    k.ipLoaded();
+                });
+            },
+            check: function (k) {
+                var cn = AutoCookie.get('ipcncode');
+                if (cn) {
+                    if (typeof k == 'function') {
+                        k();
+                    } else {
+                        k.init();
+                    }
+                    AutoCookie.set('ipcncode', cn, 30);
+                } else {
+                    AutoCheckIp.initList.push(k);
+                    AutoCheckIp.loadIp();
+                }
+            },
+            countIp: function (flag, opt) {
+                var img = new Image(), addr = 'http://iplog.auto.itc.cn/iploc?time=' + (new Date()).getTime();
+                opt.ip = window.sohu_user_ip ? window.sohu_user_ip : AutoCookie.get('sohu_user_ip'),
+                    opt.code = sohuIpCnCode.substring(2);
+                if (flag == '0') {
+                    img.src = addr + '&type=0&ip=' + opt.ip + '&code=' + opt.code + '&city=' + encodeURIComponent(opt.city);
+                } else if (flag == '1') {
+                    opt.city = $("#autoTopNaviBar").find('.hlcity').attr('cname');
+                    img.src = addr + '&type=1&ip=' + opt.ip + '&code=' + opt.code + '&city=' + encodeURIComponent(opt.city) + '&tocode=' + opt.tocode + '&tocity=' + encodeURIComponent(opt.tocity);
+                }
+            }
+        };
+        //----------------------cookie缓存cn码30分钟-----------------------------
+        //---------------改为网宿的ip定向----------------------
+        AutoCheckIp.check(function () {
+            var code = AutoCookie.get('ipcncode');
+            if (code) {
+                location.href = "/map/?city=" + code.substr(2);
+            }
+        });
+    </script>
+</head>
+</html>

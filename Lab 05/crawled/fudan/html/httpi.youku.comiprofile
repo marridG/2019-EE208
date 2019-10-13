@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="data-spm" content="a2h0t">
+	<meta charset="utf-8">
+	<title>用户登录</title>
+	<link rel="stylesheet" href="/static-resources/css/layout.css?V2018090416">
+	<link rel="Shortcut Icon" href="/static-resources/images/favicon.ico" />
+</head>
+<body data-spm="9542499"><script>
+with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","category=&userid=&aplus&yunid=&&trid=0bade83215709526424914180ee277&asid=AQAAAADC1aJdPO8lGAAAAACFo8rU7R73NA==",id="tb-beacon-aplus",src=(location>"https"?"//g":"//g")+".alicdn.com/alilog/mlog/aplus_v2.js")
+</script>
+
+	<div id="header">
+		<div class="header-cont">
+			<a href="http://www.youku.com/" target="_blank">优酷</a><i>|</i>
+			<a href="http://www.tudou.com/" target="_blank">土豆</a><i>|</i>
+			<a href="http://www.laifeng.com/" target="_blank">来疯</a><i>|</i>
+			<a href="http://zhifu.youku.com/" target="_blank">优酷钱包</a>
+		</div>
+	</div>
+	<div id="content">
+		<div class="demo" id="loginbox" style="display:none;"></div>
+	</div>
+<script>
+var YT_STATIC_DOMAIN = '//g.alicdn.com';
+var __yk_cdn_domain = ['//i.alicdn.com/g','//assets.alicdn.com/g'];
+function __yk_loadStyle(d,e){var b=document.getElementsByTagName("head")[0];var a=document.createElement("link");a.rel="stylesheet";a.href=d;var c=b.getElementsByTagName("style");(c.length>0)?b.insertBefore(a,c[0]):b.appendChild(a)}
+function __yk_loadScript(e,f,d){var a=false;var c=document.createElement("script");var b=document.getElementsByTagName("head")[0];c.src=e;c.onload=c.onreadystatechange=function(){if(!a&&(!this.readyState||this.readyState==="loaded"||this.readyState==="complete")){a=true;c.onload=c.onreadystatechange=null;b.removeChild(c);if(f){f()}}};c.onerror=function(){c.onerror=null;if(d){d()}};b.appendChild(c)}
+function __yk_staticErrorStat(g,d,c){var b="https://gm.mmstat.com/fsp.1.1?pid=passport-login&type=15&msg=alicdn%E5%9F%9F%E4%B8%8D%E5%8F%AF%E8%AE%BF%E9%97%AE&scr=700x400&delay=0.01&patch_ver=-&last_pos=0%2C0";b+="&c1="+g;b+="&c2="+(d||"");b+="&page="+window.location.href;b+="&title="+(document.title||"");b+="&ua="+navigator.userAgent;b+="&raw_ua="+navigator.userAgent;var a=new Image();a.onload=function(){};a.src=b;if(c){try{window.external.execute("iku",'iku://|login|psp|error|json|{"url":"'+g+'","code":"ALICDN_ACCESS_FAIL", "desc":"alicdn前端静态资源访问失败"}|')}catch(f){}}}
+function __yk_retry_loadCDN(a,e,d){var b=window.__yk_cdn_domain.shift();if(!b){d&&d();return}var c=a.replace(YT_STATIC_DOMAIN,b);__yk_loadScript(c,function(){window.YT_STATIC_DOMAIN=b;__yk_retry_loadCSS();e&&e()},function(){__yk_retry_loadCDN(a,e,d)})}
+function __yk_retry_loadCSS(){var c=document.getElementsByTagName("link")||[];for(var d=0,a=c.length;d<a;d++){var b=c[d].href||"";if(b.indexOf("//g.alicdn.com/static-es6/login")>-1){__yk_loadStyle(b.replace("//g.alicdn.com",window.YT_STATIC_DOMAIN))}}}
+</script>	<script type="text/javascript" src="//g.alicdn.com/static-es6/login/public/load.js?V2018090416"></script>
+	<script>
+	var nowHours = (new Date()).getHours();
+	if( nowHours >= 18 || nowHours <= 8 ){
+		document.getElementsByTagName('body')[0].className = 'night';
+	}
+
+	if (window.YKLoginLoader) {
+		pageLoad();
+	} else {
+		__yk_staticErrorStat("//g.alicdn.com/static-es6/login/public/load.js?V2018090416", "psp_retry");
+		__yk_retry_loadCDN("//g.alicdn.com/static-es6/login/public/load.js?V2018090416", function(){
+			pageLoad();
+		}, function(){
+			__yk_staticErrorStat("//g.alicdn.com/static-es6/login/public/load.js?V2018090416", "psp_fail");
+		});
+	}
+
+	function pageLoad() {
+		//蓝色：按钮色 2FB3FF    描边 c0e8f6黄色：按钮色 ff6602    描边 ffb687红色：按钮色 fe526e    描边 ffbec9
+		YKLoginLoader.ready(function(){
+			var Xlogin = new YKLoginLoader({
+				loginOrLogout: 'login',
+				callbackURL: 'https://i.youku.com/i/index',
+				mode: 'embedded',
+				template:"tempA",
+                accountDomain: "https://account.youku.com",
+				frameID: "loginbox",
+				themes:["2FB3FF","c0e8f6"],
+				bgThemes:"#fff",
+				buid:"youku",
+				pid:"20160317PLF000211",
+				loginModel:['mobile', 'normal'], //需要展示的模板,默认界面放在第一位normal/mobile
+				regModel:['mobile','email'], //mobile/email
+				isQRlogin: true,
+				isThirdPartLogin: true,
+				regShowType: 'in', //注册展示方式 in：本页面展示，out：跳转注册页
+				qrMsg: '请使用优酷APP扫码登录', //扫码登录的文字提示
+				qrBu: ['yk',60,'true'], //二维码展示中logo的来源方，大小，是否居上
+				size: 'mini',
+				checkNoLogin: function(){
+					Xlogin.buildLoginDom();
+				},
+				loginSuccess: function(){ //登录成功，同步登录成功，注册成功的调用函数。
+					window.location.href = 'http://www.youku.com/';
+				},
+				logoutSuccess: function(){ //登出成功操作。
+					window.location.reload();
+				},
+				failload: function(){
+					alert('请刷新后重试');
+				}
+			});
+			document.getElementById('loginbox').style.display = 'block';
+		});
+	}
+	</script>
+</body>
+</html>

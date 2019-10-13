@@ -1,0 +1,1134 @@
+<!doctype html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/ xhtml1-transitional.dtd">
+
+
+<script type="text/javascript">
+  var pvinsight_page_ancestors = '143746642;550690333';
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=gb2312" />
+<title>国庆69周年-搜狐新闻</title>
+<script type="text/javascript" src="http://www.sohu.com/sohuflash_1.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="description" content="国庆69周年" />
+<meta name="keywords" content="国庆69周年" />
+<meta name="robots" content="all" />
+
+
+<script src="http://js.sohu.com/library/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://sports.sohu.com/upload/coolsports20130807/js/focus.js"></script>
+<script type="text/javascript">
+var jq = jQuery;
+
+jQuery(function(jq){
+		/*
+	 * 1.增加分享按钮的功能
+	 * 2.评论数量以及链接到我来说两句
+	 */
+	//一键转帖
+function jump(x, who){
+
+	var url = '', e = encodeURIComponent, s = screen, d = document, wd = 0, hg = 0, u = d.location;
+	var htitle=$("h3>a",$(who).parents(".article-list"));
+	var title = htitle.html();
+	var shareurl = htitle.attr("href");
+	
+
+	if(x=='weibosohu'){
+
+		url ="http://t.sohu.com/third/post.jsp?link="+e(shareurl)+"&title="+e(title);
+
+		wd = 660;hg = 470;
+
+	}else if(x=='baishehui'){
+
+		url ="http://bai.sohu.com/share/blank/addbutton.do?link="+e(shareurl)+"&title="+e(title);
+
+		wd = 480;hg = 340;
+
+	}else if(x=='douban'){
+
+		url ="http://www.douban.com/recommend/?url="+e(shareurl)+"&title="+e(title);
+
+		wd = 460;hg = 340;
+
+	}else if(x=='renren'){
+
+		url ="http://share.renren.com/share/buttonshare?link="+shareurl+"&title="+e(title);
+
+		wd = 590;hg = 430;
+
+	}else if(x=='kaixin001'){
+
+		url ="http://www.kaixin001.com/repaste/share.php?rurl="+e(shareurl)+"&rtitle="+e(title);
+
+		wd = 540;hg = 360;
+
+	}else if(x=='itb'){
+
+		url ="http://tieba.baidu.com/i/sys/share?link="+e(shareurl)+"&type=text&title="+e(title);
+
+		wd = 626;hg = 436;
+
+	}else if(x=='go139'){
+
+		url ="http://go.139.com/ishare.do?shareUrl="+e(shareurl)+"&title="+e(title)+"&sid=20dd04a99380c2e8d56cf187f6658169";
+
+		wd = 630;hg = 500;
+
+	}else if(x=='wblog'){
+
+		url ="http://t.sohu.com/third/post.jsp?url="+e(shareurl)+"&pic="+cover+"&title="+escape("#"+e(title)+"#");
+
+		wd = 660;hg = 470;
+
+	}else if(x=='qq'){
+
+		url ="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url="+e(shareurl);
+
+		wd = 930;hg = 510;
+
+	}else if(x=='tqq'){
+
+	    url="http://v.t.qq.com/share/share.php?url="+e(shareurl)+'&title='+e(title);
+
+	    wd = 700;hg = 680;
+
+	}else if(x=='weibosina'){
+
+		url = "http://service.t.sina.com.cn/share/share.php?url=" + e(shareurl) + 
+
+			"&appkey=1753462873&title=" + e(title) + "&pic=&ralateUid=&searchPic=false";
+
+		wd = 615;hg = 505;
+
+	}else if(x === 'ty'){
+
+		url = "http://www.tianya.cn/new/share/compose.asp?itemtype=tech&item=665&strTitle=" +e(title) 
+
++"&strFlashURL=placeholder&strFlashPageURL=" + e(shareurl);
+
+		wd = 650;hg = 505;
+
+	}else if(x === 'fx'){
+
+		url = "http://space.feixin.10086.cn/api/cshare?source=" + e('s.sohu.com') + "&title=" +e(title)+ 
+
+"&url=" + e(u.href);
+
+		wd = 650;hg = 450;
+
+	} 
+	function a(){
+
+		if (!window.open(url, 'sohushare', ['toolbar=0,status=0,resizable=1,width='+ wd +',height='+ hg 
+
++',left='+ (s.width - wd) / 2+ ',top='+ (s.height - hg) / 2]))
+			u.href = [url].join('');
+	}
+
+	if (/Firefox/.test(navigator.userAgent)){
+		setTimeout(a, 0);
+	}else{
+		a();
+	}
+}
+var share_dom=$(['<ul>',
+    '<li class="s-t">分享到 |</li>',
+	'<li class="blg"><a onclick="javascript:jump(\'weibosohu\',this)" href="javascript:void(0)" title="分享到搜狐微博"></a></li>',
+	'<li class="qq"><a onclick="javascript:jump(\'qq\',this)" href="javascript:void(0)" title="分享到QQ空间" ></a></li>',
+	'<li class="rrw"><a onclick="javascript:jump(\'renren\',this)" href="javascript:void(0)" title="分享到人人网"></a></li>',
+	'<li class="db"><a onclick="javascript:jump(\'douban\',this)" href="javascript:void(0)" title="分享到豆瓣" ></a></li>',
+	'<li class="itb"><a title="分享到百度贴吧" href="javascript:void(0)" onclick="javascript:jump(\'itb\',this)"></a></li>',
+    '</ul>'].join(""));
+$(".share").html("").append(share_dom);
+window.jump=jump;
+
+	function setCommentNum()
+	{
+		var ids=[];
+		$(".article h3").each(function(){
+			var id =/n([0-9]{9})/i.exec($("a",$(this)).get(1).href);
+			if(id)
+			{
+				var hex_id=id[1];
+				ids.push(hex_id);
+				$("span a",$(this)).attr("id","p_"+hex_id).html("").attr("href","http://pinglun.sohu.com/s"+hex_id+".html");
+			}
+		})
+		var url="http://comment4.news.sohu.com/dynamic/cmt_topic_count.json?rt=jsonp&ids=";
+		if(ids.length>0)
+		{
+			url=url+ids.join("|");
+			
+			jq.getScript(url,function(){
+					for(n in topic_count)
+					{
+						$("#p_"+n).html(topic_count[n].allCount);
+					}
+				}
+			);
+		}
+		//console.log(url);
+	}
+	setCommentNum();
+	/*结束*/
+	
+	//滚动
+	function autoScroll(rr, conr, lisr, btns, ts, unit, ft, auto, stopTime){
+		var conr0 = conr[0],
+			btnPr = btns.find('a.up'),
+			btnNr = btns.find('a.down'),
+			sli = rr.find(".autoS li"),
+			cls = "libg";
+		var ff = ft||false;
+		var auto = auto||false;
+		var st = stopTime||5000;
+		if (lisr.length <= 1) return;
+		
+		var pnumr = unit, numr = lisr.length;
+		if(numr <= pnumr) {btnWr.hide();return;}
+		
+		var owr = lisr[1].offsetLeft - lisr[0].offsetLeft, 
+			idxArear = [0, numr - pnumr],
+			idxr = 0;
+		
+		if(ff) owr = lisr[1].offsetTop - lisr[0].offsetTop;
+		
+		function updateNum(n){
+			if (n > idxArear[1] || n < idxArear[0]) {return;}
+			
+			btnPr[((n == 0)?'add':'remove') + 'Class']('uN');
+			btnNr[((n == idxArear[1])?'add':'remove') + 'Class']('dN');
+			
+			idxr = n;
+			if(ff){
+				conr.stop().animate({top: -n * owr},ts);
+			}else{
+				conr.stop().animate({left: -n * owr},ts);
+			}
+			sli.removeClass(cls).eq(n).addClass(cls);
+		}
+		
+		var scoll = function(){
+			if (idxr < idxArear[1]){
+				btnPr[((idxr == -1)?'add':'remove') + 'Class']('uN');
+				btnNr[((idxr == (idxArear[1]-1))?'add':'remove') + 'Class']('dN');
+				if(ff){
+					conr.stop().animate({top: owr * -(++idxr)},ts);
+				}else{
+					conr.stop().animate({left: owr * -(++idxr)},ts);
+				}
+				sli.removeClass(cls).eq(idxr).addClass(cls);
+			}
+			idxr = idxr>=idxArear[1] ? idxr=-1 : idxr;
+			var ss = window.setTimeout(function(){scoll()},st);
+		}
+		if(auto==true){
+			var sss = window.setTimeout(function(){scoll()},2000);
+		}
+		
+		sli.each(function(ii){
+			jq(this).mouseenter(function(ev){
+				updateNum(ii);
+				return false;
+			});
+		});
+		
+		btnPr.click(function(ev){
+			updateNum(idxr - 1);
+			return false;
+		});
+		btnNr.click(function(ev){
+			updateNum(idxr + 1);
+			return false;
+		});
+	}
+	
+	var sa = jq("#scroll-A");//id, 内容, 列表, 按钮, 时间, 显示个数, 滚动方向, 自动, 停留时间
+	autoScroll(sa, sa.find(".con"), sa.find(".picA"), sa.find(".btns"), 300, 1, false, false);
+	
+});
+</script>
+<link type="text/css" rel="stylesheet" href="http://css.sohu.com/upload/global1.4.1.css" />
+<style>
+body{ background:#fff;}
+#commend-headNav{display:none}
+div {margin:0 auto}
+/* banner */
+
+
+
+
+
+
+#nav{ height:47px; line-height:47px; width:950px; text-align:center; text-align:center;  margin:0 auto; background:#000000;}
+#nav ul{margin: 0 auto;width: 950px;}
+#nav li{ float:center; display:inline; padding:0px 16px; background:url(http://i3.itc.cn/20140805/2cf3_52f0b72f_781b_0b66_a7a1_400f10c283f0_1.jpg) no-repeat left center; font-family:"微软雅黑"; font-size:16px; color:#fff;}
+#nav li.first{ background:none;}
+#nav li a{ color:#fff;}
+
+.top{ padding:20px 0px; margin-top:15px; background:url(http://sports.sohu.com/upload/coolsports20130807/images/top_bg.jpg) no-repeat center top; border-bottom:#c8c8c8 1px solid;}
+
+
+#contentA{ overflow:hidden; background:#fff; margin-top:5px;}
+#contentA .left{ width:325px;margin:0 auto;padding:5px 0;font-size:14px;line-height:24px}
+#contentA .center{ width:365px; margin-left:10px;}
+#contentA .right{ width:240px;}
+
+
+
+/*焦点图*/
+.focus{position:relative; text-align:left;}
+.focus .picview{width:639px;height:359px;position:relative;border:1px solid #c7c7c7;overflow:hidden;}
+.focus .picview .pic{position:absolute;width:639px;height:359px;z-index:2;top:0;left:0;}
+.focus .info{width:250px;position:absolute;right:10px;top:100px;}
+.focus .info .title{font-size:26px;font-weight:bold;line-height:36px;padding-bottom:30px;font-family:'Microsoft YaHei',simsun;color:#000;}
+.focus .info .title a{font-family:'Microsoft YaHei',simsun;color:#333;}
+.focus .info p{line-height:20px;color:#000;}
+.focus .nav{position:absolute;right:144px;top:60px;}
+.focus .nav i{padding:0 5px;width:10px;height:20px;line-height:20px;cursor:pointer;display:inline-block;text-align:center;font-size:10px;font-family:'Microsoft YaHei',simsun; font-style:normal;}
+.focus .nav i.cur{color: #fff;background:url(http://i3.itc.cn/20130510/2d3c_f5d26a21_4275_2391_b161_e22f50d730d8_1.png) no-repeat 1px 1px;}
+.focus .nav {padding-bottom:10px;border-bottom:1px solid #000;}
+
+.line{background:url(http://digi.it.sohu.com/upload/dw201208081015images/bgx.gif) repeat-x;height:1px;font-size:0px;margin:0 auto;clear:both;overflow:hidden;}
+.pic-group li{display:inline;width:100%}
+.list12 li{background:url(http://images.sohu.com/uiue/dot.gif) no-repeat -1px 1px;padding:6px 0 6px 12px}
+.new-article .article .com-num,.pages .pre a,.pages .next a,.pages .pre-n,.pages .next-n,#contentA .blockRA .pic-text .plan{background:url(http://digi.it.sohu.com/upload/dw201208081015images/icon.gif) no-repeat}
+
+/*contentA*/
+#contentA{margin:18px auto 60px}
+#contentA .left{width:655px}
+#contentA .right{width:262px}
+
+#contentA .left h2{height:30px;padding:9px 0px 5px 0px;line-height:22px;color:#999; background:#fff url(http://i3.itc.cn/20130806/2cf3_d7036f2f_e819_6f92_9edc_f12312cda71b_1.jpg) repeat-x left bottom;}
+#contentA .left h2 span{height:20px;line-height:20px; font-size:18px; color:#000;font-family:'Microsoft YaHei',simsun;}
+
+#contentA .conmend{margin:0 auto 20px;background:#F5F5F5; overflow:hidden;}
+#contentA .conmend h2 span{background-position:0 0}
+#contentA .conmend .pic-text{width:290px;margin:18px 14px 0 20px;float:left;display:inline;height:120px;color:#999}
+#contentA .conmend .pic-text div{margin-right:15px;_margin-right:12px}
+#contentA .conmend .pic-text div img{border:1px #E5E5E5 solid}
+#contentA .conmend .pic-text h4{height:86px;font:14px/22px "\5FAE\8F6F\96C5\9ED1"}
+
+#contentA .new-article h2 span{background-position:-130px 0}
+.new-article .article-list{border-bottom:1px #E1E1E1 solid;padding:20px;width:615px;background:#F5F5F5;}
+.new-article .article h3{font:22px/34px "\5FAE\8F6F\96C5\9ED1";padding:0 0 4px}
+.new-article .article p{font-size:14px;line-height:24px;}
+.new-article .article p a{color:#DF1D1B}
+.new-article .article .com-num{float:right;color:#333;font:11px/12px "Arial";height:17px;padding-left:20px;margin-top:11px;background-position:0 -100px}
+.new-article .pic-group{margin:12px auto 0}
+.new-article .pic-group li{width:160px;height:110px;margin-right:20px;position:relative}
+.new-article .pic-group li img{border:1px #E5E5E5 solid}
+.new-article .pic-group .play-icon{width:160px;height:110px;position:absolute;top:0;left:0;}
+.new-article .pic-group .play-icon a{display:block;width:100%;height:100%;_FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://digi.it.sohu.com/upload/dw201208081015images/bg05.png',sizingMethod='scale');background:url(http://digi.it.sohu.com/upload/dw201208081015images/bg05.png)!important;background:none;}
+.new-article .pic-group .play-icon a:hover{_FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://digi.it.sohu.com/upload/dw201208081015images/bg06.png',sizingMethod='scale');background:url(http://digi.it.sohu.com/upload/dw201208081015images/bg06.png)!important;background:none;}
+.new-article .fun{height:22px;margin:22px auto 0;color:#999;line-height:18px}
+.new-article .fun .share{float:left;display:inline;width:190px}
+.new-article .fun .share li{float:left;margin-right:6px;}
+.new-article .fun .share li a{width:16px;height:16px;display:block;overflow:hidden;line-height:500px;background:url(http://digi.it.sohu.com/upload/dw201208081015images/share_icon.gif) no-repeat}
+.new-article .fun .share .s-t{width:56px;}
+.new-article .fun .share .blg a{background-position:0 0}
+.new-article .fun .share .qq a{background-position:0 -20px}
+.new-article .fun .share .rrw a{background-position:0 -60px}
+.new-article .fun .share .db a{background-position:0 -80px}
+.new-article .fun .share .itb a{background-position:0 -100px}
+.new-article .fun .label{float:left;}
+.new-article .fun .time{float:right}
+
+.pages{margin:40px auto 0;text-align:center;font:16px/18px "\5FAE\8F6F\96C5\9ED1";}
+.pages a{border:1px #E5E5E5 solid;display:inline-block;padding:4px 10px 0;*padding-top:5px;margin:0 5px;height:22px;*height:21px;text-decoration:none;}
+.pages a:hover{border:1px #2D3640 solid;color:#333}
+.pages span{display:inline-block}
+.pages .now a{background:#505B67;color:#fff;border:1px #2D3640 solid}
+.pages .pre a{background-position:10px -120px;padding-left:20px}
+.pages .next a{background-position:55px -140px;padding-right:20px}
+.pages .pre-n,.pages .next-n{border:1px #E5E5E5 solid;color:#999;padding:4px 10px 0;*padding-top:5px;height:22px;*height:21px;margin:0 5px}
+.pages .pre-n{background-position:10px -160px;padding-left:20px}
+.pages .next-n{background-position:55px -180px;padding-right:20px}
+
+#contentA .right h2{height:30px;padding:11px 10px 0px 0px;line-height:20px; background:#fff url(http://i0.itc.cn/20130806/2cf3_3381c5f8_7107_54c9_8dd8_a2b442d198d6_1.jpg) repeat-x center top; border-bottom:#c8c8c8 1px solid;}
+#contentA .right h2 span{height:20px;line-height:20px;font-size:18px; color:#000;font-family:'Microsoft YaHei',simsun;}
+#contentA .right .tt{height:20px;}
+#contentA .right .tt span{float:left;overflow:hidden;line-height:20px;height:20px;font-size:14px;color:#000;font-family:'Microsoft YaHei',simsun;}
+#contentA .right .tt span a{color:#000;}
+#contentA .right .pic{position:relative;width:262px;height:112px;margin:10px auto 0}
+#contentA .right .pic img{border:1px #E5E5E5 solid}
+#contentA .right .pic p{position:absolute;left:1px;bottom:1px;width:260px;color:#fff;padding:4px 0 0;line-height:20px;height:20px;text-align:center}
+#contentA .right .pic p i{position:absolute;height:24px;width:260px;left:0;top:0;background:#000;filter:alpha(opacity=50);opacity: 0.50;}
+#contentA .right .pic p a{position:relative;z-index:2;color:#fff}
+#contentA .right .list12 ul{width:240px;margin:7px auto 0}
+
+#contentA .right .cons{width:262px;height:202px;margin:10px auto 0;overflow:hidden;position:relative;}
+#contentA .right .cons .con{float:left;width:9999px;position:absolute;left:0;top:0}
+#contentA .right .picA{position:relative;width:262px;height:202px;float:left;display:inline}
+#contentA .right .picA img{border:1px #E5E5E5 solid;}
+#contentA .right .picA span{position:absolute;left:1px;bottom:1px;width:260px;line-height:20px;text-align:center;display:block;padding:4px 0 0;height:21px;color:#fff}
+#contentA .right .picA span i{position:absolute;height:25px;width:260px;left:0;top:0;background:#000;filter:alpha(opacity=50);opacity: 0.50;}
+#contentA .right .picA span a{position:relative;z-index:2;color:#fff}
+
+#contentA .right .btns{position:relative;height:1px;font-size:0;line-height:0}
+#contentA .right .btns a{position:absolute;width:35px;height:35px;left:8px;top:-120px;_FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://digi.it.sohu.com/upload/dw201208081015images/bg07.png',sizingMethod='scale');background:url(http://digi.it.sohu.com/upload/dw201208081015images/bg07.png)!important;background:none;}
+#contentA .right .btns a:hover.up{_FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://digi.it.sohu.com/upload/dw201208081015images/bg08.png',sizingMethod='scale');background:url(http://digi.it.sohu.com/upload/dw201208081015images/bg08.png)!important;background:none;}
+#contentA .right .btns a.down{left:auto;right:8px;_FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://digi.it.sohu.com/upload/dw201208081015images/bg09.png',sizingMethod='scale');background:url(http://digi.it.sohu.com/upload/dw201208081015images/bg09.png)!important;background:none;}
+#contentA .right .btns a:hover.down{_FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://digi.it.sohu.com/upload/dw201208081015images/bg10.png',sizingMethod='scale');background:url(http://digi.it.sohu.com/upload/dw201208081015images/bg10.png)!important;background:none;}
+
+#contentA .blockRA{margin:0 auto 30px}
+#contentA .blockRA .pic-text{margin:12px auto 0}
+#contentA .blockRA .pic-text div{_margin-right:7px;width:85px;position:relative;}
+#contentA .blockRA .pic-text div img{border:1px #E5E5E5 solid}
+#contentA .blockRA .pic-text div .sn{position:absolute;top:1px;left:1px;background:#F2F2F2;width:20px;display:inline-block;font:13px/16px "Arial";text-align:center;height:18px;color:#333}
+#contentA .blockRA .pic-text div .sn-red{background:#DF1D1B;color:#fff}
+#contentA .blockRA .pic-text h4{font-size:14px;line-height:16px;padding:0 0 2px}
+#contentA .blockRA .pic-text p{color:#999;padding:0 0 4px}
+#contentA .blockRA .pic-text .plan{display:inline-block;padding-left:20px;background-position:0 -210px;color:#DF1D1B}
+#contentA .blockRA .pic-text .plan a{color:#DF1D1B}
+#contentA .blockRA .line{margin:12px auto 0}
+
+#contentA .blockRB{margin:0 auto 30px}
+#contentA .blockRB .pic-text{line-height:18px;margin:14px auto 0;color:#999}
+#contentA .blockRB .pic-text div{margin-right:14px;_margin-right:11px}
+#contentA .blockRB .pic-text div img{border:1px #E6E6E6 solid}
+#contentA .blockRB .pic-text h4{font-size:14px;line-height:16px;padding:0 0 5px}
+#contentA .blockRB .pic-text h5{text-align:right;padding:4px 0 0}
+#contentA .blockRB .line{margin:14px auto 0}
+#contentA .blockRB .txt{margin:7px auto 0;line-height:28px;width:240px;color:#999}
+
+#contentA .boxRA{margin:20px auto 0}
+#contentA .boxRB{margin:20px auto 0;border-top:1px #E1E1E1 solid;padding:18px 0 0}
+#contentA .boxRC{margin:30px auto 0;border-top:1px #E1E1E1 solid;padding:18px 0 0}
+#contentA .boxRD{margin:30px auto 0;border-top:1px #E1E1E1 solid;padding:18px 0 0}
+#contentA .boxRD .tt span{background-position:-130px -160px}
+
+#contentA .blockRC{margin:0 auto 30px}
+
+#contentA .boxRE{margin:20px auto 0}
+#contentA .boxRF{margin:26px auto 0}
+#contentA .boxRG{margin:26px auto 0}
+
+#contentA .blockRD{margin:0 auto 20px}
+#contentA .blockRD .pic{margin:14px auto 0}
+
+#contentA .blockRE{margin:0 auto 20px}
+#contentA .blockRE .pic{margin:14px auto 0}
+
+#contentA .blockRF{margin:0 auto 20px}
+.sn-list{margin:12px auto 0}
+.sn-list li{padding:5px 0 5px 16px;line-height:18px}
+.sn-list .sn{display:inline-block;width:16px;margin-right:11px;height:16px;font:13px/15px "Arial";text-align:center;background:#B2BAC5;color:#fff}
+.sn-list .sn-n{background:#DF1D1B}
+
+.bottom{ width:100%; background:#f2f2f2 url(http://sports.sohu.com/upload/chinesefootball20130628/images/bottom_bg.jpg) repeat-x top center; overflow:hidden;}
+.bottom .cons{ width:950px; margin:0 auto; background:url(http://sports.sohu.com/upload/chinesefootball20130628/images/bottomcon_bg.jpg) repeat-y 600px 0px; overflow:hidden; padding:10px 0px 20px 0px;}
+.bottom .cons .left{ width:600px; text-align:left;}
+.bottom .cons .right{ width:310px;}
+.bottom .cons .left h2{ height:35px; line-height:35px; text-align:left; font-family:"微软雅黑"; font-size:18px; color:#000;}
+.bottom .cons .right h2{ height:35px; line-height:35px; text-align:left; font-family:"微软雅黑"; font-size:18px; color:#000; padding-bottom:10px;}
+.bottom .cons .left .links{ margin-top:10px;}
+.bottom .cons .left .links li{ line-height:24px; float:left; width:50%;}
+
+#foot{ width:100%; background:#212121; border:none; color:#fff; margin:0 auto; padding:50px 0px;}
+#foot a{ color:#fff;}
+
+
+</style>
+
+
+
+
+
+
+
+ <style>
+/* 2008.6.6修改开始 */
+.cut0{background:url(http://sports.sohu.com/upload/ZtImgRed/cut0_bg.gif);}
+.cut0 .cut0_bot{background:url(http://sports.sohu.com/upload/ZtImgRed/bot1.gif);}
+.cut0 .cc .l .title{background:url(http://i0.itc.cn/20101012/9b0_1c5f2ab1_44ba_4f2e_a0e3_3465c7a88ebc_0.jpg) no-repeat;color:#fff;line-height:48px;text-align:left; text-indent:35px;font-size:18px;color:#ffa800;}
+.cut0 .cc .l .title span img{margin:0;float:left;}
+
+.cut0 .cc .l .line2{	background: url(http://sports.sohu.com/upload/eurocup2008/line2.gif);width: 370px;margin:5px auto;height: 1px;font-size: 1px;}
+.line{border-bottom:#e0e0e0 1px solid;font-size:1px;height:1px;overflow:hidden;}
+.blank5_w{width:100%;height:5px;font-size:1px;clear:both;background:#fff;clear:both;}
+
+.cut0 .cc .w1{width: 370px;margin:0 auto;padding:5px 0;}
+.cut0 .cc .w1 span {color:#003F8E}
+.cut0 .cc .w1 span a{color:#003F8E}
+.cut0 .cc .w1 p{float:left;}
+.cut0 .cc .w1 .f14list{margin:0;float:left;width:270px;font-size:14px;line-height:24px;}
+
+
+
+/* 图混 */
+.pt{text-align:left;margin:0 auto;padding:8px 0 0;line-height:18px;}
+.pt img{float:left;margin:0 8px 0 0;padding:0px;background:#fff;border:0px solid #C9C9C9;}		
+.pt P{clear:none;padding:0;margin:0px;}
+.pt span{font-weight:bold;display:block;text-align:left;}
+.pt .more{font-weight:normal;display:inline;}
+
+
+/* 组图 */
+.pp{text-align:center;clear:both;margin:8px auto 0;padding:0px;}
+.pp ul{margin:0px;padding:0px;}
+.pp img{margin:0 auto;padding:0px;background:#fff;border:0px solid #C9C9C9;}		
+.pp li{height:1%;margin:0px auto;padding:0px;text-align:center;}
+.pp li a{color:#004D9F}
+.pp span{display:block;font-weight:normal;margin:2px auto 3px;}
+
+/* 分列2 */
+.c2,.c3,.c4,.c5{width:100%;text-align:center;margin:0 auto;clear:both;padding:0;border:0}
+.c2 div,.c2 li,.c2 P{width:49.9%;float:left}	
+.c3 div,.c3 li,.c3 P{width:33%;float:left;}	
+.c4 div,.c4 li,.c4 P{width:24.9%;float:left;}	
+.c5 div,.c5 li,.c5 P{width:19.9%;float:left;}
+
+
+.block1{display:none;}
+
+
+.navcm{background:url(http://sports.sohu.com/upload/ZtImgGreen2/navbgxm.gif) no-repeat;width:924px;margin:0 auto;line-height:28px;padding:0 15px;text-align:left;height:63px;}
+
+
+.lh10 {line-height:10px}
+
+
+
+
+/*zjw添加样式20090406 start*/
+
+.Nav{background:url(http://i0.itc.cn/20090406/549_f02f5eeb_074c_4586_ab3a_3d4b853525c0_0.jpg) no-repeat center #fff;line-height:36px;font-size:14px;font-family:微软雅黑;color:#fff;}
+.Nav a{color:#fff;} 
+.cut0 .focusArea .r li{font-size:14px;text-align:left;line-height:25px;text-indent:8px;}
+.lh10{line-height:10px;height:10px;margin-top:-5px;}
+/*.cut0 .focusArea .r h1 a{color:#f30;}*/
+
+.cut0 .focusArea .l .botbg{border-top:#0d2b92 1px solid; background:#fff;height:5px;font-size:1px;line-height:1px;}
+
+
+
+.cBody table,.cBody table a {color:#707070;font-family:arial}
+.h td {padding-top:4px;padding-bottom:4px}
+.j {color:#3A71A5}
+.bgline {height:28px;background:url(http://sports.sohu.com/upload/20070602sdm/images/line1.gif) repeat-x center}
+
+.dataCount {width:182px;border:1px solid #ADB9C2;background:#fff;}
+.dataCount h3 {background:url(http://sports.sohu.com/upload/20070602sdm/images/p2_bg1.gif);text-align:left;padding:5px 0 0 9px;font-size:14px;font-weight:bold;font-family:arial;}
+
+.stitle {width:183px;padding:0;height:24px;background:url(http://sports.sohu.com/upload/20070602sdm/images/p1_bg1.gif);padding-top:4px}
+.stitle ul {width:183px;float:center;}
+.stitle li {width:34px;height:18px;padding-top:6px;color:#3A71A5;background:url(http://sports.sohu.com/upload/20070602sdm/images/p1_bg4.gif);margin-right:2px;float:left;cursor:pointer}
+.stitle .active {background:url(http://sports.sohu.com/upload/20070602sdm/images/p1_bg5.gif);color:#000;cursor:pointer;font-weight:bold}
+
+
+.cContent {width:96%;margin:0 auto;color:#3A71A5;padding:0};
+
+.cut0 .r li a{color:#0048A2;text-decoration:underline;}
+
+/*zjw添加样式20090406 end*/
+
+.cut02a .left{width:680px;background:#fff;}
+.cut02a .left h3{line-height: 37px;background-image: url(http://i0.itc.cn/20101012/9b0_bbde609c_df2c_4398_a566_c701af2655d8_0.jpg);height: 37px;padding-left: 85px;font-family: "黑体";font-size: 18px;color:#fff;text-align: left;}
+.cut02a .left .iframe{padding:6px;width:668px;height:420px;}
+
+.cut02a .right{width:270px;background:#fff;}
+
+.cut02a .right h3{background-image: url(http://i0.itc.cn/20101012/9b0_bbde609c_df2c_4398_a566_c701af2655d8_0.jpg);height: 19px;padding-top: 9px;padding-left: 40px;font-family: "黑体";font-size: 18px;color: #fff;text-align: left;height:31px;}
+.cut02a .right .diaocha{padding: 14px 18px 0;}
+
+.circs1 {width:185px;background:#fff;}
+
+.circs1 li {width:45px;height:19px;padding-top:6px;font-weight:bold;cursor:pointer;float:left;color:#fff;background:url(http://i2.itc.cn/20101020/635_c57d5ec7_59f1_4552_afbc_4e45ac9179c7_0.jpg);margin-right:1px;}
+.circs1 .active {color:#000;background:url(http://i2.itc.cn/20101020/635_10ceaf2f_aa67_4cbc_aa96_b20776c9a981_0.jpg);}
+.circs1 .end {width:92px;height:19px;padding-top:6px;font-weight:bold;float:left;color:#fff;background:url(http://sports.sohu.com/upload/20070910ztg/j4.gif);margin-right:0;}
+.circs1 .end_1 {color:#000;background:url(http://sports.sohu.com/upload/20070910ztg/j3.gif);margin-right:0}
+
+
+
+.cBody table,.cBody table a {color:#707070;font-family:arial}
+.t {background:#ECF5FA}
+.b {background:#ADB9C2}
+.c {background:#77A6D2}
+.k {background:#C6DAEC}
+.h td {padding-top:4px;padding-bottom:4px}
+.j {color:#3A71A5}
+.bgline {height:28px;background:url(http://sports.sohu.com/upload/20070602sdm/images/line1.gif) repeat-x center}
+
+.dataCount {width:650px;border:1px solid #ADB9C2;background:#fff;}
+.dataCount h3 {background:url(http://sports.sohu.com/upload/20070602sdm/images/p2_bg1.gif);text-align:left;padding:5px 0 0 9px;font-size:14px;font-weight:bold;font-family:arial;}
+
+.stitle {width:640px;padding:0 5px;height:24px;background:url(http://sports.sohu.com/upload/20070602sdm/images/p1_bg1.gif);padding-top:4px}
+.stitle ul {width:640px;float:left;}
+.stitle li {width:76px;height:24px; line-height:24px; padding-top:0px; text-align:center;color:#3A71A5;background:url(http://sports.sohu.com/upload/20070602sdm/images/p1_bg4.gif);margin-right:2px;float:left;cursor:pointer}
+.stitle .active {background:url(http://sports.sohu.com/upload/20070602sdm/images/p1_bg5.gif);color:#000;cursor:pointer;font-weight:bold}
+.cContent {width:96%;margin:0 auto;color:#3A71A5;padding:0}
+
+.blockA table td{ height:24px; line-height:24px;}
+
+
+.focusNews{ clear:both; text-align:left; padding:10px 10px 0px 15px; font-family:"微软雅黑"}
+.focusNews h1{ height:28px; line-height:28px; font-size:26px; text-align:left; margin:0px auto 15px; color:#ff4d00;}
+.focusNews h1 a{ color:#ff4d00;}
+.focusNews p{ font-size:14px; line-height:32px; text-align:left;}
+
+
+
+
+</style>
+<script type="text/javascript" src="http://www.sohu.com/sohuflash_1.js"></script>
+<script type="text/javascript" id="sbid-secureinput" sogou-script="true" src="https://BCC0E825-2420-4190-AF25-ABD45D41EA3A/se/secureinputjs/" charset="UTF-8"></script>
+</head>
+<body>
+<div id=fullscreenad style="display:none">&nbsp;</div>
+
+<!--标准矸 st-->
+<div data-type="roll" data-appid="1079" id="isohu-topbar"></div>
+
+<link type="text/css" rel="stylesheet" href="http://news.sohu.com/upload/itoolbar/cms/itoolbar.201410281438.css" charset="UTF-8" />
+<script src="http://news.sohu.com/upload/itoolbar/itoolbar.cms.loader.2016010513.js" charset="UTF-8"></script>
+<style>
+#commend-headNav {overflow:hidden;color:#999;font: 14px/24px "\5B8B\4F53";height: 24px;margin:10px auto 9px;width:950px;}
+#commend-headNav a {color: #333333;margin:0 5px 0 6px;text-decoration:none;}
+#commend-headNav a.first{margin-left:0;}
+#commend-headNav a.last{margin-right:0;}
+#commend-headNav a.n3{margin-right:6px}
+#commend-headNav a:hover{color: #CC0000;text-decoration:underline;}
+</style>
+<div class="area" id="commend-headNav"><a class="first" href="http://www.sohu.com/">首页</a>-<a href="http://news.sohu.com/">新闻</a>-<a class="n3" href="http://mil.sohu.com/">军事</a>-<a href="http://cul.sohu.com/">文化</a>-<a href="http://history.sohu.com/">历史</a>-<a class="n3" href="http://sports.sohu.com/">体育</a>-<a href="http://sports.sohu.com/nba.shtml">NBA</a>-<a href="http://tv.sohu.com/">视频</a>-<a class="n3" href="http://yule.sohu.com/">娱乐</a>-<a href="http://business.sohu.com/">财经</a>-<a href="http://stock.sohu.com/">股票</a>-<a class="n3" href="http://it.sohu.com/">科技</a>-<a href="http://auto.sohu.com/">汽车</a>-<a href="http://www.focus.cn">房产</a>-<a href="http://fashion.sohu.com/">时尚</a>-<a href="http://baobao.sohu.com/">母婴</a>-<a href="http://learning.sohu.com/">教育</a>-<a href="http://health.sohu.com/">健康</a>-<a href="http://travel.sohu.com/">旅游</a>-<a href="http://chihe.sohu.com">美食</a>-<a class="last" href="http://astro.women.sohu.com/">星座</a></div>
+<!--标准矸 end-->
+
+<!--矸砑 st-->
+<div style="BACKGROUND: url(http://i1.itc.cn/20180929/629_740de585_a4fd_9b75_5454_ead2da976c0e_1.jpg) no-repeat center top; HEIGHT: 350px"></div>
+
+<!--导航 st-->
+<sohuadcode></sohuadcode>
+<div style="BACKGROUND: url(http://i1.itc.cn/20180929/629_3e84d8c8_7961_288e_7a01_f9665970873f_1.png) no-repeat center top; HEIGHT: 25px"></div>
+
+<div class="cutA area">
+<style type="text/css"> 
+.wrapper
+ { width:1000px; height:450px;  overflow:hidden; position:relative; }
+ .iframe { width:960px;height:530px; position:absolute; top:-102px; left:0px; }
+  </style> 
+<div class="wrapper"> 
+ <iframe class="iframe" src="https://tv.sohu.com/v/MjAxODEwMDEvbjYwMDYwMjU3My5zaHRtbA==.html" scrolling="no" frameborder="0">
+  </iframe>
+ </div> 
+</div>
+
+<div class="area top"> 
+ <div id="p1_picTurn" class="focus"> 
+
+
+
+
+
+
+
+
+<div class="pic">
+<a href="http://www.sohu.com/picture/257992983" target="_blank"><img border="0" src="http://i3.itc.cn/20181007/629_853b0038_86ad_9de7_b337_e7de7ae799b7_1.png" width="640" height="360"></a></div>
+
+
+	
+
+
+
+<div class="pic hidden">
+
+<a href="http://www.sohu.com/a/258011521_428290" target="_blank"><img border="0" src="http://i3.itc.cn/20181007/629_feed1c80_7d60_3f2c_5ba3_0ab79da3cda6_1.png" width="640" height="360"></a></div>	
+
+
+
+
+
+
+
+<div class="nav">
+<i class="cur">1</i> 
+<i>2</i> 
+
+
+</div> 
+
+
+
+
+
+<div class="info"> 
+<h4 class="title"><a href="http://www.sohu.com/picture/257992983" target="_blank">国庆返程 网友晒“爸妈给装的后备箱”</a></h4>
+<p><a href="http://www.sohu.com/picture/257992983" target="_blank">
+国庆返程高峰来临，网友们晒出被妈妈塞得满满登登的后备箱和行李箱。
+一点一滴都是无尽的不舍和牵挂。</a></p>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="info hidden"> 
+
+<h4 class="title"><a href="http://www.sohu.com/a/258011521_428290" target="_blank">“我爱你中国”主题灯光秀扮靓乌鲁木齐</a></h4>
+<p><a href="http://www.sohu.com/a/258011521_428290" target="_blank">
+过去，乌鲁木齐曾经有一个别称叫“边城”。顾名思义就是“边疆之城”，也有地处偏远的意思在里面，但现在基本听不到这个称谓了。国庆期间，“我爱你中国”主题灯光秀在乌鲁木齐城区全面绽放，更吸引了不少摄影爱好者和市民来这里留存一份城市记忆。</a></p>
+
+</div>
+
+
+
+
+
+
+</div>
+
+ </div>
+
+
+
+<div class="area" id="contentA">
+	<div class="left">
+    	<div class="conmend">
+<h2><span><strong>国庆消息</strong></span></h2>
+<div class="focusNews">
+
+
+
+
+
+
+
+
+<h1><a class="" title="" href="http://www.sohu.com/a/258113246_123753" target="_blank">黄金周7.26亿人次出游 消费5990.8亿元</a>| <a href="http://www.sohu.com/a/258111972_123753" title="" target="_blank">感觉被掏空？</a></h1>
+
+
+
+
+
+<p> 
+
+<a class="" title="" href="http://www.sohu.com/a/258110034_123753" target="_blank">冷空气持续影响北方地区 内蒙古黑龙江等多地有雪</a>| <a href="http://www.sohu.com/a/257985909_123753" title="" target="_blank">北京天津等地降幅超10℃</a><br>
+
+
+
+ <a href="http://www.sohu.com/a/258102904_148781" title="" target="_blank">国庆7天全加班涉嫌违反劳动法</a>|  <a class="" title="" href="http://www.sohu.com/a/257843976_123753" target="_blank">专家吁增设“避暑黄金周”</a>|  <a href="http://www.sohu.com/a/257987930_267106" title="" target="_blank">如何摆脱假日综合征？教你四招</a><br>
+
+
+
+<a class="" title="" href="http://www.sohu.com/a/257996552_267106" target="_blank">一日游套路多 旅客被旅行社扔在商场半日购</a>| <a title="" href="http://www.sohu.com/a/257925435_123753" target="_blank">“另类”度假：国人“宅”度黄金周 </a>
+<br>
+
+
+<a href="http://www.sohu.com/a/257949875_161795" title="" target="_blank">中国游客进泰姬陵欲放无人机 被印度警方带回调查</a> |  <a title="" href="http://www.sohu.com/a/257986331_162758" target="_blank">国庆结婚“扎堆儿” 有的酒店一天20场婚礼</a> 
+<br>
+
+
+
+
+
+
+</p><br>
+</div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="conmend">
+<h2><span><strong>各地共庆</strong></span></h2>
+<div class="focusNews">
+
+
+
+
+<table border="0" cellpadding="5" cellspacing="5" width="650">
+  <tbody><tr>
+
+
+
+<td><a href="http://www.sohu.com/a/257294566_114731" target="_blank"><img alt="" src="http://i3.itc.cn/20181001/629_69fb919a_2b10_526f_002e_78bc2ca0ab34_1.png" border="0" height="120" width="200"></a></td>
+
+
+    <td><a href="http://www.sohu.com/a/257276765_742667" target="_blank"><img alt="" src="http://i2.itc.cn/20181001/629_9a1c6ad3_cd83_ab25_dfd3_0864cd92f63c_1.png" border="0" height="120" width="200"></a></td>
+
+
+    <td><a href="http://www.sohu.com/a/257318519_114731" target="_blank"><img alt="" src="http://i1.itc.cn/20181001/629_4a7e1b6e_f767_be9f_8874_ddfec79601fa_1.png" border="0" height="120" width="200"></a></td>
+
+
+
+  </tr>
+  <tr>
+
+
+ <td><div align="center"><a href="http://www.sohu.com/a/257294566_114731" target="_blank">向人民英雄致敬</a></div></td>
+
+
+
+
+    <td><div align="center"><a href="http://www.sohu.com/a/257276765_742667" target="_blank">哈尔滨灯光秀 “冰城”光彩璀璨</a></div></td>
+
+    <td><div align="center"><a href="http://www.sohu.com/a/257318519_114731" target="_blank">成都天府广场升国旗仪式</a></div></td>
+
+
+  </tr>
+</tbody></table>
+
+
+
+
+
+
+
+<table border="0" cellpadding="5" cellspacing="5" width="650">
+  <tbody><tr>
+
+
+
+<td><a href="http://www.sohu.com/a/257294680_114731" target="_blank"><img alt="" src="http://i0.itc.cn/20181001/629_f1022b71_b5f6_5358_230e_60ceabd1c56a_1.png" border="0" height="120" width="200"></a></td>
+
+
+    <td><a href="http://www.sohu.com/a/257294383_114731" target="_blank"><img alt="" src="http://i3.itc.cn/20181001/629_b4efbfdd_b0d3_0b2b_256a_a4b54d47a8bc_1.png" border="0" height="120" width="200"></a></td>
+
+
+    <td><a href="http://www.sohu.com/a/257294654_114731" target="_blank"><img alt="" src="http://i0.itc.cn/20181001/629_0bfeaddb_7803_0f64_1622_ce573659fbf7_1.png" border="0" height="120" width="200"></a></td>
+
+
+
+  </tr>
+  <tr>
+
+
+ <td><div align="center"><a href="http://www.sohu.com/a/257294680_114731" target="_blank">山东省烟台多彩非遗 精彩国庆 </a></div></td>
+
+
+
+
+    <td><div align="center"><a href="http://www.sohu.com/a/257294383_114731" target="_blank">浙江湖州小学生剪纸迎国庆 </a></div></td>
+
+    <td><div align="center"><a href="http://www.sohu.com/a/257294654_114731" target="_blank">港澳同胞齐贺祖国生日</a></div></td>
+
+
+  </tr>
+</tbody></table>
+</div></div>
+
+
+
+
+<div class="new-article">
+        	<h2><span><strong>景区攻略</strong>　</span></h2></div>
+<div class="pic_new">
+
+
+<div style="OVERFLOW: scroll;MARGIN: 0px auto; WIDTH:620px; HEIGHT:400px; OVERFLOW-x: hidden">
+ 
+<img src="http://society.people.com.cn/NMediaFile/2018/0910/MAIN201809101725000007375745281.jpg">
+
+</div>
+</div>
+        <div class="conmend">
+<h2><span><strong>改革红利</strong></span></h2>
+<div class="focusNews">
+
+<h1><a title="" href="http://www.sohu.com/a/257987467_428290" target="_blank">习近平：将改革进行到底</a> <a href="http://www.sohu.com/a/257989323_362042" title="" target="_blank">民心是最大的政治</a></h1>
+<p>
+
+
+<a title="" href="http://www.sohu.com/a/257233613_114988" target="_blank">国务院：1585个税目商品11月起降进口关税</a>| <a href="http://www.sohu.com/a/257260570_123753" title="" target="_blank">还有这些新规影响你我生活</a><br>
+
+
+<a title="" href="http://www.sohu.com/a/257279534_267106" target="_blank">又一波利好！四部门10月1日起实行电商出口免税新规</a>| <a title="" href="http://www.sohu.com/a/256411386_162758" target="_blank">国务院：研究适当降低社保费率</a> <br>
+
+
+
+
+
+
+
+
+
+
+</p><br>
+
+
+</div></div>
+        <div class="conmend">
+<h2><span><strong>辉煌中国</strong></span></h2>
+<div class="focusNews">
+
+
+<h1><a href="http://www.sohu.com/a/256813216_267106" title="" target="_blank">港珠澳大桥开展首次三地联合试运行</a></h1>
+<p>
+
+
+<a href="http://www.sohu.com/a/256941678_123753" title="" target="_blank">海南成为首个机构改革省份 新厅局集中挂牌</a> | <a href="http://www.sohu.com/a/256483197_162758" title="" target="_blank">40年深圳变迁：“奇迹之城”处处展现改革创新魅力</a><br>
+
+
+<a href="http://www.sohu.com/a/256737807_267106" title="" target="_blank">上海自贸区五周年：从一个到一群 量变引发质变</a> | <a href="http://www.sohu.com/a/255685071_479794" title="" target="_blank">陆家嘴：28年从“阡陌纵横”到“垂直金融街”</a><br>
+
+
+
+<a href="http://www.sohu.com/a/256321491_267106" title="" target="_blank">天宫二号状态稳定功能正常 将于2019年7月后受控离轨</a> | <a title="" href="http://www.sohu.com/a/256234325_267106" target="_blank">中国载人空间站2022见</a><br>
+
+
+<a href="http://www.sohu.com/a/256403672_267106" title="" target="_blank">中国第九次北极科考实现多个“首次”与“之最”</a> | <a href="http://www.sohu.com/a/256408760_267106" title="" target="_blank">我国工程教育迈入全球“第一方阵”</a><br>
+
+
+
+
+
+
+
+
+
+
+</p><br>
+</div></div>
+        
+
+        <div class="conmend">
+<h2><span><strong>见证者说</strong></span></h2>
+<div class="focusNews">
+
+
+
+
+<table width="650" border="0" cellspacing="5" cellpadding="5">
+  <tbody><tr>
+
+
+
+<td><a href="http://www.sohu.com/a/250848045_114731" target="_blank"><img src="http://i2.itc.cn/20180928/629_f8a4ed36_f5c2_ffc2_2d55_83c45bcfdfd8_1.jpg" alt="" width="200" height="120" border="0"></a></td>
+
+
+    <td><a href="http://www.sohu.com/a/249617285_100116569" target="_blank"><img src="http://i3.itc.cn/20180928/629_b2e45648_88bd_50b7_4f06_a4577e32cb4d_1.jpg" alt="" width="200" height="120" border="0"></a></td>
+
+
+    <td><a href="http://www.sohu.com/a/254465883_114731" target="_blank"><img src="http://i1.itc.cn/20180928/629_f764f380_dc18_83cd_f54b_a6222c33962c_1.jpg" alt="" width="200" height="120" border="0"></a></td>
+
+
+
+  </tr>
+  <tr>
+
+
+ <td><div align="center"><a href="http://www.sohu.com/a/250848045_114731" target="_blank">陆克文：“一带一路”<br>中国走出去的新长征</a></div></td>
+
+
+
+
+    <td><div align="center"><a href="http://www.sohu.com/a/249617285_100116569" target="_blank">退役军人单大鹏：自主创业干养老</a></div></td>
+
+    <td><div align="center"><a href="http://www.sohu.com/a/254465883_114731" target="_blank">微波山下 两代人的蛇口故事</a></div></td>
+
+
+  </tr>
+</tbody></table>
+
+
+
+
+
+
+
+<table width="650" border="0" cellspacing="5" cellpadding="5">
+  <tbody><tr>
+
+
+
+<td><a href="http://www.sohu.com/a/250474920_100116569" target="_blank"><img src="http://i2.itc.cn/20180928/629_48ffcc98_2b43_bdab_9b16_9861a71d22e2_1.jpg" alt="" width="200" height="120" border="0"></a></td>
+
+
+    <td><a href="http://www.sohu.com/a/233669650_362042" target="_blank"><img src="http://i3.itc.cn/20180928/629_7c5fcb94_d758_8e87_0678_935eb1e9b980_1.jpg" alt="" width="200" height="120" border="0"></a></td>
+
+
+    <td><a href="http://www.sohu.com/a/144453632_126758" target="_blank"><img src="http://i0.itc.cn/20180928/629_512bbbc5_736d_7df6_f414_16b033ae2fc1_1.jpg" alt="" width="200" height="120" border="0"></a></td>
+
+
+
+  </tr>
+  <tr>
+
+
+ <td><div align="center"><a href="http://www.sohu.com/a/250474920_100116569" target="_blank">日本美发师投身北京美发业15年</a></div></td>
+
+
+
+
+    <td><div align="center"><a href="http://www.sohu.com/a/233669650_362042" target="_blank">李谷一：《难忘今宵》唱了32年</a></div></td>
+
+    <td><div align="center"><a href="http://www.sohu.com/a/144453632_126758" target="_blank">任凤岐：恢复高考的见证者</a></div></td>
+
+
+  </tr>
+</tbody></table>
+</div></div>
+		
+
+		
+
+		
+
+		
+
+		
+
+        <div class="new-article">
+        	
+            
+            
+			
+				
+
+			
+		
+        <div class="pages"></div>
+
+            
+            
+            
+            <div class="clear"></div>
+
+        </div>
+    </div>
+    <div class="right">
+    	<div class="blockRD">
+<h2><span>出行宝典 3分钟看懂</span></h2>
+<div class="blank8"></div>
+<div class="text" style="line-height:20px;"> <a href="https://tv.sohu.com/v/MjAxODA5MjkvbjYwMDYwMTU5OS5zaHRtbA==.html" target="_blank"><img width="265" height="165" alt="" src="http://i0.itc.cn/20180929/629_e8c3bc68_ea04_6d49_7160_b56e2161ce64_1.png"></a><br>
+<p>国庆出行指南：穿什么 去哪玩 几点走 3分钟动画告诉你……[<a href="https://tv.sohu.com/v/MjAxODA5MjkvbjYwMDYwMTU5OS5zaHRtbA==.html" target="_blank">详细</a>]</p><br>
+</div>
+
+<div class="blank8"></div>
+
+</div>
+
+
+
+<div class="blockRD">
+<h2><span>图解：避堵指南</span></h2>
+<div class="blank8"></div>
+<div class="text" style="line-height:20px;"> <a href="http://www.sohu.com/a/256872809_114731" target="_blank"><img width="265" height="180" alt="" src="http://i3.itc.cn/20181001/629_959b29e8_606c_5d9e_d33e_93f7cbc1ce78_1.png"></a><br>
+
+</div>
+
+<div class="blank8"></div>
+
+</div>
+
+
+
+
+<div class="blockRD">
+<h2><span>神吐槽：十一魔幻旅游攻略</span></h2>
+<div class="blank8"></div>
+<div class="text" style="line-height:20px;"> <a href="https://www.sohu.com/a/257125092_117369" target="_blank"><img width="265" height="165" alt="" src="http://i3.itc.cn/20180930/629_90f6a9d1_6805_6a6c_de76_3a5369e7fa5f_1.png"></a><br>
+<p>十一来了，有没有什么地方，人少，花钱不多，不用被宰，不用排队，还让人感到灵魂有趣、印象深刻呢？天下之大，无奇不有。看顾了大山大河、名胜古迹的你，不如尝尝下面的民间魔幻小品？[<a href="https://www.sohu.com/a/257125092_117369" target="_blank">详细</a>]</p><br>
+</div>
+
+<div class="blank8"></div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="blockRD">
+<h2><span>揭秘天安门广场花坛的故事</span></h2>
+<div class="blank8"></div>
+<div class="text" style="line-height:20px;"> <a href="http://news.sohu.com/s2018/0333/s550975000/index.shtml" target="_blank"><img width="265" height="165" alt="" src="http://i0.itc.cn/20180929/629_125972f9_6990_a981_4c10_fe5241feba8e_1.png"></a><br>
+<p>国庆期间天安门广场为啥要放花篮？这规定是从啥时候开始的？“大花篮”到底装的什么花儿？岁岁年年花相似，今年有啥不一样？北京市园林古建设计研究院天安门广场花坛总设计师蓝海浪揭秘天安门广场花坛后的故事。[<a href="http://news.sohu.com/s2018/0333/s550975000/index.shtml" target="_blank">详细</a>]</p><br>
+</div>
+
+<div class="blank8"></div>
+
+</div>
+<sohuadcode></sohuadcode>
+        <div class="blockRD">
+<h2><span>改革开放40年：致敬改革者！</span></h2>
+<div class="blank8"></div>
+<div class="text" style="line-height:20px;"> <a href="http://news.sohu.com/s2018/gaige40/index.shtml" target="_blank"><img width="265" height="180" alt="" src="http://i2.itc.cn/20180927/629_e22ac1f9_4f24_8aa8_bc9d_554613eadc8d_1.jpg"></a><br>
+<p>四十年的中国改革，我们需要向一些人致敬，这些社会阶层做出了重要的贡献。[<a href="http://news.sohu.com/s2018/gaige40/index.shtml" target="_blank">详细</a>]</p><br>
+</div>
+
+<div class="blank8"></div>
+
+</div>
+        
+
+        
+
+        <div class="blockRD">
+<h2><span>2018年全国两会</span></h2>
+<div class="blank8"></div>
+<div class="text" style="line-height:20px;"> <a href="http://news.sohu.com/s2018/lianghui/index.shtml" target="_blank"><img width="265" height="180" alt="" src="http://i0.itc.cn/20180927/629_2a5e665a_53b8_8fef_5fed_bd51a5cb708c_1.jpg"></a><br>
+<p>2018年3月17日，十三届全国人大一次会议在北京人民大会堂举行第五次全体会议。习近平当选中华人民共和国主席、中华人民共和国中央军事委员会主席。[<a href="http://news.sohu.com/s2018/lianghui/index.shtml" target="_blank">详细</a>]</p><br>
+
+</div>
+
+<div class="blank8"></div>
+
+</div>
+        
+        
+        
+
+        
+
+        
+
+    </div>
+</div>
+
+
+
+
+<sohuadcode></sohuadcode>
+<div id="foot" class="Area"> 
+Copyright &copy; 2018 Sohu.com Inc. All Rights Reserved. 搜狐公司 <span class="unline"><a href="http://corp.sohu.com/s2007/copyright/" target="_blank" rel="nofollow">版权所有</a> <a href="http://roll.sohu.com" target="_blank">全部新闻</a> <a href="http://blog.sohu.com/roll" target="_blank">全部博文</a></span><br />
+</div>
+
+<SCRIPT language=JavaScript src="https://js.sohu.com/pv.js"></SCRIPT>
+<SCRIPT language=JavaScript src="http://a1.itc.cn/pv/js/spv.1309051632.js"></SCRIPT>
+<script language="javascript" src="http://js.sohu.com/wrating20120726.js"></script>
+<script language="javascript">
+var  _wratingId = null;
+try{
+_wratingId = _getAcc();
+}catch(e){}
+if(_wratingId !=null){
+document.write('<scr'+'ipt type="text/javascript" src="http://sohu.wrating.com/a1.js"></scr'+'ipt>');
+}
+</script>
+<script language="javascript">
+if(_wratingId !=null){
+document.write('<scr'+'ipt type="text/javascript">');
+document.write('var vjAcc="'+_wratingId+'";');
+document.write('var wrUrl="http://sohu.wrating.com/";');
+document.write('try{vjTrack();}catch(e){}');
+document.write('</scr'+'ipt>');
+}
+</script>
+<script> require(["sjs/matrix/ad/passion"]);</script>
+<!--SOHU:SUB_FOOT_DIV-->
+ 
+
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="zh" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="zh" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh">
+<!--<![endif]-->
+<head>
+<title>首页</title>
+
+<!-- Meta -->
+<meta charset="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!-- JS Global Compulsory -->			
+<script type="text/javascript" src="/assets/plugins/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+	<script type="text/javascript" src="/assets/js/mustache.min.js"></script>
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="favicon.ico">
+ <!-- CSS&JS Loading -->
+    <link rel="stylesheet" href="/assets/plugins/pace/pace-theme-barber-shop.css" />
+    <script src="/assets/plugins/pace/pace.min.js"></script>
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="/assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/plugins/flexslider/flexslider.css">     
+    <link rel="stylesheet" href="/assets/plugins/layer-slider/layerslider/css/layerslider.css">
+    <link rel="stylesheet" href="/assets/plugins/creative-buttons/css/component.css">
+    <link rel="stylesheet" href="/assets/plugins/ladda-buttons/css/custom-lada-btn.css">
+    <link rel="stylesheet" href="/assets/css/plugins/hover-effect/css/custom-hover-effects.css">   
+
+    <!-- CSS Theme -->    
+    <link rel="stylesheet" href="/assets/css/themes/orange.css" id="style_color">
+
+
+<!-- CSS Customization -->
+<link rel="stylesheet" href="/assets/css/back-to-top.css">
+<!-- CSS moudules -->
+<link rel="stylesheet" href="/assets/css/banner.css">
+<link rel="stylesheet" href="/assets/css/circle.css">
+<link rel="stylesheet" href="/assets/css/download.css">
+<link rel="stylesheet" href="/assets/css/group.css">
+<link rel="stylesheet" href="/assets/css/content.css">
+<link rel="stylesheet" href="/assets/css/header.css">
+<link rel="stylesheet" href="/assets/css/banner2.css">
+<link rel="stylesheet" href="/assets/css/container.css">
+<link rel="stylesheet" href="/assets/css/footer.css">
+
+</head>
+
+<body>
+
+	<div class="wrapper">
+
+		<!-- Header Part-->
+		
+	<!--=== Header ===-->
+	<div id="header_container" class="header">
+		<script id="header-template" type="x-tmpl-mustache">
+	
+		<!-- Navbar -->
+		<div class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target=".navbar-responsive-collapse">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="fa fa-bars"></span>
+					</button>
+					<a class="navbar-brand" href="{{index}}"> <img
+						id="logo-header" src="{{logo}}" alt="Logo">
+					</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-responsive-collapse">
+					<ul class="nav navbar-nav">
+						{{#head_links}}
+						<li class="{{#active}}active{{/active}}"><a href="{{link}}">{{text}}</a></li>
+						{{/head_links}}
+					</ul>
+				</div>
+				<!--/navbar-collapse-->
+			</div>
+		</div>
+		<!-- End Navbar -->
+</script>
+	</div>
+	<!--=== End Header ===-->
+	<script type="text/javascript" src="/assets/js/header.js"></script>
+
+		<!-- Banner1 Part-->
+		
+	<!--=== Slider ===-->
+	<script id="banner1-template" type="x-tmpl-mustache">
+		
+				<!-- First slide -->
+        <div class="ls-slide" data-ls="slidedelay:4500;transition2d:25;">
+            <img src="{{background_img}}" class="ls-bg" >
+            {{#flyin_img}}
+            <img src="{{first_img}}" class="ls-l" style="top: 85%; left: 44%;" data-ls="offsetxin:left; durationin:1500; delayin:900; fadein:false; offsetxout:left; durationout:1000; fadeout:false;">
+            <img src="{{second_img}}" class="ls-s-1" style="top:62px; left: 29%;" data-ls="offsetxin:left; durationin:1500; delayin:1500; fadein:false; offsetxout:left; durationout:1000; fadeout:false;">
+			{{/flyin_img}}
+			{{#intro_text}}
+			<span class="ls-s-1" style="font-size:35px; top:200px; left: {{#center}}400{{/center}}{{^center}}590{{/center}}px; slidedirection : top; slideoutdirection : bottom; durationin : 3500; durationout : 3500; delayin : {{#center}}100{{/center}}{{^center}}1000{{/center}};">
+              {{main_1}}
+            </span>
+			<span class="ls-s-1" style="font-size:25px; top:250px; left: {{#center}}400{{/center}}{{^center}}590{{/center}}px; slidedirection : bottom; slideoutdirection : bottom; durationin : 3500; durationout : 3500; delayin :{{#center}}600{{/center}}{{^center}}1500{{/center}};">
+              {{main_2}}
+            </span>
+            <span class="ls-s-1" style="font-size:15px; width:250px; border-top:solid 2px #ff902e; padding-top:10px; top:290px; left: {{#center}}400{{/center}}{{^center}}590{{/center}}px; slidedirection : bottom; slideoutdirection : bottom; durationin : 3500; durationout : 3500; delayin : {{#center}}600{{/center}}{{^center}}1500{{/center}};">
+              {{sub_1}}
+            </span>
+            <span class="ls-s-1" style="font-size:15px; width:250px; padding-top:10px; top:310px; left: {{#center}}400{{/center}}{{^center}}590{{/center}}px; slidedirection : bottom; slideoutdirection : bottom; durationin : 3500; durationout : 3500; delayin : {{#center}}600{{/center}}{{^center}}1500{{/center}};">
+              {{sub_2}}
+            </span>
+		{{#download_button}}
+            <a class="btn-u btn-u-orange ls-s-1" href="{{link}}" style=" padding: 9px 20px; font-size:20px; top:350px; left: {{#center}}400{{/center}}{{^center}}590{{/center}}px; slidedirection : bottom; slideoutdirection : top; durationin : 3500; durationout : 2500; delayin :{{#center}}1100{{/center}}{{^center}}2000{{/center}}; ">
+	      <i class="fa fa-cloud-download"></i>
+              {{text}}
+            </a>
+            {{/download_button}}
+            {{/intro_text}}
+        </div>
+	</script>
+	<div id="layerslider"
+		style="width: 100%; height: 500px; margin: 0px auto;"></div>
+	<!--/layer_slider-->
+	<!--=== End Slider ===-->
+
+	<script type="text/javascript" src="/assets/js/init.js"></script>
+	<script type="text/javascript" src="/assets/js/banner1.js"></script>
+
+		
+		<!-- Group Part -->
+		
+
+	
+
+	<h2 class="categoary"
+		style="text-align: center; width: 100%; margin-top: 20px; margin-bottom: 30px;">&bull;
+		开发人员 &bull;</h2>
+	<script id="group-developers-template" type="x-tmpl-mustache">
+			
+			{{#.}}
+			<div class="person col-md-2 {{tab}}">
+					<div class="avatar">
+						<img src="{{img}}">
+					</div>
+					<p>{{name}}</p>
+					<span>{{description}}</span>
+			</div>
+			{{/.}}
+	</script>
+	<div id="member" style="width: 100%">
+		<div class="container">
+			<div id="member-row-5" class="row"></div>
+		</div>
+
+	</div>
+
+	<!-- Special JS -->
+	<script type="text/javascript" src="/assets/js/group.js"></script>
+
+		
+		<!-- Download Part -->
+		
+	<script id="download-template" type="x-tmpl-mustache">
+			<a name="download"></a>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3">
+						<button class="btn btn-5" disabled="disabled">立即下载</button>
+					</div>
+					<div class="col-sm-3">
+						<a href="{{android_link}}">
+							<button class="btn btn-5 btn-5a fa-arrow-down">
+								<span><i class="fa fa-android"></i>&nbsp&nbsp&nbsp
+									Android</span>
+							</button>
+						</a>
+					</div>
+					<div class="col-sm-3">
+						<a
+							href="{{apple_link}}">
+							<button class="btn btn-5 btn-5a fa-arrow-down">
+								<span><i class="fa fa-apple"></i>&nbsp&nbsp&nbsp iOS</span>
+							</button>
+						</a>
+					</div>
+				</div>
+			</div>
+	</script>
+		<div id="download" style="width: 100%">
+			
+		</div>
+		
+	<script type="text/javascript" src="/assets/js/download.js"></script>
+
+		
+		<!-- Footer Part -->
+		
+	<div style="width: 100%; background-color: #292929">
+		<div id="footer" style="width: 100%; height: 220px; margin: 0px auto;">
+			<!-- First slide -->
+			<div id="footer-wrapper" class="ls-slide"
+				data-ls="slidedelay:0;transition2d:25;">
+
+				<img src="./image/web_31.png" alt="Slider image" class="ls-s-1"
+					style="top: 20px; left: 30px; z-index: 1"
+					data-ls="offsetxin:left; durationin:1500; delayin:0; fadein:false; offsetxout:left; durationout:1000; fadeout:false;"/>
+
+				<img src="./image/web_35.png" alt="Slider image" class="ls-s-1"
+					style="top: 80px; left: 210px; z-index: 1"
+					data-ls="offsetxin:left; durationin:1500; delayin:0; fadein:false; offsetxout:left; durationout:1000; fadeout:false;"/>
+
+				<img src="./image/web_39.png" alt="Slider image" class="ls-s-1"
+					style="top: 120px; left: 750px"
+					data-ls="offsetxin:right; durationin:1500; delayin:0; fadein:false; offsetxout:left; durationout:1000; fadeout:false;"/>
+
+				<a id="contact-us" class="btn-u ls-s-1"
+					href="mailto:danshi_social@163.com"
+					style="padding: 9px 20px; font-size: 17px; background-color: #343434; width: 182px; height: 30px; line-height: 30px; text-align: center; top: 55px; left: 62px; slidedirection: left; durationin: 1500; durationout: 2500; delayin: 0;">
+					联系我们 </a> <span class="ls-s-1"
+					style="font-size: 15px; color: white; top: 190px; left: 30px; durationin: 0; delayin: 0">
+					晨曦工作室 All Rights Reserved. </span> <span class="ls-s-1"
+					style="font-size: 18px; color: white; width: 300px; top: 190px; left: 750px; durationin: 0; delayin: 0;">
+					Enlighten the morning. </span>
+
+			</div>
+		</div>
+		<!--/layer_slider-->
+	</div>
+
+	<!-- Special JS -->
+	<script type="text/javascript" src="/assets/js/footer.js"></script>
+		
+	
+	</div>
+
+
+<!-- <script type="text/javascript" src="/assets/plugins/hover-dropdown.min.js"></script>  -->
+<!-- JS Implementing Plugins -->
+<script type="text/javascript" src="/assets/plugins/back-to-top.js"></script>
+<script type="text/javascript" src="/assets/plugins/flexslider/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="/assets/plugins/counter/waypoints.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/counter/jquery.counterup.min.js"></script> 
+<script type="text/javascript" src="/assets/plugins/circles-master/circles.js"></script>
+<!-- <script type="text/javascript" src="/assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script> -->
+<script type="text/javascript" src="/assets/plugins/creative-buttons/js/classie.js"></script>
+<script type="text/javascript" src="/assets/plugins/ladda-buttons/js/spin.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/ladda-buttons/js/ladda.min.js"></script>
+<!-- Layer Slider -->           
+<script type="text/javascript" src="/assets/plugins/layer-slider/layerslider/js/greensock.js"></script>
+<script type="text/javascript" src="/assets/plugins/layer-slider/layerslider/js/layerslider.transitions.js"></script>
+<script type="text/javascript" src="/assets/plugins/layer-slider/layerslider/js/layerslider.kreaturamedia.jquery.js"></script>
+<!-- End Layer Slider -->
+
+	<!-- JS Page Level -->
+	<script type="text/javascript" src="/assets/js/app.js"></script>
+	<script type="text/javascript" src="/assets/js/pages/index.js"></script>
+	<!-- data -->
+	<script type="text/javascript" src="data.js"></script>
+	<script type="text/javascript" src="/assets/js/load_data.js"></script>	
+	<!--[if lt IE 9]>
+    <script src="/assets/plugins/respond.js"></script>
+    <script src="/assets/plugins/layer-slider/assets/js/html5.js"></script>    
+<![endif]-->
+
+</body>
+</html>

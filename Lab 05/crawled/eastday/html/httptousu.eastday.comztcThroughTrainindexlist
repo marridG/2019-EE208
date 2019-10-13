@@ -1,0 +1,204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>东方直通车</title>
+    <link href="/ztc/ThroughTrain/images/img/main.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        body, td, th {
+            font-family: SimSun;
+        }
+    </style>
+    <script type="text/javascript" src="/ztc/ThroughTrain/images/img/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript">
+
+        if(/Android|iPhone/i.test(navigator.userAgent))
+        {
+            window.location.href=window.location.href.toLowerCase().replace("index", "Mobile").replace("list", "mobilelist");
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <!--顶部-->
+    <div class="topbox">
+        <div class="top"><a href="http://sh.eastday.com/" class="logo"><img src="/ztc/ThroughTrain/images/img/title_sh.jpg" height="40" /></a> <div class="link">|<a href="http://www.eastday.com/" target="_blank">东方网首页</a>|<a href="http://news.eastday.com/" target="_blank">新闻中心</a>|<a href="http://sh.eastday.com/" target="_blank">上海新闻</a>|</div></div>
+    </div>
+    <!--banner-->
+    <div class="banner">
+    <div class="navbox">
+        <div class="nav">
+            <a href="http://www.eastday.com/" target="_blank">东方网首页</a>
+            <a href="http://sh.eastday.com/" target="_blank">上海新闻</a>
+            <a href="http://shzw.eastday.com/" target="_blank">上海政务</a>
+            <a href="http://tousu.eastday.com/ztc/ThroughTrain/index/list" target="_blank">曝光台</a>
+            <a href="http://tousu.eastday.com/ztc/ThroughTrain/index/add" target="_blank">我要投诉</a>
+            <a href="http://sh.eastday.com/2015/summer2016/index.html" target="_blank">热点聚焦</a>
+            <a href="http://people.eastday.com/" target="_blank">回到首页</a>
+        </div>
+    </div>
+</div>
+
+    <!--content-->
+    <div class="content clearfix">
+
+        <div class="querymod">
+            <form id="form1" name="form1" method="post" action="list">
+                <div class="querybox">
+                    <p class="p1">
+                        <b>查&nbsp;询</b><select style="width:88px;" name="countyid" id="countyid">
+                            <option value="0">所在区</option>
+                            <option value="1">浦东新区</option>
+                            <option value="2">黄浦区</option>
+                            <!--卢湾区删除-->
+                            <option value="4">徐汇区</option>
+                            <option value="5">长宁区</option>
+                            <option value="6">静安区</option>
+                            <option value="7">普陀区</option>
+                            <!--闸北区删除-->
+                            <option value="9">虹口区</option>
+                            <option value="10">杨浦区</option>
+                            <option value="11">宝山区</option>
+                            <option value="12">闵行区</option>
+                            <option value="13">嘉定区</option>
+                            <option value="14">金山区</option>
+                            <!--南汇区删除-->
+                            <option value="16">奉贤区</option>
+                            <option value="17">松江区</option>
+                            <option value="18">青浦区</option>
+                            <option value="19">崇明区</option>
+                            <option value="20">其他</option>
+                        </select>
+                        <select style="width:80px;" name="categoryid" id="categoryid" onchange="getCity(this.options[this.selectedIndex].text, document.getElementById('industryid'))">
+                            <option value="0">类别</option>
+                            <option value="1">公共服务</option>
+                            <option value="2">交通运输</option>
+                            <option value="3">综合服务</option>
+                            <option value="4">文体娱乐</option>
+                            <option value="5">城市管理</option>
+                            <option value="6">其他</option>
+                        </select>
+                        <select style="width:140px;" name="industryid" id="industryid">
+                            <option>行业</option>
+                        </select>
+                        <select style="width:60px;" name="isManageReplies">
+                            <option value="-1">全部</option>
+                            <option value="1">已回复</option>
+                            <option value="0">未回复</option>
+                        </select>
+                        <label style="font-size:14px;">图片</label><input type="checkbox" onclick="ChangeHaspic(this);" />
+                    </p>
+                    <p class="p2">
+                        <label style="font-size:14px;">关键字</label><input type="text" name="keyword" maxlength="20" />
+                        <label>发布时间</label><select style="width:40px;" name="searchCreateTimeWay">
+                            <option value="1">＞</option>
+                            <option value="2">＝</option>
+                            <option value="3">＜</option>
+                        </select>
+                        <input type="text" style="width:80px;" name="createtime" onblur="checkdate(this);" /><label>格式：2016-01-02</label>
+                        <input type="button" onclick="document.getElementById('form1').submit();" value="搜 索" />
+                    </p>
+                </div>
+
+                <div class="databox">
+                    <div class="title"><p class="p1">姓名</p><p class="p2">主题</p><p class="p3">发表时间</p><p class="p4">所在区</p><p class="p5">类别</p></div>
+                    <ul>
+                                <li><p class="p1">徐漪</p><p class="p2"><img src="/ztc/ThroughTrain/images/img/picphoto.gif" alt="有图片" style="vertical-align:middle"><a href="view?id=15581" target="_blank" class="h12">小区垃圾未能及时清运处理</a></p><p class="p3">2019-09-01 17:54</p><p class="p4">浦东新区</p><p class="p5">城市管理</p></li>                                <li><p class="p1">董先生</p><p class="p2"><img src="/ztc/ThroughTrain/images/img/picphoto.gif" alt="有图片" style="vertical-align:middle"><a href="view?id=15578" target="_blank" class="h12">居民小区内乱设摊乱停车无人管</a></p><p class="p3">2019-08-31 21:31</p><p class="p4">浦东新区</p><p class="p5">城市管理</p></li>                                <li><p class="p1">杨荣强</p><p class="p2"><img src="/ztc/ThroughTrain/images/img/picphoto.gif" alt="有图片" style="vertical-align:middle"><a href="view?id=15565" target="_blank" class="h12">往日“荒地”现如今变成了“五违”混乱</a></p><p class="p3">2019-08-30 13:30</p><p class="p4">闵行区</p><p class="p5">城市管理</p></li>                                <li><p class="p1">张宇</p><p class="p2"><img src="/ztc/ThroughTrain/images/img/picphoto.gif" alt="有图片" style="vertical-align:middle"><a href="view?id=15493" target="_blank" class="h12">浦东宣桥马路口广告架有风险</a></p><p class="p3">2019-08-20 21:25</p><p class="p4">浦东新区</p><p class="p5">城市管理</p></li>                                <li><p class="p1">虞国伟</p><p class="p2"><img src="/ztc/ThroughTrain/images/img/picphoto.gif" alt="有图片" style="vertical-align:middle"><a href="view?id=15396" target="_blank" class="h12">街头乱设摊违规行为</a></p><p class="p3">2019-08-20 13:03</p><p class="p4">黄浦区</p><p class="p5">城市管理</p></li>                                <li><p class="p1">郦丫丫</p><p class="p2"><img src="/ztc/ThroughTrain/images/img/picphoto.gif" alt="有图片" style="vertical-align:middle"><a href="view?id=15354" target="_blank" class="h12">深夜马路修理持续扰民</a></p><p class="p3">2019-08-13 01:44</p><p class="p4">普陀区</p><p class="p5">城市管理</p></li>                                <li><p class="p1">胡先生</p><p class="p2"><a href="view?id=15337" target="_blank" class="h12">中山公园路口交通管理不合理</a></p><p class="p3">2019-08-10 22:40</p><p class="p4">长宁区</p><p class="p5">城市管理</p></li>                                <li><p class="p1">范以萍</p><p class="p2"><a href="view?id=15335" target="_blank" class="h12">幼儿园新楼打算直接使用 家长急了</a></p><p class="p3">2019-08-10 20:54</p><p class="p4">闵行区</p><p class="p5">其他</p></li>                                <li><p class="p1">三岛</p><p class="p2"><a href="view?id=15333" target="_blank" class="h12">周边新建购物中心 部分房屋沉降墙面漏水</a></p><p class="p3">2019-08-10 19:07</p><p class="p4">金山区</p><p class="p5">城市管理</p></li>                                <li><p class="p1">万方晴</p><p class="p2"><a href="view?id=15328" target="_blank" class="h12">房屋严重漏水 物业拖延4个月不维修</a></p><p class="p3">2019-08-09 16:57</p><p class="p4">杨浦区</p><p class="p5">综合服务</p></li>                                <li><p class="p1">吴晓敏</p><p class="p2"><a href="view?id=15231" target="_blank" class="h12">永琪美容美发维权</a></p><p class="p3">2019-07-23 15:49</p><p class="p4">徐汇区</p><p class="p5">其他</p></li>                                <li><p class="p1">徐女士</p><p class="p2"><img src="/ztc/ThroughTrain/images/img/picphoto.gif" alt="有图片" style="vertical-align:middle"><a href="view?id=15201" target="_blank" class="h12">朱家角一小区垃圾堆积</a></p><p class="p3">2019-07-17 20:15</p><p class="p4">青浦区</p><p class="p5">城市管理</p></li>                                <li><p class="p1">于继明</p><p class="p2"><a href="view?id=15200" target="_blank" class="h12">静安区江宁路道路严重破损</a></p><p class="p3">2019-07-17 14:32</p><p class="p4">静安区</p><p class="p5">交通运输</p></li>                                <li><p class="p1">杨女士</p><p class="p2"><img src="/ztc/ThroughTrain/images/img/iecool_arrow_175.gif" alt="有网友回复" style="vertical-align:middle">1&nbsp;<a href="view?id=15199" target="_blank" class="h12">龙临路露天篮球场噪音扰民</a></p><p class="p3">2019-07-17 09:11</p><p class="p4">徐汇区</p><p class="p5">文体娱乐</p></li>                                <li><p class="p1">虞国伟</p><p class="p2"><img src="/ztc/ThroughTrain/images/img/picphoto.gif" alt="有图片" style="vertical-align:middle"><a href="view?id=14998" target="_blank" class="h12">违建阻碍古树生长</a></p><p class="p3">2019-06-19 14:10</p><p class="p4">闵行区</p><p class="p5">城市管理</p></li>                                <li><p class="p1">虞国伟</p><p class="p2"><img src="/ztc/ThroughTrain/images/img/picphoto.gif" alt="有图片" style="vertical-align:middle"><a href="view?id=14997" target="_blank" class="h12">南外滩轻纺面料市场存安全隐患</a></p><p class="p3">2019-06-19 13:19</p><p class="p4">黄浦区</p><p class="p5">城市管理</p></li>                                <li><p class="p1">王敏芳</p><p class="p2"><img src="/ztc/ThroughTrain/images/img/picphoto.gif" alt="有图片" style="vertical-align:middle"><a href="view?id=14826" target="_blank" class="h12">联名反对“宝菊路133弄303号”前设置垃圾投放点</a></p><p class="p3">2019-05-29 10:06</p><p class="p4">宝山区</p><p class="p5">城市管理</p></li>                                <li><p class="p1">虞国伟</p><p class="p2"><img src="/ztc/ThroughTrain/images/img/picphoto.gif" alt="有图片" style="vertical-align:middle"><a href="view?id=14711" target="_blank" class="h12">沙逊别墅内河水浑浊</a></p><p class="p3">2019-05-24 13:12</p><p class="p4">长宁区</p><p class="p5">城市管理</p></li>                                <li><p class="p1">老王</p><p class="p2"><a href="view?id=14706" target="_blank" class="h12">阅览室设在顶楼老年人爬不上去</a></p><p class="p3">2019-05-23 16:38</p><p class="p4">静安区</p><p class="p5">其他</p></li>                    </ul>
+                </div>
+                <div class="clearfix"></div>
+                <div class="pagenumbox">
+                    <span>共<b>2339</b>条留言</span><span>共<b>124</b>页</span><span>现在是第<b>1</b>页</span>
+                    <a href="#" onclick="document.getElementById('page').value = parseInt(document.getElementById('page').value) - 1; document.getElementById('form1').submit();">[上一页]</a>
+                    <a href="#" onclick="document.getElementById('page').value = parseInt(document.getElementById('page').value) + 1; document.getElementById('form1').submit();">[下一页]</a>
+                    <span>到第</span><input type="text" id="pagego1" /><span>页</span><a href="javascript:;" onclick="OptSubmit(document.getElementById('pagego1').value);" class="ok"></a>
+                </div>
+                <input type="hidden" name="page" id="page" value="1" />
+                <input type="hidden" name="haspic" id="haspic" />
+            </form>
+        </div>
+
+        <div class="page_r">
+
+<div class="hot24">
+    <div class="title" ><span>24小时最热投诉</span><div ></div></div>
+    <ul>
+            </ul>
+</div>
+<div class="hot24">
+    <div class="title" ><span>一周不满意率排行</span><div ></div></div>
+    <ul>
+            <li><span class="s">1.</span><a href="http://tousu.eastday.com/ztc/ThroughTrain/index/view?id=15199" target="_blank">龙临路露天篮球场噪音扰民</a></li>            <li><span class="s">2.</span><a href="http://tousu.eastday.com/ztc/ThroughTrain/index/view?id=15200" target="_blank">静安区江宁路道路严重破损</a></li>            <li><span class="s">3.</span><a href="http://tousu.eastday.com/ztc/ThroughTrain/index/view?id=15201" target="_blank">朱家角一小区垃圾堆积</a></li>            </ul>
+</div>
+        </div>
+
+    </div>
+
+    <!--foot-->
+    <div id="footer" class="grey12b lh30 fc">
+        <a href="http://news.eastday.com/images/ditu/bq.htm" class="grey12b" target="_blank">版权声明</a> | <a href="http://www.eastday.com/images/2007img/07aboutus/index1.htm" class="grey12b" target="_blank">网站简介</a> | <a href="http://news.eastday.com/images/ditu/wzls.htm" class="grey12b" target="_blank">网站律师</a> | <a href="http://news.eastday.com/images/ditu/" class="grey12b" target="_blank">网站导航</a> | <a href="http://i1.eastday.com/images/ad2011/ggkl2011/index.html" class="grey12b" target="_blank">广告刊例</a> | <a href="http://news.eastday.com/images/ditu/lx.htm" class="grey12b" target="_blank">联系方式</a> | <a href="http://www.eastday.com/sitemap/index.html" class="grey12b" target="_blank">Site Map</a><br />
+        东方网(eastday.com)版权所有，未经授权禁止复制或建立镜像
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="/ztc/ThroughTrain/Scripts/list.js"></script>
+<script language="javascript">
+    String.prototype.IsNumber = function () {
+        var regexp = /[0-9]$/;
+        return regexp.test(this);
+    }
+    function OptSubmit(v) {
+        if (v.IsNumber() == false) {
+            alert("页数必须是正整数")
+            return;
+        }
+        document.getElementById("page").value = v;
+        document.getElementById("form1").submit();
+    }
+    function ChangeHaspic(chk) {
+        if (chk.checked == true) {
+            document.getElementById("haspic").value = 1;
+        } else {
+            document.getElementById("haspic").value = -1;
+        }
+    }
+    function checkdate(obj) {
+        var date = obj.value;
+        if (date == "") {
+            return;
+        }
+        // == date.substring(date.length - 2))
+        var re = new Date(date).getDate();
+        if (isNaN(re) == true) {
+            alert("请输入正确的日期");
+            obj.focus();
+        }
+    }
+    var countyID = 0;
+    var categoryID = 0;
+    var industryID = 0;
+    window.onload = function () {
+        if(countyID != 0){
+            SelectOption(document.getElementById("countyid"),countyID);
+        }
+
+        if(categoryID != 0)
+        {
+            var category = document.getElementById("categoryid");
+            SelectOption(category,categoryID);
+            getCity(category.options[category.selectedIndex].text, document.getElementById("industryid"));
+            if(industryID != 0){
+                SelectOption(document.getElementById("industryid"),industryID);
+            }
+        }
+    }
+    function SelectOption(obj,v){
+        for(n = 0;n<obj.options.length;n++){
+            if(obj.options[n].value == v){
+                obj.options[n].selected = true;
+            }
+        }
+    }
+</script>

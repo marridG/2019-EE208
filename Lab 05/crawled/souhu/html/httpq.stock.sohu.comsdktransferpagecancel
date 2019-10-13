@@ -1,0 +1,234 @@
+
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>管理组合</title>
+  <!-- news sdk meta -->
+  <meta name="keywords" content="股票,财经,搜狐股票,搜狐财经,金罗盘,策略师,胜率榜,排行榜" />
+  <meta name="description" content="股票,财经,搜狐股票,搜狐财经,金罗盘,策略师,胜率榜,排行榜" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="renderer" content="webkit" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- QQ强制竖屏 -->
+  <meta name="x5-orientation" content="portrait" />
+  <meta name="x5-page-mode" content="app" />
+  <!-- UC 强制竖屏 -->
+  <meta name="screen-orientation" content="portrait" />
+   <script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/_common/js/jquery.min.js"></script>
+   <script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/_common/js/ejs.min.js"></script>
+   <script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/_common/js/common.js"></script>
+   <script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/_common/js/gbk.js"></script>
+  <!--[if lt IE 9]>
+    <script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/_common/js/es5-shim.min.js"></script>
+    <script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/_common/js/es5-sham.min.js"></script>
+    <script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/_common/js/respond.min.js"></script>
+    <script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/_common/js/json3.min.js"></script>
+    <script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/_common/js/ie8hack.js"></script>
+    <script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/_common/js/html5shiv.js"></script>
+    <link href="//47f72d130392f.cdn.sohucs.com/web/static/css/ie8hack-9dce3c3b96.css" rel="stylesheet" />
+    <style>  
+    .tips-ok-msg,.tips-error-msg{-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000,endColorstr=#CC000000)";}  
+    </style>  
+  <![endif]-->
+  <link rel="stylesheet" href="//statics.itc.cn/web/static/css/login_bar-1a8b877b43.css">
+
+ 
+ 
+
+<link href="//k.sohu.com/static/node-stock/v1-0-4/transfer/css/person.css?1570951995259" rel="stylesheet" />
+<script type="text/javascript" src="//js.sohu.com/mail/pv/pv_v203_ajax.js"></script>
+</head>
+
+<body id="bodyContent">
+
+<div id="wrapper">
+    <div id="tgHeader" class="common-header">
+		<header id="main-header" class="error-head"></header>
+    </div>
+    <div class="main-nav">
+		<div id="gpMainTop" class="main-top">
+            <div style="padding-top: 1px;">
+	<div class="title-top clearfix">
+		<div class="left">
+			<a href="/" class="logo"></a>
+			<a target="_blank" href="//s.m.sohu.com/t/index.html" class="mobile"></a>
+		</div>
+		<div class="searchbox">
+			<div id="search-content" class="navsea" >
+				<form class="searchForm autoTmp" method=get action=javascript:void(0); target="_blank"><input class="searchInput kw" value=代码/名称/简写 disableautocomplete="" autocomplete="off"> <input class="btn" value=行情查询 type=submit> 
+				</form>
+				<div style="display: none" id="suggestDiv" class="suggestDiv suggestLists"></div>
+			</div>
+		</div>
+		<div class="suggestionbox">
+			<a target="_blank" href="//q.stock.sohu.com/feedback.html" class="suggestion">
+			</a>
+		</div>
+	</div>
+	<div class="stock-nav">
+		<ul class="navlist">
+			
+			<li><a target="_blank" href="//q.stock.sohu.com/cn/mystock.shtml">我的自选</a></li>
+			<li><a target="_blank" href="//q.stock.sohu.com/cn/bk.shtml">热门板块</a></li>
+			<li><a target="_blank" href="//q.stock.sohu.com/cn/ph.shtml">涨跌排行</a></li>
+			<li><a target="_blank" href="//q.stock.sohu.com/cn/zs.shtml">大盘指数</a></li>
+			<li><a  target="_blank" href="//q.stock.sohu.com/fundflow/">资金流向</a></li>
+			<li class=" active "><a href="/sdk/rank">策略师</a></li>
+			<li><a target="_blank" href="//stock.sohu.com/ipo/">IPO新股</a></li>
+			<li><a target="_blank" href="//q.stock.sohu.com/app2/bigdeal2.jsp">大宗交易</a></li>
+			<li><a target="_blank" href="//q.stock.sohu.com/app2/rpsholder.up">内部交易</a></li>
+			<li><a target="_blank" href="//q.stock.sohu.com/app2/mpssTrade.up">融资融券</a></li>
+			<li><a target="_blank" href="//stock.sohu.com/s2011/jlp/">金罗盘</a></li>
+			<li><a target="_blank" href="//q.fund.sohu.com/jzph/zxjz_date_up.shtml">基金净值</a></li>
+			<li><a target="_blank" href="//q.stock.sohu.com/us/zgg.html">中概股</a></li>
+		</ul>
+		<div class="userInfo" id="userInfoIcon" style="display: none;">
+			<div class="menuList" id="userMenu">
+				<ul>
+					<li class="menu-li consultantOnly"><a href="javascript:void(0);" data-href='/sdk/performance'>我的主页</a></li>
+					<li class="menu-li consultantOnly"><a href="/sdk/transfer?page=callin">管理组合</a>
+						<ul class="l2-menu">
+							<li class="menu-li"><a href="/sdk/transfer?page=callin">调入</a></li>
+							<li class="menu-li"><a href="/sdk/transfer?page=callout">调出</a></li>
+							<li class="menu-li"><a href="/sdk/transfer?page=cancel">撤单</a></li>
+							<li class="menu-li"><a href="/sdk/transfer?page=record">调仓记录</a></li>
+						</ul>
+					</li>
+					 <!-- data-href="http://mp.sohu.com" -->
+					<li class="menu-li consultantOnly"><a href="//mp.sohu.com" target="_blank">发布观点</a></li>
+					<li class="menu-li"><a href="javascript:void(0);" data-href="/sdk/concern#myconcern">我的关注</a></li>
+					<li class="menu-li"><a href="javascript:void(0);" data-href="/sdk/concern#mycollection">我的收藏</a></li>
+					<li class="menu-li commonOnly"><a href="javascript:void(0);" data-href="/sdk/concern#application">申请策略师入住</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<script id="userMenuTpl" type="text/template">
+	<ul>
+		{{ if(userLogined && isConsultant){ }}
+		<li class="menu-li"><a href="/person">我的主页</a></li>
+		<li class="menu-li"><a href="javascript:void(0);">管理组合</a>
+<!-- 			<ul class="l2-menu">
+				<li><a href="javascript:void(0);">调入</a></li>
+				<li><a href="javascript:void(0);">调出</a></li>
+				<li><a href="javascript:void(0);">撤单</a></li>
+				<li><a href="javascript:void(0);">调仓记录</a></li>
+			</ul> -->
+		</li>
+		<li class="menu-li"><a href="javascript:void(0);">发布观点</a></li>
+		{{ } }}
+		<li class="menu-li"><a href="javascript:void(0);">我的关注</a></li>
+		<li class="menu-li"><a href="javascript:void(0);">我的收藏</a></li>
+		{{ if(!userLogined || !isConsultant){ }}
+		<!-- <li class="menu-li"><a href="javascript:void(0);">申请策略师入住</a></li> -->
+		{{ } }}
+	</ul>
+</script>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="content-right">
+            <div id="tg-user-info" class="tg-user-info clearfix"></div>
+            <div id="positionContent"></div>
+            <div class="all-price"> <span>总资产：<em id="totalFund"></em></span> <span>现金：<em id="cash"></em></span> </div>
+
+        </div>
+    	<div class="content-left">
+			<div id="wrapper">
+                <div id="transferTab">
+                    <div class="page-tab">
+                        <ul>
+                            <li id="callinTab"><a href="javascript: void(0);">调入</a></li>
+                            <li id="calloutTab"><a href="javascript: void(0);">调出</a></li>
+                            <li id="cancelTab"><a href="javascript: void(0);">撤单</a></li>
+                            <li id="recordTab"><a href="javascript: void(0);">调仓记录</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="tradeContent">
+                    <div id="stockContent"></div>
+                    
+                </div>
+                <div id="cancelContent" class="list-chedan"></div>
+                <div id="recordList" class="tg-log-list tg-log-myself">调仓记录</div>
+                
+            </div>
+
+
+			
+		</div>
+		
+		<div class="statement">*免责声明：本平台仅提供服务对接功能，所有策略师提供的咨询建议，仅供参考。用户需独立做出投资决策，风险自担。</div>
+
+    </div>
+</div>
+
+
+
+<script id="tipsTpl" type="text/template">
+	{{ if(tips.tipsType == 'tips' ){ }}
+		{{ if(tips.msgType == 'ok' ){ }}
+		<div class="tipsBox tips-ok-msg concern-ok">
+			<div class="msg-ico-ok"></div>
+			<p>{{= tips.msg }}</p>
+		</div>
+		{{ }else if(tips.msgType == 'error' ){ }}
+		<div class="tipsBox tips-error-msg concern-error">
+			<div class="msg-ico-error"></div>
+			<p>{{= tips.msg }}</p>
+		</div>
+		{{ }else if(tips.msgType == 'text' ){ }}
+		<div class="tipsBox tips-text-msg">
+			<p>{{= tips.msg }}</p>
+		</div>
+		{{ } }}
+	{{ }else if(tips.tipsType == 'confirm' ){ }}
+		<div class="tipsBox tips-confirm-msg">
+			<div class=""></div>
+			<p>{{= tips.msg }}</p>
+		</div>
+	{{ } }}
+</script>
+<script id="confirmTpl" type="text/template">
+<div class="pop-tips">
+	{{if(tipMsg && tipMsg.length>0){ }}
+		{{ tipMsg.forEach(function(val,i){  }}
+			<div class="tips-text">{{= val}}</div>
+		{{ }); }}	    
+	{{ } }}
+	
+	{{if(tipOk){ }}
+	    <a id="tipOk" href="javascript: void(0);" class="{{= tipCancel?'btn-ok':'btn-enter'}}" action="{{= action? action : ''}}">确定</a>
+	{{ } }}
+	{{if(tipCancel){ }}
+	    <a id="tipCancel" href="javascript: void(0);" class="btn-no">取消</a>
+	{{ } }}
+</div>
+</script>
+<div style="height:50px;">
+</div>
+<div style="display: none;" id="staticPath" data-path="//k.sohu.com/static/node-stock/v1-0-4"></div>
+<div class="tipsMask" id="tipsMaskBox">
+</div>
+<script src="//statics.itc.cn/web/static/js/lib-111eab4f1d.js"></script>
+<script src="//statics.itc.cn/web/static/js/login_bar-f5d124e80f.js"></script>
+<script>
+LoginBar();
+</script>
+
+<script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/_common/js/echarts.min.js"></script>
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/_common/js/echarts.ie8.min.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/transfer/js/index.js"></script>
+<script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/transfer/js/common.bundle.js"></script>
+<script type="text/javascript" src="//k.sohu.com/static/node-stock/v1-0-4/transfer/js/tg-transfer.bundle.js?1570951995259"></script>
+
+</body>
+</html>

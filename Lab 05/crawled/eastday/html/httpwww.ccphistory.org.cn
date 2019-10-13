@@ -1,0 +1,775 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="0" name="CustomerID">
+<meta name="description" content="上海党史">
+<META name="filetype" content="1">
+<META name="publishedtype" content="1">
+<META name="pagetype" content="1">
+<META name="catalogs" content="165">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<head>
+<title>上海党史</title>
+<link href="/images/2014shds/css.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+function GetObj(objName){
+	if(document.getElementById){
+		return eval('document.getElementById("' + objName + '")');
+	}else if(document.layers){
+		return eval("document.layers['" + objName +"']");
+	}else{
+		return eval('document.all.' + objName);
+	}
+}
+/**
+* 实现菜单切换。
+* @param {String} idx      菜单的索引号
+* @param {String} prefix   菜单及内容块ID的前缀
+* @param {String} onstyle  当前菜单的样式名
+* @param {String} offstyle 非当前菜单的样式名
+* @return null
+*/
+function Menu(idx, prefix, onstyle, offstyle){
+	for(var i=0;i<40;i++){
+		if(!GetObj(prefix+"_"+i)) break;
+		GetObj(prefix+"_"+i).className = offstyle;
+		//GetObj(prefix+"_con_"+i).style.display = "none";
+	}
+		GetObj(prefix+"_"+idx).className = onstyle;
+		//GetObj(prefix+"_con_"+idx).style.display = "block";
+}
+function Focus(formName, elemName){
+	var elem = document.forms[formName].elements[elemName];
+	if(elem) elem.focus();
+}
+function Menu1(idx, prefix, onstyle, offstyle){
+	for(var i=0;i<9;i++){
+		if(!GetObj(prefix+"_"+i)) break;
+		GetObj(prefix+"_"+i).className = offstyle;
+	
+	}
+		GetObj(prefix+"_"+idx).className = onstyle;
+		
+}
+function change(obj) {
+ if(obj.selectedIndex == 0) { return false; }
+ urlhtml=obj.options[obj.selectedIndex].value;
+ window.open(urlhtml,"homeWin");
+ obj.selectedIndex=0;
+ return true;
+}
+</script>
+<style>
+.newpiclist{ width:1050px;}
+.newpiclist li{ width:320px; height:90px; overflow:hidden;float:left;padding:19px 21px 0 0;}
+.new_piclist1{ width:1000px;padding:33px 0 0 24px;float:left;}
+.new_piclist1 li{width:212px;height:283px;overflow:hidden;float:left;padding:0 29px 0 0;position:relative;}
+.new_bg1{FILTER: alpha(opacity=60);
+	moz-opacity: 0.60;
+	opacity: 0.60;
+	background-color:#000;
+	width:212px;
+	height:43px; overflow:hidden; 
+	position:absolute;
+	left:0px; top:240px;
+}
+.new_text1{width:212px; height:43px;
+overflow:hidden;
+position:absolute; 
+left:0;
+top:240px;
+z-index:999;
+line-height:43px; color:#FFF; font-size:18px;font-family:微软雅黑;
+text-align:center;
+
+}
+.new1{ width:148px;overflow:hidden;}
+.list6{ width:148px;overflow:hidden;background-color:#f9f4f1;}
+.new2 li{line-height:24px;float:left;width:342px;background: url(/images/2014shds/new3.jpg) no-repeat 0 11px;padding:0 0 0 18px;}
+.new3{font-size:12px;color:#595757;}
+.new20150611{ width:326px;overflow:hidden;height:243px;}
+.new20150611 li{width:148px;padding:0 15px 15px 0;overflow:hidden;float:left;height:114px;}
+</style>
+</head>
+<body onload="MM_preloadImages('/images/2014shds/pic_qxxx1.gif','/images/2014shds/pic_qxxx2.gif','/images/2014shds/pic_wsdt1.gif','/images/2014shds/pic_wsdt2.gif','/images/2014shds/pic_zhbd1.gif','/images/2014shds/pic_zhbd2.gif')">
+<div id="topbg">
+<div class = "swf1">
+<object width="1000" height="466" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+<param value="/images/2014shds/banner1.swf" name="movie">
+<param value="high" name="quality">
+<param name="wmode" value="transparent">
+<embed wmode="transparent" width="1000" height="466" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" quality="high" src="/images/2014shds/banner1.swf">
+</object>
+</div>
+<div class="nav1">
+	<div class="white18 lh40 fc">
+       		<a id="ts_0" href="/node2/shds/index.html" class="dh"  onmouseover="Menu1(0,'ts','dh','dhoff')">首页</a>
+       		<a id="ts_1" href="/node2/shds/n55/u1ai20.html" class="dhoff"  onmouseover="Menu1(1,'ts','dh','dhoff')">机构设置</a>
+    		<a id="ts_2" href="/node2/shds/n218/index.html" class="dhoff"  onmouseover="Menu1(2,'ts','dh','dhoff')">信息动态</a>
+            <a id="ts_3" href="/node2/shds/n512/index.html" class="dhoff" onmouseover="Menu1(3,'ts','dh','dhoff')">党史天地</a>
+    		<a id="ts_4" href="/node2/shds/n58/index.html"  class="dhoff" onmouseover="Menu1(4,'ts','dh','dhoff')">史海回眸</a>
+    		<a id="ts_5" href="/node2/shds/n89/index.html"  class="dhoff" onmouseover="Menu1(5,'ts','dh','dhoff')">海上人物</a>
+    		<a id="ts_6" href="/node2/shds/n85/index.html"  class="dhoff" onmouseover="Menu1(6,'ts','dh','dhoff')">红色印痕</a>
+    		<a id="ts_7" href="/node2/shds/n100/index.html" class="dhoff" onmouseover="Menu1(7,'ts','dh','dhoff')">申城影像</a>
+    		<a id="ts_8" href="/node2/shds/n105/index.html" class="dhoff" onmouseover="Menu1(8,'ts','dh','dhoff')">新书上架</a>	
+    	</div>    
+</div>
+</div>
+<div id="wFrame">
+<div class="gd2 fl" style="width:80px;"><div class="red12 gd1_1">
+公告栏</div></div>
+<div class="gd1 fl" style="width:695px;">
+<ul>
+<marquee behaviour = "scroll" scrollamount="2">
+
+
+<img src="/images/2014shds/bj3.gif">
+<a class="grey12" href="
+/node2/shds/n56/u1ai33803.html
+" target="_blank" style="line-height:24px;padding-right:15px;">学术会议 | 第三届渔阳里文化论坛征文启事</a>
+<img src="/images/2014shds/bj3.gif">
+<a class="grey12" href="
+/node2/shds/n56/u1ai33410.html
+" target="_blank" style="line-height:24px;padding-right:15px;">“中共中央军委在上海（1925—1933）”学术研讨会征文启事</a>
+<img src="/images/2014shds/bj3.gif">
+<a class="grey12" href="
+http://zwzx.eastday.com/ngd/20190819f7.pdf
+" target="_blank" style="line-height:24px;padding-right:15px;">中共上海市委党史研究室2018年度财政支出项目绩效评价结果</a>
+<img src="/images/2014shds/bj3.gif">
+<a class="grey12" href="
+http://zwzx.eastday.com/ngd/20190819f6.pdf
+" target="_blank" style="line-height:24px;padding-right:15px;">中共上海市委党史研究室2018年度部门决算</a>
+<img src="/images/2014shds/bj3.gif">
+<a class="grey12" href="
+http://zwzx.eastday.com/ngd/20190819f5.pdf
+" target="_blank" style="line-height:24px;padding-right:15px;">上海党史报刊社2018年度决算</a>
+<img src="/images/2014shds/bj3.gif">
+<a class="grey12" href="
+http://zwzx.eastday.com/ngd/20190819f4.pdf
+" target="_blank" style="line-height:24px;padding-right:15px;">上海党史报刊社2018年度报刊业务项目绩效评价报告</a>
+<img src="/images/2014shds/bj3.gif">
+<a class="grey12" href="
+http://zwzx.eastday.com/ngd/20190819f3.pdf
+" target="_blank" style="line-height:24px;padding-right:15px;">中共上海市委党史研究室2018年度课题费项目绩效评价报告</a>
+<img src="/images/2014shds/bj3.gif">
+<a class="grey12" href="
+http://zwzx.eastday.com/ngd/20190819f2.pdf
+" target="_blank" style="line-height:24px;padding-right:15px;">中共上海市委党史研究室2018年度决算</a>
+<img src="/images/2014shds/bj3.gif">
+<a class="grey12" href="
+http://zwzx.eastday.com/ngd/20190819f1.pdf
+" target="_blank" style="line-height:24px;padding-right:15px;">中共上海市委党史研究室2018年度党史宣教项目绩效评价报告</a>
+</marquee>
+</ul>
+</div>
+<a href="http://mail.ccphistory.org.cn" class="red12 fr" target="_blank" style="margin-top:10px;">丨邮件系统</a>
+<div class="fr" style="width:145;height:23px;padding:7px 10px 0 0;">
+<form action="http://222.73.244.94/Searchshds/search.ashx" id="cse-search-box2" target="_blank">
+<input type="text"  name="q" style="width:107px;height:23px;float:left;border:0;padding-left:5px;background:url('/images/2014shds/input4.gif') no-repeat;line-height:23px;">
+<input name="imageField" type="image" src="/images/2014shds/input3.gif" align="bottom" class="fl">
+<input type="hidden" name="stype" value="2">
+<input type="hidden" name="sort" value="2">
+<input type="hidden" name="ie" value="gb2312">
+</form>
+</div>
+
+</div>
+<div class="blank25"></div>
+<div id="wFrame">
+
+
+<!--<div class="blank15"></div>
+
+
+
+<div style="float:left;margin-right:20px;"><A target=_blank href=/node2/shds/n1365/index.html><IMG border=0 width=490  height=90 src=/images/thumbnailimg/month_1607/201607151249548767.jpg></A></div>
+
+<div style="float:left;"><A target=_blank href=/node2/shds/n1366/index.html><IMG border=0 width=490  height=90 src=/images/thumbnailimg/month_1607/201607151250273013.jpg></A></div>
+-->
+
+<div style="float:left;margin-right:20px;"><a href="/node2/shds/n1536/index.html" target="_blank"><img border="0" width="320" height="90" src="/images/2014shds/20181204-1.png"></a></div>
+<div style="float:left;margin-right:20px;"><a href="/node2/shds/n1534/index.html" target="_blank" ><IMG border=0 width=320  height=90 src=/images/2014shds/20190808.jpg></a></div>
+<div style="float:left;"><a href="/node2/shds/n1645/index.html" target="_blank" ><IMG border=0 width=320  height=90 src=/images/2014shds/20190619-3.jpg></a></div>
+
+<div class="blank15"></div>
+
+<div style="float:left;margin-right:20px;"><a href="/node2/shds/n1642/index.html" target="_blank"><img border="0" width="320" height="90" src="/images/2014shds/20190514-1.jpg"></a></div>
+<div style="float:left;margin-right:20px;"><a href="/node2/shds/n1643/index.html" target="_blank" ><IMG border=0 width=320  height=90 src=/images/2014shds/20190514-2.jpg></a></div>
+<div style="float:left;"><a href="/node2/shds/n1644/index.html" target="_blank" ><IMG border=0 width=320  height=90 src=/images/2014shds/20190514-3.jpg></a></div>
+
+<div class="blank15"></div>
+
+<div style="float:left;margin-right:20px;"><a href="/node2/shds/n1604/index.html" target="_blank"><img border="0" width="320" height="90" src="/images/2014shds/20190619-1.jpg"></a></div>
+<div style="float:left;margin-right:20px;"><a href="/node2/shds/n1603/index.html" target="_blank" ><IMG border=0 width=320  height=90 src=/images/2014shds/20190619-2.jpg></a></div>
+<div style="float:left;"><a href="/node2/shds/n1596/index.html" target="_blank"><img border="0" width="320" height="90" src="/images/2014shds/20180604-1.jpg"></a></div>
+
+<div class="blank15"></div>
+
+
+<div style="float:left;margin-right:20px;"><a href="/node2/shds/n1602/index.html" target="_blank" ><IMG border=0 width=320  height=90 src=/images/2014shds/20181204-3.png></a></div>
+<div style="float:left;margin-right:20px;"><a href="/node2/shds/n1647/u1ai33411.html" target="_blank" ><img border="0" width="320" height="90" src="/images/2014shds/20190814-1.jpg"></a></div>
+<div style="float:left;"><a href="/node2/shds/n1646/index.html" target="_blank" ><IMG border=0 width=320  height=90 src=/images/2014shds/20190814-2.jpg></a></div>
+
+
+
+
+
+
+
+</div>
+<div class="blank15"></div>
+
+<div class="blank10"></div>
+<div id="wFrame">
+	<div class="left1 fl">
+    	<div class="con1">
+        	<div class="pic1 fl">
+            	<a href="/node2/shds/n218/index.html"><img id="i1" src="/images/2014shds/pic_xxhc1.jpg"></a>
+            </div>
+            <div class="newslist1 fl">
+            <ul>
+
+
+            	<li class="dashed"><a class="grey12 lh29" href="
+/node2/shds/n218/u1ai34001.html
+" target="_blank"><span><img src="/images/2014shds/new.jpg" /></span>在新中国成立之际，松江县曾发生一件被毛泽东充分肯定的“大事”
+</a></li>
+
+            	<li class="dashed"><a class="grey12 lh29" href="
+/node2/shds/n218/u1ai34000.html
+" target="_blank"><span><img src="/images/2014shds/new.jpg" /></span>我家的红色记忆：黄炎培的一封家书写满想念
+</a></li>
+
+            	<li class="dashed"><a class="grey12 lh29" href="
+/node2/shds/n218/u1ai33999.html
+" target="_blank"><span><img src="/images/2014shds/new.jpg" /></span>琼岛解放战争的历史丰碑——海南革命烈士纪念碑碑文敬读
+</a></li>
+
+            	<li class="dashed"><a class="grey12 lh29" href="
+/node2/shds/n218/u1ai33998.html
+" target="_blank"><span><img src="/images/2014shds/new.jpg" /></span>《义勇军进行曲》这样成为国歌
+</a></li>
+
+            	<li class="dashed"><a class="grey12 lh29" href="
+/node2/shds/n218/u1ai33997.html
+" target="_blank"><span><img src="/images/2014shds/new.jpg" /></span>深刻把握伟大斗争的理论意蕴和实践指向
+</a></li>
+
+            	<li class="dashed"><a class="grey12 lh29" href="
+/node2/shds/n218/u1ai33996.html
+" target="_blank"><span><img src="/images/2014shds/new.jpg" /></span>国史讲堂：从新时代发展看中国特色社会主义理论自信
+</a></li>
+
+            	<li class="dashed"><a class="grey12 lh29" href="
+/node2/shds/n218/u1ai33995.html
+" target="_blank"><span><img src="/images/2014shds/new.jpg" /></span>穆青：为革命事业洒尽最后一滴血
+</a></li>
+
+            	<li class="dashed"><a class="grey12 lh29" href="
+/node2/shds/n218/u1ai33994.html
+" target="_blank"><span><img src="/images/2014shds/new.jpg" /></span>“渤海走廊”：连接延安的红色生命线
+</a></li>
+
+
+
+            	<li class="dashed"><a class="grey12 lh29" href="
+/node2/shds/n218/u1ai33987.html
+" target="_blank"><span><img src="/images/2014shds/right.jpg" /></span>70部经典，一份厚重的传家宝
+</a></li>
+
+            	<li class="dashed"><a class="grey12 lh29" href="
+/node2/shds/n218/u1ai33986.html
+" target="_blank"><span><img src="/images/2014shds/right.jpg" /></span>舞剧《永不消逝的电波》成功背后
+</a></li>
+<li><a class="text_align" href="http://www.ccphistory.org.cn/node2/shds/n218/index.html" target="_black" style="color:#e95a22"/>更多>></a></li>
+             </ul>
+</div>	
+        </div>
+       
+   </div>
+   <div class="right1 fr">
+   		<iframe width="610" height="340" frameborder="0" vspale="0" scrolling="no" noresize="" src="/node2/shds/n57/index.html " marginheight="0" framespacing="0" marginwidth="0" name="photo1" border="0">
+        </iframe>
+   </div>
+   <div class="blank20"></div>
+<!--历史上的今天 -->
+   		<div class="fl"><IFRAME frameSpacing=0 noResize height=243 marginHeight=0 border=0 src="http://www.ccphistory.org.cn/node2/shds/n54/index.html?t=2019/10/12 10:02:32" frameBorder=0 width=325 name=photo marginWidth=0 scrolling=no vspale="0"></IFRAME></div>
+        <div class="con3_11 fl" style="width:325px;height:243px;margin-left:20px;">
+<div><img src="/images/2014shds/20150611_1.jpg"></div>
+ 
+  <div class="fc" style="font-family:微软雅黑;font-size:20px;color:#e95a22;padding:0 0 5px 0;">上海党史实录（1919-2015）</div>
+    <div class="fc"><img src="/images/2014shds/20150611_2.jpg"></div>
+<div class="grey12 lh24" style="padding:4px 0 0 0;"><A target=_blank href=http://www.ccphistory.org.cn/node2/shds/n967/index.html><IMG border=0 width=325  height=62 src=/images/2014shds/3in1.jpg></A></div>
+<div class="grey12 lh24" style="padding:4px 0 0 0;"><A target=_blank href=http://www.ccphistory.org.cn/node2/shds/n962/index.html><IMG border=0 width=325  height=62 src=/images/2014shds/20160711-1.jpg></A></div>
+<div class="grey12 lh24" style="padding:4px 0 0 0;"><A target=_blank href=http://www.ccphistory.org.cn/node2/shds/n1230/index.html><IMG border=0 width=325  height=62 src=/images/2014shds/20160711-2.png></A></div>
+       </div>
+       <div style="width:311px; overflow:hidden;float:right;">
+       <ul class="new20150611">
+       
+       <li><A target=_blank href=http://www.ccphistory.org.cn/node2/shds/n811/n969/index.html><IMG border=0 width=148  height=85 src=/images/thumbnailimg/month_1506/201506111702427989.jpg></A><p class="fc" style="font-family:微软雅黑;font-size:18px;color:#e95a22;line-height:29px;height:29px;">中共中央在上海</p></li>
+       
+       <li><A target=_blank href=http://www.ccphistory.org.cn/node2/shds/n811/n1028/index.html><IMG border=0 width=148  height=85 src=/images/thumbnailimg/month_1506/201506161546466707.jpg></A><p class="fc" style="font-family:微软雅黑;font-size:18px;color:#e95a22;line-height:29px;height:29px;">改革开放在上海</p></li>
+       
+       <li><A target=_blank href=http://www.ccphistory.org.cn/node2/shds/n989/index.html><IMG border=0 width=148  height=85 src=/images/thumbnailimg/month_1506/201506111701084050.jpg></A><p class="fc" style="font-family:微软雅黑;font-size:18px;color:#e95a22;line-height:29px;height:29px;">上海历次党代会</p></li>
+       
+       <li><A target=_blank href=http://www.ccphistory.org.cn/node2/shds/n1012/index.html><IMG border=0 width=148  height=85 src=/images/thumbnailimg/month_1506/201506111659475216.jpg></A><p class="fc" style="font-family:微软雅黑;font-size:18px;color:#e95a22;line-height:29px;height:29px;">上海历次人代会</p></li>
+      
+      </ul>
+        </div>
+</div>
+
+</div>
+
+
+<div class="blank20"></div>
+
+<div id="wFrame">
+
+
+
+
+
+<div style="float:left;margin-right:20px;"><a href="http://history.eastday.com/dt/wunianzhanlan/index.html" target="_blank"><img border="0" width="320" height="90" src="/images/2014shds/20170503-2.jpg"></a></div>
+<div style="float:left;margin-right:20px;"><a href="http://www.ccphistory.org.cn/node2/shds/n1468/index.html" target="_blank" ><img border="0" width="320" height="90" src="/images/2014shds/20170503-3.jpg"></a></div>
+<div style="float:left;"><a href="http://www.ccphistory.org.cn/node2/shds/n1469/index.html" target="_blank" ><IMG border=0 width=320  height=90 src=/images/2014shds/20170503-4.jpg></a></div>
+
+<div class="blank15"></div>
+
+<div style="float:left;margin-right:20px;"><a href="/node2/shds/n1649/index.html" target="_blank"><img border="0" width="235" height="90" src="/images/2014shds/20190821-1.jpg"></a></div>
+<div style="float:left;margin-right:20px;"><a href="/node2/shds/n1651/index.html" target="_blank" ><img border="0" width="235" height="90" src="/images/2014shds/20190821-2.jpg"></a></div>
+<div style="float:left;margin-right:20px;"><a href="/node2/shds/n1650/index.html" target="_blank" ><img border="0" width="235" height="90" src="/images/2014shds/20190821-3.jpg"></a></div>
+<div style="float:left;"><a href="http://www.ccphistory.org.cn/node2/shds/n1459/index.html" target="_blank" ><IMG border=0 width=235  height=90 src=/images/2014shds/20170302-4.jpg></a></div>
+
+<div class="blank15"></div>
+
+<div style="float:left;margin-right:20px;"><a href="http://www.ccphistory.org.cn/node2/shds/n1367/index.html" target="_blank"><img border="0" width="320" height="90" src="/images/2014shds/20160831-1.jpg"></a></div>
+<div style="float:left;margin-right:20px;"><a href="http://www.ccphistory.org.cn/node2/shds/n1406/index.html" target="_blank" ><img border="0" width="320" height="90" src="/images/2014shds/20161117-2.jpg"></a></div>
+<div style="float:left;"><a href="http://www.ccphistory.org.cn/node2/shds/n1375/index.html" target="_blank" ><IMG border=0 width=320  height=90 src=/images/2014shds/20160831-4.jpg></a></div>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="blank20"></div>
+<div id="section3">
+	<div id="wFrame">
+    	<div class="fl"><a href="/node2/shds/n58/index.html" target="_blank"><img src="/images/2014shds/img5.png"/></a></div>
+        <div class="fl block6">
+
+
+
+        	<div class="fc lh36"><a class="red24" href="/node2/shds/n58/u1ai33888.html
+" target="_blank">70载，国庆阅兵记忆</a></div>
+        	<div class="blank10"></div>
+            <div class="fl"><A target=_blank href=/node2/shds/n58/u1ai33888.html><IMG border=0 width=205  height=117 src=/images/thumbnailimg/month_1909/201909261008126993.jpg></A>
+</div>
+            <div class="fl lh28 grey12 con6" ><p style="text-indent:2em;">每逢重大节日，组织阅兵是世界上不少国家的通行做法和惯例。从1949年新中国成立至今，举行了十余次国庆阅兵，每次阅兵都有新的亮点和看点，也给人们留下许多津津乐道的话题。</p></div>
+        <div class="blank10"></div>
+        <div class="fl">
+        	<ul class="list3">
+<li><a class="grey12" href="/node2/shds/n58/u1ai33995.html" target="_blank">穆青：为革命事业洒尽最后一滴血 </a></li><li><a class="grey12" href="/node2/shds/n58/u1ai33981.html" target="_blank">毛泽东诗词中的阴晴圆缺 </a></li><li><a class="grey12" href="/node2/shds/n58/u1ai33972.html" target="_blank">上甘岭战斗英雄解甲归田之后…… </a></li>
+                           </ul>
+        </div>
+         <div class="fl">
+        	<ul class="list3">
+<li><a class="grey12" href="/node2/shds/n58/u1ai33994.html" target="_blank">“渤海走廊”：连接延安的红色生命线 </a></li><li><a class="grey12" href="/node2/shds/n58/u1ai33980.html" target="_blank">1934：红军不怕远征难 </a></li><li><a class="grey12" href="/node2/shds/n58/u1ai33971.html" target="_blank">高树理：牺牲时依旧保持战斗姿态的人民卫士 </a></li>
+            </ul>
+            
+            <div style="width: 126px;margin-top: 20px;"><a href="/node2/shds/n58/index.html" target="_blank" class="grey12" style="text-align: right;display: block;">更多》</a></div>
+        </div>
+        </div>
+    </div>   		
+</div>
+ <div class="blank10"></div>
+ <div id="wFrame">
+ 
+ 
+ 
+ 
+  <div id="wFrame">
+ <div class="blank10"></div>
+ <div style="float:left;margin-right:20px;"><a target="_blank" href="http://www.ccphistory.org.cn/node2/shds/n1403/index.html"><img border="0" width="184" height="90" src="/images/2014shds/20161117-4.jpg"></a></div>
+<div style="float:left;margin-right:20px;"><a target="_blank" href="http://www.ccphistory.org.cn/node2/shds/n1404/index.html"><img border="0" width="184" height="90" src="/images/2014shds/20161117-5.jpg"></a></div>
+<div style="float:left;margin-right:20px;"><a target="_blank" href="http://www.ccphistory.org.cn/node2/shds/n1410/index.html"><img border="0" width="184" height="90" src="/images/2014shds/20161117-6.jpg"></a></div>
+<div style="float:left;margin-right:20px;"><a target="_blank" href="http://www.ccphistory.org.cn/node2/shds/n1409/index.html"><img border="0" width="184" height="90" src="/images/2014shds/20161117-7.jpg"></a></div>
+<div style="float:left;"><a target="_blank" href="http://www.ccphistory.org.cn/node2/shds/n1408/index.html"><img border="0" width="184" height="90" src="/images/2014shds/20161117-8.jpg"></a></div>
+<div class="blank10"></div>
+
+
+
+<div style="float:left;margin-right:20px;"><a target="_blank" href="http://www.ccphistory.org.cn/node2/shds/n1147/index.html"><img border="0" width="320" height="90" src="/images/2014shds/20160831-5.jpg"></a></div>
+<div style="float:left;margin-right:20px;"><a target="_blank" href="http://www.ccphistory.org.cn/node2/shds/n1171/index.html"><img border="0" width="320" height="90" src="/images/2014shds/20160831-6.jpg"></a></div>
+<div style="float:left;"><a target="_blank" href="http://www.ccphistory.org.cn/node2/shds/n1379/u1ai20949.html"><img border="0" width="320" height="90" src="/images/2014shds/20160831-3.jpg"></a></div>
+
+
+<div class="blank10"></div>
+
+
+<div style="float:left;margin-right:20px;"><a href="http://www.ccphistory.org.cn/node2/shds/n1183/index.html" target="_blank"><img border="0" width="320" height="90" src="/images/2014shds/20160831-8.jpg"></a></div>
+<div style="float:left;margin-right:20px;"><a href="/node2/shds/n100/n101/u1ai77.html" target="_blank"><img border="0" width="320" height="90" src="/images/2014shds/20160831-9.jpg"></a></div>
+<div style="float:left;"><a target="_blank" href="http://www.ccphistory.org.cn/node2/shds/n1184/index.html"><img border="0" width="320" height="90" src="/images/2014shds/20160831-7.jpg"></a></div>
+ <div class="blank10"></div>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<div id="wFrame">
+<iframe width="1000" height="430" frameborder="0" vspale="0" scrolling="no" noresize="" src="/node2/shds/n309/index.html" marginheight="0" framespacing="0" marginwidth="0" name="photo1" border="0">
+ </iframe>
+ </div>
+ 
+ <div class="blank10"></div>
+      <!--镜像历史 上海影像 红色印痕 -->
+    	<div class="block8 fl">
+        	<img src="/images/2014shds/bt6.gif"/>
+            <div class="fc con1_2"><a class="red24" 
+
+href="/node2/shds/n84/index.html" target="_blank">镜像历史</a></div>
+            <div class="blank4"></div>
+        <div class="con1_5">    
+        <iframe width="271" height="330" frameborder="0" vspale="0" 
+
+scrolling="no" noresize="" src="/node2/shds/n478/index.html" marginheight="0" 
+
+framespacing="0" marginwidth="0" name="photo1" border="0">
+        </iframe>
+        </div>           	
+        </div>
+        
+        <div class="block8 fl">
+        	<img src="/images/2014shds/bt6.gif"/>
+            <div class="fc con1_2"><a class="red24" 
+
+href="/node2/shds/n100/index.html" target="_blank">申城影像</a></div>
+            <div class="con1_3">
+
+<div>
+    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="271" height="201">
+    <param name="movie" value="http://www.eastday.com/images/0928imedia/Flvplayer.swf" />
+    <param name="quality" value="high" />
+    <param name="allowFullScreen" value="true" />
+    <param name="FlashVars" value="vcastr_file=http://mthz.eastday.com/dsb/jgdsh1.flv&LogoText=media.eastday.com&BufferTime=3" />
+    <embed src="http://www.eastday.com/images/0928imedia/Flvplayer.swf" allowfullscreen="true" flashvars="vcastr_file=http://mthz.eastday.com/dsb/jgdsh1.flv&LogoText=media.eastday.com" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="271" height="201"></embed>
+  </object>
+ </div>
+  <script type="text/javascript">
+		var source = "http://mthz.eastday.com/dsb/jgdsh1.flv";
+		if(/(iPhone|iPad|iPod|android)/i.test(navigator.userAgent))
+		{
+			var qq = source.replace(".flv",".mp4");
+			document.getElementById('iphone').innerHTML = '<embed 
+
+src="'+ qq +'" autoplay="false" width="271" height="201" align="middle" 
+
+bgcolor="black" pluginspage="http://www.apple.com/quicktime/download/"></embed>';
+		}
+</script>
+
+            	<p class="blank10"></p>
+                <p class="fc red14">1949接管大上海</p>
+                <p class="blank10"></p>
+               	<ul class="list4">
+
+
+            		<li><a class="grey12" href="
+/node2/shds/n100/n102/u1ai6373.html
+" target="_blank">曙光</a></li>
+
+            		<li><a class="grey12" href="
+/node2/shds/n100/n102/u1ai6374.html
+" target="_blank">决战上海</a></li>
+
+            		<li><a class="grey12" href="
+/node2/shds/n100/n102/u1ai6371.html
+" target="_blank">少奇与上海</a></li>
+                </ul>
+     </div> 	
+</div>
+
+
+        <div class="block8_1 fr">
+        	<img src="/images/2014shds/bt6.gif"/>
+            <div class="fc con1_2"><a class="red24" 
+
+href="/node2/shds/n85/index.html" target="_blank">红色印痕</a></div>
+            <div class="blank4"></div>
+             <div class="con1_5">    
+        <iframe width="271" height="330" frameborder="0" vspale="0" 
+
+scrolling="no" noresize="" src="/node2/shds/n213/index.html" marginheight="0" 
+
+framespacing="0" marginwidth="0" name="photo1" border="0">
+        </iframe>
+        </div>
+    </div> 
+    
+	<div class="blank20"></div>
+    <div id="section6">
+    	<div class="block10 fl">
+     
+                <div class="con2_1 fl" style="width:330px;">
+                 <div><a href="/node2/shds/n215/index.html" target="_blank"><img 
+
+src="/images/2014shds/new1.jpg"/></a></div>
+                    <div class="blank15"></div>
+                    <div class="fl con2_3" style="width:162px;border-right:1px 
+
+#d8d8d8 dotted;">
+                        <div class="fc red18"><a href="/node2/shds/n215/n216/index.html" target="_blank" class="red18">党史信息报</a></div>
+                        <div class="blank15"></div>
+                        <div class="fc">
+                   <A target=_blank href=/node2/shds/n215/n216/u1ai33911.html><IMG border=0 width=137  height=179 src=/images/thumbnailimg/month_1909/201909241032443488.jpg></A>
+                         </div>
+                         <div class="blank15"></div>
+                        <div class="new1">
+                 	<ul class="list6">
+
+                    	<li style="width:74px;"><a id="ms_0" 
+
+class="red12a"  onmouseover="Menu(0,'ms','red12a','grey12')" href="/node2/shds/n215/n216/u1ai33911.html" target="_blank">第1414期</a></li>
+                    	<li style="width:74px;"><a id="ms_1" 
+
+class="grey12"  onmouseover="Menu(1,'ms','red12a','grey12')" href="/node2/shds/n215/n216/u1ai33910.html" target="_blank">第1413期</a></li>
+                    	<li style="width:74px;"><a id="ms_2" 
+
+class="grey12"  onmouseover="Menu(2,'ms','red12a','grey12')" href="/node2/shds/n215/n216/u1ai33909.html" target="_blank">第1412期</a></li>
+                    	<li style="width:74px;"><a id="ms_3" 
+
+class="grey12"  onmouseover="Menu(3,'ms','red12a','grey12')" href="/node2/shds/n215/n216/u1ai33908.html" target="_blank">第1411期</a></li>
+                                           </ul>
+</div>             
+                     </div>
+                     
+                     <div class="fl con2_3" style="width:162px;">
+                        <div class="fc red18"><a href="/node2/shds/n215/n217/index.html" target="_blank" class="red18">上海党史党建</a></div>
+                        <div class="blank15"></div>
+                        <div class="fc">
+                   <A target=_blank href=/node2/shds/n215/n217/u1ai33885.html><IMG border=0 width=137  height=179 src=/images/thumbnailimg/month_1909/201909201553107657.jpg></A>
+                         </div>
+                         <div class="blank15"></div>
+                        <div class="new1 fr">
+                 	<ul class="list6">
+
+                    	<li style="width:74px;"><a id="ms1_0" 
+
+class="red12a"  onmouseover="Menu(0,'ms1','red12a','grey12')" href="/node2/shds/n215/n217/u1ai33885.html" target="_blank">2019年第9期</a></li>
+                    	<li style="width:74px;"><a id="ms1_1" 
+
+class="grey12"  onmouseover="Menu(1,'ms1','red12a','grey12')" href="/node2/shds/n215/n217/u1ai33884.html" target="_blank">2019年第8期</a></li>
+                    	<li style="width:74px;"><a id="ms1_2" 
+
+class="grey12"  onmouseover="Menu(2,'ms1','red12a','grey12')" href="/node2/shds/n215/n217/u1ai33883.html" target="_blank">2019年第7期</a></li>
+                    	<li style="width:74px;"><a id="ms1_3" 
+
+class="grey12"  onmouseover="Menu(3,'ms1','red12a','grey12')" href="/node2/shds/n215/n217/u1ai33882.html" target="_blank">2019年第6期</a></li>
+                                           </ul>
+</div>             
+                     </div>
+                     
+                     
+              
+                 
+             
+</div>
+            <div class="con2_1 fr" style="width:360px;">
+ <div><a href="/node2/shds/n515/index.html" target="_blank"><img src="/images/2014shds/new3_519.jpg"/></a></div>
+<iframe width="360" height="325" frameborder="0" vspale="0" scrolling="no" noresize="" src="/node2/shds/n964/index.html" marginheight="0" framespacing="0" marginwidth="0" name="photo1" border="0">
+</iframe> 
+               
+            </div>
+        </div>
+        <div class="fr" style="width:250px;">
+<a href="/node2/shds/n963/index.html" target="_blank"><img src="/images/2014shds/new4_519.jpg"/></a>
+
+</div>
+    <div class="blank10"></div>
+    <div style="background: url('/images/2014shds/newbg.jpg') no-repeat;width:1000px;height:40px;overflow:hidden;"><div style="float:right;padding:9px 5px 0 0;"><a href="/node2/shds/n749/index.html" target="_blank" style="color:#fff;font-size:14px;">更多</a></div></div>
+   
+<div class="blank10"></div>   
+   <div style="float:left;margin-right:20px;"><a target="_blank" href="http://www.ccphistory.org.cn/node2/shds/n178/index.html"><img border="0" width="320" height="90" src="/images/thumbnailimg/month_1503/201503261339585559.jpg"></a></div>
+<div style="float:left;margin-right:20px;"><a href="/node2/shds/n1532/index.html" target="_blank"><img border="0" width="320" height="90" src="/images/2014shds/20170927-2.jpg"></a></div>
+<div style="float:left;"><a href="http://www.ccphistory.org.cn/node2/shds/n1533/index.html" target="_blank" ><IMG border=0 width=320  height=90 src=/images/2014shds/20170927-3.jpg></a></div>
+
+
+   
+   
+  <div class="blank10"></div> 
+<div style="float:left;margin-right:20px;"><a href="http://history.eastday.com/wyzt/shlpp/index.html" target="_blank"><img border="0" width="320" height="90" src="/images/2014shds/20161117-1.jpg"></a></div>
+<div style="float:left;margin-right:20px;"><a href="http://www.ccphistory.org.cn/node2/shds/n1371/index.html" target="_blank" ><img border="0" width="320" height="90" src="/images/2014shds/20160831-2.jpg"></a></div>
+<div style="float:left;"><a href="http://www.ccphistory.org.cn/node2/shds/n1405/index.html" target="_blank" ><IMG border="0" width="320"  height="90" src="/images/2014shds/20161117-3.jpg"></a></div>
+
+   
+   	<ul class="newpiclist">
+    
+    <li><a href="http://sh.eastday.com/qhtyzt/kz70/index.html" target="_blank" ><IMG border=0 width=320  height=90 src=/images/2014shds/20150520-3.jpg></a></li>
+    
+    <li><a href="http://www.ccphistory.org.cn/node2/shds/n896/n897/index.html?plg_nld=1&amp;plg_uin=1&amp;plg_auth=1&amp;plg_nld=1&amp;plg_usr=1&amp;plg_vkey=1&amp;plg_dev=1" target="_blank"><img border="0" width="320" height="90" src="/images/2014shds/20160520-2.jpg"></a></li>
+    
+    <li><a href="http://www.ccphistory.org.cn/node2/shds/n965/n966/index.html" target="_blank" ><A target=_blank href=http://www.ccphistory.org.cn/node2/shds/n965/n966/index.html><IMG border=0 width=320  height=90 src=/images/thumbnailimg/month_1508/201508071333366296.jpg></A></a></li>
+    
+    </ul>
+    
+
+    <div class="blank10"></div>
+<div style="float:left;margin-right:20px;"><a target="_blank" href="/node2/shds/n1365/index.html"><img border="0" width="490" height="90" src="/images/thumbnailimg/month_1607/201607151249548767.jpg"></a></div>
+<div style="float:left;"><a target="_blank" href="/node2/shds/n1366/index.html"><img border="0" width="490" height="90" src="/images/thumbnailimg/month_1607/201607151250273013.jpg"></a></div>
+
+
+    
+    <div class="blank10"></div>
+    
+    <div style="float:left;margin-right:20px;"><a href="http://www.ccphistory.org.cn/node2/shds/n811/n1186/index.html" target="_blank"><img border="0" width="490" height="90" src="/images/2014shds/20160630.jpg"></a></div>
+    <div style="float:left;"><a target="_blank" href="http://news.eastday.com/china/jd95/index.html"><img border="0" width="490" height="90" src="/images/2014shds/20160627-2.jpg"></a></div>
+    
+    
+    <div class="blank10"></div>
+    <div style="float:left;"><a href="http://www.ccphistory.org.cn/node2/shds/n1380/index.html" target="_blank" ><img border="0" width="1000" height="90" src="/images/2014shds/20160816.jpg"></a></div>
+    
+   <div class="blank10"></div>
+    <div class="block12">
+    	<p class="blank20"></p>
+    	<p class="grey12 pd20">党史系统：</p>
+        <p class="blank10"></p>
+    	<a class="grey12 fl pd20" href="http://www.dswxyjy.org.cn/" target="_blank">中共中央党史和文献研究院</a>
+        <a class="grey12 fl pd20" href="http://www.zgbjds.com/information/" target="_blank">北京</a>
+
+        <a class="grey12 fl pd20" href="http://www.redsa.com.cn/" target="_blank">重庆</a>
+        <a class="grey12 fl pd20" href="http://www.hebeidangshi.gov.cn/" target="_blank">河北</a>
+        <a class="grey12 fl pd20" href="http://www.lnds.com.cn/" target="_blank">辽宁</a>
+ 
+        <a class="grey12 fl pd20" href="http://www.jsdsw.org.cn/" target="_blank">江苏</a>
+        <a class="grey12 fl pd20" href="http://www.anhuids.gov.cn/" target="_blank">安徽</a>
+        <a class="grey12 fl pd20" href="http://www.zgfjlsw.org.cn/" target="_blank">福建</a>
+        <a class="grey12 fl pd20" href="http://www.jxdys.cn/" target="_blank">江西</a>
+        <a class="grey12 fl pd20" href="http://www.hndsw.com.cn/" target="_blank">河南</a>
+
+
+        <a class="grey12 fl pd20" href="http://www.gsds.gov.cn/" target="_blank">甘肃</a>
+        <a class="grey12 fl pd20" href="http://www.nxdsw.net/" target="_blank">宁夏</a>
+
+        <a class="grey12 fl pd20" href="http://www.gxdsw.cn/" target="_blank">广西</a>
+        <a class="grey12 fl pd20" href="http://www.zjds.org.cn/" target="_blank">浙江</a>
+        <a class="grey12 fl pd20" href="http://www.hnszw.org.cn/" target="_blank">海南</a>
+        <a class="grey12 fl pd20" href="http://www.gddsw.com.cn/" target="_blank">广东</a>
+        <a class="grey12 fl pd20" href="http://www.jldsyjs.org/" target="_blank">吉林</a>
+        <a class="grey12 fl pd20" href="http://hbds.cnhubei.com/" target="_blank">湖北</a>
+        <a class="grey12 fl pd20" href="http://www.dsyj.gov.cn/" target="_blank">贵州</a>
+        <div class="blank10"></div>
+<div class="fc">
+<select class="select1" name="" onchange="return change(this);">
+<option>相关单位</option>
+<option value="http://www.zgyd1921.com/index.aspx"> 中共一大会址纪念馆</option>
+<option value="http://www.edjng.org:3030/"> 中共二大会址纪念馆</option>
+<option value="http://sd1925.shhk.gov.cn/"> 中共四大会址纪念馆</option>
+<option value="http://www.cyjng.net/"> 陈云纪念馆</option>
+<option value="http://www.slmmm.com/"> 龙华烈士陵园</option>
+<option value="http://www.shsoongching-ling.com/"> 宋庆龄陵园</option>
+<option value="http://www.sh-aiguo.gov.cn/"> 上海市爱国主义教育基地</option>
+<option value="http://www.china813.com/"> 上海淞沪抗战纪念馆</option>
+<option value="http://www.shjcdj.cn/djw/"> 上海基层党建网</option>
+</select>
+<select class="select1" name="" onchange="return change(this);">
+<option>区县委办</option>
+<option value="http://szb.pudong.gov.cn/portal/index/index.htm"> 浦东史志</option>
+<option value="http://www.fxtong.gov.cn/main/index.asp"> 奉贤史志</option>
+<option value="http://szb.shyp.gov.cn/"> 杨浦地情网</option>
+<option value="http://qpsz.shqp.gov.cn/"> 青浦史志</option>
+<option value="http://nj.changning.sh.cn"> 长宁党史</option>
+</select>
+<select class="select1" name="" onchange="return change(this);">
+<option>相关网站</option>
+<option value="http://www.people.com.cn/"> 人民网</option>
+<option value="http://www.xinhuanet.com/"> 新华网</option>
+<option value="http://www.eastday.com/"> 东方网</option>
+<option value="http://www.shanghai.gov.cn/"> 中国上海</option>
+<option value="http://www.shtong.gov.cn/">上海通</option>
+</select>
+</div>
+</div> 	
+</div>
+
+<div class="blank20"></div>
+<script type="text/javascript">
+	var now= new Date();
+	var year=now.getFullYear();
+	var month=now.getMonth()+1;
+	var day=now.getDate();
+	var riqi=now.getDay();
+	switch(riqi) 
+{ 
+case 0:b="星期日";break; 
+case 1:b="星期一";break; 
+case 2:b="星期二";break; 
+case 3:b="星期三";break; 
+case 4:b="星期四";break; 
+case 5:b="星期五";break; 
+case 6:b="星期六";break; 
+default:b=""; 
+} 
+	document.getElementById("year").innerHTML=year;
+	document.getElementById("month").innerHTML=month;
+	document.getElementById("day").innerHTML=day;
+	document.getElementById("riqi").innerHTML=b;
+</script>
+</div>
+<div class="footer">
+<div class="fc">
+<p class="blank25"></p>
+<p class="white12">主办：中共上海市委党史研究室 电话：021-64748686 协办：东方网 沪 ICP 备05004910号-1 联系邮箱：ccphistory@163.com <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402002843" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;color:#ffffff;"><img src="/images/2014shds/ba.png" style="float:left;"/>沪公网安备 31010402002843号</a >
+</p>
+</div>
+</div>
+<div style="display:none">
+<script type="text/javascript">document.write(unescape("%3Cscript src='http://tjtest1.eastday.com/webdig.js?z=1' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">wd_paramtracker("_wdxid=000000000000000000000000000000000000000000") </script>
+</div>
+
+
+
+<div id="lovexin14a" style="right: 6px; position: absolute; top: 520px;"><a href="/node2/shds/n58/u1ai33881.html" target="_blank"><img border="0" src="/images/2014shds/20190920.jpg" width="120"></a><br><a onclick="document.getElementById(&quot;lovexin14a&quot;).style.display=&quot;none&quot;"><div style="font-size:12px;width:110px;height:30px;padding-top:4px;text-align:right;cursor:pointer;">关闭</div></a></div>
+<div id="lovexin15a" style="left: 6px; position: absolute; top: 520px;"><a href="/node2/shds/n58/u1ai33881.html" target="_blank"><img border="0" src="/images/2014shds/20190920.jpg" width="120"></a><br><a onclick="document.getElementById(&quot;lovexin15a&quot;).style.display=&quot;none&quot;"><div style="font-size:12px;width:110px;height:30px;padding-top:4px;text-align:left;cursor:pointer;">关闭</div></a></div>
+
+
+<div id=img style="HEIGHT: 80px; LEFT: 12px; POSITION: absolute; TOP: 3px; WIDTH: 150px"><a target="_blank" href="http://city.021east.com/photo/hh70/index.html"><IMG border=0 src="/images/2014shds/20190929.jpg" width="150"></a><div style="margin-top:2px!important;margin-top:2px;margin-left:50px;float:right;width:50px; height:22px; z-index:200;"><a onclick='document.getElementById("img").style.display="none"' onfocus="this.blur()"><span style='font-size:12px;color: #000000;text-decoration: none;cursor:pointer;'>[关闭]</span></a></div></div>
+
+<SCRIPT language=JavaScript>
+ 
+var xPos=450;var yPos=document.documentElement.clientHeight;var step=1;var delay=40;var height=0;var Hoffset=0;var Woffset=0;var yon=0;var xon=0;var pause=true;var interval;
+ var obj=document.getElementById("img"); document.getElementById("img").style.top=yPos+"px";
+function changePos(){width=document.documentElement.clientWidth;height=document.documentElement.clientHeight;
+Hoffset=document.getElementById("img").offsetHeight;
+Woffset=document.getElementById("img").offsetWidth;document.getElementById("img").style.left=xPos+document.documentElement.scrollLeft+"px";document.getElementById("img").style.top=yPos+document.documentElement.scrollTop+"px";if(yon){yPos=yPos+step;}else{yPos=yPos-step;}if(yPos<0){yon=1;yPos=0;}if(yPos>=(height-Hoffset)){yon=0;yPos=(height-Hoffset);}if(xon){xPos=xPos+step;}else{xPos=xPos-step;}if(xPos<0){xon=1;xPos=0;}if(xPos>=(width-Woffset)){xon=0;xPos=(width-Woffset);}}function start(){document.getElementById("img").visibility='visible';interval=setInterval('changePos()',delay);}start();obj.onmouseover=function(){clearInterval(interval)} 
+ obj.onmouseout=function(){interval=setInterval("changePos()",delay)}
+
+</SCRIPT>
+</body>
+</html>

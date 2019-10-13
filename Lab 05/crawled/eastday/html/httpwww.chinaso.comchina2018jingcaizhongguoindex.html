@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>搜索正能量，点赞2018 - 中国搜索</title>
+<meta name="renderer" content="webkit">
+<meta name="uctk" content="enabled">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="filetype" content="0">
+<meta name="publishedtype" content="1">
+<meta name="pagetype" content="2">
+<meta name="catalogs" content="C_3315329">
+
+    <link href="http://n2.static.pg0.cn/www/common/base/css/base.css" type="text/css" rel="stylesheet" />
+    <link href="http://n2.static.pg0.cn/www/common/base/css/component.css" type="text/css" rel="stylesheet" />
+    <link href="http://n1.static.pg0.cn/special/static/finance/2018-dz/static/css/finance_sp_vote.css" type="text/css" rel="stylesheet" />
+    <script src="http://n2.static.pg0.cn/www/common/base/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://n1.static.pg0.cn/special/static/finance/2018-dz/static/js/nav-highlight.js"></script>
+<script type="text/javascript" src="http://special.chinaso.com/static/reform/static/js/echartnew.js"></script> 
+    <script type="text/javascript">
+        function autoSelectCss(pc, wap) {
+            var url = pc;
+            if (/Android|webOS|iPhone|iPod|BlackBerry|opera mini|opera mobile/i.test(navigator.userAgent)) {
+                url = wap
+            } else {}
+            $("<link>").attr({
+                rel: "stylesheet",
+                type: "text/css",
+                href: url
+            }).appendTo("head")
+        };
+        var isMobile = /Android|webOS|iPhone|iPod|BlackBerry|opera mini|opera mobile/i.test(navigator.userAgent); // 是否启用wap交互
+        if (isMobile) window.location.href = "http://m.chinaso.com/china2018/jingcaizhongguo/index.html";
+    </script>
+    <!--[if IE 6]>
+<script src="http://n2.static.pg0.cn/www/common/base/js/DD_belatedPNG.js"></script>
+<script>
+    DD_belatedPNG.fix('div');
+</script>
+<![endif]-->
+
+    <style>
+.dz_banner {
+    width: 100%;
+    height: 500px;
+    background: url(http://n9.cmsfile.pg0.cn/group4/M00/09/BD/CgoOFlxFM7mAO0ybAAcaWmhiHII361.jpg) no-repeat center;
+}
+</style>
+
+<style>
+.gs_c_info_ewm{    top: 35px;}
+</style>
+</head>
+
+<body>
+<!--地图-->
+<style>
+    #map,.map_wrap{width:100%;height:100%}
+    .maodian .bottom_bg a{margin-left:30px;padding-top:18px;line-height:18px}
+    .map_wrap{position:fixed;left:0;top:0;z-index:199999;background:#ccc}
+    #close_btn{position:absolute;right:0;top:0;cursor:pointer;font-size:30px;width:40px;height:40px;line-height:40px;background:#f68b01;text-align: center;color: #fff;}
+   .runNum{margin:0 auto;padding:0;overflow:hidden;height:50px;line-height:50px;position:relative}
+   .good_icon,.good_icon span,.good_number,.runNum>li{position:absolute}
+   .runNum>li{width:40px;float:left}
+   .anchorBL{display:none}
+   .good_number b,.runNums{display:inline-block}
+   .good_icon{width:164px;height:55px;line-height:55px;overflow:hidden;background:url(http://special.chinaso.com/static/finance/2018-dz/static/image/good_icon.png) 91px center no-repeat #f68b01;border-radius:30px;bottom:30px;left:50%;margin-left:-50px;cursor:pointer;background-size: 32px;}
+   .good_icon span{font-size:20px;left:50%;margin-left:-45px;color:#fff;}
+   .good_number{background:url(http://special.chinaso.com/static/finance/2018-dz/static/image/good_top_bgico.png) center center no-repeat;width:1200px;height:130px;top:40px;left:50%;margin-left:-600px;text-align:center;color:#fff}
+   .good_number .good_tt{height:100px;line-height:94px;font-size:30px}
+   .runNum{border:none;width:280px;float:left;margin-top:18px;visibility:hidden}
+   .runNums{border:none;width:auto;margin-top:0;font-size:38px;text-align: center;list-style: none;padding: 0 10px;}
+   .runNum li div{font-size:58px}
+   .good_number p span{font-size:54px}
+   .zfont{color:#fff;font-size:20px;position: absolute;right:30%; top:10%;} 
+   .gs_c_info{padding: 30px 205px 30px 0;}
+.gs_c_info p{margin-bottom: 12px;color:#666;}
+#container{cursor:auto !important;}
+</style>
+
+<div class="map_wrap">
+    <div id="container" style="height: 100%"></div>
+    <div class="good_number">
+        <div class="good_tt">
+           <b>搜索正能量，已有</b><ul class="runNums" id="test"></ul><b>人点赞</b>
+        </div>
+    </div>
+    <div class="good_icon" id="dianzan" data-vote="359_839_4941" style="visibility:hidden;">
+        <span>点赞</span>
+    </div>
+    <div id="close_btn">X</div>
+</div>
+<!--dianzan map-->
+<script >
+//cookie
+function getCookie(name) {
+   var nameEQ = name + "=";
+   var ca = document.cookie.split(';'); //把cookie分割成组
+   for(var i=0;i < ca.length;i++) {
+     var c = ca[i]; //取得字符串
+     while (c.charAt(0)==' ') { //判断一下字符串有没有前导空格
+       c = c.substring(1,c.length); //有的话，从第二位开始取
+     }
+     if (c.indexOf(nameEQ) == 0) { //如果含有我们要的name
+        return unescape(c.substring(nameEQ.length,c.length)); //解码并截取我们要值
+     }
+   }
+   return false;
+};
+//设置cookie
+function setCookie(name, value, seconds) {
+   seconds = seconds || 0; //seconds有值就直接赋值，没有为0，这个根php不一样。
+   var expires = "";
+   if (seconds != 0 ) { //设置cookie生存时间
+     var date = new Date();
+     date.setTime(date.getTime()+(seconds*1000));
+     expires = "; expires="+date.toGMTString();
+   }
+   document.cookie = name+"="+escape(value)+expires+"; path=/"; //转码并赋值
+};
+var znumb = getCookie('znumb') || 0; 
+// 路径配置
+
+        // 基于准备好的dom，初始化echarts图表
+ var myChart = echarts.init(document.getElementById('container'));
+ $.ajax({
+          url:"http://poll.chinaso.com/poll/areaStat",//http://poll.chinaso.com/poll/areaStat?formId=235
+          data:{formId:359},  // 上线后换ID
+          type:"get",
+          dataType:"jsonp",
+          success:function(data){
+            //console.log(data)
+            if(data['status']==0){
+              return false;
+            };
+            var placeList = data['statInfo'];
+            var numb = data['totalCount'];
+            if(znumb > numb){
+               numb = znumb;
+            }
+             numb -= 54500000;
+            //numb 从ofo接口获得
+            $('.lookchina_con_top p').html(numb); 
+            $("#test").html(numb).attr('num',numb);
+            $('#dianzan').css('visibility','visible');
+            
+            option = {
+                backgroundColor: '#000',
+                color: [
+                    'rgba(255, 255, 255, 0.8)',
+                    'rgba(14, 241, 242, 0.8)',
+                    'rgba(37, 140, 249, 0.8)'
+                ],
+                title : {
+                  show:false
+                },
+                legend: {
+                    show:false,
+                    orient: 'vertical',
+                    x:'left',
+                    data:['强','中','弱'],
+                    textStyle : {
+                        //color: '#fff'
+                    }
+                },
+                toolbox: {
+                    show : false
+                } ,
+                series : [
+                    {
+                        name: '弱',
+                        type: 'map',
+                        roam: false,
+                        mapType: 'china',
+                        itemStyle:{
+                            normal:{
+                                borderColor:'rgba(100,149,237,1)',
+                                borderWidth:1.5,
+                                areaStyle:{
+                                    color: '#1b1b1b'
+                                }
+                            }
+                        },
+                        data : [],
+                        markPoint : {
+                            symbolSize: 2,
+                            large: true,
+                            effect : {
+                                show: true
+                            },
+                            data : (function(){
+                                var data = [];
+                                var len = 1200;
+                                var geoCoord
+                                while(len--) {
+                                    geoCoord = placeList[len % placeList.length].coordinate ;
+                                    data.push({
+                                        name : placeList[len % placeList.length].area + len ,
+                                        value : 10,
+                                        geoCoord : [
+                                            geoCoord[0] + Math.random() * 5 - 2.5,
+                                            geoCoord[1] + Math.random() * 3 - 1.5
+                                        ]
+                                    })
+                                }
+                                return data;
+                            })()
+                        }
+                    },
+                    {
+                        name: '中',
+                        type: 'map',
+                        mapType: 'china',
+                        roam: false,
+                        data : [],
+                        markPoint : {
+                            symbolSize: 3,
+                            large: true,
+                            effect : {
+                                show: true
+                            },
+                            data : (function(){
+                                var data = [];
+                                var len = 500;
+                                var geoCoord
+                                while(len--) {
+                                    geoCoord = placeList[len % placeList.length].coordinate;
+                                    data.push({
+                                        name : placeList[len % placeList.length].area + len,
+                                        value : 50,
+                                        geoCoord : [
+                                            geoCoord[0] + Math.random() * 5 - 2.5,
+                                            geoCoord[1] + Math.random() * 3 - 1.5
+                                        ]
+                                    })
+                                }
+                                return data;
+                            })()
+                        }
+                    },
+                    {
+                        name: '强',
+                        type: 'map',
+                        mapType: 'china',
+                        hoverable: false,
+                        roam:false,
+                        data : [],
+                        markPoint : {
+                            symbol : 'diamond',
+                            symbolSize: 6,
+                            large: true,
+                            effect : {
+                                show: true
+                            },
+                            data : (function(){
+                                var data = [];
+                                var len = placeList.length;
+                                while(len--) {
+                                    data.push({
+                                        name :  placeList[len].area,
+                                        value : 90,
+                                        geoCoord : placeList[len].coordinate
+                                    })
+                                }
+                                return data;
+                            })()
+                        }
+                    }
+                ]
+            };
+                // 为echarts对象加载数据
+              myChart.setOption(option);
+              //zan
+            $("#dianzan").click(function(e){
+                 e.preventDefault();
+                 var self = $(this);
+                 if(self.attr('disabled')){ 
+                    return false;
+                 };
+                 $('.good_icon').css('cursor','auto');
+                 var sdata = self.attr('data-vote');
+                 var sdarr = sdata.split('_');
+                 var fid = sdarr[0];
+                 var eleName = 'element_'+sdarr[1];
+                 var eledata = eleName+'_'+sdarr[2];
+                 var ajaxData = {};
+                 ajaxData[eleName] = eledata;
+                 ajaxData['formId'] = fid;
+                 $.ajax({
+                    url:"http://poll.chinaso.com/poll/pollCh", 
+                    data:ajaxData,
+                    type:"get",
+                    dataType:"jsonp",
+                    success:function(data){ 
+                        /////
+                         $('#dianzan').append('<p class="zfont">+1</p>');
+                         $('.zfont').animate({'right':0,'top':'-20px','font-size':'32px','opacity':0},1000,function(){$('.zfont').remove();})
+                        //////
+                         var snum =  +$('#test').attr('num'); 
+                         $("#test").html(snum+1);
+                         $('.lookchina_con_top p').html(snum+1);
+                         self.addClass('active').attr('disabled',true); 
+                         setCookie('znumb', snum+1, 60*60*24);  
+                    }
+                  });
+                 return false; 
+              });
+          }
+    })
+ ///////////////////////
+ $('#close_btn').on('click',function(){
+    $('.map_wrap').hide();
+ });
+//// 自动关闭
+setTimeout(function(){
+   $('#close_btn').click();
+},5000);
+</script>
+<!--dianzan map-->
+<!--banner-->
+
+    <div class="gs_c_nav">
+        <div class="gs_c">
+            <div class="gs_c_logo">
+                <a href="" target="_blank"><img src="http://n1.static.pg0.cn/special/static/finance/2018-dz/static/image/logo.png"></a>
+                <span>搜索正能量</span>
+            </div>
+            <ul>
+                <li class="" data-contentid="3315329"><a href="http://www.chinaso.com/china2018/jingcaizhongguo/index.html">精彩2018</a></li>
+<li data-contentid="3315331"><a href="http://www.chinaso.com/china2018/gaigezhongguo/index.html">2018知名企业</a></li>
+<li data-contentid="3315332"><a href="http://www.chinaso.com/china2018/chuanbozhongguo/index.html">2018正能量企业</a></li>
+<li data-contentid="3315330"><a href="http://www.chinaso.com/china2018/shuzizhongguo/index.html">数字中国</a></li>
+<!--li data-contentid="3315333"><a href="http://www.chinaso.com/china2018/chuangxinzhongguo/index.html">创新中国</a></li-->
+<li data-contentid="3315334"><a href="http://www.chinaso.com/china2018/meilizhongguo/index.html">美丽中国</a></li>
+<li data-contentid="3315335"><a href="http://www.chinaso.com/china2018/huodongjieshao/index.html">活动背景</a></li>
+<script>
+  //高亮方法调用
+navHighLight($(".gs_c").eq(0).find('li'));    
+</script>
+
+
+
+            </ul>
+        </div>
+    </div>
+  <div class="dz_banner"></div>
+    <div class="gs_info_wrap">
+        <div class="gs_c">
+            <div class="gs_c_info">
+                   <p><span style="font-size: 16px;"><strong>｜</strong></span>“搜索正能量 点赞2018”大型网络宣传活动，将通过搜索技术+互联网大数据，遴选“年度热词、感动人物、精彩故事”，广泛征集“2018知名企业、2018正能量企业、数字中国、美丽中国”经典案例。中国搜索将推出网络专题，分享经典案例，最终由专家评审确定相应榜单。活动重在广泛参与，重在案例征集和互动分享，目的是激发正能量，传播正能量，弘扬正能量。</p>
+  <p><span style="font-size: 16px;"><strong>｜</strong></span>网友可通过邮箱、电话等方式进行案例推荐，电话：010-87869996，邮箱：dz@chinaso.com。<br></p>
+  <p><strong>｜</strong>本次活动坚持公正、公平、公开原则，严格、规范，杜绝一切违法、违纪、违规行为。</p>
+  <p></p>
+ 
+
+            </div>
+            <div class="gs_c_info_ewm">
+                
+
+            </div>
+        </div>
+    </div>
+    <div class="financeSpMainWrap">
+        <div class="financeSpMain clearb">
+            <div class="financeTopBg clearb">
+                <div class="financeSpItem clearb">
+                    <div class="titleFinSp clearb">
+                        <span class="titleFinH1"><img src="http://n1.static.pg0.cn/special/static/finance/2018-dz/static/image/index_title.gif"></span>
+
+                    </div>
+                    
+<div class="titleFinHspan">伟大祖国，感动人物，精彩故事</div>
+<div class="titleFinSpDesc">
+    <p>    2018年是全面贯彻十九大精神的开局之年，改革开放40周年。我们共同经历，这一年的中国永不懈怠，迎难而进；我们共同感受，这一年的中国从容应对，运筹帷幄；我们共同见证，这一年的中国动真碰硬，披荆斩棘；我们共同喝彩，这一年的中国昂首阔步，自信从容。</p>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="zd-index-list gdrw">
+        <div class="titleFinSp clearb">
+            <span class="titleFinH1"><img src="http://n1.static.pg0.cn/special/static/finance/2018-dz/static/image/index_title01.jpg"></span>
+<div class="recommend"><a href="mailto:dz@chinaso.com" target="_blank">我要推荐</a></div>
+        </div>
+        <div class="zd-index-list-con">
+            <ul>
+                <li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544504065919309294_1.html" target="_blank" title="南仁东：天眼巨匠"><img src="http://n5.cmsfile.pg0.cn/group3/M00/0A/10/CgoOE1wPQwGAT96qAAAm63Az56M386.jpg?enable=&amp;w=180&amp;h=180&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544504065919309294_1.html" target="_blank" title="南仁东：天眼巨匠">南仁东：天眼巨匠</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544506128358330116_1.html" target="_blank" title="黄群、宋月才、姜开斌：平凡英雄"><img src="http://n8.cmsfile.pg0.cn/group1/M00/04/F4/CgoOD1wPT9eAJV2wAAE9sO8pmcI502.jpg?enable=&amp;w=180&amp;h=180&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544506128358330116_1.html" target="_blank" title="黄群、宋月才、姜开斌：平凡英雄">黄群、宋月才、姜开斌：平凡英雄</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544505948826324981_1.html" target="_blank" title="林俊德：全军挂像英模"><img src="http://n8.cmsfile.pg0.cn/group3/M00/0A/10/CgoOE1wPSlyANj5tAAAmg3Klwbw938.jpg?enable=&amp;w=180&amp;h=180&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544505948826324981_1.html" target="_blank" title="林俊德：全军挂像英模">林俊德：全军挂像英模</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544505469266322906_1.html" target="_blank" title="王继才：32年守岛卫国"><img src="http://n9.cmsfile.pg0.cn/group2/M00/05/07/CgoOEVwq-pmAPg-2AABWRltG4ZI326.jpg?enable=&amp;w=180&amp;h=180&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544505469266322906_1.html" target="_blank" title="王继才：32年守岛卫国">王继才：32年守岛卫国</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544507932179342861_1.html" target="_blank" title="张超：逐梦海天的强军先锋"><img src="http://n9.cmsfile.pg0.cn/group2/M00/05/07/CgoOElwq-qiAX4nNAALDIGG8YPA000.jpg?enable=&amp;w=180&amp;h=180&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544507932179342861_1.html" target="_blank" title="张超：逐梦海天的强军先锋">张超：逐梦海天的强军先锋</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544505671688323585_1.html" target="_blank" title="杜富国：扫雷英雄！爆炸瞬间,他将战友护在身后"><img src="http://n4.cmsfile.pg0.cn/group5/M00/02/3B/CgoODlwRvT-AAbKYAAAmBMKzS2k055.jpg?enable=&amp;w=180&amp;h=180&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544505671688323585_1.html" target="_blank" title="杜富国：扫雷英雄！爆炸瞬间,他将战友护在身后">杜富国：扫雷英雄！爆炸瞬间,他将战友护在身后</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544508429561345286_1.html" target="_blank" title="李德威：至死不忘“开发固热能,中国能崛起”"><img src="http://n3.cmsfile.pg0.cn/group4/M00/09/9C/CgoOFVwR61mASbfSAAARFYca5tY625.jpg?enable=&amp;w=180&amp;h=180&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544508429561345286_1.html" target="_blank" title="李德威：至死不忘“开发固热能,中国能崛起”">李德威：至死不忘“开发固热能,中国能崛起”</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544488853346104728_1.html" target="_blank" title="王逸平：为人民的健康　他燃尽生命之光"><img src="http://n3.cmsfile.pg0.cn/group2/M00/04/F3/CgoOEVwPILCAY-h6AAA5QOKsBow905.jpg?enable=&amp;w=180&amp;h=180&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544488853346104728_1.html" target="_blank" title="王逸平：为人民的健康　他燃尽生命之光">王逸平：为人民的健康　他燃尽生命之光</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544493867330157461_1.html" target="_blank" title="杨雪峰：用生命守护平安"><img src="http://n3.cmsfile.pg0.cn/group2/M00/04/F6/CgoOEVwR6nGAKFuzAAAj3Zt8qyc975.jpg?enable=&amp;w=180&amp;h=180&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544493867330157461_1.html" target="_blank" title="杨雪峰：用生命守护平安">杨雪峰：用生命守护平安</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544508165739343551_1.html" target="_blank" title="张银良：甘做残疾人脱贫路上的领头雁"><img src="http://n8.cmsfile.pg0.cn/group3/M00/0A/10/CgoOE1wPUwWAc9ULAAAnZSl9vEc150.jpg?enable=&amp;w=180&amp;h=180&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544508165739343551_1.html" target="_blank" title="张银良：甘做残疾人脱贫路上的领头雁">张银良：甘做残疾人脱贫路上的领头雁</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544492762907155416_1.html" target="_blank" title="卓嘎、央宗姐妹：扎根雪域边陲的格桑花"><img src="http://n6.cmsfile.pg0.cn/group2/M00/04/F3/CgoOElwPFtqAUtQoAAAxWvTUTks681.jpg?enable=&amp;w=180&amp;h=180&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544492762907155416_1.html" target="_blank" title="卓嘎、央宗姐妹：扎根雪域边陲的格桑花">卓嘎、央宗姐妹：扎根雪域边陲的格桑花</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544506881232339864_1.html" target="_blank" title="王传喜：振兴乡村带头人"><img src="http://n8.cmsfile.pg0.cn/group5/M00/02/38/CgoODVwPTmGAeQ9eAABbLH-12GQ015.jpg?enable=&amp;w=180&amp;h=180&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544506881232339864_1.html" target="_blank" title="王传喜：振兴乡村带头人">王传喜：振兴乡村带头人</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544494840590159775_1.html" target="_blank" title="张玉滚：挑起孩子们走出大山的希望"><img src="http://n5.cmsfile.pg0.cn/group1/M00/04/F3/CgoOEFwPIPGAB6HeAAAm6XCU3Ec659.jpg?enable=&amp;w=180&amp;h=180&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544494840590159775_1.html" target="_blank" title="张玉滚：挑起孩子们走出大山的希望">张玉滚：挑起孩子们走出大山的希望</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544509165440347036_1.html" target="_blank" title="麦琼方：“扁担姐”爱与责任一肩挑"><img src="http://n4.cmsfile.pg0.cn/group1/M00/04/F4/CgoOD1wPVuyAfmvoAABMGIA7gFY268.jpg?enable=&amp;w=180&amp;h=180&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544509165440347036_1.html" target="_blank" title="麦琼方：“扁担姐”爱与责任一肩挑">麦琼方：“扁担姐”爱与责任一肩挑</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544507407236340663_1.html" target="_blank" title="管学刚：义诊车行10万公里　为病人送光明"><img src="http://n3.cmsfile.pg0.cn/group4/M00/09/9A/CgoOFVwPUA-AZ596AAEQcxVuQA8892.jpg?enable=&amp;w=180&amp;h=180&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544507407236340663_1.html" target="_blank" title="管学刚：义诊车行10万公里　为病人送光明">管学刚：义诊车行10万公里　为病人送光明</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544504756845321620_1.html" target="_blank" title="黄大发：绝壁凿渠人,用生命引进“生命水”!"><img src="http://n10.cmsfile.pg0.cn/group3/M00/0A/10/CgoOE1wPRguAeh02AAA9SHwq8Gs396.jpg?enable=&amp;w=180&amp;h=180&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544504756845321620_1.html" target="_blank" title="黄大发：绝壁凿渠人,用生命引进“生命水”!">黄大发：绝壁凿渠人,用生命引进“生命水”!</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544507628332341561_1.html" target="_blank" title="葛志红：这个护士长　是个发明家"><img src="http://n4.cmsfile.pg0.cn/group3/M00/0A/11/CgoOFFwPUOyAVD-ZAADRmKok2sg060.jpg?enable=&amp;w=180&amp;h=180&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544507628332341561_1.html" target="_blank" title="葛志红：这个护士长　是个发明家">葛志红：这个护士长　是个发明家</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544495148664161475_1.html" target="_blank" title="张黎明：蓝领工匠用璀璨灯火点亮千家万户"><img src="http://n6.cmsfile.pg0.cn/group3/M00/0A/10/CgoOE1wPIN-AG6cNAAAk58D_1DA466.jpg?enable=&amp;w=180&amp;h=180&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544495148664161475_1.html" target="_blank" title="张黎明：蓝领工匠用璀璨灯火点亮千家万户">张黎明：蓝领工匠用璀璨灯火点亮千家万户</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544495605340167864_1.html" target="_blank" title="吕建江：不下班的好警察"><img src="http://n8.cmsfile.pg0.cn/group1/M00/04/F3/CgoOD1wPIfWAC5QwAACKgXnPc30474.jpg?enable=&amp;w=180&amp;h=180&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544495605340167864_1.html" target="_blank" title="吕建江：不下班的好警察">吕建江：不下班的好警察</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544497136457218578_1.html" target="_blank" title="钟扬：在高原播撒“希望的种子”"><img src="http://n8.cmsfile.pg0.cn/group1/M00/04/F3/CgoOD1wPJ_CAHz76AAA0H_dY8Mk818.jpg?enable=&amp;w=180&amp;h=180&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181211/1000200033153171544497136457218578_1.html" target="_blank" title="钟扬：在高原播撒“希望的种子”">钟扬：在高原播撒“希望的种子”</a></p>
+</li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="zd-index-list jcgs">
+        <div class="titleFinSp clearb">
+            <span class="titleFinH1"><img src="http://n1.static.pg0.cn/special/static/finance/2018-dz/static/image/index_title02.jpg"></span>
+<div class="recommend"><a href="mailto:dz@chinaso.com" target="_blank">我要推荐</a></div>
+        </div>
+        <div class="zd-index-list-con">
+            <ul>
+              <li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20190102/1000200033153291546399374854364194_1.html" target="_blank" title="中国北斗：从“中国奇迹”到“中国分享”"><img src="http://n7.cmsfile.pg0.cn/group4/M00/09/AE/CgoOFVwsLo6Ab8VkAADO_Dx5SZs011.jpg?enable=&amp;w=216&amp;h=142&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20190102/1000200033153291546399374854364194_1.html" target="_blank" title="中国北斗：从“中国奇迹”到“中国分享”">中国北斗：从“中国奇迹”到“中国分享”</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544607429020018554_1.html" target="_blank" title="小岗村40年：在不断改革中走向“不惑”"><img src="http://n8.cmsfile.pg0.cn/group2/M00/04/F5/CgoOEVwQ1sWAOi2MAAEpYempUfM512.jpg?enable=&amp;w=216&amp;h=142&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544607429020018554_1.html" target="_blank" title="小岗村40年：在不断改革中走向“不惑”">小岗村40年：在不断改革中走向“不惑”</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544607897179027465_1.html" target="_blank" title="港珠澳大桥建设者：逢山开路，遇水架桥"><img src="http://n2.cmsfile.pg0.cn/group3/M00/0A/11/CgoOE1wQ2JmAVAvHAAFS2C4i25g920.jpg?enable=&amp;w=216&amp;h=142&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544607897179027465_1.html" target="_blank" title="港珠澳大桥建设者：逢山开路，遇水架桥">港珠澳大桥建设者：逢山开路，遇水架桥</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544584779363875655_1.html" target="_blank" title="冲锋，在反贫困的最前线"><img src="http://n2.cmsfile.pg0.cn/group4/M00/09/AF/CgoOFlwrBymAWE0bAABY3cfWCFU553.jpg?enable=&amp;w=216&amp;h=142&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544584779363875655_1.html" target="_blank" title="冲锋，在反贫困的最前线">冲锋，在反贫困的最前线</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20190102/1000200033153291546398833793347740_1.html" target="_blank" title="破解一粒药的困境：抗癌药，不只是降价这一件事"><img src="http://n1.cmsfile.pg0.cn/group3/M00/0A/25/CgoOFFwsLHGALT8FAAC16ubPlBs898.jpg?enable=&amp;w=216&amp;h=142&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20190102/1000200033153291546398833793347740_1.html" target="_blank" title="破解一粒药的困境：抗癌药，不只是降价这一件事">破解一粒药的困境：抗癌药，不只是降价这一件事</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544606993004014139_1.html" target="_blank" title="体细胞克隆猴培育：突破世界难题"><img src="http://n7.cmsfile.pg0.cn/group2/M00/04/F5/CgoOElwQ1RCAAPtkAAECeXW3FYI159.jpg?enable=&amp;w=216&amp;h=142&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544606993004014139_1.html" target="_blank" title="体细胞克隆猴培育：突破世界难题">体细胞克隆猴培育：突破世界难题</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544607211885016612_1.html" target="_blank" title="中国云服务器：走向世界，让人服气！"><img src="http://n4.cmsfile.pg0.cn/group4/M00/09/9B/CgoOFVwQ1euAZWTdAAGH6MW6CJ4599.jpg?enable=&amp;w=216&amp;h=142&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544607211885016612_1.html" target="_blank" title="中国云服务器：走向世界，让人服气！">中国云服务器：走向世界，让人服气！</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544607361973017906_1.html" target="_blank" title="中欧班列：让老贾建起了“海外粮仓”"><img src="http://n1.cmsfile.pg0.cn/group1/M00/04/F5/CgoOD1wQ1oGAAGzrAAZ7fDDbDgU836.jpg?enable=&amp;w=216&amp;h=142&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544607361973017906_1.html" target="_blank" title="中欧班列：让老贾建起了“海外粮仓”">中欧班列：让老贾建起了“海外粮仓”</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544608026861028511_1.html" target="_blank" title="93岁院士：600万元助学　一件衬衣却穿了30年"><img src="http://n8.cmsfile.pg0.cn/group1/M00/04/F5/CgoOEFwQ2RqACAehAACJ6sI1pfU760.jpg?enable=&amp;w=216&amp;h=142&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544608026861028511_1.html" target="_blank" title="93岁院士：600万元助学　一件衬衣却穿了30年">93岁院士：600万元助学　一件衬衣却穿了30年</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20190104/1000200033153291546595810192568856_1.html" target="_blank" title="改革开放40年，他们感动了雪域高原"><img src="http://n2.cmsfile.pg0.cn/group2/M00/05/0A/CgoOEVwwBueATPiEAAHfUvk2Iwo344.jpg?enable=&amp;w=216&amp;h=142&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20190104/1000200033153291546595810192568856_1.html" target="_blank" title="改革开放40年，他们感动了雪域高原">改革开放40年，他们感动了雪域高原</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20190102/1000200033153291546398585295345153_1.html" target="_blank" title="为“春运人”送货——一位快递小哥的“春运”"><img src="http://n6.cmsfile.pg0.cn/group1/M00/05/08/CgoOD1wsK3mAUBLZAACg3BQ2DDo436.jpg?enable=&amp;w=216&amp;h=142&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20190102/1000200033153291546398585295345153_1.html" target="_blank" title="为“春运人”送货——一位快递小哥的“春运”">为“春运人”送货——一位快递小哥的“春运”</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20190104/1000200033153291546603939548922535_1.html" target="_blank" title="太康有条“好人街”　据说住在这里的都是好人"><img src="http://n8.cmsfile.pg0.cn/group3/M00/0A/27/CgoOE1wwBx2AFk8AAAECrOIqp5k296.jpg?enable=&amp;w=216&amp;h=142&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20190104/1000200033153291546603939548922535_1.html" target="_blank" title="太康有条“好人街”　据说住在这里的都是好人">太康有条“好人街”　据说住在这里的都是好人</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544608257207030565_1.html" target="_blank" title="38年“飞驰”记忆：列车员老孙的16把火车钥匙"><img src="http://n6.cmsfile.pg0.cn/group4/M00/09/9B/CgoOFVwQ2gGAbEVyAAHXCHxRhLY992.jpg?enable=&amp;w=216&amp;h=142&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544608257207030565_1.html" target="_blank" title="38年“飞驰”记忆：列车员老孙的16把火车钥匙">38年“飞驰”记忆：列车员老孙的16把火车钥匙</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544608522723032307_1.html" target="_blank" title="一家三代人的航天不了情：美好年华献祖国"><img src="http://n5.cmsfile.pg0.cn/group1/M00/04/F5/CgoOD1wQ2wqAfPncAAEuMdkiPB805.jpeg?enable=&amp;w=216&amp;h=142&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544608522723032307_1.html" target="_blank" title="一家三代人的航天不了情：美好年华献祖国">一家三代人的航天不了情：美好年华献祖国</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544608159595029714_1.html" target="_blank" title="1个呼吸罩的选择：火灾现场，民警把它给了他人"><img src="http://n7.cmsfile.pg0.cn/group5/M00/02/39/CgoODVwQ2Z-AVWnsAAIv5QmSrtY604.png?enable=&amp;w=216&amp;h=142&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544608159595029714_1.html" target="_blank" title="1个呼吸罩的选择：火灾现场，民警把它给了他人">1个呼吸罩的选择：火灾现场，民警把它给了他人</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544585058556876259_1.html" target="_blank" title="“三多书记”许子兵：“许”身薄弱村，甘当勤务“兵”"><img src="http://n6.cmsfile.pg0.cn/group3/M00/0A/12/CgoOFFwQf2KAPNbSAAGxmw4nX2I744.jpg?enable=&amp;w=216&amp;h=142&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544585058556876259_1.html" target="_blank" title="“三多书记”许子兵：“许”身薄弱村，甘当勤务“兵”">“三多书记”许子兵：“许”身薄弱村，甘当勤务“兵”</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544606268404003510_1.html" target="_blank" title="云南怒江“一人一所”：把青春和汗水留在高山邮路上"><img src="http://n6.cmsfile.pg0.cn/group5/M00/02/3A/CgoODlwQ0jyAfZXjAAGCpNfKqiY413.jpg?enable=&amp;w=216&amp;h=142&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544606268404003510_1.html" target="_blank" title="云南怒江“一人一所”：把青春和汗水留在高山邮路上">云南怒江“一人一所”：把青春和汗水留在高山邮路上</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544607110397015017_1.html" target="_blank" title="秦巴山深处，剑门关下：“种子”下山的故事在流传"><img src="http://n2.cmsfile.pg0.cn/group5/M00/02/39/CgoODVwQ1YaAFjLWAADFH5y4OI8479.jpg?enable=&amp;w=216&amp;h=142&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544607110397015017_1.html" target="_blank" title="秦巴山深处，剑门关下：“种子”下山的故事在流传">秦巴山深处，剑门关下：“种子”下山的故事在流传</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20190104/1000200033153291546571841404444290_1.html" target="_blank" title="孤胆英雄：漯河特警王培只身置换人质智擒劫匪"><img src="http://n5.cmsfile.pg0.cn/group4/M00/09/B0/CgoOFVwu0EGAEQHmAABOYptf-ig328.jpg?enable=&amp;w=216&amp;h=142&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20190104/1000200033153291546571841404444290_1.html" target="_blank" title="孤胆英雄：漯河特警王培只身置换人质智擒劫匪">孤胆英雄：漯河特警王培只身置换人质智擒劫匪</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544607667455025917_1.html" target="_blank" title="中国恢复高考40年：改变了数万青年的命运"><img src="http://n1.cmsfile.pg0.cn/group5/M00/02/3A/CgoODlwQ17OAIVMZAAKMSsDEGfc624.jpg?enable=&amp;w=216&amp;h=142&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544607667455025917_1.html" target="_blank" title="中国恢复高考40年：改变了数万青年的命运">中国恢复高考40年：改变了数万青年的命运</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544606774266013534_1.html" target="_blank" title="实体书店：没有萎缩，回来了！"><img src="http://n10.cmsfile.pg0.cn/group2/M00/04/F5/CgoOEVwQ1DaAbGPFAAGAlHOMpy0712.jpg?enable=&amp;w=216&amp;h=142&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544606774266013534_1.html" target="_blank" title="实体书店：没有萎缩，回来了！">实体书店：没有萎缩，回来了！</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544585555852906131_1.html" target="_blank" title="青藏高原上三位年青人：从海拔1000米到8000米的2018"><img src="http://n9.cmsfile.pg0.cn/group1/M00/04/F5/CgoOEFwQgVOAL6gfAABle7lFG3A162.jpg?enable=&amp;w=216&amp;h=142&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544585555852906131_1.html" target="_blank" title="青藏高原上三位年青人：从海拔1000米到8000米的2018">青藏高原上三位年青人：从海拔1000米到8000米的2018</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544607762908026498_1.html" target="_blank" title="科考队长的日记：穿越西风带！南极，我们又来了"><img src="http://n2.cmsfile.pg0.cn/group5/M00/02/39/CgoODVwQ2BKAe7cfAAA6-WlfwCQ294.jpg?enable=&amp;w=216&amp;h=142&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544607762908026498_1.html" target="_blank" title="科考队长的日记：穿越西风带！南极，我们又来了">科考队长的日记：穿越西风带！南极，我们又来了</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544607524334019680_1.html" target="_blank" title="天安门国旗护卫队：升好祖国的第一旗"><img src="http://n9.cmsfile.pg0.cn/group4/M00/09/9D/CgoOFlwQ1ySAdUE1AAeg7aPdPQY973.jpg?enable=&amp;w=216&amp;h=142&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544607524334019680_1.html" target="_blank" title="天安门国旗护卫队：升好祖国的第一旗">天安门国旗护卫队：升好祖国的第一旗</a></p>
+</li>
+<li>
+	<a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544606599887012234_1.html" target="_blank" title="“双双学姐”：淘宝村里的创业先锋"><img src="http://n1.cmsfile.pg0.cn/group5/M00/02/39/CgoODVwQ04eAZ-STAAEdVgE5svw089.jpg?enable=&amp;w=216&amp;h=142&amp;cut=" alt=""></a>
+	<p><a href="http://www.chinaso.com/jczg/china2018/detail/20181212/1000200033153291544606599887012234_1.html" target="_blank" title="“双双学姐”：淘宝村里的创业先锋">“双双学姐”：淘宝村里的创业先锋</a></p>
+</li>
+
+            </ul>
+        </div>
+    </div>
+
+    <script id="id_footer" src="http://n2.static.pg0.cn/www/common/component/footer/footer.js"></script>
+<div style="display:none">
+<script type="text/javascript">document.write(unescape("%3Cscript src='http://stat.chinaso.com/webdig.js?z=1' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">wd_paramtracker("_wdxid=000000000000000000000000000000000000000000")</script>
+</div>
+   <script type="text/javascript" src="http://n2.static.pg0.cn/www/common/base/js/common_fixed20160524.js"></script>
+    <script>
+      //搜索框fixed
+      $('body').commonFixed({
+        eleScrollLeft: false,
+        ele: '.gs_c_nav',  //需要fixed的元素的id或者class，默认为#commonFixedDiv
+        eleTopNum: 0,          //fixid的top值，默认为0
+        eleAddClass: 'commonNavFixed',        //需要增加的类名，默认为commonNavFixed
+        eleAddClassPar: 'commonNavFixedPar',    //父元素需要增加的类名,默认为commonNavFixedPar
+        elesOffsetTop: 60   //隐藏条件 该属性只针对ele隐藏的情况，其他情况调用时不用加
+      });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,2480 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="Yili@ODB">
+<script type="text/javascript" src="http://dj.shxc.gov.cn//dj///v201307/js/cookie.js"></script> 
+<script type="text/javascript" src="http://dj.shxc.gov.cn//dj///v201307/js/jquery-1.9.0.min.js"></script>
+<script src="http://dj.shxc.gov.cn//dj///v201307/js/swfobject_modified.js" type="text/javascript"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?1b00a13584094080306575c256b1f0c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<title>
+上海宣传系统基层党建网 - 首页
+</title>
+
+
+<script type="text/javascript" src="http://dj.shxc.gov.cn//dj///js/base64/base64.js"></script>
+<link href="http://dj.shxc.gov.cn//dj///v201307/css/prettify.css" type="text/css" rel="stylesheet" />
+<link href="http://dj.shxc.gov.cn//dj///v201307/css/bootstrap.css" rel="stylesheet">
+<link href="http://dj.shxc.gov.cn//dj///v201307/css/bootstrap-responsive.min.css" rel="stylesheet">
+<link href="http://dj.shxc.gov.cn//dj///v201307/css/main.css" type="text/css" rel="stylesheet" />
+<!--/下拉菜单-->
+<link rel="stylesheet" href="http://dj.shxc.gov.cn//dj///v201307/js/nivo-slider3.2/themes/default/default.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://dj.shxc.gov.cn//dj///v201307/js/nivo-slider3.2/nivo-slider.css" type="text/css" media="screen" />
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="http://dj.shxc.gov.cn//dj///v201307/js/html5shiv.js"></script>
+<![endif]-->
+<!--/下拉菜单-->
+<!--tab切换-->
+<script type="text/javascript">
+function strLen(str){
+	var i = l = 0;    
+	if(str == null) return l;
+	        for( ; i<str.length; i++){
+				if( str.charCodeAt( i ) > 255 ){
+				   l += 2;
+				}else{
+				   l++;
+				}		   
+		    }
+    return l; 		
+}
+</script>
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	 var url = "http://dj.shxc.gov.cn/CMS/client/faq_getAllFAQ.action";
+     var type = 8;
+     var params = {"type":type};
+     $.ajax({				
+				async: false,
+				type : "GET",
+				dataType : "jsonp", 
+				jsonp : "callback",
+				data : params,
+				timeout : 5000,
+				url : url,
+				success : function(msgs) {
+				   if(msgs.faqList.length>0){
+				      for(var i=0;i<msgs.faqList.length;i++){
+				         var obj= document.getElementById('myfaq');
+				         var t_c = msgs.faqList[i].titleContent;
+				         var r_c = msgs.faqList[i].replyContent;	         
+				         if(t_c != "" && jmz.GetLength(msgs.faqList[i].titleContent) > 30){
+				            obj.innerHTML = '<h4><a href="http://dj.shxc.gov.cn//dj///layout/FaqBoardList.shtml">'+t_c.substring(1,30)+'...<a></h4>';				           				         				            				            
+				         }else{
+				            obj.innerHTML = '<h4><a href="http://dj.shxc.gov.cn//dj///layout/FaqBoardList.shtml">'+t_c+'<a></h4>';	
+				         }
+				         if(r_c != "" && jmz.GetLength(msgs.faqList[i].replyContent) > 35){
+				            obj.innerHTML  = obj.innerHTML + '<p>答：'+r_c.substring(1,35)+'...</p>';
+				         }else{
+				            obj.innerHTML  = obj.innerHTML + '<p>答：'+r_c+'</p>';
+				         }                       		           				         				            
+                         break;
+				      }
+				   }
+				}
+			});
+});
+var jmz = {};
+
+jmz.GetLength = function(str) {   
+    var realLength = 0, len = str.length, charCode = -1;
+    for (var i = 0; i < len; i++) {
+        charCode = str.charCodeAt(i);
+        if (charCode >= 0 && charCode <= 128) realLength += 1;
+        else realLength += 2;
+    }
+    return realLength;
+};
+</script>
+<script type="text/javascript">
+
+/*
+$(document).ready(function(){
+  var currentPosition = 0;
+  var slideWidth = 800;
+  var slides = $('.slideFrame');
+  var numberOfSlides = slides.length;
+  
+  // Remove scrollbar in JS
+  $('#slidesContainer').css('overflow', 'hidden');
+  
+  // Wrap all .slides with #slideInner div
+  slides
+  .wrapAll('<div id="slideInner"></div>')
+  // Float left to display horizontally, readjust .slides width
+  .css({
+    'float' : 'left',
+    'width' : slideWidth
+  });
+  
+  // Set #slideInner width equal to total width of all slides
+  $('#slideInner').css('width', slideWidth * numberOfSlides);
+  
+  // Insert left and right arrow controls in the DOM
+  $('#slideshow')
+    .prepend('<span class="control" id="leftControl">Move left</span>')
+    .append('<span class="control" id="rightControl">Move right</span>');
+
+  // Hide left arrow control on first load
+  manageControls(currentPosition);
+ 
+  // Create event listeners for .controls clicks
+  $('.control')
+    .bind('click', function(){
+    // Determine new position
+      currentPosition = ($(this).attr('id')=='rightControl') 
+    ? currentPosition+1 : currentPosition-1;
+  
+      // Hide / show controls
+      manageControls(currentPosition);
+      // Move slideInner using margin-left
+      $('#slideInner').animate({
+        'marginLeft' : slideWidth*(-currentPosition)
+      });
+    });
+  
+  // manageControls: Hides and shows controls depending on currentPosition
+  function manageControls(position){
+    // Hide left arrow if position is first slide
+    if(position==0){ $('#leftControl').hide() }
+    else{ $('#leftControl').show() }
+    // Hide right arrow if position is last slide
+    if(position==numberOfSlides-1){ $('#rightControl').hide() } 
+    else{ $('#rightControl').show() }
+    } 
+  });
+*/
+</script>
+
+<!--图文展示-->
+<link rel="stylesheet" type="text/css" href="http://dj.shxc.gov.cn//dj///v201307/css/main.css">
+<link href="http://dj.shxc.gov.cn//dj///v201307/css/style.css" rel="stylesheet" type="text/css" />
+<link href="http://dj.shxc.gov.cn//dj///v201307/js/jcarousel/jcarousel-skin.css" rel="stylesheet" />
+<script src="http://dj.shxc.gov.cn//dj///v201307/js/jquery.last.js"></script>
+<link rel="stylesheet" href="http://dj.shxc.gov.cn//dj///v201307/index_files/default.css" type="text/css" media="screen">
+<link rel="stylesheet" href="http://dj.shxc.gov.cn//dj///v201307/index_files/nivo-slider.css" type="text/css" media="screen">
+<link href="http://dj.shxc.gov.cn//dj///v201307/index_files/slideShow.css" type="text/css" rel="stylesheet">
+
+<script src="http://dj.shxc.gov.cn//dj///v201307/js/jcarousel/jquery.jcarousel.pack.js"></script>
+<script src="http://dj.shxc.gov.cn//dj///v201307/js/jcarousel/jquery.jcarousel.min.js"></script>
+<script type="text/javascript">
+	var jq=jQuery.noConflict();
+	jq(document).ready(function (){
+		//jCarousel Plugin
+	    jq('#carousel').jcarousel({
+			vertical: true,
+			scroll: 1,
+			auto: 2,
+			wrap: 'circular',
+			initCallback: mycarousel_initCallback
+	   	});
+
+	//Front page Carousel - Initial Setup
+   	jq('div#slideshow-carousel a img').css({'opacity': '0.5'});
+   	jq('div#slideshow-carousel a img:first').css({'opacity': '1.0'});
+   	jq('div#slideshow-carousel li a:first').append('<span class="arrow"></span>')
+
+  
+  	//Combine jCarousel with Image Display
+    jq('div#slideshow-carousel li a').hover(
+       	function () {
+       		if (!jq(this).has('span').length) {
+        		jq('div#slideshow-carousel li a img').stop(true, true).css({'opacity': '0.5'});
+   	    		jq(this).stop(true, true).children('img').css({'opacity': '1.0'});
+       		}		
+       	},
+       	function () {
+        		
+       		jq('div#slideshow-carousel li a img').stop(true, true).css({'opacity': '0.5'});
+       		jq('div#slideshow-carousel li a').each(function () {
+
+       			if (jq(this).has('span').length) jq(this).children('img').css({'opacity': '1.0'});
+
+       		});
+        		
+       	}
+	).click(function () {
+	    jq('span.arrow').remove();        
+		jq(this).append('<span class="arrow"></span>');
+		window.open(jq(this).attr('href'));
+       	//jq('div#slideshow-main li').removeClass('active');        
+       	//jq('div#slideshow-main li.' + jq(this).attr('rel')).addClass('active');	
+        	
+       	return false;
+	});
+});
+
+
+//Carousel Tweaking
+function mycarousel_initCallback(carousel) {
+	
+	// Pause autoscrolling if the user moves with the cursor over the clip.
+	carousel.clip.hover(function() {
+		carousel.stopAuto();
+	}, function() {
+		carousel.startAuto();
+	});
+}
+</script>
+<!-- 党员学习AJAX-->
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	 var params = {
+	 	"pageNum":7,
+	 	"numPerPage":1,
+	 	"orderId":1
+	 };
+	 var url = "http://dj.shxc.gov.cn/XCBORG/front/study_studyDatabaseList.action";
+	$.ajax({				
+				async: false,
+				type : "GET",
+				dataType : "jsonp",
+				jsonp : "callback",
+				data : params,
+				timeout : 5000,
+				url : url,
+				success : function(msg) {
+				  if(msg.message == "SUCCESS"){
+				  	 var dyObj = document.getElementById("dyxx");
+					 $("#dyxx").empty();
+					 var str = '<ul>';
+					 var value = $.cookie("SSOUser");
+					 for(var i=0;i<msg.studyList.length;i++){
+					    var title = msg.studyList[i].title;
+					    var t_len = jmz.GetLength(title);
+					    
+					    var titleTemp = msg.studyList[i].title;
+					    var url = "";
+					    url = "http://dj.shxc.gov.cn/XCBORG/front/study_studyDetail.action?studyId="+msg.studyList[i].id;
+					    
+						if(title.length > 17){
+						//alert(title.length);
+							title = title.substring(0,18)+"...";
+						}
+						str += '<li><a href="'+url+'" target="_blank" title="'+titleTemp+'" style="color:#000000;">'+title+'</a></li>';					
+					}
+					str += '</ul> <div><a target="_blank" href="http://dj.shxc.gov.cn/XCBORG/front/study_backStudyList.action" title="更多" class="pull-right" style="margin-top:5px;">更多&gt;&gt;</a></div>';
+					dyObj.innerHTML = str;
+				  }
+				}
+			});
+	 
+});
+</script>
+<!-- 学习动态  -->
+
+<script type="text/javascript">
+	jQuery(document).ready(function() {
+		
+	 
+		var url = "http://dj.shxc.gov.cn/XCBORG/front/study_userStudyRecordAjax.action";
+		
+		$.ajax({
+			async: false,
+			type : "GET",
+			dataType : "jsonp",
+			jsonp : "callback",
+			data : "",
+			timeout : 5000,
+			url : url,
+			success : function(msg) {
+			  if(msg.message == "SUCCESS"){
+			  		var xxdtObj = document.getElementById("xxdt");
+					 $("#xxdt").empty();
+					 var str = '<ul style="margin: 0 20px 20px 20px;">';
+					 var value = $.cookie("SSOUser");
+					 for(var i=0;i<msg.records.length;i++){
+					 		var orgName = msg.records[i].orgName;
+						    var title = msg.records[i].title;
+						    var endTime = msg.records[i].createTime;
+						    var titleTemp = msg.records[i].title;
+						    var url = "";
+						   
+						    url = "http://dj.shxc.gov.cn/XCBORG/front/study_studyDetail.action?studyId="+msg.records[i].id+"&orgId="+msg.records[i].orgId;
+						    var totalLen = endTime.length+orgName.length+"学习了: ".length+title.length;
+						    
+						    //if(totalLen > 48){
+						    	//var sub = totalLen - 48;
+					 			//title = title.substring(0,Math.abs(title.length-sub))+"...";
+						    //}
+											
+					 	str += '<li style="margin: 5px 0;"><small>'+endTime+'</small><span class="label label-important">'+orgName+'</span>学习了: <a style="color: #B94A48" href="'+url+'" target="_blank" title="'+titleTemp+'">'+title+'</a></li>';
+					 }
+					 
+					str += '</ul><div><a target="_blank" href="http://dj.shxc.gov.cn//dj///layout/studyList.shtml?count=20&pageNum=1" title="更多" class="pull-right" style="margin-top:5px;">更多&gt;&gt;</a></div>';
+					xxdtObj.innerHTML = str;
+			  }
+			}
+		});
+	});
+</script>
+<script type="text/javascript">
+$(function() {
+	var $tab = $('#tabs1');
+	var $tabLinks = $('#tabs1').find('a');
+	var index = 0;
+	var timer;
+	function tabStart() {
+		timer = setInterval(function() {
+			$tabLinks.eq(index).click();
+			index++;
+			if(index > $tabLinks.length) index = 0;
+		}, 3000);
+	}
+	function tabStop() {
+		clearInterval(timer);
+	}
+	$('#tabs1').hover(tabStop, tabStart);
+	$('#tabContents1').hover(tabStop, tabStart);
+	tabStart();
+});
+</script>
+<script type="text/javascript">
+$(function() {
+	var url = "http://dj.shxc.gov.cn/CMS/info/holidays/holidays_controlHolidaysMsg.action";
+	$.ajax({
+			async: false,
+			type : "GET",
+			dataType : "jsonp",
+			jsonp : "callback",
+			data : "",
+			timeout : 5000,
+			url : url,
+			success : function(msg) {
+			  if(msg.message == "SUCCESS"){
+			  		var status = msg.controlHolidays.status;
+			  		var path = msg.controlHolidays.holidays_path;
+			  		
+			  		var value = $.cookie("SSOUser");
+					var my_xxydObj = document.getElementById("my_xxyd");
+					var str = '';
+					
+					if(strLen(value) != 0){
+						user = value.split(",");
+						str += '<hr />';
+						if(status == "0"){
+							str += '<span>学习园地  <a style="color:#666666;font-size:14px;padding-left:15px;" href="'+path+'"><small>进入在线学习</small></a></span>';
+						}else{
+							str += '<span>学习园地  <a style="color:#666666;font-size:14px;padding-left:15px;" href="http://dj.shxc.gov.cn/XCBORG/front/study_backStudyList.action?orgId='+user[2]+'"><small>进入在线学习</small></a></span>';
+						}
+						my_xxydObj.innerHTML = str;
+					}
+			 	 }
+			}
+		});
+});
+
+function isEnter(){
+	$('#myModal').modal('show');
+}
+</script>
+<link href="http://dj.shxc.gov.cn//dj///v201307/css/style-book.css" type="text/css" rel="stylesheet">
+<style>
+	.topbar-outside{
+		margin-top: -25px;
+	}
+	small a {
+    font-size: 98%;
+	}
+</style>
+</head>
+
+<body>
+<!--[if lte IE 7]>
+<div class="alert alert-block alert-error fade in">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <h1>提醒!</h1>
+  <p>您使用的浏览器版本过低，为了得到最佳的浏览体验，建议升级您的IE浏览器至最新版本<a href="http://www.microsoft.com/china/windows/internet-explorer/" target="_blank" title="Internet Explorer"><img src="http://dj.shxc.gov.cn//dj///v201307/images/ie.png" alt="IE" /></a> </p>
+  <p>或下载安装<a href="http://www.mozillaonline.com/" target="_blank" title="火狐浏览器"><img src="http://dj.shxc.gov.cn//dj///v201307/images/firefox.png" alt="firefox" /></a>、<a href="http://www.google.com/chrome?hl=zh-CN" title="谷歌浏览器" target="_blank"><img src="http://dj.shxc.gov.cn//dj///v201307/images/chrome.png" alt="chrome" /></a>。</p>
+</div>
+<![endif]--> 
+<iframe width="100%" height="60px" frameborder="0" scrolling="no" src="http://dwlm.12371.cn/daohang/index.shtml"></iframe>
+﻿<script src="http://dj.shxc.gov.cn//dj///v201307/js/jquery.min.js"></script>
+<script src="http://dj.shxc.gov.cn//dj///v201307/js/ad.js"></script>
+<script src="http://dj.shxc.gov.cn//dj///v201307/css/main.css"></script>
+<script type="text/javascript" src="http://dj.shxc.gov.cn//dj///js/jqueryCookie/jquery.cookie.js"></script>
+<style type="text/css">
+
+/*#modal-show {display:none;}*/
+#modal-warning{width:400px !important; top:50% !important;left:50% !important; padding-right:14px; margin-top:-80px; margin-left:-220px;z-index:9999;}
+#modal-warning-close {position:absolute; top:0px; right:0px;}
+</style>
+
+<script type="text/javascript">
+/*var value1 = $.cookie("SSOUser");
+if(strLen(value1) != 0){
+    var user = value1.split(",");    
+    if(user[4]=="2"){
+    	if(confirm("无支部用户无法访问页面,是否退出?")){
+    		logout();	
+    	}else{
+			location=location.href;
+    	}
+    }
+}*/
+/*加载时启动*/ 
+jQuery(document).ready(function(){
+	var url = "http://dj.shxc.gov.cn/CMS/info/holidays/holidays_controlHolidaysMsg.action";
+	$.ajax({
+			async: false,
+			type : "GET",
+			dataType : "jsonp",
+			jsonp : "callback",
+			data : "",
+			timeout : 5000,
+			url : url,
+			success : function(msg) {
+			  if(msg.message == "SUCCESS"){
+			  		var status = msg.controlHolidays.status;
+			  		var path = msg.controlHolidays.holidays_path;
+			  		
+			  		var loginObj = document.getElementById("entry");
+				    var str = '';
+				    
+				    str+='<a href="http://dj.shxc.gov.cn/CMS/" target="_blank" title="信息员报送文章入口" class="btn btn-small btn-info" data-placement="bottom" data-toggle="tooltip" data-original-title="信息员报送文章入口">';
+				  	str+='<i class="icon-folder-open icon-white"></i> 文章投递</a> ';
+				  	if(status == "0"){
+				  		str+='<a href="'+path+'"  target="_blank" title="各级基层组织管理员管理入口" class="btn btn-small btn-info" data-placement="bottom" data-toggle="tooltip" data-original-title="各级基层组织管理员管理入口（组织管理、支部管理、信息推送等）">';
+				  		str+='<i class="icon-retweet icon-white"></i> 党管系统</a> ';
+				  		str+='<a href="http://www.shwmcj.cn/" title="文明单位创建网上测评系统入口" class="btn btn-small btn-info" data-placement="bottom" data-toggle="tooltip" data-original-title="文明单位创建网上测评系统入口">';
+				  		str+='<i class="icon-star icon-white"></i> 文明创建</a> ';
+				  		str+='<a data-original-title="典型库" data-toggle="tooltip" data-placement="bottom" class="btn btn-small btn-info" target="_blank" title="典型库" href="'+path+'">';
+				  		str+='<i class="icon-book icon-white"></i> 典型库</a>';
+				  	}else{
+				  		str+='<a href="http://dj.shxc.gov.cn/XCBORG/"  target="_blank" title="各级基层组织管理员管理入口" class="btn btn-small btn-info" data-placement="bottom" data-toggle="tooltip" data-original-title="各级基层组织管理员管理入口（组织管理、支部管理、信息推送等）">';
+				  		str+='<i class="icon-retweet icon-white"></i> 党管系统</a> ';
+				  		str+='<a href="http://www.shwmcj.cn/" title="文明单位创建网上测评系统入口" class="btn btn-small btn-info" data-placement="bottom" data-toggle="tooltip" data-original-title="文明单位创建网上测评系统入口">';
+				  		str+='<i class="icon-star icon-white"></i> 文明创建</a> ';
+				  		str+='<a data-original-title="典型库" data-toggle="tooltip" data-placement="bottom" class="btn btn-small btn-info" target="_blank" title="典型库" href="http://dj.shxc.gov.cn/CMS/?typical=1">';
+				  		str+='<i class="icon-book icon-white"></i> 典型库</a>';
+				  	}
+  					loginObj.innerHTML=str;
+			 	 }
+			}
+		});
+});
+/*加载时启动*/ 
+jQuery(document).ready(function(){
+    var value = $.cookie("SSOUser");
+    var imageUrl = 'http://dj.shxc.gov.cn//dj//images/man87.jpg';
+   	if(strLen(value) != 0){
+   	    var user = value.split(",");   	    
+   	    
+   	    /*if(user[4]=="2"){
+   	    	if(confirm("未分配支部用户无法登录，请联系：18918886324 张婷婷（工作日上午9点至下午6点）?")){
+   	    		logout();	
+   	    	}else{
+				location=location.href;
+    		}
+   	    }*/
+   	    /*if(user[1] != ''){
+   	    	imageUrl =  "http://dj.shxc.gov.cn/XCBORG"+"/UploadImages/"+user[1];
+   	    }*/
+   	     imageUrl = updateInfo(user);
+   	     if(imageUrl == '' || imageUrl == null){
+   	    	imageUrl = 'http://dj.shxc.gov.cn//dj//images/man87.jpg';
+   	      }else{
+   	      	imageUrl = "http://dj.shxc.gov.cn/Home"+imageUrl;
+   	      }
+   	    showUserLogin(false);
+   		showLogin(imageUrl,user[0],1);
+   	}else{
+   		showUserLogin(true);
+   		showLogin(imageUrl,null,0);
+   	}
+   	
+   	<!-- 学习提醒 -->
+   	$("#onlineStudy").click(function(){
+		$(".topbar-inside-XCB .alert").show();
+	});
+	$(".topbar-inside-XCB .alert .close").click(function(){
+		$(".topbar-inside-XCB .alert").hide();
+	});
+   	<!-- /学习提醒-->
+});
+function updateInfo(value){
+    var url = "http://dj.shxc.gov.cn/XCBORG/front/user_updateUserAvator.action";
+    var params = {"name":value[0],"orgId":value[2],"personId":value[3]};
+    var img = '';
+	$.ajax({
+			async : false,
+			type : "GET",
+			dataType : "jsonp",
+			jsonp : "callback",
+			cache : false,
+			timeout : 5000,
+			url : url,
+			data : params,
+			success : function(data) {
+				if(data.message=="SUCCESS"  ){	
+					 img = data.img;
+				}
+			}
+		});
+	return img;
+}
+function checkEnter(url){
+	var value = $.cookie("SSOUser");
+	if(strLen(value) == 0){
+		$('#myModal').modal('show');
+	}else{
+		window.location.href = url;
+	}
+}
+function login(){
+	var base64 = new Base64();
+	if(validate()){
+		var username = jQuery("#username").val();
+		var password = base64.encode($.trim(jQuery("#password").val()));
+		var vcode = jQuery("#validateCode").val();
+		var url = "http://dj.shxc.gov.cn/SSOServer/SSO/SSOServer_newlogin.action";
+    	var params = {
+			"username" : username,
+			"password" : password,
+			"vcode" : vcode
+		};
+		$.ajax({
+			async : false,
+			type : "GET",
+			dataType : "jsonp",
+			jsonp : "callback",
+			cache : false,
+			timeout : 5000,
+			url : url,
+			data : params,
+			success : function(msg) {
+				if(msg.message=="SUCCESS"  ){	
+					if(msg.user.state=="2"){						
+						$('#myModal').modal('hide');
+						$("#modal-show").click();
+						//alert("未分配支部用户无法登录，请联系：18918886324 张婷婷（工作日上午9点至下午6点）");
+						return;	
+					}		
+					var userObj = msg.user;
+						 var value = msg.user.realName+","+msg.user.imgPath+","+msg.user.orgID+","+msg.user.userID+","+msg.user.state;	
+                         
+						 $.cookie( "SSOUser" ,  value, { expires: 31, path: '/' });
+						 
+						 $('#myModal').modal('hide');
+						 
+						 location.reload(); 
+				}else{
+					alert(msg.message);
+				}
+			}
+		});
+	}
+}
+function joinStudySize(orgId,userId){
+    var count = 0;
+	var params = {
+			"orgId" : orgId,
+			"personId" : userId
+		};
+		
+	var url = "http://dj.shxc.gov.cn/XCBORG/front/study_noStudyNum.action";
+	$.ajax({
+			async : false,
+			type : "GET",
+			dataType : "jsonp",
+			jsonp : "callback",
+			cache : false,
+			timeout : 5000,
+			url : url,
+			data : params,
+			success : function(msg) {
+			
+				if(msg.message=="SUCCESS"){
+					count = msg.count+','+msg.mustCount+','+msg.selectedCount;
+				}else{
+					alert(msg.message);
+				}
+			}
+		});
+		return count;
+}
+ 
+function validate(){
+	var username = $.trim(jQuery("#username").val());
+	var password = $.trim(jQuery("#password").val());
+	var vcode = $.trim(jQuery("#validateCode").val());
+	var name_len = strLen(username);
+	var pwd_len = strLen(password);
+	var code_len = strLen(vcode);
+	
+	if(name_len == 0){
+		alert("用户名不能为空!");
+		return 0;
+	}
+	
+	if(pwd_len == 0){
+		alert("密码不能为空!");
+		return 0;
+	}
+	
+	if(code_len == 0){
+		alert("验证码不能为空!");
+		return 0;
+	}
+	return 1;
+}
+
+function strLen(str){
+	var i = l = 0;    
+	if(str == null) return l;
+	        for( ; i<str.length; i++){
+				if( str.charCodeAt( i ) > 255 ){
+				   l += 2;
+				}else{
+				   l++;
+				}		   
+		    }
+    return l; 		
+}
+//显示或隐去用户登录按钮
+function showUserLogin(isShow){
+	var userLoginObj = $("#isUserLogin");
+	var userStr = "";
+	var userStr2 = "";
+	if(isShow == true){
+		str = '<a class="btn btn-small btn-danger" data-toggle="modal" role="button" data-original-title="党员社区登录" href="#myModal"  data-original-title="党员社区登录"><i class="icon-user icon-white"></i> 党员登录</a>';
+		$("#isUserLogin2").show();
+	}else{
+		str = '<a class="btn btn-small btn-danger hide" data-toggle="modal" role="button" data-original-title="党员社区登录" href="#myModal"  data-original-title="党员社区登录"><i class="icon-user icon-white"></i> 党员登录</a>';
+		$("#isUserLogin2").hide();
+	}
+	userLoginObj.html(str);
+	
+}
+
+function showLogin(imageUrl,username,state){
+	var url = "http://dj.shxc.gov.cn/CMS/info/holidays/holidays_controlHolidaysMsg.action";
+	$.ajax({
+			async: false,
+			type : "GET",
+			dataType : "jsonp",
+			jsonp : "callback",
+			data : "",
+			timeout : 5000,
+			url : url,
+			success : function(msg) {
+			  if(msg.message == "SUCCESS"){
+			  		var status = msg.controlHolidays.status;
+			  		var path = msg.controlHolidays.holidays_path;
+			  		
+			  		var value = $.cookie("SSOUser");
+					var studyStr = $.cookie("studyStr");
+			  		var user = "";
+					if(strLen(value) != 0){
+						user = value.split(",");
+						var params2 = {
+							"orgId" : user[2],
+							"personId" : user[3]
+						};
+					if(strLen(studyStr) ==0){
+						var url2 = "http://dj.shxc.gov.cn/XCBORG/front/study_noStudyNum.action";
+								$.ajax({
+							async : false,
+							type : "GET",
+							dataType : "jsonp",
+							jsonp : "callback",
+							cache : false,
+							timeout : 5000,
+							url : url2,
+							data : params2,
+							success : function(msg) {
+								if(msg.message=="SUCCESS"){
+									var count = "";
+									count = msg.count+','+msg.mustCount+','+msg.selectedCount;
+									var loginObj = document.getElementById("isLogin");
+									$("#isLogin").empty();
+									var str = "";
+									var arr = "";
+									arr = count.split(",");
+				   	    			count = arr[0];
+				   	    			var title = msg.frontStudy;
+				   	    			
+									if(state != 0){
+					
+						str = '<img src="'+imageUrl+'" class="brch_profImg"/>'+'<span> '+username+'：</span> ';
+						str += '<a href="http://dj.shxc.gov.cn//dj//" class="btn btn-mini">网站首页</a> ';
+						if(status == "0"){
+							str += '<a href="'+path+'" class="btn btn-mini">我的支部</a> ';
+							str += '<a href="'+path+'" class="btn btn-mini">支部纵览</a> ';
+							str += '<a href="'+path+'" class="btn btn-mini">我的社区</a> ';
+						}else{
+							str += '<a href="http://dj.shxc.gov.cn/XCBORG/front/branch_index.action" class="btn btn-mini">我的支部</a> ';
+							str += '<a href="http://dj.shxc.gov.cn/XCBORG/front/" class="btn btn-mini">支部纵览</a> ';
+							str += '<a href="http://dj.shxc.gov.cn/Home/" class="btn btn-mini">我的社区</a> ';
+						}
+						
+						if(count != 0){
+							str += '<a id="onlineStudy" class="btn btn-mini btn-danger" href="javascript:void(0);">在线学习 '+count+'</a> ';
+							str += '<div class="alert alert-block alert-error">';
+						}else{
+							str += '<a id="onlineStudy" class="btn btn-mini btn-danger" href="javascript:void(0);">在线学习 '+count+'</a> ';
+							str += '<div class="alert alert-block alert-error hide">';
+						}
+						
+					  	str += '<button type="button" class="close">&times;</button>';
+					  	str += '<h3>学习提醒：</h3>';
+					  	<!--if有无判断 -->
+					  	
+
+						if(status == "0"){
+					  		str += '<p>最新上线的学习课程 “《党的十八届六中全会专题》”，请前往 <a href="http://dj.shxc.gov.cn/XCBORG/mobile/mobile_mobileIndex.action" title="两学一做">两学一做</a> 查看学习内容。</p>';		
+					  	}else{
+					  		str += '<p>最新上线的学习课程 “《党的十八届六中全会专题》”，请前往 <a href="http://dj.shxc.gov.cn/XCBORG/mobile/mobile_mobileIndex.action" title="两学一做">两学一做</a> 查看学习内容。</p>';		
+					  	}
+					  	
+						str += '</div>';
+						str += '<a href="javascript:logout()" class="btn btn-mini">退出</a>';
+						
+					}
+					 $.cookie( "studyStr" ,  str, { expires: 1, path: '/' });
+
+					loginObj.innerHTML = str;
+					$("#ad_banner_right_close").click(function(){
+						$("#ad_banner_right").hide();
+					});
+									
+									
+								}else{
+									alert(msg.message);
+								}
+							}
+						});
+					}else{
+						var loginObj = document.getElementById("isLogin");
+						$("#isLogin").empty();
+						loginObj.innerHTML = studyStr;
+						$("#ad_banner_right_close").click(function(){
+							$("#ad_banner_right").hide();
+						});
+					}
+					
+				}
+			  		
+			 }
+			}
+		});
+}
+
+
+function changeValidateCode(obj) {
+	//获取当前的时间作为参数，无具体意义   
+	var timenow = new Date().getTime();
+	//每次请求需要一个不同的参数，否则可能会返回同样的验证码   
+	//这和浏览器的缓存机制有关系
+	obj.src = "http://dj.shxc.gov.cn/SSOServer/SSO/SSO_validationCode.action?d=" + timenow;
+}
+
+function logout(){
+	var url = "http://dj.shxc.gov.cn/SSOServer/SSO/SSOServer_doLogout.action";
+	var params = null;
+	$.ajax({
+		async : false,
+		type : "GET",
+		dataType : "jsonp",
+		jsonp : "callback",
+		cache : false,
+		timeout : 5000,
+		url : url,
+		data : params,
+		success : function(msg) {
+			if(msg.message=="SUCCESS"  ){
+				alert("登出成功");
+				location.reload(); 
+			}
+		}
+	});
+	
+}
+</script>
+<!--topStatus-->
+<!-- 网站顶部广告 -->
+<!--<div id="ad_main">
+	<div id="ad_banner">
+		<a href="http://dj.shxc.gov.cn//dj///layout/wsdywcn-index.shtml?count=10&pageNum=1" target="_blank">我是党员我承诺活动</a>
+		<span id="ad_close"></span>
+	</div>
+</div> -->
+<!-- end 网站顶部广告 -->
+<div class="topbar-outside">
+  <div class="topbar-inside wrap topbar-inside-XCB">
+  	<!--<a  class="btn btn-small btn-danger" data-toggle="modal" role="button" data-original-title="党员社区登录" href="#myModal"  data-original-title="党员社区登录"><i class="icon-user icon-white"></i> 党员登录</a> -->
+  	<span id="isUserLogin"> 
+  	<!--
+  		<a  class="btn btn-small btn-danger" data-toggle="modal" role="button" data-original-title="党员社区登录" href="#myModal"  data-original-title="党员社区登录"><i class="icon-user icon-white"></i> 党员登录</a>
+  	-->
+  	</span> 
+  	
+  	<span id="entry"></span>
+  	<!-- 学习提醒 -->
+  	<!--
+  	<a id="onlineStudy" class="btn btn-mini btn-danger" href="javascript:void(0);">在线学习 10</a>
+  	<div class="alert alert-block alert-error hide">
+	  <button type="button" class="close">&times;</button>
+	  <h3>学习提醒：</h3>
+	  <p>您有 10 篇学习，尚未完成，请前往 <a href="#" title="在线学习">在线学习</a> 查看学习内容。</p>
+	</div>
+	-->
+	<!-- /学习提醒 -->
+	
+    <!--已登录--> 
+    <span id="isLogin"> </span> 
+    <!--/已登录-->
+    <div class="btn-group pull-right">
+    <a href="http://dj.shxc.gov.cn/Source/file/xcb.rar" target="new" class="btn btn-small btn-warning" data-placement="bottom" data-toggle="tooltip" data-original-title="下载专用客户端"><i class="icon-download-alt icon-white"></i>客户端下载</a>&nbsp;
+    <a href="http://dj.shxc.gov.cn//dj///layout/FaqBoardList.shtml" class="btn btn-small btn-danger" data-placement="bottom" data-toggle="tooltip" data-original-title="FAQ 你问我答：操作答疑、党务问答"><i class="icon-question-sign icon-white"></i> 帮助中心</a> </div>
+  </div>
+</div>
+<!--/topStatus-->
+<!--header-->
+<div class="header">
+  	<div class="wrap"></div>
+	<div class="clearfix"></div>
+  
+  <div id="ad_banner_right">
+	<a href="http://dj.shxc.gov.cn//dj///layout/wsdywcn-index.shtml?count=10&pageNum=1" target="_blank"><img src="http://dj.shxc.gov.cn//dj///v201307/images/ad_banner_s.png"></a><a id="ad_banner_right_close" href="javascript:void(0);" title="关闭">×</a>
+   </div>
+</div>
+<!--/header--> 
+<div class="navbar-outside">
+  <div class="wrap navbar">
+  	<!--隐藏--> 
+  	<a class="logo-s" href="http://dj.shxc.gov.cn//dj//" title="上海市宣传系统基层党建网"></a>
+  	<div class="btn-group login-group pull-right">
+      <button class="btn btn-small btn-danger dropdown-toggle hide" data-toggle="dropdown">登录<span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li id="isUserLogin2"><a href="#myModal" data-toggle="modal"><i class="icon-user"></i> 党员社区</a></li>
+        <li class="divider"></li>
+        <li class="nav-header">管理员入口</li>
+        <li><a href="http://dj.shxc.gov.cn/CMS/" target="_blank" title="信息员报送文章入口"><i class="icon-folder-open"></i> 文章投递</a></li>
+        <li><a href="http://dj.shxc.gov.cn/XCBORG/" target="_blank" title="各级基层组织管理员管理入口"><i class="icon-retweet"></i> 党管系统</a></li>
+        <li><a href="http://www.shwmcj.cn/" title="文明单位创建网上测评系统入口"><i class="icon-star"></i> 文明单位创建网上测评系统</a></li>
+      </ul>
+      
+      
+    </div>
+  	<ul class="nav nav-pills" style="width:800px;margin:0px;">
+  		 <li class=""><a href="http://dj.shxc.gov.cn//dj//">首页</a></li>  		 
+				<li class="dropdown">
+					<a    href="http://dj.shxc.gov.cn//dj////zzjg/"  class="dropdown-toggle" data-toggle="dropdown">
+				组织结构<b class="caret"></b></a>			      
+				
+							<ul class="dropdown-menu">				<li >
+					<a    href="http://dj.shxc.gov.cn//dj////zzjg/zsdw/" >
+				直属单位</a>			      
+				
+							<ul class="dropdown-menu"> </ul>					
+				</li>
+ </ul>					
+				</li>
+				<li class="dropdown">
+					<a    href="http://dj.shxc.gov.cn//dj////jcdj/"  class="dropdown-toggle" data-toggle="dropdown">
+				基层党建<b class="caret"></b></a>			      
+				
+							<ul class="dropdown-menu">				<li >
+					<a    href="http://dj.shxc.gov.cn//dj////jcdj/jgzdt/" >
+				工作动态</a>			      
+				
+							<ul class="dropdown-menu"> </ul>					
+				</li>
+				<li >
+					<a    href="http://dj.shxc.gov.cn//dj////jcdj/dnbz/" >
+				党内表彰</a>			      
+				
+							<ul class="dropdown-menu"> </ul>					
+				</li>
+ </ul>					
+				</li>
+				<li class="dropdown">
+					<a    href="http://dj.shxc.gov.cn//dj////wmcj/"  class="dropdown-toggle" data-toggle="dropdown">
+				文明创建<b class="caret"></b></a>			      
+				
+							<ul class="dropdown-menu">				<li >
+					<a    href="http://dj.shxc.gov.cn//dj////wmcj/cjdt/" >
+				创建动态</a>			      
+				
+							<ul class="dropdown-menu"> </ul>					
+				</li>
+				<li >
+					<a    href="http://dj.shxc.gov.cn//dj////wmcj/xjbz/" >
+				先进表彰</a>			      
+				
+							<ul class="dropdown-menu"> </ul>					
+				</li>
+				<li >
+					<a    href="http://dj.shxc.gov.cn//dj////wmcj/kpbz/" >
+				考评标准</a>			      
+				
+							<ul class="dropdown-menu"> </ul>					
+				</li>
+ </ul>					
+				</li>
+				<li class="dropdown">
+					<a    href="http://dj.shxc.gov.cn//dj////tzgz/"  class="dropdown-toggle" data-toggle="dropdown">
+				统战工作<b class="caret"></b></a>			      
+				
+							<ul class="dropdown-menu">				<li >
+					<a    href="http://dj.shxc.gov.cn//dj////tzgz/tgzdt/" >
+				工作动态</a>			      
+				
+							<ul class="dropdown-menu"> </ul>					
+				</li>
+				<li >
+					<a    href="http://dj.shxc.gov.cn//dj////tzgz/tzzs/" >
+				统战知识</a>			      
+				
+							<ul class="dropdown-menu"> </ul>					
+				</li>
+ </ul>					
+				</li>
+				<li class="dropdown">
+					<a    href="http://dj.shxc.gov.cn//dj////czgz/"  class="dropdown-toggle" data-toggle="dropdown">
+				群众工作<b class="caret"></b></a>			      
+				
+							<ul class="dropdown-menu">				<li >
+					<a    href="http://dj.shxc.gov.cn//dj////czgz/ghgz/" >
+				工会工作</a>			      
+				
+							<ul class="dropdown-menu"> </ul>					
+				</li>
+				<li >
+					<a    href="http://dj.shxc.gov.cn//dj////czgz/qngz/" >
+				青年工作</a>			      
+				
+							<ul class="dropdown-menu"> </ul>					
+				</li>
+				<li >
+					<a    href="http://dj.shxc.gov.cn//dj////czgz/fngz/" >
+				妇女工作</a>			      
+				
+							<ul class="dropdown-menu"> </ul>					
+				</li>
+ </ul>					
+				</li>
+				<li >
+					<a    href="http://dj.shxc.gov.cn//dj////dflz/" >
+				党风廉政</a>			      
+				
+							<ul class="dropdown-menu"> </ul>					
+				</li>
+				<li class="dropdown">
+					<a    href="http://dj.shxc.gov.cn//dj////zygx/"  class="dropdown-toggle" data-toggle="dropdown">
+				资源共享<b class="caret"></b></a>			      
+				
+							<ul class="dropdown-menu">				<li >
+					<a    href="http://dj.shxc.gov.cn//dj////zygx/wjhb/" >
+				文件汇编</a>			      
+				
+							<ul class="dropdown-menu"> </ul>					
+				</li>
+				<li >
+					<a    href="http://dj.shxc.gov.cn//dj////zygx/sjts/" >
+				实践探索</a>			      
+				
+							<ul class="dropdown-menu"> </ul>					
+				</li>
+				<li >
+					<a    href="http://dj.shxc.gov.cn//dj////zygx/tszs/" >
+				他山之石</a>			      
+				
+							<ul class="dropdown-menu"> </ul>					
+				</li>
+				<li >
+					<a    href="http://dj.shxc.gov.cn//dj////zygx/zxxzl/" >
+				学习资料</a>			      
+				
+							<ul class="dropdown-menu"> </ul>					
+				</li>
+ </ul>					
+				</li>
+  	</ul>
+  	<!--隐藏-->
+  	<form style="display: inline; margin: 0px;" action="http://dj.shxc.gov.cn//dj///layout/searchList.shtml">
+	    <div style="margin-bottom: 0px;margin-top:12px;" class="input-append pull-right">
+	    <input type="text" style="height: 16px;" placeholder="" class="input-small" name="tName">
+	    <input type="hidden" name="currentPage" value="1" />
+	    <button type="submit" class="btn btn-small">搜索</button>
+	    </div>
+	</form>
+  </div>
+</div>
+ 
+
+<!--登录框-->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+   	 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+     <h3 id="myModalLabel"><i class="icon-user"></i> 党员社区用户登录</h3>
+  </div>
+  <div class="modal-body">
+  	 <form class="form-horizontal">
+      <div class="control-group">
+        <label class="control-label" for="inputEmail">用户名</label>
+        <div class="controls">
+          <input type="text" id="username" placeholder="输入用户名">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="inputPassword">密码</label>
+        <div class="controls">
+          <input type="password" id="password" placeholder="输入密码">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="checknum">验证码</label>
+        <div class="controls">
+          <input name="validateCode" id="validateCode" type="text" class="input-medium" placeholder="填入验证码">
+          <img src="http://dj.shxc.gov.cn/SSOServer/SSO/SSO_validationCode.action" onclick="changeValidateCode(this)" title="点击图片刷新验证码" alt="" height="30" width="60"> </div>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <label class="checkbox">
+            <input id="savechk" type="checkbox"  checked="checked">
+            保持登录（一个月有效） </label>
+          <a href="javascript:login();" class="btn btn-primary">登录</a>
+          <a href="http://dj.shxc.gov.cn/SSOServer//SSO/Validate_findPwdPage1.action" target="_blank" class="btn disabled">找回密码</a> </div>
+      </div>
+      <blockquote>
+	<a href="http://dj.shxc.gov.cn/SSOServer/SSO/Validate_userInfoPage.action?status=1&address=http://dj.shxc.gov.cn//dj//" class="btn btn-large btn-danger btn-block">激活帐号</a>
+        <p class="text-error">首次登录请激活帐号</p>
+        <small>本系统为实名认证，首次激活时请输入真实的身份信息。<cite title="Source Title">如在激活过程中遇到问题，请联系：18918886324 张婷婷（工作日上午9点至下午6点）</cite></small></blockquote>
+    </form> 
+  </div>
+<div class="modal-footer">
+ <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+</div>
+</div>
+
+ <!-- Button to trigger modal -->
+    <a id="modal-show" href="#modal-warning" role="button" class="btn hide" data-toggle="modal" data-backdrop="static">警告</a>
+     
+    <!-- Modal -->
+    <div id="modal-warning" class="modal hide fade alert" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-body">
+		<button id="modal-warning-close" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<p>未分配支部用户无法登录，请联系：18918886324 张婷婷（工作日上午9点至下午6点）</p>
+		</div>
+    </div>
+<!--焦点图-->
+<div class="focus-outside"> 
+  <!--[if !IE]>-->
+  <div class="shadow-top"></div>
+  <div class="shadow-bottom"></div>
+  <!--<![endif]--> 
+  <!--[if gte IE 9]><div class="shadow-top"></div><div class="shadow-bottom"></div><![endif]--> 
+  <!-- Slider -->
+  <div class="slider-wrapper theme-default">
+  	<!--Slider-->
+	<div id="welcomeHero" class="m10t">
+		<div id="myCarouselBig" class="carousel slide" style="float:left;width:800px;height:360px;margin-top:0px;">
+			    <!-- Carousel items -->
+			    <div class="carousel-inner">
+			    
+			   		<div class="item active">
+									<a href="http://dj.shxc.gov.cn//dj///jgwmgxb2019/jgwmg2019/" title="巾帼文明岗" target="_blank">
+	           				<img alt="巾帼文明岗" src="http://dj.shxc.gov.cn//dj///v201307/images/jgwmg2017_bigFocus.png" border="0" width="800" height="360" />
+		            		<div class="carousel-caption hide">
+		            		  <h4></h4>
+		            		</div>
+	            		</a>	
+          			</div>
+
+          			
+					  <div class="item">
+	           			<a href="http://dj.shxc.gov.cn//dj///wybz2019/" title="五一表彰2019" target="_blank">
+	           				<img alt="五一表彰2019" src="http://dj.shxc.gov.cn//dj///v201307/images/wybz2019_bigFocus.jpg" border="0" width="800" height="360" />
+		            		<div class="carousel-caption hide">
+		            		  <h4></h4>
+		            		</div>
+	            		</a>	
+          			</div>
+
+								
+			   		<div class="item">
+	           			<a href="http://dj.shxc.gov.cn//dj///dwzsfz/" title="党外人才风采展示" target="_blank">
+	           				<img alt="党外人才风采展示" src="http://dj.shxc.gov.cn//dj///v201307/images/dwzsfz_bigFocus.jpg" border="0" width="800" height="360" />
+		            		<div class="carousel-caption hide">
+		            		  <h4></h4>
+		            		</div>
+	            		</a>	
+          			</div>
+
+					<div class="item ">
+	           			<a href="http://dj.shxc.gov.cn//dj///19qgrmdbdh/" title="中国共产党第十九次全国人民代表大会" target="_blank">
+	           				<img alt="中国共产党第十九次全国人民代表大会" src="http://dj.shxc.gov.cn//dj///v201307/images/19d_bigFocus.png" border="0" width="800" height="360" />
+		            		<div class="carousel-caption hide">
+		            		  <h4></h4>
+		            		</div>
+	            		</a>	
+          			</div>
+          			
+					<div class="item">
+	           			<a href="http://dj.shxc.gov.cn//dj///yxzzsh/" title="第七批优秀组织生活案例" target="_blank">
+	           				<img alt="第七批优秀组织生活案例" src="http://dj.shxc.gov.cn//dj///v201307/images/2017yszzsh_bigFocus.png" border="0" width="800" height="360" />
+		            		<div class="carousel-caption hide">
+		            		  <h4></h4>
+		            		</div>
+	            		</a>	
+          			</div>
+
+					<div class="item">
+	           			<a href="http://dj.shxc.gov.cn//dj///qybzdh/qybz2017/" title="七一表彰2017" target="_blank">
+	           				<img alt="七一表彰2017" src="http://dj.shxc.gov.cn//dj///v201307/images/qybz2017_bigFocus.jpg" border="0" width="800" height="360" />
+		            		<div class="carousel-caption hide">
+		            		  <h4></h4>
+		            		</div>
+	            		</a>	
+          			</div>
+
+
+					<div class="item">
+	           			<a href="http://dj.shxc.gov.cn//dj///lxyz/" title="两学一做" target="_blank">
+	           				<img alt="两学一做" src="http://dj.shxc.gov.cn//dj///v201307/images/lxyz_bigFocus.jpg" border="0" width="800" height="360" />
+		            		<div class="carousel-caption hide">
+		            		  <h4></h4>
+		            		</div>
+	            		</a>	
+          			</div>
+
+					<div class="item">
+	           			<a href="http://dj.shxc.gov.cn//dj///sbhqshqjt2019/" title="三八红旗手2019" target="_blank">
+	           				<img alt="三八红旗手2019" src="http://dj.shxc.gov.cn//dj///v201307/images/201838banner.jpg" border="0" width="800" height="360" />
+		            		<div class="carousel-caption hide">
+		            		  <h4></h4>
+		            		</div>
+	            		</a>	
+          			</div>
+
+
+					<div class="item">
+	           			<a href="http://dj.shxc.gov.cn//dj///wdk/wdk_enterMatchList/index.shtml" title="微党课创作评选" target="_blank">
+	           				<img alt="微党课创作评选" src="http://dj.shxc.gov.cn//dj///v201307/images/xcbwdkhjzs.png" border="0" width="800" height="360" />
+		            		<div class="carousel-caption hide">
+		            		  <h4></h4>
+		            		</div>
+	            		</a>	
+          			</div>
+          			
+				</div>
+			    <!-- Carousel nav -->
+			    <a class="carousel-control left" href="#myCarouselBig" data-slide="prev" style="top:50%;">&lsaquo;</a>
+			    <a class="carousel-control right" href="#myCarouselBig" data-slide="next" style="top:50%;">&rsaquo;</a>
+			    
+		</div>
+		<div id="slideshow-carousel">
+			<ul id="carousel" class="jcarousel jcarousel-skin-maple">
+<li><a rel="p1" target="_blank" href="http://dj.shxc.gov.cn//dj///wybz2019/"><img src="http://dj.shxc.gov.cn//dj///v201307/images/wybz2019_smallFocus.jpg?c=200_90" /></a></li>
+<li><a rel="p1" target="_blank" href="http://dj.shxc.gov.cn//dj///dwzsfz/"><img src="http://dj.shxc.gov.cn//dj///v201307/images/dwzsfz_smallFocus.jpg?c=200_90" /></a></li>
+<li><a rel="p2" target="_blank" href="http://dj.shxc.gov.cn//dj///19qgrmdbdh/"><img src="http://dj.shxc.gov.cn//dj///v201307/images/19d_smallFocus.png?c=200_90" /></a></li>
+<li><a rel="p4" target="_blank" href="http://dj.shxc.gov.cn//dj///yxzzsh/"><img src="http://dj.shxc.gov.cn//dj///v201307/images/2017yszzsh_smallFocus.png" /></a></li>
+<li><a rel="p4" target="_blank" href="http://dj.shxc.gov.cn//dj///qybzdh/qybz2017/"><img src="http://dj.shxc.gov.cn//dj///v201307/images/qybz2017_smallFocus.jpg?c=200_90" /></a></li>
+<li><a rel="p4" target="_blank" href="http://dj.shxc.gov.cn//dj///jgwmgxb2019/jgwmg2019/"><img src="http://dj.shxc.gov.cn//dj///v201307/images/jgwmg2017_smallFocus.png?c=200_90" /></a></li>
+<li><a rel="p4" target="_blank" href="http://dj.shxc.gov.cn//dj///lxyz/"><img src="http://dj.shxc.gov.cn//dj///v201307/images/lxyz_smallFocus.jpg?c=200_90" /></a></li>
+<li><a rel="p5" target="_blank" href="http://dj.shxc.gov.cn//dj///sbhqshqjt2019/"><img src="http://dj.shxc.gov.cn//dj///v201307/images/201838bannerS.jpg?c=200_90" /></a></li>
+<li><a rel="p3" target="_blank" href="http://dj.shxc.gov.cn//dj///wdk/wdk_enterMatchList/index.shtml"><img src="http://dj.shxc.gov.cn//dj///v201307/images/xcbwdkhjzs_s.png?c=200_90" /></a></li>
+						
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!--/Slider-->
+  	<!--<div id="slider" class="wrap"> 
+		<a href="http://dj.shxc.gov.cn//dj///qzlxjy/" target="_blank"><img src="http://dj.shxc.gov.cn//dj///v201307/images/focus_4.jpg" alt="" /></a>
+		<a href="http://dj.shxc.gov.cn//dj///qybzdh/" target="_blank"><img src="http://dj.shxc.gov.cn//dj///v201307/images/focus_1.jpg" alt="" /></a>
+		<a href="http://dj.shxc.gov.cn//dj///sbdby/" target="_blank"><img src="http://dj.shxc.gov.cn//dj///v201307/images/focus_2.jpg" alt="" /></a>
+		<a href="http://dj.shxc.gov.cn//dj///hhddq/" target="_blank"><img src="http://dj.shxc.gov.cn//dj///v201307/images/focus_3.jpg" alt="" /></a>
+		<a href="http://dj.shxc.gov.cn//dj///jgwmg/" target="_blank"><img src="http://dj.shxc.gov.cn//dj///v201307/images/focus_5.jpg" alt="" /></a>
+  	</div>-->
+  </div>
+  <!-- ENDS Slider 
+  <div style="position:absolute;left:1%;top:0px; z-index:999;"><img src="http://dj.shxc.gov.cn//dj///v201307/images/lantern.png" width="150" height="288" /></div>
+  <div style="position:absolute;right:1%;top:0px;z-index:999;"><img src="http://dj.shxc.gov.cn//dj///v201307/images/lantern.png" width="150" height="288" /></div>
+	-->
+</div>
+<!-- 焦点图 end-->
+<div class="notice-outside">
+  <div class="notice"> <a href="http://dj.shxc.gov.cn//dj///ggl" class="pull-right">更多&gt;&gt;</a>
+    <ul id="scroller">
+    			<li>
+    				<a href="/dj//ggl/2017/0607/a9e484d6-3d4b-497c-8e91-f231c49ac4e5.shtml" target="_blank" title="关于开展宣传系统2017－2018年度 文明单位创建规划预审的通知">
+	            			关于开展宣传系统2017－2018年度 文明单位创建规划预审的通知
+    				</a>
+    			</li>	            
+    			<li>
+    				<a href="/dj//ggl/2017/0505/462b4e50-9e0e-443a-bfd2-20480c94d614.shtml" target="_blank" title="关于继续做好“身边的榜样”微故事征集工作的通知">
+	            			关于继续做好“身边的榜样”微故事征集工作的通知
+    				</a>
+    			</li>	            
+    			<li>
+    				<a href="/dj//ggl/2017/0413/fdc0b8b7-6abc-4234-97e2-d30c0bfd7355.shtml" target="_blank" title="关于宣传系统组织开展2017年度上海市城乡妇女岗位建功先进集体（个人）创建评选活动的通知">
+	            			关于宣传系统组织开展2017年度上海市城乡妇女岗位建功先进集体（个人）创建评选活动的...
+    				</a>
+    			</li>	            
+    			<li>
+    				<a href="/dj//ggl/2017/0412/178826f8-8159-4334-b637-53087fcccd32.shtml" target="_blank" title="关于更新《宣传系统直属单位党建工作通讯录》的通知">
+	            			关于更新《宣传系统直属单位党建工作通讯录》的通知
+    				</a>
+    			</li>	            
+    			<li>
+    				<a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650066517&idx=3&sn=da4b973fdac47334e7ea6761427ad05d&chksm=bee71abb899093adca5a7276361ce869cdfef45a2920eeaa03633fde21d903ffd3550441c87d#rd" target="_blank" title="【公示】2015-2016年度上海市宣传系统文明单位名单">
+	            			【公示】2015-2016年度上海市宣传系统文明单位名单
+    				</a>
+    			</li>	            
+    			<li>
+    				<a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650066512&idx=3&sn=6ce8b1ae37deb9e65208ad9874763ccd&chksm=bee71abe899093a891c45974c3a7f2914da6f311ff429248c7bd416685558d5931301e7ed99b#rd" target="_blank" title="【公示】2015-2016年度上海市文明单位、文明行业（宣传系统）">
+	            			【公示】2015-2016年度上海市文明单位、文明行业（宣传系统）
+    				</a>
+    			</li>	            
+    </ul>
+  </div>
+</div>
+
+<!--container 党建时讯 横栏-->
+<div class="container">
+  <div class="wrap">
+    <div class="rol-l dj-news">
+      <div id="myCarousel" class="carousel slide">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- Carousel items -->
+        <div class="carousel-inner"> 
+          <!--loop 注意添加class > active-->
+           			<div class="active item">
+           		<a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650067062&idx=1&sn=11093e9ad4f53fb0b8afc1a2d8d5219e&chksm=bee7049889908d8ec2f91cf7e01948c50e55ecc5f608c77458e4f2080a6eb90217d5edda5c66#rd" title="宣传系统庆祝建党96周年大会，精彩片段为您重现！" target="_blank">
+			<!-- <img alt="宣传系统庆祝建党96周年大会，精彩片段为您重现！" src="http://dj.shxc.gov.cn/Source///2017/0814/2017081415434836980.jpg?c=305" /> -->
+           		<img alt="宣传系统庆祝建党96周年大会，精彩片段为您重现！" src="http://dj.shxc.gov.cn/Source///2017/0814/2017081415434836980.jpg" />
+            		<div class="carousel-caption">
+            		  <h4>
+		            		宣传系统庆祝建党96周年大会，精彩片段为您重现！
+            		  </h4>
+            		</div>
+            		</a>	
+          		</div>
+           			<div class="item">
+           		<a href="/dj//sytp/2017/0420/7ae3e853-95f2-4056-b400-e12928bf28dd.shtml" title="宣传系统党外代表人士第一次季度学习会举行" target="_blank">
+			<!-- <img alt="宣传系统党外代表人士第一次季度学习会举行" src="http://dj.shxc.gov.cn/Source///2017/0815/2017081516571619722.jpg?c=305" /> -->
+           		<img alt="宣传系统党外代表人士第一次季度学习会举行" src="http://dj.shxc.gov.cn/Source///2017/0815/2017081516571619722.jpg" />
+            		<div class="carousel-caption">
+            		  <h4>
+		            		宣传系统党外代表人士第一次季度学习会举行
+            		  </h4>
+            		</div>
+            		</a>	
+          		</div>
+           			<div class="item">
+           		<a href="/dj//sytp/2017/0123/b4c970d6-1624-4113-aa0e-5ed9f98172bc.shtml" title="上海市宣传思想文化工作会议举行" target="_blank">
+			<!-- <img alt="上海市宣传思想文化工作会议举行" src="http://dj.shxc.gov.cn/Source///2017/0123/2017012311070717469.JPG?c=305" /> -->
+           		<img alt="上海市宣传思想文化工作会议举行" src="http://dj.shxc.gov.cn/Source///2017/0123/2017012311070717469.JPG" />
+            		<div class="carousel-caption">
+            		  <h4>
+		            		上海市宣传思想文化工作会议举行
+            		  </h4>
+            		</div>
+            		</a>	
+          		</div>
+           			<div class="item">
+           		<a href="/dj//sytp/2016/1028/18159ab1-9bed-449c-9a0e-a505177b4062.shtml" title="中国共产党第十八届中央委员会第六次全体会议公报" target="_blank">
+			<!-- <img alt="中国共产党第十八届中央委员会第六次全体会议公报" src="http://dj.shxc.gov.cn/Source///2016/1028/2016102814325015124.jpg?c=305" /> -->
+           		<img alt="中国共产党第十八届中央委员会第六次全体会议公报" src="http://dj.shxc.gov.cn/Source///2016/1028/2016102814325015124.jpg" />
+            		<div class="carousel-caption">
+            		  <h4>
+		            		中国共产党第十八届中央委员会第六次全体会议公报
+            		  </h4>
+            		</div>
+            		</a>	
+          		</div>
+        </div>
+        <!-- Carousel nav --> 
+      <a class="carousel-control left" href="#myCarousel" data-slide="prev" style="display:none;">&lsaquo;</a> <a class="carousel-control right" href="#myCarousel" data-slide="next" style="display:none;">&rsaquo;</a> </div>
+      <div class="list-djnews">
+        <h3>党建时讯<span class=" pull-right"><a target="_blank" href="http://dj.shxc.gov.cn//dj///xwzx">更多>></a></span></h3>
+        <ul>
+                      	        
+             <li>				
+					<a style="font-weight:20;" href="/dj//xwzx/2019/1011/42524efc-941e-4224-b2df-4eb4150d52ff.shtml" title="李强调研这个“示范区”，要求打造“四个新高地”" target="_blank">
+							李强调研这个“示范区”，要求打造“四...
+				    </a>		
+		    </li>
+                      	        
+             <li>				
+					<a style="font-weight:20;" href="/dj//xwzx/2019/0927/e0dfd197-b2cd-4a96-8b7d-f651c306310b.shtml" title="中央广播电视总台长三角总部暨上海总站启用活动举行" target="_blank">
+							中央广播电视总台长三角总部暨上海总站...
+				    </a>		
+		    </li>
+                      	        
+             <li>				
+					<a style="font-weight:20;" href="/dj//xwzx/2019/0927/efc298cd-f239-4147-8302-ebccf63b41fa.shtml" title="上海人民庆祝新中国成立70周年文艺晚会上，李强应勇为这群奋斗者追梦人喝彩" target="_blank">
+							上海人民庆祝新中国成立70周年文艺晚...
+				    </a>		
+		    </li>
+                      	        
+             <li>				
+					<a style="font-weight:20;" href="/dj//xwzx/2019/0927/fc27532a-baee-4d6a-9083-d386a07aaa4e.shtml" title="新中国成立70周年之际 李强书记专程去了上海这两个重要场所" target="_blank">
+							新中国成立70周年之际 李强书记专程...
+				    </a>		
+		    </li>
+                      	        
+             <li>				
+					<a style="font-weight:20;" href="/dj//xwzx/2019/0923/dcdb9efe-64be-4cd8-8800-70bf6a8f2612.shtml" title="第七届上海文学艺术奖揭晓！王文娟何占豪陈少云周慧珺黄宗英获终身成就奖" target="_blank">
+							第七届上海文学艺术奖揭晓！王文娟何占...
+				    </a>		
+		    </li>
+                      	        
+             <li>				
+					<a style="font-weight:20;" href="/dj//xwzx/2019/0920/196f21fd-1198-4599-81c3-bba6231243fc.shtml" title="2019感动上海年度人物揭晓" target="_blank">
+							2019感动上海年度人物揭晓
+				    </a>		
+		    </li>
+                      	        
+             <li>				
+					<a style="font-weight:20;" href="/dj//xwzx/2019/0920/3d019439-8aca-48e0-ba5b-d33f6ed32728.shtml" title="难忘瞬间回望70年感动和力量 上海出品纪录片《大上海》等即将开播" target="_blank">
+							难忘瞬间回望70年感动和力量 上海出...
+				    </a>		
+		    </li>
+          <!--2015.3.17
+          <li>
+		    	<a class="video" href="http://dj.shxc.gov.cn//dj///hjypzs/" style="font-weight:bold;font-size:15px;color:black;" title="获奖影片展示" target="_blank">获奖影片展示</a>
+		    </li>
+		    -->
+	  	<li style="margin: 0;padding:0;padding-left: 15px">
+	  	<div>
+	  		<a class="video" target="_blank" style="font-weight:bold;font-size:15px;color:black;" href="http://dj.shxc.gov.cn//dj///hjypzs/">上影集团第二届“追梦上影”职工微电影大赛获奖影片展示</a>
+	  	</div>
+	  	</li>
+        </ul>
+      </div>
+    </div>
+  
+  <!-- rol-r gdw BEGIN -->
+  <div class="rol-r gdw" style="padding-top: 0px;background: none;">
+    <a href="http://dj.shxc.gov.cn//dj//sbdby2017/index.shtml"><img alt="身边的榜样" src="http://dj.shxc.gov.cn//dj///v201307/images/sbdby_title.png" style="position: absolute; z-index: 9999; top: -36px; height: 99px; width: 145px; left: 65px;"></a>
+    <div class="line-red" style="margin-top: 75px;">
+	    <hr>
+	    <span><a href="http://dj.shxc.gov.cn/dj/sbdby2017/index.shtml">本期关注</a></span>
+    </div>
+    <div class="gdw-img100">
+					<a href="/dj//sbdby2017/sbdbybqlb2017/2017/1013/ef0cb28e-8ffc-412b-a56d-6ae6b431b802.shtml" target="_blank" title="【第三十二期】郑名川：坚做非遗传承火炬手">
+						<img alt="【第三十二期】郑名川：坚做非遗传承火炬手" src="http://dj.shxc.gov.cn/Source///2017/1013/2017101315441056326.jpg">			    	
+					</a>
+					<div class="bqgz">
+						<a href="/dj//sbdby2017/sbdbybqlb2017/2017/1013/ef0cb28e-8ffc-412b-a56d-6ae6b431b802.shtml" target="_blank" title="【第三十二期】郑名川：坚做非遗传承火炬手">
+								郑名川
+						</a>
+					</div>	
+	</div>
+	<div class="clearfix"></div>
+    <div class="line-red">
+		<hr>
+		<span><a href="http://dj.shxc.gov.cn/dj/sbdby2017/sbdbybqlb2017/index.shtml">榜样微故事</a></span>
+	</div>
+        <div class="gdw-img36">		
+		<ul>		
+					<li>
+						<a href="/dj//sbdby2017/sbdbybqlb2017/2017/1013/4946b322-3c16-46b2-955c-cb14ee637657.shtml" target="_blank" title="20">
+								<img alt="【第三十一期】郁嗣圣：一份来自“80后”读者的感谢信" src="http://dj.shxc.gov.cn/Source///2017/1013/2017101315452557612.jpg">
+						</a>        
+					</li>
+					<li>
+						<a href="/dj//sbdby2017/sbdbybqlb2017/2017/1009/94d43a9f-f26c-47ab-b109-6671ff801ac3.shtml" target="_blank" title="20">
+								<img alt="【第三十期】王海洋：儿童灵魂的启蒙师" src="http://dj.shxc.gov.cn/Source///2017/1009/2017100914234991864.jpg">
+						</a>        
+					</li>
+		</ul>
+        </div>		
+    </div>
+    <!-- rol-r gdw END-->
+</div>
+</div>
+
+<!--/container 党建时讯 横栏--> 
+
+<!--container 基层动态 横栏-->
+<div class="container">
+  <div class="wrap clearfix">
+    <div class="rol-l jcdt">
+      <div class="line-jcdt">
+        <hr />
+        <span>基层动态</span></div>
+	    <ul class="zxdt">
+	        	 <li><a title="【上海社科院】庆祝新中国成立70周年十月歌会成功举行" href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650078323&idx=3&sn=d48bc06726e28e43ffc6be3e4116b955&chksm=bee7289d8990a18b75f742ce118ccf69b4f69fee6be4c5ec7fdb8e431112858b9d1efe95d507&token=458413770&lang=zh_CN#rd" target="_blank">
+							【上海社科院】庆祝新中国成立70周年...							   
+	        	 </a></li>
+	        	 <li><a title="【上海社科院】举行主题教育首场党课报告会" href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650075951&idx=3&sn=e7e17f897d9ac9af8128f4f4577dc687&chksm=bee727c18990aed7f1b157fc0bab73517f1d2490db3724370df677a37e7b9974708cd5aaa335&token=310011401&lang=zh_CN#rd" target="_blank">
+							【上海社科院】举行主题教育首场党课报...							   
+	        	 </a></li>
+	        	 <li><a title="【SMG】党外代表人士共同唱响《我和我的祖国》" href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650078446&idx=4&sn=1c43c212ae31e253ae02b6a1aed4fa4e&chksm=bee728008990a116f91b4a9954cba51570071d0de147ea2d1fb30cd642ed13adfd94dba4151c&token=458413770&lang=zh_CN#rd" target="_blank">
+							【SMG】党外代表人士共同唱响《我和...							   
+	        	 </a></li>
+	        	 <li><a title="【SMG】召开“不忘初心、牢记使命”主题教育评估座谈会" href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650077413&idx=4&sn=8334cda65df0d17225458f68b312321d&chksm=bee72c0b8990a51db91a577f024cfced54ad7029afd2812287d2bb68dec66d5512e184e79f99&token=1974905421&lang=zh_CN#rd" target="_blank">
+							【SMG】召开“不忘初心、牢记使命”...							   
+	        	 </a></li>
+	        	 <li><a title="【市文旅局】为祖国庆生，打造爱国活动周" href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650078446&idx=4&sn=1c43c212ae31e253ae02b6a1aed4fa4e&chksm=bee728008990a116f91b4a9954cba51570071d0de147ea2d1fb30cd642ed13adfd94dba4151c&token=458413770&lang=zh_CN#rd" target="_blank">
+							【市文旅局】为祖国庆生，打造爱国活动...							   
+	        	 </a></li>
+	        	 <li><a title="【市文旅局】市委巡回指导组第三组对上海市群众艺术馆党总支进行下沉式指导" href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650076818&idx=4&sn=fc3e4d6a9fb1fe26a84ff09284d1fe31&chksm=bee7227c8990ab6a3bb00aceeb52c9310891e0affbf32aa7b284dca03a8f2de4cb09775a318f&token=914248757&lang=zh_CN#rd" target="_blank">
+							【市文旅局】市委巡回指导组第三组对上...							   
+	        	 </a></li>
+	     </ul>
+      <!--- Tab --->
+      <ul class="nav nav-tabs" id="tabs1">
+        <li class="active"><a href="#xwdw" data-toggle="tab">新闻单位</a></li>
+        <li><a href="#cbdw" data-toggle="tab">出版单位</a></li>
+        <li><a href="#wydw" data-toggle="tab">文艺单位</a></li>
+        <li><a href="#kydw" data-toggle="tab">科研单位</a></li>
+        <li><a href="#dzjg" data-toggle="tab">党政机关</a></li>
+        <li><a href="#shtt" data-toggle="tab">社会团体</a></li>
+        <li><a href="#ckdw" data-toggle="tab">窗口单位</a></li>
+        <li><a href="#gyqy" data-toggle="tab">文化企业</a></li>
+      </ul>
+      <div class="tab-content" id="tabContents1">
+      	     	 <div class="tab-pane active" id="xwdw">
+		          <ul>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650077498&idx=3&sn=b937c814eae5b586dd36cd6e29440c21&chksm=bee72dd48990a4c2eca624ea47fcc3f719b56f493f5fe762b359bfc78b812532b21386ca239e&token=1974905421&lang=zh_CN#rd" title="【上海报业集团】党委召开“不忘初心、牢记使命”专题民主生活会" target="_blank">
+    						     	【上海报业集团】党委召开“不忘初心、牢...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650076818&idx=5&sn=db7d106ed34b381857a7267296b38571&chksm=bee7227c8990ab6a6eff16c37b47cf14c426c1941f8fa1dda86281bf11a3845d9d97e9ad1ec3&token=914248757&lang=zh_CN#rd" title="【上海报业集团】文汇报社举办“不忘初心、牢记使命”主题教育专题读书班" target="_blank">
+    						     	【上海报业集团】文汇报社举办“不忘初心...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650074819&idx=3&sn=5d52971b06fe18a4af1da3b5cd15ee41&chksm=bee73a2d8990b33b288f850b7e3b2ed946c82f8f1b3dd5f63dcbfbf3c32ad227b2de7588e3f8&token=1692284070&lang=zh_CN#rd" title="【上海报业集团】召开第一次党代表大会" target="_blank">
+    						     	【上海报业集团】召开第一次党代表大会
+		            		</a>
+		            	</li>
+		            	<li><a href="/dj//gzdt/xwdw/2018/1203/3fd75420-ff87-451a-b774-1a580d6a01c7.shtml" title="【上海报业集团】召开第四季度党建工作联席会议" target="_blank">
+    						     	【上海报业集团】召开第四季度党建工作联...
+		            		</a>
+		            	</li>
+		            	<li><a href="/dj//gzdt/xwdw/2018/1116/4a903d1a-8d41-4171-b601-e2392dffd6a3.shtml" title="【新闻出版局】传达学习贯彻习近平总书记重要讲话精神" target="_blank">
+    						     	【新闻出版局】传达学习贯彻习近平总书记...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650071972&idx=3&sn=f46aa3130a1bcbcab97bdb337a236324&chksm=bee7374a8990be5c3a6e11b748287f03869e4c95d7b5f4e9a2b20bc112a445b6aeb978d4a3b7&token=1622979117&lang=zh_CN#rd" title="【上海报业集团】召开第三季度党建联席会议" target="_blank">
+    						     	【上海报业集团】召开第三季度党建联席会...
+		            		</a>
+		            	</li>
+		          </ul>         
+	        </div>
+      	     	 <div class="tab-pane" id="cbdw">
+		          <ul>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650077385&idx=3&sn=c14f5c94cb7433210eed86a3757030de&chksm=bee72c278990a53194a01934aeb5d5fd3398f5d627f18f4cdb4a7dff450f749462b57022596e&token=1974905421&lang=zh_CN#rd" title="【世纪出版集团】暨人民社举行主题教育专题学习会，谢春涛作辅导报告" target="_blank">
+    						     	【世纪出版集团】暨人民社举行主题教育专...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650076644&idx=4&sn=ffc89bf3b0fd1b60038c099c766064a5&chksm=bee7210a8990a81c25c1b18b0e6cc34e85266d8e6e18532fef50564eae9f204bb2abee9ef425&token=826869710&lang=zh_CN#rd" title="【世纪出版集团】全面推进主题教育" target="_blank">
+    						     	【世纪出版集团】全面推进主题教育
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650073203&idx=3&sn=c6bc75c10a059ca4a0b0dc384c660b1b&chksm=bee73c9d8990b58bee16a34e8c73c4a62bf558ce0c4cd133fe25dde423e766250a53b02e84e3&token=1117923462&lang=zh_CN#rd" title="【东方出版中心】继承大百科优良传统 争做新时代出版先锋" target="_blank">
+    						     	【东方出版中心】继承大百科优良传统 争...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650072661&idx=5&sn=f093759a15541013ae15b41f39868ecb&chksm=bee732bb8990bbad643a304048d90faee912df35699058c74aadb9abf666ca43f2b5064993a3&token=1988922350&lang=zh_CN#rd" title="【世纪出版集团】进博会里有间“朵云书房”， 筑起一道书香风景线" target="_blank">
+    						     	【世纪出版集团】进博会里有间“朵云书房...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650072135&idx=3&sn=0ba20d8a8d5056ee7377ddeed994560c&chksm=bee730a98990b9bf04e76b54e2423b1f52199769ecc66f7922a43224f950ac09795a61f5c411&token=1378704939&lang=zh_CN#rd" title="【世纪出版集团】召开2018年第三季度党建工作例会" target="_blank">
+    						     	【世纪出版集团】召开2018年第三季度...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650071721&idx=2&sn=d350380d63aac169afd79c316895a339&chksm=bee736478990bf511b3def746eb74130046a4b8ba3d4826273e9d4b0c0195b35cd0507c51f86#rd" title="【上海世纪出版集团】吹响2018上海书展集结号" target="_blank">
+    						     	【上海世纪出版集团】吹响2018上海书...
+		            		</a>
+		            	</li>
+		          </ul>         
+	        </div>
+      	     	 <div class="tab-pane" id="wydw">
+		          <ul>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650075441&idx=3&sn=c40bc1d653865657c5bb7ae9f57982cc&chksm=bee725df8990acc9c813ae2e4f0f8cbade76f99bd4bebd5219b7d1099bd2941c6ee2752bf9b3&token=142335736&lang=zh_CN#rd" title="【上海大剧院艺术中心】团委举办 “纪念五四运动100周年”主题团日活动" target="_blank">
+    						     	【上海大剧院艺术中心】团委举办 “纪念...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650072647&idx=3&sn=38dca9381bff8518d9e12e9b2ee9f8cd&chksm=bee732a98990bbbff298043ebd3fee0ee0b5367acda012d2f02bc57d60b546b0b4f8aff4ecca&token=1988922350&lang=zh_CN#rd" title="【上海大剧院艺术中心】“音乐午茶”将亮相“进博会”，精彩演出先睹为快……" target="_blank">
+    						     	【上海大剧院艺术中心】“音乐午茶”将亮...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650072236&idx=3&sn=5eb6573a0abd27e95fbb9c89457b15da&chksm=bee730428990b954c8865a24691fe875384b1eb8ab9968e0d84a545840b76d58031d9867964a&token=1373872078&lang=zh_CN#rd" title="【戏曲艺术中心】2018年党支部书记培训班完成第四次课程" target="_blank">
+    						     	【戏曲艺术中心】2018年党支部书记培...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650072011&idx=3&sn=6c81e9a4723e9280b07911359df1cb96&chksm=bee737258990be33714af3b78a27b52e20391071ef3f143fe281360eb24cf8b1d208cc6843dd&token=1622979117&lang=zh_CN#rd" title="【戏曲艺术中心】党委书记、总裁谷好好与上海越剧院、上海评弹团青年演员面对面" target="_blank">
+    						     	【戏曲艺术中心】党委书记、总裁谷好好与...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650069995&idx=3&sn=ee9104549ef21ff6db7d7d1aaac737a6&chksm=bee70f05899086138512e2900b7c4f061d7187401572684394b1d5baefd758c6715b75891abd#rd" title="【上海大剧院艺术中心】上海音乐厅支部与崇明区浜西村结对共建" target="_blank">
+    						     	【上海大剧院艺术中心】上海音乐厅支部与...
+		            		</a>
+		            	</li>
+		            	<li><a href="/dj//gzdt/wydw/2017/0808/25e76dc2-2451-42a6-a4fa-4aeb0a60fc42.shtml" title="【大剧院艺术中心】八一献礼 · 芭蕾与军营的美丽邂逅" target="_blank">
+    						     	【大剧院艺术中心】八一献礼 · 芭蕾与...
+		            		</a>
+		            	</li>
+		          </ul>         
+	        </div>
+      	     	 <div class="tab-pane" id="kydw">
+		          <ul>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650078323&idx=3&sn=d48bc06726e28e43ffc6be3e4116b955&chksm=bee7289d8990a18b75f742ce118ccf69b4f69fee6be4c5ec7fdb8e431112858b9d1efe95d507&token=458413770&lang=zh_CN#rd" title="【上海社科院】庆祝新中国成立70周年十月歌会成功举行" target="_blank">
+    						     	【上海社科院】庆祝新中国成立70周年十...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650075951&idx=3&sn=e7e17f897d9ac9af8128f4f4577dc687&chksm=bee727c18990aed7f1b157fc0bab73517f1d2490db3724370df677a37e7b9974708cd5aaa335&token=310011401&lang=zh_CN#rd" title="【上海社科院】举行主题教育首场党课报告会" target="_blank">
+    						     	【上海社科院】举行主题教育首场党课报告...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650075403&idx=3&sn=18739cf8f2fcb13689e3e17d75257e2c&chksm=bee725e58990acf33878a7a96464f88f4b756a17d8cf31005aa42f5971468af8ddb4d5c214fd&token=142335736&lang=zh_CN#rd" title="【市社联】召开增强“四力”教育实践工作动员大会" target="_blank">
+    						     	【市社联】召开增强“四力”教育实践工作...
+		            		</a>
+		            	</li>
+		            	<li><a href="/dj//gzdt/kydw/2018/1113/6540d8f1-4a78-4d5d-8665-c791006ae1d4.shtml" title="【上海社科院】三十年共同走过：上海社科院举行集体政治生日活动" target="_blank">
+    						     	【上海社科院】三十年共同走过：上海社科...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650072761&idx=5&sn=b2b2c738042538fcc76e2b173b16bc36&chksm=bee732578990bb414af96815802ed5da5b8ed22b069656dc297c14dee2f2623bc29c0aa907c2&token=1988922350&lang=zh_CN#rd" title="【上海社科院】举办“学习习近平宣传思想工作会议讲话精神”专题培训" target="_blank">
+    						     	【上海社科院】举办“学习习近平宣传思想...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650072697&idx=4&sn=da1d18bcb0da4d1ef19873553151e692&chksm=bee732978990bb8177aea64b4b1870dd3eb538635f8b4211e1bdc19c285ac0360c8077259f94&token=1988922350&lang=zh_CN#rd" title="【上海社科院】健全完善四项机制，全面推进纪检工作" target="_blank">
+    						     	【上海社科院】健全完善四项机制，全面推...
+		            		</a>
+		            	</li>
+		          </ul>         
+	        </div>
+      	     	 <div class="tab-pane" id="dzjg">
+		          <ul>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650078446&idx=4&sn=1c43c212ae31e253ae02b6a1aed4fa4e&chksm=bee728008990a116f91b4a9954cba51570071d0de147ea2d1fb30cd642ed13adfd94dba4151c&token=458413770&lang=zh_CN#rd" title="【市文旅局】为祖国庆生，打造爱国活动周" target="_blank">
+    						     	【市文旅局】为祖国庆生，打造爱国活动周
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650076818&idx=4&sn=fc3e4d6a9fb1fe26a84ff09284d1fe31&chksm=bee7227c8990ab6a3bb00aceeb52c9310891e0affbf32aa7b284dca03a8f2de4cb09775a318f&token=914248757&lang=zh_CN#rd" title="【市文旅局】市委巡回指导组第三组对上海市群众艺术馆党总支进行下沉式指导" target="_blank">
+    						     	【市文旅局】市委巡回指导组第三组对上海...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650075403&idx=2&sn=07980b2f201f0f2f5e208d9eb393869d&chksm=bee725e58990acf3f9b43fc42c953e8419d5caaefe7e5d0a6fa49b2f038425f4f6d1876a0bb9&token=142335736&lang=zh_CN#rd" title="【文旅局】召开增强“四力”守正创新研讨会暨二季度党建工作例会" target="_blank">
+    						     	【文旅局】召开增强“四力”守正创新研讨...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650072442&idx=4&sn=df07b68835d4ec22a6178165ad8231d7&chksm=bee731948990b88229cad1cf843904e892ce862bccea08250d7af651ebff7e83d1117a925092&token=549653661&lang=zh_CN#rd" title="【文广局】中共一大会址纪念馆：不忘初心，做好中国共产党人精神家园守护者" target="_blank">
+    						     	【文广局】中共一大会址纪念馆：不忘初心...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650072344&idx=3&sn=813d36a2c13a1a7537cd50ed35251860&chksm=bee731f68990b8e0a14558c227f38f4274a8c07c626599a579b035c027b2d16d02272fedc8d1&token=955783014&lang=zh_CN#rd" title="【市文广局】市文广影视社会组织党建服务中心挂牌成立：建设新阵地、开创新局面、打造新品牌" target="_blank">
+    						     	【市文广局】市文广影视社会组织党建服务...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650072227&idx=3&sn=b86b072bb54092fecd54b05f3bef2583&chksm=bee7304d8990b95bbc3462c84cd598f24e1581c6347141defcb4c1ce444d7b1d474d240434a5&token=1373872078&lang=zh_CN#rd" title="【文广局】中共一大会址纪念馆举办“树德讲堂”街道教学点揭牌仪式暨专题党课" target="_blank">
+    						     	【文广局】中共一大会址纪念馆举办“树德...
+		            		</a>
+		            	</li>
+		          </ul>         
+	        </div>
+      	     	 <div class="tab-pane" id="shtt">
+		          <ul>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650076644&idx=5&sn=53a277482bb8cbf23ef72f80f002e056&chksm=bee7210a8990a81c38bb98dcd86879164a91f826cfcf35c7a44b97b008b428e290eef0a2c822&token=826869710&lang=zh_CN#rd" title="【市文联】党组中心组参观中共二大会址并展开主题教育学习交流研讨" target="_blank">
+    						     	【市文联】党组中心组参观中共二大会址并...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650075441&idx=4&sn=3e0a5138fbd7d8c586779f6157df2527&chksm=bee725df8990acc915241a4f3484f4f3c8890353f2c7f4288f7361f86e10b5301909a7f07315&token=142335736&lang=zh_CN#rd" title="【中福会】中托幼儿做公益，广播录音献爱心" target="_blank">
+    						     	【中福会】中托幼儿做公益，广播录音献爱...
+		            		</a>
+		            	</li>
+		            	<li><a href="/dj//gzdt/shtt/2019/0102/276b7557-cee5-4115-8494-63fffcfd470b.shtml" title="【中福会】男教师集体教学联合展示活动在宋庆龄幼儿园举行" target="_blank">
+    						     	【中福会】男教师集体教学联合展示活动在...
+		            		</a>
+		            	</li>
+		            	<li><a href="/dj//gzdt/shtt/2019/0102/7664262b-2c79-4422-a4dd-0178e40df860.shtml" title="【中福会】召开教育工作会议" target="_blank">
+    						     	【中福会】召开教育工作会议
+		            		</a>
+		            	</li>
+		            	<li><a href="/dj//gzdt/shtt/2019/0102/1f10941f-318f-4581-8772-95d7087b6396.shtml" title="【中福会】中国福利会举行2018年全系统党政领导干部培训班" target="_blank">
+    						     	【中福会】中国福利会举行2018年全系...
+		            		</a>
+		            	</li>
+		            	<li><a href="/dj//gzdt/shtt/2019/0102/2d438a32-0927-41c0-864b-d991e98f9bfc.shtml" title="【中福会】集中组织收看庆祝改革开放40周年大会" target="_blank">
+    						     	【中福会】集中组织收看庆祝改革开放40...
+		            		</a>
+		            	</li>
+		          </ul>         
+	        </div>
+      	     	 <div class="tab-pane" id="ckdw">
+		          <ul>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650077067&idx=6&sn=bd7153e675d0f8f6d481251fa74eda36&chksm=bee723658990aa73897963ba03194ba595148b3f6042a9e3a723899a377c7dff778346b5d8b3&token=154745449&lang=zh_CN#rd" title="【陈云纪念馆】等联合举办“党旗、国旗、军旗，初心使命向辉煌”系列活动" target="_blank">
+    						     	【陈云纪念馆】等联合举办“党旗、国旗、...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650076664&idx=4&sn=577dd537514837806a9a12b530bbd1e9&chksm=bee721168990a80020a1d7da18a46154999820bbf2422dd7351d283150063728084f6ae7389d&token=192085532&lang=zh_CN#rd" title="【上图情报所】“甘为人梯、无私奉献，上图人的初心使命所在”" target="_blank">
+    						     	【上图情报所】“甘为人梯、无私奉献，上...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650076233&idx=4&sn=fceecda75430f4b2caaf56f2bb480122&chksm=bee720a78990a9b14a7efa4ffb0a4c554d895748d24d6607e6d6e35fe09a19703caed00f2671&token=1154402900&lang=zh_CN#rd" title="【上图情报所】发挥文献资源优势，助力主题教育开展" target="_blank">
+    						     	【上图情报所】发挥文献资源优势，助力主...
+		            		</a>
+		            	</li>
+		            	<li><a href="/dj//gzdt/ckdw/2019/0312/4f202b48-5526-463a-8e31-7145211e783c.shtml" title="【陈云纪念馆】火红三月，陈云纪念馆开展学雷锋主题月，一大波精彩活动，等您来……" target="_blank">
+    						     	【陈云纪念馆】火红三月，陈云纪念馆开展...
+		            		</a>
+		            	</li>
+		            	<li><a href="/dj//gzdt/ckdw/2019/0312/a2a7b0ba-6733-4575-9658-85582d46e111.shtml" title="【陈云纪念馆】举办多彩学雷锋主题活动" target="_blank">
+    						     	【陈云纪念馆】举办多彩学雷锋主题活动
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650073217&idx=3&sn=697efeb3aa1d6d029f66bc457d13a8fc&chksm=bee73c6f8990b579168aa3978b839b0c1c41ed4ddacfc98a3b4fbf83ee912eebed558f2083d0&token=1117923462&lang=zh_CN#rd" title="【陈云纪念馆】与东航党校签约共建党性教育基地" target="_blank">
+    						     	【陈云纪念馆】与东航党校签约共建党性教...
+		            		</a>
+		            	</li>
+		          </ul>         
+	        </div>
+      	     	 <div class="tab-pane" id="gyqy">
+		          <ul>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650078446&idx=4&sn=1c43c212ae31e253ae02b6a1aed4fa4e&chksm=bee728008990a116f91b4a9954cba51570071d0de147ea2d1fb30cd642ed13adfd94dba4151c&token=458413770&lang=zh_CN#rd" title="【SMG】党外代表人士共同唱响《我和我的祖国》" target="_blank">
+    						     	【SMG】党外代表人士共同唱响《我和我...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650077413&idx=4&sn=8334cda65df0d17225458f68b312321d&chksm=bee72c0b8990a51db91a577f024cfced54ad7029afd2812287d2bb68dec66d5512e184e79f99&token=1974905421&lang=zh_CN#rd" title="【SMG】召开“不忘初心、牢记使命”主题教育评估座谈会" target="_blank">
+    						     	【SMG】召开“不忘初心、牢记使命”主...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650077108&idx=3&sn=618f6956ab8105260c5fec4f32e8b49c&chksm=bee7235a8990aa4cc45cd7c2979f96fd0fdb9bc66152017a4e14ba5b8f8f6b8db4eb265b9e1a&token=154745449&lang=zh_CN#rd" title="【上影集团】上海影视乐园二期建设启动，将成老上海拍摄地、高科技制作地、大文旅目的地" target="_blank">
+    						     	【上影集团】上海影视乐园二期建设启动，...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650077126&idx=4&sn=8ed197df70ba12182f9db0e1d028919d&chksm=bee723288990aa3e44d7164aaacbfdf286c0ace30b13a00ec3af5af481bf37f8932c271194d9&token=154745449&lang=zh_CN#rd" title="【SMG】领导班子成员紧扣“四个讲清” 讲好专题党课" target="_blank">
+    						     	【SMG】领导班子成员紧扣“四个讲清”...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650076717&idx=4&sn=1f3432fd37857a150651da15d670416d&chksm=bee722c38990abd543d52218a6c87df4b0d0c7a30060a139468e2828d9dc0d725c8923fce336&token=61755308&lang=zh_CN#rd" title="【SMG】行“四力”读懂初心，东方卫视中心第十九支部前往陈云纪念馆参观学习" target="_blank">
+    						     	【SMG】行“四力”读懂初心，东方卫视...
+		            		</a>
+		            	</li>
+		            	<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650076250&idx=3&sn=a89120dc61a967744e7d289f3c8f0415&chksm=bee720b48990a9a2da38a7e05a69f1255733d63c463e69e9bf5aead3e13ab8bf7ebca420b116&token=1154402900&lang=zh_CN#rd" title="【SMG】“不忘初心、牢记使命”主题教育全面铺开" target="_blank">
+    						     	【SMG】“不忘初心、牢记使命”主题教...
+		            		</a>
+		            	</li>
+		          </ul>         
+	        </div>
+      </div>
+
+<div class="rol-r banner">
+		<a href="http://dj.shxc.gov.cn//dj///yxzzsh/" target="_blank" title="2013年上半年优秀组织生活案例展示"><img src="http://dj.shxc.gov.cn//dj///v201307/images/banner_zzsh.jpg" /></a>
+	</div>
+    </div>
+
+  	<!--  学习视频  -->
+    <div class="rol-r ad" style="margin-top: 0; margin-left: 20px;">
+      <div class="well well-small"><i class="icon-flag"></i> 学习视频<small class="pull-right"><a href="http://dj.shxc.gov.cn//dj///gdxxspzt/">更多&gt;</a></small></div>
+      
+      				<div class="mosaic-block circle video"> <a style="display: inline;" href="http://dj.shxc.gov.cn//dj///gdxxspzt/" target="_blank" class="mosaic-overlay" title="电影党课——不忘初心 挺直腰板做一名合格的共产党员（吴孟超）">&nbsp;</a>
+        				<div style="display: block;" class="mosaic-backdrop"><img src="http://dj.shxc.gov.cn/Source///2017/0911/2017091117103174881.jpg" alt="电影党课——不忘初心 挺直腰板做一名合格的共产党员（吴孟超）"></div>
+     				</div>
+
+      				<div class="mosaic-block circle video"> <a style="display: inline;" href="http://dj.shxc.gov.cn//dj///gdxxspzt/" target="_blank" class="mosaic-overlay" title="电影党课——党性修养的光辉典范--陈云（徐建平）">&nbsp;</a>
+        				<div style="display: block;" class="mosaic-backdrop"><img src="http://dj.shxc.gov.cn/Source///2017/0911/2017091117100210755.jpg" alt="电影党课——党性修养的光辉典范--陈云（徐建平）"></div>
+     				</div>
+
+							<div class="video-title"><a href="/dj//gdxxspzt/2017/0911/22249e04-a3d6-4a16-a8ac-c677d9a15bcc.shtml" target="_blank" title="电影党课——不忘初心 挺直腰板做一名合格的共产党员（吴孟超）">电影党课——不忘初心 挺直腰板做一名合格的共产党员（吴孟超）</a></div>
+							<div class="video-title"><a href="/dj//gdxxspzt/2017/0911/002de33c-54b1-4edc-b6b7-04c00bdba122.shtml" target="_blank" title="电影党课——党性修养的光辉典范--陈云（徐建平）">电影党课——党性修养的光辉典范--陈云（徐建平）</a></div>
+      				<div class="mosaic-block circle video"> <a style="display: inline;" href="http://dj.shxc.gov.cn//dj///gdxxspzt/" target="_blank" class="mosaic-overlay" title="电影党课——上海 中国共产党人梦开始的地方（张黎明）">&nbsp;</a>
+        				<div style="display: block;" class="mosaic-backdrop"><img src="http://dj.shxc.gov.cn/Source///2017/0911/2017091117092868725.jpg" alt="电影党课——上海 中国共产党人梦开始的地方（张黎明）"></div>
+     				</div>
+
+      				<div class="mosaic-block circle video"> <a style="display: inline;" href="http://dj.shxc.gov.cn//dj///gdxxspzt/" target="_blank" class="mosaic-overlay" title="电影党课——永远的焦裕禄（武占英）">&nbsp;</a>
+        				<div style="display: block;" class="mosaic-backdrop"><img src="http://dj.shxc.gov.cn/Source///2017/0911/2017091117085976497.jpg" alt="电影党课——永远的焦裕禄（武占英）"></div>
+     				</div>
+
+							<div class="video-title"><a href="/dj//gdxxspzt/2017/0911/e93988c3-9afb-41ab-9cea-d1d8cee98a5c.shtml" target="_blank" title="电影党课——上海 中国共产党人梦开始的地方（张黎明）">电影党课——上海 中国共产党人梦开始的地方（张黎明）</a></div>
+							<div class="video-title"><a href="/dj//gdxxspzt/2017/0911/442a6294-93a0-4e07-b785-d2ec197f83f8.shtml" target="_blank" title="电影党课——永远的焦裕禄（武占英）">电影党课——永远的焦裕禄（武占英）</a></div>
+      				<div class="mosaic-block circle video"> <a style="display: inline;" href="http://dj.shxc.gov.cn//dj///gdxxspzt/" target="_blank" class="mosaic-overlay" title="我是党员（蔡蕴敏）">&nbsp;</a>
+        				<div style="display: block;" class="mosaic-backdrop"><img src="http://dj.shxc.gov.cn/Source///2017/0911/2017091117081697859.jpg" alt="我是党员（蔡蕴敏）"></div>
+     				</div>
+
+      				<div class="mosaic-block circle video"> <a style="display: inline;" href="http://dj.shxc.gov.cn//dj///gdxxspzt/" target="_blank" class="mosaic-overlay" title="我是党员（董之益）">&nbsp;</a>
+        				<div style="display: block;" class="mosaic-backdrop"><img src="http://dj.shxc.gov.cn/Source///2017/0911/2017091117075084826.jpg" alt="我是党员（董之益）"></div>
+     				</div>
+
+							<div class="video-title"><a href="/dj//gdxxspzt/2017/0911/2b633247-d0eb-4a8d-b129-ec9588d36234.shtml" target="_blank" title="我是党员（蔡蕴敏）">我是党员（蔡蕴敏）</a></div>
+							<div class="video-title"><a href="/dj//gdxxspzt/2017/0911/89f2b937-d9b7-46bc-b23e-8d61c6b683a8.shtml" target="_blank" title="我是党员（董之益）">我是党员（董之益）</a></div>
+      
+      
+      
+	</div>
+	<!--  end 学习视频  -->	
+	
+
+  </div>
+  
+  <div class="wrap clearfix section1">
+	
+  </div>
+  
+   <!--  读书节  -->
+	<div class="clearfix section-book">
+		<div class="wrap clearfix">
+			<div class="rol-l xxyd" id="col-recommend-1">
+				
+			  
+			<script type="text/javascript">
+				$(function() {
+					$.post("http://dj.shxc.gov.cn/CMS/book/info_search.action",
+							{
+								orderField : "updateTime"
+							},
+					function(data,status){
+						$("#col-recommend-1").find("ul").empty();
+		
+						$(data.bookInfoQuery).each(function(i){
+							var bookInfo = this;
+							var dom = "<li><div class='cover'><a href='http://dj.shxc.gov.cn/dj/dsj?tsg_id="+bookInfo.id+"' target='_blank'><img src="
+							+bookInfo.imageUrl+ " style='height:142px;' />"+bookInfo.title+"</a></div>"
+							+"<div class='title'><a href='http://dj.shxc.gov.cn/dj/dsj/?tsg_id="+bookInfo.id+"'>"+bookInfo.title+"</a></div>"
+							+"<div class='author'>"+bookInfo.author+"</div><br /></li>";
+							$("#col-recommend-1").find("ul").append(dom);
+							if(i>3){
+								return false;
+							}
+						});
+						
+					},
+					"jsonp");
+				});
+			</script>
+				<div class="line-xxyd">
+						<hr><span>读书节 <a style="color:#666666;font-size:14px;padding-left:15px;" href="http://dj.shxc.gov.cn/dj/dsj?tsggd_id=1" target="_blank"><i class="icon-share" style="vertical-align:-2px;"></i> <small>进入“读书节”专题</small></a></span>
+				</div>
+				<ul class="newBookList clearfix">
+				</ul>
+			</div>
+		
+		<div class="rol-r ad">
+<!--				<h3>最新书评<a href="http://dj.shxc.gov.cn/dj/dsj?jcspgd_id=1" target="_blank">更多&gt;&gt;</a></h3>-->
+				<div class="well well-small"><i class="icon-th"></i>
+					 最新书评 <small class="pull-right"><a href="http://dj.shxc.gov.cn/dj/dsj?jcspgd_id=1" target="_blank">更多&gt;</a></small>
+				</div>
+			<ul class="bookReviewList">
+            		<li style="margin:5px 0;">
+            		<!--<a href="http://localhost/dsj?jcsp_id=http://dj.shxc.gov.cn/XCBCMS//dj//dsj/dsjjcsp/2016/0111/5cd8b199-e5ce-40d3-ad85-16cc060479c9.shtml" target="_blank" title="【上海文艺出版社】于晨：用文学解读一个时代 ——读格非“江南三部曲”收官之作《春尽江南》" style="color:#000000;">-->
+            		<a href="http://dj.shxc.gov.cn/dj/dsj?jcsp_id=http://dj.shxc.gov.cn//dj//dsj/dsjjcsp/2016/0111/5cd8b199-e5ce-40d3-ad85-16cc060479c9.shtml" target="_blank" title="【上海文艺出版社】于晨：用文学解读一个时代 ——读格非“江南三部曲”收官之作《春尽江南》" style="color:#000000;">
+							【上海文艺出版社】于晨：用文学…
+            		</a></li>
+            		<li style="margin:5px 0;">
+            		<!--<a href="http://localhost/dsj?jcsp_id=http://dj.shxc.gov.cn/XCBCMS//dj//dsj/dsjjcsp/2016/0111/1c2d3114-cb3b-4bae-a4ec-716cca2de339.shtml" target="_blank" title="【上海市社联】梁玉国：人类到底往何处去 ——读《现代政治秩序的起源》、《政治秩序与政治衰败》有感" style="color:#000000;">-->
+            		<a href="http://dj.shxc.gov.cn/dj/dsj?jcsp_id=http://dj.shxc.gov.cn//dj//dsj/dsjjcsp/2016/0111/1c2d3114-cb3b-4bae-a4ec-716cca2de339.shtml" target="_blank" title="【上海市社联】梁玉国：人类到底往何处去 ——读《现代政治秩序的起源》、《政治秩序与政治衰败》有感" style="color:#000000;">
+							【上海市社联】梁玉国：人类到底…
+            		</a></li>
+            		<li style="margin:5px 0;">
+            		<!--<a href="http://localhost/dsj?jcsp_id=http://dj.shxc.gov.cn/XCBCMS//dj//dsj/dsjjcsp/2016/0111/2a5c4adf-3664-471b-b5ac-2f7a990f297d.shtml" target="_blank" title="【上海辞书出版社】赵欣：生命的智慧 ——梅特林克《花的智慧》读后随想" style="color:#000000;">-->
+            		<a href="http://dj.shxc.gov.cn/dj/dsj?jcsp_id=http://dj.shxc.gov.cn//dj//dsj/dsjjcsp/2016/0111/2a5c4adf-3664-471b-b5ac-2f7a990f297d.shtml" target="_blank" title="【上海辞书出版社】赵欣：生命的智慧 ——梅特林克《花的智慧》读后随想" style="color:#000000;">
+							【上海辞书出版社】赵欣：生命的…
+            		</a></li>
+            		<li style="margin:5px 0;">
+            		<!--<a href="http://localhost/dsj?jcsp_id=http://dj.shxc.gov.cn/XCBCMS//dj//dsj/dsjjcsp/2016/0107/9408443f-265f-40e8-a521-16a02ca8259e.shtml" target="_blank" title="【上海市文联】胡晓军：爱小诗者，爱生机盎然——读吴欢章先生《欢章小诗》" style="color:#000000;">-->
+            		<a href="http://dj.shxc.gov.cn/dj/dsj?jcsp_id=http://dj.shxc.gov.cn//dj//dsj/dsjjcsp/2016/0107/9408443f-265f-40e8-a521-16a02ca8259e.shtml" target="_blank" title="【上海市文联】胡晓军：爱小诗者，爱生机盎然——读吴欢章先生《欢章小诗》" style="color:#000000;">
+							【上海市文联】胡晓军：爱小诗者…
+            		</a></li>
+            		<li style="margin:5px 0;">
+            		<!--<a href="http://localhost/dsj?jcsp_id=http://dj.shxc.gov.cn/XCBCMS//dj//dsj/dsjjcsp/2015/1228/6dbec77f-6113-40cc-9675-20c547932f78.shtml" target="_blank" title="【上海社科院】刘社建：高阳论李商隐的诗歌艺术" style="color:#000000;">-->
+            		<a href="http://dj.shxc.gov.cn/dj/dsj?jcsp_id=http://dj.shxc.gov.cn//dj//dsj/dsjjcsp/2015/1228/6dbec77f-6113-40cc-9675-20c547932f78.shtml" target="_blank" title="【上海社科院】刘社建：高阳论李商隐的诗歌艺术" style="color:#000000;">
+							【上海社科院】刘社建：高阳论李…
+            		</a></li>
+            		<li style="margin:5px 0;">
+            		<!--<a href="http://localhost/dsj?jcsp_id=http://dj.shxc.gov.cn/XCBCMS//dj//dsj/dsjjcsp/2015/1216/1a7c9c8e-79af-431c-8a92-282bc8afbfe2.shtml" target="_blank" title="【上海人民美术出版社】陈嘉梦：听一场陀思妥耶夫斯基的音乐会——读《卡拉马佐夫兄弟》所想到的" style="color:#000000;">-->
+            		<a href="http://dj.shxc.gov.cn/dj/dsj?jcsp_id=http://dj.shxc.gov.cn//dj//dsj/dsjjcsp/2015/1216/1a7c9c8e-79af-431c-8a92-282bc8afbfe2.shtml" target="_blank" title="【上海人民美术出版社】陈嘉梦：听一场陀思妥耶夫斯基的音乐会——读《卡拉马佐夫兄弟》所想到的" style="color:#000000;">
+							【上海人民美术出版社】陈嘉梦：…
+            		</a></li>
+            		<li style="margin:5px 0;">
+            		<!--<a href="http://localhost/dsj?jcsp_id=http://dj.shxc.gov.cn/XCBCMS//dj//dsj/dsjjcsp/2015/1207/06e5fcda-775d-4fec-a1fa-efc98f599d2e.shtml" target="_blank" title="【上海京剧院】崔宁：三人三地三本书，对照对比对流年" style="color:#000000;">-->
+            		<a href="http://dj.shxc.gov.cn/dj/dsj?jcsp_id=http://dj.shxc.gov.cn//dj//dsj/dsjjcsp/2015/1207/06e5fcda-775d-4fec-a1fa-efc98f599d2e.shtml" target="_blank" title="【上海京剧院】崔宁：三人三地三本书，对照对比对流年" style="color:#000000;">
+							【上海京剧院】崔宁：三人三地三…
+            		</a></li>
+            		<li style="margin:5px 0;">
+            		<!--<a href="http://localhost/dsj?jcsp_id=http://dj.shxc.gov.cn/XCBCMS//dj//dsj/dsjjcsp/2015/1203/b2e5c51f-d8b8-4c18-a25f-9fd324aa4af5.shtml" target="_blank" title="【上海芭蕾舞团】吴虎生：葆有一颗赤子之心" style="color:#000000;">-->
+            		<a href="http://dj.shxc.gov.cn/dj/dsj?jcsp_id=http://dj.shxc.gov.cn//dj//dsj/dsjjcsp/2015/1203/b2e5c51f-d8b8-4c18-a25f-9fd324aa4af5.shtml" target="_blank" title="【上海芭蕾舞团】吴虎生：葆有一颗赤子之心" style="color:#000000;">
+							【上海芭蕾舞团】吴虎生：葆有一…
+            		</a></li>
+			</ul>
+		</div>
+			
+	</div>
+	<!--  end 读书节 
+	 -->
+  
+  <!-- 学习园地-->
+  
+  <div class="wrap clearfix">
+    <div class="rol-l xxyd">
+      <div id="my_xxyd" class="line-xxyd">
+      <hr />
+		<span>学习园地  <a style="color:#666666;font-size:14px;padding-left:15px;" href="javascript:isEnter();"><small>进入在线学习</small></a></span>
+        </div>
+      <div class="box-study box-first">
+        <ul id="tabs" class="nav nav-tabs study-right-tab">
+          <li class="active"><a data-toggle="tab" href="#xxzl">学习资料</a></li>
+          <li><a data-toggle="tab" href="#wjhb">文件汇编</a></li>
+          <li><a data-toggle="tab" href="#sjts">实践探索</a></li>
+          <li><a data-toggle="tab" href="#tszs">他山之石</a></li>
+          
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="xxzl"><!--学习资料-->
+            <ul class="gxzy clearfix">
+            	
+          		 	<li><a title="江西瑞金：“四化”联动焕发“三会一课”新活力" href="/dj//zygx/zxxzl/2017/0313/396b0221-e0cb-4b52-9970-f9d09b476bbb.shtml" target="_blank">
+    					江西瑞金：“四化”联动焕发“三会一课”新...
+          		 	</a></li>
+          		 	<li><a title="陈云谈共产党员的标准" href="http://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=502579992&idx=4&sn=3775e0fb912ca5de83600b3c24f4e01e#rd" target="_blank">
+    					陈云谈共产党员的标准
+          		 	</a></li>
+          		 	<li><a title="李琪：制度治党的组合创新" href="http://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=401717753&idx=4&sn=c916f1bf9ca71bde5a61e30bf4aca350#rd" target="_blank">
+    					李琪：制度治党的组合创新
+          		 	</a></li>
+          		 	<li><a title="［重温］中共的政治规矩是什么" href="http://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=401671213&idx=4&sn=90eda981746ed9435d4a89fb9356913f#rd" target="_blank">
+    					［重温］中共的政治规矩是什么
+          		 	</a></li>
+          		 	<li><a title="组织部门如何做好干部谈话工作？" href="http://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=401591799&idx=4&sn=adb661ca0310c45be6ef512c83b8b6ea#rd" target="_blank">
+    					组织部门如何做好干部谈话工作？
+          		 	</a></li>
+          		 	<li><a title="民主生活会是怎么来的？老一辈革命家又是如何“批评与自我批评”的" href="http://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=401578735&idx=4&sn=71aae03494e352a3f7716400288b4daa#rd" target="_blank">
+    					民主生活会是怎么来的？老一辈革命家又是如...
+          		 	</a></li>
+          		 	<li><a title="一张图让你了解如何开好专题民主生活会" href="/dj//zygx/zxxzl/2015/1214/fb38c452-b91e-4d6f-867c-e04825569803.shtml" target="_blank">
+    					一张图让你了解如何开好专题民主生活会
+          		 	</a></li>
+            </ul>
+          		<div><a target="_blank" href="http://dj.shxc.gov.cn//dj///zygx/zxxzl/" title="更多" class="pull-right" style="margin-top:5px;">更多&gt;&gt;</a></div>
+          </div>
+          <div class="tab-pane" id="wjhb"><!--文件汇编-->
+            <ul class="gxzy clearfix">
+          		 	<li><a title="宣传系统直属单位青年团干开展 “上海抗战遗址定向寻访”活动" href="/dj//zygx/wjhb/2015/0922/5ce6c9ab-b29a-439c-bf3d-2e1e7763a13f.shtml" target="_blank">
+    					宣传系统直属单位青年团干开展 “上海抗战...
+          		 	</a></li>
+          		 	<li><a title="凝心聚力，画出最大同心圆" href="/dj//zygx/wjhb/2015/0922/6cb9a72d-a718-446a-bcd0-863aec609347.shtml" target="_blank">
+    					凝心聚力，画出最大同心圆
+          		 	</a></li>
+          		 	<li><a title="宣传系统“文明与文化同行”志愿服务行动中期交流会暨文明单位创建工作推进会召开" href="/dj//zygx/wjhb/2015/0922/817974f1-bdef-4a6e-9ca0-56f95058d2e0.shtml" target="_blank">
+    					宣传系统“文明与文化同行”志愿服务行动中...
+          		 	</a></li>
+          		 	<li><a title="宣传系统学习贯彻中央和市委统战工作会议精神专题学习会召开" href="/dj//zygx/wjhb/2015/0828/00fcb804-c0e5-4611-8b1c-40c4d8487396.shtml" target="_blank">
+    					宣传系统学习贯彻中央和市委统战工作会议精...
+          		 	</a></li>
+          		 	<li><a title="市委宣传部举办文艺单位党组织书记培训班" href="/dj//zygx/wjhb/2015/0810/9e2ebd82-d002-4a25-82c1-eab30400e9d4.shtml" target="_blank">
+    					市委宣传部举办文艺单位党组织书记培训班
+          		 	</a></li>
+          		 	<li><a title="宣传系统基层党建半年度工作会议召开" href="/dj//zygx/wjhb/2015/0804/337c1b55-057f-47b2-897b-d1ef0fbda662.shtml" target="_blank">
+    					宣传系统基层党建半年度工作会议召开
+          		 	</a></li>
+          		 	<li><a title="上海宣传系统青年志愿者联盟正式成立" href="/dj//zygx/wjhb/2015/0629/9499a397-5013-4c79-a9ed-ddebaefbc02b.shtml" target="_blank">
+    					上海宣传系统青年志愿者联盟正式成立
+          		 	</a></li>
+            </ul>
+          		<div><a target="_blank" href="http://dj.shxc.gov.cn//dj///zygx/wjhb/" title="更多" class="pull-right" style="margin-top:5px;">更多&gt;&gt;</a></div>
+          </div>
+          <div class="tab-pane" id="sjts"><!--实践探索-->
+            <ul class="gxzy clearfix">
+          		 	<li><a title="抓好五个环节   打造班长工程" href="/dj//zygx/sjts/2012/0424/b2a0d118-b8b0-4f2a-91e2-e8934def59ca.shtml" target="_blank">
+    					抓好五个环节   打造班长工程
+          		 	</a></li>
+          		 	<li><a title="抓好提醒教育  增强干部廉洁自律意识" href="/dj//zygx/sjts/2012/0424/ab2c1355-b690-4ad9-9ffe-3949617544e2.shtml" target="_blank">
+    					抓好提醒教育  增强干部廉洁自律意识
+          		 	</a></li>
+          		 	<li><a title="落实两个“覆盖” 创新社团党建" href="/dj//zygx/sjts/2012/0424/e8830676-b79b-4472-89e7-18c66582ed7f.shtml" target="_blank">
+    					落实两个“覆盖” 创新社团党建
+          		 	</a></li>
+          		 	<li><a title="构建学习型党组织  为图情事业插上飞翔的翅膀" href="/dj//zygx/sjts/2012/0424/43f96632-196c-4066-a6fc-367f5a2a8cb3.shtml" target="_blank">
+    					构建学习型党组织 为图情事业插上飞翔的翅...
+          		 	</a></li>
+          		 	<li><a title="结对帮扶倾全力 无疆大爱纂新志" href="/dj//zygx/sjts/2012/0424/bececad0-a5c2-4b2d-b68c-b973b43f9743.shtml" target="_blank">
+    					结对帮扶倾全力 无疆大爱纂新志
+          		 	</a></li>
+          		 	<li><a title="开展对标承诺活动 发挥党员示范作用" href="/dj//zygx/sjts/2012/0424/e51de2cb-3192-423f-9729-b52cd560fde3.shtml" target="_blank">
+    					开展对标承诺活动 发挥党员示范作用
+          		 	</a></li>
+          		 	<li><a title="开展学习型党组织建设  提高文化执法工作水平" href="/dj//zygx/sjts/2012/0424/16106608-91ab-4939-b25e-6fd20f89347e.shtml" target="_blank">
+    					开展学习型党组织建设 提高文化执法工作水...
+          		 	</a></li>
+            </ul>
+          		<div><a target="_blank" href="http://dj.shxc.gov.cn//dj///zygx/sjts/" title="更多" class="pull-right" style="margin-top:5px;">更多&gt;&gt;</a></div>
+          </div>
+          <div class="tab-pane" id="tszs"><!--他山之石-->
+            <ul class="gxzy clearfix">
+          		 	<li><a title="浦东新区探索建立长效机制 不断提升城区文明指数" href="/dj//zygx/tszs/2012/0828/86df6a2f-9360-44fb-abcd-9fe6b5983d8a.shtml" target="_blank">
+    					浦东新区探索建立长效机制 不断提升城区文...
+          		 	</a></li>
+          		 	<li><a title="上海杨浦：走进基层、服务群众  践行“一线工作法”" href="/dj//zygx/tszs/2012/0824/937ab072-39c3-4510-a92d-54c09727386a.shtml" target="_blank">
+    					上海杨浦：走进基层、服务群众 践行“一线...
+          		 	</a></li>
+          		 	<li><a title="日永金属公司党支部“八步法”促企业健康发展" href="/dj//zygx/tszs/2012/0822/ee2df275-f71c-4ce0-971e-2690950a533b.shtml" target="_blank">
+    					日永金属公司党支部“八步法”促企业健康发...
+          		 	</a></li>
+          		 	<li><a title="“五常五心”让基础公司驻牢创先争优的深基础" href="/dj//zygx/tszs/2012/0822/cc5975cf-42b4-4c0a-850d-541fcff293fb.shtml" target="_blank">
+    					“五常五心”让基础公司驻牢创先争优的深基...
+          		 	</a></li>
+          		 	<li><a title="80后党支部书记与党委书记对话" href="/dj//zygx/tszs/2012/0822/400d6699-8138-4e3e-b14e-c3d2cef97807.shtml" target="_blank">
+    					80后党支部书记与党委书记对话
+          		 	</a></li>
+          		 	<li><a title="岗位创先进 事业争优秀——走进两个“播种”理论的先进基层党组织" href="/dj//zygx/tszs/2012/0813/6b708959-5d5a-479a-9adc-9cba66099367.shtml" target="_blank">
+    					岗位创先进 事业争优秀——走进两个“播种...
+          		 	</a></li>
+          		 	<li><a title="用文化力量提升组工干部精气神" href="/dj//zygx/tszs/2012/0809/683e75da-42bd-4ebd-a5d3-9c7d4b71c951.shtml" target="_blank">
+    					用文化力量提升组工干部精气神
+          		 	</a></li>
+            </ul>
+          		<div><a target="_blank" href="http://dj.shxc.gov.cn//dj///zygx/tszs/" title="更多" class="pull-right" style="margin-top:5px;">更多&gt;&gt;</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="box-study">
+        <ul id="tabs" class="nav nav-tabs study-right-tab">
+       	  <li class="active"><a data-toggle="tab" href="#xxdt">学习动态</a></li>
+          <li><a data-toggle="tab" href="#dyxx">党员学习</a></li>
+          <li><a data-toggle="tab" href="#hstj">好书推荐</a></li>  
+          
+<!--          <a id="hstj-more" style="line-height:37px;" class="pull-right" href="" target="_blank">更多&gt;&gt;</a> -->     
+                 
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane" id="hstj"><!--好书推荐-->           
+            <!--loop-->
+            
+            <!--
+            <ul>
+            
+            	<li style="margin:5px 0;"><a href="/dj//zygx/xhstj/2014/0516/20f7c549-a438-40f4-88ec-03fe60550d7b.shtml" target="_blank" title="《毛泽东年谱(1949-1976)》" style="color:#000000;">《毛泽东年谱(1949-1976)》</a></li>
+            
+            
+            	<li style="margin:5px 0;"><a href="/dj//zygx/xhstj/2014/0514/987771e0-4e0b-4b84-8735-bd7fab06d00f.shtml" target="_blank" title="《社会主义五百年》（全三册）" style="color:#000000;">《社会主义五百年》（全三册）</a></li>
+            
+            
+            	<li style="margin:5px 0;"><a href="/dj//zygx/xhstj/2014/0514/abdddb54-2965-4406-8236-579bff785fb0.shtml" target="_blank" title="市新闻出版局、团市委“五四”荐书榜单" style="color:#000000;">市新闻出版局、团市委“五四”荐书榜单</a></li>
+            
+            
+            	<li style="margin:5px 0;"><a href="/dj//zygx/xhstj/2014/0514/b2bd11c0-762b-416e-aa7c-f12790cfa677.shtml" target="_blank" title="上海人民出版社总编辑王为松的书单：书之重，评之轻" style="color:#000000;">上海人民出版社总编辑王为松的书单：书之重，评之轻</a></li>
+            
+            
+            	<li style="margin:5px 0;"><a href="/dj//zygx/xhstj/2014/0514/5f5276e8-d7d8-4fe4-998b-a4ca533579ee.shtml" target="_blank" title="真正的旅行读物--身体到不了的远方，让灵魂先抵达" style="color:#000000;">真正的旅行读物--身体到不了的远方，让灵魂先抵达</a></li>
+            
+            
+            	<li style="margin:5px 0;"><a href="/dj//zygx/xhstj/2014/0514/d5c9334b-5f26-443f-b261-cd84139903ab.shtml" target="_blank" title="许倬云说历史：中西文明的对照" style="color:#000000;">许倬云说历史：中西文明的对照</a></li>
+            
+            
+            	<li style="margin:5px 0;"><a href="/dj//zygx/xhstj/2014/0514/77e8cd88-0f65-484d-a628-a8afaba2c332.shtml" target="_blank" title="现场：凤凰记者看见的真实中国" style="color:#000000;">现场：凤凰记者看见的真实中国</a></li>
+            
+            
+            	<li style="margin:5px 0;"><a href="/dj//zygx/xhstj/2013/0829/433bf53c-b806-4281-be3b-fc88bee1cc0e.shtml" target="_blank" title="新民主主义革命时期重要论述" style="color:#000000;">新民主主义革命时期重要论述</a></li>
+            
+            </ul>
+            -->
+            
+             <script type="text/javascript">
+				$(function() {
+					$.post("http://dj.shxc.gov.cn/CMS/book/list_search.action",
+							{
+								orderField : "updateTime"
+							},
+					function(data,status){
+						$("#hstj").find("ul").empty();
+		
+						$(data.bookListQuery).each(function(i){
+							var bookList = this;
+							var dom = "<li><a href='http://dj.shxc.gov.cn/dj/dsj?id="+bookList.id+"' target='_blank'>"+ bookList.title+"</a></li>";
+							$("#hstj").find("ul").append(dom);
+							if(i>5){
+								return false;
+							}
+						});
+						
+					},
+					"jsonp");
+				});
+			</script>
+			
+            	<ul class="gxzy">
+            	</ul>
+            	<div><a id="hstj-more" target="_blank" href="#" title="更多" class="pull-right" style="margin-top:5px;">更多&gt;&gt;</a></div>
+          </div>
+          <div class="tab-pane" id="dyxx">
+            <ul>
+            	
+            </ul>
+          </div>
+          <div class="tab-pane active" id="xxdt">
+          	<ul>
+          	
+          	</ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rol-r ad">
+      <div class="well well-small"><i class="icon-th"></i> 主题实践活动<small class="pull-right"><a href="http://dj.shxc.gov.cn//dj///gdzt">更多&gt;</a></small></div>
+      <!--专题图片-->
+      <div class="mosaic-block circle"> <a href="http://dj.shxc.gov.cn//dj///qybzdh/qybz2014/" target="_blank" class="mosaic-overlay">&nbsp;</a>
+        <div class="mosaic-backdrop"><img src="http://dj.shxc.gov.cn//dj///v201307/images/item120_001.jpg"/></div>
+      </div>
+      <div class="mosaic-block circle"> <a href="http://dj.shxc.gov.cn//dj//sbhqshqjt2019/" target="_blank" class="mosaic-overlay">&nbsp;</a>
+        <div class="mosaic-backdrop"><img src="http://dj.shxc.gov.cn//dj///v201307/images/square_sbhqjt.jpg"/></div>
+      </div>
+      <div class="mosaic-block circle"> <a href="http://dj.shxc.gov.cn/dj/wybz/2015wybz/" target="_blank" class="mosaic-overlay">&nbsp;</a>
+        <div class="mosaic-backdrop"><img src="http://dj.shxc.gov.cn//dj///v201307/images/square_xjgzz.jpg"/></div>
+      </div>
+      <div class="mosaic-block circle"> <a href="http://dj.shxc.gov.cn//dj//yxzyzfw/" target="_blank" class="mosaic-overlay">&nbsp;</a>
+        <div class="mosaic-backdrop"><img src="http://dj.shxc.gov.cn//dj///v201307/images/square_zyz.jpg"/></div>
+      </div>
+      <!--/专题图片--> 
+    </div>
+  </div>
+  
+  <!--/学习园地--> 
+  
+</div>
+<!--/container 基层动态 横栏--> 
+
+<!--container 人物风采 横栏-->
+<div class="rwfc-outside">
+  <div class="wrap">
+    <div class="line-rwfc">
+      <hr />
+      <span>先进风采<a href="http://dj.shxc.gov.cn//dj///wybz2019/"><small>宣传系统2019年全国、上海市五一劳动奖章(状)、工人先锋号</small></a></span></div>
+    <ul id="scroller-loop">
+		      	<li>  
+		             <a title="全国五一劳动奖章：程蔚蔚" href="/dj//wybz2019/wybz2019jz/2019/0506/43e3fe3a-0229-45c4-a0a6-5b38422e989a.shtml" target="_blank">
+		             	<img width="160" height="120" alt="全国五一劳动奖章：程蔚蔚" src="http://dj.shxc.gov.cn/Source///2019/0506/2019050613595412341.jpg" />
+		              </a>
+	            </li>
+		      	<li>  
+		             <a title="全国工人先锋号：上海东方广播有限公司直通990工作室" href="/dj//wybz2019/wybz2019jz/2019/0506/e9594f30-6417-4a5d-babb-0151f55798ea.shtml" target="_blank">
+		             	<img width="160" height="120" alt="全国工人先锋号：上海东方广播有限公司直通990工作室" src="http://dj.shxc.gov.cn/Source///2019/0506/2019050614020864388.jpg" />
+		              </a>
+	            </li>
+	  
+		      	<li>  
+		             <a title="上海市五一劳动奖章：黄莺" href="/dj//wybz2019/wybz2019gr/2019/0521/3b119337-17c7-4dc1-80cc-c4927147dd20.shtml" target="_blank">
+		             	<img width="160" height="120" alt="上海市五一劳动奖章：黄莺" src="http://dj.shxc.gov.cn/Source///2019/0521/2019052115483077809.jpg" />
+		              </a>
+	            </li>
+		      	<li>  
+		             <a title="上海市五一劳动奖章：郑名川" href="/dj//wybz2019/wybz2019gr/2019/0521/17cea03c-a657-455f-b41c-5aea36c950d9.shtml" target="_blank">
+		             	<img width="160" height="120" alt="上海市五一劳动奖章：郑名川" src="http://dj.shxc.gov.cn/Source///2019/0521/2019052116583968756.jpg" />
+		              </a>
+	            </li>
+		      	<li>  
+		             <a title="上海市五一劳动奖章：金永明" href="/dj//wybz2019/wybz2019gr/2019/0521/68b061dd-fcdf-4f63-84d7-f73cabd89528.shtml" target="_blank">
+		             	<img width="160" height="120" alt="上海市五一劳动奖章：金永明" src="http://dj.shxc.gov.cn/Source///2019/0521/2019052117133463951.jpg" />
+		              </a>
+	            </li>
+		      	<li>  
+		             <a title="上海市五一劳动奖章：黄晋" href="/dj//wybz2019/wybz2019gr/2019/0521/c7dba523-3b9a-4c9c-8ae6-5379a5d5add5.shtml" target="_blank">
+		             	<img width="160" height="120" alt="上海市五一劳动奖章：黄晋" src="http://dj.shxc.gov.cn/Source///2019/0521/2019052116062447972.jpg" />
+		              </a>
+	            </li>
+		      	<li>  
+		             <a title="上海市五一劳动奖章：林斌" href="/dj//wybz2019/wybz2019gr/2019/0521/9dd6cc48-f39a-425c-99fd-2c612db7fc67.shtml" target="_blank">
+		             	<img width="160" height="120" alt="上海市五一劳动奖章：林斌" src="http://dj.shxc.gov.cn/Source///2019/0521/2019052117204469422.jpg" />
+		              </a>
+	            </li>
+		      	<li>  
+		             <a title="上海市五一劳动奖章：张利明" href="/dj//wybz2019/wybz2019gr/2019/0521/597e41f0-dd20-469a-855f-bfb354b0bcec.shtml" target="_blank">
+		             	<img width="160" height="120" alt="上海市五一劳动奖章：张利明" src="http://dj.shxc.gov.cn/Source///2019/0521/2019052116040213617.jpg" />
+		              </a>
+	            </li>
+		      	<li>  
+		             <a title="上海市五一劳动奖章：陈杰" href="/dj//wybz2019/wybz2019gr/2019/0521/e7c34758-2619-4866-a63e-ef0e812434da.shtml" target="_blank">
+		             	<img width="160" height="120" alt="上海市五一劳动奖章：陈杰" src="http://dj.shxc.gov.cn/Source///2019/0521/2019052117160416634.jpg" />
+		              </a>
+	            </li>
+		      	<li>  
+		             <a title="上海市五一劳动奖章：张裕" href="/dj//wybz2019/wybz2019gr/2019/0521/5bdac0eb-a591-4627-8be5-1203f6cdf290.shtml" target="_blank">
+		             	<img width="160" height="120" alt="上海市五一劳动奖章：张裕" src="http://dj.shxc.gov.cn/Source///2019/0521/2019052116274348879.jpg" />
+		              </a>
+	            </li>
+
+		      	<li>  
+		             <a title="上海市五一劳动奖状：上海歌舞团有限公司" href="/dj//wybz2019/wybz2019jt/2019/0521/c88eb2dd-bbf0-49a9-bbd4-031c57878cb6.shtml" target="_blank">
+		             	<img width="160" height="120" alt="上海市五一劳动奖状：上海歌舞团有限公司" src="http://dj.shxc.gov.cn/Source///2019/0521/2019052115502547169.jpg" />
+		              </a>
+	            </li>
+		      	<li>  
+		             <a title="上海市五一劳动奖状：上海东方传媒技术有限公司" href="/dj//wybz2019/wybz2019jt/2019/0521/fe93eb67-8dbc-4817-a63d-95ebfc948494.shtml" target="_blank">
+		             	<img width="160" height="120" alt="上海市五一劳动奖状：上海东方传媒技术有限公司" src="http://dj.shxc.gov.cn/Source///2019/0521/2019052116163675896.jpg" />
+		              </a>
+	            </li>
+
+		      	<li>  
+		             <a title="上海市工人先锋号：中国福利会托儿所保教组" href="/dj//wybz2019/wybz2019xfh/2019/0521/335742d3-9207-4ab4-9bf4-2a0695748ea9.shtml" target="_blank">
+		             	<img width="160" height="120" alt="上海市工人先锋号：中国福利会托儿所保教组" src="http://dj.shxc.gov.cn/Source///2019/0521/2019052115470564118.jpg" />
+		              </a>
+	            </li>
+		      	<li>  
+		             <a title="上海市工人先锋号：上海东方娱乐传媒集团有限公司《我们在行动》项目组" href="/dj//wybz2019/wybz2019xfh/2019/0521/01ba5d0d-9984-453e-9e25-e5df758ede1b.shtml" target="_blank">
+		             	<img width="160" height="120" alt="上海市工人先锋号：上海东方娱乐传媒集团有限公司《我们在行动》项目组" src="http://dj.shxc.gov.cn/Source///2019/0521/2019052116101322022.jpg" />
+		              </a>
+	            </li>
+		      	<li>  
+		             <a title="上海市工人先锋号：看东方(上海)传媒有限公司融媒体中心时政报道组" href="/dj//wybz2019/wybz2019xfh/2019/0521/25766ca5-1165-47e9-80db-9964cfcd0a71.shtml" target="_blank">
+		             	<img width="160" height="120" alt="上海市工人先锋号：看东方(上海)传媒有限公司融媒体中心时政报道组" src="http://dj.shxc.gov.cn/Source///2019/0521/2019052115560667363.jpg" />
+		              </a>
+	            </li>
+		      	<li>  
+		             <a title="上海市工人先锋号：上观编辑中心" href="/dj//wybz2019/wybz2019xfh/2019/0521/1db0be18-02b5-40d6-a01a-31edb19f320c.shtml" target="_blank">
+		             	<img width="160" height="120" alt="上海市工人先锋号：上观编辑中心" src="http://dj.shxc.gov.cn/Source///2019/0521/2019052116230327516.jpg" />
+		              </a>
+	            </li>
+    </ul>
+  </div>
+</div>
+<!--/container 人物风采 横栏--> 
+
+<!--container 支部社区-->
+<div class="branch-title"> 支部社区 </div>
+<div class="branch-outside">
+  <div class="wrap bg-branch clearfix">
+    <div class="branch-box">
+      <div class="branch-box-inner">
+        <h3>支部党员动态</h3>
+        <ul class="nav nav-tabs zbdt_tabs" id="tabs">
+          <li class="active"><a href="#zbdt" data-toggle="tab">支部动态</a></li>
+          <li><a href="#dydt" data-toggle="tab">党员动态</a></li>
+		<a style="line-height:37px;" id="zbdt_more" href="http://dj.shxc.gov.cn/XCBORG/front/"  target="_blank" class="pull-right"><small>更多&gt;&gt;</small></a>
+        </ul>
+        <div class="tab-content">        	
+        	<div class="tab-pane active" id="zbdt"><!--支部动态-->
+	        	<iframe id="dynamicIframe" src="http://dj.shxc.gov.cn/XCBORG/news/newArticle_latestUpdateArticle.action?count=4" width="100%" height="238" frameborder="0" scrolling="no"></iframe>      
+	      	</div>
+            <div class="tab-pane active" id="dydt"><!--党员动态-->
+	          <iframe id="dynamicIframe" src="http://dj.shxc.gov.cn/Home/rss/getUserRssInfoTemp?size=4" width="100%" height="238" frameborder="0" scrolling="no"></iframe>      
+	      	</div>
+        </div>
+      </div>
+    </div>
+    <div class="shadow-left"></div>
+    <div class="branch-box">
+      <div class="branch-box-inner">
+        <h3>支部社区推荐</h3>
+        <ul class="nav nav-tabs mwtj_tabs" id="tabs">
+        	<li class="active"><a href="#mwtj" data-toggle="tab">美文分享</a></li>
+          <li><a href="#rmht" data-toggle="tab">热门话题</a></li>
+          <a style="line-height:37px;" id="mwtj_more" href="http://dj.shxc.gov.cn//dj///layout/mwtjList.shtml?count=20&pageNum=1"  target="_blank" class="pull-right"><small>更多&gt;&gt;</small></a>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane" id="rmht"><!--热门话题-->
+          	<iframe id="hotIframe" src="http://dj.shxc.gov.cn/Home/rss/getUserGroupInfoTemp?size=4" width="100%" height="238" frameborder="0" scrolling="no"></iframe>          
+          </div>
+          <div class="tab-pane active" id="mwtj"><!--美文分享-->
+            <ul class="box-tj">
+              	   <li>  
+	                  <a title="谭俊升：多彩与独秀" href="http://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650066088&idx=5&sn=394f72d9d3d5223b24b26f6d1a315035&chksm=bee7184689909150b377634b73e858ac7ab737a0692c5fe7f0e713eebf21920c1cfe02e18169#rd" target="_blank">
+	    					谭俊升：多彩与独秀
+	    			  </a>
+	               </li>
+              	   <li>  
+	                  <a title="李文祺：科普----我快乐着" href="http://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650066128&idx=5&sn=2bb09cefeb31c342db2cae27d92402c5&chksm=bee7183e89909128ca01c187416afc564797eb82b925c23ff1608338345eedebf1d6c96b7561#rd" target="_blank">
+	    					李文祺：科普----我快乐着
+	    			  </a>
+	               </li>
+              	   <li>  
+	                  <a title="张蔚飞：为霞满天黄昏好，正是老骥奋蹄时" href="http://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650066162&idx=6&sn=a81b032ce160d3c324dc4a9aa37fe9ad&chksm=bee7181c8990910a9449150b7894effd328386927947a355bfe59db5a8cee0a39a66a409ac32#rd" target="_blank">
+	    					张蔚飞：为霞满天黄昏好，正是老骥奋蹄...
+	    			  </a>
+	               </li>
+              	   <li>  
+	                  <a title="张斤夫：我的“上海腔调”" href="http://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650065943&idx=5&sn=6a0208c3f30a4351428639c8908beb83&chksm=bee718f9899091ef8daf520195937ad024265b98d1444b6a84a76e8c9b4908c2f8e8c94e41a8&scene=21#wechat_redirect" target="_blank">
+	    					张斤夫：我的“上海腔调”
+	    			  </a>
+	               </li>
+              	   <li>  
+	                  <a title="丁法章：我这样打造夕阳红" href="http://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650065977&idx=5&sn=9c1fd36cae77f7c3242fe1b8a1a4570f&chksm=bee718d7899091c16e93269756060b86ac3cf6520097034b1e43fa93d1205a30c8fbb39b67cf&scene=21#wechat_redirect" target="_blank">
+	    					丁法章：我这样打造夕阳红
+	    			  </a>
+	               </li>
+              	   <li>  
+	                  <a title="张持坚：留住童真" href="http://mp.weixin.qq.com/s?__biz=MjM5NjU1NDExMw==&mid=2650066003&idx=5&sn=ec7e79623dd53c7f66f6f851dc91f87e&chksm=bee718bd899091ab9875fbd67b4f1605c489360fa82c83c61976d4666cf7241b97cbb7c15a60&scene=21#wechat_redirect" target="_blank">
+	    					张持坚：留住童真
+	    			  </a>
+	               </li>
+            </ul>
+          </div>
+          <div class="tab-pane" id="rmht"><!--热门话题-->
+          	<iframe id="hotIframe" src="http://dj.shxc.gov.cn/Home/rss/getUserGroupInfoTemp?size=4" width="100%" height="238" frameborder="0" scrolling="no"></iframe>          
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="shadow-right"></div>
+    <div class="branch-box">
+      <div class="branch-box-inner">
+        <h3>活跃度排名</h3>
+        <ul class="nav nav-tabs" id="tabs">
+          <li class="active"><a href="#hyzb" data-toggle="tab">活跃支部</a></li>
+          <li><a href="#hygr" data-toggle="tab">活跃党员</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="hyzb"><!--活跃支部-->
+          	<iframe id="activeIframe" src="http://dj.shxc.gov.cn/XCBORG/news/newArticle_staticPointRank.action?numPer=5" width="100%" height="238" frameborder="0" scrolling="no"></iframe>          
+          </div>
+          <div class="tab-pane" id="hygr"><!--活跃个人-->
+          	<iframe id="hotIframe" src="http://dj.shxc.gov.cn/Home/user/useractive?numPer=5" width="100%" height="238" frameborder="0" scrolling="no"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap branch-bottom clearfix">
+  <!--你问我答-->
+    <div class="branch-bottom-faq rol-l">
+      <div class="line-bottom-box">
+        <hr />
+        <span>你问我答<small class="pull-right"><a href="http://dj.shxc.gov.cn//dj///layout/FaqBoardList.shtml" target="_blank" title="更多">更多》</a></small></span></div>
+      <div><img src="http://dj.shxc.gov.cn//dj///v201307/images/icon_faq.gif" alt="提问" class="pull-left"/>
+        <div id="myfaq" class="faq">
+          
+        </div>
+      </div>
+    </div>
+    <!--/你问我答-->
+    <!--相关链接-->
+    <div class="branch-bottom-link rol-r">
+    <div class="line-bottom-box">
+        <hr />
+        <span>相关链接</span></div>
+      <select class="web-option" onchange="if(this.options[this.selectedIndex].value!='$'){window.open(this.options[this.selectedIndex].value,'_blank')}">
+        <option>所属单位网站</option>
+        <option value="http://wgj.sh.gov.cn/" target="_blank">上海市文化广播影视管理局</option>
+        <option value="http://cbj.sh.gov.cn" target="_blank">上海市新闻出版局</option>
+        <option value="http://www.sass.org.cn" target="_blank">上海社会科学院</option>
+        <option value="http://www.smg.sh.cn/" target="_blank">上海广播电视台、上海文化广播影视集团有限公司</option>
+        <option value="http://www.jfdaily.com/" target="_blank">解放日报报业集团</option>
+        <option value="http://www.wxjt.com.cn/" target="_blank">文汇新民联合报业集团</option>
+        <option value="http://www.sjfx.com" target="_blank">上海世纪出版集团</option>
+        <option value="http://www.cwi.org.cn/" target="_blank">中国福利会</option>
+        <option value="http://www.shwenyi.com.cn" target="_blank">上海文学艺术界联合会</option>
+        <option value="http://www.sssa.org.cn" target="_blank">上海市社会科学界联合会</option>
+        <option value="http://www.shzuojia.com" target="_blank">上海作家协会</option>
+        <option value="http://www.sica.sh.cn" target="_blank">上海对外文化交流协会</option>
+        <option value="http://www.library.sh.cn" target="_blank">上海图书馆情报所</option>
+        <option value="http://www.shtong.gov.cn" target="_blank">上海地方志办公室</option>
+        <option value="http://www.sh.xinhuanet.com/" target="_blank">新华社上海分社</option>
+        <option value="http://www.orientpc.com" target="_blank">东方出版中心</option>
+        <option value="http://www.shanghaimuseum.net" target="_blank">上海博物馆</option>
+        <option value="http://www.shwenyi.com" target="_blank">上海文艺出版集团</option>
+        <option value="http://www.cyjng.net" target="_blank">上海陈云纪念馆</option>
+        <option value="http://www.xhmedia.com" target="_blank">上海新华发行集团</option>
+        <option value="http://www.sgt-artscenter.org" target="_blank">上海大剧院艺术中心</option>
+        <option value="http://www.cspgc.com" target="_blank">上海印刷（集团）有限公司</option>
+        <option value="http://www.ewen.cc/shxh/" target="_blank">上海新汇文化娱乐有限公司</option>
+        <option value="http://www.shchineseoperas.org/" target="_blank">上海戏曲艺术中心</option>
+      </select>
+      <select onchange="if(this.options[this.selectedIndex].value!='$'){window.open(this.options[this.selectedIndex].value,'_blank')}" name="select" class="web-option">
+        <option value="http://dj.shxc.gov.cn//dj/" selected="selected">相关网站</option>
+        <option value="http://www.sdx.sh.cn/sdxportal/" target="_blank">中共上海市委党校上海行政学院</option>
+        <option value="http://www.shzfzz.net/" target="_blank">上海政法综治</option>
+        <option value="http://www.ccphistory.org.cn/" target="_blank">上海党史党建</option>
+        <option value="http://trs.jfdaily.com/zbsh_1/index.htm" target="_blank">支部生活</option>
+        <option value="http://www.jfdaily.com/" target="_blank">解放网</option>
+        <option value="http://www.studytimes.com.cn:9999/epaper/index.jsp" target="_blank">学习时报</option>
+        <option value="http://cpc.people.com.cn/" target="_blank">中国共产党新闻</option>
+        <option value="http://www.12371.cn/" target="_blank">共产党员网</option>
+        <option value="http://www.eastday.com/" target="_blank">东方网</option>
+        <option value="http://www.shjgdj.gov.cn/main.html" target="_blank">上海机关党建网</option>
+        <option value="http://www.shanghai.gov.cn/" target="_blank">中国上海</option>
+        <option value="http://www.xinhuanet.com/" target="_blank">新华网</option>
+        <option value="http://www.people.com.cn/" target="_blank">人民网</option>
+        <option value="http://www.gov.cn/" target="_blank">中国政府网</option>
+      </select>
+    </div>
+    <!--/相关链接-->
+  </div>
+</div>
+<!--/container 支部社区--> 
+
+<!--footer-->
+﻿
+<!--   default footer  -->
+ <div class="footer-outside">
+  <div class="wrap footer-inner">
+    <ul id="scroller-link">
+      <li><a href="http://cpc.people.com.cn/" title="中国共产党新闻网" target="_blank"><img src="http://dj.shxc.gov.cn//dj///v201307/images/2012070413152571523.jpg" alt="中国共产党新闻网" /></a></li>
+      <li><a href="http://www.12371.cn/" title="共产党员网" target="_blank"><img src="http://dj.shxc.gov.cn//dj///v201307/images/2012072416561669463.jpg" alt="共产党员网"/></a></li>
+      <li><a href="http://www.shjcdj.cn/djWeb/djweb/web/djweb/home.action#" title="上海基层党建网" target="_blank"><img src="http://dj.shxc.gov.cn//dj///v201307/images/2012070413160077848.jpg" alt="上海基层党建网" /></a></li>
+      <li><a href="http://www.shtzb.org.cn/" title="上海统一战线" target="_blank"><img src="http://dj.shxc.gov.cn//dj///v201307/images/2012070413190568339.jpg" alt="上海统一战线"/></a></li>
+      <li><a href="http://www.wmsh.gov.cn/" title="上海文明网" target="_blank"><img src="http://dj.shxc.gov.cn//dj///v201307/images/2012070413173664095.jpg" alt="上海文明网"/></a></li>
+      <li><a href="http://www.shzgh.org/" title="上海市总工会" target="_blank"><img src="http://dj.shxc.gov.cn//dj///v201307/images/2012070413170083002.jpg" alt="上海市总工会"/></a></li>
+      <li><a href="http://www.shyouth.net" title="上海共青团" target="_blank"><img src="http://dj.shxc.gov.cn//dj///v201307/images/2012070413183795602.jpg" alt="上海共青团"/></a></li>
+    </ul>
+
+<p>
+<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/02/000/0000/60441884/CA020000000604418840000.js' type='text/javascript'%3E%3C/script%3E"));</script>
+</p>
+
+    <p>中共上海市委宣传部基层工作处 版权所有</p>
+   <!-- <p>沪ICP备07023536号</p>-->
+  </div>
+</div>
+
+<div style="display:none;"><a href="http://webscan.360.cn/index/checkwebsite/url/xcb.sh.gov.cn" name="18a6cd2370b728322471bbdba3f859cf" >360网站安全检测平台</a></div>
+
+   
+
+
+<!--/footer--> 
+
+<!-- 微信 -->
+<div id="weixin" style="position:fixed;bottom:20px;right:1%; z-index:9999;background:#fff;width:152px; border:1px solid #E4E4E4; border-top:2px solid #E8E8E8;">
+<div style="font-size:12px;color:#666666;line-height:24px;text-align:center; margin-bottom:8px;background:#F4F4F4;">
+随时随地 互联互动 扫一扫<br>加入我们火红的党旗 微信
+</div>
+<div style="width:152px;margin:0 auto; text-align:center;"><img src="http://dj.shxc.gov.cn//dj///v201307/images/weixin.jpg" width="90" style="margin:0 auto;"></div>
+<div style="text-align:center;"><a href="javascript:void(0);"><img src="http://dj.shxc.gov.cn//dj///v201307/images/close2.png" style="margin:8px auto;"/></a></div>
+</div>
+<!-- 微信 -->
+
+<!-- 漂浮广告
+<DIV id="adFloatImg" style="Z-INDEX: 9999; LEFT: 2px; WIDTH: 120px; POSITION: absolute; TOP: 43px; HEIGHT: 120px;
+ visibility: visible;"><a style="display:block position:relative;" href="http://dj.shxc.gov.cn//dj///yxzyzfw/"  onmouseover="pause_resume();" onmouseout="pause_resume();"><img src="http://dj.shxc.gov.cn//dj///v201307/images/adfloat_zyfuyxjx.jpg" width="120" height="120" border="0" /><span onclick="this.parentNode.style.display='none'; return false;" style="position:absolute; top:0; right:2px; color:#fff; cursor:pointer;font-size:12px;">[关闭]</span></a></DIV>
+<script src="http://dj.shxc.gov.cn//dj///v201307/js/float-min.js"></script> -->
+<!-- 漂浮广告 end -->
+
+<!-- javascript ================================================== -->
+<script type="text/javascript" src="http://dj.shxc.gov.cn//dj///v201307/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+jQuery(function(){
+	$('.dropdown-toggle').dropdown();//下拉项
+	$('.carousel').carousel();//slide show
+	$("#myCarousel").hover(
+		function(){
+			$(".carousel-control.left,.carousel-control.right").show();
+		},
+		function(){
+			$(".carousel-control.left,.carousel-control.right").hide();
+		}
+	);
+	$('#tabs a:first').tab('show');//标签页	
+	$('.study-right-tab a').hover(function(){
+		$(this).tab('show');
+		var _href=$(this).attr("href");
+		if(_href=='#hstj'){
+			$('#hstj-more').attr("href","http://dj.shxc.gov.cn//dj///zygx/xhstj");
+			$("#hstj-more").show();
+		}else if(_href=='#dyxx'){
+			$('#hstj-more').attr("href","http://dj.shxc.gov.cn/XCBORG/front/study_backStudyList.action");
+			$("#hstj-more").show();
+		}else if(_href=='#xxdt'){
+			$('#hstj-more').attr("href","http://dj.shxc.gov.cn//dj///layout/studyList.shtml?count=20&pageNum=1");
+			$("#hstj-more").show();
+		}else if(_href=='#xxzl'){
+			$('#hstj-more').attr("href","http://dj.shxc.gov.cn//dj///zygx/zxxzl/");
+			$("#hstj-more").show();
+		}else if(_href=='#wjhb'){
+			$('#hstj-more').attr("href","http://dj.shxc.gov.cn//dj///zygx/wjhb/");
+			$("#hstj-more").show();
+		}else if(_href=='#sjts'){
+			$('#hstj-more').attr("href","http://dj.shxc.gov.cn//dj///zygx/sjts/");
+			$("#hstj-more").show();
+		}else if(_href=='#tszs'){
+			$('#hstj-more').attr("href","http://dj.shxc.gov.cn//dj///zygx/tszs/");
+			$("#hstj-more").show();
+		}else{
+			$("#hstj-more").hide();
+		}
+	});
+	$('.mwtj_tabs a').click(function(){
+		$(this).tab('show');
+		var _href=$(this).attr("href");
+		if(_href=='#mwtj'){
+			$('#mwtj_more').attr("href","http://dj.shxc.gov.cn//dj///layout/mwtjList.shtml?count=20&pageNum=1");
+			$("#mwtj_more").show();
+		}else{
+			$("#mwtj_more").hide();
+		}
+		
+	});
+	$('.zbdt_tabs a').click(function(){
+		$(this).tab('show');
+		var _href=$(this).attr("href");
+		if(_href=='#zbdt'){
+			$('#zbdt_more').attr("href","http://dj.shxc.gov.cn/XCBORG/front/");
+			$("#zbdt_more").show();
+		}else{
+			$("#zbdt_more").hide();
+		}
+		
+	});
+	$("#scroller").simplyScroll();//无缝滚动
+	$("#scroller-loop").simplyScroll({
+		auto: false,
+		manualMode: 'loop',
+		speed: 10
+		});//无缝滚动
+	$("#scroller-link").simplyScroll({
+		auto: false,
+		manualMode: 'loop',
+		speed: 10
+		});//友情链接滚动
+	$(".alert").alert();//提示
+	$('.topbar-inside').tooltip({
+      selector: "a[data-toggle=tooltip]"
+    });//ToolTip
+	$('.circle').mosaic({
+		opacity : 0.5 //Opacity for overlay (0-1)
+		}); 
+	$('.bar2').mosaic({
+		animation	:	'slide'	,	//fade or slide
+		opacity : 0.8 //Opacity for overlay (0-1)
+		});
+});
+
+//导航条固定在顶端
+jQuery(document).ready(function() {
+    var f1 = $(window).scrollTop(),f2 = $(".navbar-outside").offset().top;
+    $(window).scroll(function() {
+        var q = $(window).scrollTop();
+        if (q > f2) {
+            $(".navbar-outside").addClass("fixed");
+			$(".logo-s").css('display','block'); 
+			$(".login-group").css('display','block');
+        } else {
+            $(".navbar-outside").removeClass("fixed");
+			$(".logo-s").css('display','none'); 
+			$(".login-group").css('display','none');
+        }
+    });
+});
+
+</script> 
+<!-- 微信 -->
+<script src="http://dj.shxc.gov.cn//dj///v201307/js/wx.js" type="text/javascript"></script>
+<!-- 微信 -->
+<script src="http://dj.shxc.gov.cn//dj///v201307/js/jquery.simplyscroll.2.0.5/jquery.simplyscroll.min.js">//滚动插件</script>
+<link href="http://dj.shxc.gov.cn//dj///v201307/js/jquery.simplyscroll.2.0.5/jquery.simplyscroll.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="http://dj.shxc.gov.cn//dj///v201307/js/mosaic.1.0.1.min.js">//专题图片效果</script>
+<!-- nivo-slider -->
+<script type="text/javascript" src="http://dj.shxc.gov.cn//dj////v201307/js/nivo-slider3.2/jquery.nivo.slider.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	/*$('#slider').nivoSlider({
+		effect: 'random',
+        controlNav: false, 
+        controlNavThumbs: false
+	});*/
+});
+</script>
+<!-- nivo-slider END -->
+</body>
+</html>

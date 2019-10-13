@@ -1,0 +1,257 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>东方直通车</title>
+    <link href="/ztc/ThroughTrain/images/img/main.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        body, td, th {
+            font-family: SimSun;
+        }
+    </style>
+    <script type="text/javascript" src="/ztc/ThroughTrain/images/img/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="/ztc/ThroughTrain/Scripts/config.js"></script>
+    <script type="text/javascript" src="/ztc/ThroughTrain/Scripts/tools.js"></script>
+    <script type="text/javascript">
+
+        if (/Android|iPhone/i.test(navigator.userAgent)) {
+            window.location.href = window.location.href.toLowerCase().replace("index", "Mobile");
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <!--顶部-->
+    <div class="topbox">
+        <div class="top"><a href="http://sh.eastday.com/" class="logo"><img src="/ztc/ThroughTrain/images/img/title_sh.jpg" height="40" /></a> <div class="link">|<a href="http://www.eastday.com/" target="_blank">东方网首页</a>|<a href="http://news.eastday.com/" target="_blank">新闻中心</a>|<a href="http://sh.eastday.com/" target="_blank">上海新闻</a>|</div></div>
+    </div>
+    <!--banner-->
+    <div class="banner">
+    <div class="navbox">
+        <div class="nav">
+            <a href="http://www.eastday.com/" target="_blank">东方网首页</a>
+            <a href="http://sh.eastday.com/" target="_blank">上海新闻</a>
+            <a href="http://shzw.eastday.com/" target="_blank">上海政务</a>
+            <a href="http://tousu.eastday.com/ztc/ThroughTrain/index/list" target="_blank">曝光台</a>
+            <a href="http://tousu.eastday.com/ztc/ThroughTrain/index/add" target="_blank">我要投诉</a>
+            <a href="http://sh.eastday.com/2015/summer2016/index.html" target="_blank">热点聚焦</a>
+            <a href="http://people.eastday.com/" target="_blank">回到首页</a>
+        </div>
+    </div>
+</div>
+
+    <!--content-->
+    <div class="content clearfix">
+
+        <div class="page_l">
+            <div class="breadnav"><b>·当前位置</b> >> 投诉</div>
+            <div class="pagetext">
+                <div class="title"><p class="bt">撤销电子违章困难重重</p><p class="info"><span></span>	<span>投诉人： 彭敏</span>	<span>日期：2019-04-26 16:23:45</span></p></div>
+                <div class="zw">
+                        <script type="text/javascript">
+                            document.write("4月18日在处理交通纠纷时，交警叫我靠边停车。结果电子警察拍了违法停车，罚款200。我在申请撤销过程中困难重重，浦东交警支队那里排了2个小时，说我不能证明那个出警记录是交通纠纷。三林交警大队明确表示，他们处理私了纠纷就是没有任何回执单。而我不记得处理交警警号。今天跑了半天，打了十个电话，结果还是无法撤销。".replace(/`br/g, "<br/>").replace(/`and/g, "`"));
+                        </script>
+
+                    <br />
+                    <div class="pic">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pl_box">
+                <ul>
+                </ul>
+                <div class="pagenumbox"><span>共0条评论</span><span>共0页</span><span>第1页</span><span><a style="display:none" href=''>[上一页]</a><a style="display:none" href='view?id=14528&amp;page=2'>[下一页]</a><span>到第</span><input type="text" name="page" id="page" /><span>页</span><a href="javascript:;" onclick="GotoPage(1);" class="ok"></a></span></div>
+            </div>
+            <div class="replybox">
+                <p class="pic"><span>评论：</span><img src="/ztc/ThroughTrain/images/img/emj.jpg" /></p>
+                <p class="radio"><input type="radio" id="sc1" name="sc" /><label>满意<span id="span1">0</span></label><input type="radio" id="sc2" name="sc" /><label>一般<span id="span2">0</span></label><input type="radio" id="sc3" name="sc" /><label>不满意<span id="span3">5</span></label></p>
+                <p class="info">[您的评价将决定不满意率和满意率排行]</p>
+                <p class="submit"><label>验证码：</label><input type="text" id="checkCode" maxlength="4" /><span><img id="imgCheckCode" width="82" height="32" onclick="this.src = getCheckCode();" style="cursor:pointer" /></span><input type="submit" onclick="DegreeSatisfaction();" value="提  交" /></p>
+            </div>
+
+            <div class="msgbox">
+                <p class="title">留言回复</p>
+                <form id="form1" action="AddReplies" method="post" enctype="multipart/form-data">
+                    <p class="f1"><label>姓&nbsp;&nbsp;名：</label><input type="text" maxlength="25" name="name" id="name" /><b>*</b> <span>（带*为必填项）</span></p>
+                    <p class="f2"><label>回复留言：</label><textarea name="message" id="message"></textarea><b>*</b></p>
+                    <div id="divFiles">
+                        <p class="f3"><label>图片上传：</label><input type="file" name="files" /></p>
+                        <p class="f4"><label>图片说明：</label><input type="text" name="filesinfo" maxlength="1000" /></p>
+                    </div>
+                    <p class="f5"><input type="button" value="再加一张" onclick="addFileInput();" />(作品类型为图片JPG格式，大小不超过2M，最多上传10张。)</p>
+                    <p class="f6">
+                        <input type="button" id="btnSubmit" onclick="return sumbitForm();" value="确  定" />
+                        <label id="lblSubmit" style="display: none;">提交中...</label><input type="reset" value="重  置" />
+                    </p>
+                    <input type="hidden" name="tID" id="tID" value="14528" />
+                </form>
+            </div>
+
+        </div>
+        <div class="page_r">
+
+<div class="hot24">
+    <div class="title" ><span>24小时最热投诉</span><div ></div></div>
+    <ul>
+            </ul>
+</div>
+<div class="hot24">
+    <div class="title" ><span>一周不满意率排行</span><div ></div></div>
+    <ul>
+            <li><span class="s">1.</span><a href="http://tousu.eastday.com/ztc/ThroughTrain/index/view?id=15199" target="_blank">龙临路露天篮球场噪音扰民</a></li>            <li><span class="s">2.</span><a href="http://tousu.eastday.com/ztc/ThroughTrain/index/view?id=15200" target="_blank">静安区江宁路道路严重破损</a></li>            <li><span class="s">3.</span><a href="http://tousu.eastday.com/ztc/ThroughTrain/index/view?id=15201" target="_blank">朱家角一小区垃圾堆积</a></li>            </ul>
+</div>
+        </div>
+
+    </div>
+
+    <!--foot-->
+    <div id="footer" class="grey12b lh30 fc">
+        <a href="http://news.eastday.com/images/ditu/bq.htm" class="grey12b" target="_blank">版权声明</a> | <a href="http://www.eastday.com/images/2007/img/07aboutus/index1.htm" class="grey12b" target="_blank">网站简介</a> | <a href="http://news.eastday.com/images/ditu/wzls.htm" class="grey12b" target="_blank">网站律师</a> | <a href="http://news.eastday.com/images/ditu/" class="grey12b" target="_blank">网站导航</a> | <a href="http://i1.eastday.com/images/ad2011/ggkl2011/index.html" class="grey12b" target="_blank">广告刊例</a> | <a href="http://news.eastday.com/images/ditu/lx.htm" class="grey12b" target="_blank">联系方式</a> | <a href="http://www.eastday.com/sitemap/index.html" class="grey12b" target="_blank">Site Map</a><br />
+        东方网(eastday.com)版权所有，未经授权禁止复制或建立镜像
+    </div>
+    </div>
+</body>
+</html>
+<script language="javascript">
+    String.prototype.IsNumber = function () {
+        var regexp = /[0-9]$/;
+        return regexp.test(this);
+    }
+    function IsBlank(inputStr) {
+        for (var i = 0; i < inputStr.length; i++) {
+            var onechar = inputStr.charAt(i);
+            if (onechar != " ") {
+                return false;
+            }
+        }
+        return true;
+    }
+    function GotoPage(totalPage) {
+        var id = $("#tID").val();
+        var page = document.getElementById("page").value;
+        if (page.IsNumber() == false) {
+            alert("页数必须是正整数")
+            return;
+        }
+        if (page > totalPage) {
+            alert("不能超过最大页数");
+            return;
+        }
+        window.location.href = "view?id=" + id + "&page=" + page;
+    }
+    function DegreeSatisfaction() {
+        var degree;
+        if (document.getElementById("sc1").checked == true) {
+            degree = "1";
+        } else if (document.getElementById("sc2").checked == true) {
+            degree = "2";
+        } else if (document.getElementById("sc3").checked == true) {
+            degree = "3";
+        } else {
+            alert("请选择满意度");
+            return;
+        }
+        var code = $("#checkCode").val();
+        if (IsBlank(code) == true) {
+            alert("请输入验证码");
+            return;
+        }
+        var id = $("#tID").val();
+        if (id == 0) {
+            alert("提交失败");
+            return;
+        }
+        var url = "DegreeSatisfaction?degree=" + degree + "&id=" + id + "&code=" + code;
+        $.ajax({
+            type: 'get',
+            url: url,
+            async: false,
+            cache: false,
+            success: function (data) {
+                $("#imgCheckCode").attr("src", getCheckCode());
+                if (data == -1) {
+                    alert("验证码错误，请重试");
+                } else {
+                    var tmp = parseInt($("#span" + degree).html()) + 1;
+                    $("#span" + degree).html(tmp);
+                    alert("感谢您的参与");
+                }
+            },
+            error: function (xmlHttpRequest, textStatus, errorThrown) {
+
+            }
+        });
+    }
+
+    var fileID = -1;
+    var fileLength = 0;
+    function addFileInput() {
+        if (fileLength >= 10) {
+            alert("上传文件数不能大于10个");
+            return;
+        }
+        fileID = fileID + 1;
+        fileLength = fileLength + 1;
+        $("#divFiles").append(
+            "<p id=\"pFile" + fileID + "\" class=\"f3\"><label>图片上传：</label><input type=\"file\" name=\"files\"  id=\"files" + fileID + "\"/><input type=\"button\" class=\"delete\" value=\"删除本图\" onclick=\"delFileInput(" + fileID + ");\" /></p>" +
+            "<p id=\"pFileInfo" + fileID + "\" class=\"f4\"><label>图片说明：</label><input type=\"text\" name=\"filesinfo\" id=\"filesinfo" + fileID + "\" maxlength=\"1000\" /></p>"
+            );
+    }
+
+    function delFileInput(n) {
+        $("#pFile" + n).remove();
+        $("#pFileInfo" + n).remove();
+        fileLength = fileLength - 1;
+    }
+    function checkForm() {
+        var txtRealName = document.getElementById("name");
+        var txtContent = document.getElementById("message");
+        if (IsBlank(txtRealName.value) == true) {
+            alert("请填入姓名");
+            txtRealName.focus();
+            return false;
+        }
+        if (IsBlank(txtContent.value) == true) {
+            alert("请填入内容");
+            txtContent.focus();
+            return false;
+        }
+
+    }
+    function sumbitForm() {
+        if (checkForm() == false) {
+            return false;
+        }
+        document.getElementById("btnSubmit").style.display = "none";
+        document.getElementById("lblSubmit").style.display = "inline";
+        var infos = document.getElementsByName("filesinfo");
+        var fs = document.getElementsByName("files");
+        var re = new RegExp(",", "g");
+        for (n = 0; n < infos.length; n++) {
+            if (fs[n].value != "") {
+                if (IsBlank(infos[n].value) == true) {
+                    alert("请填写图片说明");
+                    infos[n].focus();
+                    document.getElementById("btnSubmit").style.display = "inline";
+                    document.getElementById("lblSubmit").style.display = "none";
+                    return false;
+                } else {
+                    infos[n].value = infos[n].value.replace(re, "，");
+                }
+            }
+        }
+        document.getElementById("form1").submit();
+        return true;
+    }
+
+    window.onload = function () {
+        $("#imgCheckCode").attr("src", getCheckCode());
+    }
+
+</script>

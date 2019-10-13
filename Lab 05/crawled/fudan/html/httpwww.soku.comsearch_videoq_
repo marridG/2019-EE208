@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html>
+<head data-detect="yk_web_anti_flow_limit_captcha_20171111">
+    <meta charset="utf-8" >
+    <meta http-equiv="x-ua-compatible" content="IE=Edge,chrome=1">
+    <title>亲，访问受限了</title>
+    <style type="text/css">
+    body,html{width: 100%;height: 100%;}
+    body{background-color: #f6f6f6;}
+    body,h1,p{margin:0;padding:0;font:normal normal 12px/1.5 Arial, Helvetica, sans-serif;}
+    .wrap{min-height: 100%;}
+    h1,.content,.copyright{width:990px;margin:0 auto;padding:25px 0;}
+    .copyright{text-align:center;}
+    input.submit{background-color: #F27214;color:#fff;width:90px;height:28px;margin-top:5px;border:0;display:inline-block;overflow: hidden;vertical-align: middle;line-height:26px;color:#fff;cursor:pointer;zoom: 1;}
+    input.checkcode{background:#fff;border:#ccc 1px solid;width:100px;height:22px;line-height:22px;font-size:12px;vertical-align:middle;}
+    h1 img{border:none;}
+    .content{padding-bottom: 50px;}
+    .msg{width:100%;height:503px;margin:0 auto;}
+    .youxianchupin{margin-bottom:0;padding-top: 50px;font-size:26px;line-height:180%;color:#333;}
+    .nanadoushiren{margin-top:30px;}
+    .gududezhanwei{height:120px;}
+    .b .gududezhanwei{height:70px;}
+    .a,.c{background-position:0 -350px;}
+    .d{background-position:0 -700px;}
+    .d .youxianchupin{font-size:16px;font-weight:bold;color:#f60;}
+    .e{background-position:0 -0px;}
+    .e .gududezhanwei{height:50px;}
+    .f{background-position:0 -1400px;}
+    .g{background-position:0 -1750px;}
+    .g .gududezhanwei{height:80px;}
+    .youxianchupin{margin-left:507px;color: #424242;font-family: tahoma,arial,Microsoft Yahei,\5b8b\4f53;}
+    .youxianchupin p{margin-top: 20px;font-size: 20px;opacity: .6;}
+    .deny p a{color: #C41220;text-decoration: none;}
+    .deny .gududezhanwei{height:80px;}
+    .deny{background: #fff url(http://gtms01.alicdn.com/tps/i1/T1AtsXFmBXXXargRT_-280-270.png) no-repeat left top; }
+    .needcode{background: #fff url(http://gtms01.alicdn.com/tps/i1/T1gbECFk0XXXaZZ8H_-280-255.png) no-repeat left top;}
+    .needcode p a{text-decoration: none;font-weight: normal;}
+    .footer{width:960px;margin: 0 auto;}
+    .needcode{margin-top: 40px;background-image: url(https://img.alicdn.com/tfs/TB1253QaLxNTKJjy0FjXXX6yVXa-427-503.jpg);background-color: #f6f6f6;}
+    .foot{height: 50px;margin-top: -50px;text-align: center;opacity: .4;color: #373637;font-size: 12px;}
+    #nocaptcha {margin-left:507px; margin-top: 65px; margin-right: 80px;height: 76px;}
+    #nocaptcha #nc_1_wrapper,.nc-container.tb-login #nc_1_wrapper {width:100%;height: 100%;background-color: #e1d9ff;border-radius: 38px;}
+    #nocaptcha .nc_scale{top:6px;height: 66px;margin-left: 6px;margin-right: 6px;background-color: transparent;border-radius: 33px;}
+    #nocaptcha .nc_scale .btn_slide {
+        width: 80px;
+        height: 64px;
+        border-radius: 32px;
+        color: #8c80fe;
+        font-size: 25px;
+        font-weight: 400;
+        border-color: transparent;
+        border-bottom-color: rgba(0,0,0,.11);
+    }
+    #nocaptcha .nc_scale span{
+      line-height: 64px;
+    }
+    #nocaptcha .nc_scale .nc_ok, #nocaptcha .nc_scale .nc_bg{
+        left: 40px;
+        background-color: #8c80fe;
+        border-radius: 33px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    #nocaptcha .nc_scale .nc_bg:after{
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: -40px;
+        top: 0;
+        height: 100%;
+        width: 41px;
+        background-color: #8c80fe;
+        border-top-left-radius: 33px;
+        border-bottom-left-radius: 33px;
+    }
+
+    #nocaptcha .nc_scale .imgCaptcha, #nocaptcha .nc_scale .clickCaptcha,
+    #nocaptcha .imgCaptcha div{background: none;}
+    #nocaptcha .imgCaptcha, #nocaptcha .clickCaptcha {
+        margin-left: 33px;
+        margin-right: 33px;
+        border-color: none;
+    }
+    #nocaptcha .imgCaptcha,
+    #nocaptcha .nc_scale .clickCaptcha{
+        top: 70px;
+        border-color: transparent;
+    }
+
+    #nocaptcha .imgCaptcha .btn_refresh{
+        background-color: transparent;
+        color: #8c80fe;
+    }
+    #nocaptcha .imgCaptcha .imgCaptcha_btn{
+        background: #8c80fe;
+    }
+    #nocaptcha .errloading{
+        width: auto;
+        margin-right: 40px;
+        height: 76px;
+        padding: 0 15px;
+        border-color: #8c80fe;
+        color: #8c80fe;
+        border-radius: 38px;
+        line-height: 76px;
+        text-align: center;
+    }
+    #nocaptcha .errloading .icon_warn{
+        color: #8c80fe;
+        display: inline-block;
+        float: none;
+        vertical-align: middle;
+        margin-right: 12px;
+        margin-top: -1px;
+    }
+    </style>
+</head>
+
+<body>
+<div class="wrap">
+  <div class="content">
+      <h1>
+        <a href="http://www.youku.com/">
+          <img width="120" src="https://gw.alicdn.com/tfs/TB1ToibfMoQMeJjy1XaXXcSsFXa-186-36.png">
+        </a>
+      </h1>
+      <div class="msg e needcode">
+          <p class="gududezhanwei"></p>
+          <div class="youxianchupin">
+              休息会呗，坐下来喝口水，<br/>我们马上回来。
+              <p class="tips">为保证您的正常访问请进行验证</p>
+          </div>
+  <div id="_umfp" style="display:inline;width:1px;height:1px;overflow:hidden">
+       <div class="reason">
+              <head>
+</head>
+<script>
+var language = document.__language__ || (navigator.language && navigator.language.indexOf("en") > -1 ? "en" : "");
+    var loadScript = function(src, callback) {
+        var script = document.createElement('script'),
+        head = document.getElementsByTagName('head')[0];
+        script.type = 'text/javascript';
+        script.charset = 'UTF-8';
+        script.src = src;
+        if (script.addEventListener) {
+            script.addEventListener('load',
+            function() {
+                callback();
+            },
+            false);
+        } else if (script.attachEvent) {
+            script.attachEvent('onreadystatechange',
+            function() {
+                var target = window.event.srcElement;
+                if (target.readyState == 'loaded') {
+                    callback();
+                }
+            });
+        }
+        head.appendChild(script);
+    };
+    var scene = "";
+    if (navigator.userAgent.match(/.*(iPhone|iPad|Android|ios|SymbianOS|Windows Phone).*/i)) {
+        scene = "register_h5";
+        loadScript('//g.alicdn.com/sd/nch5/index.js', ncinit);
+    } else {
+        scene = "register";
+        loadScript('//g.alicdn.com/sd/ncpc/nc.js', ncinitpc);
+    }
+    function ncinitpc() {
+        UA_Opt.Flag = 880846;
+        document.getElementById("nocaptcha").style.cssText = "margin-top:-10px";
+        noCaptcha({
+            renderTo: "#nocaptcha",
+            appkey: "X82Y__a04cc56eefe66faca535732cee09d12e",
+            token: "0bc5089a53cc6eae42a17609faab327e",
+            scene: scene,
+            is_Opt: 1,
+            language:language,
+            callback: function(data) {
+                document.getElementById("nc-session-id").value = data.csessionid;
+                document.getElementById("nc-sig").value = data.sig;
+                document.getElementById("nc-verify-form").submit();
+            }
+        });
+    }
+    function ncinit() {
+        UA_Opt.Flag = 880846;
+        NoCaptcha.init({
+            renderTo: "#nocaptcha",
+            appkey: "X82Y__a04cc56eefe66faca535732cee09d12e",
+            token: "0bc5089a53cc6eae42a17609faab327e",
+            scene: scene,
+            language:language,
+            is_Opt: 1,
+            callback: function(data) {
+                document.getElementById("nc-session-id").value = data.csessionid;
+                document.getElementById("nc-sig").value = data.sig;
+                document.getElementById("nc-verify-form").submit();
+            }
+        });
+        NoCaptcha.setEnabled(true);
+    }
+</script>
+<center>
+    <div id="nocaptcha" style="margin-top:20px">
+    </div>
+</center>
+<form id="nc-verify-form" action="//so.youku.com:443/search_video/q_/_____tmd_____/verify/"
+method="GET">
+    <input name="nc_token" value="0bc5089a53cc6eae42a17609faab327e" type="hidden">
+    <input name="nc_session_id" id="nc-session-id" value="" type="hidden">
+    <input name="nc_sig" id="nc-sig" value="" type="hidden">
+    <input name="x5secdata" id="x5secdata" type="hidden" value="5e0c8e1365474455070961b803bd560607b52cabf5960afff39b64ce58073f7824f43967c3ce336ff15394651dad85631dd9ca4f6f27dba61c3df0d9fb4404384910591683fd4795ce3d9f7b6618de9a664921b13f3f61d8d78cafe1a452235da7a1645638c7cc3977570eccd9acafa4e426f0cc752888eca80aa40c7cccead5151b80741e83f64c4b6c6a150f3eaeaec02d6e9bd3f474b9e39b974478638a5cb8b55c35a5ddf8baf2de79ec9e26ae77120d394f4ab97d905bea40926aef545aa9898f142115c6b435a36c4478bb7a02d467b7e906dba4c46752aa2dd276af4584093adfbe8febd5ae1164a2cda7516b9e87aaf3d4a3ffcf6642a3eb8dd2a887d9751a33b0f55659462fca835c33890ef9b86c27692bf843654469bc1ede3d7dee49c77adf2ef2438bcbfbe3ec89b3401332599ae40dd9c50c8d967080e2a5c5b8e874139afea36e1e8f7eacb6c00a51f511624c1a3214b33b15acb27fd5de2c39edfdb391d42d725ea6c9c1e45d3901d991cce6e866a96279218d7ba526ee4729a28ecd4a06cf1d4d9cdf959758f5db3123cecd72a2c0fbe78d44e02dc747d48aba9cf368d4c0082367bc59005f9f39bba1c0af7c48ef6250edcc7044e16fd5eeb45f66509b2b8c18f8caa723bd4430">
+    <input name="x5step" id="x5step" type="hidden" value="100">
+    <input name="nc_app_key" id="nc_app_key" type="hidden" value="X82Y__a04cc56eefe66faca535732cee09d12e">
+</form>
+</script>
+<script>
+    if (window.location.host == "world.taobao.com") {
+        document.getElementById("nc-verify-form").action = document.getElementById("nc-verify-form").action.replace("buy.taobao.com", "world.taobao.com/buy");
+    }
+    if (window.location.host == "tw.taobao.com") {
+        document.getElementById("nc-verify-form").action = document.getElementById("nc-verify-form").action.replace("buy.taobao.com", "tw.taobao.com/buy");
+    }
+</script>
+              <br /> 
+       </div>
+          <br/>
+      </div>
+  </div>
+</div>
+<div class="foot">0bc5089a53cc6eae42a17609faab327e<br>
+    2018 优酷 版权所有
+</div>
+      <script>
+        var referrer = document.referrer;
+        if (referrer && referrer.indexOf("__tmd__") === -1) {
+            //如果包含 referrer ，且 referrer 非 霸下验证页面
+            localStorage.x5referer = document.referrer;
+        } else {
+            localStorage.x5referer = window.location.href;
+        }
+    </script>
+</body>
+</html>

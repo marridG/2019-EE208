@@ -1,0 +1,262 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+        <link rel="stylesheet" type="text/css" href="//static.youku.com/ddshow/92ef32cb/list/css/download-sms-min-v2.css"/>
+    <meta name="spm-id" content="a2h55" />
+<meta charset="UTF-8"/>
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, post-check=0, pre-check=0">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="title" content="下载中心-手机客户端下载" />
+<meta name="keywords" content="来疯，星梦，直播，视频直播, 视频聊天, 视频社交,美女播客, 美女视频, 美女直播，真人直播秀，秀场，视频生活秀，生活秀，在线视频交友，粉丝互动，一起来疯，来疯唱，来疯跳，来疯玩，来疯说" />
+<meta name="description" content="来疯是中国互联网超火的视频直播平台，提供丰富精彩的视频真人生活秀。支持数万人同时在线视频直播、聊天、交友、速度流畅不卡，美女帅哥播客任你看。快来加入，一起来疯吧！" />
+
+<link rel="Short Icon" href="//static.youku.com/ddshow/img/laifeng/icon/favicon.ico"/>
+<link rel="apple-touch-icon" href="//static.youku.com/ddshow/img/app.png">
+<title>下载中心-手机客户端下载</title>
+
+
+        <script type="text/javascript">
+        window.IMS = {
+            clientId:'',
+            token:'',
+            count : '0'
+        }
+    </script>
+    
+<script type="text/javascript">
+    window.INFOTOKEN = {
+        tk: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjE5NjYyODY3MTAsImV4cCI6MTU3MDk1MjY0Mzg3MCwiaWF0IjoxNTcwOTUyNjQzODYwfQ.PMhK1SB42NJzcUASr_BtNUih5i3fyeJ_fcbTehIVrRE'
+    }
+    window.INFO = {
+    	isLogin: false
+    }
+    window.PASSPORT_PID = '20160918PLF000695';
+    window.PASSPORT_CONF_ID = 'c148053f334caa2c';
+    window.PASSPORT_GLOBAL_CONF_ID = '9bf9b1ecc9e7598a';
+    window.RONGCLOUDKEY = 'pkfcgjstfguy8';
+    //ie的websocket
+    window.WEB_SOCKET_SWF_LOCATION = '//static.youku.com/ddshow/92ef32cb/flash/WebSocketMainInsecure.swf?_t='+new Date().getTime();
+	    window.CARD_USERID = '';
+</script>
+    <script type="text/javascript" id="seajsnode" src="//static.youku.com/ddshow/92ef32cb/seajs/lib-sms-min.js"></script>
+
+</head>
+<body data-spm="9014363" class="page-index"><script>
+with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","userid=&aplus&sidx=0&ckx=|",id="beacon-aplus",src="//g.alicdn.com/alilog/mlog/aplus_o.js")
+</script>
+        <div class="S-header-empty"></div>
+<div id="lf_header_nav" class="S-header">
+    <div class="S-header-box">
+        <div class="lf-container">
+            <h1 class="logo">
+                <a href="//www.laifeng.com">
+                    <img alt="来疯" src="https://gw.alicdn.com/tfs/TB1vIx0X3aH3KVjSZFjXXcFWpXa-203-76.png">
+                </a>
+            </h1>
+            <div class="nav">
+                <ul class="clearfix">
+                                        <li ><a href="//www.laifeng.com">首页</a><span class="line"></span></li>
+                    <li ><a href="//www.laifeng.com/category/center">分类<span class="arrow"></span></a><span class="line"></span>
+                        <div class="category-panel">
+                            <div class="panel-jiao-yellow"></div>
+                            <div class="panel-jiao-white"></div>
+                            <div class="category-list clearfix" data-has="0">
+                            </div>
+                            <a class="category-more" href="//www.laifeng.com/category/center">更多</a>
+                        </div>
+                    </li>
+                    <li ><a href="//www.laifeng.com/showtime">人气</a><span class="line"></span></li>
+                    <li ><a href="//www.laifeng.com/top">排行榜</a><span class="line line3"></span></li>
+                    <li ><a href="//www.laifeng.com/mall/list/0">商城</a><span class="line"></span></li>
+                    <li class="mobile-page"><a href="http://bbs.laifeng.com" target="_blank">论坛</a><span class="new-icon"></span><span class="line"></span></li>
+                    <li  class="current" ><a href="//www.laifeng.com/app/download">APP</a><span class="line"></span></li>
+                    <li ><a href="//zone.laifeng.com/performance">演出</a><span class="line"></span></li>
+                </ul>
+                <script type="text/javascript">
+                    seajs.use(['JQ','UTIL'], function(J,U){
+                        var categoryList = J('.category-list');
+                        var hasData = parseInt(categoryList.data('has'));
+                        if (!hasData) {
+                            U.get('//v.laifeng.com/category/list', {}, function(resp){
+                                if (resp.code == 0) {
+                                  var data = (resp.data && resp.data.data) || [];
+                                  var html = '';
+                                  for (var i=0, len=data.length; i<len; ++i){
+                                      var categoryId = data[i].categoryId;
+                                      var categoryName = data[i].categoryName;
+                                      html += '<span><a href="//www.laifeng.com/category/center?categoryId=' + categoryId + '">' + categoryName + '</a></span>';
+                                  }
+                                  categoryList.empty();
+                                  categoryList.append(html);
+                                  categoryList.data('has', 1);
+                               }
+                            });
+                        }
+                    });
+                </script>
+            </div>
+
+            <div class="search">
+                <form class="top_search" method="post" action="//www.laifeng.com/search">
+                    <input type="text" autocomplete="off" value="" placeholder="输入频道号/昵称搜索" class="txt txt-focus" name="word" id="LF-header-search"/>
+                    <button type="submit" class="btn"></button>
+                </form>
+                <script type="text/javascript">
+                    window.seajs && seajs.use(['JQ','UTIL'],function(J,U){
+                        U.placeholder('#LF-header-search','txt-focus');
+                    });
+                </script>
+            </div>
+
+            <div class="user">
+                                                             <div class="no-login">
+                            <a href="javascript:void(0);" id="LF_login">登录</a><cite>|</cite><a href="javascript:void(0);" id="LF_reg">注册</a>
+                        </div>
+                        <script type="text/javascript">
+                            seajs.use(['LOGIN'], function(L){
+                                L.bindDialogLogin('#LF_login');
+                                L.bindDialogReg('#LF_reg');
+                            });
+                        </script>
+                                                </div>
+        </div>
+    </div>
+</div>
+
+    <div class="container page-con clearfix">
+        <div class="main">
+            <div class="mobile-des"></div>
+            <div class="main-con">
+                <div class="mobile-img">
+                    <img src="//static.youku.com/ddshow/img/list/mobileNew.png" alt="下载">
+                    <div class="img-container">
+                        <img class="slide cur" src="//static.youku.com/ddshow/img/list/download/slideNew-v1.png">
+                        <img class="slide" src="//static.youku.com/ddshow/img/list/download/slideNew-v2.png">
+                        <img class="slide" src="//static.youku.com/ddshow/img/list/download/slideNew-v3.png">
+                        <img class="slide" src="//static.youku.com/ddshow/img/list/download/slideNew-v4.png">
+                    </div>
+                    <div class="imgDesc">
+                        <img class="detail cur" src="//static.youku.com/ddshow/img/list/download/mobile-des-v1.png">
+                        <img class="detail" src="//static.youku.com/ddshow/img/list/download/mobile-des-v2.png">
+                        <img class="detail" src="//static.youku.com/ddshow/img/list/download/mobile-des-v3.png">
+                        <img class="detail" src="//static.youku.com/ddshow/img/list/download/mobile-des-v4.png">
+
+                    </div>
+                </div>
+
+                <div class="content-area">
+                    <img class="introduce" src="//static.youku.com/ddshow/img/list/introduceNew.png">
+                    <div class="img-list">
+                        <a class="qrcode" href="javascript:;"></a>
+                    </div>
+                    <div class="contact-us clearfix">
+                        <span>关注我们 : </span>
+                        <a class="weibo" href="//weibo.com/u/3809664717">
+                            <div class=" tip"></div>
+                        </a>
+                        <a class="wechat" href="javascript:;" >
+                            <div class="tip"></div>
+                        </a>
+                        <a class="qqzone" href="//user.qzone.qq.com/2119307836" >
+                            <div class="tip"></div>
+                        </a>
+                    </div>
+                    <div class="kefu clearfix">
+                        <span>在线客服 : </span>
+                            <span  class="qq">
+                            </span>
+                        <span class="qq-number"> 2119307836 </span>
+                    </div>
+                    <div class="youku-ido clearfix">
+                        <a class="link" href="//static.youku.com/ddshow/img/client/LaiFengPluginSetup.6.0.0.1.exe" target="_blank" title="优酷&来疯直播助手">
+                            <img src="//img.alicdn.com/tfs/TB1qxiraBCw3KVjSZFuXXcAOpXa-160-49.png">
+                        </a>
+                        <a class="link" href="http://static.youku.com/ddshow/img/client/LaifengSetup.4.1.0.2.exe" target="_blank" title="来疯直播伴侣">
+                            <img src="//img.alicdn.com/tfs/TB1Al5raBKw3KVjSZFOXXarDVXa-165-50.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="S-footer">
+    <div class="lf-container footer-inner">
+        <p>
+            &copy; 2013 - 2019 杭州来疯科技有限公司.版权所有<span class="line">|</span>
+            <a href="//www.laifeng.com/security" target="_blank" style="color:#F00;">安全责任书</a><span class="line">|</span>
+            <a href="http://jb.ccm.gov.cn/" target="_blank" style="color:#F00;">12318举报</a>
+        </p>
+
+        <p>
+            <a href="//www.laifeng.com/user/agreement" target="_blank">用户协议</a>
+            <span class="line">|</span>
+            <a href="https://h5.m.youku.com/app/flsm.html" target="_blank">隐私政策</a>
+            <span class="line">|</span>
+            <a href="//www.laifeng.com/user/historicalagreement" target="_blank">历史版本用户协议</a>
+            <span class="line">|</span>
+            商务合作邮箱：laifengbd@list.alibaba-inc.com
+            <span class="line">|</span>
+            客服电话：4008989555
+        </p>
+
+        <p style="color:#EEE;font-size:12px;margin-top:4px;">
+            <a href="http://beian.miit.gov.cn/" target="_blank" style="color:#EEE;">网站备案/许可证号：浙ICP备15042270号</a><span class="line">|</span>
+            <a href="http://www.beian.miit.gov.cn/" target="_blank" style="color:#EEE;">  增值电信业务经营许可证：浙B2-20160033 </a><span class="line">|</span>
+            <a href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/toDetail/3667F90C6C50BE05E0530140A8C05FCC" target="_blank" style="color:#EEE;">  浙网文（2016）0172-072号 </a>
+        </p>
+    </div>
+</div>
+<div class="f-iku-img" style="position:absolute; top:-999px;">
+    <div class="dds-dialog-boxer">
+        <div class="dds-dialog-cl dds-dialog-cr"></div>
+        <div class="dds-dialog-tc">
+            <span class="dds-dialog-closed"></span>
+        </div>
+        <div class="dds-dialog-confirm">
+            <span class="dds-dialog-sure"></span>
+            <span class="dds-dialog-cancel"></span>
+        </div>
+    </div>
+    <div class="login-iku-boxer">
+        <div class="login-iku-cl login-iku-cr"></div>
+        <div class="dds-dialog-tc">
+            <span class="login-ikuclosed"></span>
+        </div>
+    </div>
+</div>
+
+<div class="S-beian">
+    <div style="width:420px;margin:0 auto; padding:20px 0;">
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010602009190" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+            <img src="//static.youku.com/ddshow/img/laifeng/site-cert.png" style="float:left;"/>
+            <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">浙公网安备 33010602009190号</p>
+        </a>
+        <a target="_blank" href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/toDetail/3667F90C6C50BE05E0530140A8C05FCC" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;margin-left: 60px;">
+            <img src="//img.alicdn.com/tfs/TB1sr46LwDqK1RjSZSyXXaxEVXa-428-424.jpg" style="float:left; height: 20px; width: 20px;"/>
+            <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">网络文化经营单位</p>
+        </a>
+    </div>
+</div>
+
+<script src="//static.youku.com/ddshow/img/static/js/tj.js"></script>
+<script type="text/javascript">
+    (function(){
+   		var _tj = new Image();
+   		_tj.src="//www.laifeng.com/tj?_d="+new Date().getTime();
+	})();
+    
+</script>    
+    <script type="text/javascript">
+            seajs.use('list/js/download.js');
+    </script>
+</body>
+</html>

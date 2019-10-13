@@ -1,0 +1,789 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="kiben" content="no-cache">
+<title>复旦大学招生网</title>
+<script>
+	function dochange(value){
+		var url=value;
+		if(url!=""){
+			window.open(url);
+		}
+	}
+	
+	function changeCaptcha(obj) {
+		//获取当前的时间作为参数，无具体意义
+		var timenow = new Date().getTime();
+		//每次请求需要一个不同的参数，否则可能会返回同样的验证码
+		//这和浏览器的缓存机制有关系，也可以把页面设置为不缓存，这样就不用这个参数了。
+		obj.src="/security/captcha.action?d="+timenow;
+	}
+	
+	function checkBT(value,view,param,form){
+         if(value == ""){
+            alert(view);
+            form[param].focus();
+            return false;
+     	 }
+         return true;
+   }
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="/static/css/main.css"/>
+<link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon" />
+<link rel="bookmark" href="/static/images/favicon.ico" type="image/x-icon" />
+</head>
+<script type="text/javascript" src="/static/js/jquery-1.11.3.min.js"></script>
+<script> 
+	$(function(){		
+		$('.title-list li').mouseover(function(){
+			var liindex = $('.title-list li').index(this);
+			$(this).addClass('on').siblings().removeClass('on');		
+			var liWidth = $('.title-list li').width();
+			$('.title-list p').stop(false,true).animate({'left' : liindex * liWidth + 'px'},300);
+		});
+	});
+</script>
+<body>
+	<div class="contain">
+    	<!--头部-->
+        <div class="bannercontain">
+        		<img src="/cms/file-utils!downFileByLink.action?isShowImage=1&fileId=201" style="min-width:1024px;height:436px;"/>
+        </div>
+         
+        <div class="headercontain">
+        	<div class="headertop">
+            	<a href="/index.action" class="headertop_logo">
+                	<img src="/static/images/logo_02.png"/>
+                </a>
+                <div class="headertop_right">
+                	<!--搜索-->
+                    <div class="headertop_search">
+                        <div class="headertop_search_s">
+                            <form  onsubmit="return search(this);">
+                            <input value="VO72-QKWF-M1AV-MSQD-7X60-SKSO-L2OW-OZWP" type="hidden" name="OWASP_CSRFTOKEN"/>
+                                <script type="text/javascript">
+                                    $(function(){
+                                    	$("body").click(function(event){
+										//console.log(!$(event.target).is("#span"));
+											if(!$(event.target).is("#span")){
+												$(".new").hide();	
+											}
+										});
+                                    
+                                        $(".set").click(function(){
+                                            var ul=$(".new");
+                                            if(ul.css("display")=="none"){
+                                                ul.slideDown();
+                                            }else{
+                                                ul.slideUp();
+                                            }
+                                        });
+        
+                                        $(".new li").click(function(){
+                                            var li=$(this).text();
+                                            $(".set").html(li);
+                                            $(".new").hide();
+                                        });
+                                    })
+                                     function search(form){
+							            var title = form.title.value;
+							            if(title == ""){
+							                alert("请输入要搜索的内容！");
+							            }else{
+							            	var span = $("#span").html();
+							            	if('标题搜索'==span){
+								            	form.action="/index!search.action";
+								            	form.target="_blank";
+								                form.submit();
+							            	}else{ 
+							            		window.open('http://cn.bing.com/search?q='+title+'+site%3Awww.ao.fudan.edu.cn&qs=n&form=QBRE&pq='+title+'site%3Awww.ao.fudan.edu.cn');
+							            	}
+							            }
+							            return false;
+							        }
+                                </script>
+                                <div class="searchchose">
+                                    <span id="span" class="set">标题搜索</span>
+                                    <ul class="new" style="z-index:9999">
+                                        <li>标题搜索</li>
+                                        <li>全文搜索</li>       
+                                    </ul>
+                               </div>
+                               <div class="headertop_search_input">
+                                    <input type="text" class="searchinput" value="" name="title" id="title"/>
+                                    <button class="searchbtn" type="submit">
+                                        <img src="/static/images/search_img_06.png"/>
+                                    </button>
+                               </div>
+                           </form>
+                       </div>
+                    </div>
+                    <!--搜索结束-->
+                    <!--导航-->
+                    <div class="nav">
+                      <div class="title cf">    
+                        <ul class="title-list fr cf ">
+					    		<li class="on">
+						    		<a 		href="/index!index.html?sideNav=281"
+ >
+						    		首页
+						    		</a>
+					    		</li>
+					    		<li >
+						    		<a 		href="/index!list.html?sideNav=282"
+ >
+						    		报考指南
+						    		</a>
+					    		</li>
+					    		<li >
+						    		<a 		href="http://www.fudan.edu.cn/2016/channels/view/61/" target="_blank"
+ >
+						    		院系介绍
+						    		</a>
+					    		</li>
+					    		<li >
+						    		<a 		href="http://www.jwc.fudan.edu.cn" target="_blank"
+ >
+						    		人才培养
+						    		</a>
+					    		</li>
+					    		<li >
+						    		<a 		href="http://www.stuaff.fudan.edu.cn/xszzgl/list.htm" target="_blank"
+ >
+						    		奖助学金
+						    		</a>
+					    		</li>
+					    		<li >
+						    		<a 		href="http://www.fao.fudan.edu.cn" target="_blank"
+ >
+						    		国际交流
+						    		</a>
+					    		</li>
+					    		<li >
+						    		<a 		href="http://www.freshman.fudan.edu.cn" target="_blank"
+ >
+						    		迎新系统
+						    		</a>
+					    		</li>
+                          <p><b></b></p>
+                        </ul>
+                      </div>  
+					</div>
+                    <!--导航结束-->
+                </div>
+            </div>
+        </div>
+        <!--头部结束-->
+<style>
+.movieVoid{width:314px;height:180px;}
+</style>
+<!--首页信息-->
+<div class="midcontian">
+    <div class="midcontian01">
+        <div class="enrollcontian" style="font-weight:normal;font-family:微软雅黑">
+            <!--左边内容-->
+            <div class="enrollcontian_left">
+                <!--招生动态、政策-->
+                <div class="enrollment">
+                    <div class="enrollmentinfor">
+                        <div class="enrollmentinfor_title">
+                            <h3 class="titletitle">招生动态</h3>
+                            <a href="/index!list.html?sideNav=301&topNav=282" target="_blank" class="titlemore"><img src="/static/images/more_17.png" />more</a>
+                        </div>
+                        <div class="enrollmentinfor_contain">
+                            <ul>
+		                                <li>
+		                                    <div class="enroll">
+		                                        <a href="http://news.fudan.edu.cn/2019/0902/48381.html" class="enrollnews" target="_blank">
+			                                        <font style="">
+															复旦大学迎来2019级本科新生
+			                                        </font>
+		                                        </a>
+		                                        <span class="enrolltime">19-09-02</span>
+		                                    </div>
+		                                </li>
+		                                <li>
+		                                    <div class="enroll">
+		                                        <a href="https://mp.weixin.qq.com/s?__biz=MjM5MzQwNzYyMA==&mid=2463218520&idx=1&sn=d46de5e43942acb84a442ebd5f4308f2&chksm=b1b26cb386c5e5a521b88a3856147d8f4fa973da21f324aeacd3e9d5a5731431c34aeda69ec4&mpshare=1&" class="enrollnews" target="_blank">
+			                                        <font style="">
+															我校2019年本科招录工作圆满结束
+			                                        </font>
+		                                        </a>
+		                                        <span class="enrolltime">19-08-01</span>
+		                                    </div>
+		                                </li>
+		                                <li>
+		                                    <div class="enroll">
+		                                        <a href="/index!list.html?sideNav=301&ccid=10292&topNav=282" class="enrollnews" target="_blank">
+			                                        <font style="">
+															复旦大学2019年各省市录取分数线
+			                                        </font>
+		                                        </a>
+		                                        <span class="enrolltime">19-07-07</span>
+		                                    </div>
+		                                </li>
+		                                <li>
+		                                    <div class="enroll">
+		                                        <a href="/index!list.html?sideNav=301&ccid=10291&topNav=282" class="enrollnews" target="_blank">
+			                                        <font style="">
+															2019年上海综合评价选拔结果公布
+			                                        </font>
+		                                        </a>
+		                                        <span class="enrolltime">19-06-30</span>
+		                                    </div>
+		                                </li>
+		                                <li>
+		                                    <div class="enroll">
+		                                        <a href="/index!list.html?sideNav=301&ccid=10290&topNav=282" class="enrollnews" target="_blank">
+			                                        <font style="">
+															2019年特殊类型招生选拔结果公示
+			                                        </font>
+		                                        </a>
+		                                        <span class="enrolltime">19-06-30</span>
+		                                    </div>
+		                                </li>
+		                                <li>
+		                                    <div class="enroll">
+		                                        <a href="/index!list.html?sideNav=301&ccid=10289&topNav=282" class="enrollnews" target="_blank">
+			                                        <font style="">
+															2019上海综合评价面试准考证发布
+			                                        </font>
+		                                        </a>
+		                                        <span class="enrolltime">19-06-27</span>
+		                                    </div>
+		                                </li>
+		                                <li>
+		                                    <div class="enroll">
+		                                        <a href="/index!list.html?sideNav=301&ccid=10287&topNav=282" class="enrollnews" target="_blank">
+			                                        <font style="">
+															2019年浙江综合评价选拔结果公布
+			                                        </font>
+		                                        </a>
+		                                        <span class="enrolltime">19-06-24</span>
+		                                    </div>
+		                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="enrollmentinfor01">
+                        <div class="enrollmentinfor_title">
+                            <h3 class="titletitle">招生政策</h3>
+                            <a href="/index!list.html?sideNav=302&topNav=282" target="_blank" class="titlemore"><img src="/static/images/more_17.png" />more</a>
+                        </div>
+                        <div class="enrollmentinfor_contain01">
+                            <ul>
+		                                <li>
+		                                    <div class="enroll">
+		                                        <a href="/index!list.html?sideNav=302&ccid=10288&topNav=282" class="enrollnews01" target="_blank">
+		                                    	    <font style=" ">
+															复旦大学2019年分专业分省计划
+			                                        </font>
+		                                        </a>
+		                                        <span class="enrolltime">19-06-24</span>
+		                                    </div>
+		                                </li>
+		                                <li>
+		                                    <div class="enroll">
+		                                        <a href="/index!list.html?sideNav=302&ccid=10242&topNav=282" class="enrollnews01" target="_blank">
+		                                    	    <font style=" ">
+															复旦大学2019年招生专业（类）目录
+			                                        </font>
+		                                        </a>
+		                                        <span class="enrolltime">19-06-16</span>
+		                                    </div>
+		                                </li>
+		                                <li>
+		                                    <div class="enroll">
+		                                        <a href="/index!list.html?sideNav=302&ccid=10241&topNav=282" class="enrollnews01" target="_blank">
+		                                    	    <font style=" ">
+															复旦大学2019年招生章程
+			                                        </font>
+		                                        </a>
+		                                        <span class="enrolltime">19-06-10</span>
+		                                    </div>
+		                                </li>
+		                                <li>
+		                                    <div class="enroll">
+		                                        <a href="/index!list.html?sideNav=302&ccid=10201&topNav=282" class="enrollnews01" target="_blank">
+		                                    	    <font style=" ">
+															复旦大学2019年澳门“四校联考”招生简章
+			                                        </font>
+		                                        </a>
+		                                        <span class="enrolltime">19-05-13</span>
+		                                    </div>
+		                                </li>
+		                                <li>
+		                                    <div class="enroll">
+		                                        <a href="/index!list.html?sideNav=302&ccid=10185&topNav=282" class="enrollnews01" target="_blank">
+		                                    	    <font style=" ">
+															复旦大学2019年插班生招生简章
+			                                        </font>
+		                                        </a>
+		                                        <span class="enrolltime">19-05-05</span>
+		                                    </div>
+		                                </li>
+		                                <li>
+		                                    <div class="enroll">
+		                                        <a href="/index!list.html?sideNav=302&ccid=10183&topNav=282" class="enrollnews01" target="_blank">
+		                                    	    <font style=" ">
+															复旦大学2019年上海市综合评价招生简章
+			                                        </font>
+		                                        </a>
+		                                        <span class="enrolltime">19-04-17</span>
+		                                    </div>
+		                                </li>
+		                                <li>
+		                                    <div class="enroll">
+		                                        <a href="/index!list.html?sideNav=302&ccid=10182&topNav=282" class="enrollnews01" target="_blank">
+		                                    	    <font style=" ">
+															复旦大学2019年浙江省综合评价招生简章
+			                                        </font>
+		                                        </a>
+		                                        <span class="enrolltime">19-04-17</span>
+		                                    </div>
+		                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--招生动态、政策结束-->
+                <!--今日复旦-->
+                <div class="todayfudan">
+                    <div class="todayfudandetail">
+                        <div class="todayfudandetail_title">
+                            <h3 class="todaytitle">博学笃志</h3>
+                            <a href="/index!list.html?sideNav=303&topNav=521" target="_blank" class="todaymore"><img src="/static/images/more_17.png" />more</a>
+                        </div>
+                        <div class="todayfudandetail_contain">
+                            <div class="todayfudandetail_contain_left">
+                                <ul>
+		                                    <li>
+		                                        <a  href="https://mp.weixin.qq.com/s/rRbk3L42JBwgGmmqpFTt0g" class="todaynews" target="_blank">
+		                                       	    <font style=" ">
+															《我的复旦故事》 | 韩志周：鹏北海 凤朝阳 旦复旦兮日月长
+			                                        </font>
+		                                        </a>
+		                                    </li>
+		                                    <li>
+		                                        <a  href="https://mp.weixin.qq.com/s/E7UDpZyz-eaI-Q1jyH4CyQ" class="todaynews" target="_blank">
+		                                       	    <font style=" ">
+															《我的复旦故事》 | 朱彦珺：追求人生的无限可能
+			                                        </font>
+		                                        </a>
+		                                    </li>
+		                                    <li>
+		                                        <a  href="https://mp.weixin.qq.com/s/gt7A-82Pgv7s76Yimgblyg" class="todaynews" target="_blank">
+		                                       	    <font style=" ">
+															《我的复旦故事》 | 邹嘉然：这是一篇从进博会前方现场发来的文章
+			                                        </font>
+		                                        </a>
+		                                    </li>
+		                                    <li>
+		                                        <a  href="https://mp.weixin.qq.com/s/7GTbnDtnXok7dnvnGS75LA" class="todaynews" target="_blank">
+		                                       	    <font style=" ">
+															《我的复旦故事 》| 李泓：此心安处，便是吾乡
+			                                        </font>
+		                                        </a>
+		                                    </li>
+		                                    <li>
+		                                        <a  href="https://mp.weixin.qq.com/s/UkcISAQJBXALjDxVS_r60Q" class="todaynews" target="_blank">
+		                                       	    <font style=" ">
+															《我的复旦故事 》| 冯龙飞：我的复旦种子就此发芽
+			                                        </font>
+		                                        </a>
+		                                    </li>
+		                                    <li>
+		                                        <a  href="https://mp.weixin.qq.com/s/GfA6sk8rXLAUhQHwKQfIcg" class="todaynews" target="_blank">
+		                                       	    <font style=" ">
+															《我的复旦故事》 | 顾羽杰：差点与复旦擦肩而过
+			                                        </font>
+		                                        </a>
+		                                    </li>
+                                 </ul>
+                            </div>
+                            <div class="todayfudandetail_contain_right">
+	                                	<img class="todayfudandetail_contain_right_pic"  src="/cms/file-utils!downFileByLink.action?isShowImage=1&fileId=102"style="width:354px;height:182px;"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--今日复旦结束-->
+                <!--视觉复旦、热点关注-->
+                <div class="enrollother">
+                    <div class="enrollothervideo">
+                        <div class="todayfudandetail_title">
+                            <h3 class="todaytitle">视觉复旦</h3>
+                            <a  href="/index!list.html?sideNav=361" target="_blank" class="todaymore"><img src="/static/images/more_17.png" />more</a>
+                        </div>
+                        <script type="text/javascript" src="/static/js/video.js"></script>
+         				<script type="text/javascript" src="/static/js/indexVideo.js"></script>
+                        <div class="enrollothervideo_video">
+                        	<table border="0"  cellpadding="0" cellspacing="0" style="border-collapse:collapse"  >
+								<td>
+					                            <img class="enrollothervideo_video_pic" src="/static/images/video_28.png" onclick="ShowVideo('','4783')"  id="IMGVIDEO"/>
+			                        			<img class="videoicon" src="/static/images/v_icon_06.png" id="v_icon" onclick="ShowVideo('','4783')" />
+								
+									<table cellpadding="0" cellspacing="0" style="border-collapse:separate" border="0"   >
+										<tr>
+											<td id="IndexVideo" >
+											
+											</td>
+										</tr>
+									</table>
+								</td>
+							</table>
+                        </div>
+                    </div>
+                    <div class="enrollotherhot">
+                        <div class="todayfudandetail_title">
+                            <h3 class="todaytitle">热点关注</h3>
+                            <a  href="/index!list.html?sideNav=304&topNav=521" target="_blank" class="todaymore"><img src="/static/images/more_17.png" />more</a>
+                        </div>
+                        <div class="enrollotherhot_contain">
+                            <ul>
+	                                    <li>
+	                                        <a href="http://news.fudan.edu.cn/2018/0422/45678.html"  class="hotnews" target="_blank">
+	                                            <img src="/static/images/dot_31.png" />
+                                        	    <font style=" ">
+														珍贵延安时期鲁艺版画落户复旦大学图书馆
+		                                        </font>
+	                                        </a>
+	                                    </li>
+	                                    <li>
+	                                        <a href="http://news.fudan.edu.cn/2018/0417/45628.html"  class="hotnews" target="_blank">
+	                                            <img src="/static/images/dot_31.png" />
+                                        	    <font style=" ">
+														18名复旦学者入选第三批国家“万人计划”
+		                                        </font>
+	                                        </a>
+	                                    </li>
+	                                    <li>
+	                                        <a href="https://mp.weixin.qq.com/s?__biz=MjM5OTUwMzIwMQ==&mid=2651347683&idx=1&sn=fcddc4af5697cbe629278f94c0dce2f4&chksm=bcc68eed8bb107fbeb0dd44bc07afa345c48a5042b7372554cff6663f4d7b3a065a8f0e92ce9&mpshare=1&"  class="hotnews" target="_blank">
+	                                            <img src="/static/images/dot_31.png" />
+                                        	    <font style=" ">
+														祝贺！复旦7项目入选首批“新工科”研究与实践项目
+		                                        </font>
+	                                        </a>
+	                                    </li>
+	                                    <li>
+	                                        <a href="http://news.fudan.edu.cn/2018/0416/45625.html"  class="hotnews" target="_blank">
+	                                            <img src="/static/images/dot_31.png" />
+                                        	    <font style=" ">
+														全国第五届大学生艺术展演，复旦准备好了！
+		                                        </font>
+	                                        </a>
+	                                    </li>
+	                                    <li>
+	                                        <a href="http://news.fudan.edu.cn/2018/0327/45477.html"  class="hotnews" target="_blank">
+	                                            <img src="/static/images/dot_31.png" />
+                                        	    <font style=" ">
+														种子的力量：钟扬教授先进事迹
+		                                        </font>
+	                                        </a>
+	                                    </li>
+	                                    <li>
+	                                        <a href="http://news.fudan.edu.cn/2018/0327/45473.html"  class="hotnews" target="_blank">
+	                                            <img src="/static/images/dot_31.png" />
+                                        	    <font style=" ">
+														诺贝尔经济学奖得主奥利弗·哈特复旦行演讲
+		                                        </font>
+	                                        </a>
+	                                    </li>
+                             </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--视觉复旦、热点关注结束-->
+            </div>
+            <!--左边内容结束-->
+            <!--右边内容-->
+            <div class="enrollcontian_right">
+		                <a target="_blank" href="http://www.ao2.fudan.edu.cn/fudan/" class="inforarea">
+	                        <img class="inforarea_online_pic" src= "/cms/file-utils!downFileByLink.action?isShowImage=1&fileId=23" style="width:216px;height:68px;"/>
+	                        <p class="inforarea_online_word">
+	                       		网上报名
+	                        </p>
+		                </a>
+		                <a target="_blank" href="http://www.ao.fudan.edu.cn/index!list.html?single=1&amp;sideNav=381" class="inforarea01">
+	                        <img class="inforarea_online_pic" src= "/cms/file-utils!downFileByLink.action?isShowImage=1&fileId=24" style="width:216px;height:68px;"/>
+	                        <p class="inforarea_online_word">
+	                       		招生热线
+	                        </p>
+		                </a>
+             
+                <!--招生计划、录取分数查询-->
+                <div class="inquiryarea">
+                    		<img class="inquiryarea_pic" src= "/cms/file-utils!downFileByLink.action?isShowImage=1&fileId=101" style="width:216px;height:120px;"/>
+                    <div class="historyinquiry">
+                        <div class="historyinquiry_a">
+                            <h3 class="atitle">历年招生计划</h3>
+                            <div class="inquiryline"></div>
+                            <div class="inquirybox">
+                                <form onsubmit="return zs(this);" target="_blank" method="post">
+                            	<input value="VO72-QKWF-M1AV-MSQD-7X60-SKSO-L2OW-OZWP" type="hidden" name="OWASP_CSRFTOKEN"/>
+                                <script type="text/javascript">
+                                     function zs(form){
+						            	form.action="/index!enrollmentPlan.html";
+						                form.submit();
+							        }
+                                </script>
+                                    <div class="inquirybox_left">
+                                        <div class="inquirybox_left_a">
+                                            <span class="inquirytitle">年份：</span>
+                                            <div class="searchchose01">
+                                                <select class="new01" id="nf" name="nf">
+	                                               		<option  value="2020">2020</option>
+	                                               		<option selected="selected" value="2019">2019</option>
+	                                               		<option  value="2018">2018</option>
+	                                               		<option  value="2017">2017</option>
+	                                               		<option  value="2016">2016</option>
+	                                               		<option  value="2015">2015</option>
+	                                               		<option  value="2014">2014</option>
+	                                               		<option  value="2013">2013</option>
+	                                               		<option  value="2012">2012</option>
+	                                               		<option  value="2011">2011</option>
+	                                               		<option  value="2010">2010</option>
+	                                               		<option  value="2009">2009</option>
+	                                               		<option  value="2008">2008</option>
+	                                               		<option  value="2007">2007</option>
+	                                               		<option  value="2006">2006</option>
+	                                               		<option  value="2005">2005</option>
+	                                               		<option  value="2004">2004</option>
+	                                               		<option  value="2003">2003</option>
+                                                </select>
+                                           </div>
+                                           
+                                        </div>
+                                        <div class="inquirybox_left_a">
+                                            <span class="inquirytitle">省市：</span>
+                                            <div class="searchchose01">
+                                                    <select class="new01" id="ss" name="ss">
+                                                        <option   value="安徽">安徽</option> 
+                                                        <option   value="北京">北京</option> 
+                                                        <option   value="福建">福建</option> 
+                                                        <option   value="甘肃">甘肃</option> 
+                                                        <option   value="广东">广东</option> 
+                                                        <option   value="广西">广西</option> 
+                                                        <option   value="贵州">贵州</option> 
+                                                        <option   value="海南">海南</option> 
+                                                        <option   value="河北">河北</option> 
+                                                        <option   value="河南">河南</option> 
+                                                        <option   value="黑龙江">黑龙江</option> 
+                                                        <option   value="湖北">湖北</option> 
+                                                        <option   value="湖南">湖南</option> 
+                                                        <option   value="吉林">吉林</option> 
+                                                        <option   value="江苏">江苏</option> 
+                                                        <option   value="江西">江西</option> 
+                                                        <option   value="辽宁">辽宁</option> 
+                                                        <option   value="内蒙古">内蒙古</option> 
+                                                        <option   value="宁夏">宁夏</option> 
+                                                        <option   value="青海">青海</option> 
+                                                        <option   value="山东">山东</option> 
+                                                        <option   value="山西">山西</option> 
+                                                        <option   value="陕西">陕西</option> 
+                                                        <option  selected="selected" value="上海">上海</option> 
+                                                        <option   value="四川">四川</option> 
+                                                        <option   value="天津">天津</option> 
+                                                        <option   value="新疆">新疆</option> 
+                                                        <option   value="云南">云南</option> 
+                                                        <option   value="浙江">浙江</option> 
+                                                        <option   value="重庆">重庆</option> 
+                                                        <option   value="香港">香港</option> 
+                                                        <option   value="台湾">台湾</option> 
+                                                        <option   value="澳门">澳门</option> 
+                                                        <option   value="西藏">西藏</option> 
+                                                    </select>
+                                            </div>
+                                                
+                                        </div>
+                                    </div>
+                                    <div class="inquirybox_right">     	
+                                        <button class="inquirybtn_btn" type="submit">
+                                            <img src="/static/images/inquiry_func_32.png"/>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="historyinquiry_a01">
+                            <h3 class="atitle">历年录取分数</h3>
+                            <div class="inquiryline"></div>
+                            <div class="inquirybox">
+                                <form onsubmit="return lqfs(this);" target="_blank" method="post">
+                                <input value="VO72-QKWF-M1AV-MSQD-7X60-SKSO-L2OW-OZWP" type="hidden" name="OWASP_CSRFTOKEN"/>
+                                <script type="text/javascript">
+                                     function lqfs(form){
+							            var nf = form.nf.value;
+							            var ss = form.ss.value;
+						            	form.action="/index!scores.html";
+						                form.submit();
+							        }
+                                </script>
+                                    <div class="inquirybox_left">
+                                        <div class="inquirybox_left_a">
+                                            <span class="inquirytitle">年份：</span>
+                                            <div class="searchchose01">
+                                                <select class="new01"  id="nf" name="nf">
+	                                               		<option >2020</option>
+	                                               		<option >2019</option>
+	                                               		<option selected="selected">2018</option>
+	                                               		<option >2017</option>
+	                                               		<option >2016</option>
+	                                               		<option >2015</option>
+	                                               		<option >2014</option>
+	                                               		<option >2013</option>
+	                                               		<option >2012</option>
+	                                               		<option >2011</option>
+	                                               		<option >2010</option>
+	                                               		<option >2009</option>
+	                                               		<option >2008</option>
+	                                               		<option >2007</option>
+	                                               		<option >2006</option>
+	                                               		<option >2005</option>
+	                                               		<option >2004</option>
+	                                               		<option >2003</option>
+                                                </select>
+                                           </div>
+                                        </div>
+                                        <div class="inquirybox_left_a">
+                                            <span class="inquirytitle">省市：</span>
+                                            <div class="searchchose01">
+                                            	<select class="new01"  id="ss" name="ss">
+                                                       	 <option   value="安徽">安徽</option> 
+                                                       	 <option   value="北京">北京</option> 
+                                                       	 <option   value="福建">福建</option> 
+                                                       	 <option   value="甘肃">甘肃</option> 
+                                                       	 <option   value="广东">广东</option> 
+                                                       	 <option   value="广西">广西</option> 
+                                                       	 <option   value="贵州">贵州</option> 
+                                                       	 <option   value="海南">海南</option> 
+                                                       	 <option   value="河北">河北</option> 
+                                                       	 <option   value="河南">河南</option> 
+                                                       	 <option   value="黑龙江">黑龙江</option> 
+                                                       	 <option   value="湖北">湖北</option> 
+                                                       	 <option   value="湖南">湖南</option> 
+                                                       	 <option   value="吉林">吉林</option> 
+                                                       	 <option   value="江苏">江苏</option> 
+                                                       	 <option   value="江西">江西</option> 
+                                                       	 <option   value="辽宁">辽宁</option> 
+                                                       	 <option   value="内蒙古">内蒙古</option> 
+                                                       	 <option   value="宁夏">宁夏</option> 
+                                                       	 <option   value="青海">青海</option> 
+                                                       	 <option   value="山东">山东</option> 
+                                                       	 <option   value="山西">山西</option> 
+                                                       	 <option   value="陕西">陕西</option> 
+                                                       	 <option  selected="selected" value="上海">上海</option> 
+                                                       	 <option   value="四川">四川</option> 
+                                                       	 <option   value="天津">天津</option> 
+                                                       	 <option   value="新疆">新疆</option> 
+                                                       	 <option   value="云南">云南</option> 
+                                                       	 <option   value="浙江">浙江</option> 
+                                                       	 <option   value="重庆">重庆</option> 
+                                                       	 <option   value="香港">香港</option> 
+                                                       	 <option   value="台湾">台湾</option> 
+                                                       	 <option   value="澳门">澳门</option> 
+                                                       	 <option   value="西藏">西藏</option> 
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="inquirybox_right">     	
+                                        <button class="inquirybtn_btn" type="submit">
+                                            <img src="/static/images/inquiry_func_32.png"/>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--招生计划、录取分数查询结束-->
+                <!--微博等关注-->
+                <div class="attention">
+		                    <a href="http://t.sina.com.cn/fdzs" class="attention_a" target="_blank">
+		                        <p class="attention_title">
+		                        <img class="attention_pic" src= "/cms/file-utils!downFileByLink.action?isShowImage=1&fileId=103"  style="width:40px;height:32px;"/>复旦招生
+		                        </p>
+		                    </a>
+                	<div class="attention_b">
+	                            <p class="attention_b_title">
+	                                 	&nbsp
+	                            </p>
+	                            <div class="attention_b_code">
+	                                <img src= "/cms/file-utils!downFileByLink.action?isShowImage=1&fileId=121" style="width:217px;height:158px;"/>
+	                            </div>
+                    </div>
+                </div>
+                <!--微博等关注结束-->
+            </div>
+            <!--右边内容结束-->
+        </div>
+    </div>
+</div>
+<!--首页信息结束-->
+    <!--页脚-->
+	<div class="footer">
+	    <div class="footercontian">
+	        <ul class="footerlinks">
+	          					 <li>
+					 <a href="http://www.fudan.edu.cn" target="_blank" class="footerlinks_title ">
+						复旦大学
+					 </a>
+					 </li>
+					 <li>
+					 <a href="http://www.fdcollege.fudan.edu.cn" target="_blank" class="footerlinks_title ">
+						复旦学院
+					 </a>
+					 </li>
+					 <li>
+					 <a href="http://shmc.fudan.edu.cn" target="_blank" class="footerlinks_title ">
+						复旦大学上海医学院
+					 </a>
+					 </li>
+					 <li>
+					 <a href="http://www.stuaff.fudan.edu.cn" target="_blank" class="footerlinks_title ">
+						复旦大学学工部
+					 </a>
+					 </li>
+					 <li>
+					 <a href="http://www.fao.fudan.edu.cn" target="_blank" class="footerlinks_title ">
+						复旦大学港澳台办
+					 </a>
+					 </li>
+					 <li>
+					 <a href="http://www.career.fudan.edu.cn" target="_blank" class="footerlinks_title ">
+						复旦大学学生就业信息网
+					 </a>
+					 </li>
+					 <li>
+					 <a href="http://news.fudan.edu.cn" target="_blank" class="footerlinks_title ">
+						复旦新闻文化网
+					 </a>
+					 </li>
+					 <li>
+					 <a href="http://www.fudan.org.cn" target="_blank" class="footerlinks_title footerlinks_title_last">
+						复旦大学校友网
+					 </a>
+					 </li>
+	        </ul>
+	        <div class="footerline"></div>
+	        <div class="footerwords">
+	            <p>
+	            <!--
+	            © 2010 - 2015  复旦大学招生办公室  上海市邯郸路220号  邮政编码200433 
+	            -->
+	            ©2005 - 2019 复旦大学招生办公室</br>
+                   	 上海市邯郸路220号  邮政编码200433
+	            </p>
+	        </div>
+		</div>
+	</div>
+    <!--页脚结束-->
+    </div>
+</body>
+</html>        

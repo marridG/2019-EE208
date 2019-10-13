@@ -17,7 +17,7 @@ WEB_PAGE_SITE_SUBFIX = "src.txt"
 WEB_PAGES_SUBFIX = "html/"
 INDEX_FILE_PATH = "index"
 # [Developer]
-DEBUG_MODE = True
+DEBUG_MODE = False
 # Encodings List: for a less advanced encoding method
 ENCODINGS = ["ascii", "utf-8", "utf-16", "gb2312", "URL", "base64", "BIG5", "GBK", "GB18030"]
 # # [Developer] Test Paths

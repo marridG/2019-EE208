@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>智能手表</title>
+    <meta charset="utf-8"/>
+<meta name="data-spm" content="smpc">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+<meta name="data-spm" content="smpc">
+<link rel="icon" href="//statics.itc.cn/web/static/images/pic/sohu-logo/favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="//statics.itc.cn/web/static/images/pic/sohu-logo/favicon.ico" type="image/x-icon"/>
+<link rel="apple-touch-icon" sizes="57x57" href="//statics.itc.cn/web/static/images/pic/sohu-logo/logo-57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="//statics.itc.cn/web/static/images/pic/sohu-logo/logo-72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="//statics.itc.cn/web/static/images/pic/sohu-logo/logo-114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="//statics.itc.cn/web/static/images/pic/sohu-logo/logo-144.png" />
+<link href="//statics.itc.cn/web/static/css/main-f6a5466fac.css" rel="stylesheet"/>
+<script>
+    //  加载监控代码
+</script>
+<!--[if lt IE 9]>
+<script src="//statics.itc.cn/web/static/js/es5-shim-08e41cfc3e.min.js"></script>
+<script src="//statics.itc.cn/web/static/js/es5-sham-1d5fa1124b.min.js"></script>
+<script src="//statics.itc.cn/web/static/js/html5shiv-21fc8c2ba6.js"></script>
+<link href="//statics.itc.cn/web/static/css/ie8hack-9dce3c3b96.css" rel="stylesheet" />
+<![endif]-->
+<script type="text/javascript">
+//解決IE8,IE9不支持console的问题
+(function() {
+    var method;
+    var noop = function() {};
+    var methods = [
+        'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+        'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+        'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+        'timeStamp', 'trace', 'warn'
+    ];
+    var length = methods.length;
+    var console = (window.console = window.console || {});
+
+    while (length--) {
+        method = methods[length];
+
+        // Only stub undefined methods.
+        if (!console[method]) {
+            console[method] = noop;
+        }
+    }
+}());
+</script>
+<script type="text/javascript">
+    (function () {
+        var html = document.getElementsByTagName("html")[0];
+        var width = Math.min(document.documentElement.clientWidth, 790);
+        width = width < 320 ? 320 : width;
+        if (document.documentElement.clientWidth <= 1024) {
+            html.style.fontSize = width / 790 * 79 + 'px';
+        }
+        if (window.addEventListener) {
+            window.addEventListener('resize', resizeHandler);
+        }
+        else if (window.attachEvent) {
+            window.attachEvent('onresize', resizeHandler);
+        }
+        function resizeHandler() {
+            if (document.documentElement.clientWidth <= 1024) {
+                var width = Math.min(document.documentElement.clientWidth, 790);
+                width = width < 320 ? 320 : width;
+                html.style.fontSize = width / 790 * 79 + 'px';
+            } else {
+                html.style.fontSize = "16px";
+            }
+        };
+    })();
+</script>
+
+
+</head>
+<body class="tag-index" data-spm="tag-page">
+
+<div class="wrapper-box wrapper-tag">
+    <header id="main-header" class="error-head" data-spm="header">
+
+
+	<div class="area">
+		<div class="head-nav left" data-spm="nav">
+			<ul>
+			    <li class="index"><a data-clev="10220248" target="_blank" href="http://www.sohu.com"><em class="icon-home icon"></em><em class="sohu-logo">搜狐首页</em></a></li>
+														<li><a target="_blank" data-clev="10220249" href="http://news.sohu.com/">新闻</a></li>
+																			<li><a target="_blank" data-clev="10220250" href="http://sports.sohu.com/">体育</a></li>
+																			<li><a target="_blank" data-clev="10220251" href="http://auto.sohu.com/">汽车</a></li>
+																			<li><a target="_blank" data-clev="10220252" href="http://www.focus.cn/">房产</a></li>
+																			<li><a target="_blank" data-clev="10220253" href="http://travel.sohu.com/">旅游</a></li>
+																			<li><a target="_blank" data-clev="10220254" href="http://learning.sohu.com/">教育</a></li>
+																			<li><a target="_blank" data-clev="10220255" href="http://fashion.sohu.com/">时尚</a></li>
+																			<li><a target="_blank" data-clev="10220256" href="http://it.sohu.com/">科技</a></li>
+																			<li><a target="_blank" data-clev="10220257" href="http://business.sohu.com/">财经</a></li>
+																			<li><a target="_blank" data-clev="10220258" href="http://yule.sohu.com/">娱乐</a></li>
+																																																																																																																									<li class="more-nav"><a href="javascript:void(0)">更多<em class="cor"></em></a>
+					<div class="more-nav-box">
+																																																																																																																																																					<a href="http://baobao.sohu.com/">母婴</a>
+																										<a href="http://health.sohu.com/">健康</a>
+																										<a href="http://history.sohu.com/">历史</a>
+																										<a href="http://mil.sohu.com/">军事</a>
+																										<a href="http://chihe.sohu.com/">美食</a>
+																										<a href="http://cul.sohu.com/">文化</a>
+																										<a href="http://astro.sohu.com/">星座</a>
+																										<a href="https://www.sohu.com/subject">专题</a>
+																										<a href="http://game.sohu.com/">游戏</a>
+																										<a href="http://fun.sohu.com/">搞笑</a>
+																										<a href="http://acg.sohu.com/">动漫</a>
+																										<a href="http://pets.sohu.com/">宠物</a>
+																		</div>
+				</li>
+			</ul>
+		</div>
+		<div id="head-login" class="right login">
+		</div>
+	</div>
+
+</header>    <div id="top">
+        <div class="tag-title-bg">
+    <div class="area tag-title">
+        <div class="tag-name"><i class="icon tag-name-icon"></i><span class="tt">智能手表</span></div>
+    </div>
+</div>    </div>
+
+    <div class="area clear" id="main-container">
+
+        <div class="hot-spots left"  id="hot-spots" data-spm="hot-spots">
+
+<div class="title"><span class="tt">热点直达</span></div>
+<ul>
+        <li>
+        <a href="//www.sohu.com/tag/78240" target="_blank">
+            创业武林大会        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/48130" target="_blank">
+            移动互联网        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/48139" target="_blank">
+            工业技术        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/68623" target="_blank">
+            国家电网        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/68625" target="_blank">
+            阿里星球        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/67603" target="_blank">
+            Surface        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/68626" target="_blank">
+            陈竺        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/48160" target="_blank">
+            运动手环        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/48162" target="_blank">
+            智能手表        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/48165" target="_blank">
+            Apple Watch        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/48167" target="_blank">
+            测评        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/48173" target="_blank">
+            AR        </a>
+    </li>
+    </ul>
+</div>
+        <div class="main left">
+            <div class="news-list clearfix" id="main-news" data-spm="feed">
+                <div id="news-wrapper">
+                                                            <div data-role="news-item" class="news-box news-box-thr news-box-pic clear" data-ev="346642532" data-media-id="100298879" data-newsid="1" data-loc="" data-spm-type="resource">
+        <h4><a href="//www.sohu.com/a/346642532_100298879"  target="_blank">太便宜了！小米有品99元拿下智能手表，功能不差 Apple Watch</a></h4>
+        <div class="pic-group clear">
+            <ul>                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346642532_100298879" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191013/0d2e8ee21ccf48739f462ec39baa20ce.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346642532_100298879" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191013/9a2a363f82664f9bbf1315faf428a942.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346642532_100298879" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191013/8f6a38ed55af4858a6771d086ba83929.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                                    end
+                
+                " ><a href="//www.sohu.com/a/346642532_100298879" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191013/3a9f91e59af548508ae90ffec445a8b5.jpeg" alt="">
+                                    </a></li>
+                                            </ul>
+        </div>
+        <div class="other">
+            <span class="img"><a href="http://mp.sohu.com/profile?xpt=d2Y1eHVhY2U0cXdAc29odS5jb20=" target="_blank"><img src="//5b0988e595225.cdn.sohucs.com/a_auto,c_cut,x_0,y_33,w_166,h_166/images/20181017/f1cdb10474a14f2d86db564008af38bd.jpeg" alt=""></a></span>
+                        <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0"> $info.channelName </a></span><span class="dot channel-dot">·</span>
+                        <span class="name"><a href="http://mp.sohu.com/profile?xpt=d2Y1eHVhY2U0cXdAc29odS5jb20=" target="_blank">科技小火柴</a></span><span class="dot">·</span>
+            <span class="time" data-val="1570928260000" data-role="time"></span>
+            <a class="com" href="//www.sohu.com/a/346642532_100298879#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346642532" data-id="346642532" data-role="comment-count"></span></a>
+        </div>
+    </div>
+
+
+                                        <div data-role="news-item" class="news-box news-box-thr news-box-pic clear" data-ev="346545385" data-media-id="114760" data-newsid="2" data-loc="" data-spm-type="resource">
+        <h4><a href="//www.sohu.com/a/346545385_114760"  target="_blank">华米Amazfit GTS智能手表评测：长续航是基因，轻时尚为血脉</a></h4>
+        <div class="pic-group clear">
+            <ul>                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346545385_114760" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/9cacdba032604b2590544bf61dd9abcd.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346545385_114760" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/dd33146bc62b456283336360cae1c046.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346545385_114760" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/862a4fb5eb4043c1ae45fafff38f1bce.gif" alt="">
+                                    </a></li>
+                                <li class="img-do
+                                    end
+                
+                " ><a href="//www.sohu.com/a/346545385_114760" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/9a240013fd034c5792531b6c9619b502.jpeg" alt="">
+                                    </a></li>
+                                            </ul>
+        </div>
+        <div class="other">
+            <span class="img"><a href="http://mp.sohu.com/profile?xpt=QUNCMzEzNDY1N0EwNTY2OERCRTgyNzhBM0Y1ODY0NkNAdC5xcS5zb2h1LmNvbQ==" target="_blank"><img src="//5b0988e595225.cdn.sohucs.com/avatar/picon/2013/11/06/ec9aa26afda5ebeb3ece141a60cfd4f4android.png" alt=""></a></span>
+                        <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0"> $info.channelName </a></span><span class="dot channel-dot">·</span>
+                        <span class="name"><a href="http://mp.sohu.com/profile?xpt=QUNCMzEzNDY1N0EwNTY2OERCRTgyNzhBM0Y1ODY0NkNAdC5xcS5zb2h1LmNvbQ==" target="_blank">IT之家</a></span><span class="dot">·</span>
+            <span class="time" data-val="1570873979000" data-role="time"></span>
+            <a class="com" href="//www.sohu.com/a/346545385_114760#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346545385" data-id="346545385" data-role="comment-count"></span></a>
+        </div>
+    </div>
+
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346501461" data-media-id="114838" data-newsid="3" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346501461_114838" target="_blank">
+                                 <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/e54c157a8eaf407c9378db65cb07f33c.png" alt="">
+                                </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346501461_114838" target="_blank">
+         小米众筹新品上线，首发价99.9元
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=MTI3ODQ4NTU0MkBzaW5hLnNvaHUuY29t" target="_blank"><img src="//5b0988e595225.cdn.sohucs.com/avatar/picon/2014/12/04/69d5b1b404fef17c77bedf388a2fe648android.png"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=MTI3ODQ4NTU0MkBzaW5hLnNvaHUuY29t" target="_blank">IT168</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570865759000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346501461_114838#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346501461" data-id="346501461" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346487625" data-media-id="162522" data-newsid="4" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346487625_162522" target="_blank">
+                                 <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/a4d8d7d5688d48b2b51c071de8e80744.jpeg" alt="">
+                                </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346487625_162522" target="_blank">
+         小米有品众筹百元级智能手表：支持计时记步、心率监测
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=c29odXptdHI2MXV3c25Ac29odS5jb20=" target="_blank"><img src="//i3.itc.cn/20150922/360d_f9c90385_3d9d_028f_cefc_6b52eafc2528_1.jpg"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=c29odXptdHI2MXV3c25Ac29odS5jb20=" target="_blank">环球网</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570862954000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346487625_162522#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346487625" data-id="346487625" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346459675" data-media-id="120141128" data-newsid="5" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346459675_120141128" target="_blank">
+                                 <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/7c78d3f51fbc4e6fb9b4b21bdb476b34.jpeg" alt="">
+                                </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346459675_120141128" target="_blank">
+         谷歌下周可能会推出像素手表
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=MTExODc2MzY2ODE1OTQwMTk4NEBzb2h1LmNvbQ==" target="_blank"><img src="//5b0988e595225.cdn.sohucs.com/a_auto,c_cut,x_120,y_7,w_349,h_349/images/20190418/57871411e502416d9c61a20905b247b0.jpeg"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=MTExODc2MzY2ODE1OTQwMTk4NEBzb2h1LmNvbQ==" target="_blank">Tian</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570853629000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346459675_120141128#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346459675" data-id="346459675" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        <div data-role="news-item" class="news-box news-box-thr news-box-pic clear" data-ev="346459200" data-media-id="413981" data-newsid="6" data-loc="" data-spm-type="resource">
+        <h4><a href="//www.sohu.com/a/346459200_413981"  target="_blank">Galaxy Watch Active 2 评测：在好看的皮囊中找回有趣的灵魂</a></h4>
+        <div class="pic-group clear">
+            <ul>                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346459200_413981" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/e79ccc5b31c44743a7617096f67f66cf.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346459200_413981" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/cd2d292532e14185b6ea64c8d8fe952a.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346459200_413981" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/5007c09e1527430dbf1c6e932eaf6864.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                                    end
+                
+                " ><a href="//www.sohu.com/a/346459200_413981" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/207a57f097e54d81857dca282976f259.jpeg" alt="">
+                                    </a></li>
+                                            </ul>
+        </div>
+        <div class="other">
+            <span class="img"><a href="http://mp.sohu.com/profile?xpt=c29odW1weTF6Nno3QHNvaHUuY29t" target="_blank"><img src="//sucimg.itc.cn/avatarimg/1129399f85b147469eeca16bf782062f_1530848503787" alt=""></a></span>
+                        <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0"> $info.channelName </a></span><span class="dot channel-dot">·</span>
+                        <span class="name"><a href="http://mp.sohu.com/profile?xpt=c29odW1weTF6Nno3QHNvaHUuY29t" target="_blank">爱范儿</a></span><span class="dot">·</span>
+            <span class="time" data-val="1570853159000" data-role="time"></span>
+            <a class="com" href="//www.sohu.com/a/346459200_413981#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346459200" data-id="346459200" data-role="comment-count"></span></a>
+        </div>
+    </div>
+
+
+                                        <div data-role="news-item" class="news-box news-box-thr news-box-pic clear" data-ev="346456825" data-media-id="255990" data-newsid="7" data-loc="" data-spm-type="resource">
+        <h4><a href="//www.sohu.com/a/346456825_255990"  target="_blank">传了两年的 Google 牌智能手表 Pixel Watch 或将发布</a></h4>
+        <div class="pic-group clear">
+            <ul>                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346456825_255990" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/a997dd9b1a3b472b93cfa2fcf3c4b6c8.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346456825_255990" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/aef03f5a2efd48b283ad8055010b1b5c.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346456825_255990" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/e31d7f65511847e58299014c99a81495.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                                    end
+                
+                " ><a href="//www.sohu.com/a/346456825_255990" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/81e8f1e74a7b4864914a5934c64e1efe.jpeg" alt="">
+                                    </a></li>
+                                            </ul>
+        </div>
+        <div class="other">
+            <span class="img"><a href="http://mp.sohu.com/profile?xpt=c29odXptdHFtdGtlcWRAc29odS5jb20=" target="_blank"><img src="//29e5534ea20a8.cdn.sohucs.com/c_cut,x_64,y_64,w_512,h_512/os/news/98a5f4d1e625bbb916c9e84143cbbd26.jpg" alt=""></a></span>
+                        <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0"> $info.channelName </a></span><span class="dot channel-dot">·</span>
+                        <span class="name"><a href="http://mp.sohu.com/profile?xpt=c29odXptdHFtdGtlcWRAc29odS5jb20=" target="_blank">深圳湾</a></span><span class="dot">·</span>
+            <span class="time" data-val="1570852523000" data-role="time"></span>
+            <a class="com" href="//www.sohu.com/a/346456825_255990#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346456825" data-id="346456825" data-role="comment-count"></span></a>
+        </div>
+    </div>
+
+
+                                        <div data-role="news-item" class="news-box news-box-thr news-box-pic clear" data-ev="346455351" data-media-id="163726" data-newsid="8" data-loc="" data-spm-type="resource">
+        <h4><a href="//www.sohu.com/a/346455351_163726"  target="_blank">Haylou智能手表上线小米有品众筹：99.9元 心率/14天续航/IP68</a></h4>
+        <div class="pic-group clear">
+            <ul>                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346455351_163726" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/d00ca59632294da2b694a39a44b9aba5.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346455351_163726" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/30482149f325437ca53a4ea34ee06e97.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346455351_163726" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/8e195fcf61d84a5aa0afef0d4dc977d8.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                                    end
+                
+                " ><a href="//www.sohu.com/a/346455351_163726" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/7019fa406fab42359e1bdd4fa5d08184.jpeg" alt="">
+                                    </a></li>
+                                            </ul>
+        </div>
+        <div class="other">
+            <span class="img"><a href="http://mp.sohu.com/profile?xpt=c29odXptdGZ6OXhlc2ZAc29odS5jb20=" target="_blank"><img src="//sucimg.itc.cn/avatarimg/f91b804c03cb4b76a3644cfc49902519_1514881925336" alt=""></a></span>
+                        <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0"> $info.channelName </a></span><span class="dot channel-dot">·</span>
+                        <span class="name"><a href="http://mp.sohu.com/profile?xpt=c29odXptdGZ6OXhlc2ZAc29odS5jb20=" target="_blank">驱动之家</a></span><span class="dot">·</span>
+            <span class="time" data-val="1570851540000" data-role="time"></span>
+            <a class="com" href="//www.sohu.com/a/346455351_163726#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346455351" data-id="346455351" data-role="comment-count"></span></a>
+        </div>
+    </div>
+
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346465777" data-media-id="114760" data-newsid="9" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346465777_114760" target="_blank">
+                                 <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/31828a135e754a68a2e87f2b989e990c.jpeg" alt="">
+                                </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346465777_114760" target="_blank">
+         小米有品Haylou智能手表99.9元众筹：续航14天，支持心率检测
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=QUNCMzEzNDY1N0EwNTY2OERCRTgyNzhBM0Y1ODY0NkNAdC5xcS5zb2h1LmNvbQ==" target="_blank"><img src="//5b0988e595225.cdn.sohucs.com/avatar/picon/2013/11/06/ec9aa26afda5ebeb3ece141a60cfd4f4android.png"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=QUNCMzEzNDY1N0EwNTY2OERCRTgyNzhBM0Y1ODY0NkNAdC5xcS5zb2h1LmNvbQ==" target="_blank">IT之家</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570848261000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346465777_114760#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346465777" data-id="346465777" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        <div data-role="news-item" class="news-box news-box-thr news-box-pic clear" data-ev="346428968" data-media-id="115088" data-newsid="10" data-loc="" data-spm-type="resource">
+        <h4><a href="//www.sohu.com/a/346428968_115088"  target="_blank">华为WATCH GT 2：综合体验优秀的智能手表</a></h4>
+        <div class="pic-group clear">
+            <ul>                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346428968_115088" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/a7eb176a36794a46a230a826c69d2730.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346428968_115088" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/cbfd96cefade4f73828de19f9ca1b009.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346428968_115088" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/e0e3b19a669f4d898f9b3fde7fee85a4.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                                    end
+                
+                " ><a href="//www.sohu.com/a/346428968_115088" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/7e751a4532cf43049ece95387bd3e2a9.jpeg" alt="">
+                                    </a></li>
+                                            </ul>
+        </div>
+        <div class="other">
+            <span class="img"><a href="http://mp.sohu.com/profile?xpt=MTc1MDg1Mjg0M0BzaW5hLnNvaHUuY29t" target="_blank"><img src="//5b0988e595225.cdn.sohucs.com/a_auto,c_cut,x_0,y_0,w_720,h_720/images/20190123/7a456d53723b481ea4a0579b1435e1cf.jpeg" alt=""></a></span>
+                        <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0"> $info.channelName </a></span><span class="dot channel-dot">·</span>
+                        <span class="name"><a href="http://mp.sohu.com/profile?xpt=MTc1MDg1Mjg0M0BzaW5hLnNvaHUuY29t" target="_blank">PChome电脑之家</a></span><span class="dot">·</span>
+            <span class="time" data-val="1570846161000" data-role="time"></span>
+            <a class="com" href="//www.sohu.com/a/346428968_115088#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346428968" data-id="346428968" data-role="comment-count"></span></a>
+        </div>
+    </div>
+
+
+                                        <div data-role="news-item" class="news-box news-box-thr news-box-pic clear" data-ev="346480782" data-media-id="222251" data-newsid="11" data-loc="" data-spm-type="resource">
+        <h4><a href="//www.sohu.com/a/346480782_222251"  target="_blank">华为Watch GT 2今日开售，七星手机连锁震撼发售</a></h4>
+        <div class="pic-group clear">
+            <ul>                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346480782_222251" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/ac47bc10988642ffbb7c8f533ee4a3d2.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346480782_222251" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/cd8b503be52b420aa1b464751d66752a.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346480782_222251" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/56411bafb8294acaa891de4617be3005.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                                    end
+                
+                " ><a href="//www.sohu.com/a/346480782_222251" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/1fa3e1bbedcb4350899d1d54b93a45ac.jpeg" alt="">
+                                    </a></li>
+                                            </ul>
+        </div>
+        <div class="other">
+            <span class="img"><a href="http://mp.sohu.com/profile?xpt=c29odXptdDJpcmJrNDdAc29odS5jb20=" target="_blank"><img src="//img.mp.sohu.com/upload/20171115/685762a6ca1440bb8a6c8281b27a23c0" alt=""></a></span>
+                        <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0"> $info.channelName </a></span><span class="dot channel-dot">·</span>
+                        <span class="name"><a href="http://mp.sohu.com/profile?xpt=c29odXptdDJpcmJrNDdAc29odS5jb20=" target="_blank">七星手机连锁</a></span><span class="dot">·</span>
+            <span class="time" data-val="1570845622000" data-role="time"></span>
+            <a class="com" href="//www.sohu.com/a/346480782_222251#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346480782" data-id="346480782" data-role="comment-count"></span></a>
+        </div>
+    </div>
+
+
+                                        <div data-role="news-item" class="news-box news-box-thr news-box-pic clear" data-ev="346370824" data-media-id="413981" data-newsid="12" data-loc="" data-spm-type="resource">
+        <h4><a href="//www.sohu.com/a/346370824_413981"  target="_blank">华为 watch GT2 评测：一次充电能用两周，它让我更懂自己的身体</a></h4>
+        <div class="pic-group clear">
+            <ul>                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346370824_413981" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/f2c50c6966114a0cad9b635d734be369.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346370824_413981" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/5eb609a2ca1648fea4abfab76c1d936e.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346370824_413981" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/75545a13ff314c03a750d49db7d40e11.png" alt="">
+                                    </a></li>
+                                <li class="img-do
+                                    end
+                
+                " ><a href="//www.sohu.com/a/346370824_413981" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/f157241b2f9743e09977aab580358bb2.jpeg" alt="">
+                                    </a></li>
+                                            </ul>
+        </div>
+        <div class="other">
+            <span class="img"><a href="http://mp.sohu.com/profile?xpt=c29odW1weTF6Nno3QHNvaHUuY29t" target="_blank"><img src="//sucimg.itc.cn/avatarimg/1129399f85b147469eeca16bf782062f_1530848503787" alt=""></a></span>
+                        <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0"> $info.channelName </a></span><span class="dot channel-dot">·</span>
+                        <span class="name"><a href="http://mp.sohu.com/profile?xpt=c29odW1weTF6Nno3QHNvaHUuY29t" target="_blank">爱范儿</a></span><span class="dot">·</span>
+            <span class="time" data-val="1570814839000" data-role="time"></span>
+            <a class="com" href="//www.sohu.com/a/346370824_413981#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346370824" data-id="346370824" data-role="comment-count"></span></a>
+        </div>
+    </div>
+
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346205424" data-media-id="166680" data-newsid="13" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346205424_166680" target="_blank">
+                                 <img data-src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191011/972cad29e97545adb721cb2747731875.png" alt="" src="//statics.itc.cn/web/static/images/pic/preload.png">
+                                 </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346205424_166680" target="_blank">
+         华为Watch GT 2首销，售价1488元起
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=c29odXptdDk2dzZqYndAc29odS5jb20=" target="_blank"><img src="//5b0988e595225.cdn.sohucs.com/a_auto,c_cut,x_0,y_0,w_500,h_500/images/20171208/dff03b4908f744fc8224b874804fe743.jpeg"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=c29odXptdDk2dzZqYndAc29odS5jb20=" target="_blank">手机中国联盟</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570805160000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346205424_166680#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346205424" data-id="346205424" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346307430" data-media-id="115470" data-newsid="14" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346307430_115470" target="_blank">
+                                 <img data-src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191011/4cbf0bd731c04052b05f304ad855a336.png" alt="" src="//statics.itc.cn/web/static/images/pic/preload.png">
+                                 </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346307430_115470" target="_blank">
+         提前备好商标，小米也开始做智能手表啦，你会买吗？
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=MjI4NzU5Njg3NEBzaW5hLnNvaHUuY29t" target="_blank"><img src="//sucimg.itc.cn/avatarimg/13989e697faf48278d3a86335bf79639_1498809611535"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=MjI4NzU5Njg3NEBzaW5hLnNvaHUuY29t" target="_blank">一品威客网</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570790167000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346307430_115470#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346307430" data-id="346307430" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346207692" data-media-id="114760" data-newsid="15" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346207692_114760" target="_blank">
+                                 <img data-src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191011/fd587061b3f54a8aaf257e03c69204f0.jpeg" alt="" src="//statics.itc.cn/web/static/images/pic/preload.png">
+                                 </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346207692_114760" target="_blank">
+         华为Watch GT 2今日正式开售，售价1488元起
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=QUNCMzEzNDY1N0EwNTY2OERCRTgyNzhBM0Y1ODY0NkNAdC5xcS5zb2h1LmNvbQ==" target="_blank"><img src="//5b0988e595225.cdn.sohucs.com/avatar/picon/2013/11/06/ec9aa26afda5ebeb3ece141a60cfd4f4android.png"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=QUNCMzEzNDY1N0EwNTY2OERCRTgyNzhBM0Y1ODY0NkNAdC5xcS5zb2h1LmNvbQ==" target="_blank">IT之家</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570759522000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346207692_114760#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346207692" data-id="346207692" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346157312" data-media-id="99956743" data-newsid="16" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346157312_99956743" target="_blank">
+                                 <img data-src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191011/097fe8b43bdc43c8adbe975128c19413.jpeg" alt="" src="//statics.itc.cn/web/static/images/pic/preload.png">
+                                 </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346157312_99956743" target="_blank">
+         Fitbit宣布明年开始将生产从中国转移到其他国家
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=Qzk5RkM5MkM0ODA2MkE1MDdBREExMDk4NzFFNUQyQTFAcXEuc29odS5jb20=" target="_blank"><img src="//sucimg.itc.cn/avatarimg/d935b5414e144a7d94371db12a9d4ac9_1500277825548"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=Qzk5RkM5MkM0ODA2MkE1MDdBREExMDk4NzFFNUQyQTFAcXEuc29odS5jb20=" target="_blank">cnBeta</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570750985000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346157312_99956743#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346157312" data-id="346157312" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346053759" data-media-id="118778" data-newsid="17" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346053759_118778" target="_blank">
+                                 <img data-src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191010/ce19ba04ac7644428c73d71ae3ce317f.png" alt="" src="//statics.itc.cn/web/static/images/pic/preload.png">
+                                 </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346053759_118778" target="_blank">
+         小米智能手表真的要来？渲染图曝光，有望在本月发布
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=c3VjaHVuQHF1ZG9uZy5jb20=" target="_blank"><img src="//5b0988e595225.cdn.sohucs.com/a_auto,c_cut,x_110,y_42,w_262,h_262/images/20190415/0a6dfe63b951452d9680597448335ef7.png"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=c3VjaHVuQHF1ZG9uZy5jb20=" target="_blank">驱动中国</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570699920000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346053759_118778#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346053759" data-id="346053759" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346007902" data-media-id="113755" data-newsid="18" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346007902_113755" target="_blank">
+                                 <img data-src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191010/86ecfbc1813848ce8da2fd9bfb0872f1.jpeg" alt="" src="//statics.itc.cn/web/static/images/pic/preload.png">
+                                 </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346007902_113755" target="_blank">
+         华米科技Amazfit智能手表2复联限量版23秒售罄，遭质疑：耍猴？
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=aWNlZl80NTc3OTlAc29odS5jb20=" target="_blank"><img src="//sucimg.itc.cn/avatarimg/5cb2742335754860aa73777e1b729413_1421739862192"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=aWNlZl80NTc3OTlAc29odS5jb20=" target="_blank">科技初始</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570689883000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346007902_113755#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346007902" data-id="346007902" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="345970589" data-media-id="166680" data-newsid="19" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/345970589_166680" target="_blank">
+                                 <img data-src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191010/85ad7aec0ce84bf6b49a151c83c7bfab.png" alt="" src="//statics.itc.cn/web/static/images/pic/preload.png">
+                                 </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/345970589_166680" target="_blank">
+         有消息称，小米智能手表本月发布
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=c29odXptdDk2dzZqYndAc29odS5jb20=" target="_blank"><img src="//5b0988e595225.cdn.sohucs.com/a_auto,c_cut,x_0,y_0,w_500,h_500/images/20171208/dff03b4908f744fc8224b874804fe743.jpeg"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=c29odXptdDk2dzZqYndAc29odS5jb20=" target="_blank">手机中国联盟</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570678263000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/345970589_166680#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="345970589" data-id="345970589" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346017135" data-media-id="114822" data-newsid="20" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346017135_114822" target="_blank">
+                                 <img data-src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191010/701c07b2c8f4416685b64b426c0bbdd9.jpeg" alt="" src="//statics.itc.cn/web/static/images/pic/preload.png">
+                                 </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346017135_114822" target="_blank">
+         小米智能手表渲染图曝光 圆形表盘 本月发布
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=REI3NkQ2NjdGRDRGNzcxMDczNDA2QTE2M0RBRjE2NzFAcXEuc29odS5jb20=" target="_blank"><img src="//5b0988e595225.cdn.sohucs.com/a_auto,c_cut,x_42,y_60,w_416,h_416/images/20190618/dd6a7eb3e46c4a89bcba74b46d77dc8a.jpeg"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=REI3NkQ2NjdGRDRGNzcxMDczNDA2QTE2M0RBRjE2NzFAcXEuc29odS5jb20=" target="_blank">中关村在线</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570676240000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346017135_114822#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346017135" data-id="346017135" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+        <div class="sidebar right">
+    <div class="search-right" id="search" data-spm="search-right"></div>
+    <div class="godA" id="nav_button">
+
+	</div>
+    <div class="godR" id="god_1">
+
+    </div>
+   <div class="bord clear recommend" id="recommend-writer" data-spm="recommend-mp">
+
+</div>    <div class="godR" id="god_2">
+
+    </div>
+    <div class="hot-article clear bord" id="hot-news" data-spm="hot-article">
+ </div>
+
+    <div class="godR" id="god_3">
+
+    </div>
+ <div class="pages-fun " id="pages-fun">
+    </div>
+    <div class="godR" id="god_4">
+
+    </div>
+    <div id="god_fix_container" class="right-fixed" style="display:none;">
+        <div class="godR" id="god_fix_1">
+
+        </div>
+    </div>
+    <div id="fixed-view" data-rel="#hot-news">
+    </div>
+</div>    </div>
+
+    <div id="float-btn" class="float-links"></div>    <div id="pop-news" class="pop-news"></div></div>
+
+
+
+<script src="//statics.itc.cn/web/static/js/lib-61587d9fb8.js"></script>
+<script src="//39d0825d09f05.cdn.sohucs.com/sdk/passport-4.0.3.js"></script>
+<!--<script src="//statics.itc.cn/web/static/js/ie8hack-07e05e83f1.js"></script>-->
+<script src="//txt.go.sohu.com/ip/soip"></script>
+<script src="//statics.itc.cn/web/static/js/main-a00895c961.js"></script>
+<!-- <script src="//js.sohu.com/pv.js"></script> -->
+<script>
+try{
+    window.sohu_mp.tag({
+        tag_id: "48162",
+        channel_id: "30",
+        tag_name:"智能手表"
+    });
+}
+catch(e){
+    var html = '<div class="err-js">' +
+                '<span><em class="icon err-js-icon"></em>JS加载错误，请重新加载。</span>' +
+                '<a href="javascript:window.location.reload()" target="_blank" class="cached-btn"' +
+                '><em class="icon-cached"></em>刷新</a></div>';
+    $(document.body).prepend(html);
+   //加载监控代码
+   console.log("发生错误",e);
+}
+</script>
+<script src="//statics.itc.cn/spm/prod/js/1.0.3/spm.js"></script>
+<!--[if lt IE 8]>
+<script type="text/javascript">
+(function(){
+    var ua = navigator.userAgent;
+    var version;
+    var html = '<div class="area clear">' +
+        '<div class="ie-low">' +
+        '<p>您的浏览器版本过低<br>为了更好的体验，请升级你的浏览器。</p>' +
+        '<h5><a href="https://ie.sogou.com" target="_blank" class="upgrade-btn">马上升级</a></h5>' +
+        '</div></div>';
+    if (/MSIE ([^;]+)/.test(ua)) {
+        version = parseInt(RegExp["$1"]);
+        if (version<8) {
+            document.body.innerHTML=html;
+            var reg = new RegExp("(^| )SUV=([^;]*)(;|$)");
+            var suvs = unescape(document.cookie.match(reg)[2]); 
+            var spv_server_src = "http://pv.sohu.com/action.gif?actionId=10078&SUV="+suvs;
+            var scripts = document.createElement('script');
+            scripts.src = spv_server_src;
+            document.body.appendChild(scripts);   
+            Raven.captureException(new Error('ie'+version));   
+        }
+    }
+})()
+</script>
+<![endif]-->
+<script src="//images.sohu.com/bill/default/sohu-require.js"></script>
+<script type="text/javascript"> require(["sjs/matrix/ad/passion"]);</script>
+<script type="text/javascript" src="//www.sohu.com/sohuflash_1.js"></script>
+<script type="text/javascript" src="//images.sohu.com/bill/s2015/jscript/lib/sjs/matrix/ad/form/delivery.js"></script>
+<script type="text/javascript" src="//images.sohu.com/bill/s2015/jscript/lib/sjs/matrix/pv/pagePVmonitor.js"></script>
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,2800 @@
+<!DOCTYPE HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  var Constants = {
+    webHost : "https://film.sohu.com",
+    scriptRoot: 'https://film.sohu.com/resources/js/source',
+    styleRoot: 'https://film.sohu.com/resources/css/source',
+    imgRoot: 'https://film.sohu.com/resources/img',
+    version : "1567402385289",
+    activityApiUrl : "https://m.film.sohu.com",
+    newActApiUrl : "https://m.film.sohu.com/newact"
+  };
+</script>
+
+<html class="J_play_page">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=8" /> -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit">
+<meta name="keywords" content="搜狐视频会员,film,dapian,电影,付费,会员,高清,视频,在线观看,点播,玩具总动员4（普通话版）" />
+<link rel="shortcut icon" type="image/x-icon"
+	href="https://film.sohu.com/resources/img/favicon.ico" />
+<title>玩具总动员4（普通话版）-电影-高清在线观看-搜狐视频会员</title>
+<link rel="stylesheet" href="//css.tv.itc.cn/film/common.css">
+<link rel="stylesheet" href="//css.tv.itc.cn/film/detail.css">
+</head>
+
+
+  
+
+
+<body id="detail-page">
+	<!--移动有数统计 start-->
+<script>
+var _udata = _udata||[];
+_udata.push(["setAutoPageView",false]); //设置页面停止自动采集
+</script>
+<!--移动有数统计 end-->
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  var Constants = {
+    webHost : "https://film.sohu.com",
+    scriptRoot: 'https://film.sohu.com/resources/js/source',
+    styleRoot: 'https://film.sohu.com/resources/css/source',
+    imgRoot: 'https://film.sohu.com/resources/img',
+    version : "1567402385289",
+    activityApiUrl : "https://m.film.sohu.com",
+    newActApiUrl : "https://m.film.sohu.com/newact"
+  };
+</script>
+<script type="text/javascript" src="https://film.sohu.com/resources/js/source/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="https://film.sohu.com/resources/js/source/lib/sea.js"></script>
+<script type="text/javascript" src="https://film.sohu.com/resources/js/source/sea-config.js"></script>
+<!--[if lt IE 9]>
+    <script src="https://film.sohu.com/resources/js/source/lib/respond.min.js?v=1567402385289"></script>
+<![endif]-->
+  <!-- 等价于登录框种的data-pop/data-pop-id,修补登录框种不上的情况-->
+  <input type="hidden" id="popType" value="" autocomplete='off'>
+  <input type="hidden" id="popId" value="" autocomplete='off'>
+<div class="header">
+  <div class="wrap">
+    <div id="search_container">
+      <form id="search_form" autocomplete="off" target="_blank" action="//so.tv.sohu.com/mts" name="sform" method="GET">
+        <div class="input_wrapper">
+          <input style="width: 152px" id="q" name="wd" type="text" data-wrap="header_search_suggest" autocomplete="off" placeholder="请输入关键字" class="">
+          <input type="submit" id="search_icon" class="search_icon" value="" />
+          <div id="header_search_suggest" class="search_suggest"></div>
+        </div>
+      </form>
+      <ul id="login_status">
+        <li>
+          <div id="login_sign" class="not_login already_logined">
+            <div id="userinfo_cover" class="rt">
+              <a href="https://film.sohu.com/profile" id="login_personal_info" target="_blank"> <img id="userImage" src="" alt=""></a>
+              <div id="login_box" class="alert_wrap hidden">
+                <div id="login_box_wrap" class="user_list">
+                  <div class="topUser">
+                    <p class="topUsername"></p>
+                    <a href="javascript:void(0);" title="退出" class="J_logout">[退出]</a>
+                  </div>
+                  <div class="topUserInfoBox">
+                    <p class="userInfoBox">
+                      <img src="//css.tv.itc.cn/film/img/crown_profile_disable.png"><span class="userStatus">您尚未开通会员</span>
+                    </p>
+                    <a href="javascript:void(0);" class="payBtn J_continue_vip_btn headerPay" position="header_open">开通会员</a> <a
+                      href="javascript:void(0);" style="cursor: default;" target="_blank" class="active_text">&nbsp;</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="login_bought" class="rt header-right-item">
+              <a id="already_bought" href="javascript:;">已购</a>
+              <div id="user_buy" class="alert_wrap user_list_pd02 hidden" data-page="0">
+                <div id="user_buy_wrap" class="user_list shortheight">
+                  <!--<div class="arrow_top_02"></div>-->
+                  <div class="f_white_op5 ta_center" id="not_buy" style="display: none;">您尚未购买过任何视频</div>
+                  <div class="J_page_bought page_bought hidden">
+                    <span id="prev_bought" class="array_9 prev_bought mright_10">前一页</span> <span id="next_bought" class="array_9 next_bought">下一页</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="login_record" class="rt header-right-item">
+              <a id="already_see" href="javascript:;">记录</a>
+              <div id="history_list" class="alert_wrap user_list_pd02 hidden" data-page="1">
+                <div id="history_list_wrap" class="user_list shortheight">
+                  <div class="f_white_op5 ta_center" id="not_see" style="display: none;">您还没有看过任何影片哦</div>
+                  <div class="clear_history hidden">清除记录</div>
+                  <div class="page_history hidden" style="display: none;">
+                    <span id="prev_history" class="array_9 prev_his mright_10">前一页</span> <span id="next_history" class="array_9 next_his">下一页</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cl"></div>
+          </div>
+
+        </li>
+        <li>
+          <a href="//my.tv.sohu.com/user/reg/reginfo.do?bru=//film.sohu.com/" id="nav_btn_register" target="_blank">注册</a>
+        </li>
+        <li>
+          <a href="javascript:;" id="nav_btn_login" class="global_login J_trigger_login">登录</a>
+        </li>
+      </ul>
+    </div>
+
+    <a href="//tv.sohu.com/" target="_blank">
+      <div class="logo"></div>
+    </a>
+    <ul class="nav header-nav">
+      <li class="nocurrent">
+        <a href="https://film.sohu.com">首页</a>
+      </li>
+      <li class="nocurrent">
+        <a href="https://film.sohu.com/list_0_0_0_0_0_1_60.html">片库</a>
+      </li>
+      <li class="nocurrent">
+        <a href="https://film.sohu.com/vip_theatre.html">会员剧场<i class="nav-new"></i></a>
+      </li>
+      <li class="nocurrent">
+        <a href="https://film.sohu.com/vipAct.html">狐利社</a>
+      </li>
+      <li class="nocurrent">
+        <a href="https://film.sohu.com/network_movie.html">网络大电影</a>
+      </li>
+      <li class="nocurrent">
+        <a href="https://film.sohu.com/vip.html">会员特权</a>
+      </li>
+      <!-- <li class="nocurrent silver-vip-item">
+        <a href="https://film.sohu.com/silverVip.html">体验会员</a>
+      </li> -->
+    </ul>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  var Constants = {
+    webHost : "https://film.sohu.com",
+    scriptRoot: 'https://film.sohu.com/resources/js/source',
+    styleRoot: 'https://film.sohu.com/resources/css/source',
+    imgRoot: 'https://film.sohu.com/resources/img',
+    version : "1567402385289",
+    activityApiUrl : "https://m.film.sohu.com",
+    newActApiUrl : "https://m.film.sohu.com/newact"
+  };
+</script>
+	<!-- 主站登录模块 -->
+	<!-- appid共用 -->
+
+	<!-- 加载主站登录相关文件 start-->
+	<script type="text/javascript" src="//js.tv.itc.cn/kao.js"></script>
+	<script type="text/javascript" src="//js.tv.itc.cn/dict.js"></script>
+	<script type="text/javascript">
+		kao('login_film',function(){
+			
+				
+			
+		});
+	</script>
+	<!-- 加载主站登录相关文件 end-->
+
+<!-- <script type="text/javascript">
+  seajs.use(["header"], function(header) {
+    header.init();
+  });
+</script> -->
+<script type="text/javascript" src="//js.tv.itc.cn/film/inc-header.js?v=1567402385289"></script>
+<!--升级提示弹框 start-->
+<div class="upgrade-tips-wrap hidden J_upgrade-tips">
+  <div class="upgrade-tips-inner-wrap">
+    <img src="//css.tv.itc.cn/film/img/upgrade-title.png" class="upgrade-img">
+    <h2>搜狐会员2015年全新升级啦！</h2>
+    <div class="upgrade-tips">
+      <p class="upgrade-title film-text-ellipsis">
+        尊敬的会员：<span class="upgrade-vip-name"></span>
+      </p>
+      <p class="upgrade-content">
+        会员频道全新改版，您已升级为搜狐视频会员，<br>您的会员权限如下：
+      </p>
+      <p class="film-vip-time">
+        会员到期时间：<span class="upgrade-vip-expire-time"></span>
+      </p>
+      <p class="delete-ad-time">
+        体验会员到期时间：<span class="upgrade-ad-expire-time"></span>
+      </p>
+    </div>
+    <a class="i-know-btn payBtn" href="javascript:void(0)" position="vip_upgrade_known">知道了</a>
+  </div>
+</div>
+<!--升级提示弹框 end-->
+
+  
+    
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  var Constants = {
+    webHost : "https://film.sohu.com",
+    scriptRoot: 'https://film.sohu.com/resources/js/source',
+    styleRoot: 'https://film.sohu.com/resources/css/source',
+    imgRoot: 'https://film.sohu.com/resources/img',
+    version : "1567402385289",
+    activityApiUrl : "https://m.film.sohu.com",
+    newActApiUrl : "https://m.film.sohu.com/newact"
+  };
+</script>
+<!--新增js切换-->
+<input type="hidden" name="apiUrl" id="apiUrl" value="https://api.store.sohu.com">
+<textarea id="dialogOpenVipDialog" cols="0" rows="0" style="display: none;">
+<div class="easyDialog_wrapper" id="dialogOpenVipDialogWrapper">
+  <div class="easyDialog_content">
+    <h4 class="easyDialog_title" id="easyDialogTitle">
+      <a href="javascript:void(0)" title="关闭窗口" class="close_btn" id="closeBtn">&times;</a>
+    </h4>
+    <div class="easyDialog_text">
+      <div id="dialog_open_vip" class="dialog_open_vip">
+        <div class="dialog_main">
+          <div class="content_wrap clearfix">
+            <div class="left-title">
+              <span class="crown"></span> <span class="be_vip">搜狐视频会员免广告畅享海量大片</span>
+            </div>
+            <div class="right-title-tips">手机/Pad/电脑端会员权益（不含TV端）
+            </div>
+          </div>
+
+          <div class="pay_method">
+            <form action="/pay/do/">
+
+              <div class="pt_cont_main ">
+                <div class="pt_cont">
+                  <span class="pt_tit lf pright_10">支付方式：</span>
+                  <div class="pay_tab lf">
+                    <ul>
+                      <li class="selected" type-id="alipay">支付宝支付</li>
+                      <li class="" type-id="wechat">微信支付</li>
+                      <li class="" type-id="mobilepay">话费支付</li>
+                      <li class="" type-id="jdpay">京东支付<span class="jd-tab-tips">京东支付随机减</span></li>
+                      <li class="" type-id="code" id="d_code">兑换码</li>
+                    </ul>
+                  </div>
+                  <div class="cl"></div>
+                </div>
+                <div class="pay_tab_cont">
+                  <div class="tab_content tab_content_alipay">
+                    <div class=" pay_pd01 payway_alipay pay-pop-outer-wrap clearfix J_pay_vip_gallary">
+                      <div class="pay-pop-wrap J_scroll_list_wrap">
+                      <ul>
+                        
+                        
+                          
+                            
+                            
+                              
+                            
+                            <li data-id="4546" data-price="9.9" class="one_month month_pay current J_renewal_commodity" for="per_month_4546">
+                              <div class="item-inner-wrap">
+                                <p class="item-info">
+                                  <span class="now-price"><em>9.9</em>元</span>
+                                  <span class="time">
+                                  连续包月
+                                  </span>
+                                </p>
+                                <p class="item-price">
+                                  <span class="discount"><em>6.6</em>折</span>
+                                  <span class="origin-price">15元</span>
+                                </p>
+                                
+                                  
+                                  
+                                  	<p class="give-ticket-info hidden">每月赠送2张观影券</p>
+                                  
+                                
+                              </div>
+                              
+                                
+                                  <p class="product-des">新用户首月9.9元，第2个月起15元/月</p>
+                                
+                              
+                              
+                              <input id="per_month_4546" type="radio" name="money_per_month" checked="checked">
+                            </li>
+                          
+                            
+                            
+                            <li data-id="4429" data-price="45.0" class="one_month month_pay  J_renewal_commodity" for="per_month_4429">
+                              <div class="item-inner-wrap">
+                                <p class="item-info">
+                                  <span class="now-price"><em>45</em>元</span>
+                                  <span class="time">
+                                  连续包季
+                                  </span>
+                                </p>
+                                <p class="item-price">
+                                  <span class="discount"><em>8.0</em>折</span>
+                                  <span class="origin-price">56元</span>
+                                </p>
+                                
+                                  
+                                  
+                                  	<p class="give-ticket-info hidden">每月赠送2张观影券</p>
+                                  
+                                
+                              </div>
+                              
+                                
+                                  <p class="product-des">会员到期前为您自动续费3个月，可随时取消</p>
+                                
+                              
+                              
+                              <input id="per_month_4429" type="radio" name="money_per_month" checked="checked">
+                            </li>
+                          
+                            
+                            
+                            <li data-id="4436" data-price="178.0" class="one_month month_pay  J_renewal_commodity" for="per_month_4436">
+                              <div class="item-inner-wrap">
+                                <p class="item-info">
+                                  <span class="now-price"><em>178</em>元</span>
+                                  <span class="time">
+                                  连续包年
+                                  </span>
+                                </p>
+                                <p class="item-price">
+                                  <span class="discount"><em>9.0</em>折</span>
+                                  <span class="origin-price">198元</span>
+                                </p>
+                                
+                                  
+                                    <p class="give-ticket-info hidden">每月赠送4张观影券</p>
+                                  
+                                  
+                                
+                              </div>
+                              
+                                
+                                  <p class="product-des">会员到期前为您自动续费1年，可随时取消</p>
+                                
+                              
+                              
+                              <input id="per_month_4436" type="radio" name="money_per_month" checked="checked">
+                            </li>
+                          
+                            
+                            
+                            <li data-id="1017" data-price="20.0" class="one_month month_pay  " for="per_month_1017">
+                              <div class="item-inner-wrap">
+                                <p class="item-info">
+                                  <span class="now-price"><em>20</em>元</span>
+                                  <span class="time">
+                                  1个月
+                                  </span>
+                                </p>
+                                <p class="item-price">
+                                  <span class="discount"><em>5.7</em>折</span>
+                                  <span class="origin-price">35元</span>
+                                </p>
+                                
+                                  
+                                  
+                                  	<p class="give-ticket-info hidden">每月赠送2张观影券</p>
+                                  
+                                
+                              </div>
+                              
+                                
+                              
+                              
+                              <input id="per_month_1017" type="radio" name="money_per_month" checked="checked">
+                            </li>
+                          
+                            
+                            
+                            <li data-id="1015" data-price="40.0" class="one_month month_pay  " for="per_month_1015">
+                              <div class="item-inner-wrap">
+                                <p class="item-info">
+                                  <span class="now-price"><em>40</em>元</span>
+                                  <span class="time">
+                                  季卡
+                                  </span>
+                                </p>
+                                <p class="item-price">
+                                  <span class="discount"><em>3.8</em>折</span>
+                                  <span class="origin-price">105元</span>
+                                </p>
+                                
+                                  
+                                  
+                                  	<p class="give-ticket-info hidden">每月赠送2张观影券</p>
+                                  
+                                
+                              </div>
+                              
+                                
+                                  <p class="product-des">限时特惠</p>
+                                
+                              
+                              
+                              <input id="per_month_1015" type="radio" name="money_per_month" checked="checked">
+                            </li>
+                          
+                            
+                            
+                            <li data-id="1016" data-price="198.0" class="one_month month_pay  " for="per_month_1016">
+                              <div class="item-inner-wrap">
+                                <p class="item-info">
+                                  <span class="now-price"><em>198</em>元</span>
+                                  <span class="time">
+                                  1年
+                                  </span>
+                                </p>
+                                <p class="item-price">
+                                  <span class="discount"><em>4.8</em>折</span>
+                                  <span class="origin-price">410元</span>
+                                </p>
+                                
+                                  
+                                    <p class="give-ticket-info hidden">每月赠送4张观影券</p>
+                                  
+                                  
+                                
+                              </div>
+                              
+                                
+                              
+                              
+                              <input id="per_month_1016" type="radio" name="money_per_month" checked="checked">
+                            </li>
+                          
+                        
+                      </ul>
+                    </div>
+                    <a href="javascript: void(0);" class="prev disabled_drag"></a>
+                    <a href="javascript: void(0);" class="next disabled_drag"></a>
+                    </div><!-- payway_alipay -->
+                    <div class="pay-agree">
+                      <div class="pay-protocol">
+                        <span>
+                          <input type="checkbox" name="checkbox" checked="checked" id="agreeFee" disabled> <label for="agreeFee"
+                              class="agree_fee">同意</label> <span><a href="//tv.sohu.com/upload/store/agreement.html" target="_blank">《搜狐视频收费协议》</a></span>
+                        </span>
+                        <span class="renewal-agree hidden">
+                          <a href="//tv.sohu.com/s/m/film/renewal-agree.html" target="_blank">《搜狐视频连续商品自动续费服务协议》</a>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="pay-coupon pt_cont ">
+                          <span class="pt_tit pright_10 txt-indent lf">代金券：</span>
+                          <div class="coupon-select lf">
+                              <div class="dropdown-default">您还没有当前商品的优惠券哦~~</div>
+                              <ul class="dropdown-menu"></ul>
+                              <span class="down-arrow"></span>
+                          </div>
+                    </div>
+                    <div class="pay-money">
+                      <div class="money-text">
+                        <span>支付金额：</span>
+                      </div>
+                      <div class="hm">
+                        
+                          <span class="vip_price">0.0</span>
+                          <span>元</span>
+                        
+                      </div>
+                      <div class="border_bottom"></div>
+                    </div>
+                    <div class="pay-QR clearfix">
+                      <!-- hidden-->
+                      <div class="QR-text" data-id="1002" data-price="0.01">
+                        <span class="mright_40">支付宝扫码支付<a class="refresh_qrcode J_refresh_qrcode" href="javascript:void(0);">(刷新)</a></span>
+                        
+                          
+                            <p>
+                              (完成支付后，<a id="playNow" href="https://film.sohu.com/album/9579907.html?play_now=true">立即播放</a>)
+                            </p>
+                          
+                          
+                        
+                      </div>
+                      <div class="QR-code">
+                        <img src="" data-qrcode="" />
+                      </div>
+                    </div>
+                    <div class="payed hidden">
+                      <div class="payed-text clearfix">
+                        <span class="pt">支付宝页面支付</span> <a id="btnPaySubmit" target="_blank" class="btn_pay"
+                            href="/pay/do.action?commodity_id=4546&pay=0">立即支付</a>
+                      </div>
+                    </div>
+                    <div class="alt_success">支付成功</div>
+                  </div><!-- tab_content -->
+
+                  <div class="tab_content tab_content_wechat hidden">
+                    <div class=" pay_pd01 payway_wechat pay-pop-outer-wrap clearfix J_pay_vip_gallary" data-payType="wechat">
+                      <div class="pay-pop-wrap J_scroll_list_wrap">
+                      <ul>
+                      
+                        
+                        
+                          
+                          
+                            
+                          
+                          <li data-id="4546" data-price="9.9"
+                              class="one_month month_pay current J_renewal_commodity" for="per_month_4546">
+                            <div class="item-inner-wrap">
+                              <p class="item-info">
+                                <span class="now-price"><em>9.9</em>元</span>
+                                <span class="time">
+                                连续包月
+                                </span>
+                              </p>
+                              <p class="item-price">
+                                <span class="discount"><em>6.6</em>折</span>
+                                <span class="origin-price">15元</span>
+                              </p>
+                              
+                                  
+                                  
+                                  	<p class="give-ticket-info hidden">每月赠送2张观影券</p>
+                                  
+                              
+                            </div>
+                            
+                              
+                                <p class="product-des">新用户首月9.9元，第2个月起15元/月</p>
+                              
+                            
+                            
+                            <input id="per_month_4546" type="radio" name="money_per_month" checked="checked">
+                          </li>
+                        
+                          
+                          
+                          <li data-id="4429" data-price="45.0"
+                              class="one_month month_pay  J_renewal_commodity" for="per_month_4429">
+                            <div class="item-inner-wrap">
+                              <p class="item-info">
+                                <span class="now-price"><em>45</em>元</span>
+                                <span class="time">
+                                连续包季
+                                </span>
+                              </p>
+                              <p class="item-price">
+                                <span class="discount"><em>8.0</em>折</span>
+                                <span class="origin-price">56元</span>
+                              </p>
+                              
+                                  
+                                  
+                                  	<p class="give-ticket-info hidden">每月赠送2张观影券</p>
+                                  
+                              
+                            </div>
+                            
+                              
+                                <p class="product-des">会员到期前为您自动续费3个月，可随时取消</p>
+                              
+                            
+                            
+                            <input id="per_month_4429" type="radio" name="money_per_month" checked="checked">
+                          </li>
+                        
+                          
+                          
+                          <li data-id="4436" data-price="178.0"
+                              class="one_month month_pay  J_renewal_commodity" for="per_month_4436">
+                            <div class="item-inner-wrap">
+                              <p class="item-info">
+                                <span class="now-price"><em>178</em>元</span>
+                                <span class="time">
+                                连续包年
+                                </span>
+                              </p>
+                              <p class="item-price">
+                                <span class="discount"><em>9.0</em>折</span>
+                                <span class="origin-price">198元</span>
+                              </p>
+                              
+                                  
+                                    <p class="give-ticket-info hidden">每月赠送4张观影券</p>
+                                  
+                                  
+                              
+                            </div>
+                            
+                              
+                                <p class="product-des">会员到期前为您自动续费1年，可随时取消</p>
+                              
+                            
+                            
+                            <input id="per_month_4436" type="radio" name="money_per_month" checked="checked">
+                          </li>
+                        
+                          
+                          
+                          <li data-id="1017" data-price="20.0"
+                              class="one_month month_pay  " for="per_month_1017">
+                            <div class="item-inner-wrap">
+                              <p class="item-info">
+                                <span class="now-price"><em>20</em>元</span>
+                                <span class="time">
+                                1个月
+                                </span>
+                              </p>
+                              <p class="item-price">
+                                <span class="discount"><em>5.7</em>折</span>
+                                <span class="origin-price">35元</span>
+                              </p>
+                              
+                                  
+                                  
+                                  	<p class="give-ticket-info hidden">每月赠送2张观影券</p>
+                                  
+                              
+                            </div>
+                            
+                              
+                            
+                            
+                            <input id="per_month_1017" type="radio" name="money_per_month" checked="checked">
+                          </li>
+                        
+                          
+                          
+                          <li data-id="1015" data-price="40.0"
+                              class="one_month month_pay  " for="per_month_1015">
+                            <div class="item-inner-wrap">
+                              <p class="item-info">
+                                <span class="now-price"><em>40</em>元</span>
+                                <span class="time">
+                                季卡
+                                </span>
+                              </p>
+                              <p class="item-price">
+                                <span class="discount"><em>3.8</em>折</span>
+                                <span class="origin-price">105元</span>
+                              </p>
+                              
+                                  
+                                  
+                                  	<p class="give-ticket-info hidden">每月赠送2张观影券</p>
+                                  
+                              
+                            </div>
+                            
+                              
+                                <p class="product-des">限时特惠</p>
+                              
+                            
+                            
+                            <input id="per_month_1015" type="radio" name="money_per_month" checked="checked">
+                          </li>
+                        
+                          
+                          
+                          <li data-id="1016" data-price="198.0"
+                              class="one_month month_pay  " for="per_month_1016">
+                            <div class="item-inner-wrap">
+                              <p class="item-info">
+                                <span class="now-price"><em>198</em>元</span>
+                                <span class="time">
+                                1年
+                                </span>
+                              </p>
+                              <p class="item-price">
+                                <span class="discount"><em>4.8</em>折</span>
+                                <span class="origin-price">410元</span>
+                              </p>
+                              
+                                  
+                                    <p class="give-ticket-info hidden">每月赠送4张观影券</p>
+                                  
+                                  
+                              
+                            </div>
+                            
+                              
+                            
+                            
+                            <input id="per_month_1016" type="radio" name="money_per_month" checked="checked">
+                          </li>
+                        
+                      
+                    </ul>
+                    </div>
+                    <a href="javascript: void(0);" class="prev disabled_drag"></a>
+                    <a href="javascript: void(0);" class="next disabled_drag"></a>
+                    </div><!-- payway_wechat -->
+                    <div class="pay-agree">
+                      <div class="pay-protocol">
+                        <span>
+                          <input type="checkbox" name="checkbox" checked="checked" id="agreeFee" disabled> <label for="agreeFee"
+                              class="agree_fee">同意</label> <span><a href="//tv.sohu.com/upload/store/agreement.html" target="_blank">《搜狐视频收费协议》</a></span>
+                        </span>
+                        <span class="renewal-agree hidden">
+                          <a href="//tv.sohu.com/s/m/film/renewal-agree.html" target="_blank">《搜狐视频连续商品自动续费服务协议》</a>
+                        </span>
+                      </div>
+
+                    </div>
+                    <div class="pay-coupon pt_cont ">
+                      <span class="pt_tit pright_10 txt-indent lf">代金券：</span>
+                      <div class="coupon-select lf">
+                        <div class="dropdown-default">您还没有当前商品的优惠券哦~~</div>
+                        <ul class="dropdown-menu"></ul>
+                        <span class="down-arrow"></span>
+                      </div>
+                    </div>
+                    <div class="pay-money">
+                      <div class="money-text">
+                        <span>支付金额：</span>
+                      </div>
+                      <div class="hm">
+                        
+                          <span class="vip_price">0.0</span>
+                          <span>元</span>
+                        
+                      </div>
+                      <div class="border_bottom"></div>
+                    </div>
+                    <div class="pay-QR clearfix">
+                      <div class="QR-text" data-id="1002" data-price="0.01">
+                        <span class="mright_55">微信扫码支付<a class="refresh_qrcode J_refresh_qrcode" href="javascript:void(0);">(刷新)</a></span>
+                        
+                          
+                            <p>
+                              (完成支付后，<a id="playNow" href="https://film.sohu.com/album/9579907.html?play_now=true">立即播放</a>)
+                            </p>
+                          
+                          
+                        
+                      </div>
+                      <div class="QR-code">
+                        <img src="" data-qrcode="" />
+                      </div>
+                    </div>
+                    <div class="payed hidden">
+                      <div class="payed-text clearfix">
+                        <span class="pt">微信扫码支付</span> <a id="btnPaySubmit" target="_blank" class="btn_pay"
+                            href="/pay/do.action?commodity_id=4546&pay=0">立即支付</a>
+                      </div>
+                    </div>
+                    <div class="alt_success">支付成功</div>
+                  </div><!-- tab_content -->
+
+                  <div class="tab_content tab_content_mobile hidden">
+                    <div class="pleft_20 mbottom_-10 payway_mobilepay">
+                      <div class="input-item clearfix">
+                        <label class="pt_tit lf span_tit" data-id="per_month_">手机号：</label> <input name="mobile" type="text" id="mobile"
+                            maxlength="11" class="phone_input font_msyh lf" value="" placeholder="请输入手机号码">
+                        <div class="worked-moblie-wrap hidden">
+                          <span class="worked-mobile"></span>（<a herf="javascript:void(0);" class="J_change_mobile change_mobile">更换号码</a>）
+                        </div>
+                      </div>
+                      <div class="input-item mobile-code-validation-item clearfix hidden">
+                        <label class="pt_tit lf span_tit" for="mobile_code_validation">验证码：</label> <input id="mobile_code_validation"
+                            placeholder="请输入验证码" name="mobile_code_validation" class="phone_input font_msyh mobile_code_validation lf" type="text">
+                        <button type="button" class="mobile_code_btn lf" disabled="disabled">
+                          <span class="num">60</span>秒后重新获取
+                        </button>
+                      </div>
+                      <div class="text_error ptop_10"></div>
+                    </div><!-- payway_mobilepay -->
+
+                    <div class="pay-agree">
+                      <div class="pay-protocol">
+                        <div>
+                          <input type="checkbox" name="checkbox" checked="checked" id="agreeFee" disabled> <label for="agreeFee"
+                              class="agree_fee">同意</label> <span><a href="http://tv.sohu.com/upload/store/agreement.html" target="_blank">《搜狐视频收费协议》</a></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pay-tips clearfix">
+                      <span class="pt_tit lf pright_10">温馨提示：</span>
+                      <ol>
+                        <li>手机话费包月服务仅支持移动、联通、电信手机用户,订购结果可能延时,开通后请稍后查看</li>
+                        <li>续费规则：移动用户订购成功后每隔30天为您自动续费；联通用户订购成功后每月订购日为您自动续费，如订购日为月末最后一天则续费日为月末最后一天；电信用户会员到期前三天为您发起自动续费。</li>
+                        <li>一个手机号仅能为一个搜狐账号开通会员服务；如要更换手机号，请您先退订当前手机号再绑定新手机号。</li>
+                        <li>退订：联通用户退订发送TD到10655198665；移动用户退订发送TD3905到1065890059或发送0000到106580083030，或发送0000到10086退订；电信用户如需退订请在电脑端访问搜狐视频会员网站。当月退订后不退费，下月不再收取任何会员费用。</li>
+                        <li>电信用户退订时，点击“立即退订”即可。<a href="javascript:void(0);" class="telecom_unsubscribe J_telecom_unsubscribe">立即退订</a></li>
+                        <li>如有疑问，请拨打400-881-6666（9:00-21:00 ）。</li>
+                      </ol>
+                    </div>
+                    <div class="pay-money">
+                      <div class="money-text">
+                        <span>支付金额：</span>
+                      </div>
+                      <div class="hm">
+                        <span class="mobile_vip_price">25</span> <span>元 （从手机话费中扣除）</span>
+                      </div>
+                    </div>
+                    <div class="border_bottom02"></div>
+                    <div class="payed clearfix">
+                      <div class="payed-text">
+                        <a herf="javascript:void(0);" class="mobile_previous hidden">返回上一步</a> <a id="mobilePayNext" target="_blank" class="btn_pay"
+                            href="#">下一步</a> <a id="mobilePaySubmit" class="btn_pay hidden" href="javascript:void(0);">立即支付</a>
+                      </div>
+                    </div>
+                  </div><!-- tab_content -->
+
+                  <div class="tab_content tab_content_jdpay hidden">
+                    <div class=" pay_pd01 payway_jdpay pay-pop-outer-wrap clearfix J_pay_vip_gallary">
+                      <div class="pay-pop-wrap J_scroll_list_wrap">
+                      <ul>
+                      
+                        
+                        
+                          
+                          
+                            
+                          
+                          <li data-id="4546" data-price="9.9"
+                              class="one_month month_pay current J_renewal_commodity" for="per_month_4546">
+                              <p class="jd-renewal-info">京东支付用户随机减</p>
+                            <div class="item-inner-wrap">
+                              <p class="item-info">
+                                <span class="now-price"><em>9.9</em>元</span>
+                                <span class="time">
+                                连续包月
+                                  
+                                </span>
+                              </p>
+                              <p class="item-price">
+                                <span class="discount"><em>6.6</em>折</span>
+                                <span class="origin-price">15元</span>
+                              </p>
+                              
+                                  
+                                  
+                                    <p class="give-ticket-info hidden">每月赠送2张观影券</p>
+                                  
+                              
+                            </div>
+                            
+                              
+                                <p class="product-des">新用户首月9.9元，第2个月起15元/月</p>
+                              
+                            
+                            
+                            <input id="per_month_4546" type="radio" name="money_per_month" checked="checked">
+                          </li>
+                        
+                          
+                          
+                          <li data-id="4429" data-price="45.0"
+                              class="one_month month_pay  J_renewal_commodity" for="per_month_4429">
+                              <p class="jd-renewal-info">京东支付用户随机减</p>
+                            <div class="item-inner-wrap">
+                              <p class="item-info">
+                                <span class="now-price"><em>45</em>元</span>
+                                <span class="time">
+                                连续包季
+                                  
+                                </span>
+                              </p>
+                              <p class="item-price">
+                                <span class="discount"><em>8.0</em>折</span>
+                                <span class="origin-price">56元</span>
+                              </p>
+                              
+                                  
+                                  
+                                    <p class="give-ticket-info hidden">每月赠送2张观影券</p>
+                                  
+                              
+                            </div>
+                            
+                              
+                                <p class="product-des">会员到期前为您自动续费3个月，可随时取消</p>
+                              
+                            
+                            
+                            <input id="per_month_4429" type="radio" name="money_per_month" checked="checked">
+                          </li>
+                        
+                          
+                          
+                          <li data-id="4436" data-price="178.0"
+                              class="one_month month_pay  J_renewal_commodity" for="per_month_4436">
+                              <p class="jd-renewal-info">京东支付用户随机减</p>
+                            <div class="item-inner-wrap">
+                              <p class="item-info">
+                                <span class="now-price"><em>178</em>元</span>
+                                <span class="time">
+                                连续包年
+                                  
+                                </span>
+                              </p>
+                              <p class="item-price">
+                                <span class="discount"><em>9.0</em>折</span>
+                                <span class="origin-price">198元</span>
+                              </p>
+                              
+                                  
+                                    <p class="give-ticket-info hidden">每月赠送4张观影券</p>
+                                  
+                                  
+                              
+                            </div>
+                            
+                              
+                                <p class="product-des">会员到期前为您自动续费1年，可随时取消</p>
+                              
+                            
+                            
+                            <input id="per_month_4436" type="radio" name="money_per_month" checked="checked">
+                          </li>
+                        
+                          
+                          
+                          <li data-id="1017" data-price="20.0"
+                              class="one_month month_pay  " for="per_month_1017">
+                              
+                            <div class="item-inner-wrap">
+                              <p class="item-info">
+                                <span class="now-price"><em>20</em>元</span>
+                                <span class="time">
+                                1个月
+                                  
+                                </span>
+                              </p>
+                              <p class="item-price">
+                                <span class="discount"><em>5.7</em>折</span>
+                                <span class="origin-price">35元</span>
+                              </p>
+                              
+                                  
+                                  
+                                    <p class="give-ticket-info hidden">每月赠送2张观影券</p>
+                                  
+                              
+                            </div>
+                            
+                              
+                            
+                            
+                            <input id="per_month_1017" type="radio" name="money_per_month" checked="checked">
+                          </li>
+                        
+                          
+                          
+                          <li data-id="1015" data-price="40.0"
+                              class="one_month month_pay  " for="per_month_1015">
+                              
+                            <div class="item-inner-wrap">
+                              <p class="item-info">
+                                <span class="now-price"><em>40</em>元</span>
+                                <span class="time">
+                                季卡
+                                  
+                                </span>
+                              </p>
+                              <p class="item-price">
+                                <span class="discount"><em>3.8</em>折</span>
+                                <span class="origin-price">105元</span>
+                              </p>
+                              
+                                  
+                                  
+                                    <p class="give-ticket-info hidden">每月赠送2张观影券</p>
+                                  
+                              
+                            </div>
+                            
+                              
+                                <p class="product-des">限时特惠</p>
+                              
+                            
+                            
+                            <input id="per_month_1015" type="radio" name="money_per_month" checked="checked">
+                          </li>
+                        
+                          
+                          
+                          <li data-id="1016" data-price="198.0"
+                              class="one_month month_pay  " for="per_month_1016">
+                              
+                            <div class="item-inner-wrap">
+                              <p class="item-info">
+                                <span class="now-price"><em>198</em>元</span>
+                                <span class="time">
+                                1年
+                                  
+                                </span>
+                              </p>
+                              <p class="item-price">
+                                <span class="discount"><em>4.8</em>折</span>
+                                <span class="origin-price">410元</span>
+                              </p>
+                              
+                                  
+                                    <p class="give-ticket-info hidden">每月赠送4张观影券</p>
+                                  
+                                  
+                              
+                            </div>
+                            
+                              
+                            
+                            
+                            <input id="per_month_1016" type="radio" name="money_per_month" checked="checked">
+                          </li>
+                        
+                      
+                    </ul>
+                    </div>
+                    <a href="javascript: void(0);" class="prev disabled_drag"></a>
+                    <a href="javascript: void(0);" class="next disabled_drag"></a>
+                    </div><!-- payway_jdpay -->
+                    <div class="pay-agree">
+                      <div class="pay-protocol">
+                        <span>
+                          <input type="checkbox" name="checkbox" checked="checked" id="agreeFee" disabled> <label for="agreeFee"
+                              class="agree_fee">同意</label> <span><a href="//tv.sohu.com/upload/store/agreement.html" target="_blank">《搜狐视频收费协议》</a></span>
+                        </span>
+                        <span class="renewal-agree hidden">
+                          <a href="//tv.sohu.com/s/m/film/renewal-agree.html" target="_blank">《搜狐视频连续商品自动续费服务协议》</a>
+                        </span>
+                      </div>
+
+                    </div>
+                    <div class="pay-coupon pt_cont ">
+                      <span class="pt_tit pright_10 txt-indent lf">代金券：</span>
+                      <div class="coupon-select lf">
+                        <div class="dropdown-default">您还没有当前商品的优惠券哦~~</div>
+                        <ul class="dropdown-menu"></ul>
+                        <span class="down-arrow"></span>
+                      </div>
+                    </div>
+                    <div class="pay-money">
+                      <div class="money-text">
+                        <span>支付金额：</span>
+                      </div>
+                      <div class="hm">
+                        
+                          <span class="vip_price">0.0</span>
+                          <span>元</span>
+                        
+                      </div>
+                      <div class="border_bottom"></div>
+                    </div>
+                    <div class="pay-QR clearfix">
+                      <div class="QR-text" data-id="1002" data-price="0.01">
+                        <span class="mright_55">京东扫码支付<a class="refresh_qrcode J_refresh_qrcode" href="javascript:void(0);">(刷新)</a></span>
+                        
+                          
+                            <p>
+                              (完成支付后，<a id="playNow" href="https://film.sohu.com/album/9579907.html?play_now=true">立即播放</a>)
+                            </p>
+                          
+                          
+                        
+                      </div>
+                      <div class="QR-code">
+                        <img src="" data-qrcode="" />
+                      </div>
+                    </div>
+                    <div class="payed hidden">
+                      <div class="payed-text clearfix">
+                        <span class="pt">京东扫码支付</span> <a id="btnPaySubmit" target="_blank" class="btn_pay"
+                            href="/pay/do.action?commodity_id=4546&pay=0">立即支付</a>
+                      </div>
+                    </div>
+                    <div class="alt_success">支付成功</div>
+                  </div><!-- tab_content -->
+
+                  <div class="tab_content tab_content_code hidden">
+
+                    <div class="pleft_20 pbottom_20 payway_code">
+                      <div class="input-item clearfix">
+                        <label class="pt_tit lf span_tit" for="codenum" data-id="per_month_">兑换码：</label> <input name="codenum" type="text"
+                            id="codenum" maxlength="18" class="phone_input font_msyh lf" value="" placeholder="请输入兑换码" />
+                      </div>
+                      <div class="input-item code-validation-item clearfix hidden">
+                        <label class="pt_tit lf span_tit" for="code_validation">验证码：</label> <input id="code_validation" placeholder="请输入验证码"
+                            maxlength="4" name="code_validation" class="phone_input font_msyh code_validation lf" type="text" /> <img
+                            class="code_picture lf" src="" alt="验证码"></img> <a class="code_change lf" href="#">换一张</a>
+                      </div>
+                      <div class="text_error ptop_10"></div>
+                    </div><!-- payway_code -->
+
+                    <div class="border_bottom02"></div>
+                    <div class="payed p_rel">
+                      <div class="payed-text ptop_10">
+                        <a id="btnPaySubmit_jh" class="btn_pay rt mright_40" href="javascript:void(0)">立即激活</a>
+                        <div class="fal_bottom_02 line_top01">
+                          <p>
+                            客服电话：<span class="mleft_10">4008816666</span>
+                          </p>
+                          <p class="ptop_5">
+                            工作时间：<span class="mleft_10">9:00--21:00（节假日不休）</span>
+                          </p>
+                        </div>
+                        <div class="cl"></div>
+                      </div>
+                    </div>
+
+                  </div><!-- tab_content -->
+
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="exchange font_msyh hidden" id="status_ok">
+          <div class="exchange_info">
+            <i class="ico_suc"></i><span class="exchange_tit">兑换成功</span>
+          </div>
+          <div class="suc_info line_bottom01"></div>
+          <div class="suc_bottom array_9 hidden">您可以在个人中心查看相关特权</div>
+        </div>
+
+        <div class="exchange font_msyh hidden" id="pay_ok">
+          <div class="exchange_info">
+            <i class="ico_suc"></i><span class="exchange_tit">支付成功</span>
+          </div>
+          <div class="suc_bottom array_9 hidden">
+            <a href="#" class="">您可以在个人中心查看相关特权</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</textarea>
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  var Constants = {
+    webHost : "https://film.sohu.com",
+    scriptRoot: 'https://film.sohu.com/resources/js/source',
+    styleRoot: 'https://film.sohu.com/resources/css/source',
+    imgRoot: 'https://film.sohu.com/resources/img',
+    version : "1567402385289",
+    activityApiUrl : "https://m.film.sohu.com",
+    newActApiUrl : "https://m.film.sohu.com/newact"
+  };
+</script>
+<textarea name="" id="payStatusDialog" style="display:none;" cols="0" rows="0">
+    <div class="easyDialog_wrapper" id="payStatusDialogWrap" >
+        <div class="easyDialog_content">
+            <h4 class="easyDialog_title" id="easyDialogTitle">
+                <a href="javascript:void(0)" title="关闭窗口" class="close_btn" id="closeBtn">&times;</a>
+            </h4>
+            <div class="easyDialog_text">
+				<div id="payStatus">
+					<div class="title">请您在新页面完成支付后选择！</div>
+                    <div class="pay-link-tips J_pay_link hidden"><a href="#" target="_blink">如果没有打开新窗口，请点击此处进行支付</a></div>
+					<div class="tip">
+						<div class="dont_close">支付前请不要关闭窗口</div>
+						<div class="tel_wrap">支付失败，如需帮助请拨打 400-881-6666</div>
+					</div>
+					<div class="btns">
+						<span id="paySuccess">支付成功</span>
+						<span id="payFail">失败，重新支付</span>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+</textarea>
+<textarea name="" id="codePaySuccessDialog" style="display:none;" cols="0" rows="0">
+    <div class="easyDialog_wrapper" id="codePaySuccessDialogWrap" >
+        <div class="easyDialog_content">
+            <h4 class="easyDialog_title" id="easyDialogTitle">
+                <a href="javascript:void(0)" title="关闭窗口" class="close_btn" id="closeBtn">&times;</a>
+            </h4>
+            <div class="easyDialog_text">
+				<div id="codePaySuccess" class="codepaystatus">
+					<div class="exchange_info">
+                    	<i class="ico_suc"></i><span class="exchange_tit">支付成功</span>
+                    	<p class="play-time"><em class="time">3</em>秒钟后自动<span class="word-tip">播放</span></p>
+                    </div>
+                    <div class="bottom_tips hidden">
+                    	您可以在个人中心查看相关特权
+                    </div>
+				</div>
+            </div>
+        </div>
+    </div>
+</textarea>
+<textarea name="" id="codePayFailDialog" style="display:none;" cols="0" rows="0">
+    <div class="easyDialog_wrapper" id="codePayFailDialogWrap" >
+        <div class="easyDialog_content">
+            <h4 class="easyDialog_title" id="easyDialogTitle">
+                <a href="javascript:void(0)" title="关闭窗口" class="close_btn" id="closeBtn">&times;</a>
+            </h4>
+            <div class="easyDialog_text">
+                <div id="codePayFail" class="codepaystatus">
+                    <div class="exchange_info">
+                        <i class="ico_fal"></i><span class="exchange_tit">订购失败，请重新订购</span>
+                        <p>如有疑问，请拨打客服电话400-881-6666（9:00-21:00 ）</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</textarea>
+
+
+	<input id="dmOpen" type="hidden" value="2">
+	<div class="player-bg">
+		<div class="player-detail">
+			<div class="bg_img_wrap">
+				<img class="bg_img" src="https://photocdn.tv.sohu.com/img/20190920/vrs_bg_hor_1568947163787_9579907.jpg" alt="" />
+			</div>
+			<div id="player_overlayer">
+			</div>
+
+      
+			
+				<input id="catecode" type="hidden" value='100102;100105'> <input
+				id="catid" type="hidden" value='1'> <input id="time"
+				type="hidden" value='5763'> <input id="tvtime"
+				type="hidden" value=''> <input id="aid"
+				type="hidden" value='9579907'> <input id="vid"
+				type="hidden" value='5696023'> <input id="tvid"
+				type="hidden" value=''>
+				<input id="drms" type="hidden" value='{5696023:1}'>
+				<input id="trailerDrms" type="hidden" value='{}'>
+			<div class="player_wrap">
+				<div class="player-top">
+					<div class="player-top-info clearfix">
+						<div class="player-top-info-left">
+							<div class="player-top-info-name">
+								<h2>玩具总动员4（普通话版）</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="player-mid">
+					<div class="player-content">
+						<div class="player-content-iebg"></div>
+						<div class="player-content-iebg-small"></div>
+						<div id="playerWrap"></div>
+						<div id="detail_btn_play" class="loading"></div>
+						<div class="detailInfo" style="display:none;">
+							<h2>正在播放预告片，会员完整观看</h2>
+							<div class="detailInfo_box">
+								<p>玩具总动员4（普通话版）</p>
+								<p class="singlePay" style="display:none;"><a href="javascript:void(0);" class="J_buy_film_btn payBtn" position="right_play_top_buyfilm">购买单片<span class="single-price">5元</span> >></a></p>
+								<div class="score">
+									<div class="movie-info-score">
+										<span class="movie_score_bg"> <span class="movie_score">8.1</span>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="detailInfo_btns">
+								<div class="singleBox" style="display:none;">
+									<p>购买单次观看，有效期48小时</p>
+									<p class="price"><span>5</span>元</p>
+								</div>
+								<a href="javascript:void(0);" position="play_right_pay" class="J_open_vip_btn payBtn">开通会员免费看</a>
+								<p class="yellow">购买会员优惠中，低至4.1折</p>
+								<p class="title_text">购买会员立赠观影券，还可享：</p>
+								<img src="https://film.sohu.com/resources/img/play_left.png" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="player-content-bg">
+						<div class="player-content-info">
+							<div class="action-item follow-item hidden">
+								<a class="action-title" href="javascript:;">
+								<i class="ico-follow"></i><span class="ico-text">关注</span>
+								</a>
+							</div>
+							<div class="action-item share-item">
+								<a class="action-title" href="javascript:;">
+								<i class="ico-share"></i><span class="ico-text">分享</span><i class="ico-down" id="ico-share"></i>
+								</a>
+								<div class="bdsharebuttonbox hover-content">
+									<b></b>
+									<a href="#" class="bds_weixin_1" data-cmd="weixin" title="分享到微信"><i class="icon"></i>微信</a>
+									<a href="#" class="bds_douban_1" data-cmd="douban" title="分享到豆瓣网"><i class="icon"></i>豆瓣</a>
+									<a href="#" class="bds_tsina_1" data-cmd="tsina" title="分享到新浪微博"><i class="icon"></i>新浪微博</a>
+								</div>
+							</div>
+
+							
+              				<div class="J_act_operation" style="float: left;display:none;">
+              				</div>
+							<div class="play-tips-wrap J_play_tips"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="movie-info-content-bg">
+			<div class="movie_info_bg">
+				<div class="movie-info-content clearfix">
+					<div class="movie-info-vip-wrap J_vip_buttons_info">
+						<h3 class="title"></h3>
+						<div class="des"></div>
+						<div class="buy-btn top-buy-btn"></div>
+						<div class="buy-btn bottom-buy-btn"></div>
+					</div>
+					<div class="movie-info-des-wrap">
+						<h2 class="title">影片简介</h2>
+						<div class="movie-info-img">
+							<img src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20190920/vrsa_ver9579907.jpg">
+						</div>
+						<div class="movie-info-text clearfix">
+							<div class="movie-info-score">
+								<span class="movie_score_bg"> <span class="movie_score">8.1</span>
+								</span>
+							</div>
+							<div class="movie-t">
+								<h3>玩具总动员4（普通话版）</h3>
+								<span></span>
+							</div>
+							<div class="mt movie-k">
+								<p>
+									<span class="one-item">年份：<em>2019年</em></span> <span
+										class="one-item">类型： 
+											<em>喜剧片</em>
+										
+											<em>动画片</em>
+										
+									</span>
+                  
+                  出品：
+										<span><em>华特·迪士尼电影公司</em></span>
+									
+                  
+								</p>
+								<p>
+									<span class="one-item">时长：96分钟</span> <span
+										class="one-item">地区：美国</span> <span>导演：
+										乔什·库雷
+										
+									</span>
+								</p>
+								<p class="film-text-ellipsis">
+									主演：
+									
+										汤姆·汉克斯/
+										
+									
+										蒂姆·艾伦/
+										
+									
+										安妮·波茨/
+										
+									
+										托尼·海尔/
+										
+									
+										科甘-迈克尔·凯/
+										
+									
+										克里斯蒂娜·亨德里克斯/
+										
+									
+										乔丹·皮尔/
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+								</p>
+							</div>
+							<div class="movie-j clearfix">
+								<h3>剧情：</h3>
+								<div class="movie_info_wrap">
+									<p class="part_info">
+										
+										
+											
+											
+												胡迪深知自己在这个世界上的使命，就是照顾他的主人，无论是原来的安迪还是新主人邦妮。当邦妮将不情愿成为玩具的“叉叉”带回家时，胡迪又担起了教导叉叉接受自己新身份的责任。 然而当邦妮将所有玩具带上房车家庭旅行时，胡迪与伙伴们将共同踏上全新的冒险之旅，领略房间外面的世界有多广阔，甚至偶遇老朋友牧羊女。在多年的独自闯荡中，牧羊女已经变得热爱冒险，不再只是一个精致的洋娃娃。正当胡迪和牧羊女发现彼此对玩具的使命的意义大相径庭时，他们很快意识到更大的威胁即将到来……
+											
+										
+									</p>
+									<p class="all_info">胡迪深知自己在这个世界上的使命，就是照顾他的主人，无论是原来的安迪还是新主人邦妮。当邦妮将不情愿成为玩具的“叉叉”带回家时，胡迪又担起了教导叉叉接受自己新身份的责任。 然而当邦妮将所有玩具带上房车家庭旅行时，胡迪与伙伴们将共同踏上全新的冒险之旅，领略房间外面的世界有多广阔，甚至偶遇老朋友牧羊女。在多年的独自闯荡中，牧羊女已经变得热爱冒险，不再只是一个精致的洋娃娃。正当胡迪和牧羊女发现彼此对玩具的使命的意义大相径庭时，他们很快意识到更大的威胁即将到来……</p>
+								</div>
+								<div class="movie-i js_show_more">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="v_list_wrap detail_template top_template">
+				<div class="gallery">
+					<div class="film_slider">
+						<div class="v_title_wrap">
+							<div class="title">
+								<a href="javascript:void(0)" class="top-tabs current-tab"
+									data-name="related">相关视频</a>
+								
+									<a href="javascript:void(0)" class="top-tabs"
+										data-name="series">同系列影片</a>
+								
+							</div>
+						</div>
+						<ul class="related-content clearfix J_related_content ">
+							
+								
+									<li data-vid="5696023" data-vType="1">
+										<div class="img_wrap">
+											<a href="javascript:void(0);" id="playFeature"><img
+												src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_135/20190918/vrs152945248.jpg" alt="" /> </a>
+											<div class="playing-cover"></div>
+											<div class="playing-tips">正在播放</div>
+										</div>
+										<div class="info film-text-ellipsis">
+											<span class="video_name" title="玩具总动员4（普通话版）">玩具总动员4（普通话版）</span>
+											<!--  <span
+											class="v_score">正片</span> -->
+										</div>
+									</li>
+								
+							
+							
+						</ul>
+						
+							<ul class="series-content hidden clearfix">
+								
+									<li>
+										<div class="img_wrap">
+											<a href="https://film.sohu.com/album/995546.html">
+												<span class="btn_play_gray"></span> <img
+												src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_135/20190628/vrs_hor_640_1561707113413_995546.jpg" alt="" />
+											</a>
+										</div>
+										<div class="info film-text-ellipsis">
+											<span class="video_name" title="玩具总动员（普通话版）">玩具总动员（普通话版）</span>
+										</div>
+									</li>
+								
+									<li>
+										<div class="img_wrap">
+											<a href="https://film.sohu.com/album/995540.html">
+												<span class="btn_play_gray"></span> <img
+												src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_135/20190628/vrs_hor_640_1561708382619_995540.jpg" alt="" />
+											</a>
+										</div>
+										<div class="info film-text-ellipsis">
+											<span class="video_name" title="玩具总动员2（普通话版）">玩具总动员2（普通话版）</span>
+										</div>
+									</li>
+								
+									<li>
+										<div class="img_wrap">
+											<a href="https://film.sohu.com/album/995542.html">
+												<span class="btn_play_gray"></span> <img
+												src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_135/20190628/vrs_hor_640_1561707920826_995542.jpg" alt="" />
+											</a>
+										</div>
+										<div class="info film-text-ellipsis">
+											<span class="video_name" title="玩具总动员3（普通话版）">玩具总动员3（普通话版）</span>
+										</div>
+									</li>
+								
+									<li>
+										<div class="img_wrap">
+											<a href="https://film.sohu.com/album/9579907.html">
+												<span class="btn_play_gray"></span> <img
+												src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_135/20190920/vrs_hor_640_1568947163941_9579907.jpg" alt="" />
+											</a>
+										</div>
+										<div class="info film-text-ellipsis">
+											<span class="video_name" title="玩具总动员4（普通话版）">玩具总动员4（普通话版）</span>
+										</div>
+									</li>
+								
+							</ul>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bg_main">
+		<div class="content_main content_main_hasrank">
+			<div class="ranking-list-wrap">
+				<ul class="rank-tabs clearfix">
+					<li><a href="javascript:void(0);" tab-name="热播榜"
+						class="current">热播榜</a></li>
+					<li><a href="javascript:void(0);" tab-name="新片" tab-category="0" tab-type="1">新片</a></li>
+					<li><a href="javascript:void(0);" tab-name="动作" tab-category="2" tab-type="0">动作</a></li>
+					<li><a href="javascript:void(0);" tab-name="喜剧" tab-category="8" tab-type="0">喜剧</a></li>
+					<li><a href="javascript:void(0);" tab-name="爱情" tab-category="1" tab-type="0">爱情</a></li>
+					<li><a href="javascript:void(0);" tab-name="网大" tab-category="0" tab-type="0" tab-company="7">网大</a></li>
+				</ul>
+				<ul class="rank-content" content-name="热播榜">
+					
+						<li>
+							<div class="score">7.9分</div>
+							
+								
+									<div class="rank-num rank1">1</div>
+								
+								
+							
+							<div class="middle">
+								<h4 class="film-text-ellipsis">蜘蛛侠：英雄远征（英语版）</h4>
+								<div class="sub-info film-text-ellipsis">荷兰弟不负重托独当一面</div>
+							</div> <a href="/album/999486.html" target="_blank"></a>
+						</li>
+					
+						<li>
+							<div class="score">5.7分</div>
+							
+								
+									<div class="rank-num rank2">2</div>
+								
+								
+							
+							<div class="middle">
+								<h4 class="film-text-ellipsis">黑衣人：全球追缉（2019）</h4>
+								<div class="sub-info film-text-ellipsis">锤哥女武神怒怼外星势力</div>
+							</div> <a href="/album/9559713.html" target="_blank"></a>
+						</li>
+					
+						<li>
+							<div class="score">7.3分</div>
+							
+								
+									<div class="rank-num rank3">3</div>
+								
+								
+							
+							<div class="middle">
+								<h4 class="film-text-ellipsis">阿拉丁（英语版）</h4>
+								<div class="sub-info film-text-ellipsis">阿拉伯劲歌热舞嘉年华</div>
+							</div> <a href="/album/997214.html" target="_blank"></a>
+						</li>
+					
+						<li>
+							<div class="score">7.8分</div>
+							
+								
+								
+									<div class="rank-num">4</div>
+								
+							
+							<div class="middle">
+								<h4 class="film-text-ellipsis">末代皇帝（上）</h4>
+								<div class="sub-info film-text-ellipsis">外国导演不会拍得更好</div>
+							</div> <a href="/album/9561950.html" target="_blank"></a>
+						</li>
+					
+						<li>
+							<div class="score">7.0分</div>
+							
+								
+								
+									<div class="rank-num">5</div>
+								
+							
+							<div class="middle">
+								<h4 class="film-text-ellipsis">复仇者联盟4（英语版）</h4>
+								<div class="sub-info film-text-ellipsis">一代复联超燃决战</div>
+							</div> <a href="/album/998232.html" target="_blank"></a>
+						</li>
+					
+						<li>
+							<div class="score">7.9分</div>
+							
+								
+								
+									<div class="rank-num">6</div>
+								
+							
+							<div class="middle">
+								<h4 class="film-text-ellipsis">巧奔妙逃</h4>
+								<div class="sub-info film-text-ellipsis">弹棉花之歌</div>
+							</div> <a href="/album/9561927.html" target="_blank"></a>
+						</li>
+					
+						<li>
+							<div class="score">8.1分</div>
+							
+								
+								
+									<div class="rank-num">7</div>
+								
+							
+							<div class="middle">
+								<h4 class="film-text-ellipsis">霸王别姬</h4>
+								<div class="sub-info film-text-ellipsis">这真的不是电影，而是人生</div>
+							</div> <a href="/album/9561939.html" target="_blank"></a>
+						</li>
+					
+						<li>
+							<div class="score">5.7分</div>
+							
+								
+								
+									<div class="rank-num">8</div>
+								
+							
+							<div class="middle">
+								<h4 class="film-text-ellipsis">天尽头</h4>
+								<div class="sub-info film-text-ellipsis">战火纷飞，肉欲纵横</div>
+							</div> <a href="/album/9565640.html" target="_blank"></a>
+						</li>
+					
+						<li>
+							<div class="score">7.2分</div>
+							
+								
+								
+									<div class="rank-num">9</div>
+								
+							
+							<div class="middle">
+								<h4 class="film-text-ellipsis">东邪西毒</h4>
+								<div class="sub-info film-text-ellipsis">王家卫式爱情武侠</div>
+							</div> <a href="/album/9561937.html" target="_blank"></a>
+						</li>
+					
+						<li>
+							<div class="score">7.7分</div>
+							
+								
+								
+									<div class="rank-num">10</div>
+								
+							
+							<div class="middle">
+								<h4 class="film-text-ellipsis">奇幻森林（英语版）</h4>
+								<div class="sub-info film-text-ellipsis">绝境求生 非凡冒险</div>
+							</div> <a href="/album/9056974.html" target="_blank"></a>
+						</li>
+					
+				</ul>
+			</div>
+
+      
+			<div class="v_list_wrap common_template left-template">
+				<div class="v_title_wrap">
+					<div class="title">
+						<a class="J_change_batch right-info payBtn" href="javascript:void(0);" position="film_change_batch" data-url="/album/favor.json">换一批</a>
+						<h2>猜你喜欢</h2>
+					</div>
+				</div>
+				<ul class="J_change_batch_list" data-page="2">
+					
+						
+						<li>
+							<div class="img_wrap">
+								<a href="https://film.sohu.com/album/6909826.html"
+									class="payBtn" position="film_related_recommended"> <span
+									class="btn_play_gray"></span> <img
+									src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20181220/vrsa_ver_1545292905503_6909826.jpg" alt="" />
+								</a>
+									 
+								<div class="info">
+									<span class="v_score"> 7.0分</span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="法官老爹">法官老爹</div>
+								<div class="sub_info" title="笨拙地爱着对方">笨拙地爱着对方</div>
+							</div>
+						</li>
+						
+					
+						
+						<li>
+							<div class="img_wrap">
+								<a href="https://film.sohu.com/album/9272371.html"
+									class="payBtn" position="film_related_recommended"> <span
+									class="btn_play_gray"></span> <img
+									src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20161226/vrsa_ver9272371.jpg" alt="" />
+								</a>
+									 
+								<div class="info">
+									<span class="v_score"> 7.9分</span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="静静的顿河·三">静静的顿河·三</div>
+								<div class="sub_info" title="壮且不可逆改的命运">壮且不可逆改的命运</div>
+							</div>
+						</li>
+						
+					
+						
+						<li>
+							<div class="img_wrap">
+								<a href="https://film.sohu.com/album/997074.html"
+									class="payBtn" position="film_related_recommended"> <span
+									class="btn_play_gray"></span> <img
+									src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20190314/vrsa_ver997074.jpg" alt="" />
+								</a>
+									 
+								<div class="info">
+									<span class="v_score"> 6.0分</span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="同林鸟">同林鸟</div>
+								<div class="sub_info" title="成龙电影最佳传播提名沈居辉">成龙电影最佳传播提名沈居辉</div>
+							</div>
+						</li>
+						
+					
+						
+						<li>
+							<div class="img_wrap">
+								<a href="https://film.sohu.com/album/9572384.html"
+									class="payBtn" position="film_related_recommended"> <span
+									class="btn_play_gray"></span> <img
+									src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20190904/vrsa_ver9572384.jpg" alt="" />
+								</a>
+									 
+								<div class="info">
+									<span class="v_score"> 5.9分</span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="哥斯拉的反击">哥斯拉的反击</div>
+								<div class="sub_info" title="两兽大闹大阪城">两兽大闹大阪城</div>
+							</div>
+						</li>
+						
+					
+						
+						<li>
+							<div class="img_wrap">
+								<a href="https://film.sohu.com/album/9565610.html"
+									class="payBtn" position="film_related_recommended"> <span
+									class="btn_play_gray"></span> <img
+									src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20190812/vrsa_ver9565610.jpg" alt="" />
+								</a>
+									 
+								<div class="info">
+									<span class="v_score"> 6.7分</span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="董小宛">董小宛</div>
+								<div class="sub_info" title="好一个忠烈才女绝色佳人">好一个忠烈才女绝色佳人</div>
+							</div>
+						</li>
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+				</ul>
+			</div>
+      
+
+			<div class="v_list_wrap common_template left-template">
+				<div class="v_title_wrap">
+					<div class="title">
+						<a class="right-info payBtn" href="https://film.sohu.com/list_0_0_0_0_0_1_60.html"
+							target="_blank" position="film_column_more">更多</a>
+						<h2>最新上线大片</h2>
+					</div>
+				</div>
+				<ul>
+					
+						<li>
+							<div class="img_wrap">
+								<a href="https://film.sohu.com/album/9561939.html">
+									<span class="btn_play_gray"></span> <img
+									src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20190821/vrsa_ver_1566369969553_9561939.jpg" alt="" />
+								</a>
+								 
+								<div class="info">
+									<span class="v_score">8.1分</span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="霸王别姬">霸王别姬</div>
+								<div class="sub_info" title="这真的不是电影，而是人生">这真的不是电影，而是人生</div>
+							</div>
+						</li>
+					
+						<li>
+							<div class="img_wrap">
+								<a href="https://film.sohu.com/album/9561950.html">
+									<span class="btn_play_gray"></span> <img
+									src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20190821/vrsa_ver_1566370651043_9561950.jpg" alt="" />
+								</a>
+								 
+								<div class="info">
+									<span class="v_score">7.8分</span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="末代皇帝（上）">末代皇帝（上）</div>
+								<div class="sub_info" title="外国导演不会拍得更好">外国导演不会拍得更好</div>
+							</div>
+						</li>
+					
+						<li>
+							<div class="img_wrap">
+								<a href="https://film.sohu.com/album/999486.html">
+									<span class="btn_play_gray"></span> <img
+									src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20190812/vrsa_ver_1565602064300_999486.jpg" alt="" />
+								</a>
+								 
+					              <div class="coupon"></div>
+					             
+								<div class="info">
+									<span class="v_score">7.9分</span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="蜘蛛侠：英雄远征（英语版）">蜘蛛侠：英雄远征（英语版）</div>
+								<div class="sub_info" title="荷兰弟不负重托独当一面">荷兰弟不负重托独当一面</div>
+							</div>
+						</li>
+					
+						<li>
+							<div class="img_wrap">
+								<a href="https://film.sohu.com/album/997214.html">
+									<span class="btn_play_gray"></span> <img
+									src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20190924/vrsa_ver_1569303980912_997214.jpg" alt="" />
+								</a>
+								 
+					              <div class="coupon"></div>
+					             
+								<div class="info">
+									<span class="v_score">7.3分</span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="阿拉丁（英语版）">阿拉丁（英语版）</div>
+								<div class="sub_info" title="阿拉伯劲歌热舞嘉年华">阿拉伯劲歌热舞嘉年华</div>
+							</div>
+						</li>
+					
+						<li>
+							<div class="img_wrap">
+								<a href="https://film.sohu.com/album/998232.html">
+									<span class="btn_play_gray"></span> <img
+									src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20190726/vrsa_ver_1564131566970_998232.jpg" alt="" />
+								</a>
+								 
+					              <div class="coupon"></div>
+					             
+								<div class="info">
+									<span class="v_score">7.0分</span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="复仇者联盟4（英语版）">复仇者联盟4（英语版）</div>
+								<div class="sub_info" title="一代复联超燃决战">一代复联超燃决战</div>
+							</div>
+						</li>
+					
+						<li>
+							<div class="img_wrap">
+								<a href="https://film.sohu.com/album/9559713.html">
+									<span class="btn_play_gray"></span> <img
+									src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20190724/vrsa_ver9559713.jpg" alt="" />
+								</a>
+								 
+					              <div class="coupon"></div>
+					             
+								<div class="info">
+									<span class="v_score">5.7分</span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="黑衣人：全球追缉（2019）">黑衣人：全球追缉（2019）</div>
+								<div class="sub_info" title="锤哥女武神怒怼外星势力">锤哥女武神怒怼外星势力</div>
+							</div>
+						</li>
+					
+						<li>
+							<div class="img_wrap">
+								<a href="https://film.sohu.com/album/1003627.html">
+									<span class="btn_play_gray"></span> <img
+									src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20190724/vrsa_ver_1563974163108_1003627.jpg" alt="" />
+								</a>
+								 
+								<div class="info">
+									<span class="v_score">7.6分</span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="初恋这件小事">初恋这件小事</div>
+								<div class="sub_info" title="暗恋这件小事儿">暗恋这件小事儿</div>
+							</div>
+						</li>
+					
+						<li>
+							<div class="img_wrap">
+								<a href="https://film.sohu.com/album/9555103.html">
+									<span class="btn_play_gray"></span> <img
+									src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20190819/vrsa_ver_1566192934733_9555103.jpg" alt="" />
+								</a>
+								 
+					              <div class="coupon"></div>
+					             
+								<div class="info">
+									<span class="v_score">6.5分</span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="小飞象2019（英语版）">小飞象2019（英语版）</div>
+								<div class="sub_info" title="小飞象的逆风翱翔">小飞象的逆风翱翔</div>
+							</div>
+						</li>
+					
+						<li>
+							<div class="img_wrap">
+								<a href="https://film.sohu.com/album/9513306.html">
+									<span class="btn_play_gray"></span> <img
+									src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20190702/vrsa_ver_1562060832047_9513306.jpg" alt="" />
+								</a>
+								 
+					              <div class="coupon"></div>
+					             
+								<div class="info">
+									<span class="v_score">7.0分</span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="惊奇队长（英语版）">惊奇队长（英语版）</div>
+								<div class="sub_info" title="漫威最强女战神霸气登场！">漫威最强女战神霸气登场！</div>
+							</div>
+						</li>
+					
+						<li>
+							<div class="img_wrap">
+								<a href="https://film.sohu.com/album/995739.html">
+									<span class="btn_play_gray"></span> <img
+									src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20190610/vrsa_ver995739.jpg" alt="" />
+								</a>
+								 
+								<div class="info">
+									<span class="v_score">7.8分</span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="末路丢失">末路丢失</div>
+								<div class="sub_info" title="教科书般的气氛营造">教科书般的气氛营造</div>
+							</div>
+						</li>
+					
+						<li>
+							<div class="img_wrap">
+								<a href="https://film.sohu.com/album/996312.html">
+									<span class="btn_play_gray"></span> <img
+									src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20190423/vrsa_ver996312.jpg" alt="" />
+								</a>
+								 
+								<div class="info">
+									<span class="v_score">8.5分</span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="狂人传说">狂人传说</div>
+								<div class="sub_info" title="一场艳遇误入惊天迷局">一场艳遇误入惊天迷局</div>
+							</div>
+						</li>
+					
+						<li>
+							<div class="img_wrap">
+								<a href="https://film.sohu.com/album/996743.html">
+									<span class="btn_play_gray"></span> <img
+									src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20190321/vrsa_ver996743.jpg" alt="" />
+								</a>
+								 
+								<div class="info">
+									<span class="v_score">7.2分</span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="大卫·林奇：艺术人生">大卫·林奇：艺术人生</div>
+								<div class="sub_info" title="大卫·林奇艺术人生独白">大卫·林奇艺术人生独白</div>
+							</div>
+						</li>
+					
+						<li>
+							<div class="img_wrap">
+								<a href="https://film.sohu.com/album/996757.html">
+									<span class="btn_play_gray"></span> <img
+									src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20190320/vrsa_ver996757.jpg" alt="" />
+								</a>
+								 
+								<div class="info">
+									<span class="v_score">7.4分</span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="总裁在上10：爱火重燃">总裁在上10：爱火重燃</div>
+								<div class="sub_info" title="时小念宫欧步入婚姻殿堂">时小念宫欧步入婚姻殿堂</div>
+							</div>
+						</li>
+					
+						<li>
+							<div class="img_wrap">
+								<a href="https://film.sohu.com/album/999831.html">
+									<span class="btn_play_gray"></span> <img
+									src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20181212/vrsa_ver_1544608056833_999831.jpg" alt="" />
+								</a>
+								 
+								<div class="info">
+									<span class="v_score">5.5分</span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="绝命逆袭师">绝命逆袭师</div>
+								<div class="sub_info" title="末路兄弟暴走斗财霸">末路兄弟暴走斗财霸</div>
+							</div>
+						</li>
+					
+						<li>
+							<div class="img_wrap">
+								<a href="https://film.sohu.com/album/5156134.html">
+									<span class="btn_play_gray"></span> <img
+									src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20181212/vrsa_ver_1544585950815_5156134.jpg" alt="" />
+								</a>
+								 
+								<div class="info">
+									<span class="v_score">8.2分</span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="追捕(1976)">追捕(1976)</div>
+								<div class="sub_info" title="看高仓健抽丝剥茧">看高仓健抽丝剥茧</div>
+							</div>
+						</li>
+					
+						<li>
+							<div class="img_wrap">
+								<a href="https://film.sohu.com/album/9526221.html">
+									<span class="btn_play_gray"></span> <img
+									src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20181120/vrsa_ver9526221.jpg" alt="" />
+								</a>
+								 
+								<div class="info">
+									<span class="v_score">6.3分</span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="丘吉尔">丘吉尔</div>
+								<div class="sub_info" title="再现惊心动魄伟大战役">再现惊心动魄伟大战役</div>
+							</div>
+						</li>
+					
+						<li>
+							<div class="img_wrap">
+								<a href="https://film.sohu.com/album/9379744.html">
+									<span class="btn_play_gray"></span> <img
+									src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20181128/vrsa_ver_1543399237306_9379744.jpg" alt="" />
+								</a>
+								 
+								<div class="info">
+									<span class="v_score">7.4分</span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="蚁人2：黄蜂女现身（英语版）">蚁人2：黄蜂女现身（英语版）</div>
+								<div class="sub_info" title="给你一场梦想成真">给你一场梦想成真</div>
+							</div>
+						</li>
+					
+						<li>
+							<div class="img_wrap">
+								<a href="https://film.sohu.com/album/9526219.html">
+									<span class="btn_play_gray"></span> <img
+									src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20181203/vrsa_ver_1543800953116_9526219.jpg" alt="" />
+								</a>
+								 
+								<div class="info">
+									<span class="v_score">6.3分</span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="惊天刺杀">惊天刺杀</div>
+								<div class="sub_info" title="首相的刺杀任务">首相的刺杀任务</div>
+							</div>
+						</li>
+					
+						<li>
+							<div class="img_wrap">
+								<a href="https://film.sohu.com/album/9521608.html">
+									<span class="btn_play_gray"></span> <img
+									src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20181029/vrsa_ver9521608.jpg" alt="" />
+								</a>
+								 
+								<div class="info">
+									<span class="v_score">6.5分</span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="青春逆袭路">青春逆袭路</div>
+								<div class="sub_info" title="追梦女主角逆袭成网红">追梦女主角逆袭成网红</div>
+							</div>
+						</li>
+					
+						<li>
+							<div class="img_wrap">
+								<a href="https://film.sohu.com/album/1010761.html">
+									<span class="btn_play_gray"></span> <img
+									src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20180816/vrsa_ver_1534400889135_1010761.jpg" alt="" />
+								</a>
+								 
+								<div class="info">
+									<span class="v_score">7.5分</span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="没完没了">没完没了</div>
+								<div class="sub_info" title="小人物的悲欢离合">小人物的悲欢离合</div>
+							</div>
+						</li>
+					
+				</ul>
+			</div>
+		</div>
+
+    
+		<div class="content_main">
+			<div class="characteristic-theatre-template right-template">
+				<h3>特色剧场</h3>
+				<ul class="clearfix">
+          
+            
+            <li>
+              <div class="img_wrap">
+                <a href="https://film.sohu.com/activity/237.html" class="payBtn" position="film_feature_theatre" position-url="https://film.sohu.com/activity/237.html" target="_blank"> <img src="http://photocdn.tv.sohu.com/img/20190130/pic_org_31e70095-6134-4d3b-b6a1-e59820f744d4.jpg" alt=""></a>
+              </div>
+              <div class="info film-text-ellipsis">
+                <span class="video_name" title="做今年狐厂最甜蜜的仔">做今年狐厂最甜蜜的仔</span>
+              </div>
+            </li>
+            
+          
+            
+            <li>
+              <div class="img_wrap">
+                <a href="http://tv.sohu.com/20170605/n495734949.shtml" class="payBtn" position="film_feature_theatre" position-url="http://tv.sohu.com/20170605/n495734949.shtml" target="_blank"> <img src="http://photocdn.tv.sohu.com/img/20170821/pic_compress_8eb2fc89-fa0e-4b10-975c-fa83b2f211b4_q_mini.jpg" alt=""></a>
+              </div>
+              <div class="info film-text-ellipsis">
+                <span class="video_name" title="韩东君苏醒游走世间">韩东君苏醒游走世间</span>
+              </div>
+            </li>
+            
+          
+            
+            <li>
+              <div class="img_wrap">
+                <a href="http://tv.sohu.com/20170322/n484314068.shtml" class="payBtn" position="film_feature_theatre" position-url="http://tv.sohu.com/20170322/n484314068.shtml" target="_blank"> <img src="http://i1.itc.cn/20170428/361f_64f2ffe3_b6fa_c4ad_c63c_d04f0a1c001d_1.jpg" alt=""></a>
+              </div>
+              <div class="info film-text-ellipsis">
+                <span class="video_name" title="狄仁杰元芳华丽回归">狄仁杰元芳华丽回归</span>
+              </div>
+            </li>
+            
+          
+            
+            <li>
+              <div class="img_wrap">
+                <a href="https://tv.sohu.com/v/MjAxOTA0MDgvbjYwMDY5MTc2MS5zaHRtbA==.html" class="payBtn" position="film_feature_theatre" position-url="https://tv.sohu.com/v/MjAxOTA0MDgvbjYwMDY5MTc2MS5zaHRtbA==.html" target="_blank"> <img src="http://photocdn.tv.sohu.com/img/20190517/pic_org_05d614d8-aac4-415b-ad4f-1226c385a033.jpg" alt=""></a>
+              </div>
+              <div class="info film-text-ellipsis">
+                <span class="video_name" title="绝美狐仙为爱魂飞魄散">绝美狐仙为爱魂飞魄散</span>
+              </div>
+            </li>
+            
+          
+				</ul>
+			</div>
+			<div class="v_list_wrap common_template left-template">
+				<div class="v_title_wrap">
+					<div class="title">
+						<a class="right-info payBtn" href="https://film.sohu.com/list_0_0_0_0_0_1_60.html"
+							target="_blank" position="film_editor_recommend_more">更多</a>
+						<h2>小编推荐</h2>
+					</div>
+				</div>
+				<ul>
+          
+            
+				
+					
+						<li>
+							<div class="img_wrap">
+								
+								<a target="_blank" href="https://tv.sohu.com/v/MjAxOTA1MTQvbjYwMDcxMTIzMi5zaHRtbA==.html"> <img
+									class="preload-img" alt="" src="https://001.img.pu.sohu.com.cn/group1/M11/DA/31/MTAuMTguMTcuMTg2/MTAwMTA0XzE1NjU3NDYyNjU3NTU=.jpg" />
+
+								</a>
+								
+								<div class="info">
+									<span class="v_score"></span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="风骚律师 第三季">风骚律师 第三季</div>
+								<div class="sub_info">以彼之道，还施彼身</div>
+							</div>
+						</li>
+					
+					
+				
+            
+          
+            
+				
+					
+					
+						<li>
+							<div class="img_wrap">
+								<a href="https://film.sohu.com/album/9555103.html"
+									class="payBtn" position="film_editor_recommend"> <span
+									class="btn_play_gray"></span> <img
+									src="https://photocdn.tv.sohu.com/img/c_lfill,w_240,h_330/20190819/vrsa_ver_1566192934733_9555103.jpg" alt="" />
+								</a>
+								
+									<div class="coupon"></div>
+								
+								<div class="info">
+									<span class="v_score">6.5分</span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="小飞象2019（英语版）">小飞象2019（英语版）</div>
+								<div class="sub_info"
+									title="小飞象的逆风翱翔">小飞象的逆风翱翔</div>
+							</div>
+						</li>
+					
+				
+            
+          
+            
+				
+					
+						<li>
+							<div class="img_wrap">
+								
+								<a target="_blank" href="https://tv.sohu.com/v/MjAxODEyMTkvbjYwMDYzOTQ4MC5zaHRtbA==.html"> <img
+									class="preload-img" alt="" src="https://001.img.pu.sohu.com.cn/group1/M02/B3/8A/MTAuMTguMTcuMTg3/MTAwMTA0XzE1NDkwNzM2ODgyNjA=.jpg" />
+
+								</a>
+								
+								<div class="info">
+									<span class="v_score"></span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="小谢尔顿">小谢尔顿</div>
+								<div class="sub_info">呆萌技术宅修炼手册</div>
+							</div>
+						</li>
+					
+					
+				
+            
+          
+            
+				
+					
+						<li>
+							<div class="img_wrap">
+								
+								<a target="_blank" href="https://tv.sohu.com/v/MjAxNjExMDcvbjQ3MjQ1MjcwNy5zaHRtbA==.html"> <img
+									class="preload-img" alt="" src="https://001.img.pu.sohu.com.cn/group3/M03/D2/33/MTAuMTguMTcuMTkx/MTAwMTA0XzE1NTg2ODA3MDQ3NDY=.jpg" />
+
+								</a>
+								
+								<div class="info">
+									<span class="v_score"></span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="心里的声音">心里的声音</div>
+								<div class="sub_info">红红火火恍恍惚惚</div>
+							</div>
+						</li>
+					
+					
+				
+            
+          
+            
+				
+					
+						<li>
+							<div class="img_wrap">
+								
+								<a target="_blank" href="http://film.sohu.com/album/9513306.html?channeled=1200110001"> <img
+									class="preload-img" alt="" src="https://001.img.pu.sohu.com.cn/group1/M11/2C/31/MTAuMTguMTcuMTg2/MTAwMTA0XzE1NjIyMjU2NzU4OTg=.jpg" />
+
+								</a>
+								
+								<div class="info">
+									<span class="v_score"></span>
+								</div>
+							</div>
+							<div class="v_name">
+								<div class="v_name_info" title="惊奇队长">惊奇队长</div>
+								<div class="sub_info">大橘已定 橘猫的巅峰时刻</div>
+							</div>
+						</li>
+					
+					
+				
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+				</ul>
+			</div>
+      
+		</div>
+
+	</div>
+	<div class="play-end-pop J_play_end_pop">
+		<div class="close">
+			<a href="javascript:void(0)" class="J_play_end_pop_close"></a>
+		</div>
+		<h3 class="pop-title"><span></span>亲~本片属于付费影片，您还无法完整观看</h3>
+		<h2>会员可免费看，更有海量新片抢先看</h2>
+		<p class="price_text"><span class="money">19.8</span>元<span class="through">原价35元</span></p>
+		<div class="top-buy-box">
+			<div class="top-buy-btn"></div>
+			<p class="pop-single-box" style="display:none;"><a href="Javascript:void(0);" class="J_buy_film_btn payBtn" position="pop_buyfilm">购买单片<span class="single-price">5元</span></a>48小时内播放有效</p>
+			<p class="coupon-detail" style="display:none;">您有<span class="coupon-num">0张</span>观影券，续费会员可获取</p>
+		</div>
+		<p class="pop-text">会员专享特权：</p>
+		<ul>
+			<li><span class="s1"></span><p>新片抢先看</p></li>
+			<li><span class="s2"></span><p>赠送观影券</p></li>
+			<li><span class="s3"></span><p>观看视频无广告</p></li>
+		</ul>
+	</div>
+	<div id="play-end-overlay"></div>
+	
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  var Constants = {
+    webHost : "https://film.sohu.com",
+    scriptRoot: 'https://film.sohu.com/resources/js/source',
+    styleRoot: 'https://film.sohu.com/resources/css/source',
+    imgRoot: 'https://film.sohu.com/resources/img',
+    version : "1567402385289",
+    activityApiUrl : "https://m.film.sohu.com",
+    newActApiUrl : "https://m.film.sohu.com/newact"
+  };
+</script>
+
+<textarea id="purchaseFilmDialog" name=""  cols="0" rows="0" style="display:none;">
+<div class="easyDialog_wrapper" id="purchaseFilmDialogWrapper">
+  <div class="easyDialog_content">
+    <h4 class="easyDialog_title" id="easyDialogTitle">
+      <a href="javascript:void(0)" title="关闭窗口" class="close_btn" id="closeBtn">&times;</a>
+    </h4>
+    <div class="easyDialog_text">
+     
+      
+      
+      
+
+      <div id="purchase_film" data-id="4995" data-price="5.0">
+        <div class="pop">
+          <div class="zhifubao">
+            <form action="">
+              <div class="m-name clearfix">
+                <span>影片名称：</span>
+                <div class="m-name-info">
+                  <img src="https://photocdn.tv.sohu.com/img/c_lfill,w_120,h_165/20190920/vrsa_ver9579907.jpg">
+                  <div class="m-name-info-text">
+                    <h2>玩具总动员4（普通话版）</h2>
+                    <p></p>
+                  </div>
+
+                </div>
+              </div>
+              <div class="pt_cont_main ">
+                <div class="pt_cont">
+                  <span class="pt_tit lf pright_10">支付方式：</span>
+                  <div class="pay_tab lf">
+                    <ul>
+                      <li class="selected" type-id="alipay">支付宝支付</li>
+                      <li type-id="wechat">微信支付</li>
+                      <li type-id="code">兑换码</li>
+                    </ul>
+
+                  </div>
+                  <div class="cl"></div>
+                </div>
+                <div class="pay_tab_cont">
+                  <div class="tab_content">
+                    <div class="pay-agree">
+                      <div class="pay-protocol">
+                        <div>
+                          <input type="checkbox" name="checkbox" checked="checked" id="agreeFee" disabled> <label for="agreeFee"
+                            class="agree_fee">同意</label> <span><a href="http://tv.sohu.com/upload/store/agreement.html" target="_blank">《搜狐视频收费协议》</a></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="yingbi-deduction hidden">
+                      <div class="yingbi-text">影币抵扣：</div>
+                      <div class="yingbi-check">
+                        <input type="checkbox" name="checkyingbi" checked="checked" id="checkYingbi"> <label for="checkYingbi"
+                          class="checkYingbi-label">本次消费可使用<em class="available-yingbi">5</em>影币，共抵扣现金<em class="cash-deduction">5.00</em>元，剩余<em
+                          class="surplus-yingbi">0</em>影币
+                        </label>
+                      </div>
+                    </div>
+                    <div class="pay-money">
+                      <div class="money-text">
+                        <span>支付金额：</span>
+                      </div>
+                      <div class="hm">
+                        <span class="single_price" data-price="5.0">5.0</span> <span>元</span>
+                      </div>
+                      <div class="border_bottom"></div>
+                    </div>
+                    <div class="pay-QR hidden">
+                      <div class="QR-text">
+                        <span class="mright_40">支付宝扫码支付<a class="refresh_qrcode J_refresh_qrcode" href="javascript:void(0);">(刷新)</a></span>
+                        <p>
+                          (完成支付后，<a id="playNow" href="https://film.sohu.com/album/9579907.html?play_now=true">立即播放</a>)
+                        </p>
+                      </div>
+                      <div class="QR-code">
+                        <img src="" />
+                      </div>
+                    </div>
+                    <div class="payed">
+                      <div class="payed-text clearfix">
+                        <span class="pt">支付宝页面支付</span> <a id="btnPaySubmit" target="_blank" class="btn_pay"
+                          href="/pay/do.action?commodity_id=4995&pay=0">立即支付</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tab_content hidden">
+                    <div class="pay-agree">
+                      <div class="pay-protocol">
+                        <div>
+                          <input type="checkbox" name="checkbox" checked="checked" id="agreeFee" disabled> <label for="agreeFee"
+                            class="agree_fee">同意</label> <span><a href="http://tv.sohu.com/upload/store/agreement.html" target="_blank">《搜狐视频收费协议》</a></span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="yingbi-deduction hidden">
+                      <div class="yingbi-text">影币抵扣：</div>
+                      <div class="yingbi-check">
+                        <input type="checkbox" name="checkyingbi" checked="checked" id="checkYingbi"> <label for="checkYingbi"
+                          class="checkYingbi-label">本次消费可使用<em class="available-yingbi">5</em>影币，共抵扣现金<em class="cash-deduction">5.00</em>元，剩余<em
+                          class="surplus-yingbi">0</em>影币
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="pay-money">
+                      <div class="money-text">
+                        <span>支付金额：</span>
+                      </div>
+                      <div class="hm">
+                        <span class="single_price" data-price="5.0">5.0</span> <span>元</span>
+                      </div>
+                      <div class="border_bottom"></div>
+                    </div>
+
+                    <div class="pay-QR hidden">
+                      <div class="QR-text">
+                        <span class="mright_40">微信扫码支付<a class="refresh_qrcode J_refresh_qrcode" href="javascript:void(0);">(刷新)</a></span>
+                        <p>
+                          (完成支付后，<a id="playNow" href="https://film.sohu.com/album/9579907.html?play_now=true">立即播放</a>)
+                        </p>
+                      </div>
+                      <div class="QR-code">
+                        <img src="" />
+                      </div>
+                    </div>
+                    <div class="payed hidden">
+                      <div class="payed-text clearfix">
+                        <span class="pt visibility-hidden">微信扫码支付</span> <a id="btnPaySubmit" target="_blank" class="btn_pay"
+                          href="/pay/do.action?commodity_id=4995&pay=0">立即支付</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tab_content tab_content_code hidden">
+                    <div class="pleft_20 pbottom_20 payway_code">
+                      <div class="input-item clearfix">
+                        <label class="pt_tit lf span_tit" for="codenum" data-id="per_month_">兑换码：</label> <input name="codenum" type="text"
+                          id="codenum" maxlength="18" class="phone_input font_msyh lf" value="" placeholder="请输入兑换码" />
+                      </div>
+                      <div class="input-item code-validation-item clearfix hidden">
+                        <label class="pt_tit lf span_tit" for="code_validation">验证码：</label> <input id="code_validation" placeholder="请输入验证码"
+                          maxlength="4" name="code_validation" class="phone_input font_msyh code_validation lf" type="text" /> <img
+                          class="code_picture lf" src="" alt="验证码"></img> <a class="code_change lf" href="#">换一张</a>
+                      </div>
+                      <div class="text_error ptop_10"></div>
+                    </div>
+
+                    <div class="border_bottom02"></div>
+
+                    <div class="payed p_rel">
+                      <div class="payed-text ptop_10">
+                        <a id="btnPaySubmit_jh" class="btn_pay rt mright_40" href="javascript:void(0)">立即激活</a>
+                        <div class="fal_bottom_02 line_top01">
+                          <p>
+                            客服电话：<span class="mleft_10">4008816666</span>
+                          </p>
+                          <p class="ptop_5">
+                            工作时间：<span class="mleft_10">8：00-20：00（节假日不休）</span>
+                          </p>
+                        </div>
+                        <div class="cl"></div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div><!-- #purchase_film -->
+
+      <div class="exchange font_msyh hidden" id="status_ok">
+        <div class="exchange_info">
+          <i class="ico_suc"></i><span class="exchange_tit">兑换成功</span>
+        </div>
+        <div class="suc_info line_bottom01"></div>
+        <div class="suc_bottom array_9 hidden">您可以在个人中心查看相关特权</div>
+      </div>
+    
+    </div><!-- easyDialog_text -->
+  </div>
+</div>
+</textarea>
+
+	
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  var Constants = {
+    webHost : "https://film.sohu.com",
+    scriptRoot: 'https://film.sohu.com/resources/js/source',
+    styleRoot: 'https://film.sohu.com/resources/css/source',
+    imgRoot: 'https://film.sohu.com/resources/img',
+    version : "1567402385289",
+    activityApiUrl : "https://m.film.sohu.com",
+    newActApiUrl : "https://m.film.sohu.com/newact"
+  };
+</script>
+<link rel="stylesheet" href="//css.tv.itc.cn/film/pop-operates.css">
+<div class="pop-operates J_pop_operates hidden">
+	<a class="pop-operates-close" href="javascript:void(0);">&times;</a>
+	<div class="pop-operates-wrap">
+		<div class="top-wrap">
+			<a href="#" class="img-btn payBtn" target="_blank"><img src="" class="top-img" position="pop_operaters"></a>
+			<h3></h3>
+		</div>
+		<div class="bottom-wrap">
+			<a class="operates-btn payBtn" href="#" target="_blank" position="pop_operaters"></a>
+		</div>
+	</div>
+</div>
+	
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  var Constants = {
+    webHost : "https://film.sohu.com",
+    scriptRoot: 'https://film.sohu.com/resources/js/source',
+    styleRoot: 'https://film.sohu.com/resources/css/source',
+    imgRoot: 'https://film.sohu.com/resources/img',
+    version : "1567402385289",
+    activityApiUrl : "https://m.film.sohu.com",
+    newActApiUrl : "https://m.film.sohu.com/newact"
+  };
+</script>
+<script>var _iwt_UA="UA-sohu-123456";</script>
+<div id="go-top">
+	<a href=""><span></span></a>
+</div>
+<div class="footer">
+	<div class="footer-content">
+		<div class="footer-menu">
+			<ul class="footer-menu-list">
+				<li><a href="https://film.sohu.com">首页</a></li>
+				<li><a href="https://film.sohu.com/list_0_0_0_0_0_1_60.html">片库</a></li>
+				<li><a href="https://film.sohu.com/vipAct.html">狐利社</a></li>
+				<li><a href="https://film.sohu.com/vip.html">会员特权</a></li>
+				<li><a href="https://film.sohu.com/vip_theatre.html">会员剧场</a></li>
+			</ul>
+			<div class="weixinCode">
+				<p>更多福利请关注微信平台</p>
+				<img src="//css.tv.itc.cn/film/img/qrcode_for_active.jpg" alt="" width="160" height="160" />
+			</div>
+		</div>
+
+		<div class="footer-info">
+			<div class="info-menu">
+				<p>
+					<a class="pleft_20 pright_20"
+						href="https://film.sohu.com/help/vip_1#1" target="_blank">关于会员</a><i>-</i>
+					<a class="pleft_20 pright_20" href="https://film.sohu.com/help/about_1#1"
+						target="_blank">帮助中心</a><i>-</i> <a class="pleft_20 pright_20"
+						href="https://film.sohu.com/feedback" target="_blank">意见反馈</a><i>-</i> <a
+						class="pleft_20" href="https://film.sohu.com/help/about_1#contact"
+						target="_blank">联系方式</a>
+
+				</p>
+				<p>Copyright © 2019 Sohu.com Inc. All Rights Reserved.&nbsp&nbsp</p>
+				<p>
+					搜狐公司&nbsp<a target="_blank"
+						href="//intro.sohu.com/copyright">版权所有</a>&nbsp<a
+						target="_blank"
+						href="//www.sohu.com/upload/uiue20171218/vz_sohu.html">网络视听许可证&nbsp</a><a
+						target="_blank"
+						href="//www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000011">京公网安备 11000002000011号</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="mask"></div>
+<!-- <script type="text/javascript">
+$(function(){
+  seajs.use(["footer"], function(footer) {
+    footer.init();
+  });
+});
+</script> -->
+<script type="text/javascript" src="//js.tv.itc.cn/film/inc-footer.js?v=1567402385289"></script>
+	<script src="//js.tv.itc.cn/base/plugin/showPlayer.js"></script>
+	<script type="text/javascript" id="bdshare_js" data="type=tools&mini=1"></script>
+	<script type="text/javascript" id="bdshell_js"></script>
+	<script type="text/javascript">
+		var _drm = {5696023:1};
+		var _trailerDrm = {};
+	  	// $(function(){
+	  	//   seajs.use(["detail"], function(detail){
+	  	//     detail.init();
+	  	//   });
+	  	// });
+  	</script>
+	<script src="//js.tv.itc.cn/film/inc-detail.js?v=1567402385289"></script>
+</body>
+</html>

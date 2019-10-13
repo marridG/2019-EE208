@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>大数据</title>
+    <meta charset="utf-8"/>
+<meta name="data-spm" content="smpc">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+<meta name="data-spm" content="smpc">
+<link rel="icon" href="//statics.itc.cn/web/static/images/pic/sohu-logo/favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="//statics.itc.cn/web/static/images/pic/sohu-logo/favicon.ico" type="image/x-icon"/>
+<link rel="apple-touch-icon" sizes="57x57" href="//statics.itc.cn/web/static/images/pic/sohu-logo/logo-57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="//statics.itc.cn/web/static/images/pic/sohu-logo/logo-72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="//statics.itc.cn/web/static/images/pic/sohu-logo/logo-114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="//statics.itc.cn/web/static/images/pic/sohu-logo/logo-144.png" />
+<link href="//statics.itc.cn/web/static/css/main-f6a5466fac.css" rel="stylesheet"/>
+<script>
+    //  加载监控代码
+</script>
+<!--[if lt IE 9]>
+<script src="//statics.itc.cn/web/static/js/es5-shim-08e41cfc3e.min.js"></script>
+<script src="//statics.itc.cn/web/static/js/es5-sham-1d5fa1124b.min.js"></script>
+<script src="//statics.itc.cn/web/static/js/html5shiv-21fc8c2ba6.js"></script>
+<link href="//statics.itc.cn/web/static/css/ie8hack-9dce3c3b96.css" rel="stylesheet" />
+<![endif]-->
+<script type="text/javascript">
+//解決IE8,IE9不支持console的问题
+(function() {
+    var method;
+    var noop = function() {};
+    var methods = [
+        'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+        'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+        'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+        'timeStamp', 'trace', 'warn'
+    ];
+    var length = methods.length;
+    var console = (window.console = window.console || {});
+
+    while (length--) {
+        method = methods[length];
+
+        // Only stub undefined methods.
+        if (!console[method]) {
+            console[method] = noop;
+        }
+    }
+}());
+</script>
+<script type="text/javascript">
+    (function () {
+        var html = document.getElementsByTagName("html")[0];
+        var width = Math.min(document.documentElement.clientWidth, 790);
+        width = width < 320 ? 320 : width;
+        if (document.documentElement.clientWidth <= 1024) {
+            html.style.fontSize = width / 790 * 79 + 'px';
+        }
+        if (window.addEventListener) {
+            window.addEventListener('resize', resizeHandler);
+        }
+        else if (window.attachEvent) {
+            window.attachEvent('onresize', resizeHandler);
+        }
+        function resizeHandler() {
+            if (document.documentElement.clientWidth <= 1024) {
+                var width = Math.min(document.documentElement.clientWidth, 790);
+                width = width < 320 ? 320 : width;
+                html.style.fontSize = width / 790 * 79 + 'px';
+            } else {
+                html.style.fontSize = "16px";
+            }
+        };
+    })();
+</script>
+
+
+</head>
+<body class="tag-index" data-spm="tag-page">
+
+<div class="wrapper-box wrapper-tag">
+    <header id="main-header" class="error-head" data-spm="header">
+
+
+	<div class="area">
+		<div class="head-nav left" data-spm="nav">
+			<ul>
+			    <li class="index"><a data-clev="10220248" target="_blank" href="http://www.sohu.com"><em class="icon-home icon"></em><em class="sohu-logo">搜狐首页</em></a></li>
+														<li><a target="_blank" data-clev="10220249" href="http://news.sohu.com/">新闻</a></li>
+																			<li><a target="_blank" data-clev="10220250" href="http://sports.sohu.com/">体育</a></li>
+																			<li><a target="_blank" data-clev="10220251" href="http://auto.sohu.com/">汽车</a></li>
+																			<li><a target="_blank" data-clev="10220252" href="http://www.focus.cn/">房产</a></li>
+																			<li><a target="_blank" data-clev="10220253" href="http://travel.sohu.com/">旅游</a></li>
+																			<li><a target="_blank" data-clev="10220254" href="http://learning.sohu.com/">教育</a></li>
+																			<li><a target="_blank" data-clev="10220255" href="http://fashion.sohu.com/">时尚</a></li>
+																			<li><a target="_blank" data-clev="10220256" href="http://it.sohu.com/">科技</a></li>
+																			<li><a target="_blank" data-clev="10220257" href="http://business.sohu.com/">财经</a></li>
+																			<li><a target="_blank" data-clev="10220258" href="http://yule.sohu.com/">娱乐</a></li>
+																																																																																																																									<li class="more-nav"><a href="javascript:void(0)">更多<em class="cor"></em></a>
+					<div class="more-nav-box">
+																																																																																																																																																					<a href="http://baobao.sohu.com/">母婴</a>
+																										<a href="http://health.sohu.com/">健康</a>
+																										<a href="http://history.sohu.com/">历史</a>
+																										<a href="http://mil.sohu.com/">军事</a>
+																										<a href="http://chihe.sohu.com/">美食</a>
+																										<a href="http://cul.sohu.com/">文化</a>
+																										<a href="http://astro.sohu.com/">星座</a>
+																										<a href="https://www.sohu.com/subject">专题</a>
+																										<a href="http://game.sohu.com/">游戏</a>
+																										<a href="http://fun.sohu.com/">搞笑</a>
+																										<a href="http://acg.sohu.com/">动漫</a>
+																										<a href="http://pets.sohu.com/">宠物</a>
+																		</div>
+				</li>
+			</ul>
+		</div>
+		<div id="head-login" class="right login">
+		</div>
+	</div>
+
+</header>    <div id="top">
+        <div class="tag-title-bg">
+    <div class="area tag-title">
+        <div class="tag-name"><i class="icon tag-name-icon"></i><span class="tt">大数据</span></div>
+    </div>
+</div>    </div>
+
+    <div class="area clear" id="main-container">
+
+        <div class="hot-spots left"  id="hot-spots" data-spm="hot-spots">
+
+<div class="title"><span class="tt">热点直达</span></div>
+<ul>
+        <li>
+        <a href="//www.sohu.com/tag/78240" target="_blank">
+            创业武林大会        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/48130" target="_blank">
+            移动互联网        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/48139" target="_blank">
+            工业技术        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/68623" target="_blank">
+            国家电网        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/68625" target="_blank">
+            阿里星球        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/67603" target="_blank">
+            Surface        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/68626" target="_blank">
+            陈竺        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/48160" target="_blank">
+            运动手环        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/48162" target="_blank">
+            智能手表        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/48165" target="_blank">
+            Apple Watch        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/48167" target="_blank">
+            测评        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/48173" target="_blank">
+            AR        </a>
+    </li>
+    </ul>
+</div>
+        <div class="main left">
+            <div class="news-list clearfix" id="main-news" data-spm="feed">
+                <div id="news-wrapper">
+                                                            
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346682208" data-media-id="510292" data-newsid="1" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346682208_510292" target="_blank">
+                                 <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191013/12dc4d0cffec4e32bf131498c289f96d.jpeg" alt="">
+                                </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346682208_510292" target="_blank">
+         拼多多降低了中国物价！提升了中国穷人的消费水平？
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=cHBhZzI3ODVlZmVmNTJlY0Bzb2h1LmNvbQ==" target="_blank"><img src="//sucimg.itc.cn/avatarimg/b864042c3517437c94aaf8ca9de4e3ae_1475372493715"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=cHBhZzI3ODVlZmVmNTJlY0Bzb2h1LmNvbQ==" target="_blank">有道热点</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570946543000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346682208_510292#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346682208" data-id="346682208" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear  news-box-txt   news-box-aa ' data-ev="346682045" data-media-id="100136912" data-newsid="2" data-loc="" data-spm-type="resource">
+        <h4><a href="//www.sohu.com/a/346682045_100136912" target="_blank">
+         正视大数据杀熟是根治顽疾的基础
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=dGFuNjQ3MzQ3NTcyNjNAc29odS5jb20=" target="_blank"><img src="//sucimg.itc.cn/avatarimg/968b3e94b9b840b9b05360723a86849b_1522748632241"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=dGFuNjQ3MzQ3NTcyNjNAc29odS5jb20=" target="_blank">时尚评论</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570946541000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346682045_100136912#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346682045" data-id="346682045" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346658089" data-media-id="114760" data-newsid="3" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346658089_114760" target="_blank">
+                                 <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191013/4ce1f4b1744b424a8421df5d1a2f57af.jpeg" alt="">
+                                </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346658089_114760" target="_blank">
+         华为汪军：有些AI并不是真正的AI，是机器学习或概括为模式识别
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=QUNCMzEzNDY1N0EwNTY2OERCRTgyNzhBM0Y1ODY0NkNAdC5xcS5zb2h1LmNvbQ==" target="_blank"><img src="//5b0988e595225.cdn.sohucs.com/avatar/picon/2013/11/06/ec9aa26afda5ebeb3ece141a60cfd4f4android.png"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=QUNCMzEzNDY1N0EwNTY2OERCRTgyNzhBM0Y1ODY0NkNAdC5xcS5zb2h1LmNvbQ==" target="_blank">IT之家</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570930494000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346658089_114760#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346658089" data-id="346658089" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346645975" data-media-id="99977850" data-newsid="4" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346645975_99977850" target="_blank">
+                                 <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191013/0496c860a4574153bc8b787180f49841.jpeg" alt="">
+                                </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346645975_99977850" target="_blank">
+         天猫超市启动20公里立体生活圈 三种配送模式满足用户不同需求
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=ZnV3bzI0ODY1NUBzb2h1LmNvbQ==" target="_blank"><img src="//sucimg.itc.cn/avatarimg/63d9ff42333c4f86bc33f5e407016535_1503916133162"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=ZnV3bzI0ODY1NUBzb2h1LmNvbQ==" target="_blank">商业热点观察</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570930214000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346645975_99977850#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346645975" data-id="346645975" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346645946" data-media-id="100053438" data-newsid="5" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346645946_100053438" target="_blank">
+                                 <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191013/2001174758f34a09a2313bf2bad3fb78.jpeg" alt="">
+                                </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346645946_100053438" target="_blank">
+         天猫超市启动20公里立体生活圈 三种配送模式满足用户不同需求
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=cHBhZzU2MTZjNTZhMDM1N0Bzb2h1LmNvbQ==" target="_blank"><img src="//sucimg.itc.cn/avatarimg/b09c2bca84e84632bb2dde58b3f91c16_1509527801389"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=cHBhZzU2MTZjNTZhMDM1N0Bzb2h1LmNvbQ==" target="_blank">AI的范儿</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570930125000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346645946_100053438#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346645946" data-id="346645946" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346601410" data-media-id="467122" data-newsid="6" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346601410_467122" target="_blank">
+                                 <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191013/bbf0f9a23e1e4450922bb6a5e2347894.jpeg" alt="">
+                                </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346601410_467122" target="_blank">
+         拒绝“风口”，AI财税逆势成热点！
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=dGF4c2h0c0Bzb2h1LmNvbQ==" target="_blank"><img src="//5b0988e595225.cdn.sohucs.com/a_auto,c_cut,x_38,y_44,w_369,h_369/images/20171225/773d0557d4894ee29b6412371a25557f.png"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=dGF4c2h0c0Bzb2h1LmNvbQ==" target="_blank">税海涛声</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570897455000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346601410_467122#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346601410" data-id="346601410" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        <div data-role="news-item" class="news-box news-box-thr news-box-pic clear" data-ev="346598377" data-media-id="197694" data-newsid="7" data-loc="" data-spm-type="resource">
+        <h4><a href="//www.sohu.com/a/346598377_197694"  target="_blank">10.12新闻：知乎直播正式上线；微信回应“十元改朋友圈定位”</a></h4>
+        <div class="pic-group clear">
+            <ul>                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346598377_197694" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191013/4f34049429cd4004bea4fc454946c2bb.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346598377_197694" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191013/5b32384fced24fb48633fb1680059c89.JPG" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346598377_197694" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191013/4100b6890ab84cd28dd6466ea7102492.JPG" alt="">
+                                    </a></li>
+                                <li class="img-do
+                                    end
+                
+                " ><a href="//www.sohu.com/a/346598377_197694" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191013/fd15090031954abca5d7b4ba55eb0a6c.JPG" alt="">
+                                    </a></li>
+                                            </ul>
+        </div>
+        <div class="other">
+            <span class="img"><a href="http://mp.sohu.com/profile?xpt=c29odXptdHBseHR5aHZAc29odS5jb20=" target="_blank"><img src="//sucimg.itc.cn/avatarimg/d89284ce6cec4d5ba73029ba96e23e58_1461668194158" alt=""></a></span>
+                        <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0"> $info.channelName </a></span><span class="dot channel-dot">·</span>
+                        <span class="name"><a href="http://mp.sohu.com/profile?xpt=c29odXptdHBseHR5aHZAc29odS5jb20=" target="_blank">文化产业新闻</a></span><span class="dot">·</span>
+            <span class="time" data-val="1570897134000" data-role="time"></span>
+            <a class="com" href="//www.sohu.com/a/346598377_197694#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346598377" data-id="346598377" data-role="comment-count"></span></a>
+        </div>
+    </div>
+
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346595260" data-media-id="561670" data-newsid="8" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346595260_561670" target="_blank">
+                                 <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/ce62d13eb84f46318d40da23e6602845.jpeg" alt="">
+                                </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346595260_561670" target="_blank">
+         智能雄安“新”在哪里？
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=cHBhZzYyNDE5OTZhMjY4YUBzb2h1LmNvbQ==" target="_blank"><img src="//sucimg.itc.cn/avatarimg/c8768c6be2124e6b8240e355959239bc_1480310336027"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=cHBhZzYyNDE5OTZhMjY4YUBzb2h1LmNvbQ==" target="_blank">中新经纬</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570895194000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346595260_561670#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346595260" data-id="346595260" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear  news-box-txt   news-box-aa ' data-ev="346573483" data-media-id="161117" data-newsid="9" data-loc="" data-spm-type="resource">
+        <h4><a href="//www.sohu.com/a/346573483_161117" target="_blank">
+         “爬虫”滥觞 窃取数据的行径该整肃了
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=c29odXptdHQ2eTBxdHZAc29odS5jb20=" target="_blank"><img src="//5b0988e595225.cdn.sohucs.com/a_auto,c_cut,x_0,y_0,w_450,h_300/images/20181026/c005b419288c4f228a19683771b5da46.jpeg"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=c29odXptdHQ2eTBxdHZAc29odS5jb20=" target="_blank">同花顺财经</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570885920000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346573483_161117#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346573483" data-id="346573483" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear  news-box-txt   news-box-aa ' data-ev="346556729" data-media-id="161117" data-newsid="10" data-loc="" data-spm-type="resource">
+        <h4><a href="//www.sohu.com/a/346556729_161117" target="_blank">
+         宜信CEO唐宁：敏感信息勿“替用户做主”
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=c29odXptdHQ2eTBxdHZAc29odS5jb20=" target="_blank"><img src="//5b0988e595225.cdn.sohucs.com/a_auto,c_cut,x_0,y_0,w_450,h_300/images/20181026/c005b419288c4f228a19683771b5da46.jpeg"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=c29odXptdHQ2eTBxdHZAc29odS5jb20=" target="_blank">同花顺财经</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570879560000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346556729_161117#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346556729" data-id="346556729" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346548857" data-media-id="344262" data-newsid="11" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346548857_344262" target="_blank">
+                                 <img data-src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/c9e36ef0bc904349b401e84126b495bb.jpeg" alt="" src="//statics.itc.cn/web/static/images/pic/preload.png">
+                                 </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346548857_344262" target="_blank">
+         热云数据荣获“2019年最具影响力大数据服务商”大奖
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=cHBhZzg1MDFiZTBhNjRmNkBzb2h1LmNvbQ==" target="_blank"><img src="//sucimg.itc.cn/avatarimg/3138a3492d614223b8fe46b242c26a13_1453951119162"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=cHBhZzg1MDFiZTBhNjRmNkBzb2h1LmNvbQ==" target="_blank">热云数据</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570877815000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346548857_344262#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346548857" data-id="346548857" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        <div data-role="news-item" class="news-box news-box-thr news-box-pic clear" data-ev="346548014" data-media-id="828776" data-newsid="12" data-loc="" data-spm-type="resource">
+        <h4><a href="//www.sohu.com/a/346548014_828776"  target="_blank">下沉市场，会成为茶行业未来长期增长点？茶企们该拼一把了</a></h4>
+        <div class="pic-group clear">
+            <ul>                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346548014_828776" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/2da72c74e8804a69b8f92bdcd54e6aa7.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346548014_828776" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/b8cfbc4510b64b21b48ec8109d13c762.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346548014_828776" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/da7363d7567a4eb9a9cfc2f0df372dd0.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                                    end
+                
+                " ><a href="//www.sohu.com/a/346548014_828776" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/a60e11ec74384eb2aeaf8cfb4d8d107e.jpeg" alt="">
+                                    </a></li>
+                                            </ul>
+        </div>
+        <div class="other">
+            <span class="img"><a href="http://mp.sohu.com/profile?xpt=cHBhZzIyMTk5MTU1YTBiM0Bzb2h1LmNvbQ==" target="_blank"><img src="//sucimg.itc.cn/avatarimg/05087b0fa94e47a2850801f28783ecf1_1495609584368" alt=""></a></span>
+                        <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0"> $info.channelName </a></span><span class="dot channel-dot">·</span>
+                        <span class="name"><a href="http://mp.sohu.com/profile?xpt=cHBhZzIyMTk5MTU1YTBiM0Bzb2h1LmNvbQ==" target="_blank">兴茶网</a></span><span class="dot">·</span>
+            <span class="time" data-val="1570877523000" data-role="time"></span>
+            <a class="com" href="//www.sohu.com/a/346548014_828776#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346548014" data-id="346548014" data-role="comment-count"></span></a>
+        </div>
+    </div>
+
+
+                                        <div data-role="news-item" class="news-box news-box-thr news-box-pic clear" data-ev="346543551" data-media-id="118797" data-newsid="13" data-loc="" data-spm-type="resource">
+        <h4><a href="//www.sohu.com/a/346543551_118797"  target="_blank">小事不小，随时随刻，天猫超市品牌全面升级</a></h4>
+        <div class="pic-group clear">
+            <ul>                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346543551_118797" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/2b756821e9da4bf99299f961aff41de7.JPG" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346543551_118797" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/8de4c7821d304662be611e04fafdc05c.JPG" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346543551_118797" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/506f2a97fd2548e78f8ce8d0d487c62d.JPG" alt="">
+                                    </a></li>
+                                <li class="img-do
+                                    end
+                
+                " ><a href="//www.sohu.com/a/346543551_118797" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/773b159c38214843addadc5ecfbf2afa.JPG" alt="">
+                                    </a></li>
+                                            </ul>
+        </div>
+        <div class="other">
+            <span class="img"><a href="http://mp.sohu.com/profile?xpt=MTA5NTI0MDUzN0BzaW5hLnNvaHUuY29t" target="_blank"><img src="//5b0988e595225.cdn.sohucs.com/avatar/picon/2013/06/26/1372214390391.png" alt=""></a></span>
+                        <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0"> $info.channelName </a></span><span class="dot channel-dot">·</span>
+                        <span class="name"><a href="http://mp.sohu.com/profile?xpt=MTA5NTI0MDUzN0BzaW5hLnNvaHUuY29t" target="_blank">万能的大熊</a></span><span class="dot">·</span>
+            <span class="time" data-val="1570876180000" data-role="time"></span>
+            <a class="com" href="//www.sohu.com/a/346543551_118797#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346543551" data-id="346543551" data-role="comment-count"></span></a>
+        </div>
+    </div>
+
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346540727" data-media-id="358163" data-newsid="14" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346540727_358163" target="_blank">
+                                 <img data-src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/af88a29d578c41179a3c9733cdca044f.jpeg" alt="" src="//statics.itc.cn/web/static/images/pic/preload.png">
+                                 </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346540727_358163" target="_blank">
+         才不只是支付工具！说说刷脸支付给商家的便利
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=MjQ5NzU1NzM1M0BzaW5hLnNvaHUuY29t" target="_blank"><img src="//5b0988e595225.cdn.sohucs.com/a_auto,c_cut,x_0,y_83,w_500,h_333/images/20181126/2c3622f40658463c9ac9ce2de7915be4.png"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=MjQ5NzU1NzM1M0BzaW5hLnNvaHUuY29t" target="_blank">钱客多</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570875178000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346540727_358163#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346540727" data-id="346540727" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear  news-box-txt   news-box-aa ' data-ev="346540717" data-media-id="100152642" data-newsid="15" data-loc="" data-spm-type="resource">
+        <h4><a href="//www.sohu.com/a/346540717_100152642" target="_blank">
+         丹鸟物流的出现,让人们看到了物流行业的未来!
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=OTg0OTc5ODMyNjkxNjg3NDI0QHNvaHUuY29t" target="_blank"><img src="//5b0988e595225.cdn.sohucs.com/a_auto,c_cut,x_16,y_0,w_564,h_564/images/20180414/a195a423522b4f7ca5cbfc31ee4399fe.jpeg"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=OTg0OTc5ODMyNjkxNjg3NDI0QHNvaHUuY29t" target="_blank">科技生活界</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570875157000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346540717_100152642#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346540717" data-id="346540717" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346536018" data-media-id="99952709" data-newsid="16" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346536018_99952709" target="_blank">
+                                 <img data-src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/daa77ffac9ef4243845c63728c2e8a2b.jpeg" alt="" src="//statics.itc.cn/web/static/images/pic/preload.png">
+                                 </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346536018_99952709" target="_blank">
+         宗毅说 | 员工的能力提升了，公司就会赚钱
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=cHBhZzU5OTk5ZDMzZTgzNkBzb2h1LmNvbQ==" target="_blank"><img src="//sucimg.itc.cn/avatarimg/f5b6e63084f44d01b5a2fbea2ba11da3_1513406853685"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=cHBhZzU5OTk5ZDMzZTgzNkBzb2h1LmNvbQ==" target="_blank">裂变学院</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570874005000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346536018_99952709#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346536018" data-id="346536018" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear  news-box-txt   news-box-aa ' data-ev="346526188" data-media-id="162758" data-newsid="17" data-loc="" data-spm-type="resource">
+        <h4><a href="//www.sohu.com/a/346526188_162758" target="_blank">
+         与数字经济创新融合 科技助推物流高质量发展
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=c29odXptdGUwb2RlMDJAc29odS5jb20=" target="_blank"><img src="//sucimg.itc.cn/avatarimg/be20ad10dd2a42668c6585b4be3c0f28_1478657407211"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=c29odXptdGUwb2RlMDJAc29odS5jb20=" target="_blank">光明网</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570871908000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346526188_162758#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346526188" data-id="346526188" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        <div data-role="news-item" class="news-box news-box-thr news-box-pic clear" data-ev="346554292" data-media-id="355958" data-newsid="18" data-loc="" data-spm-type="resource">
+        <h4><a href="//www.sohu.com/a/346554292_355958"  target="_blank">@温州人：赚钱机会来了！天猫优品正在找人合伙赚钱！错过就亏大了！</a></h4>
+        <div class="pic-group clear">
+            <ul>                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346554292_355958" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/edb00777c7e1466ca38d1468a20e271a.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346554292_355958" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/e494af2c30ab40e4904cba7ef6740fa3.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346554292_355958" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/c0cefaec92734679ad619e4cff505cd9.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                                    end
+                
+                " ><a href="//www.sohu.com/a/346554292_355958" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/55ff946feaa744b2af4479eff8d2df14.jpeg" alt="">
+                                    </a></li>
+                                            </ul>
+        </div>
+        <div class="other">
+            <span class="img"><a href="http://mp.sohu.com/profile?xpt=d2VuemhvdWZnQHNvaHUuY29t" target="_blank"><img src="//sucimg.itc.cn/avatarimg/a8d3f34f409d40ee80eeb120740453d4_1477555488990" alt=""></a></span>
+                        <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0"> $info.channelName </a></span><span class="dot channel-dot">·</span>
+                        <span class="name"><a href="http://mp.sohu.com/profile?xpt=d2VuemhvdWZnQHNvaHUuY29t" target="_blank">温州房哥</a></span><span class="dot">·</span>
+            <span class="time" data-val="1570871142000" data-role="time"></span>
+            <a class="com" href="//www.sohu.com/a/346554292_355958#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346554292" data-id="346554292" data-role="comment-count"></span></a>
+        </div>
+    </div>
+
+
+                                        
+<div data-role="news-item" class='news-box clear  news-box-txt   news-box-aa ' data-ev="346521982" data-media-id="120333600" data-newsid="19" data-loc="" data-spm-type="resource">
+        <h4><a href="//www.sohu.com/a/346521982_120333600" target="_blank">
+         河北数港科技有限公司：应用汇聚数据，数据带动产业
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=Y2VlNjVmMmUtNzAyNS00MjE2LTk3YjctNjMyN2YwNTA2NzZh" target="_blank"><img src="//5b0988e595225.cdn.sohucs.com/images/20190910/56ac303ad32046868ba72a38fa0d2bf7.png"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=Y2VlNjVmMmUtNzAyNS00MjE2LTk3YjctNjMyN2YwNTA2NzZh" target="_blank">长城网</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570870993000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346521982_120333600#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346521982" data-id="346521982" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        <div data-role="news-item" class="news-box news-box-thr news-box-pic clear" data-ev="346518862" data-media-id="100097967" data-newsid="20" data-loc="" data-spm-type="resource">
+        <h4><a href="//www.sohu.com/a/346518862_100097967"  target="_blank">网络算命，10分钟60万，一场大数据的割韭菜！</a></h4>
+        <div class="pic-group clear">
+            <ul>                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346518862_100097967" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/b6dc89249f51407785ab84528c189d96.JPG" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346518862_100097967" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/fc26a0860f004ecaa85eeaf389b91a4f.JPG" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346518862_100097967" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/8f40159b52114262927c2647b53da640.JPG" alt="">
+                                    </a></li>
+                                <li class="img-do
+                                    end
+                
+                " ><a href="//www.sohu.com/a/346518862_100097967" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/2ea36be2a7944679a128a1b52fdf1765.JPG" alt="">
+                                    </a></li>
+                                            </ul>
+        </div>
+        <div class="other">
+            <span class="img"><a href="http://mp.sohu.com/profile?xpt=OTQ2MzA5NzIxMDU1Mzg3NjQ4QHNvaHUuY29t" target="_blank"><img src="//sucimg.itc.cn/avatarimg/c5adc04632934b4f8916b397600d5901_1516607218070" alt=""></a></span>
+                        <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0"> $info.channelName </a></span><span class="dot channel-dot">·</span>
+                        <span class="name"><a href="http://mp.sohu.com/profile?xpt=OTQ2MzA5NzIxMDU1Mzg3NjQ4QHNvaHUuY29t" target="_blank">财经下午茶</a></span><span class="dot">·</span>
+            <span class="time" data-val="1570870267000" data-role="time"></span>
+            <a class="com" href="//www.sohu.com/a/346518862_100097967#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346518862" data-id="346518862" data-role="comment-count"></span></a>
+        </div>
+    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="sidebar right">
+    <div class="search-right" id="search" data-spm="search-right"></div>
+    <div class="godA" id="nav_button">
+
+	</div>
+    <div class="godR" id="god_1">
+
+    </div>
+   <div class="bord clear recommend" id="recommend-writer" data-spm="recommend-mp">
+
+</div>    <div class="godR" id="god_2">
+
+    </div>
+    <div class="hot-article clear bord" id="hot-news" data-spm="hot-article">
+ </div>
+
+    <div class="godR" id="god_3">
+
+    </div>
+ <div class="pages-fun " id="pages-fun">
+    </div>
+    <div class="godR" id="god_4">
+
+    </div>
+    <div id="god_fix_container" class="right-fixed" style="display:none;">
+        <div class="godR" id="god_fix_1">
+
+        </div>
+    </div>
+    <div id="fixed-view" data-rel="#hot-news">
+    </div>
+</div>    </div>
+
+    <div id="float-btn" class="float-links"></div>    <div id="pop-news" class="pop-news"></div></div>
+
+
+
+<script src="//statics.itc.cn/web/static/js/lib-61587d9fb8.js"></script>
+<script src="//39d0825d09f05.cdn.sohucs.com/sdk/passport-4.0.3.js"></script>
+<!--<script src="//statics.itc.cn/web/static/js/ie8hack-07e05e83f1.js"></script>-->
+<script src="//txt.go.sohu.com/ip/soip"></script>
+<script src="//statics.itc.cn/web/static/js/main-a00895c961.js"></script>
+<!-- <script src="//js.sohu.com/pv.js"></script> -->
+<script>
+try{
+    window.sohu_mp.tag({
+        tag_id: "65788",
+        channel_id: "30",
+        tag_name:"大数据"
+    });
+}
+catch(e){
+    var html = '<div class="err-js">' +
+                '<span><em class="icon err-js-icon"></em>JS加载错误，请重新加载。</span>' +
+                '<a href="javascript:window.location.reload()" target="_blank" class="cached-btn"' +
+                '><em class="icon-cached"></em>刷新</a></div>';
+    $(document.body).prepend(html);
+   //加载监控代码
+   console.log("发生错误",e);
+}
+</script>
+<script src="//statics.itc.cn/spm/prod/js/1.0.3/spm.js"></script>
+<!--[if lt IE 8]>
+<script type="text/javascript">
+(function(){
+    var ua = navigator.userAgent;
+    var version;
+    var html = '<div class="area clear">' +
+        '<div class="ie-low">' +
+        '<p>您的浏览器版本过低<br>为了更好的体验，请升级你的浏览器。</p>' +
+        '<h5><a href="https://ie.sogou.com" target="_blank" class="upgrade-btn">马上升级</a></h5>' +
+        '</div></div>';
+    if (/MSIE ([^;]+)/.test(ua)) {
+        version = parseInt(RegExp["$1"]);
+        if (version<8) {
+            document.body.innerHTML=html;
+            var reg = new RegExp("(^| )SUV=([^;]*)(;|$)");
+            var suvs = unescape(document.cookie.match(reg)[2]); 
+            var spv_server_src = "http://pv.sohu.com/action.gif?actionId=10078&SUV="+suvs;
+            var scripts = document.createElement('script');
+            scripts.src = spv_server_src;
+            document.body.appendChild(scripts);   
+            Raven.captureException(new Error('ie'+version));   
+        }
+    }
+})()
+</script>
+<![endif]-->
+<script src="//images.sohu.com/bill/default/sohu-require.js"></script>
+<script type="text/javascript"> require(["sjs/matrix/ad/passion"]);</script>
+<script type="text/javascript" src="//www.sohu.com/sohuflash_1.js"></script>
+<script type="text/javascript" src="//images.sohu.com/bill/s2015/jscript/lib/sjs/matrix/ad/form/delivery.js"></script>
+<script type="text/javascript" src="//images.sohu.com/bill/s2015/jscript/lib/sjs/matrix/pv/pagePVmonitor.js"></script>
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+</body>
+</html>

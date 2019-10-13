@@ -1,0 +1,83 @@
+﻿
+
+
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="pragma" content="no-cache" />
+        <title>复旦大学收费服务平台</title>
+        <link href="/fudan/css/login.css" rel="stylesheet" type="text/css" />
+        <link href="/fudan/css/iconfont.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="/res/jquery.js"></script>
+        <script type="text/javascript" src="/res/wisedu.common.js"></script>
+    </head>
+
+    <body>
+        <div class="login-wrap">
+            <div class="header">
+                <p>
+                    <img src="/fudan/images/LOGO.png">
+                    <span class="wrap-name">收费服务平台</span>
+                </p>
+                <div class="select-lang">
+                    <a class="chinese active">中文版</a>
+                    <span>|</span>
+                    <a class="english" href="/pay_en/index.html">English</a>
+                </div>
+            </div>
+            <div class="content">
+                <div class="input">
+                    <ul class="login-fanshi">
+                        <li data-info="user" class="active">统一身份认证</li>
+                        <li data-info="code">支付码</li>
+                    </ul>
+                    <form action="/pay/dealPay.html" method="get" target="payWindow">
+                        <input name="pwd" maxlength="16" class="paycode special" type="text" placeholder="支付码">
+                        <div class="codebgm special"></div>
+                        <p class="special remark">* 支付码是由"0-9,A-F"组成的16位字符串,不区分大小写</p>                      
+                        <button type="submit" class="loginBtn special">登 录</button>
+                    </form>
+			<button class="loginBtn common" onclick="javascript:location.href='https://uis.fudan.edu.cn/authserver/login?goto=http%3A%2F%2Fpayment.fudan.edu.cn%2Findex.html'">登 录</button>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footBgm">
+                    <p style="line-height: 20px;padding-top: 20px;color:#9c9c9c;font-family:微软雅黑;font-size:12px" align="center">
+                        复旦大学&amp;江苏金智教育信息股份有限公司联合研制 版权所有 ©2010-
+                        2019<br /> 支付通道（网银）：迅付信息科技有限公司（许可证编号：Z2002131000017）
+                        <br /> 支付通道（微信）：财付通支付科技有限公司（许可证编号：Z2000444000013）
+                        <br /> 支付通道（支付宝）：支付宝（中国）网络技术有限公司（许可证编号：Z2000133000019）
+                        <br />
+                        <span style="color:#fa7135">注：如果您有疑问请联系收费部门或财务处（电话:65648170）如果您无法完成支付，请联系信息办（电话:65643207/65643247）</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(".select").click(function() {
+                if($(this).find("i").css("display") == "none") {
+                    $(this).find("i").show()
+                } else {
+                    $(this).find("i").hide()
+                }
+            });
+            // 选择登录方式
+            $(".login-fanshi li").click(function() {
+                $(this).addClass("active").siblings().removeClass("active");
+                if($(this).attr("data-info") == "user") {
+                    $(".common").show();
+                    $(".special").hide();
+                    $(".loginBtn").css("margin-top", "40%");
+                } else {
+                    $(".special").show();
+                    $(".common").hide();
+                    $(".loginBtn").css("margin-top", "50%");
+                }
+            });
+        </script>
+    </body>
+
+</html>

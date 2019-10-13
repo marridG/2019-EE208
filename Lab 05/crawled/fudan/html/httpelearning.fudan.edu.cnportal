@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+   <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Language" content="zh-CN" />
+
+<script type="text/javascript">
+
+    var portal = {
+        "chat": {
+            "enabled": false,
+            "pollInterval": 5000,
+            "video": {},
+            "translations": {
+                "server_unavailable": "聊天服务器似乎不可用。请检查您的网络连接。",
+                "server_error_send" : "发送消息失败。原因：",
+                "server_error_send_error": "错误："
+            },
+        },
+        "loggedIn": false,
+        "portalPath": "http://elearning.fudan.edu.cn/portal",
+        "loggedOutUrl": "https://uis.fudan.edu.cn/authserver/logout?service=http://elearning.fudan.edu.cn/portal",
+        "siteId": "!gateway",
+        "siteTitle": "&#39318;&#39029;",
+        "shortDescription": "",
+        "locale": "zh-CN",
+        "user": {
+            "id": "",
+            "eid": ""
+        },
+        "timeoutDialog": {
+            "enabled": true,
+            "seconds": 600
+        },
+        "toggle": {
+            "allowauto": true,
+            "tools": true,
+            "sitenav": false
+        }
+    };
+</script>
+
+
+<!-- this causes problems for layout needs investigating -->
+    <link href="/portal/styles/portalstyles.css?version=" type="text/css" rel="stylesheet" media="all" />
+<!--[if gte IE 5]><![if lt IE 7]>
+    <link href="/portal/styles/portalstyles-ie5.css?version=" type="text/css" rel="stylesheet" media="all" />
+<![endif]><![endif]-->
+<link href="/library/skin/neo-default/portal.css" type="text/css" rel="stylesheet" media="all" />
+<link href="/library/js/jquery/cluetip/1.2.10/css/jquery.cluetip.css" type="text/css" rel="stylesheet" media="all" />
+
+
+    <title>eLearning : &#39318;&#39029; : &#27426;&#36814;</title>
+<link href="/library/skin/tool_base.css?version=" type="text/css" rel="stylesheet" media="all" />
+<link href="/library/skin/neo-default/tool.css?version=" type="text/css" rel="stylesheet" media="all" />
+
+<script type="text/javascript" src="/library/js/headscripts.js?version="></script>
+<script type="text/javascript">var sakai = sakai || {}; sakai.editor = sakai.editor || {};  sakai.locale = sakai.locale || {};
+sakai.locale.userCountry = 'CN';
+sakai.locale.userLanguage = 'zh';
+sakai.locale.userLocale = 'zh_CN';
+sakai.editor.collectionId = '/user/null/';
+sakai.editor.enableResourceSearch = false;</script>
+<script type="text/javascript">var CKEDITOR_BASEPATH='/library/editor/ckeditor/';
+</script>
+<script type="text/javascript" src="/library/editor/ckeditor/ckeditor.js?version="></script>
+<script type="text/javascript" src="/library/editor/ckeditor.launch.js?version="></script>
+
+<script type="text/javascript" src="/library/js/jquery/jquery-1.9.1.min.js?version="></script>
+<script type="text/javascript" src="/library/js/jquery/jquery-migrate-1.2.1.min.js?version="></script>
+
+<script type="text/javascript" src="/library/js//trimpath-template-latest.js?version="></script>
+<script type="text/javascript" src="/library/js/jquery/bgiframe/jquery.bgiframe.min.js?version="></script>
+<script type="text/javascript" src="/library/js/jquery/cluetip/1.2.10/jquery.cluetip.min.js?version="></script>
+<script type="text/javascript" src="/portal/scripts/neoscripts.js?version="></script>
+<script type="text/javascript" src="/library/js/jquery/notify/1.2.2/jquery.pnotify.min.js?version="></script>
+<script type="text/javascript" src="/library/js/jquery/qtip/jquery.qtip-latest.min.js?version="></script>
+<link type="text/css" rel="stylesheet" href="/library/js/jquery/qtip/jquery.qtip-latest.min.css?version=">
+<script type="text/javascript" src="/library/js/jquery/qtip/tutorial.js?version="></script>
+<script type="text/javascript">
+document.write('<!-- jquery version '+jQuery.fn.jquery+' -->\n');
+</script>
+
+
+</head>
+<body class="portalBody">
+  <noscript><div id="portal_js_warn">Sakai需要JavaScript来提供更好的效果，请在您的浏览器中启用JavaScript</div></noscript>
+<script type="text/javascript">
+	var sakaiPortalWindow = "";
+	$(document).ready(function() {
+			setupSkipNav();
+	});
+	</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		var toggleClass=""
+					toggleClass="toggleTools"
+								setupToolToggle(toggleClass);
+	});
+</script>
+<!-- site.vm -->
+
+<!-- start includeSiteNav -->
+<div id="portalOuterContainer">
+		<div id="portalContainer"  >
+		
+		<div id="headerMin">
+			<div id="skipNav">
+			
+				<a href="#tocontent"  class="skip internalSkip" title="跳转到内容" accesskey="c">
+				跳转到内容
+				</a>
+				<a href="#totoolmenu"  class="skip internalSkip" title="跳转到工具列表" accesskey="l">
+					跳转到工具列表
+				</a>
+			</div>
+			
+			<div id="siteNavWrapper" class="undeterminedSiteType">
+				<div id="mastHead" role="banner">
+					<div id="mastLogo">
+						<img title="Logo" alt="Logo" src="/library/skin/neo-default/images/logo_inst.gif" />
+					</div>
+					<div id="mastBanner">
+						<img title="Banner" alt="Banner" src="/library/skin/neo-default/images/banner_inst.gif" />
+					</div>
+					<!-- login component -->
+					<div id="mastLogin">
+											<div id="loginLinks">
+												<a href="http://elearning.fudan.edu.cn/portal/login" title="登录" id="loginLink1" >登录</a>
+																</div>
+										</div>
+					<!-- end login component -->
+				</div>
+			</div>
+			<div class="divColor" id="tabBottom">
+				<br />
+			</div>
+		</div>
+
+		
+<!-- START from includePageWithNav.vm -->
+
+<div id="container"  >
+
+
+	<!-- START from includePageNav.vm -->
+		<!-- start includePageNav -->
+			<div class="divColor" id="toolMenuWrap">
+				<div id="worksiteLogo">
+													</div>
+                        				<h1 class="skip" id="totoolmenu">工具从此处开始</h1>
+				<div id="toolMenu" role="navigation" aria-label="工具从此处开始">
+					<ul>
+					  								<li class="selectedTool">
+							<a class="toolMenuLink " title="&#27426;&#36814;" role="presentation" aria-disabled="true">
+							<span class="toolMenuIcon icon-sakai-motd "> </span><span class="menuTitle">&#27426;&#36814;</span>
+							</a>
+						</li>
+		  							  				  			 		  			 						<li>
+							<a class="toolMenuLink " href="http://elearning.fudan.edu.cn/portal/site/!gateway/page/!gateway-200" title="用于在站点内显示外部站点内容">
+							<span class="toolMenuIcon icon-sakai-iframe "></span><span class="menuTitle">&#20851;&#20110;Sakai</span>
+							</a>
+						</li>
+		   							    		  							  				  			 		  			 						<li>
+							<a class="toolMenuLink " href="http://elearning.fudan.edu.cn/portal/site/!gateway/page/!gateway-300" title="用于在站点内显示外部站点内容">
+							<span class="toolMenuIcon icon-sakai-iframe "></span><span class="menuTitle">&#21151;&#33021;</span>
+							</a>
+						</li>
+		   							    		  							  				  			 		  			 						<li>
+							<a class="toolMenuLink " href="http://elearning.fudan.edu.cn/portal/site/!gateway/page/!gateway-400" title="查找或查看站点概要">
+							<span class="toolMenuIcon icon-sakai-sitebrowser "></span><span class="menuTitle">&#31449;&#28857;&#21015;&#34920;</span>
+							</a>
+						</li>
+		   							    		  							  				  			 		  			 						<li>
+							<a class="toolMenuLink " href="http://elearning.fudan.edu.cn/portal/site/!gateway/page/!gateway-600" title="用于在站点内显示外部站点内容">
+							<span class="toolMenuIcon icon-sakai-iframe "></span><span class="menuTitle">&#33268;&#35874;</span>
+							</a>
+						</li>
+		   							    		  							  				  			 		  			 						<li>
+							<a class="toolMenuLink " href="http://elearning.fudan.edu.cn/portal/site/!gateway/page/8f3bb407-02e1-4b3c-a8c4-d8810115961d" title="用于在站点内显示外部站点内容">
+							<span class="toolMenuIcon icon-sakai-iframe "></span><span class="menuTitle">&#24120;&#35265;&#38382;&#39064;</span>
+							</a>
+						</li>
+		   							    		  							  				  			 		  			 						<li>
+							<a class="toolMenuLink " href="http://elearning.fudan.edu.cn/portal/site/!gateway/page/9036b277-f8a9-41ac-86f9-9cc71b4b3d95" title="用于在站点内显示外部站点内容">
+							<span class="toolMenuIcon icon-sakai-iframe "></span><span class="menuTitle">Sakai&#22797;&#26086;&#20849;&#20139;&#29256;</span>
+							</a>
+						</li>
+		   							    		  																	 <li>
+								<a class="toolMenuLink" accesskey="6" href="http://elearning.fudan.edu.cn/portal/help/main" target="_blank" 
+									onclick="openWindow('http://elearning.fudan.edu.cn/portal/help/main', 
+									'Help', 'resizable=yes,toolbar=no,scrollbars=yes,menubar=yes,width=1024,height=768'); 
+									return false" title="帮助">
+								<span  class="toolMenuIcon icon-sakai-help"> </span><span class="menuTitle">帮助</span>
+								<span class="skip">在新窗口打开</span> </a>
+								</a>
+						 </li>
+								</ul>
+				</div>
+				
+			<!-- Add subsite lists -->
+			
+
+			</div>
+			<div id="togglebar">
+			</div>
+			<h1 class="skip" id="tocontent">内容从这里开始</h1>
+		<!-- end includePageNav -->
+		<!-- end page nav -->
+<!-- END from includePageNav.vm -->
+
+
+<!-- START from includePageBody.vm -->
+					<div id="content" role="main"><div id="innercontent">
+		
+
+				<div id="col1of2">
+												<!-- start Tool -->
+                                            													<div class="portletTitleWrap">
+								<div class="portletTitle">
+									<div class="title">
+																<h2>&#31995;&#32479;&#20844;&#21578;</h2>
+									</div>
+									<div class="action">
+																			<a class="tool-directurl" href="#Mainxgatewayx110_directurl" rel="#Mainxgatewayx110_directurl" title="工具链接">
+								<img src="/library/image/transparent.gif" alt="工具链接" border="0"/>
+							</a>
+							<div id="Mainxgatewayx110_directurl" class="direct-url-wrap" style="display:none">
+																	<input type="checkbox" onclick="toggleShortUrlOutput('http://elearning.fudan.edu.cn/portal/directtool/!gateway-110/', this, 'Mainxgatewayx110_urlholder');" />
+									<span>短链接</span>
+																<textarea class="Mainxgatewayx110_urlholder" rows="3" cols="50">http://elearning.fudan.edu.cn/portal/directtool/!gateway-110/</textarea>						
+							</div>
+																											<a href="http://elearning.fudan.edu.cn/portal/help/main?help=sakai.motd" title="&#31995;&#32479;&#20844;&#21578;的帮助" 
+								 target="_blank" onclick="openWindow('http://elearning.fudan.edu.cn/portal/help/main?help=sakai.motd', 'Help',
+								  'resizable=yes,toolbar=no,scrollbars=yes,menubar=yes,width=1024,height=768'); return false">
+								
+																<img src="/library/image/transparent.gif"  alt="&#31995;&#32479;&#20844;&#21578;的帮助" border="0" />
+									<span class="skip">在新窗口打开</span> </a>
+															</div>
+								</div>
+							</div>
+																<!-- end Tool -->
+					<!-- start Tool Body -->						
+																			<div class="portletMainWrap">
+							    <iframe	name="Mainxgatewayx110"
+	id="Mainxgatewayx110"
+	title="&#31995;&#32479;&#20844;&#21578; "
+	class ="portletMainIframe"
+	height="475"
+	width="100%"
+	frameborder="0"
+	marginwidth="0"
+	marginheight="0"
+	scrolling="auto"
+	src="http://elearning.fudan.edu.cn/portal/tool/!gateway-110?panel=Main">
+</iframe>
+							</div>
+																	<!-- end Tool Body -->												
+																<!-- start Tool -->
+                                            													<div class="portletTitleWrap">
+								<div class="portletTitle">
+									<div class="title">
+																<h2>&#27426;&#36814;</h2>
+									</div>
+									<div class="action">
+																			<a class="tool-directurl" href="#_self_directurl" rel="#_self_directurl" title="工具链接">
+								<img src="/library/image/transparent.gif" alt="工具链接" border="0"/>
+							</a>
+							<div id="_self_directurl" class="direct-url-wrap" style="display:none">
+																	<input type="checkbox" onclick="toggleShortUrlOutput('http://elearning.fudan.edu.cn/portal/directtool/!gateway-120/', this, '_self_urlholder');" />
+									<span>短链接</span>
+																<textarea class="_self_urlholder" rows="3" cols="50">http://elearning.fudan.edu.cn/portal/directtool/!gateway-120/</textarea>						
+							</div>
+																											<a href="http://elearning.fudan.edu.cn/portal/help/main?help=sakai.iframe.service" title="&#27426;&#36814;的帮助" 
+								 target="_blank" onclick="openWindow('http://elearning.fudan.edu.cn/portal/help/main?help=sakai.iframe.service', 'Help',
+								  'resizable=yes,toolbar=no,scrollbars=yes,menubar=yes,width=1024,height=768'); return false">
+								
+																<img src="/library/image/transparent.gif"  alt="&#27426;&#36814;的帮助" border="0" />
+									<span class="skip">在新窗口打开</span> </a>
+															</div>
+								</div>
+							</div>
+																<!-- end Tool -->
+					<!-- start Tool Body -->						
+																			<div class="portletMainWrap">
+							    <div class="portletBody">
+<script type="text/javascript" language="JavaScript">
+$(document).ready(function() {
+$('.closeMe a').click(function(e){
+    e.preventDefault();
+    $(this).closest('.alertMessage').fadeOut('slow')
+});
+})
+
+if ( '/library/content/server_info_zh_CN.html'.indexOf('http://') == 0 || '/library/content/server_info_zh_CN.html'.indexOf('https://') == 0 ) {
+
+    function timeout_gateway_120() { 
+        var myframe = $("#id_gateway_120");
+        var loaded = false;
+        window.console && console.log("/library/content/server_info_zh_CN.html timeout check...");
+        try {
+            var iframeLoc = myframe.get(0).contentWindow.location;
+            iframeLoc = String(iframeLoc);
+            var windowLoc = String(window.location);
+            window.console && console.log("iframe.location="+windowLoc);
+            var ipos = -1;
+            var slashcount = 0;
+            for (var i=0; i<windowLoc.length; i++ ) {
+                if ( windowLoc[i] == '/' ) slashcount++;
+                if ( slashcount == 3 ) {
+                    ipos = i;
+                    break;
+                }
+            }
+            if ( ipos == -1 ) {
+                loaded = false;
+            } else { 
+                var prefix = windowLoc.substring(0, ipos);
+                window.console && console.log("iframe.prefix="+prefix);
+                loaded = iframeLoc.indexOf(prefix) == 0;
+            }
+        } catch(ex) {  // This is an expected/normal/hoped for occurance
+            loaded = true;
+        }
+        if ( ! loaded ) {
+            $('#alert_gateway_120').show();
+        } else {
+            window.console && console.log('/library/content/server_info_zh_CN.html load success');
+        }
+
+    }
+
+    var timer_gateway_120 = false;
+    $(document).ready(function() {
+        timer_gateway_120 = window.setTimeout("timeout_gateway_120()",8000);
+    });
+} else {
+    window.console && console.log('/library/content/server_info_zh_CN.html does not start with http:// or https://');
+}
+</script>
+<div class="alertMessage specialLink" style="display:none" id="alert_gateway_120">警告： 
+本页面载入时发生错误。
+<a href="/library/content/server_info_zh_CN.html" onclick="window.open('/library/content/server_info_zh_CN.html','_blank'); return false;" target="_blank">在新窗口中重新显示页面。</a>
+<p class="closeMe"><a href="#" style="text-decoration:none !important;font-size:110%;color:#c00 !important" title="Click to dismiss">x <span class="skip">Click to dismiss</span></a></p> 
+</div>
+<div class="wcwomenu"> <iframe 
+    id="id_gateway_120"
+    title="我的工作空间说明信息"
+    width="100%"
+    style="width:100%;padding:0 !important; height:400px"
+    frameborder="0"
+    marginwidth="0"
+    marginheight="0"
+    scrolling="auto"
+    src="/library/content/server_info_zh_CN.html">
+</iframe>
+</div>
+</div>
+
+							</div>
+																	<!-- end Tool Body -->												
+											</div>
+							<div id="col2of2">
+														<!-- start include tool -->
+					<!-- start Tool Col2 -->
+													<div class="portletTitleWrap">
+								<div class="portletTitle">
+									<div class="title">
+																<h2>&#24120;&#35265;&#38382;&#39064;</h2>
+									</div>
+									<div class="action">
+																			<a class="tool-directurl" href="#_self_directurl" rel="#_self_directurl" title="工具链接">
+								<img src="/library/image/transparent.gif" alt="工具链接" border="0"/>
+							</a>
+							<div id="_self_directurl" class="direct-url-wrap" style="display:none">
+																	<input type="checkbox" onclick="toggleShortUrlOutput('http://elearning.fudan.edu.cn/portal/directtool/3506befb-fe11-4915-9ccf-ffd84bdf53ad/', this, '_self_urlholder');" />
+									<span>短链接</span>
+																<textarea class="_self_urlholder" rows="3" cols="50">http://elearning.fudan.edu.cn/portal/directtool/3506befb-fe11-4915-9ccf-ffd84bdf53ad/</textarea>						
+							</div>
+																											<a href="http://elearning.fudan.edu.cn/portal/help/main?help=sakai.iframe" title="&#24120;&#35265;&#38382;&#39064;的帮助" 
+								 target="_blank" onclick="openWindow('http://elearning.fudan.edu.cn/portal/help/main?help=sakai.iframe', 'Help',
+								  'resizable=yes,toolbar=no,scrollbars=yes,menubar=yes,width=1024,height=768'); return false">
+																<img src="/library/image/transparent.gif"  alt="&#24120;&#35265;&#38382;&#39064;的帮助"  border="0" />
+										<span class="skip">在新窗口打开</span> </a>
+
+															</div>
+								</div>
+							</div>
+											<!-- end Tool Col2 -->
+					<!-- start Tool Body -->
+													<div class="portletMainWrap">
+							    <div class="portletBody">
+<script type="text/javascript" language="JavaScript">
+$(document).ready(function() {
+$('.closeMe a').click(function(e){
+    e.preventDefault();
+    $(this).closest('.alertMessage').fadeOut('slow')
+});
+})
+
+if ( '/wiki/elearning/faq.html?breadcrumb=0'.indexOf('http://') == 0 || '/wiki/elearning/faq.html?breadcrumb=0'.indexOf('https://') == 0 ) {
+
+    function timeout3506befb_fe11_4915_9ccf_ffd84bdf53ad() { 
+        var myframe = $("#id3506befb_fe11_4915_9ccf_ffd84bdf53ad");
+        var loaded = false;
+        window.console && console.log("/wiki/elearning/faq.html?breadcrumb=0 timeout check...");
+        try {
+            var iframeLoc = myframe.get(0).contentWindow.location;
+            iframeLoc = String(iframeLoc);
+            var windowLoc = String(window.location);
+            window.console && console.log("iframe.location="+windowLoc);
+            var ipos = -1;
+            var slashcount = 0;
+            for (var i=0; i<windowLoc.length; i++ ) {
+                if ( windowLoc[i] == '/' ) slashcount++;
+                if ( slashcount == 3 ) {
+                    ipos = i;
+                    break;
+                }
+            }
+            if ( ipos == -1 ) {
+                loaded = false;
+            } else { 
+                var prefix = windowLoc.substring(0, ipos);
+                window.console && console.log("iframe.prefix="+prefix);
+                loaded = iframeLoc.indexOf(prefix) == 0;
+            }
+        } catch(ex) {  // This is an expected/normal/hoped for occurance
+            loaded = true;
+        }
+        if ( ! loaded ) {
+            $('#alert3506befb_fe11_4915_9ccf_ffd84bdf53ad').show();
+        } else {
+            window.console && console.log('/wiki/elearning/faq.html?breadcrumb=0 load success');
+        }
+
+    }
+
+    var timer3506befb_fe11_4915_9ccf_ffd84bdf53ad = false;
+    $(document).ready(function() {
+        timer3506befb_fe11_4915_9ccf_ffd84bdf53ad = window.setTimeout("timeout3506befb_fe11_4915_9ccf_ffd84bdf53ad()",8000);
+    });
+} else {
+    window.console && console.log('/wiki/elearning/faq.html?breadcrumb=0 does not start with http:// or https://');
+}
+</script>
+<div class="alertMessage specialLink" style="display:none" id="alert3506befb_fe11_4915_9ccf_ffd84bdf53ad">警告： 
+本页面载入时发生错误。
+<a href="/wiki/elearning/faq.html?breadcrumb=0" onclick="window.open('/wiki/elearning/faq.html?breadcrumb=0','_blank'); return false;" target="_blank">在新窗口中重新显示页面。</a>
+<p class="closeMe"><a href="#" style="text-decoration:none !important;font-size:110%;color:#c00 !important" title="Click to dismiss">x <span class="skip">Click to dismiss</span></a></p> 
+</div>
+<div class="wcwomenu"> <iframe 
+    id="id3506befb_fe11_4915_9ccf_ffd84bdf53ad"
+    title="我的工作空间说明信息"
+    width="100%"
+    style="width:100%;padding:0 !important; height:800px"
+    frameborder="0"
+    marginwidth="0"
+    marginheight="0"
+    scrolling="auto"
+    src="/wiki/elearning/faq.html?breadcrumb=0">
+</iframe>
+</div>
+</div>
+
+							</div>
+											<!-- end Tool Body -->												
+					<!-- end include tool -->
+													</div>
+						</div>
+        </div>
+			<div>
+			<!-- include bottom -->
+						<div id="footer" role="contentinfo">
+
+				<div class="footerExtNav">
+					<ul id="footerLinks"><li><span><a href="http://www.fudan.edu.cn/">复旦大学</a></span></li><li><span><a href="http://www.ecampus.fudan.edu.cn/">信息办</a></span></li><li><span><a href="http://www.sakaiproject.org/" target="_blank">Sakai项目</a></span></li><li><span><a href="/portal/pda">移动版</a></span></li></ul>
+				</div>
+				<div id="footerInfo">
+								<a href="http://sakaiproject.org" target="_blank">
+					 <img border="0" src="/library/image/sakai_powered.gif" alt="基于Sakai项目" />
+					 <span class="skip"> (在新窗口打开)</span>
+					</a>
+								<a href="http://www.ecampus.fudan.edu.cn" target="_blank">
+					 <img border="0" src="/library/image/xxb.gif" alt="复旦大学校园信息化办公室" />
+					 <span class="skip"> (在新窗口打开)</span>
+					</a>
+			
+			<!-- end include Bottom -->
+				</div>
+				<div class="sakaiCopyrightInfo">2010-2017 复旦大学版权所有</div>
+				<div class="serviceInfo">eLearning - eLearning - Sakai 10.5 (Kernel 10.5) - Server app3</div>
+							 	<div class="server-time-container" aria-live="off">
+										服务器时间：
+					<span id="serverTime" class="server-time"></span>
+				</div>
+				<script type="text/javascript">
+					// <!--
+					updateFooterTime = (function() {
+														var serverTzDisplay='CST';
+							var serverServerDateAndGMTOffset = new Date(1570981320830)
+							var serverLocalOffset = serverServerDateAndGMTOffset.getTime() - (new Date()).getTime();
+
+							return function() {
+									var offsetDate = new Date((new Date()).getTime() + serverLocalOffset);
+									var dateString = offsetDate.toUTCString()
+											.replace(/GMT/, serverTzDisplay)
+											.replace(/UTC/, serverTzDisplay);
+
+									document.getElementById('serverTime').innerHTML = dateString;
+	
+																		
+									setTimeout('updateFooterTime()', 1000);
+								};
+						})();
+							
+					updateFooterTime();
+					// --> 
+				</script>
+				
+
+
+					</div>
+					<!-- end includePageBody -->
+<!-- END from includePageBody.vm -->
+<div id="tutorial"></div>
+	</div>
+<!-- END from includePageWithNav.vm -->
+
+
+	</div>
+</div>
+<!-- end includeSiteNav -->
+<!-- end site.vm -->
+	</body>
+</html>

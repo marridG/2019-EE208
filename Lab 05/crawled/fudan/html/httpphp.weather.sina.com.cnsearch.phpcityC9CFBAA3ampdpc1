@@ -1,0 +1,373 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />-->
+<title>搜索_天气预报_新闻中心_新浪网</title>
+<meta name="keywords" content="搜索预报,搜索,搜索预报查询一周,机场天气,搜索气候">
+<meta name="description" content="为您提供中国及全球10000个城市天气预报、历史气候查询">
+<link rel="stylesheet" type="text/css" href="http://php.weather.sina.com.cn/css/weather_yc_sub.css" media="all" />
+<script type="text/javascript" src="http://php.weather.sina.com.cn/js/weather_common.js?t=20101115"></script>
+<script type="text/javascript" src="http://i3.sinaimg.cn/home/sinaflash.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+function form_validate(form){
+	var value = form.elements['city'].value;
+	if(value == '' || value == '输入国别、地名、拼音、电话区号均可'){
+		form.elements['city'].focus();
+		return false;
+	}
+	return true;
+}
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://php.weather.sina.com.cn/js/image.js"></script></head>
+
+<body>
+
+<div class="wrap">
+
+	<!-- 头 -->
+	<div class="header">
+
+		<!-- 标准二级导航_新闻中心 begin -->
+		<div class="secondaryHeader">
+			<div class="sHBorder">
+				<div class="sHLogo"><span><a href="http://weather.news.sina.com.cn/"><img src="http://i1.sinaimg.cn/dy/images/header/2009/standardl2nav_sina_new.gif" alt="新浪天气" /></a><a href="http://weather.news.sina.com.cn/"><img src="http://i1.sinaimg.cn/dy/images/header/2009/standardl2nav_weather.gif" alt="新浪天气" /></a></span></div>
+				<div class="sHLinks"><a href="http://news.sina.com.cn/">新闻首页</a>&nbsp;|&nbsp;<a href="http://www.sina.com.cn/">新浪首页</a>&nbsp;|&nbsp;<a href="http://news.sina.com.cn/guide/">新浪导航</a></div>
+			</div>
+		</div>
+		<!-- 标准二级导航_新闻中心 end -->
+
+<div style="height:10px;"></div>
+	<!--XstartX-->
+	<!--XAD_STARTX-->
+
+		<div class="banner">
+				</div>
+
+<!-- 2010/10/8定制模块begin -->
+<div class="nav_bg nav_dz">
+	<div class="clearfix">
+
+			<ul class="nav">
+				<li><a href="http://weather.news.sina.com.cn/" title="首页" hidefocus="true">首页</a></li>
+				<li><a href="http://php.weather.sina.com.cn/text_gn.php?dpc=1" title="国内" hidefocus="true">国内</a></li>
+				<li><a href="http://php.weather.sina.com.cn/text_gj.php?dpc=1" title="国际" hidefocus="true">国际</a></li>
+				<!--  <li><a href="http://php.weather.sina.com.cn/airport/list.php?dpc=1" title="机场天气" hidefocus="true">机场天气</a></li>-->
+				<li><a href="http://weather.news.sina.com.cn/airport/" title="机场天气" hidefocus="true">机场天气</a></li>
+				<li><a href="http://php.weather.sina.com.cn/whd_list.php?dpc=1" title="历史气候" hidefocus="true">历史气候</a></li>
+				<li><a href="http://weather.news.sina.com.cn/weather/news/index.html" title="天气资讯" hidefocus="true">天气资讯</a></li>
+				<li><a href="http://weather.news.sina.com.cn/chajian/" title="天气插件" hidefocus="true">天气插件</a></li>
+                                <li><a href="http://weather.sina.com.cn/" title="2014天气新版" hidefocus="true">2014新版</a></li>
+			</ul>
+            <div class="links_01" style="_margin-top:8px;">
+<!--                <a target="_blank" href="http://t.sina.com.cn/weather" title="关注天气微博"><s class="icon_microblog1"></s>关注天气微博</a>-->
+				<a target="_blank" href="http://sms.sina.com.cn/act/090820/zazhitianqiyubao.html" title="订阅天气短信"><s class="icon_duanxin"></s>订阅天气短信</a>
+				<a target="_blank" href="http://news.sina.com.cn/wap/tianqi.html" title="手机看天气"><s class="icon_mobile"></s>手机看天气</a>
+            </div>
+        </div>
+        <div class="dz_box" id="dz_box">
+
+			<form class="search" id="wea_search" method="get" action="http://php.weather.sina.com.cn/search.php">
+				<input type="text" class="kw" maxlength="18" id="city" name="city" value="输入国名、地名、拼音、电话区号均可" onfocus="if(this.value=='输入国名、地名、拼音、电话区号均可')this.value=''" onblur="if(this.value=='')this.value='输入国名、地名、拼音、电话区号均可'" autocomplete="off"  data-default="5,北京,010,100000;214,上海,021,200000;12,天津,022,300000;341,武汉,027,430000;185,沈阳,024,110000;490,广州,020,510000;813,重庆,023,30000;586,西安,029,710000;242,南京,025,210000;119,哈尔滨,0451,150000;" />
+				<input type="hidden" name="c" value="1" disabled="disabled" /><input type="hidden" name="dpc" value="1" />
+				<input type="submit" class="sb" value="" />
+			</form>
+            <s class="split"></s>
+
+            <h3>定制天气 &gt;</h3>
+            <s class="split"></s>
+            <div class="dz_grid" id="dz_grid_1">
+                <input type="button" class="btn_dz" onclick="show_dingzhi()" value="添加定制" hideFocus="true" />
+            </div>
+            <s class="split"></s>
+            <div class="dz_grid" id="dz_grid_2">
+                <input type="button" class="btn_dz" onclick="show_dingzhi()" value="添加定制" hideFocus="true" />
+            </div>
+            <s class="split"></s>
+            <div class="dz_grid" id="dz_grid_3">
+                <input type="button" class="btn_dz" onclick="show_dingzhi()" value="添加定制" hideFocus="true" />
+            </div>
+		</div>
+
+			<div id="dialog_dingzhi">
+				<h3>添加城市</h3>
+				<form name="" id="fm_dingzhi" method="post" action="">
+					<h4>你的城市:</h4>
+					<input type="text" id="dzCityName" class="txt_city" name="dzCityName" value="输入国名、地名、拼音、电话区号均可" data-default="5,北京,010,100000;214,上海,021,200000;12,天津,022,300000;341,武汉,027,430000;185,沈阳,024,110000;490,广州,020,510000;813,重庆,023,30000;586,西安,029,710000;242,南京,025,210000;119,哈尔滨,0451,150000;" autocomplete="off" />
+					<div class="btns">
+						<input type="submit" class="btn_dz" value="添 加" hideFocus="true" />
+						<input type="button" class="btn_qx" onclick="close_dingzhi()" value="取消" hideFocus="true" />
+					</div>
+				</form>
+				<s class="close" onclick="close_dingzhi()"></s>
+
+			</div>
+			<!-- 2010/10/15begin -->
+			<iframe src="http://weather.news.sina.com.cn/iframe/4/2010-10-18/45.html" id="dataFrame" style="height:0;width:1px;overflow:hidden;position:absolute;left:-9999em;" frameborder="0" scrolling="no"></iframe>
+
+
+			<script type="text/javascript">
+			<!--
+
+			//天气预报定制
+			function show_dingzhi() {
+				sina.$('overlay').style.display='block';
+				sina.$('overlay').style.height=document.body.scrollHeight+'px';
+				sina.$('dialog_dingzhi').style.display='block';
+				sina.$('fm_dingzhi').reset();
+			}
+			function close_dingzhi() {
+				sina.$('overlay').style.display='none';
+				sina.$('dialog_dingzhi').style.display='none';
+			}
+
+			var grids=getByClass('dz_grid',sina.$('dz_box')),citys;
+
+			//载入定制
+			function load_dingzhi() {
+				for (var j=0; j<3; j++) {//重置
+					grids[j].innerHTML='<input type="button" class="btn_dz" onclick="show_dingzhi()" value="添加定制" hideFocus="true" />';
+				}
+				for (var i=0; i<citys.length; i++) {
+					getCityWeather(citys[i],i);
+				}
+			}
+
+			function showCityWeather0(o) {
+				if (!o || !o.w[citys[0]]) {
+
+					if (citys[0]) {//删除错误的城市
+						citys.splice(0,1);
+						flashData.write('city_dingzhi',citys);
+					}
+					return;
+				};
+				o=o.w[citys[0]][0];
+				grids[0].innerHTML=
+				'<h4><a href="http://php.weather.sina.com.cn/search.php?f=1&c=1&city='+citys[0]+'&dpc=1">'+citys[0]+'</a></h4>'+
+				'<a href="http://php.weather.sina.com.cn/search.php?f=1&c=1&city='+citys[0]+'&dpc=1"><span class="tpte"> '+o.t1+'℃～'+o.t2+'℃</span> '+o.s1+'<br />'+
+				o.d1+' '+o.p1+'级</a>'+
+				'<s class="close" onclick=delete_dingzhi(this) title="取消定制"></s>';//2010/10/19 还下面2个
+			}
+			function showCityWeather1(o) {
+				if (!o || !o.w[citys[1]]) {
+					if (citys[1]) {
+						citys.splice(1,1);
+						flashData.write('city_dingzhi',citys);
+					}
+					return;
+				};
+				o=o.w[citys[1]][0];
+				grids[1].innerHTML=
+				'<h4><a href="http://php.weather.sina.com.cn/search.php?f=1&c=1&city='+citys[1]+'&dpc=1">'+citys[1]+'</a></h4>'+
+				'<a href="http://php.weather.sina.com.cn/search.php?f=1&c=1&city='+citys[1]+'&dpc=1"><span class="tpte"> '+o.t1+'℃～'+o.t2+'℃</span> '+o.s1+'<br />'+
+				o.d1+' '+o.p1+'级</a>'+
+				'<s class="close" onclick=delete_dingzhi(this) title="取消定制"></s>';
+			}
+			function showCityWeather2(o) {
+				if (!o || !o.w[citys[2]]) {
+					if (citys[2]) {
+						citys.splice(2,1);
+						flashData.write('city_dingzhi',citys);
+					}
+					return;
+				};
+				o=o.w[citys[2]][0];
+				grids[2].innerHTML=
+				'<h4><a href="http://php.weather.sina.com.cn/search.php?f=1&c=1&city='+citys[2]+'&dpc=1">'+citys[2]+'</a></h4>'+
+				'<a href="http://php.weather.sina.com.cn/search.php?f=1&c=1&city='+citys[2]+'&dpc=1"><span class="tpte"> '+o.t1+'℃～'+o.t2+'℃</span> '+o.s1+'<br />'+
+				o.d1+' '+o.p1+'级</a>'+
+				'<s class="close" onclick=delete_dingzhi(this) title="取消定制"></s>';
+			}
+
+			function getCityWeather(id,n) {
+				if (sina.$('spt_jsonp'+n)) {
+					sina.$('dz_box').removeChild(sina.$('spt_jsonp'+n))
+				}
+				var spt=document.createElement('script');
+				spt.id='spt_jsonp'+n;
+				sina.$('dz_box').appendChild(spt);
+				spt.src='http://php.weather.sina.com.cn/iframe/index/w_cl.php?code=js&cbf=showCityWeather'+n+'&city='+id;
+			}
+
+			//删除定制
+			function delete_dingzhi(o) {
+
+				for (var i=0; i<citys.length; i++) {
+					var c=o.parentNode.getElementsByTagName('h4')[0].getElementsByTagName('a')[0].innerHTML;
+					if (citys[i]==c) {
+						citys.splice(i,1)
+					}
+				}
+				o.parentNode.innerHTML='<input type="button" class="btn_dz" onclick="show_dingzhi()" value="添加定制" hideFocus="true" />';
+				flashData.write('city_dingzhi',citys);
+			}
+
+
+			sina.$('fm_dingzhi').onsubmit=function () {
+                            
+                                var tt = this.getElementsByTagName('tbody')[0].rows;
+				var kk = 0;
+				if (tt) {
+					for (var i = 1; i < tt.length; i++) {
+						if (tt[i].cells[0].firstChild.innerHTML == sina.$('dzCityName').value) {
+							kk = 1;
+						}
+					}
+					if (kk == 0) {
+						sina.$('dzCityName').value = this.getElementsByTagName('tbody')[0].rows[1].cells[0].firstChild.innerHTML;
+					};
+				};    
+                                
+				var value=sina.$('dzCityName').value;
+				if (!value || value=='输入国名、地名、拼音、电话区号均可') {
+					return false;
+				}
+
+				if (citys) {
+					for (var i=0; i<citys.length; i++) {
+						if (citys[i]==value) {
+							alert('您已经定制过'+value+'的天气了! 不用定2个吧 ^ ^');
+							sina.$('fm_dingzhi').reset();
+							return false;
+						}
+					}
+					if (citys.length>=3) {
+						alert('最多只能预订3个城市!');
+						return false;
+					}
+				}
+				citys.push(value);
+				flashData.write('city_dingzhi',citys);
+				load_dingzhi();
+				close_dingzhi();
+				return false;
+			}
+
+			sina.$('dataFrame').onload=function () {
+				citys=flashData.read('city_dingzhi')||[];
+				if (typeof (citys) == 'string') {
+					citys=citys.split(',');
+				}
+				load_dingzhi();
+			}
+
+
+			//-->
+			</script>
+
+            <!--<script type="text/javascript" src="http://php.weather.sina.com.cn/js/SuggestServer_3.js"></script>-->
+            <script type="text/javascript" src="http://weather.news.sina.com.cn/js/43/20140414/home/suggest_fc.js"></script>            
+			<script type="text/javascript">
+            <!--
+            (new SuggestServer()).bind({
+                "input": "city",
+                "value": "@1@",
+                "type": "61",
+                "max": 10,
+                "width": 275,
+                "head": ["名称", "区号"],
+                "body": [1, 2],
+                "callback":null,
+                "tip" : "可输入汉字/拼音/缩写/区号",
+				"hideSelectForIE6" : true
+            });
+
+			//定制城市
+			(new SuggestServer()).bind({
+				"input": "dzCityName",
+				"value": "@1@",
+				"type": "61",
+				'pos':[20,124],
+				"max": 10,
+				"width": 300,
+				"head": ["名称", "区号"],
+				"body": [1, 2],
+				"callback":null,
+				"tip" : "可输入汉字/拼音/缩写/区号"
+			});
+            //城市搜索
+            sina.$('wea_search').onsubmit=function (e) {
+                
+//                    e.preventDefault();
+                    var tt = this.getElementsByTagName('tbody')[0].rows;
+                    var kk = 0;
+                    if (tt) {
+                            for (var i = 1; i < tt.length; i++) {
+                                    if (tt[i].cells[0].firstChild.innerHTML == sina.$('city').value) {
+                                            kk = 1;
+                                    }
+                            }
+                            if (kk == 0) {
+                                    sina.$('city').value = this.getElementsByTagName('tbody')[0].rows[1].cells[0].firstChild.innerHTML;
+                            };
+                    };
+                    //sina.$('city').value = this.getElementsByTagName('tbody')[0].rows[1].cells[0].firstChild.innerHTML;
+                    var value = sina.$('city').value;
+                    if(value == '' || value == '输入国名、地名、拼音、电话区号均可'){
+                            sina.$('city').focus();
+                            return false;
+                    }
+
+            }
+            //-->
+            </script>
+		</div>
+		<!-- 2010/10/15end -->
+<!-- 定制模块end -->
+
+	</div>
+	<!-- 内容区 -->
+	<div class="content">
+		<div class="pos">
+			<a href="http://weather.news.sina.com.cn/" title="天气首页">天气首页</a> &gt; 搜索
+		</div>
+
+		<div class="mod_search">
+			<form name="" method="get" action="http://php.weather.sina.com.cn/search.php" onsubmit="return form_validate(this);">
+				<p style="font-size:12px;">对不起，您搜索的城市'上海'天气信息不存在，请改变后重新尝试！</p>
+				<input type="text" class="kw" name="city" onfocus="javascript:if(this.value=='输入国名、地名、拼音、电话区号均可')this.value='';" value="输入国名、地名、拼音、电话区号均可" onblur="if(this.value=='')this.value='输入国名、地名、拼音、电话区号均可';" /><input type="hidden" disabled="" value="1" name="c"/><input type="hidden" value="1" name="dpc"/>
+				<input type="submit" class="btn01" value="查询" />
+			</form>
+		</div>
+	</div>
+	<!-- 内容区end -->
+
+</div>
+
+<div id="overlay"></div>
+
+<!--  footer begin  -->
+<div class="footer">
+  <p><a href="http://comment4.news.sina.com.cn/comment/skin/feedback.html" target="_blank">天气预报意见反馈留言板</a>　电话：010-82612286　　欢迎批评指正</p>
+  
+
+  <p><a href="http://corp.sina.com.cn/chn/">新浪简介</a> | <a href="http://corp.sina.com.cn/eng/">About Sina</a> | <a href="http://ads.sina.com.cn/">广告服务</a> | <a href="http://www.sina.com.cn/contactus.html">联系我们</a> | <a href="http://corp.sina.com.cn/chn/sina_job.html">招聘信息</a> | <a href="http://www.sina.com.cn/intro/lawfirm.shtml">网站律师</a> | <a href="http://english.sina.com">SINA English</a> | <a href="https://login.sina.com.cn/cgi/register/reg_sso.php">通行证注册</a> | <a href="http://help.sina.com.cn/">产品答疑</a></p>
+  <p>Copyright &copy; 1996-2013 SINA Corporation, All Rights Reserved</p>
+  <p>新浪公司 <a href="http://www.sina.com.cn/intro/copyright.shtml">版权所有</a></p>
+</div>
+<!--  footer end  -->
+
+<!-- SUDA_CODE_START -->
+<script type="text/javascript" src="http://www.sinaimg.cn/unipro/pub/suda_s_v851c.js "></script>
+<script type="text/javascript">_S_pSt(_S_PID_);</script>
+<noScript>
+<div style='position:absolute;top:0;left:0;width:0;height:0;visibility:hidden'><img width=0 height=0 src='http://beacon.sina.com.cn/a.gif?noScript' border='0' alt='' /></div>
+</noScript>
+<!-- SUDA_CODE_END -->
+
+<!-- START WRating v1.0 -->
+<div style="display:none">
+<script type="text/javascript" src="http://sina.wrating.com/a1.js"></script>
+<script type="text/javascript">
+var vjAcc="860010-0327010000"; 
+var wrUrl="http://sina.wrating.com/"
+vjTrack("");
+</script>
+<noscript><img src="http://sina.wrating.com/a.gif?a=&c=860010-0327010000" width="1" height="1"/></noscript>
+</div>
+<!-- END WRating v1.0 -->
+</body>
+</html>

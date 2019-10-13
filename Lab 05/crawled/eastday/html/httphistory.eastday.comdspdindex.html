@@ -1,0 +1,581 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<META content="0" name="CustomerID">
+
+<meta http-equiv="refresh" content="3600"> 
+<meta name="keywords" content="首页、听潮、排行、独家策划、海上人物、轶闻秘史、家族往事、铁马金戈、珍档荟萃、民俗文化、建筑掠影、镜像历史、党史频道">
+<meta name="description" content="首页、听潮、排行、独家策划、海上人物、轶闻秘史、家族往事、铁马金戈、珍档荟萃、民俗文化、建筑掠影、镜像历史、党史频道">
+<META name="filetype" content="1"> 
+<META name="publishedtype" content="1"> 
+<META name="pagetype" content="2"> 
+<META name="catalogs" content="745076">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>党史频道-东方网</title>
+<link href="/images/history2013/css.css" rel="stylesheet" type="text/css" />
+<script src="/images/history2013/jquery-1.4.4.min.js"></script>
+<script src="/images/history2013/tc.js"></script>
+<script type="text/javascript" src="http://login.eastday.com/loginbar/loginbar.js"></script>
+<script language="JavaScript"> 
+<!--
+function qbcheckform(theForm){
+if(theForm.title.value==""){
+		window.alert("关键字不能为空");
+		theForm.title.focus();
+	}
+	else{
+		if (theForm.selectact.value=="news")
+		{
+			line="http://202.108.33.236/eastday/CollSearchv3.cgi?selectact=news&word="+theForm.title.value
+		}
+        if (theForm.selectact.value=="jike")
+		{
+			line="http://www.jike.com/so?q="+theForm.title.value+"&trade_id=3983683003702233969"
+		}
+		if (theForm.selectact.value=="baidu")
+		{
+			line="http://www.baidu.com/baidu?word="+theForm.title.value
+		}
+		if (theForm.selectact.value=="google")
+		{
+			line="http://www.google.cn/search?complete=1&hl=zh-CN&q="+theForm.title.value
+		}
+		if (theForm.selectact.value=="eastday")
+		{
+			line="http://nsearch.eastday.com/search.jsp?searchText="+theForm.title.value+"\&t=1"
+		}
+		window.open(line, "result");
+	}
+}
+function qbcheckformsk(theForm){
+if(theForm.title.value==""){
+		linesk="http://www.jike.com/"
+		window.open(linesk, "result");
+	}
+	else{
+			linesk="http://www.jike.com/so?q="+theForm.title.value+"&trade_id=3983683003702233969"
+		window.open(linesk, "result");
+	}
+}
+//-->
+</SCRIPT>
+<script type="text/javascript"> 
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+<script language="JavaScript" type="text/javascript">
+<!--//--><![CDATA[//><!-- 
+/**
+* 通过ID获取元素对像，此方法返一个元素对像。
+* @param {String} elemId 元素的ID名
+* @return 通过指定ID获取元素对像
+* @type Object
+*/
+function GetObj(objName){
+	if(document.getElementById){
+		return eval('document.getElementById("' + objName + '")');
+	}else if(document.layers){
+		return eval("document.layers['" + objName +"']");
+	}else{
+		return eval('document.all.' + objName);
+	}
+}
+/**
+* 实现菜单切换。
+* @param {String} idx      菜单的索引号
+* @param {String} prefix   菜单及内容块ID的前缀
+* @param {String} onstyle  当前菜单的样式名
+* @param {String} offstyle 非当前菜单的样式名
+* @return null
+*/
+function Menu(idx, prefix, onstyle, offstyle){
+	for(var i=0;i<40;i++){
+		if(!GetObj(prefix+"_"+i)) break;
+		GetObj(prefix+"_"+i).className = offstyle;
+		GetObj(prefix+"_con_"+i).style.display = "none";
+	}
+		GetObj(prefix+"_"+idx).className = onstyle;
+		GetObj(prefix+"_con_"+idx).style.display = "block";
+}
+function Focus(formName, elemName){
+	var elem = document.forms[formName].elements[elemName];
+	if(elem) elem.focus();
+}
+//--><!]]>
+</script>
+<!--[if IE 6]> 
+<script language="javascript" src="/images/history2013/unitpngfix.js"></script>
+<![endif]-->
+<!-- AFP两段式代码-公用代码 -->
+<script type="text/javascript" src="http://afpimages.eastday.com/k.js"></script>
+</head>
+<body><!-- 导航 begin -->
+<div id="nav" class="grey12 lh22"><script type="text/javascript" src="http://news.eastday.com/images/201306gj/2013dh.js"></script></div>
+<!-- 导航 end -->
+<div id="wFrame">
+  <!-- 广告 begin -->
+ <ul class="gglist">
+  <li><!-- 70354：history-banner -->
+<script type="text/javascript">
+_acK({aid:70354,format:0,mode:1,gid:1,serverbaseurl:"eastday.acs86.com/"});
+</script></li>
+  <li><!-- 70355：history-button-140-1 -->
+<script type="text/javascript">
+_acK({aid:70355,format:0,mode:1,gid:1,serverbaseurl:"eastday.acs86.com/"});
+</script></li>
+  <li><!-- 70356：history-button-140-2 -->
+<script type="text/javascript">
+_acK({aid:70356,format:0,mode:1,gid:1,serverbaseurl:"eastday.acs86.com/"});
+</script></li>
+ </ul>
+ <!-- 广告 end -->
+ <!-- 栏目名 begin -->
+ <div class="lm_newlogo">
+  <div class="logo1 fl"><img src="http://ej.eastday.com/images/2013newlogo/title_history.jpg" border="0" usemap="#historyMap" /><map name="historyMap" id="historyMap"><area shape="rect" coords="0,0,130,48" href="http://www.eastday.com/" target="_blank" /><area shape="rect" coords="130,0,190,48" href="http://history.eastday.com/" target="_blank" /></map></div>
+  <div class="grey12 tgrxb lh22 fr"><a href="http://tougao.eastday.com/news/tougao/index.aspx?id=1" target="_blank" class="grey12">我要投稿</a>&nbsp;&nbsp;&nbsp;新闻热线：021-60850333</div>
+ </div>
+<div><img src="http://ej.eastday.com/images/2013newlogo/newbg1.gif" /></div>
+ <!-- 栏目名 end -->
+ <div class="blank12"></div>
+ <!-- 导航 begin -->
+ <div class="dh lh22 fc"><a href="http://history.eastday.com/" target="_blank">首页</a><a href="http://history.eastday.com/tc/index.html" target="_blank">听潮</a><a href="http://history.eastday.com/h/index.html" target="_blank">滚动</a><a href="http://history.eastday.com/djch/index.html" target="_blank">独家策划</a><a href="http://history.eastday.com/hsrw/index.html" target="_blank">海上人物</a><a href="http://history.eastday.com/hscq/ywms/index.html" target="_blank">轶闻秘史</a><a href="http://history.eastday.com/hscq/jzws/index.html" target="_blank">家族往事</a><a href="http://history.eastday.com/hscq/tmjg/index.html" target="_blank">铁马金戈</a><a href="http://history.eastday.com/hscq/zdhc/index.html" target="_blank">珍档荟萃</a><a href="http://history.eastday.com/mswh/index.html" target="_blank">上海城事</a><a href="http://history.eastday.com/jzly/index.html" target="_blank">建筑掠影</a><a href="http://history.eastday.com/jxls/index.html" target="_blank">镜像历史</a><a href="http://history.eastday.com/dspd/index.html" target="_blank">党史频道</a></div>
+ <!-- 导航 end -->
+ <div class="blank12"></div>
+ <!-- 焦点图片 begin -->
+ <div class="fl"><iframe 
+ border="0" name="photo" marginWidth="0" frameSpacing="0" marginHeight="0" 
+ src="http://tj.eastday.com/eastday/history/dspd/bigpic/index.html" frameBorder="0" noResize width="550" 
+ scrolling="no" height="394" vspale="0"></iframe></div>
+ <!-- 焦点图片 end -->
+ <!-- 要闻 begin -->
+ <div class="right2 fr"><div class="lh26 pb12">
+   <p class="fc"><a href="http://history.eastday.com/h/20150709/u1a8787283.html" target="_blank" class="blueb16a">揭秘陈独秀的后代：次女依靠酱油桶“漂”去香港</a></p>
+   <p class="blank10"></p>
+   <p class="grey12a fc"><a href="http://history.eastday.com/h/20150709/u1a8787283.html" target="_blank" class="grey12a">安庆江边，陈家的老屋早被拆毁，原址上竖立着一块碑，并没提到陈独秀。</a></p>
+  </div><div class="lh26 pb12">
+   <p class="fc"><a href="http://history.eastday.com/h/20150708/u1a8785652.html" target="_blank" class="blueb16a">"远东第一监狱"提篮桥处决了多少日本战犯?</a></p>
+   <p class="blank10"></p>
+   <p class="grey12a fc"><a href="http://history.eastday.com/h/20150708/u1a8785652.html" target="_blank" class="grey12a">　　提篮桥监狱建造于1901年，是中国仍在使用的历史最悠久的监狱。在上海人的心目中，“提篮桥”就是监狱的代名词。</a></p>
+  </div>
+  
+  <div class="fc"><img src="/images/history2013/b8.gif" /></div>
+  <ul class="newslist4"><li><a href="http://history.eastday.com/h/20150709/u1a8787060.html" target="_blank" class="grey14">54年毛泽东因何事训毛远新：得五分顶个屁用？</a></li><li><a href="http://history.eastday.com/h/20150709/u1a8787233.html" target="_blank" class="grey14">揭秘中苏珍宝岛事件始末：苏联没料到中国会不屈服</a></li><li><a href="http://history.eastday.com/h/20150709/u1a8787061.html" target="_blank" class="grey14">八路军曾于甘河槽伏击日军 全歼敌人无一人漏网</a></li>
+   
+  </ul>
+  <div class="fc"><img src="/images/history2013/b8.gif" /></div>
+  <div class="blank10"></div>
+  <!-- 上海历史上的今天 begin -->
+  <div class="block3">
+   <div class="bj16 fl">
+    <script language=JavaScript>     
+ today=new Date();
+var today_year = (today.getYear() < 1900) ? (1900 + today.getYear()) : today.getYear();
+ function initArray(){
+   this.length=initArray.arguments.length
+   for(var i=0;i<this.length;i++)
+   this[i+1]=initArray.arguments[i]  }
+   var d=new initArray(
+     "Jan",
+     "Feb",
+     "Mar",
+     "Apr",
+     "May",
+     "Jun",
+     "Jul",
+	 "Aug",
+	 "Sep",
+	 "Oct",
+	 "Nov",
+	 "Dec");
+document.write(
+     "<p class='tx3'>",d[today.getMonth()+1], "</p>" ); 
+	 document.write(
+     "<p class='tx4 lh22'>",today.getDate(), "</p>" ); 
+</script>
+   </div>
+   <div class="tx6 lh20 fr">
+    <p class="blueb16">上海历史上的今天</p>
+    <p class="blank5"></p>
+    <p class="grey12a"><a href="http://history.eastday.com/h/lssdjt/u1a7957736.html" target="_blank" class="grey12a">　　1971年的今天，上海科技人员参与研制的我国“实践1号”试验卫星发射成功，进入预定轨道。<BR 
+style="WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; COLOR: rgb(59,59,59); FONT: 19px/46px Simsun; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(242,250,254); TEXT-INDENT: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px"></a></p>
+   </div>
+  </div>
+  <!-- 上海历史上的今天 end -->
+ </div>
+ <!-- 要闻 end -->
+ <div class="blank25"></div>
+ <!-- 海上传奇 begin -->
+ <div class="lh22">
+  <p class="lm2 blueb18 fl">海上传奇</p>
+  <p class="more1 fr"></p>
+ </div>
+ <div class="blank5"></div>
+ <div class="bj4"></div>
+ <div class="blank25"></div>
+ <!-- 轶闻秘史 begin -->
+ <div class="con2 fl">
+  <div class="lh22">
+   <p class="lm1 greyb14 fl">轶闻秘史</p>
+   <p class="more1 fr"><a href="http://history.eastday.com/dspd/shcq/ywms/index.html" target="_blank" class="grey12">│更多</a></p>
+  </div>
+  <div class="blank5"></div>
+  <div class="bj5"></div>
+  <div class="blank10"></div>
+  <div class="pic2"><p><a target='_blank' href='http://history.eastday.com/h/20141217/u1ai8494595.html'><img border='0' width='470'  height='150' src='/images/thumbnailimg/month_1412/20141217144635262.jpg'></a></p>
+   <p class="H1"><a href="http://history.eastday.com/h/20141217/u1ai8494595.html" target="_blank" class="white12">揭秘江青前夫唐纳真实身份：“中调部”高级情报干部</a></p>
+   <p class="bj6"></p>
+  </div>
+  <ul class="newslist1"><li><a href="http://history.eastday.com/h/20150708/u1a8785652.html" target="_blank" class="grey14">“远东第一监狱”提篮桥究竟处决了多少日本战犯？</a></li><li><a href="http://history.eastday.com/h/20150702/u1a8777551.html" target="_blank" class="grey14">暗杀毛泽东：美国“69101”密杀令始末</a></li><li><a href="http://history.eastday.com/h/20150702/u1a8777547.html" target="_blank" class="grey14">张闻天夫人忆造反派历史素养:硬说东北局书记是林彪</a></li><li><a href="http://history.eastday.com/h/20150408/u1a8659047.html" target="_blank" class="grey14">毛泽东和周恩来生前最后一次谈话说了什么？</a></li><li><a href="http://history.eastday.com/h/20150324/u1a8635985.html" target="_blank" class="grey14">蒋介石大陆最后一次阅兵：眼噙泪水 嗓子嘶哑</a></li>  
+  </ul>
+ </div>
+ <!-- 轶闻秘史 end -->
+ <!-- 人物故事 begin -->
+ <div class="con2 fr">
+  <div class="lh22">
+   <p class="lm1 greyb14 fl">人物故事</p>
+   <p class="more1 fr"><a href="http://history.eastday.com/dspd/shcq/rwgs/index.html" target="_blank" class="grey12">│更多</a></p>
+  </div>
+  <div class="blank5"></div>
+  <div class="bj5"></div>
+  <div class="blank10"></div>
+  <div class="pic2"><p><a target='_blank' href='http://history.eastday.com/h/20141215/u1ai8491192.html'><img border='0' width='470'  height='150' src='/images/thumbnailimg/month_1412/20141217143938115.jpg'></a></p>
+   <p class="H1"><a href="http://history.eastday.com/h/20141215/u1ai8491192.html" target="_blank" class="white12">“国妖”张春桥靠哪“三把梯子”步入常委之列？</a></p>
+   <p class="bj6"></p>
+  </div>
+  <ul class="newslist1"><li><a href="http://history.eastday.com/h/20150709/u1a8787283.html" target="_blank" class="grey14">揭秘陈独秀的后代：次女依靠酱油桶“漂”去香港</a></li><li><a href="http://history.eastday.com/h/20150709/u1a8787060.html" target="_blank" class="grey14">54年毛泽东因何事训毛远新：得五分顶个屁用？</a></li><li><a href="http://history.eastday.com/h/20150709/u1a8787284.html" target="_blank" class="grey14">开国少将之子蔡小心：“红色后代”很少腐败</a></li><li><a href="http://history.eastday.com/h/20150408/u1a8659045.html" target="_blank" class="grey14">邓小平如何处理红军第一叛将</a></li><li><a href="http://history.eastday.com/h/20150324/u1a8635973.html" target="_blank" class="grey14">“总设计师”在上海的点睛之笔</a></li>  
+  </ul>
+ </div>
+ <!-- 家族往事 end -->
+<div class="clear"></div>
+ <!-- 铁马金戈 begin -->
+ <div class="con2 fl">
+  <div class="lh22">
+   <p class="lm1 greyb14 fl">铁马金戈</p>
+   <p class="more1 fr"><a href="http://history.eastday.com/dspd/shcq/tmjg/index.html" target="_blank" class="grey12">│更多</a></p>
+  </div>
+  <div class="blank5"></div>
+  <div class="bj5"></div>
+  <div class="blank10"></div><div class="fl"><a target='_blank' href='http://history.eastday.com/h/20141217/u1ai8494607.html'><img border='0' width='267'  height='150' src='/images/thumbnailimg/month_1412/201412171434092020.jpg'></a></div>
+  <div class="tx2 fr">
+   <p class="biaoti1 lh26"><a href="http://history.eastday.com/h/20141217/u1ai8494607.html" target="_blank" class="greyb14a">志愿军188师朝战传奇：步枪一天打18架飞机</a></p>
+   <p class="grey12a lh26"><a href="http://history.eastday.com/h/20141217/u1ai8494607.html" target="_blank" class="grey12a">　　在朝鲜战场上的美军飞机就如同苍蝇一样，飞来飞去，依仗绝对的空中优势，对我军狂轰滥炸，在我军阵地上如入无人之境。</a></p>
+  </div>
+  <div class="clear"></div>
+  <ul class="newslist1"><li><a href="http://history.eastday.com/h/20150709/u1a8787233.html" target="_blank" class="grey14">揭秘中苏珍宝岛事件始末：苏联没料到中国会不屈服</a></li><li><a href="http://history.eastday.com/h/20150709/u1a8787061.html" target="_blank" class="grey14">八路军曾于甘河槽伏击日军 全歼敌人无一人漏网</a></li><li><a href="http://history.eastday.com/h/20150708/u1a8785674.html" target="_blank" class="grey14">抗战时国民党曾火烧长沙：大火整整烧了三天三夜</a></li><li><a href="http://history.eastday.com/h/20150408/u1a8659052.html" target="_blank" class="grey14">“金三角”国民党军残部：一支没有祖国的军队</a></li><li><a href="http://history.eastday.com/h/20150211/u1a8578446.html" target="_blank" class="grey14">毛泽东特批哪位开国上将不敬军礼</a></li>
+  </ul>
+ </div>
+ <!-- 铁马金戈 end -->
+ <!-- 珍档荟萃 begin -->
+ <div class="con2 fr">
+  <div class="lh22">
+   <p class="lm1 greyb14 fl">珍档荟萃</p>
+   <p class="more1 fr"><a href="http://history.eastday.com/dspd/shcq/zdhc/index.html" target="_blank" class="grey12">│更多</a></p>
+  </div>
+  <div class="blank5"></div>
+  <div class="bj5"></div>
+  <div class="blank10"></div><div class="fl"><a target='_blank' href='http://history.eastday.com/h/20140814/u1a8280635.html'><img border='0' width='267'  height='150' src='/images/thumbnailimg/month_1408/84692b0c-0392-4038-9f26-4d07e5d0506e.jpg'></a></div>
+  <div class="tx2 fr">
+   <p class="biaoti1 lh26"><a href="http://history.eastday.com/h/20140814/u1a8280635.html" target="_blank" class="greyb14a">武汉首现邓小平抗战初照片 为国统区首次公开照</a></p>
+   <p class="grey12a lh26"><a href="http://history.eastday.com/h/20140814/u1a8280635.html" target="_blank" class="grey12a">&nbsp;&nbsp;&nbsp; 
+邓小平的照片非常罕见，这是抗战初期邓小平任八路军政治部副主任后，在国统区的首次公开照。</a></p>
+  </div>
+  <div class="clear"></div>
+  <ul class="newslist1"><li><a href="http://history.eastday.com/h/20150324/u1a8635969.html" target="_blank" class="grey14">西方记者：笔尖上的屠城血证</a></li><li><a href="http://history.eastday.com/h/20150226/u1a8594424.html" target="_blank" class="grey14">习近平写给父亲习仲勋八十八周岁生日的一封贺信</a></li><li><a href="http://history.eastday.com/h/20150211/u1a8578438.html" target="_blank" class="grey14">毛泽东如何在担架上定计反对博古李德</a></li><li><a href="http://history.eastday.com/h/20150121/u1a8546319.html" target="_blank" class="grey14">河南68年前新四军借条鉴定完毕：人物信息均对上</a></li><li><a href="http://history.eastday.com/h/20150121/u1a8546363.html" target="_blank" class="grey14">揭秘:邓恩铭被叛徒出卖 周恩来曾派人赴山东除奸</a></li>
+  </ul>
+ </div>
+ <!-- 珍档荟萃 end -->
+ <!-- 海上传奇 end -->
+ <div class="clear"></div>
+ <!-- 内容 begin -->
+ <!-- 左栏 begin -->
+ <div class="left1 fl">
+ <!-- 听潮 begin -->
+  <div class="lh22">
+   <p class="lm1 greyb14 fl">听潮</p>
+   <p class="more1 fr"><a href="http://history.eastday.com/tc/index.html" target="_blank" class="grey12">│更多</a></p>
+  </div>
+  <div class="blank5"></div>
+  <div class="bj1"></div>
+  <div class="blank12"></div>
+  <ul class="piclist1">
+   <li>
+    <p class="pic1b" style="display:none"><a target='_blank' href='http://imedia.eastday.com/node2/node3106/spj/node5142/index.html'><img border='0' width='190'  height='272' src='/images/thumbnailimg/month_1310/5039deee-39c1-43b5-bfc6-90f6012339c4.jpg'></a></p>
+	<p class="pic2b" style="display:none"><a target='_blank' href='http://imedia.eastday.com/node2/2013imedia/spyw/u8568204.html'><img border='0' width='190'  height='272' src='/images/thumbnailimg/month_1310/ca7218ec-0fc5-4a9f-aa02-b3e418d6242a.jpg'></a></p>
+	<p class="pic3b" style="display:block"><a target='_blank' href='http://imedia.eastday.com/node2/2013imedia/spyw/u8568205.html'><img border='0' width='190'  height='272' src='/images/thumbnailimg/month_1310/5320e349-b9b8-4148-be24-2b88038cb4cc.jpg'></a></p>
+    <p  class="H1"><a href="http://imedia.eastday.com/node2/node3106/spj/node5142/index.html" target="_blank" class="white12">纪录片《习仲勋》视频集</a></p>
+    <p  class="bg1"></p>
+	<p  class="img1" style="display:none"><img src="/images/history2013/t1.png" /></p>
+    <p class="H2"><a href="http://imedia.eastday.com/node2/2013imedia/spyw/u8568204.html" target="_blank" class="white12">纪录片《习仲勋》第2集:纵横西北</a></p>
+    <p  class="bg2"></p>
+	<p  class="img2" style="display:none"><img src="/images/history2013/t1.png" /></p>
+    <p class="H3"><a href="http://imedia.eastday.com/node2/2013imedia/spyw/u8568205.html" target="_blank" class="white12">纪录片《习仲勋》第1集:烽火陕甘 
+</a></p>
+	<p  class="bg3"></p>
+    <p  class="img3" style="display:block"><img src="/images/history2013/t1.png" /></p>
+   </li><li>
+    <p><a target='_blank' href='http://history.eastday.com/h/20141014/u1ai8390201.html'><img border='0' width='190'  height='272' src='/images/thumbnailimg/month_1410/201410141433238361.jpg'></a></p>
+    <p class="H4"><a href="http://history.eastday.com/h/20141014/u1ai8390201.html" target="_blank" class="blackb14">关于书的记忆</a></p>
+    <p class="H5 black12"><a href="http://history.eastday.com/h/20141014/u1ai8390201.html" target="_blank" class="black12">书，陪伴我们成长，承载着我们的记忆。</a></p>
+    <p class="bg4"></p>
+   </li><li>
+    <p><a target='_blank' href='http://history.eastday.com/h/shjf65y/u1a8109430.html'><img border='0' width='190'  height='272' src='/images/thumbnailimg/month_1407/f4f0e40e-13da-49be-85bb-4842a07c42fc.jpg'></a></p>
+    <p class="H4"><a href="http://history.eastday.com/h/shjf65y/u1a8109430.html" target="_blank" class="blackb14">1949 接管大上海</a></p>
+    <p class="H5 black12"><a href="http://history.eastday.com/h/shjf65y/u1a8109430.html" target="_blank" class="black12">1949年，上海迎来了她崭新的篇章。</a></p>
+    <p class="bg4"></p>
+   </li>   
+  </ul>
+  <!-- 听潮 end -->
+ </div>
+ <!-- 左栏 end -->
+ <!-- 右栏 begin -->
+ <div class="right1 fr">
+  <!-- 名家专栏 begin -->
+  <div class="lh22">
+   <p class="lm1 greyb14 fl">名家专栏</p>
+   <p class="more1 fr"><a href="http://history.eastday.com/dspd/mjzl/index.html" target="_blank" class="grey12">│更多</a></p>
+  </div>
+  <div class="blank5"></div>
+  <div class="bj3"></div>
+  <div class="blank12"></div>
+  <ul class="newslist5"><li><a href="http://history.eastday.com/h/20141104/u1ai8426680.html" target="_blank" class="grey14">傅国涌:史实还存分歧,先别讲民国精神</a></li><li><a href="http://history.eastday.com/h/20141009/u1ai8381047.html" target="_blank" class="grey14">粉碎“四人帮”的史实和疑点：从酝酿到动议</a></li><li><a href="http://history.eastday.com/h/20140916/u1a8343261.html" target="_blank" class="grey14">争议华国锋：“一正四负”的评价过于武断？</a></li><li><a href="http://history.eastday.com/h/20140825/u1a8301274.html" target="_blank" class="grey14">阎崇年：统治者不要总想把问题交给下一代解决</a></li><li><a href="http://history.eastday.com/h/20140819/u1a8289966.html" target="_blank" class="grey14">胡鞍钢：为什么是邓小平决定了对外开放？</a></li><li><a href="http://history.eastday.com/h/20140708/u1a8203249.html" target="_blank" class="grey14">金冲及：辛亥革命在哪些方面改变了中国？</a></li><li><a href="http://history.eastday.com/h/20140630/u1a8186349.html" target="_blank" class="grey14">郭世佑：清末“宪政”，还是清末预备立宪？</a></li><li><a href="http://history.eastday.com/h/20140620/u1a8163512.html" target="_blank" class="grey14">汪宏华：刘备和诸葛亮是张飞遇刺的幕后元凶</a></li><li><a href="http://history.eastday.com/h/20140619/u1a8160689.html" target="_blank" class="grey14">苏升乾：揭开《清明上河图》五大谜团</a></li>
+ 
+  </ul>
+  <!-- 名家专栏 end -->
+ </div>
+ <!-- 右栏 end -->
+ <div class="blank25"></div>
+<!-- 红色印痕 begin -->
+ <div class="lh22">
+  <p class="lm2 blueb18 fl">红色印痕<a name="hsyh"></a></p>
+  <p class="more1 fr"></p>
+ </div>
+ <div class="blank5"></div>
+ <div class="bj4"></div>
+ <div class="blank10"></div>
+ <div class="con5 fl"><div class="pic3">
+   <p><a target='_blank' href='http://photo.eastday.com/slideshow/20110524_2/index.html'><img border='0' width='190'  height='122' src='/images/thumbnailimg/month_1306/0ab5a10b-8f67-43c4-948e-401cce42f9ab.jpg'></a></p>
+   <p class="H2"><a href="http://photo.eastday.com/slideshow/20110524_2/index.html" target="_blank" class="white14">中共一大会址</a></p>
+   <p class="bj8"></p>
+  </div>
+  <div class="blank10"></div><div class="pic4">
+   <p><a target='_blank' href='http://photo.eastday.com/slideshow/20110524_10/index.html'><img border='0' width='190'  height='131' src='/images/thumbnailimg/month_1306/9e7886c0-807e-4375-aec4-d5ea2f3d1128.jpg'></a></p>
+   <p class="H3"><a href="http://photo.eastday.com/slideshow/20110524_10/index.html" target="_blank" class="white14">中国劳动组合书记部旧址</a></p>
+   <p class="bj9"></p>
+  </div>
+ </div>
+ <div class="con6 fl"><div class="pic5">
+   <p><a target='_blank' href='http://photo.eastday.com/slideshow/20110524_11/index.html'><img border='0' width='230'  height='263' src='/images/thumbnailimg/month_1306/c0e12be5-a964-4da4-ae15-56e1f7aa080c.jpg'></a></p>
+   <p class="H4"><a href="http://photo.eastday.com/slideshow/20110524_11/index.html" target="_blank" class="white14">中国社会主义青年团中央机关旧址</a></p>
+   <p class="bj10"></p>
+  </div>
+ </div>
+ <div class="con7 fl"><div class="pic6 fl">
+   <p><a target='_blank' href='http://photo.eastday.com/slideshow/20110524_3/index.html'><img border='0' width='170'  height='122' src='/images/thumbnailimg/month_1306/fbbd2d8d-4d09-4d27-9428-68549484a09d.jpg'></a></p>
+   <p class="H5"><a href="http://photo.eastday.com/slideshow/20110524_3/index.html" target="_blank" class="white14">上海四行仓库</a></p>
+   <p class="bj11"></p>
+  </div><div class="pic6 fr">
+   <p><a target='_blank' href='http://photo.eastday.com/slideshow/20110517_3/index1.html'><img border='0' width='170'  height='122' src='/images/thumbnailimg/month_1306/9c02b4f0-67b1-4dd8-b752-c6f72f4f5a0f.jpg'></a></p>
+   <p class="H5"><a href="http://photo.eastday.com/slideshow/20110517_3/index1.html" target="_blank" class="white14">上海龙华烈士陵园</a></p>
+   <p class="bj11"></p>
+  </div>
+  <div class="blank10"></div><div class="pic7 fr">
+   <p><a target='_blank' href='http://photo.eastday.com/slideshow/20110524_8/index.html'><img border='0' width='350'  height='131' src='/images/thumbnailimg/month_1306/1691fed1-0a18-4215-bd79-bbdec32f7f7b.jpg'></a></p>
+   <p class="H6"><a href="http://photo.eastday.com/slideshow/20110524_8/index.html" target="_blank" class="white14">中共第二次全国代表大会会址</a></p>
+   <p class="bj12"></p>
+  </div>
+ </div>
+ <div class="con8 fl"><div class="pic8 fr">
+   <p><a target='_blank' href='http://photo.eastday.com/slideshow/20110517_4/index.html'><img border='0' width='160'  height='160' src='/images/thumbnailimg/month_1306/61681b1d-2ce7-4e1e-adfe-6cfea9d49901.jpg'></a></p>
+   <p class="H7"><a href="http://photo.eastday.com/slideshow/20110517_4/index.html" target="_blank" class="white14">上海淞沪抗战纪念馆</a></p>
+   <p class="bj13"></p>
+  </div>
+  <div class="blank10"></div><div class="pic9 fr">
+   <p><a target='_blank' href='http://photo.eastday.com/slideshow/20110524_9/index1.html#pic'><img border='0' width='160'  height='93' src='/images/thumbnailimg/month_1306/d0a61810-92e1-41cb-90d9-508214c4b5b3.jpg'></a></p>
+   <p class="H8"><a href="http://photo.eastday.com/slideshow/20110524_9/index1.html#pic" target="_blank" class="white14">中共四大史料陈列馆</a></p>
+   <p class="bj14"></p>
+  </div>
+ </div>
+ <div class="blank25"></div>
+ <!-- 中央领导人在上海 begin -->
+ <div class="con3 fl">
+  <div class="lh22">
+   <p class="lm1 greyb14 fl">中央领导人在上海</p>
+   <p class="more1 fr"><a href="http://history.eastday.com/hsyh/zyldr/index.html" target="_blank" class="grey12">│更多</a></p>
+  </div>
+  <div class="blank5"></div>
+  <div class="bj7"></div>
+  <div class="blank5"></div>
+  <ul class="newslist3"><li><a href="http://history.eastday.com/h/20140905/u1a8324002.html" target="_blank" class="grey14">邓小平曾视察上海第一百货 购买四封铅笔四块橡皮</a></li><li><a href="http://history.eastday.com/h/20140826/u1a8303897.html" target="_blank" class="grey14">陈毅是如何治理上海的 两年之内除黑绝娼(图)</a></li><li><a href="http://history.eastday.com/h/20140814/u1a8280657.html" target="_blank" class="grey14">从"后卫"走向"前沿" 邓小平与上海改革开放</a></li><li><a href="http://history.eastday.com/h/20140806/u1a8266498.html" target="_blank" class="grey14">4·12政变周恩来是如何被捕 又被谁救出？</a></li><li><a href="http://history.eastday.com/h/20140710/u1a8209191.html" target="_blank" class="grey14">朝战江泽民动员工人：多做罐头打死美国狼</a></li>
+ 
+  </ul>
+ </div>
+ <!-- 中央领导人在上海 end -->
+ <!-- 中国共产党在上海史话 begin -->
+ <div class="con3 fl">
+  <div class="lh22">
+   <p class="lm1 greyb14 fl">中国共产党在上海史话</p>
+   <p class="more1 fr"><a href="http://history.eastday.com/hsyh/shsh/index.html" target="_blank" class="grey12">│更多</a></p>
+  </div>
+  <div class="blank5"></div>
+  <div class="bj7"></div>
+  <div class="blank5"></div>
+  <ul class="newslist3"><li><a href="http://history.eastday.com/h/20141008/u1ai8378990.html" target="_blank" class="grey14">93岁老教授忆接管复旦:校长数次拒绝迁往台湾</a></li><li><a href="http://history.eastday.com/h/20140925/u1a8360724.html" target="_blank" class="grey14">亲爱的上海 镜头中安静的八十年代[组图]</a></li><li><a href="http://history.eastday.com/h/zgshjy/u1a8358666.html" target="_blank" class="grey14">文革后上海或在全国首提旅游 只敢说是"散散心"</a></li><li><a href="http://history.eastday.com/h/20140919/u1a8349451.html" target="_blank" class="grey14">老照片唤起深情回忆 华东保育院师生共忆1949年</a></li><li><a href="http://history.eastday.com/h/20140915/u1a8340728.html" target="_blank" class="grey14">画家富华口述：我从国民党的牢里逃出来</a></li>
+  </ul>
+ </div>
+ <!-- 中国共产党在上海史话 end -->
+ <!-- 上海对口支援全国 begin -->
+ <div class="con4 fl">
+  <div class="lh22">
+   <p class="lm1 greyb14 fl">上海支援全国</p>
+   <p class="more1 fr"><a href="http://history.eastday.com/hsyh/dkzy/index.html" target="_blank" class="grey12">│更多</a></p>
+  </div>
+  <div class="blank5"></div>
+  <div class="bj7"></div>
+  <div class="blank5"></div>
+  <ul class="newslist3"><li><a href="http://history.eastday.com/h/20141114/u1ai8443709.html" target="_blank" class="grey14">1969八岔岛事件:知青用手榴弹击沉苏联巡逻艇</a></li><li><a href="http://history.eastday.com/h/20140812/u1a8276801.html" target="_blank" class="grey14">知青岁月 上海“阿拉”成赣南“老表”</a></li><li><a href="http://history.eastday.com/h/20140729/u1a8249697.html" target="_blank" class="grey14">"飞地"大丰：8万名上海知青曾经的家园</a></li><li><a href="http://history.eastday.com/h/20140530/u1a8118290.html" target="_blank" class="grey14">上海知青忆河南：郑州太穷生活水平和县城一样</a></li><li><a href="http://history.eastday.com/h/20140311/u1a7973342.html" target="_blank" class="grey14">寒冷北大荒和温柔黄浦江:留在黑龙江的上海知青</a></li>
+  </ul>
+ </div>
+ <!-- 上海支援全国 end -->
+ <!-- 红色印痕 end -->
+ <div class="blank25"></div>
+ <!-- 中国共产党在上海 begin -->
+ <div class="lh22">
+  <p class="lm2 blueb18 fl">中国共产党在上海<a name="zsh"></a></p>
+ </div>
+ <div class="blank5"></div>
+ <div class="bj4"></div>
+ <div class="blank10"></div>
+ <div><iframe 
+ border="0" name="dzsh" marginWidth="0" frameSpacing="0" marginHeight="0" 
+ src="http://tj.eastday.com/eastday/history/dspd/zggcd_sh/index.html" frameBorder="0" noResize width="960" 
+ scrolling="no" height="507" vspale="0"></iframe></div>
+ <!-- 中国共产党在上海 end -->
+ <div class="blank25"></div>
+ <!-- 文化大观 begin -->
+ <div class="lh22">
+  <p class="lm2 blueb18 fl">文化大观</p>
+ </div>
+ <div class="blank5"></div>
+ <div class="bj4"></div>
+ <div class="blank15"></div>
+ <!-- 最新消息 begin -->
+ <div class="con3 fl">
+  <div class="lh22">
+   <p class="lm1 greyb14 fl">最新消息</p>
+   <p class="more1 fr"><a href="http://history.eastday.com/dspd/whdg/zxxx/index.html" target="_blank" class="grey12">│更多</a></p>
+  </div>
+  <div class="blank5"></div>
+  <div class="bj7"></div>
+  <div class="blank5"></div>
+  <ul class="newslist3"><li><a href="http://history.eastday.com/h/20141010/u1ai8382838.html" target="_blank" class="grey14">湖南第十二届文博会21日开幕 毛泽东亲笔信将拍卖</a></li><li><a href="http://history.eastday.com/h/20141010/u1ai8382849.html" target="_blank" class="grey14">大陆最后一名飞虎队队员因病辞世 英雄传奇落幕</a></li><li><a href="http://history.eastday.com/h/20140901/u1a8315000.html" target="_blank" class="grey14">张爱玲遗著《少帅》将面世 以张学良赵四爱情故事为原型</a></li><li><a href="http://history.eastday.com/h/20140828/u1a8308488.html" target="_blank" class="grey14">台湾迎中国远征军阵亡将士英灵 入祀“忠烈祠”</a></li><li><a href="http://history.eastday.com/h/20140808/u1a8270338.html" target="_blank" class="grey14">三枚稀世徽章面世 见证中国抗战胜利</a></li>
+  </ul>
+ </div>
+ <!-- 最新消息 end -->
+ <!-- 阅读空间 begin -->
+ <div class="con3 fl">
+  <div class="lh22">
+   <p class="lm1 greyb14 fl">阅读空间</p>
+   <p class="more1 fr"><a href="http://history.eastday.com/dspd/whdg/ydkj/index.html" target="_blank" class="grey12">│更多</a></p>
+  </div>
+  <div class="blank5"></div>
+  <div class="bj7"></div>
+  <div class="blank5"></div>
+  <ul class="newslist3"><li><a href="http://history.eastday.com/h/20150105/u1ai8522672.html" target="_blank" class="grey14">“中国年龄最长的奥运志愿者”——何振梁的奥运人生</a></li><li><a href="http://history.eastday.com/h/20141205/u1ai8476828.html" target="_blank" class="grey14">哪些人逝世后，党和国家领导人会献花圈？</a></li><li><a href="http://history.eastday.com/h/20141202/u1ai8471875.html" target="_blank" class="grey14">1966:刘少奇与邓小平的最后一次对话</a></li><li><a href="http://history.eastday.com/h/20141113/u1ai8441657.html" target="_blank" class="grey14">从十八大到APEC 读懂大时代里的中国政治</a></li><li><a href="http://history.eastday.com/h/20141106/u1ai8430580.html" target="_blank" class="grey14">盘点毛泽东10大外国“死忠粉[组图]</a></li>
+  </ul>
+ </div>
+ <!-- 阅读空间 end -->
+ <!-- 今日关注 begin -->
+ <div class="con4 fl">
+  <div class="lh22">
+   <p class="lm1 greyb14 fl">今日关注</p>
+   <p class="more1 fr"><a href="http://history.eastday.com/dspd/whdg/jrgz/index.html" target="_blank" class="grey12">│更多</a></p>
+  </div>
+  <div class="blank5"></div>
+  <div class="bj7"></div><div class="blank11"></div>
+  <div class="pic10"><a target='_blank' href='http://enjoy.eastday.com/images/2013wlwhj/index.html'><img border='0' width='298'  height='58' src='/images/thumbnailimg/month_1306/b641fab7-5643-433c-89df-d06e6955dfc9.jpg'></a></div><div class="blank11"></div>
+  <div class="pic10"><a target='_blank' href='http://imedia.eastday.com/node2/node3106/node3599/node3936/index.html'><img border='0' width='298'  height='58' src='/images/thumbnailimg/month_1306/fdfe09b7-89d4-4f9d-ba30-a854c18398b2.jpg'></a></div>
+ </div>
+ <!-- 今日关注 end -->
+ <!-- 文化大观 end -->
+ <div class="blank25"></div>
+ <!-- 红色传承 begin -->
+ <div><iframe 
+ border="0" name="hsrw" marginWidth="0" frameSpacing="0" marginHeight="0" 
+ src="http://tj.eastday.com/eastday/history/dspd/iframe/hscc/index.html" frameBorder="0" noResize width="960" 
+ scrolling="no" height="491" vspale="0"></iframe></div> 
+ <!-- 红色传承 end -->
+ <div class="blank25"></div>
+ <!-- 镜像历史 begin -->
+ <div class="lh22">
+  <p class="lm2 blueb18 fl">镜像历史</p>
+  <p class="more1 fr"><a href="http://history.eastday.com/dspd/jxls/index.html" target="_blank" class="grey12">│更多</a></p>
+ </div>
+ <div class="blank5"></div>
+ <div class="bj4"></div>
+ <div class="blank15"></div>
+ <div><iframe 
+ border="0" name="gundong" marginWidth="0" frameSpacing="0" marginHeight="0" 
+ src="http://tj.eastday.com/eastday/history/dspd/iframe/jxls/index.html" frameBorder="0" noResize width="960" 
+ scrolling="no" height="163" vspale="0"></iframe></div>
+ <!-- 镜像历史 end -->
+ <div class="blank25"></div>
+ <!-- 内容 end -->
+ <!-- 底部 begin -->
+ <div id="footer" class="lh30 grey12b">
+   <p class="fc"><a href="http://news.eastday.com/images/ditu/bq.htm" target="_blank" class="grey12b">版权声明</a> | <a href="http://www.eastday.com/images/2007img/07aboutus/index1.htm" target="_blank" class="grey12b">网站简介</a> | <a href="http://news.eastday.com/images/ditu/wzls.htm" target="_blank" class="grey12b">网站律师</a> | <a href="http://news.eastday.com/images/ditu/" target="_blank" class="grey12b">网站导航</a> | <a href="http://www.eastday.com/images/adver/bannernew/07pdzs/adv_sw.html" target="_blank" class="grey12b">频道招商</a> | <a href="http://i1.eastday.com/images/ad2011/ggkl2011/index.html" target="_blank" class="grey12b">广告刊例</a> | <a href="http://news.eastday.com/images/ditu/lx.htm" target="_blank" class="grey12b">联系方式</a> | <a href="http://www.eastday.com/sitemap/index.html" target="_blank" class="grey12b">Site Map</a></p>
+  <p class="fc">东方网(eastday.com)版权所有，未经授权禁止复制或建立镜像</p>
+ </div>
+ <!-- 底部 end -->
+</div>
+<!-- 70353：history -->
+<script type="text/javascript">
+_acK({aid:70353,format:0,mode:1,gid:1,serverbaseurl:"eastday.acs86.com/"});
+</script>
+<!-- 70357：Bi-history -->
+<script type="text/javascript">
+_acK({aid:70357,format:0,mode:1,gid:1,serverbaseurl:"eastday.acs86.com/"});
+</script>
+<!-- 70358：move-history -->
+<script type="text/javascript">
+_acK({aid:70358,format:0,mode:1,gid:1,serverbaseurl:"eastday.acs86.com/"});
+</script>
+<!-- 70359：history-imedia -->
+<script type="text/javascript">
+_acK({aid:70359,format:0,mode:1,gid:1,serverbaseurl:"eastday.acs86.com/"});
+</script>
+<!-- 插入统计代码3 -->
+<div style="display:none">
+<script type="text/javascript">document.write(unescape("%3Cscript  src='http://tongji.eastday.com/webdig.js?z=1' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">wd_paramtracker("_wdxid=000000000000000000000000000000000000000000") </script>
+</div>
+<!-- 插入统计代码2 -->
+<div style="display:none">
+<script type="text/javascript"> 
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fd82057e884263d9012a42f2d11c81647' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</div>
+<!-- 插入统计代码1 -->
+<div style="display:none">
+<script type="text/javascript" src="https://d31qbv1cthcecs.cloudfront.net/atrk.js"></script><script type="text/javascript">_atrk_opts = { atrk_acct: "7O/te1awQa00Gs", domain:"eastday.com"}; atrk ();</script><noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=7O/te1awQa00Gs" style="display:none" height="1" width="1" alt="" /></noscript>
+</div>
+</body>
+</html>

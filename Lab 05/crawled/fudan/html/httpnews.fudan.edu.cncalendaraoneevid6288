@@ -1,0 +1,337 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<title>复旦大学_复旦新闻文化网</title>
+<meta content="复旦 新闻 复旦大学" name="keywords" />
+<meta content="提供最新的复旦大学官方新闻" name="description" />
+<base href="http://news.fudan.edu.cn/" />
+<link href="favicon.ico" rel="shortcut icon" />
+<link rel="alternate" type="application/rss+xml" title="复旦大学_复旦新闻文化网" href="/rss.php?rssid=" />
+<link href="templates/default/skins/default/phpcms.css" rel="stylesheet" type="text/css" />
+<link href="templates/default/skins/default/style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="data/config.js"></script>
+<script language="JavaScript" src="images/js/jquery.1.3.2.min.js"></script>
+<script language="JavaScript" src="images/js/css.js"></script>
+<script language="JavaScript" src="images/js/common.js"></script>
+<script language="JavaScript" src="images/js/login.js"></script>
+<script language="JavaScript" src="images/js/validator.js"></script>
+</head>
+<body>
+	<!--顶部开始-->
+    <div class="top_info">
+    	<div class="crumb">
+        	<a href="http://www.fudan.edu.cn">复旦主页</a> | <a href="http://mail.fudan.edu.cn">复旦邮箱</a> | <a href="http://www.oa.fudan.edu.cn">OA系统</a> | <a href="http://www.urp.fudan.edu.cn">URP系统</a> | <a href="http://xwtg.fudan.edu.cn"><strong>我要投稿</strong></a> 
+        </div>
+        <div class="btn">
+        	<form method="GET" action="search/" id="searchform">
+        	<input name="q" id='s_index' type="text" />
+            <a onclick="if(document.getElementById('s_index').value!='') document.getElementById('searchform').submit(); else alert('请输入关键词!');return false;" href="###" class="search">搜索</a>
+          </form>
+        </div>
+    </div>
+	<!--顶部结束-->
+    <!--banner开始-->
+    <div class="banner" id="cg_banner"><img src="images/banner.jpg" alt="复旦大学欢迎你" width="960" height="135" border="0" usemap="#Map" /></div>
+<!--  <map name="Map" id="Map"><area shape="rect" coords="480,2,958,138" href="http://www.freshman.fudan.edu.cn" target="_blank" />
+</map> -->
+    <!--banner结束-->
+    <!--顶部菜单开始-->
+    <div class="top_menu c_b">
+        <script type='text/javascript' src='api/gweather.php'></script>
+        <div class="menu">
+        	<ul>
+            	<li><a href="" title="首页">首&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+                <li><a href="news/xxyw/" title="学校要闻">学校要闻</a></li>
+                <li><a href="news/ldjh/" title="领导讲话">领导讲话</a></li>
+                <li><a href="news/ztbd/" title="专题报道">专题报道</a></li>
+                <li><a href="news/zhxw/" title="综合新闻">综合新闻</a></li>
+                <li><a href="news/yxdt/" title="院系动态">院系动态</a></li>
+                <li><a href="news/gjsw/" title="国际事务">国际事务</a></li>
+                <li><a href="news/xydt/" title="校友动态">校友动态</a></li>
+                <li><a href="news/zsjy/" title="招生就业">招生就业</a></li>
+                <li><a href="news/fdrw/" title="复旦人物">复旦人物</a></li>
+                <li><a href="news/zjsd/" title="专家视点">专家视点</a></li>
+                <li><a href="news/fdjt/" title="复旦讲堂">复旦讲堂</a></li>
+                <li><a href="news/xysh/" title="校园生活">校园生活</a></li>
+                <li><a href="news/xstx/" title="校史通讯">校史通讯</a></li>
+                <li><a href="news/fdsw/" title="复旦书屋">复旦书屋</a></li>
+                <li><a href="news/xhbh/" title="相辉笔会">相辉笔会</a></li>
+                <li><a href="announce/" title="通知公告">通知公告</a></li>
+                <li><a href="news/mtsj/" title="媒体视角">媒体视角</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--顶部菜单结束-->
+
+<script type='text/javascript' src='calendar/js/jquery-ui-1.7.2.custom.min.js'></script>
+<link href="calendar/css/style.css" rel="stylesheet" type="text/css" />
+<div class='page c_b'>
+	<div class='leftb'>
+		<div class='picker'></div>
+		<div class='tab' style='margin:0.5em 0'>
+			<ul>
+				<li style='float:left'><a href="#tab-search" style='color:red'>搜索</a></li>
+			</ul>
+			<div id="tab-search"><form target='_blank' action='../search/'>
+				<input type="hidden" name="type" value="calendar" />
+				<input type="text" name="q" size="16" />&nbsp;<button type="submit">搜索</button>
+			</form></div>
+		</div>
+				
+		<div class='tab'>
+			<ul>
+				<li style='float:left'><a href="#tab-type">分类查找</a></li>
+				<li><a href="#tab-place">按场馆查看</a></li>
+			</ul>
+			<div id="tab-type">
+				<ul id="ul-type">
+
+					<li>
+						<label for="_type_0">
+							<input type="radio" name="type" value="0" id="_type_0" checked  />全部
+						</label>
+					</li>
+				
+					<li>
+						<label for="_type_1">
+							<input type="radio" name="type" value="1" id="_type_1"  />讲座
+						</label>
+					</li>
+				
+					<li>
+						<label for="_type_2">
+							<input type="radio" name="type" value="2" id="_type_2"  />展览
+						</label>
+					</li>
+				
+					<li>
+						<label for="_type_3">
+							<input type="radio" name="type" value="3" id="_type_3"  />社团活动
+						</label>
+					</li>
+				
+					<li>
+						<label for="_type_4">
+							<input type="radio" name="type" value="4" id="_type_4"  />文艺演出
+						</label>
+					</li>
+				
+					<li>
+						<label for="_type_5">
+							<input type="radio" name="type" value="5" id="_type_5"  />体育比赛
+						</label>
+					</li>
+				
+					<li>
+						<label for="_type_6">
+							<input type="radio" name="type" value="6" id="_type_6"  />学术会议
+						</label>
+					</li>
+				
+					<li>
+						<label for="_type_7">
+							<input type="radio" name="type" value="7" id="_type_7"  />其他
+						</label>
+					</li>
+				
+				</ul>
+			</div>
+			<div id="tab-place" class="c_b">
+
+			<div><label for="_place_0">
+				<img src='calendar/images/place_0.jpg' />
+				<span>
+					<input type="radio" name="place" value="0" id="_place_0" checked  />全部
+				</span>
+			</label></div>
+			
+			<div><label for="_place_1">
+				<img src='calendar/images/place_1.jpg' />
+				<span>
+					<input type="radio" name="place" value="1" id="_place_1"  />学生活动广场
+				</span>
+			</label></div>
+			
+			<div><label for="_place_2">
+				<img src='calendar/images/place_2.jpg' />
+				<span>
+					<input type="radio" name="place" value="2" id="_place_2"  />逸夫科技楼
+				</span>
+			</label></div>
+			
+			<div><label for="_place_3">
+				<img src='calendar/images/place_3.jpg' />
+				<span>
+					<input type="radio" name="place" value="3" id="_place_3"  />逸夫楼
+				</span>
+			</label></div>
+			
+			<div><label for="_place_4">
+				<img src='calendar/images/place_4.jpg' />
+				<span>
+					<input type="radio" name="place" value="4" id="_place_4"  />正大体育馆
+				</span>
+			</label></div>
+			
+			<div><label for="_place_5">
+				<img src='calendar/images/place_5.jpg' />
+				<span>
+					<input type="radio" name="place" value="5" id="_place_5"  />明道楼
+				</span>
+			</label></div>
+			
+			<div><label for="_place_6">
+				<img src='calendar/images/place_6.jpg' />
+				<span>
+					<input type="radio" name="place" value="6" id="_place_6"  />光华楼
+				</span>
+			</label></div>
+			
+			<div><label for="_place_7">
+				<img src='calendar/images/place_7.jpg' />
+				<span>
+					<input type="radio" name="place" value="7" id="_place_7"  />美研中心
+				</span>
+			</label></div>
+			
+			</div>
+		</div>
+		<div class='tab' style='margin:0.5em 0'>
+			<ul>
+				<li style='float:left'><a href="#tab-suggestion">申请发布</a></li>
+			</ul>
+			<div id="tab-suggestion">
+				如果您希望在复旦大学文化日历发布信息，您需要访问<a href="http://myform.fudan.edu.cn/create/xnjzsp" style="color:#102E77;font-weight:bold;">复旦大学网上办事服务大厅</a>提交讲座信息，谢谢！
+			</div>
+		</div>
+	</div>
+	<div class='rightb'>
+		<div class='loading'><img src="calendar/images/loading.gif" /></div>
+		<div class='maintab'>
+			<ul>
+				<li><a href="#range7" time="m=recent&range=7">七天内</a></li>
+				<li><a href="#theweek" time="m=theweek">本周</a></li>
+				<li><a href="#themonth" time="m=themonth">本月</a></li>
+				<li><a href="#mainview" id="headlabel">loading...</a></li>
+			</ul>
+			<div id="range7">内容载入中</div>
+			<div id="theweek">内容载入中</div>
+			<div id="themonth">内容载入中</div>
+			<div id="mainview">Main</div>
+		</div>
+	</div>
+</div>
+<script>
+var fn_one, fn_show, fn_ascroll;
+$(function() {
+	var last_time = "";
+	fn_show = function(time) {
+		//time
+		if(!time) time = last_time;
+		else last_time = time;
+		var dt = new Object();
+		//type
+		dt.type = $('#ul-type input:checked').attr('value');
+		//place
+		dt.place = $('#tab-place input:checked').attr('value');
+		//do ajax
+		var aj = {
+			cache:false,
+			beforeSend:function() {
+				$('.loading').show();
+			},
+			url:'calendar/?a=list&' + time,
+			data:dt,
+			type:'GET',
+			dataType: "html",
+			success: function(res){
+				$('.loading').hide('default');
+				$('#mainview').html(res);
+				$('.maintab').tabs('enable',3);
+				$('.maintab').tabs('select',3);
+				location.hash = time;
+			}
+		}
+		$.ajax(aj);
+	};
+	$('#ul-type label').click(function() {
+		fn_show();
+	});
+	$('#tab-place label').click(function() {
+		fn_show();
+	});
+	$('.picker').datepicker({
+		dateFormat:'yymmdd',
+		dayNamesMin:['日','一','二','三','四','五','六'],
+		monthNames:['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+		nextText:'下月',
+		prevText:'上月',
+		onSelect:function(d) {
+			fn_show('m=theday&day='+d);
+		}
+	});
+	$('.maintab').tabs({
+		select:function(event,ui) {
+			if(ui.index==3) return;
+			fn_show($(ui.tab).attr('time'));
+		},
+		disabled:[3],
+		spinner:"Loading...",
+		//fx: { opacity: 'toggle', duration: '50' },
+		cache:false
+	});
+	$('.tab').tabs({
+		fx: { opacity: 'toggle', duration: 200 }
+	});
+	fn_one = function(evid) {
+		//do ajax
+		var aj = {
+			cache:false,
+			beforeSend:function() {
+				$('.loading').show();
+			},
+			url:'calendar/?a=one&evid=' + evid,
+			type:'GET',
+			dataType: "html",
+			success: function(res){
+				$('.loading').hide('default');
+				$('#mainview').html(res);
+				$('.maintab').tabs('enable',3);
+				$('.maintab').tabs('select',3);
+				location.hash = "a=one&evid="+evid;
+			}
+		}
+		$.ajax(aj);
+	};
+	if(location.hash.length > 0) fn_show(location.hash.substr(1));
+	else fn_show("&m=recent&range=7");
+});
+</script>
+
+    <!--底部导航开始-->
+    <div class="bottom_nav">
+    	<a href="#" title="网站导航">网站导航</a>-
+    	<a href="#" title="投稿须知">投稿须知</a>-
+    	<a href="http://xwtg.fudan.edu.cn" title="投稿系统">投稿系统</a>-
+    	<a href="#" title="新闻热线">新闻热线</a>-
+    	<a href="#" title="投稿排行">投稿排行</a>-
+    	<a href="contact/" title="联系我们">联系我们</a>
+    </div>
+    <!--底部导航结束-->
+    <!--版权开始-->
+    <div class="foot">
+    	<p>复旦大学党委宣传部（新闻中心）版权所有，复旦大学党委宣传部网络宣传办公室维护</p>
+		<p>Copyright@2010 news.fudan.edu.cn All rights reserved.&nbsp;
+			<script language="javascript" type="text/javascript" src="http://js.users.51.la/3602372.js"></script>
+			<noscript><a href="http://www.51.la/?3602372" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/3602372.asp" style="border:none" /></a></noscript>
+		</p>
+    </div>
+    <!--版权结束-->
+</body>
+</html>

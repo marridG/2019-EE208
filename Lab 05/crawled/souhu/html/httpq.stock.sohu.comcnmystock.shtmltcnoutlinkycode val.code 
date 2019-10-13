@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>自选股 - 自选基金 - 股票行情中心 - 搜狐证券 - 搜狐基金</title>
+<meta name="Keywords" content="自选股,选股器,投资工具,基金净值,开放式基金,自选基金,stock,fund" />
+<meta name="Description" content="用户可以创建我的投资组合，帮助用户关注自选股，计算收益率的免费工具，可以输入个股的买入价格和买入股数，系统会自动计算用户投资组合收益率。q.stock.sohu.com;搜狐基金,包括有基金行情,基金公告,基金说吧,基金评级,最新动态,分析评论,q.fund.sohu.com" />
+<link rel="stylesheet" type="text/css" href="//stock.sohu.com/upload/mystock2012/html/skin/css/login.css" />
+<link rel="stylesheet" type="text/css" href="//stock.sohu.com/upload/mystock2012/html/skin/css/common.css" />
+<script type="text/javascript">
+(function(){
+	var version = /mystock_pre=(\d)/.exec(document.cookie),url = document.URL;
+	if(version && version[1] == 0 && url.indexOf('outlink=y') == -1){
+		var ru = (url.indexOf('t=us') > -1?'/us/mystock.shtml':(url.indexOf('t=hk') > -1?'/hk/mystock.shtml':(url.indexOf('t=fund') > -1?'//q.fund.sohu.com/q/mf.php':'/cn/mystock.html')))
+		location.href = ru;
+	}
+})()
+</script>
+</head>
+<body style="display:none">
+<div class="wrapper">
+  <div class="header">
+    <div class="con">
+      <div class="sel">
+        <h1><a class="link" title="搜狐证券" href="http://stock.sohu.com" target="_blank">证券</a></h1>
+      </div>
+      <div class="sea searchbar suggestRoot" id="FEP_searchbar">
+        <form class="autoTmp" method="get" target="" action="javascript:void(0);" id="searchForm">
+          <ul id="FEP_searchList" class="searchList clearfix">
+            <li class="e1">
+              <input type="text" id="searchInput" class="input1 suggest_text" value="请输入关键字" autocomplete="off" disableautocomplete="" />
+            </li>
+            <li class="e2">
+              <input type="submit" id="searchButton" class="addbtn suggest_btn" value="行情查询" />
+            </li>
+          </ul>
+        </form>
+        <div id="suggestDiv" class="suggestLists" style="display: none;"></div>
+      </div>
+      <ul class="nav">
+        <li><a title="行情" href="/">行情</a></li>
+        <li><a title="个股" href="/cn/000002/index.shtml">个股</a></li>
+        <li><a title="指数" href="/cn/zs.shtml">指数</a></li>
+        <li><a title="排行" href="/cn/ph.shtml">排行</a></li>
+        <li><a title="板块" href="/cn/bk.shtml">板块</a></li>
+        <li class="current"><a title="自选股" href="/cn/mystock.shtml">自选股</a></li>
+        <li><a href="http://q.fund.sohu.com" title="基金">基金</a></li>
+      </ul>
+    </div>
+  </div>
+  <!--header end-->
+  <div class="main">
+    <div class="bodycon">
+      <div class="prodemo">
+        <ul>
+          <li><img title="自选股行情" alt="自选股行情" src="http://stock.sohu.com/upload/mystock2012/html/skin/images/demo1.jpg"  /></li>
+          <li alt="自选股特色" class="hidden"><img src="http://stock.sohu.com/upload/mystock2012/html/skin/images/demo2.jpg"  /></li>
+          <li alt="自选股咨询" class="hidden"><img src="http://stock.sohu.com/upload/mystock2012/html/skin/images/demo3.jpg"  /></li>
+          <li class="hidden"><img alt="自选股指标" src="http://stock.sohu.com/upload/mystock2012/html/skin/images/demo4.jpg"  /></li>
+        </ul>
+      </div>
+      <div class="right">
+        <div class="login01">
+		 <div id="load_msg" class="hidden">请稍候，正在处理中.....</div>
+		 <form method="post" action="javascript:void(0)" onsubmit="return PassportSC.doLogin()">
+          <h3 id="loginFormTitle">登录搜狐自选股</h3>
+		  <div id="loginSug"></div>
+          <ul class="form">
+			<div class="error"></div>
+			<input name="persistentcookie" value="1" checked type="checkbox" class="hidden"/>
+            <li>
+              <div class="form_l">用户名：</div>
+              <div class="form_r">
+                <input type="text" name="email" class="inputtext" autocomplete="off" disableautocomplete value="" />
+              </div>
+            </li>
+            <li>
+              <div class="form_l">密&nbsp;码：</div>
+              <div class="form_r"><input name="password" type="password" class="inputtext" /></div>
+            </li>
+            </ul>
+            <div class="loginbot">
+            
+              <div class="loginitem1"><span class="e1"><input type="submit" class="loginbtn" value="登录自选股" /></span></div>
+              <div id="notice" class="red">
+              	<span class="n1">【请使用完整邮箱地址登录，类似xxx@xxx.com这种】</span>
+              	<br />
+              	<span class="n2">如不记得邮箱地址，请发送您的昵称到<a style="text-decoration: underline;" href="//q.stock.sohu.com/feedback.html" target="_blank">意见反馈</a>，并附上有效的联系方式。我们会尽快与您联系。</span>
+              </div>
+              <div class="loginConnect"><span>其他帐号登录</span><a title="用MSN帐号登录" href="javascript:void(0)" class="msn"></a><a title="用QQ帐号登录" href="javascript:void(0)" class="qq"></a> <a title="用人人网帐号登录" href="javascript:void(0)" class="renren"></a> <a title="用淘宝帐号登录" href="javascript:void(0)" class="taobao"></a> <a title="用百度帐号登录" href="javascript:void(0)" class="baidu"></a> </div>
+              <p class="help"><span><a href="javascript:void(0)">注册新用户</a></span><span><a href="javascript:void(0)">忘记密码</a></span><span><a target="_blank" href="//passport.sohu.com/help/index.jsp">帮助中心</a></span></p>
+			 <div class="footer"><span class="feedback"><a id="mystock_feedback" href="//q.stock.sohu.com/feedback.html" target="_blank">建议反馈</a></span><span class="mbstock"><a href="//s.m.sohu.com" target="_blank">手机版自选股</a></span></div>
+			 <p class="back_to_old"><a href="/cn/mystock.html">返回旧版》</a></p>
+            </div>
+           	<div id="ppcontid" style="display: none;"></div>
+          
+		 </form>
+        </div>
+        <!--login01 end-->
+        
+        
+        
+        <div class="login02 hidden">
+        	<h3>设置密码</h3>
+        <ul class="form">
+            <li>
+              <div class="form_l">设置密码：</div>
+              <div class="form_r">
+                <input type="text" class="inputtext" value="请输入您的昵称、邮箱" />
+                <p class="tipstext">密码为6-16位的数字，字母或字符</p>
+              </div>
+            </li>
+            <li>
+              <div class="form_l">确认密码：</div>
+              <div class="form_r">
+                <input type="text" class="inputtext" />
+                
+                
+                <input type="button" class="btn" value="确 认" />
+              </div>
+            </li>
+            
+            
+            </ul>
+
+        
+        </div>
+        
+        
+        <div class="login03 hidden">
+        <h3>注册成功，请记住账号、密码</h3>
+        <h4>为您申请账号成功!</h4>
+        <p class="p1">昵称：</p>
+<p class="p2">密码：</p>
+        <p class="p3">*请牢记以上内容并及时修改密码，方便下次登录！</p>
+        <input type="button" class="btn" value="进入搜狐自选股" />
+        </div>
+        
+        
+        
+      </div>
+	  <div class="copyright">Copyright &copy; 2015 Sohu.com Inc. All Rights Reserved. 搜狐公司 版权所有</div>
+    </div>
+  </div>
+  <!--main end-->
+</div>
+<!--wrapper end-->
+<script src="//s1.biz.itc.cn/cn/script/lib/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="//s1.biz.itc.cn/cn/script/autocomplete.js"></script>
+<script type="text/javascript" src="//s2.biz.itc.cn/cn/script/mystock/login-0.2.js?20150715"></script>
+<script type="text/javascript" src="//js.sohu.com/mail/pv/pv_v203_ajax.js"></script>
+<script type="text/javascript" src="//a1.itc.cn/pv/js/pvclick.1206141014.js"></script>
+</body>
+</html>

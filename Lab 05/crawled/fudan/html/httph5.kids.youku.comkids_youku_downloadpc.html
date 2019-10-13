@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1,user-scalable=no" />
+	<title>小小优酷-少儿版优酷 APP</title>
+	<link rel="stylesheet" type="text/css" href="./resources/kids2/css/style.css">
+	<link rel="stylesheet" type="text/css" href="./resources/kids2/css/kids2.css"/>
+	<script src="./resources/kids2/js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	
+	<!--pc端-->
+	<div class="webpc">
+		<div class="pc_wrap">
+			<div class="pc_menu">
+				<div class="pc_bc">
+					<div class="pc_layout fix">
+						<img class="pc_logo" src="resources/kids2/images/pc_logo.png" />
+					</div>
+				</div>
+				<div class="top_bg">
+					<img class="story_bg" src="resources/kids2/images/pcbanner_bg.png" />
+					<div class="pc_layout">
+						<div class="top_focus">
+							<img src="resources/kids2/images/pc_pic.png" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pc_list">
+				<div class="pc_items">
+					<dl class="num1">
+						<dd>
+							<img src="resources/kids2/images/pc_num1.png" />
+						</dd>
+					</dl>
+					<dl class="num2">
+						<dd>
+							<img src="resources/kids2/images/pc_num2.png" />
+						</dd>
+					</dl>
+					<dl class="num3">
+						<dd>
+							<img src="resources/kids2/images/pc_num3.png" />
+						</dd>
+					</dl>
+					<dl class="num4">
+						<dd>
+							<img src="resources/kids2/images/pc_num4.png" />
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="pc_foot fix">
+				<div class="footBox">
+					<h2>少儿版优酷app</h2>
+					<h6>Copyright©2017 优酷 youku.com 版权所有</h6>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--iPad端-->
+	<div class="ipad">
+		<!--悬浮下载 ipad-->
+		<div class="downfixed">
+			<div class="kidslogo fl">
+				<img src="./resources/kids2/images/logo.png" />
+			</div>
+			<div class="topdown fr downloadapp">
+				<a href="download2.html?source=ipad" class="db">
+					<img src="./resources/kids2/images/phone_kid02.png" />
+				</a>
+			</div>
+		</div>
+		<!--顶图-->
+		<div class="topimg">
+			<img src="./resources/kids2/images/ipad_bg1.png" />
+		</div>
+		<!--立即下载按钮-->
+		<div class="download fix downloadapp">
+			<a href="download2.html?source=ipad">
+				<img src="./resources/kids2/images/ipad_kid02.png" />
+			</a>
+		</div>
+		<!--产品特色-->
+		<div class="product fix">
+			<img src="./resources/kids2/images/ipad_bg3.png" />
+		</div>
+		<!--二维码-->
+		<div class="ewm">
+			<img src="./resources/kids2/images/ipad_bg4.png" />
+		</div>
+	</div>
+	<!--手机端-->
+	<div class="phone">
+		<!--悬浮下载 phone-->
+		<div class="downfixed">
+			<div class="kidslogo fl">
+				<img src="./resources/kids2/images/logo.png" />
+			</div>
+			<div class="topdown fr downloadapp">
+				<a href="download2.html?source=mobilelanding" class="db">
+					<img src="./resources/kids2/images/phone_kid02.png" />
+				</a>
+			</div>
+		</div>
+		<!--顶图-->
+		<div class="topimg">
+			<img src="./resources/kids2/images/phone_kid01.png" />
+		</div>
+		<!--立即下载按钮-->
+		<div class="download fix downloadapp">
+			<a href="download2.html?source=mobilelanding">
+				<img src="./resources/kids2/images/phone_kid02.png" />
+			</a>
+		</div>
+		<!--产品特色-->
+		<div class="product fix">
+			<img src="./resources/kids2/images/phone_product.png" />
+		</div>
+		<div class="footer fix">
+			<img src="./resources/kids2/images/phone_footer.png" />
+		</div>
+	</div>
+	<!--分享-->
+	<!--<div class="share" style="display: none;"></div>-->
+</body>
+</html>
+<script>
+	var $lib = {
+
+		//获取get参数
+		get:function(p){
+			var url =location.href.split('?');
+			return url[1];
+		},
+		isWeiXin:function(){
+	        var ua = window.navigator.userAgent.toLowerCase();
+	        if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+	            return true;
+	        }else{
+	            return false;
+	        }
+	    }
+	}
+//	var is_android = (/android/i.test(navigator.userAgent.toLowerCase()));
+//	$('.downloadapp').on('click', function(){
+//		if(is_android){
+//			if($lib.isWeiXin()){
+//				window.location.href = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.youkuchild.android';
+//			}else{
+//				window.location.href = 'http://h5.kids.youku.com/kids_apk/Kids_Android_Phone_youkuzhuzhan.apk';
+//			}
+//		
+//	}else{
+//		window.location.href = 'https://itunes.apple.com/cn/app/xiao-xiao-you-ku-zui-meng/id1088744483?mt=8';
+//	}
+//	})
+//	
+	
+	//v1 : http://vali.cp31.ott.cibntv.net/youku/656E628D8C347143521F5923/030008010056161008A21A2FCEFF56390BF4D3-B479-FA41-01C0-BE344FFF9052.mp4?sid=049570475670012cdd05d&ctype=12&ccode=0501&duration=302&expire=18000&psid=94509eb4f4628e60fde6c67f36113f9e&ups_client_netip=106.11.34.27&ups_ts=1495704756&ups_userid=&utid=mWKkEZFHlDkCAWoLIhg30%2FEf&vid=XMzE0NDQxNTg4&vkey=Ad8fd7a2918ac222ecd4a3bffa55d0256
+//	锚点
+	$(function(){
+		var scrollFunc = function(){
+		    var scrollForTop = document.body.scrollTop;
+		    if(scrollForTop == 0){
+		    	$('.downfixed').removeClass('fadeIn');
+		    }else{
+		    	$('.downfixed').addClass('fadeIn');
+		    }
+		}
+	    $(window).scroll(scrollFunc);
+
+	})
+	
+    $(document).ready(function () {
+        var WeiXin = (function() {
+            var ua = navigator.userAgent.toLowerCase();
+            $(".share-btn").click(function(){
+                if (ua.match(/MicroMessenger/i) == "micromessenger" || ua.match(/qq/i) == "qq" || ua.match(/WeiBo/i) == "weibo") {
+                    $('.share').show();
+                } else {
+                    location.href = 'download.html';
+                }
+            });
+        })();
+        // 获取终端的相关信息
+        var Terminal = {
+            // 辨别移动终端类型
+            platform : function(){
+                var u = navigator.userAgent, app = navigator.appVersion;
+                return {
+                    // android终端或者uc浏览器
+                    android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
+                    // 是否为iPhone或者QQHD浏览器
+                    iPhone: u.indexOf('iPhone') > -1 ,
+                    // 是否iPad
+                    iPad: u.indexOf('iPad') > -1
+                };
+            }(),
+            language : (navigator.browserLanguage || navigator.language).toLowerCase()
+        };
+
+        if(Terminal.platform.android || Terminal.platform.iPhone || Terminal.platform.iPad){
+            $('body').prepend('<style>@media (max-width: 1024px) {.webpc ,.phone {display: none;}.ipad {display: block;}} @media (max-width: 929px) {.webpc ,.phone {display: none;}.ipad {display: block;}}@media (max-width: 600px) {.webpc ,.ipad {display: none;}.phone {display: block;}}</style>');
+        }
+    });
+
+</script>

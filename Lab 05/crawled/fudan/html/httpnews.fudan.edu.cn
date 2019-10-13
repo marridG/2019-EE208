@@ -1,0 +1,871 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>复旦大学-复旦新闻文化网</title>
+<meta content="复旦 新闻 复旦大学" name="keywords" />
+<meta content="提供最新的复旦大学官方新闻" name="description" />
+<base href="http://news.fudan.edu.cn/" />
+<link href="favicon.ico" rel="shortcut icon" />
+<link rel="alternate" type="application/rss+xml" title="复旦大学-复旦新闻文化网" href="/rss.php?rssid=0" />
+<link href="templates/default/skins/default/phpcms.css" rel="stylesheet" type="text/css" />
+<link href="templates/default/skins/default/style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="data/config.js"></script>
+<script language="JavaScript" src="images/js/jquery.1.3.2.min.js"></script>
+<script language="JavaScript" src="images/js/css.js"></script>
+<script language="JavaScript" src="images/js/common.js"></script>
+<script language="JavaScript" src="images/js/login.js"></script>
+<script language="JavaScript" src="images/js/validator.js"></script>
+
+</head>
+<body>
+<!--顶部开始-->
+    <div class="top_info">
+    	<div class="crumb">
+        	<a href="http://www.fudan.edu.cn">复旦主页</a> | <a href="http://mail.fudan.edu.cn">复旦邮箱</a> | <a href="http://www.oa.fudan.edu.cn">OA系统</a> | <a href="http://www.urp.fudan.edu.cn">URP系统</a> | <a href="http://xwtg.fudan.edu.cn"><strong>我要投稿</strong></a> 
+        </div>
+        <div class="btn">
+
+        	<form method="GET" action="search/" id="searchform">
+        	<input name="q" id='s_index' type="text" />
+            <a onclick="if(document.getElementById('s_index').value!='') document.getElementById('searchform').submit(); else alert('请输入关键词!');return false;" href="###" class="search">搜索</a>
+          </form>
+        </div>
+    </div>
+<!--顶部结束-->
+
+    <!--banner开始-->
+    <div class="banner" id="cg_banner"><img src="images/banner.jpg" alt="复旦大学欢迎你" width="960" height="135" border="0" usemap="#Map" /></div>
+<!--  <map name="Map" id="Map"><area shape="rect" coords="480,2,958,138" href="http://www.freshman.fudan.edu.cn" target="_blank" />
+</map> -->
+    <!--banner结束-->
+    <!--顶部菜单开始-->
+    <div class="top_menu c_b">
+        <script type='text/javascript' src='api/gweather.php'></script>
+        <div class="menu">
+        	<ul>
+            	<li><a href="" title="首页">首&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+                <li><a href="news/xxyw/" title="学校要闻">学校要闻</a></li>
+                <li><a href="news/zhxw/" title="综合新闻">综合新闻</a></li>                
+                <li><a href="news/ztbd/" title="专题报道">专题报道</a></li>
+                <li><a href="news/yxdt/" title="院系动态">院系动态</a></li>
+                <li><a href="news/gjsw/" title="国际事务">国际事务</a></li>
+                <li><a href="news/xydt/" title="校友动态">校友动态</a></li>
+                <li><a href="news/zsjy/" title="招生就业">招生就业</a></li>
+                <li><a href="news/fdrw/" title="复旦人物">复旦人物</a></li>
+                <li><a href="news/zjsd/" title="专家视点">专家视点</a></li>
+                <li><a href="news/fdjt/" title="复旦讲堂">复旦讲堂</a></li>
+                <li><a href="news/xysh/" title="校园生活">校园生活</a></li>
+                <li><a href="news/xstx/" title="校史通讯">校史通讯</a></li>
+                <li><a href="news/fdsw/" title="复旦书屋">复旦书屋</a></li>
+                <li><a href="news/xhbh/" title="相辉笔会">相辉笔会</a></li>
+                <li><a href="announce/" title="通知公告">通知公告</a></li>
+                <li><a href="news/mtsj/" title="媒体视角">媒体视角</a></li>
+                <li><a href="news/kjsm/" title="科教扫描">科教扫描</a></li>
+                
+            </ul>
+        </div>
+    </div>
+    <!--顶部菜单结束--><link href="templates/default/skins/default/ui.core.css" rel="stylesheet" type="text/css" />
+<link href="templates/default/skins/default/ui.datepicker.css" rel="stylesheet" type="text/css" />
+<link href="templates/default/skins/default/ui.theme.css" rel="stylesheet" type="text/css" />
+<link href="templates/default/skins/default/ui.tabs.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="images/js/ui.core.js"></script>
+<script type="text/javascript" src="images/js/ui.datepicker.js"></script>
+<script type="text/javascript" src="images/js/ui.tabs.js"></script>
+<script type="text/javascript" src="images/js/jquery.imageScroller.js"></script>
+<script type="text/javascript" src="images/js/let.js"></script>
+
+<script type="text/javascript">
+$(function() {
+//$("#calendar").datepicker();
+
+st = SimpleTab.construct('#tab1 a', '.show1','now');
+st2 = SimpleTab.construct('#tab2 a', '.show2','now');
+st3 = SimpleTab.construct('#tab3 a', '.show3','now');
+$("#viewer").imageScroller({
+next:"btn2",
+prev:"btn1",
+frame:"viewerFrame",
+width:400,
+child: "a",
+auto: false
+});
+});
+</script>
+
+<!--页面主体开始-->
+<div class="page c_b">
+<!--左列开始-->
+<div class="page_main c_b">
+<!--左列顶部开始-->
+<div class="main_top c_b">
+<div class="flash">
+<div class="show">
+<script type="text/javascript">
+var interval_time=0;
+var focus_width=360;
+var focus_height=240;
+var text_height=24;
+var text_align="center";
+var swf_height=focus_height+text_height;
+var pics="uploadfile/2019/0929/thumb_360_240_20190929082447348.jpg|uploadfile/2019/0920/thumb_360_240_20190920085108759.jpg|uploadfile/2019/0919/thumb_360_240_20190919080435712.jpg|uploadfile/2019/0603/thumb_360_240_20190603123723570.jpg|uploadfile/2019/0606/thumb_360_240_20190606114909161.jpg";
+var links="2019/0929/48595.html|2019/0920/48517.html|2019/0919/48488.html|2019/0531/47990.html|2019/0606/48023.html";
+var texts="【不忘初心 牢记使命】复旦党委与杨浦区委举行中心组联组学习会|【不忘初心 牢记使命】复旦大学校领导班子“不忘初心、牢记使命”|复旦大学“书记面对面”系列首场活动举行|【壮丽七十年 奋进“双一流”】建设中国特色世界一流数学学科|【壮丽七十年 奋进“双一流”】全力建设世界一流公共卫生与预防医学学科";
+document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+document.write('<param name="allowScriptAccess" value="sameDomain" /><param name="movie" value="images/focus.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#F0F0F0">');
+document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+document.write('<embed src="images/focus.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" bgcolor="#F0F0F0" quality="high" width="'+ focus_width +'" height="'+ swf_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');
+document.write('</object>');
+</script></div>
+</div>
+<div class="txt">
+<div class="stress c_b">
+<strong><a href="2019/0929/48595.html" target="_blank" title="【不忘初心 牢记使命】复旦党委与杨浦区委举行中心组联组学习会" class="stress c_b">【不忘初心 牢记使命】复旦党委与杨浦区委举行中心组联组学习会...</a></strong>
+<span>9月24日下午，复旦大学党委与中共杨浦区委举行“不忘初心、牢记使命”主题教育中心组联组学习会。</span>
+<strong><a href="2019/0920/48517.html" target="_blank" title="【不忘初心 牢记使命】复旦大学校领导班子“不忘初心、牢记使命”" class="stress c_b">【不忘初心 牢记使命】复旦大学校领导班子“不忘初心、牢记使命”...</a></strong>
+<span>9月19日，学校党委专门安排领导班子成员和党员干部代表集体瞻仰党的二大会址、四大纪念馆，重温入党誓词，并开展“不忘初心、牢记使命”主题教育第一次集中学习研讨。</span>
+</div>
+<div class="college">
+<h3><strong>学校要闻</strong></h3>
+<ul>
+<li>
+         <span class="date"></span>
+         <a href="2019/1012/48662.html" target="_blank" class="">《共产党宣言》展示馆、复旦大学校史馆获评上海...</a>
+    </li>
+<li>
+         <span class="date"></span>
+         <a href="2019/1012/48661.html" target="_blank" class="">【壮丽七十年 奋进“双一流”】育新时代大国工匠...</a>
+    </li>
+<li>
+         <span class="date"></span>
+         <a href="2019/1012/48660.html" target="_blank" class="">复旦大学2019年敬老节庆祝大会举行...</a>
+    </li>
+<li>
+         <span class="date"></span>
+         <a href="2019/1011/48658.html" target="_blank" class="">复旦大学发布博士后队伍建设新方案...</a>
+    </li>
+</ul>
+<span class="more"><a href="news/xxyw/" title="更多">更多</a></span></div></div>
+</div>
+<!--左列顶部结束-->
+<!--左列左侧开始-->
+<div class="main_left">
+<div class="home_box">
+<h3><strong>通知公告</strong></h3>
+<ul class="text_list">
+<li><a href="announce/?announceid=890" title="关于2019年复旦大学出版资助基金申报工作的通知">关于2019年复旦大学出版资助...</a></li>
+<li><a href="announce/?announceid=889" title="关于举办复旦大学2019年度“校园优秀网络文化作品”评选和“年度校园自媒体”评选活动的通知">关于举办复旦大学2019年度“...</a></li>
+<li><a href="announce/?announceid=888" title="复旦大学关于非学历教育培训项目的声明">复旦大学关于非学历教育培训...</a></li>
+<li><a href="announce/?announceid=886" title="【会议通知】脑刺激转化研究国际研讨会TRiBS2019">【会议通知】脑刺激转化研究...</a></li>
+<li><a href="announce/?announceid=885" title="复旦大学2019年“钟扬式”好老师、好团队评审结果公示">复旦大学2019年“钟扬式”好...</a></li>
+<li><a href="announce/?announceid=884" title="陈绛同志讣告">陈绛同志讣告...</a></li>
+<li><a href="announce/?announceid=883" title="2019年复旦管理学奖励基金会获奖候选人公示">2019年复旦管理学奖励基金会...</a></li>
+<li><a href="announce/?announceid=882" title="徐连达同志讣告">徐连达同志讣告...</a></li>
+<li><a href="announce/?announceid=879" title="翟象俊同志讣告">翟象俊同志讣告...</a></li>
+<li><a href="announce/?announceid=878" title="复旦大学全国高校思政课教师研修基地暨复旦大学马克思主义学院第八届暑期高级研修班启事">复旦大学全国高校思政课教师...</a></li>
+</ul>
+<span class="more"><a href="announce/announce_list.php" title="更多">更多</a></span>
+</div>
+<div class="home_box">
+<h3><strong>本周新闻排行</strong></h3>
+<ul class="text_list">
+<li><a href="2018/0522/45854.html">物理学系吴施伟课题组在石墨烯...</a></li>
+<li><a href="2018/0522/45855.html">材料科学系梅永丰课题组在氢气...</a></li>
+<li><a href="2018/0519/45844.html">复旦大学第五十八届田径运动会...</a></li>
+<li><a href="2018/0520/45847.html">“传统文化与国家治理”上海市...</a></li>
+<li><a href="2018/0517/45831.html">2018年度国家社科基金项目评审...</a></li>
+<li><a href="2018/0516/45812.html">复旦大学六届六次教代会暨十七...</a></li>
+<li><a href="2017/0926/44431.html">复旦大学钟扬：把生命最宝贵的时...</a></li>
+<li><a href="2018/0516/45813.html">对话亲历者 改革开放再出发...</a></li>
+<li><a href="2018/0423/45684.html">终于公布！​“雄安大学”来了！...</a></li>
+<li><a href="2018/0518/45841.html">聚焦新技术、新秩序、新时代  2...</a></li>
+</ul>
+</div>
+<div class="home_box">
+<h3><strong>媒体视角</strong></h3>
+<span><img src="images/img.jpg" width="208" height="80" alt="#" /></span>
+<ul class="text_list">
+<li><a href="2019/1012/48663.html" target="_blank" title="科学网：复旦大学等发现全新PGAM1别构抑制剂">科学网：复旦大学等发现全新PGAM1...</a></li>
+<li><a href="2019/1010/48652.html" target="_blank" title="科学网：我国科学家揭示肝癌分子特征全景">科学网：我国科学家揭示肝癌分子...</a></li>
+<li><a href="2019/0929/48602.html" target="_blank" title="上观新闻：青年观众“热血沸腾”，复旦大学这场经典诵读会上，他们听到">上观新闻：青年观众“热血沸腾”，...</a></li>
+<li><a href="2019/0929/48601.html" target="_blank" title="文汇：用歌与诗燃起红色记忆，这场诵读会重温爱国校友故事，把红色">文汇：用歌与诗燃起红色记忆，这场...</a></li>
+<li><a href="2019/0929/48600.html" target="_blank" title="新华社：庆祝新中国成立70周年复旦大学举办《红色回响》经典诵读">新华社：庆祝新中国成立70周年复...</a></li>
+<li><a href="2019/0923/48549.html" target="_blank" title="新华社：长三角高校智库联盟在沪成立">新华社：长三角高校智库联盟在沪...</a></li>
+<li><a href="2019/0923/48548.html" target="_blank" title="上海教育新闻网：复旦团队研制骨超声诊疗仪 探索骨质疏松诊疗新方法">上海教育新闻网：复旦团队研制骨...</a></li>
+<li><a href="2019/0923/48547.html" target="_blank" title="中国青年报客户端：复旦团队发布第三代智能配送机器人">中国青年报客户端：复旦团队发布...</a></li>
+<li><a href="2019/0923/48543.html" target="_blank" title="中新网上海：复旦大学RoboWay团队发布第三代智能配送机器人">中新网上海：复旦大学RoboWay团队...</a></li>
+<li><a href="2019/0923/48542.html" target="_blank" title="文汇：未来生活场景什么样？“蓝朋友”、“光子墨水”、大规模个性定制">文汇：未来生活场景什么样？“蓝朋...</a></li>
+</ul>
+<span class="more"><a href="news/mtsj/" title="更多">更多</a></span>
+            </div>
+<div class="home_box bottomfix">
+<dl>
+<dt>专题网站</dt>
+<dd><select name="" class="jumper_select">
+<option value="">***请选择***</option>
+						<option value="http://expo.fudan.edu.cn/hxjz/">培育和践行社会主义核心价值观专题网站</option>
+                    </select></dd>
+</dl>
+<dl>
+<dt>校内网站</dt>
+<dd><select name="" class="jumper_select">
+<option value="">***请选择***</option>
+<option value="http://www.fudan.edu.cn">复旦大学主页</option>
+<option value="http://10.49.11.111/">校报网络版</option>
+<option value="http://www.fudan.edu.cn/new_genview/shengming.htm">法律声明</option>
+<option value="http://www.fudan.org.cn">校友联络</option>
+<option value="http://www.shmu.edu.cn">医药卫生</option>
+<option value="http://www.tr.fudan.edu.cn/">人才引进</option>
+<option value="http://www.hr.fudan.edu.cn/news/news_3.jsp">人事招聘</option>
+                        <option value="http://www.library.fudan.edu.cn/">图书馆</option>
+<option value="http://202.120.76.225/">医科图书馆</option>
+                        <option value="http://www.digmus.fudan.edu.cn/">博物馆</option>
+<option value="http://www.fudanpress.com.cn/">出版社</option>
+                     </select></dd>
+</dl>
+<dl>
+<dt>友情链接</dt>
+<dd><select name="" class="jumper_select">
+<option value="">***请选择***</option>
+<option value="http://www.people.com.cn">人民网</option>
+<option value="http://www.shanghaiforum.org">上海论坛</option>
+                        <option value="http://www.jfdaily.com.cn">解放日报</option>
+                        <option value="http://wenhui.news365.com.cn">文汇日报</option>
+<option value="http://www.wenweipo.com/">香港文汇网</option>
+<option value="http://www.whb.cn/">文汇网</option>
+                        <option value="http://news.eastday.com">东方网</option>
+                        <option value="http://dfjt.net">东方讲坛</option>
+<option value="http://ssic.cass.cn/">中国社会科学杂志社</option>
+</select></dd>
+</dl>
+</div>
+</div>
+<!--左列左侧结束-->
+<!--左列右侧开始-->
+<div class="main_right">
+<!--标签新闻开始-->
+<div class="tab_news">
+<div class="tab" id="tab1">
+<ul>
+<li><a href="###"><strong>专题报道</strong></a></li>
+<li><a href="###" id="t_zhxw"><strong>综合新闻</strong></a></li>
+<li><a href="###"><strong>国际事务</strong></a></li>
+<li><a href="###"><strong>校友动态</strong></a></li>
+<li><a href="###"><strong>科教扫描</strong></a></li>
+</ul>
+</div>
+
+
+
+<div class="show show1">
+             	<dl class="c_b">
+                        	<dt><img src="uploadfile/2019/1010/thumb_180_120_20191010104757846.jpg" width="180" height="120" alt="【新中国成立70周年】总务处携手尚景园党支部、党建联盟共庆国庆" /></dt>
+                            <dd>
+                            	<h3><a href="2019/1010/48650.html" >【新中国成立70周年】总务处携手尚景园党支部、党建联盟共庆国庆</a></h3>
+                                <p></p>
+                                <span class="more"><a href="2019/1010/48650.html" class="particular" title="详细">详细</a></span>
+                            </dd>
+                </dl>
+<div class="mar_5">
+<ul class="text_list text_list_f14">
+<li><span class="date">2019-10-10</span>
+  <a title="【新中国成立70周年】总务处携手尚景园党支部、党建联盟共庆国庆" href="2019/1010/48650.html" target="_blank" class="">【新中国成立70周年】总务处携手尚景园党支部...</a>
+</li>
+<li><span class="date">2019-10-10</span>
+  <a title="【新中国成立70周年】资产经营公司组织员工参观新中国成立70周年主题展" href="2019/1010/48648.html" target="_blank" class="">【新中国成立70周年】资产经营公司组织员工参...</a>
+</li>
+<li><span class="date">2019-10-10</span>
+  <a title="【不忘初心 牢记使命】化学系扎实推进主题教育" href="2019/1010/48644.html" target="_blank" class="">【不忘初心 牢记使命】化学系扎实推进主题教育...</a>
+</li>
+<li><span class="date">2019-10-10</span>
+  <a title="【不忘初心 牢记使命】新闻学院党委开展专题集中学习研讨会" href="2019/1010/48642.html" target="_blank" class="">【不忘初心 牢记使命】新闻学院党委开展专题集...</a>
+</li>
+<li><span class="date">2019-10-10</span>
+  <a title="【不忘初心 牢记使命】总务处第一、二支部召开主题教育动员部署会" href="2019/1010/48640.html" target="_blank" class="">【不忘初心 牢记使命】总务处第一、二支部召开...</a>
+</li>
+<li><span class="date">2019-10-10</span>
+  <a title="【不忘初心 牢记使命】闻玉梅院士为信息学院师生作主题教育专题报告" href="2019/1010/48639.html" target="_blank" class="">【不忘初心 牢记使命】闻玉梅院士为信息学院师...</a>
+</li>
+</ul>
+</div>
+<span class="more"><a href="news/ztbd/" title="更多">更多</a></span>
+</div>
+<div class="show show1">
+             	<dl class="c_b">
+                        	<dt><img src="uploadfile/2019/1011/thumb_180_120_20191011124901422.jpg" width="180" height="120" alt="药学院周璐课题组合作研究发现全新PGAM1别构抑制剂" /></dt>
+                            <dd>
+                            	<h3><a href="2019/1011/48656.html" >药学院周璐课题组合作研究发现全新PGAM1别构抑制剂</a></h3>
+                                <p></p>
+                                <span class="more"><a href="2019/1011/48656.html" class="particular" title="详细">详细</a></span>
+                            </dd>
+                </dl>
+<div class="mar_5">
+<ul class="text_list text_list_f14">
+<li><span class="date">2019-10-11</span>
+  <a title="药学院周璐课题组合作研究发现全新PGAM1别构抑制剂" href="2019/1011/48656.html" target="_blank" class="">药学院周璐课题组合作研究发现全新PGAM1别构抑...</a>
+</li>
+<li><span class="date">2019-10-10</span>
+  <a title="第二届上海市高校学生理论宣讲微课程比赛决赛在复旦大学举行" href="2019/1010/48651.html" target="_blank" class="">第二届上海市高校学生理论宣讲微课程比赛决赛...</a>
+</li>
+<li><span class="date">2019-10-10</span>
+  <a title="中英高等教育人文联盟青年学者学术论坛在复旦大学举行" href="2019/1010/48646.html" target="_blank" class="">中英高等教育人文联盟青年学者学术论坛在复旦...</a>
+</li>
+<li><span class="date">2019-10-10</span>
+  <a title="复旦大学统一战线庆祝中华人民共和国成立70周年文艺演出顺利举行" href="2019/1010/48643.html" target="_blank" class="">复旦大学统一战线庆祝中华人民共和国成立70周...</a>
+</li>
+<li><span class="date">2019-10-10</span>
+  <a title="复旦大学获批上海长江河口湿地生态系统教育部野外科学观测研究站" href="2019/1010/48641.html" target="_blank" class="">复旦大学获批上海长江河口湿地生态系统教育部...</a>
+</li>
+<li><span class="date">2019-10-10</span>
+  <a title="《上海高校优质混合式在线课程示范案例集》研讨会在复旦大学举行" href="2019/1010/48631.html" target="_blank" class="">《上海高校优质混合式在线课程示范案例集》研...</a>
+</li>
+</ul>
+</div>
+<span class="more"><a href="news/zhxw/" title="更多">更多</a></span>
+</div>
+<div class="show show1">
+             	<dl class="c_b">
+                        	<dt><img src="uploadfile/2019/0926/thumb_180_120_20190926105703784.jpg" width="180" height="120" alt="上合组织医院合作联盟论坛在吉尔吉斯斯坦召开" /></dt>
+                            <dd>
+                            	<h3><a href="2019/0926/48564.html" >上合组织医院合作联盟论坛在吉尔吉斯斯坦召开</a></h3>
+                                <p></p>
+                                <span class="more"><a href="2019/0926/48564.html" class="particular" title="详细">详细</a></span>
+                            </dd>
+                </dl>
+<div class="mar_5">
+<ul class="text_list text_list_f14">
+<li><span class="date">2019-09-26</span>
+  <a title="上合组织医院合作联盟论坛在吉尔吉斯斯坦召开" href="2019/0926/48564.html" target="_blank" class="">上合组织医院合作联盟论坛在吉尔吉斯斯坦召开...</a>
+</li>
+<li><span class="date">2019-08-21</span>
+  <a title="2019NEWDAY挪威暑期研习班举办" href="2019/0821/48338.html" target="_blank" class="">2019NEWDAY挪威暑期研习班举办...</a>
+</li>
+<li><span class="date">2019-08-07</span>
+  <a title="复旦大学专家学者赴印尼雅加达和泗水访问" href="2019/0807/48290.html" target="_blank" class="">复旦大学专家学者赴印尼雅加达和泗水访问...</a>
+</li>
+<li><span class="date">2019-07-01</span>
+  <a title="附属华山医院神经内科癫痫亚专业团队参加第33届国际癫痫大会" href="2019/0701/48171.html" target="_blank" class="">附属华山医院神经内科癫痫亚专业团队参加第33...</a>
+</li>
+<li><span class="date">2019-06-20</span>
+  <a title="全球临床研究者培训（GCSRT）华山学习小组（伦敦班）结课" href="2019/0620/48110.html" target="_blank" class="">全球临床研究者培训（GCSRT）华山学习小组（伦敦班）结...</a>
+</li>
+<li><span class="date">2019-06-15</span>
+  <a title="聚焦算法情境：信息与传播研究中心与世界顶尖学术机构联合主办数字" href="2019/0615/48072.html" target="_blank" class="">聚焦算法情境：信息与传播研究中心与世界顶尖学...</a>
+</li>
+</ul>
+</div>
+<span class="more"><a href="news/gjsw/" title="更多">更多</a></span>
+</div>
+<div class="show show1">
+             	<dl class="c_b">
+                        	<dt><img src="uploadfile/2019/0307/thumb_180_120_20190307105600403.jpg" width="180" height="120" alt="计算机科学技术学院校友季昕华荣获“2018年上海市优秀青年企业家”" /></dt>
+                            <dd>
+                            	<h3><a href="2019/0307/47391.html" >计算机科学技术学院校友季昕华荣获“2018年上海市优秀青年企业家”</a></h3>
+                                <p>2019年2月26日，复旦大学计算机科学技术学院09级校友，优刻得科技股份有限公司(UCloud)创始人兼CEO季昕华，被授予 “2018年上海市优秀青年企业家”荣誉</p>
+                                <span class="more"><a href="2019/0307/47391.html" class="particular" title="详细">详细</a></span>
+                            </dd>
+                </dl>
+<div class="mar_5">
+<ul class="text_list text_list_f14">
+<li><span class="date">2019-03-07</span>
+  <a title="计算机科学技术学院校友季昕华荣获“2018年上海市优秀青年企业家”" href="2019/0307/47391.html" target="_blank" class="">计算机科学技术学院校友季昕华荣获“2018年上...</a>
+</li>
+<li><span class="date">2018-06-21</span>
+  <a title="复旦大学2018届毕业生基层就业工作校友会专场举行" href="2018/0621/46081.html" target="_blank" class="">复旦大学2018届毕业生基层就业工作校友会专场...</a>
+</li>
+<li><span class="date">2018-06-12</span>
+  <a title="我校举行院系校友工作交流会" href="2018/0612/46039.html" target="_blank" class="">我校举行院系校友工作交流会...</a>
+</li>
+<li><span class="date">2017-10-13</span>
+  <a title="复旦大学历史学系77、78级校友返校" href="2017/1013/44520.html" target="_blank" class="">复旦大学历史学系77、78级校友返校...</a>
+</li>
+<li><span class="date">2017-09-05</span>
+  <a title="复旦校友赵婧夺得全运会田径女子1500米决赛冠军" href="2017/0905/44270.html" target="_blank" class="">复旦校友赵婧夺得全运会田径女子1500米决赛冠...</a>
+</li>
+<li><span class="date">2017-07-23</span>
+  <a title="复旦大学校友张首晟团队预言的“天使粒子”被发现" href="2017/0723/44153.html" target="_blank" class="">复旦大学校友张首晟团队预言的“天使粒子”被...</a>
+</li>
+</ul>
+</div>
+<span class="more"><a href="news/xydt/" title="更多">更多</a></span>
+</div>
+<div class="show show1">
+             	<dl class="c_b">
+                        	<dt><img src="uploadfile/2018/0428/thumb_180_120_20180428025555644.jpg" width="180" height="120" alt="中国最顶尖的青年科研人才，更喜欢去哪些城市？" /></dt>
+                            <dd>
+                            	<h3><a href="2018/0428/45716.html" >中国最顶尖的青年科研人才，更喜欢去哪些城市？</a></h3>
+                                <p></p>
+                                <span class="more"><a href="2018/0428/45716.html" class="particular" title="详细">详细</a></span>
+                            </dd>
+                </dl>
+<div class="mar_5">
+<ul class="text_list text_list_f14">
+<li><span class="date">2018-12-11</span>
+  <a title="上海交通大学与山东大学签署战略合作协议" href="2018/1211/47038.html" target="_blank" class="">上海交通大学与山东大学签署战略合作协议...</a>
+</li>
+<li><span class="date">2018-12-11</span>
+  <a title="天津大学医教联合体成立" href="2018/1211/47037.html" target="_blank" class="">天津大学医教联合体成立...</a>
+</li>
+<li><span class="date">2018-12-03</span>
+  <a title="香港理工大学2020年开设金融科技及人工智能课程" href="2018/1203/47000.html" target="_blank" class="">香港理工大学2020年开设金融科技及人工智能课...</a>
+</li>
+<li><span class="date">2018-11-19</span>
+  <a title="广东与中科院合作建设粤港澳大湾区国际科技创新中心" href="2018/1119/46900.html" target="_blank" class="">广东与中科院合作建设粤港澳大湾区国际科技创...</a>
+</li>
+<li><span class="date">2018-11-14</span>
+  <a title="中国人民大学坚持马克思主义底色 着力推进“双一流”建设" href="2018/1114/46860.html" target="_blank" class="">中国人民大学坚持马克思主义底色 着力推进“双...</a>
+</li>
+<li><span class="date">2018-11-14</span>
+  <a title="浙江大学创新科技生态和发展格局 深入推进“双一流”建设" href="2018/1114/46859.html" target="_blank" class="">浙江大学创新科技生态和发展格局 深入推进“双...</a>
+</li>
+</ul>
+</div>
+<span class="more"><a href="news/mtsj/" title="更多">更多</a></span>
+</div>
+</div>
+<!--标签新闻结束-->
+<!--复旦人物开始-->
+<div class="human">
+<div class="title c_b">
+<h3>复旦人物</h3>
+<a href="news/fdrw/" title="更多人物">更多人物</a>
+</div>
+<dl class="c_b">
+<dd>
+<h3><a href="2019/0911/48415.html" >坚守初心，照亮生命：护士王颖成为附属华山医院第6位造血干细胞捐献者</a></h3>
+<p>8月13日上午，在华山医院血液科病房里，东院86病房护士王颖正在进行外周血造血干细胞采集，不久之后，她的造血干细胞将在另一个生命中“落户生根。</p>
+<span class="more"><a href="2019/0911/48415.html" class="particular" title="详细">详细</a></span>
+</dd>
+<dt><img style="margin-left:15px" src="images/nopic_small.gif" width="150" height="100" alt="坚守初心，照亮生命：护士王颖成为附属华山医院第6位造血干细胞捐献者" /></dt>
+</dl>
+</div>
+<!--复旦人物结束-->
+<!--文化之窗开始-->
+<div class="culture">
+<h3>文化之窗</h3>
+<div class="show c_b">
+<span id="btn1" class="for_left">向左滚动</span>
+<span id="btn2" class="for_right">向右滚动</span>
+<div id="viewer">
+<div id="viewerFrame">
+<a target="fd_whzc" href="jump.php?x=5de0c889&u=http://www.fudan.edu.cn/whzc/2014/lsjn/" title="丰碑——复旦英烈展"><img width="400" height="150" src="uploadfile/whzc/2014/01.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=e8762679&u=http://www.fudan.edu.cn/whzc/2013/02/" title="世纪伟人——邓小平"><img width="400" height="150" src="uploadfile/whzc/2013/02.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=ad33a32d&u=http://www.fudan.edu.cn/whzc/2012/18/" title="坚持中国特色社会主义方向鉴定道路自信、理论自信、制度自信"><img width="400" height="150" src="uploadfile/whzc/2012/18.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=6b647c81&u=http://www.fudan.edu.cn/whzc/2012/17/" title="迎接中国共产党第十八次全国代表大会图片联展（三）"><img width="400" height="150" src="uploadfile/whzc/2012/17.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=adbc7ea2&u=http://www.fudan.edu.cn/whzc/2012/16/" title="迎接中国共产党第十八次全国代表大会图片联展（二）"><img width="400" height="150" src="uploadfile/whzc/2012/16.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=b5e8e601&u=http://www.fudan.edu.cn/whzc/2012/15/" title="庆祝复旦大学放射医学研究所建所50周年图片展"><img width="400" height="150" src="uploadfile/whzc/2012/15.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=6bedff00&u=http://www.fudan.edu.cn/whzc/2012/14/" title="春华秋实 耕耘不辍"><img width="400" height="150" src="uploadfile/whzc/2012/14.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=5525edc7&u=http://www.fudan.edu.cn/whzc/2012/13/" title="迎接中国共产党第十八次全国代表大会图片联展（一）"><img width="400" height="150" src="uploadfile/whzc/2012/13.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=8eb6a485&u=http://www.fudan.edu.cn/whzc/2012/12/" title="文章道德仰高风"><img width="400" height="150" src="uploadfile/whzc/2012/12.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=b2c187a6&u=http://www.fudan.edu.cn/whzc/2012/11/" title="军旗下的青春"><img width="400" height="150" src="uploadfile/whzc/2012/thumb_400_150_11.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=66d8915e&u=http://www.fudan.edu.cn/whzc/2012/10/" title="为党旗增辉"><img width="400" height="150" src="uploadfile/whzc/2012/10.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=ae256d5b&u=http://www.fudan.edu.cn/whzc/2012/09/" title="绚丽青春 努力前程"><img width="400" height="150" src="uploadfile/whzc/2012/09.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=5477b386&u=http://www.fudan.edu.cn/whzc/2012/02/" title="星迹宛然 星光恒久 深切缅怀谷超豪先生"><img width="400" height="150" src="uploadfile/whzc/2012/08.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=b1719d4b&u=http://www.fudan.edu.cn/whzc/2012/07/" title="复旦印象"><img width="400" height="150" src="uploadfile/whzc/2012/07.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=c94c5748&u=http://www.fudan.edu.cn/whzc/2012/06/" title="全国大型科普活动—国际植物日"><img width="400" height="150" src="uploadfile/whzc/2012/06.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=0377f3de&u=http://www.fudan.edu.cn/whzc/2012/05/" title="甲子破浪筑精彩 而今乘风创辉煌"><img width="400" height="150" src="uploadfile/whzc/2012/05.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=1c984a8a&u=http://www.fudan.edu.cn/whzc/2012/04/" title="光风云帆自立路 华星霁月复旦情"><img width="400" height="150" src="uploadfile/whzc/2012/04.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=895e33a8&u=http://www.fudan.edu.cn/whzc/2012/03/" title="复旦大学体育文化节之学生体育活动展示"><img width="400" height="150" src="uploadfile/whzc/2012/03.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=5477b386&u=http://www.fudan.edu.cn/whzc/2012/02/" title="读者第一 服务争优"><img width="400" height="150" src="uploadfile/whzc/2012/02.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=227cbb23&u=http://www.fudan.edu.cn/whzc/2012/01/" title="夫妻携手共进，同创美好家园"><img width="400" height="150" src="uploadfile/whzc/2012/01.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=583c8bc4&u=http://www.fudan.edu.cn/whzc/2011/16/" title="复旦大学社会科学高等研究院三周年纪念"><img width="400" height="150" src="uploadfile/2011/1207/20111207092234698.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=023ad322&u=http://www.fudan.edu.cn/whzc/2011/01/" title="复旦大学信息化办公室成立十周年"><img width="400" height="150" src="uploadfile/2011/1115/20111115100731506.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=e2478900&u=http://www.fudan.edu.cn/whzc/2010/zb/2010/11/" title="复旦大学现代教育技术中心成立十周年"><img width="400" height="150" src="/uploadfile/2010/1111/thumb_400_150_20101111043230546.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=c0ae5c16&u=http://www.fudan.edu.cn/whzc/2010/zb/2010/10/" title="复旦大学离退休工作先进事迹"><img width="400" height="150" src="/uploadfile/2010/1111/thumb_400_150_20101111043043602.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=8eef2556&u=http://www.fudan.edu.cn/whzc/2010/zb/2010/09/" title="劳模让复旦更精彩"><img width="400" height="150" src="/uploadfile/2010/1111/thumb_400_150_20101111042848481.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=ad50e107&u=http://www.fudan.edu.cn/whzc/2010/zb/2010/08/" title="光荣历程 追求理想"><img width="400" height="150" src="/uploadfile/2010/1111/thumb_400_150_20101111042757458.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=22425508&u=http://www.fudan.edu.cn/whzc/2010/zb/2010/07/" title="中国教育工会复旦大学委员会成立60周年巡礼（1950-2010）"><img width="400" height="150" src="/uploadfile/2010/1111/thumb_400_150_20101111042415574.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=9ce11eec&u=http://www.fudan.edu.cn/whzc/2010/zb/2010/06/" title="创新增活力·事业聚人心"><img width="400" height="150" src="uploadfile/2010/0709/20100709085455488.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=50e8bf2b&u=http://www.fudan.edu.cn/whzc/2010/zb/2010/05/" title="春风总有情·桃李满芳菲"><img width="400" height="150" src="uploadfile/2010/0709/20100709085355837.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=14e8c4e1&u=http://www.fudan.edu.cn/whzc/2010/zb/2010/04/" title="复旦大学文史研究院三周年纪念"><img width="400" height="150" src="uploadfile/2010/0709/20100709085304238.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=542245d8&u=http://www.fudan.edu.cn/whzc/2010/zb/2010/03/" title="记念复旦大学创始人马相伯先生诞辰170周年"><img width="400" height="150" src="uploadfile/2010/0709/20100709085207759.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=855ca8c0&u=http://www.fudan.edu.cn/whzc/2010/zb/2010/02/" title="迎世博·献爱心·促健康"><img width="400" height="150" src="uploadfile/2010/0709/20100709085049805.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=0d93aba4&u=http://www.fudan.edu.cn/whzc/2010/zb/2010/01/" title="美丽生活 精彩人生"><img width="400" height="150" src="uploadfile/2010/0709/20100709084746901.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=51d6be97&u=http://www.fudan.edu.cn/whzc/2009/zb/2009/11/" title="著名经济学家蒋学模先生生平展"><img width="400" height="150" src="uploadfile/2009/0928/20090928055240765.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=ca58092c&u=http://www.fudan.edu.cn/whzc/2009/zb/2009/10/" title="法学院建院八十周年图片展"><img width="400" height="150" src="uploadfile/2009/0928/20090928055203573.jpg" /></a>
+<a target="fd_whzc" href="jump.php?x=0f4fb08d&u=http://www.fudan.edu.cn/whzc/2009/zb/2009/9/" title="热烈庆祝第25届教师节"><img width="400" height="150" src="uploadfile/2009/0928/20090928055105242.jpg" /></a>
+</div>
+</div>
+</div>
+</div>
+<!--文化之窗结束-->
+<!--标签新闻开始-->
+<div class="tab_book bottomfix">
+<div class="tab" id="tab2">
+<ul class="c_b">
+<li><a href="###"><strong>复旦讲堂</strong></a></li>
+<li><a href="###"><strong>专家视点</strong></a></li>
+<li><a href="###"><strong>校园生活</strong></a></li>
+<li><a href="###"><strong>校史通讯</strong></a></li>
+<li><a href="###"><strong>复旦书屋</strong></a></li>
+</ul>
+</div>
+<div class="show show2">
+<div class="mar_5">
+<ul class="text_list text_list_f14">
+<li><span class="date">2018-12-13</span>
+  <a title="穆穆教授主讲“数学在大气与海洋科学中的若干应用”" href="2018/1213/47049.html" target="_blank" class="">穆穆教授主讲“数学在大气与海洋科学中的若干应...</a>
+</li>
+<li><span class="date">2018-11-19</span>
+  <a title="中华文明访问学者系列讲座：“历史图像学”方法论第三讲" href="2018/1119/46906.html" target="_blank" class="">中华文明访问学者系列讲座：“历史图像学”方法论...</a>
+</li>
+<li><span class="date">2018-11-12</span>
+  <a title="书院校风学风专题活动暨希德书院第47期导师论坛举行" href="2018/1112/46842.html" target="_blank" class="">书院校风学风专题活动暨希德书院第47期导师论坛...</a>
+</li>
+<li><span class="date">2018-11-09</span>
+  <a title="附属华山医院“班后一小时”党员讲坛开讲公共经济研究中心主任石磊" href="2018/1109/46818.html" target="_blank" class="">附属华山医院“班后一小时”党员讲坛开讲公共经...</a>
+</li>
+<li><span class="date">2018-11-09</span>
+  <a title="中联部研究室参赞唐海龙做客马克思主义学院望道讲堂" href="2018/1109/46796.html" target="_blank" class="">中联部研究室参赞唐海龙做客马克思主义学院望道...</a>
+</li>
+<li><span class="date">2018-11-09</span>
+  <a title="访问学者系列讲座“历史图像学”第二讲开讲" href="2018/1109/46795.html" target="_blank" class="">访问学者系列讲座“历史图像学”第二讲开讲...</a>
+</li>
+<li><span class="date">2018-11-08</span>
+  <a title="附属华山医院“班后一小时”党员讲坛开讲" href="2018/1108/46793.html" target="_blank" class="">附属华山医院“班后一小时”党员讲坛开讲...</a>
+</li>
+<li><span class="date">2018-11-08</span>
+  <a title="访问学者系列讲座“历史图像学”方法论第一讲开讲" href="2018/1108/46785.html" target="_blank" class="">访问学者系列讲座“历史图像学”方法论第一讲开...</a>
+</li>
+<li><span class="date">2018-11-02</span>
+  <a title="基础医学院举办第十一期院长论坛系列讲座" href="2018/1102/46742.html" target="_blank" class="">基础医学院举办第十一期院长论坛系列讲座...</a>
+</li>
+<li><span class="date">2018-10-29</span>
+  <a title="数学科学学院举行第五期“杰出校友”讲坛" href="2018/1029/46717.html" target="_blank" class="">数学科学学院举行第五期“杰出校友”讲坛...</a>
+</li>
+<li><span class="date">2018-06-07</span>
+  <a title="南那尔·基欧汉教授主讲“高等教育领导力的当代挑战”" href="2018/0607/46006.html" target="_blank" class="">南那尔·基欧汉教授主讲“高等教育领导力的当代...</a>
+</li>
+<li><span class="date">2018-06-07</span>
+  <a title="罗伯特·基欧汉教授主讲“霸权之后：制度化合作与世界政治权力转移”" href="2018/0607/46005.html" target="_blank" class="">罗伯特·基欧汉教授主讲“霸权之后：制度化合作与...</a>
+</li>
+</ul>
+</div>
+<span class="more"><a href="news/fdjt/" title="更多">更多</a></span>
+</div>
+<div class="show show2">
+<div class="mar_5">
+<ul class="text_list text_list_f14">
+<li><span class="date">2019-09-27</span>
+  <a title="张军：沪深的最大不同在于国家的战略定位" href="2019/0927/48584.html" target="_blank" class="">张军：沪深的最大不同在于国家的战略定位...</a>
+</li>
+<li><span class="date">2019-09-26</span>
+  <a title="郑长忠：为世界谋大同而凝聚共识" href="2019/0926/48580.html" target="_blank" class="">郑长忠：为世界谋大同而凝聚共识...</a>
+</li>
+<li><span class="date">2019-09-19</span>
+  <a title="张维为：和平发展是中国的宝贵经验" href="2019/0919/48515.html" target="_blank" class="">张维为：和平发展是中国的宝贵经验...</a>
+</li>
+<li><span class="date">2019-09-19</span>
+  <a title="陈康令：中国之礼怎样制力、促利、倡理" href="2019/0919/48514.html" target="_blank" class="">陈康令：中国之礼怎样制力、促利、倡理...</a>
+</li>
+<li><span class="date">2019-09-19</span>
+  <a title="高仁：发挥好四个“金钥匙”作用" href="2019/0919/48513.html" target="_blank" class="">高仁：发挥好四个“金钥匙”作用...</a>
+</li>
+<li><span class="date">2019-09-19</span>
+  <a title="李天纲：徐光启是一位了不起的上海人" href="2019/0919/48512.html" target="_blank" class="">李天纲：徐光启是一位了不起的上海人...</a>
+</li>
+<li><span class="date">2019-09-19</span>
+  <a title="沈国兵：高品质招商引资 高标准优化环境" href="2019/0919/48511.html" target="_blank" class="">沈国兵：高品质招商引资 高标准优化环境...</a>
+</li>
+<li><span class="date">2019-09-19</span>
+  <a title="沈逸：中方暂停采购农产品 精准理性回击美加税威胁" href="2019/0919/48510.html" target="_blank" class="">沈逸：中方暂停采购农产品 精准理性回击美加税威胁...</a>
+</li>
+<li><span class="date">2019-09-19</span>
+  <a title="周文：世界减贫史上留下深深的中国印记" href="2019/0919/48509.html" target="_blank" class="">周文：世界减贫史上留下深深的中国印记...</a>
+</li>
+<li><span class="date">2019-09-19</span>
+  <a title="王振忠：从“胡人识宝”到“徽州朝奉来取宝”" href="2019/0919/48508.html" target="_blank" class="">王振忠：从“胡人识宝”到“徽州朝奉来取宝”...</a>
+</li>
+<li><span class="date">2019-09-19</span>
+  <a title="向荣：世界史视野中的亚洲海域——读羽田正《东印度公司与亚洲之海》" href="2019/0919/48507.html" target="_blank" class="">向荣：世界史视野中的亚洲海域——读羽田正《东印...</a>
+</li>
+<li><span class="date">2019-09-19</span>
+  <a title="葛剑雄：走进文明起源地" href="2019/0919/48506.html" target="_blank" class="">葛剑雄：走进文明起源地...</a>
+</li>
+</ul>
+</div>
+<span class="more"><a href="news/zjsd/" title="更多">更多</a></span>
+</div>
+<div class="show show2">
+             	<dl class="c_b">
+                        	<dt><img src="uploadfile/2019/1010/thumb_150_100_20191010104413806.jpg" width="150" height="100" alt="信息科学与工程学院暑期实践项目答辩会举行" /></dt>
+                            <dd>
+                            	<h3><a href="2019/1010/48649.html" >信息科学与工程学院暑期实践项目答辩会举行</a></h3>
+                                <p></p>
+                                <span class="more"><a href="2019/1010/48649.html" class="particular" title="详细">详细</a></span>
+                            </dd>
+                </dl>
+                    <div class="mar_5">
+<ul class="text_list text_list_f14">
+<li><span class="date">2019-10-10</span>
+  <a title="信息科学与工程学院暑期实践项目答辩会举行" href="2019/1010/48649.html" target="_blank" class="">信息科学与工程学院暑期实践项目答辩会举行...</a>
+</li>
+<li><span class="date">2019-10-10</span>
+  <a title="化学系举行2019年敬老节活动" href="2019/1010/48647.html" target="_blank" class="">化学系举行2019年敬老节活动...</a>
+</li>
+<li><span class="date">2019-09-27</span>
+  <a title="放医所召开2019年新老生“破冰”联欢会" href="2019/0927/48591.html" target="_blank" class="">放医所召开2019年新老生“破冰”联欢会...</a>
+</li>
+<li><span class="date">2019-09-23</span>
+  <a title="匠心·成器陶艺展暨《艺术与创造力（陶艺）》教学成果展举行" href="2019/0923/48546.html" target="_blank" class="">匠心·成器陶艺展暨《艺术与创造力（陶艺）》教学成...</a>
+</li>
+<li><span class="date">2019-09-19</span>
+  <a title="计算机科学技术学院慰问2018级军训学生" href="2019/0919/48474.html" target="_blank" class="">计算机科学技术学院慰问2018级军训学生...</a>
+</li>
+<li><span class="date">2019-09-19</span>
+  <a title="“居间者的面孔：郁迪插画作品展”开幕式举行" href="2019/0919/48470.html" target="_blank" class="">“居间者的面孔：郁迪插画作品展”开幕式举行...</a>
+</li>
+</ul>
+</div>
+<span class="more"><a href="news/xysh/" title="更多">更多</a></span>
+</div>
+<div class="show show2">
+<div class="mar_5">
+<ul class="text_list text_list_f14">
+<li><span class="date">2016-09-05</span>
+  <a title="盛氏愚斋义庄捐建复旦大学往事" href="2016/0905/42181.html" target="_blank" class="">盛氏愚斋义庄捐建复旦大学往事...</a>
+</li>
+<li><span class="date">2015-01-13</span>
+  <a title="力助于敏院士克难登顶的复旦讲师何育辽" href="2015/0113/37924.html" target="_blank" class="">力助于敏院士克难登顶的复旦讲师何育辽...</a>
+</li>
+<li><span class="date">2014-10-16</span>
+  <a title="复旦与中国原子弹：纪念我国首次核爆成功50周年" href="2014/1016/37072.html" target="_blank" class="">复旦与中国原子弹：纪念我国首次核爆成功50周年...</a>
+</li>
+<li><span class="date">2013-12-31</span>
+  <a title="按类教学 培养通才" href="2013/1231/35368.html" target="_blank" class="">按类教学 培养通才...</a>
+</li>
+<li><span class="date">2013-12-31</span>
+  <a title="胡绳武自述" href="2013/1231/35367.html" target="_blank" class="">胡绳武自述</a>
+</li>
+<li><span class="date">2013-12-31</span>
+  <a title="人生路上的三级跳和撑杆跳" href="2013/1231/35366.html" target="_blank" class="">人生路上的三级跳和撑杆跳...</a>
+</li>
+<li><span class="date">2013-12-31</span>
+  <a title="论学科组合" href="2013/1231/35365.html" target="_blank" class="">论学科组合</a>
+</li>
+<li><span class="date">2013-12-31</span>
+  <a title="王造时先生有一个历史问题值得研究" href="2013/1231/35364.html" target="_blank" class="">王造时先生有一个历史问题值得研究...</a>
+</li>
+<li><span class="date">2013-12-31</span>
+  <a title="年华易逝  情意长存" href="2013/1231/35363.html" target="_blank" class="">年华易逝  情意长存...</a>
+</li>
+<li><span class="date">2013-07-11</span>
+  <a title="大跃进年代的下乡日记(续)" href="2013/0711/33975.html" target="_blank" class="">大跃进年代的下乡日记(续)...</a>
+</li>
+<li><span class="date">2013-07-11</span>
+  <a title="1958年新三级的开门办学—— 记罗店往事" href="2013/0711/33974.html" target="_blank" class="">1958年新三级的开门办学—— 记罗店往事...</a>
+</li>
+<li><span class="date">2013-07-11</span>
+  <a title="感谢复旦" href="2013/0711/33973.html" target="_blank" class="">感谢复旦</a>
+</li>
+</ul>
+</div>
+<span class="more"><a href="news/xstx/" title="更多">更多</a></span>
+</div>
+<div class="show show2">
+<div class="mar_5">
+<ul class="text_list text_list_f14">
+<li><span class="date">2011-03-30</span>
+  <a title="不同群体之间的权力博弈" href="2011/0330/27436.html" target="_blank" class="">不同群体之间的权力博弈...</a>
+</li>
+<li><span class="date">2011-03-30</span>
+  <a title="摸着石头过河：理解中国30年的改革开放" href="2011/0330/27435.html" target="_blank" class="">摸着石头过河：理解中国30年的改革开放...</a>
+</li>
+<li><span class="date">2011-03-30</span>
+  <a title="自由主义还有市场吗？" href="2011/0330/27434.html" target="_blank" class="">自由主义还有市场吗？...</a>
+</li>
+<li><span class="date">2011-03-30</span>
+  <a title="情感和想象是文学最基本的要素" href="2011/0330/27433.html" target="_blank" class="">情感和想象是文学最基本的要素...</a>
+</li>
+<li><span class="date">2011-03-30</span>
+  <a title="什么是综观经济分析法" href="2011/0330/27432.html" target="_blank" class="">什么是综观经济分析法...</a>
+</li>
+</ul>
+</div>
+<span class="more"><a href="news/fdsw/" title="更多">更多</a></span>
+<span class="newbook">
+            <h3><strong><a href="news/xssj/">新书上架</a></strong></h3>
+            <ul class="c_b">
+            	<li><a href="2015/1021/39918.html" target="_blank"><img src="uploadfile/2015/1021/thumb_90_130_20151021070030986.jpg" width="90" height="130" alt="《SPECT/诊断CT操作规范与临床应用》出版发行" /></a><a href="2015/1021/39918.html" target="_blank">《SPECT/诊断CT操作规范与临床</a></li>
+<li><a href="2015/0305/38218.html" target="_blank"><img src="uploadfile/2015/0305/thumb_90_130_20150305012841248.jpg" width="90" height="130" alt="《现代临床血液病学》荣获第五届中华优秀出版物图书奖" /></a><a href="2015/0305/38218.html" target="_blank">《现代临床血液病学》荣获第五</a></li>
+<li><a href="2014/0915/36821.html" target="_blank"><img src="uploadfile/2014/0915/thumb_90_130_20140915125134973.jpg" width="90" height="130" alt="《上海市重大经济决策咨询报告选》出版" /></a><a href="2014/0915/36821.html" target="_blank">《上海市重大经济决策咨询报告</a></li>
+            </ul>
+          </span>
+</div>
+</div>
+<!--标签新闻结束-->
+</div>
+<!--左列右侧结束-->
+</div>
+<!--左列结束-->
+<!--右列开始-->
+<div class="page_oth">
+<!--文化日历开始-->
+<script type='text/javascript' src='calendar/js/jquery-ui-1.7.2.custom.min.js'></script>
+<link href="calendar/css/index_jquery-ui-1.7.2.custom.css" rel="stylesheet" type="text/css" />
+<script>
+$(function() {
+$('.picker').datepicker({
+dateFormat:'yymmdd',
+dayNamesMin:['日','一','二','三','四','五','六'],
+monthNames:['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+nextText:'下月',
+prevText:'上月',
+onSelect:function(d) {
+location=('calendar/#&m=theday&day='+d);
+}
+});
+});
+</script>
+<div class="calendar">
+<h3><strong>文化日历</strong></h3>
+<div class="picker"></div>
+<span class="more"><a href="calendar/" title="查看七天内的活动">查看七天内的活动</a></span>
+</div>
+<!--文化日历结束-->
+<!--复旦校报开始-->
+<div class="newspaper">
+<h3><strong>校报《复旦》</strong></h3>
+<ul class="text_list c_b">
+<li><a href="http://10.49.11.111" title="电子版"><strong>电子版(校内访问)</strong></a></li>
+<li><a href="pdf"><strong>PDF版</strong></li>
+</ul>
+</div>
+<!--复旦校报结束-->
+<!--图片库开始-->
+<div class="photo">
+<h3><strong>图片库</strong></h3>
+<center><script type='text/javascript' src='api/js.php?tagname=%E8%A7%86%E9%A2%91%E5%BA%93_%E9%9A%8F%E6%9C%BA%E5%9B%BE%E7%89%87'></script></center>
+</div>
+<!--图片库结束-->
+<!--视频库开始-->
+<div class="movie">
+<h3><strong>视频库</strong></h3>
+<div class="play"> <a href="http://news.fudan.edu.cn/2011/0704/28408.html" target="_blank"><img src="images/dapians.jpg" width="223" height="199" /></a></div>
+<ul class='text_list'><li><a href="2019/0522/47885.html" target="_blank" title="2019年书院传统文化月闭幕讲座暨希德书院导师论坛第51期举行">2019年书院传统文化月闭幕讲座...</a></li>
+<li><a href="2016/1101/42529.html" target="_blank" title="高分子科学系2015级本科班开展心理健康教育主题班会">高分子科学系2015级本科班开展...</a></li>
+<li><a href="2016/0524/41582.html" target="_blank" title="“老年人权益保障”法律知识讲座在我校举行">“老年人权益保障”法律知识讲...</a></li>
+<li><a href="2014/0930/36948.html" target="_blank" title="复旦英烈谱">复旦英烈谱</a></li>
+<li><a href="2013/0428/33219.html" target="_blank" title="力学系“力学人节”开幕式圆满举行">力学系“力学人节”开幕式圆满...</a></li>
+</ul>
+<span class="more"><a href="/spk/xsjz/" title="更多">更多</a></span>
+</div>
+<!--视频库结束-->
+<!--杂项标签卡开始-->
+<div class="tab_info">
+<div class="tab" id="tab3">
+<ul class="c_b">
+<li><a href="###"><strong>报纸刊物</strong></a></li>
+<li><a href="###"><strong>校内广播</strong></a></li>
+<li><a href="###"><strong>校园电视</strong></a></li>
+</ul>
+</div>
+<div class="show show3 newspad">
+<ul class="c_b text_list">
+<li><a href="http://www.youth.fudan.edu.cn/">复旦青年</a></li>
+<li><a href="http://www.fudan.org.cn/publication/fudan-tribe">复旦人</a></li>
+<li>复旦人周报</li>
+<li>风景线</li>
+</ul>
+<ul class="c_b text_list">
+<li><a href="http://www.fudan.edu.cn/wkxb/">复旦学报(社科版)</a></li>
+<li>学生生活服务导报</li>
+<li>复旦研究生</li>
+</ul>
+</div>
+
+<div class="show show3">
+<ul class="broadcasting c_b">
+<li><a href="http://radio.fudan.edu.cn/handan.php"><img src="images/broadcasting_1.jpg" width="219" height="59" alt="邯郸校区广播台" /></a></li>
+<li><a href="http://radio.fudan.edu.cn/fenglin/"><img src="images/broadcasting_2.jpg" width="219" height="59" alt="枫林校区广播台" /></a></li>
+</ul>
+</div>
+
+<div class="show show3 stuvideo c_b">
+<img src="images/stuvideo.gif" usemap="#videoMap"/>
+<map name="videoMap" id="videoMap">
+<area shape="rect" coords="0,0,85,50" href="http://stu.fudan.edu.cn/V6/" />
+<area shape="rect" coords="0,60,85,110" href="http://10.64.130.4/fudannews.asp" />
+</map>
+<ul class="c_b text_list">
+<li><a href="http://stu.fudan.edu.cn/V6/">U频电视台</a></li>
+<li><a href="http://10.64.130.4/fudannews.asp">复旦视频新闻</a></li>
+</ul>
+</div>
+</div>
+<div class="tab_info"><div class="show">
+<h3><strong>复旦大学学生通讯社（页面建设中）</strong></h3>
+<ul class="news_agency text_list">
+<li>通讯社介绍</li>
+<li>日常活动</li>
+<li>精彩瞬间</li>
+<li>关于我们</li>
+</ul>
+</div></div>
+
+<div class="tab_info">
+<div class="show">
+<h3><strong><a href="http://nds.fudan.edu.cn/page/about" target="_blank">晨曦网络工作室(NDS)</a></strong></h3>
+<ul class="news_agency text_list">
+    <li><a href="http://nds.fudan.edu.cn/bbs" target="_blank">互动交流</a></li>
+    <li><a style="color: red" href="http://nds.fudan.edu.cn/suggestion" target="_blank">意见建议</a></li>
+    <li><a href="http://nds.fudan.edu.cn/page/about" target="_blank">关于我们</a></li>
+</ul>
+</div>
+</div><!--杂项标签卡结束-->
+</div>
+<!--右列结束-->
+</div>
+<!--页面主体结束-->
+<script>
+jQuery(function(){
+var $ = jQuery;
+$('.jumper_select').change(function() {
+var v = $(this).attr('value');
+if(v!='') location = v;
+})
+});
+</script>
+<script>
+window.onload=function(){
+var comment = document.getElementById('t_zhxw');
+if(document.all){
+comment.click();
+}	
+else{
+var ev = document.createEvent('MouseEvents');
+ev.initEvent('click', false, true);
+comment.dispatchEvent(ev);
+}
+}
+
+</script>
+
+    <!--底部导航开始-->
+    <div class="bottom_nav">
+    	<a href="#" title="网站导航">网站导航</a>-
+    	<a href="#" title="投稿须知">投稿须知</a>-
+    	<a href="http://xwtg.fudan.edu.cn" title="投稿系统">投稿系统</a>-
+    	<a href="#" title="新闻热线">新闻热线</a>-
+    	<a href="#" title="投稿排行">投稿排行</a>-
+    	<a href="contact/" title="联系我们">联系我们</a>
+    </div>
+    <!--底部导航结束-->
+    <!--版权开始-->
+    <div class="foot">
+    	<p>复旦大学党委宣传部（新闻中心）版权所有，复旦大学党委宣传部网络宣传办公室维护</p>
+<p>Copyright@2010 news.fudan.edu.cn All rights reserved.&nbsp;
+<script language="javascript" type="text/javascript" src="http://js.users.51.la/3602372.js"></script>
+<noscript><a href="http://www.51.la/?3602372" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/3602372.asp" style="border:none" /></a></noscript>
+</p>
+    </div>
+    <!--版权结束-->
+</body>
+</html>

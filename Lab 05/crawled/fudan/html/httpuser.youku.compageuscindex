@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>var _US_TEST=0</script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="stylesheet" href="//static.youku.com/lvip/css/ucenter/index.css" />
+    <meta name="title" content="优酷网-中国第一视频网,提供视频播放,视频发布,视频搜索" />
+    <meta name="keywords" content="视频,视频分享,视频搜索,视频播放" />
+    <meta name="description" content="视频服务平台,提供视频播放,视频发布,视频搜索,视频分享" />
+    <link rel="Shortcut Icon" href="//img.alicdn.com/tfs/TB1hCN0S4jaK1RjSZKzXXXVwXXa-48-48.ico"  type="image/x-icon" />
+    <title>个人中心</title>
+</head>
+<body class="f6">
+
+<link type="text/css"
+	href="https://g.alicdn.com/pc-playpage-components/youku-component-compatible-jquery/style/index.css"
+	rel="stylesheet">
+<script type="text/javascript"
+	src="https://g.alicdn.com/pc-playpage-components/youku-component-compatible-jquery/index.js"></script>
+<div id="youkuheader" style="height: 70px;"></div>
+
+
+<div class="head-banner" id="head-banner">
+	<div class="head-banner-container" id="head-banner-container"><a href="javascript:vod(0);"></a></div>
+</div>
+<div class="head-container" id="head-container">
+	<div class="head-box">
+		<div class="inner-img">
+			<script type="text/javascript">
+				var date = new Date(),hour = date.getHours();
+				if(hour > 5 && hour < 20){
+					document.write('<img src="//static.youku.com/lvip/img/ucenter/day_bg.png" class="head-img" id="head-img">');
+					document.getElementById("head-container").style.backgroundColor="#7cd2ff"
+				}else{
+					document.write('<img src="//static.youku.com/lvip/img/ucenter/night_bg.png" class="head-img" id="head-img">');
+					document.getElementById("head-container").style.backgroundColor="#3391d1"
+				}
+			</script>
+			<div class="info-box no-login" id="info-box">
+									<p class="login-tip f-line">小酷邀你</p>
+					<p class="login-tip l-line">点击登录</p>
+							</div>
+		</div>
+	</div>
+	<div class="head-menu">
+		<div class="menu-box">
+			<ul class="menu-ul">
+				<li class="active"><a href="javaScript:;" onclick="window.location.reload()" data-stat-role='ck'>个人中心</a></li>
+				<li><a href="http://creation.youku.com/" target="_blank" data-stat-role='ck'>创作中心</a></li>
+				<li><a href="http://vip.youku.com/?c=account" target="_blank" data-stat-role='ck'>我的会员</a></li>
+				<li><a href="http://user.youku.com/page/setting/base_profile" target="_blank" data-stat-role='ck'>账户设置</a></li>
+			</ul>
+			<a target="_blank" href="javaScript:;" class="my-channel login-a" data-stat-role='ck'>
+				<span class="icon my-channel-icon"></span>我的自频道
+			</a>
+		</div>	
+	</div>
+
+	<div class="header-notice" style="background:rgba(255,255,255,0.7);text-align: center;position: absolute;left: 0;top: 81px;right: 0;height: 40px;line-height: 40px;color: #434343;font-size: 0;">
+		<span style="font-size: 13px;vertical-align: middle;display: inline-block;">为确保您账户的安全及正常使用，依《网络安全法》相关要求，2017年6月1日起会员账户需绑定手机。如您还未绑定，请尽快完成，感谢您的理解及支持！ </span>
+		<span style="vertical-align: middle;display: inline-block;background: url('//img.alicdn.com/tfs/TB12WZtmfNNTKJjSspkXXaeWFXa-9-9.png') no-repeat center center;width: 20px;height: 20px;margin-left: 10px;cursor: pointer;" onclick="this.parentNode.style.display='none'"></span>
+	</div>
+</div>	
+<article>
+	<div class="content-container">
+		<div class="content-box">
+			<div class="content-left">
+				<div class="left-menu-box">
+					<a href="http://newvideos.youku.com/u/videos" target="_blank" class="right-border bottom-border" data-stat-role='ck'>
+						<span class="icon vedio"></span>
+						<span>我的视频</span>
+					</a>
+					<a href="http://playlists.youku.com/" target="_blank" class="bottom-border" data-stat-role='ck'>
+						<span class="icon album"></span>
+						<span>我的播单</span>
+					</a>
+					<a href="http://ding.youku.com/u/subscribeUpdate" target="_blank" class="right-border" data-stat-role='ck'>
+						<span class="icon subscribe"></span>
+						<span>我的订阅</span>
+					</a>
+					<a href="//user.youku.com/page/usc/fav" target="_blank" data-stat-role='ck'>
+						<span class="icon collect"></span>
+						<span>我的收藏</span>
+					</a>
+				</div>
+
+				<div class="hype-box orders-box">
+					<a target="_blank" href="http://vip.youku.com/vips/myAccOrderLists.html" data-stat-role='ck'>
+						<span class="icon orders-icon"></span>
+						<span class="hype-name">
+							我的订单
+						</span>
+						<span class="icon arrow-right"></span>
+					</a>
+				</div>
+				
+				<div class="history-box">
+					<div class="content-title history-tilte">
+						<a href="http://faxian.youku.com/watch_record" target="_blank" data-stat-role='ck'>
+							<span class="icon his-icon"></span>
+							<span class="title-text">我的历史记录</span>
+							<span class="icon arrow-right"></span>
+						</a>
+						<a href="http://svip.youku.com/portal" target="_blank" class="a-more-ipad" data-role="record">用APP查看更多</a>
+					</div>
+					<div class="his-content" id="his-content">
+					</div>
+				</div>
+				<div class="grade-box" id="grade-box">
+					<div class="content-title grade-title">
+						<span class="icon grade-icon"></span>
+						<span class="title-text">
+														我的特权福利
+													</span>
+						<a target="_blank" href="http://lv.youku.com/page/grade/task" data-stat-role='ck'>更多</a>
+					</div>
+					<div class="grade-container">
+						<div class="grade-wrap" id="grade-wrap">
+						</div>
+					</div>
+					<ul class="dot">
+						<li class="dot-p icon cur"></li>
+						<li class="dot-p icon"></li>
+					</ul>
+				</div>
+				<div class="hype-box">
+					<a target="_blank" href="http://live.youku.com/?spm=a2hww.20023042.topNav.5~1~3!8~A" data-stat-role='ck'>
+						<span class="icon hype-icon hype-broad"></span>
+						<span class="hype-name">
+														最新优酷直播
+							</span>
+						<span class="icon arrow-right"></span>
+					</a>
+				</div>
+				<div class="hype-box">
+					<a target="_blank" href="http://www.laifeng.com/" data-stat-role='ck'>
+						<span class="icon hype-icon hype-lf"></span>
+						<span class="hype-name">
+														热门来疯主播
+													</span>
+						<span class="icon arrow-right"></span>
+					</a>
+				</div>
+			</div>
+			<div class="content-right">
+				<!-- <div class="channel-box">
+					<div class="channel-title">
+						<span class="icon title-name">我的自频道</span>
+						<span class="channel-entry">进入</span>
+						<span class="right-tip">
+							已经有超多的小伙伴自频道玩得好
+							<a href="">
+								去看看
+								<em class="icon arrow-right"></em>
+							</a>
+						</span>
+					</div>
+					<div class="channel-content">
+						<div class="login-box">
+							<img src="//static.youku.com/lvip/img/ucenter/login-tip.png">
+							<p>想看看我的自频道最新动态吗？</p>
+							<p>
+								快来<a href="">登录</a>体验
+							</p>
+						</div>
+					</div>
+				</div> -->
+				<div class="vip-box">
+					<p class="box-title">
+						会员专享大片
+						<a href="http://svip.youku.com/portal" target="_blank" class="a-more">更多</a>
+						<a href="http://svip.youku.com/portal" target="_blank" class="a-more-ipad" data-role="vipvideo">用APP查看更多</a>
+					</p>
+					<div class="vip-list" id="vip-box">
+						<ul id="vip-ul">
+						</ul>
+						<a href="javascript:void(0);" class="icon vip-arrow-right arrow-right"></a>
+						<a href="javascript:void(0);" class="icon vip-arrow-left arrow-left"></a>
+					</div>
+				</div>
+				<div class="reco-box">
+					<p class="box-title">
+						为你推荐 
+						<span class="box-sub-tilte">
+														<a class="login-a rec-login">登录</a>
+							小酷才能为你更精准的推荐
+													</span>
+						<a href="javascript:void(0);" class="box-right-title" id="rec-btn" attach_info="">
+							<i class="icon"></i>
+							换一换
+						</a>
+						<a href="javascript:void(0);" class="box-right-title a-more-ipad" data-role="recommend" attach_info="">
+							<i class="icon"></i>
+							用APP查看更多
+						</a>
+					</p>
+					<div class="" id="rec-box">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+</article>
+<footer>
+
+	<div id="fixbar"></div>
+<div id="youkufooter"></div>
+<script>
+    if (window.$$InitYoukuHeader && window.$$InitYouKuFooter && window.$$InitYoukuFixedBar) {
+        const currentChannel = {
+            domain: '//sky.vip.youku.com/bwsvip/136/c5597b1a',
+            name: ''
+        }
+        window.$$InitYoukuHeader('youkuheader', {
+            currentChannel: currentChannel,
+            focusWhite: true,
+            enableScroll: false
+        });
+
+        window.$$InitYouKuFooter('youkufooter', {});
+
+        window.$$InitYoukuFixedBar('fixbar', {});
+    }
+</script>
+</footer>
+<script type="text/html" id="load-tpl">
+	<!--弹层模板-->
+	<div class="load-box" id="load-box">
+		<div class="load-bg"  onclick="UCENTER.closeLoad(event)"></div>
+		<div class="load-wrap">
+			<div class="load-title">
+				<span>信息提示</span>
+			</div>
+			<div class="load-content">
+				<% if(code != ""){%>
+				<div class="code">
+					<%=code%>
+				</div>
+				<%}%>
+				<p class="load-desc"><%=content%></p>
+				<a href="<% if(code != ''){%><%=url%><%}else{%>javaScript:void(0);<%}%>" class="load-btn" target="_blank" onclick="UCENTER.closeLoad(event)"><%=btnCon%></a>
+			</div>
+			<a href="javaScript:void(0);" class="icon close-btn" onclick="UCENTER.closeLoad(event)"></a>
+		</div>
+	</div>
+</script>
+<script type="text/template" id="play-log-tpl">
+	<div class="his-con-box">
+		<p class="his-day">	
+			<span class="icon <%if(key.indexOf('今天') > -1){%>border-cur<%}else{%>border-gray<%}%>"></span>
+			<span class="con-day"><%=key%></span>
+		</p>
+		<ul>
+			<%for(var i=0,l=list.length; i < l;i ++){%>
+			<li>
+				<a href="<%=list[i].link%>" target="_blank" title="<%=list[i].name%>">
+					<em class="<%if(key.indexOf('今天') > -1){%>blue<%}else{%>gray<%}%>"></em>
+					<span class="v-name"><%=list[i].name%></span>
+					<span class="blue"><%=list[i].percent%></span>
+				</a>
+			</li>
+			<%}%>
+		</ul>
+	</div>
+</script>
+<script type="text/template" id="grade-tpl">
+	<ul class="gift-ul">
+		<%for(var i = 0,l=list.length;i<l;i++){%>
+			<li  data-url="<%=list[i].gift_exchange_url%>" id="<%=list[i].gift_id%>">
+				<img src="<%=list[i].gift_img_url%>" alt="">
+				<div class="ex-box">
+					<div class="ex-bg"></div>
+					<span><%=list[i].gift_title%></span>
+					<a href="javascript:void(0);" class="exchange<%if(list[i].is_receive != 0){%> disabled<%}else{%><%}%>"data-id="<%=list[i].gift_id%>">
+					<%if(list[i].is_receive == 0){%>
+						领取
+					<%}else{%>
+						已领取
+					<%}%>
+					</a>
+				</div>
+			</li>
+		<%}%>
+	</ul>
+</script>
+<script type="text/template" id="task-tpl">
+	<%for(var i = 0 , l = list.length; i < l ;i++){%>
+		<li class="con task-con task-con-left">
+		<img src="<%=list[i].small_logo_url%>" class="task-bind">
+			<div class="task-desc">
+				<p class="desc-title"><%=list[i].name%></p>
+				<p class="desc-sub-title"><%=list[i].desc%></p>
+			</div>
+			<a href="<%=list[i].click_url%>" target="_blank" class="task-btn" data-stat-role='ck'><%=list[i].button_text%></a>
+		</li>
+	<%}%>
+</script>
+<script type="text/template" id="mall-tpl">
+	<%for(var i = 0 , l = list.length; i < l ;i++){%>
+		<li class="con task-con task-con-left">
+		<img src="<%=list[i].pic_url%>" class="task-bind">
+			<div class="task-desc">
+				<p class="mall-desc-title"><%=list[i].name%></p>
+				<p class="desc-sub-title"><%=list[i].desc%></p>
+			</div>
+			<a target="_blank" href="<%=list[i].href%>" class="task-btn" data-id="<%=list[i].id%>" data-stat-role='ck'>立即兑换</a>
+		</li>
+	<%}%>
+</script>
+<script type="text/template" id="vip-tpl">
+			<li class="con">
+		<a href="http://v.youku.com/v_show/id_XNDM5MTg1MjAxNg==.html" target="_blank" data-stat-role='ck' >
+			<img src="http://r1.ykimg.com/050E00005DA04E8BADA7B2FD36020EC9">
+			<i class="bg"></i>
+			<!--i class="icon pre-bord"></i-->
+			<i class="icon vip-free"></i>
+			<div class="vip-desc-box">
+				<p title="哪吒之魔童降世">哪吒之魔童降世</p>
+				<p title="顽劣哪吒书写逆天神话">顽劣哪吒书写逆天神话</p>
+				<div class="hide">
+					<span>0次播放</span>
+					<span>6,811次评论</span>
+				</div>
+				<div class="wrap-btn hide">
+					<a class="btn btn-play" href="http://v.youku.com/v_show/id_XNDM5MTg1MjAxNg==.html" title="哪吒之魔童降世" target="video">立刻播放</a>
+				</div>
+			</div>
+		</li>
+
+ 		<li class="con">
+		<a href="http://v.youku.com/v_show/id_XNDM3Nzg0MzM2OA==.html" target="_blank" data-stat-role='ck' >
+			<img src="http://r1.ykimg.com/050E00005D89EBB18B74393C73069639">
+			<i class="bg"></i>
+			<!--i class="icon pre-bord"></i-->
+			<i class="icon vip-free"></i>
+			<div class="vip-desc-box">
+				<p title="《中国机长》优酷独家幕后记录">《中国机长》优酷独家幕后记录</p>
+				<p title="张涵予演绎硬汉机长">张涵予演绎硬汉机长</p>
+				<div class="hide">
+					<span>0次播放</span>
+					<span>731次评论</span>
+				</div>
+				<div class="wrap-btn hide">
+					<a class="btn btn-play" href="http://v.youku.com/v_show/id_XNDM3Nzg0MzM2OA==.html" title="《中国机长》优酷独家幕后记录" target="video">立刻播放</a>
+				</div>
+			</div>
+		</li>
+
+ 		<li class="con">
+		<a href="http://v.youku.com/v_show/id_XNDMyNDAxMTM5Ng==.html" target="_blank" data-stat-role='ck' >
+			<img src="http://r1.ykimg.com/050E00005D19DAB71B7691F5D007863A">
+			<i class="bg"></i>
+			<!--i class="icon pre-bord"></i-->
+			<i class="icon vip-free"></i>
+			<div class="vip-desc-box">
+				<p title="使徒行者2：谍影行动">使徒行者2：谍影行动</p>
+				<p title="铁三角兄弟殊途同归">铁三角兄弟殊途同归</p>
+				<div class="hide">
+					<span>0次播放</span>
+					<span>1,943次评论</span>
+				</div>
+				<div class="wrap-btn hide">
+					<a class="btn btn-play" href="http://v.youku.com/v_show/id_XNDMyNDAxMTM5Ng==.html" title="使徒行者2：谍影行动" target="video">立刻播放</a>
+				</div>
+			</div>
+		</li>
+
+ 		<li class="con">
+		<a href="http://v.youku.com/v_show/id_XNDM3NTQ2NzgzNg==.html" target="_blank" data-stat-role='ck' >
+			<img src="http://r1.ykimg.com/050E00005CB96F16859B5D5351039BA2">
+			<i class="bg"></i>
+			<!--i class="icon pre-bord"></i-->
+			<i class="icon vip-free"></i>
+			<div class="vip-desc-box">
+				<p title="银河补习班">银河补习班</p>
+				<p title="邓超父子穿越漫长时光">邓超父子穿越漫长时光</p>
+				<div class="hide">
+					<span>0次播放</span>
+					<span>6,633次评论</span>
+				</div>
+				<div class="wrap-btn hide">
+					<a class="btn btn-play" href="http://v.youku.com/v_show/id_XNDM3NTQ2NzgzNg==.html" title="银河补习班" target="video">立刻播放</a>
+				</div>
+			</div>
+		</li>
+
+ 		<li class="con">
+		<a href="http://v.youku.com/v_show/id_XNDM3ODk2OTg4MA==.html" target="_blank" data-stat-role='ck' >
+			<img src="http://r1.ykimg.com/050E00005CF79BCD859B5E8B7102E89C">
+			<i class="bg"></i>
+			<!--i class="icon pre-bord"></i-->
+			<i class="icon vip-free"></i>
+			<div class="vip-desc-box">
+				<p title="送我上青云">送我上青云</p>
+				<p title="姚晨演绎女性社会状态">姚晨演绎女性社会状态</p>
+				<div class="hide">
+					<span>0次播放</span>
+					<span>873次评论</span>
+				</div>
+				<div class="wrap-btn hide">
+					<a class="btn btn-play" href="http://v.youku.com/v_show/id_XNDM3ODk2OTg4MA==.html" title="送我上青云" target="video">立刻播放</a>
+				</div>
+			</div>
+		</li>
+
+ 		<li class="con">
+		<a href="http://v.youku.com/v_show/id_XNDM1NjQ3NTQ4OA==.html" target="_blank" data-stat-role='ck' >
+			<img src="http://r1.ykimg.com/050E00005D3AC76D859B5E19E8026764">
+			<i class="bg"></i>
+			<!--i class="icon pre-bord"></i-->
+			<i class="icon vip-free"></i>
+			<div class="vip-desc-box">
+				<p title="鼠胆英雄">鼠胆英雄</p>
+				<p title="黑帮小弟弄巧成拙变警察">黑帮小弟弄巧成拙变警察</p>
+				<div class="hide">
+					<span>0次播放</span>
+					<span>6,746次评论</span>
+				</div>
+				<div class="wrap-btn hide">
+					<a class="btn btn-play" href="http://v.youku.com/v_show/id_XNDM1NjQ3NTQ4OA==.html" title="鼠胆英雄" target="video">立刻播放</a>
+				</div>
+			</div>
+		</li>
+
+ 		<li class="con">
+		<a href="http://v.youku.com/v_show/id_XNDM3NTYzMzU0NA==.html" target="_blank" data-stat-role='ck' >
+			<img src="http://r1.ykimg.com/050E00005D91D28FADA7B20CCF017A81">
+			<i class="bg"></i>
+			<!--i class="icon pre-bord"></i-->
+			<i class="icon vip-free"></i>
+			<div class="vip-desc-box">
+				<p title="哆啦A梦：大雄的月球探险记">哆啦A梦：大雄的月球探险记</p>
+				<p title="哆啦A梦来月球寻玉兔">哆啦A梦来月球寻玉兔</p>
+				<div class="hide">
+					<span>0次播放</span>
+					<span>459次评论</span>
+				</div>
+				<div class="wrap-btn hide">
+					<a class="btn btn-play" href="http://v.youku.com/v_show/id_XNDM3NTYzMzU0NA==.html" title="哆啦A梦：大雄的月球探险记" target="video">立刻播放</a>
+				</div>
+			</div>
+		</li>
+
+ 		<li class="con">
+		<a href="http://v.youku.com/v_show/id_XNDM3NzMxODQ1Mg==.html" target="_blank" data-stat-role='ck' >
+			<img src="http://r1.ykimg.com/050E00005D47B631425BD92B61124068">
+			<i class="bg"></i>
+			<!--i class="icon pre-bord"></i-->
+			<i class="icon vip-free"></i>
+			<div class="vip-desc-box">
+				<p title="大侦探皮卡丘">大侦探皮卡丘</p>
+				<p title="少年携皮卡丘拯救父亲">少年携皮卡丘拯救父亲</p>
+				<div class="hide">
+					<span>0次播放</span>
+					<span>1,400次评论</span>
+				</div>
+				<div class="wrap-btn hide">
+					<a class="btn btn-play" href="http://v.youku.com/v_show/id_XNDM3NzMxODQ1Mg==.html" title="大侦探皮卡丘" target="video">立刻播放</a>
+				</div>
+			</div>
+		</li>
+
+ 		<li class="con">
+		<a href="http://v.youku.com/v_show/id_XNDM2NDE0NDEyNA==.html" target="_blank" data-stat-role='ck' >
+			<img src="http://r1.ykimg.com/050E00005D525E8E425BD90A006CBD77">
+			<i class="bg"></i>
+			<!--i class="icon pre-bord"></i-->
+			<i class="icon vip-free"></i>
+			<div class="vip-desc-box">
+				<p title="沉默的证人">沉默的证人</p>
+				<p title="张家辉携杨紫化身法医">张家辉携杨紫化身法医</p>
+				<div class="hide">
+					<span>0次播放</span>
+					<span>3,195次评论</span>
+				</div>
+				<div class="wrap-btn hide">
+					<a class="btn btn-play" href="http://v.youku.com/v_show/id_XNDM2NDE0NDEyNA==.html" title="沉默的证人" target="video">立刻播放</a>
+				</div>
+			</div>
+		</li>
+
+ 		<li class="con">
+		<a href="http://v.youku.com/v_show/id_XNDM3NzE2NzIyNA==.html" target="_blank" data-stat-role='ck' >
+			<img src="http://r1.ykimg.com/050E00005D63AF62ADA7B231EA0487D8">
+			<i class="bg"></i>
+			<!--i class="icon pre-bord"></i-->
+			<i class="icon vip-free"></i>
+			<div class="vip-desc-box">
+				<p title="铤而走险">铤而走险</p>
+				<p title="欧豪黑化首尝反派角色">欧豪黑化首尝反派角色</p>
+				<div class="hide">
+					<span>0次播放</span>
+					<span>1,240次评论</span>
+				</div>
+				<div class="wrap-btn hide">
+					<a class="btn btn-play" href="http://v.youku.com/v_show/id_XNDM3NzE2NzIyNA==.html" title="铤而走险" target="video">立刻播放</a>
+				</div>
+			</div>
+		</li>
+
+ </script>
+<script type="text/template" id="rec-tpl">
+	<ul class="list-box">
+	<%for(var i=0,l=list.length; i < l;i ++){%>
+		<%if((i+1) % 5 == 0){%>
+		<li class="last">
+		<%}else if((i+1) % 5 == 4){%>
+		<li class="w1080-last">
+		<%}else{%>
+		<li>
+		<%}%>
+			<a href="javascript:void(0)" data-url="<%=list[i].link%>"  data-log-url="<%=list[i].click_log%>">
+				<img src="<%=list[i].big_logo%>">
+				<p class="desc-box" title="<%=list[i].title%>"><%=list[i].title%></p>
+				<p class="num-box">
+					<span class="icon num_play"><%=list[i].total_vv%></span>
+					<span class="icon num-comment"><%=list[i].total_comment%></span>
+				</p>
+			</a>
+		</li>
+	<%}%>
+	</ul>
+</script>
+<script type="text/template" id="loading-tpl">
+	<div class="loading-box">
+		<img src="//static.youku.com/lvip/img/ucenter/loading.gif" alt=""/>
+	</div>
+</script>
+<script type="text/template" id="no-data-tpl">
+  <div class="no-data">
+    <img src="//static.youku.com/lvip/img/ucenter/no-data.png" />
+    <p>还没有数据~</p>
+  </div>
+</script>
+<script type="text/template" id="vip-priv-tpl">
+	<ul class="vip-priv-ul">
+		<%for(var i=0,l=list.length; i < l;i ++){%>
+		<li>
+			<a href="<%=list[i].data_href%>" target="_blank">
+				<img src="//static.youku.com/lvip/img/ucenter/<%=list[i].img_url%>.png">
+				<p><%=list[i].content%></p>
+				<p class="tip-p"><%=list[i].tip%></p>
+			</a>
+		</li>
+		<%}%>
+	</ul>
+</script>
+<script type="text/template" id="more-goods-tpl">
+	<a href="http://point.youku.com/" target="_blank" class="more-goods">更多商品</a>
+</script>
+<script type="text/javascript">
+var appData= {"path":"static.youku.com/lvip", "score":'0',"today_score":'0','upgrade_score':'0','today_max_score':'0', 'today_score':'0','grade':'0', 'is_login':"0"}
+</script>
+<script type="text/javascript" src="//static.youku.com/lvip/js/app/ucenterv2/pc/template.js"></script>
+<script type="text/javascript" src="//static.youku.com/lvip/js/app/ucenterv2/pc/index.js"></script>
+<script type="text/javascript" src="//static.youku.com/v1.0.0951/index/js/tdstat.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c6a6cb73914d3f4a5fee12d67db6072b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</html>

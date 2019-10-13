@@ -16,6 +16,7 @@ WEB_PAGE_INDEX_SUBFIX = "index.txt"
 WEB_PAGE_SITE_SUBFIX = "src.txt"
 WEB_PAGES_SUBFIX = "html/"
 INDEX_FILE_PATH = "index"
+# INDEX_FILE_PATH = "index_pic"
 # [Developer]
 DEBUG_MODE = False
 # Encodings List: for a less advanced encoding method

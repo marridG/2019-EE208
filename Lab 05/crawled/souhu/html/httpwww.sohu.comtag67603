@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Surface</title>
+    <meta charset="utf-8"/>
+<meta name="data-spm" content="smpc">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+<meta name="data-spm" content="smpc">
+<link rel="icon" href="//statics.itc.cn/web/static/images/pic/sohu-logo/favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="//statics.itc.cn/web/static/images/pic/sohu-logo/favicon.ico" type="image/x-icon"/>
+<link rel="apple-touch-icon" sizes="57x57" href="//statics.itc.cn/web/static/images/pic/sohu-logo/logo-57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="//statics.itc.cn/web/static/images/pic/sohu-logo/logo-72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="//statics.itc.cn/web/static/images/pic/sohu-logo/logo-114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="//statics.itc.cn/web/static/images/pic/sohu-logo/logo-144.png" />
+<link href="//statics.itc.cn/web/static/css/main-f6a5466fac.css" rel="stylesheet"/>
+<script>
+    //  加载监控代码
+</script>
+<!--[if lt IE 9]>
+<script src="//statics.itc.cn/web/static/js/es5-shim-08e41cfc3e.min.js"></script>
+<script src="//statics.itc.cn/web/static/js/es5-sham-1d5fa1124b.min.js"></script>
+<script src="//statics.itc.cn/web/static/js/html5shiv-21fc8c2ba6.js"></script>
+<link href="//statics.itc.cn/web/static/css/ie8hack-9dce3c3b96.css" rel="stylesheet" />
+<![endif]-->
+<script type="text/javascript">
+//解決IE8,IE9不支持console的问题
+(function() {
+    var method;
+    var noop = function() {};
+    var methods = [
+        'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+        'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+        'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+        'timeStamp', 'trace', 'warn'
+    ];
+    var length = methods.length;
+    var console = (window.console = window.console || {});
+
+    while (length--) {
+        method = methods[length];
+
+        // Only stub undefined methods.
+        if (!console[method]) {
+            console[method] = noop;
+        }
+    }
+}());
+</script>
+<script type="text/javascript">
+    (function () {
+        var html = document.getElementsByTagName("html")[0];
+        var width = Math.min(document.documentElement.clientWidth, 790);
+        width = width < 320 ? 320 : width;
+        if (document.documentElement.clientWidth <= 1024) {
+            html.style.fontSize = width / 790 * 79 + 'px';
+        }
+        if (window.addEventListener) {
+            window.addEventListener('resize', resizeHandler);
+        }
+        else if (window.attachEvent) {
+            window.attachEvent('onresize', resizeHandler);
+        }
+        function resizeHandler() {
+            if (document.documentElement.clientWidth <= 1024) {
+                var width = Math.min(document.documentElement.clientWidth, 790);
+                width = width < 320 ? 320 : width;
+                html.style.fontSize = width / 790 * 79 + 'px';
+            } else {
+                html.style.fontSize = "16px";
+            }
+        };
+    })();
+</script>
+
+
+</head>
+<body class="tag-index" data-spm="tag-page">
+
+<div class="wrapper-box wrapper-tag">
+    <header id="main-header" class="error-head" data-spm="header">
+
+
+	<div class="area">
+		<div class="head-nav left" data-spm="nav">
+			<ul>
+			    <li class="index"><a data-clev="10220248" target="_blank" href="http://www.sohu.com"><em class="icon-home icon"></em><em class="sohu-logo">搜狐首页</em></a></li>
+														<li><a target="_blank" data-clev="10220249" href="http://news.sohu.com/">新闻</a></li>
+																			<li><a target="_blank" data-clev="10220250" href="http://sports.sohu.com/">体育</a></li>
+																			<li><a target="_blank" data-clev="10220251" href="http://auto.sohu.com/">汽车</a></li>
+																			<li><a target="_blank" data-clev="10220252" href="http://www.focus.cn/">房产</a></li>
+																			<li><a target="_blank" data-clev="10220253" href="http://travel.sohu.com/">旅游</a></li>
+																			<li><a target="_blank" data-clev="10220254" href="http://learning.sohu.com/">教育</a></li>
+																			<li><a target="_blank" data-clev="10220255" href="http://fashion.sohu.com/">时尚</a></li>
+																			<li><a target="_blank" data-clev="10220256" href="http://it.sohu.com/">科技</a></li>
+																			<li><a target="_blank" data-clev="10220257" href="http://business.sohu.com/">财经</a></li>
+																			<li><a target="_blank" data-clev="10220258" href="http://yule.sohu.com/">娱乐</a></li>
+																																																																																																																									<li class="more-nav"><a href="javascript:void(0)">更多<em class="cor"></em></a>
+					<div class="more-nav-box">
+																																																																																																																																																					<a href="http://baobao.sohu.com/">母婴</a>
+																										<a href="http://health.sohu.com/">健康</a>
+																										<a href="http://history.sohu.com/">历史</a>
+																										<a href="http://mil.sohu.com/">军事</a>
+																										<a href="http://chihe.sohu.com/">美食</a>
+																										<a href="http://cul.sohu.com/">文化</a>
+																										<a href="http://astro.sohu.com/">星座</a>
+																										<a href="https://www.sohu.com/subject">专题</a>
+																										<a href="http://game.sohu.com/">游戏</a>
+																										<a href="http://fun.sohu.com/">搞笑</a>
+																										<a href="http://acg.sohu.com/">动漫</a>
+																										<a href="http://pets.sohu.com/">宠物</a>
+																		</div>
+				</li>
+			</ul>
+		</div>
+		<div id="head-login" class="right login">
+		</div>
+	</div>
+
+</header>    <div id="top">
+        <div class="tag-title-bg">
+    <div class="area tag-title">
+        <div class="tag-name"><i class="icon tag-name-icon"></i><span class="tt">Surface</span></div>
+    </div>
+</div>    </div>
+
+    <div class="area clear" id="main-container">
+
+        <div class="hot-spots left"  id="hot-spots" data-spm="hot-spots">
+
+<div class="title"><span class="tt">热点直达</span></div>
+<ul>
+        <li>
+        <a href="//www.sohu.com/tag/78240" target="_blank">
+            创业武林大会        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/48130" target="_blank">
+            移动互联网        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/48139" target="_blank">
+            工业技术        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/68623" target="_blank">
+            国家电网        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/68625" target="_blank">
+            阿里星球        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/67603" target="_blank">
+            Surface        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/68626" target="_blank">
+            陈竺        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/48160" target="_blank">
+            运动手环        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/48162" target="_blank">
+            智能手表        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/48165" target="_blank">
+            Apple Watch        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/48167" target="_blank">
+            测评        </a>
+    </li>
+        <li>
+        <a href="//www.sohu.com/tag/48173" target="_blank">
+            AR        </a>
+    </li>
+    </ul>
+</div>
+        <div class="main left">
+            <div class="news-list clearfix" id="main-news" data-spm="feed">
+                <div id="news-wrapper">
+                                                            <div data-role="news-item" class="news-box news-box-thr news-box-pic clear" data-ev="346600584" data-media-id="354896" data-newsid="1" data-loc="" data-spm-type="resource">
+        <h4><a href="//www.sohu.com/a/346600584_354896"  target="_blank">微软新专利：可确认双屏设备屏幕方向</a></h4>
+        <div class="pic-group clear">
+            <ul>                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346600584_354896" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191013/f055fb68bfc04522814d4690343675d6.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346600584_354896" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191013/cbc817c7030d48978bff53529a15bf81.gif" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346600584_354896" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191013/e681addfecef4506b4daa8858de3cc98.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                                    end
+                
+                " ><a href="//www.sohu.com/a/346600584_354896" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191013/4bb68cb6eeb142b2be536701fbcbbf9c.jpeg" alt="">
+                                    </a></li>
+                                            </ul>
+        </div>
+        <div class="other">
+            <span class="img"><a href="http://mp.sohu.com/profile?xpt=c29odW1wMEE0MTBQQHNvaHUuY29t" target="_blank"><img src="//sucimg.itc.cn/avatarimg/2a41d08551394c5c8e30567f81d3da8b_1487953734008" alt=""></a></span>
+                        <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0"> $info.channelName </a></span><span class="dot channel-dot">·</span>
+                        <span class="name"><a href="http://mp.sohu.com/profile?xpt=c29odW1wMEE0MTBQQHNvaHUuY29t" target="_blank">科技美学</a></span><span class="dot">·</span>
+            <span class="time" data-val="1570887000000" data-role="time"></span>
+            <a class="com" href="//www.sohu.com/a/346600584_354896#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346600584" data-id="346600584" data-role="comment-count"></span></a>
+        </div>
+    </div>
+
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346547024" data-media-id="126540" data-newsid="2" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346547024_126540" target="_blank">
+                                 <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/bbc4b7641aa14059a486958b270a4633.jpeg" alt="">
+                                </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346547024_126540" target="_blank">
+         Surface用户快更新：微软推送固件更新解决CPU降频问题
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=Z3V4aWFvbWluZ0BwY3BvcC5jb20=" target="_blank"><img src="//5b0988e595225.cdn.sohucs.com/avatar/picon/2014/12/04/5d766fd0feba195ebfb7ed247211e547android.png"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=Z3V4aWFvbWluZ0BwY3BvcC5jb20=" target="_blank">泡泡网</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570877398000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346547024_126540#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346547024" data-id="346547024" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        <div data-role="news-item" class="news-box news-box-thr news-box-pic clear" data-ev="346507354" data-media-id="386277" data-newsid="3" data-loc="" data-spm-type="resource">
+        <h4><a href="//www.sohu.com/a/346507354_386277"  target="_blank">三星"惊艳"折叠机，不过如此！</a></h4>
+        <div class="pic-group clear">
+            <ul>                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346507354_386277" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/22c0a447a9d64d60b54180dddff7464f.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346507354_386277" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/0c9ee24fc4f94f1eaa3e89ab6d67a05d.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346507354_386277" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/ca3b79dddc2f41fa982d39b2dbf183cd.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                                    end
+                
+                " ><a href="//www.sohu.com/a/346507354_386277" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/49df7dd98ef54ea7ade5212069dd16fb.jpeg" alt="">
+                                    </a></li>
+                                            </ul>
+        </div>
+        <div class="other">
+            <span class="img"><a href="http://mp.sohu.com/profile?xpt=d3loMjAxNkBzb2h1LmNvbQ==" target="_blank"><img src="//sucimg.itc.cn/avatarimg/de5b27e0c9874be5a996f3faac3f08a9_1479262685942" alt=""></a></span>
+                        <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0"> $info.channelName </a></span><span class="dot channel-dot">·</span>
+                        <span class="name"><a href="http://mp.sohu.com/profile?xpt=d3loMjAxNkBzb2h1LmNvbQ==" target="_blank">安卓每日推送</a></span><span class="dot">·</span>
+            <span class="time" data-val="1570852800000" data-role="time"></span>
+            <a class="com" href="//www.sohu.com/a/346507354_386277#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346507354" data-id="346507354" data-role="comment-count"></span></a>
+        </div>
+    </div>
+
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346439523" data-media-id="114760" data-newsid="4" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346439523_114760" target="_blank">
+                                 <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/95b28bae6ed1487fa18a109ad9de14ae.jpeg" alt="">
+                                </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346439523_114760" target="_blank">
+         “迟到”的补丁：微软Surface Book 2 Nvidia独显问题现已修复
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=QUNCMzEzNDY1N0EwNTY2OERCRTgyNzhBM0Y1ODY0NkNAdC5xcS5zb2h1LmNvbQ==" target="_blank"><img src="//5b0988e595225.cdn.sohucs.com/avatar/picon/2013/11/06/ec9aa26afda5ebeb3ece141a60cfd4f4android.png"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=QUNCMzEzNDY1N0EwNTY2OERCRTgyNzhBM0Y1ODY0NkNAdC5xcS5zb2h1LmNvbQ==" target="_blank">IT之家</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570845981000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346439523_114760#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346439523" data-id="346439523" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346445309" data-media-id="343547" data-newsid="5" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346445309_343547" target="_blank">
+                                 <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/43d87642885d41adbaf8afbfff24e3ee.jpeg" alt="">
+                                </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346445309_343547" target="_blank">
+         【推仔说新闻】Zen2 移动平台将于明年1月CES展上发布
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=c29odXptdGRtOWl3NGdAc29odS5jb20=" target="_blank"><img src="//img.mp.sohu.com/upload/20171115/685762a6ca1440bb8a6c8281b27a23c0"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=c29odXptdGRtOWl3NGdAc29odS5jb20=" target="_blank">笔吧评测室</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570845560000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346445309_343547#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346445309" data-id="346445309" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346420617" data-media-id="99956743" data-newsid="6" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346420617_99956743" target="_blank">
+                                 <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/4b214cc6a7ad482198ae6456a3672488.png" alt="">
+                                </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346420617_99956743" target="_blank">
+         [图]独立显卡问题已修复：Surface Book 2系统终于可以升级了
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=Qzk5RkM5MkM0ODA2MkE1MDdBREExMDk4NzFFNUQyQTFAcXEuc29odS5jb20=" target="_blank"><img src="//sucimg.itc.cn/avatarimg/d935b5414e144a7d94371db12a9d4ac9_1500277825548"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=Qzk5RkM5MkM0ODA2MkE1MDdBREExMDk4NzFFNUQyQTFAcXEuc29odS5jb20=" target="_blank">cnBeta</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570843822000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346420617_99956743#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346420617" data-id="346420617" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346415526" data-media-id="99956743" data-newsid="7" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346415526_99956743" target="_blank">
+                                 <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/7f6e30cc7ed84665914e40b62afd35f6.png" alt="">
+                                </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346415526_99956743" target="_blank">
+         迎接Windows 10X：微软为地图闹钟和人脉应用带来新图标
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=Qzk5RkM5MkM0ODA2MkE1MDdBREExMDk4NzFFNUQyQTFAcXEuc29odS5jb20=" target="_blank"><img src="//sucimg.itc.cn/avatarimg/d935b5414e144a7d94371db12a9d4ac9_1500277825548"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=Qzk5RkM5MkM0ODA2MkE1MDdBREExMDk4NzFFNUQyQTFAcXEuc29odS5jb20=" target="_blank">cnBeta</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570842586000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346415526_99956743#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346415526" data-id="346415526" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                                
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346411546" data-media-id="115785" data-newsid="8" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346411546_115785" target="_blank">
+                                 <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/b1c9ecf8a81b43b4a13131516d1c8f7a.png" alt="">
+                                </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346411546_115785" target="_blank">
+         派早报：Google Pixelbook Go 真机曝光、小米新机或采用 120Hz 屏幕刷新...
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=MTkxNDAxMDQ2N0BzaW5hLnNvaHUuY29t" target="_blank"><img src="//sucimg.itc.cn/avatarimg/ad194b7c0e974295a280c0c84cef2241_1470641860286"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=MTkxNDAxMDQ2N0BzaW5hLnNvaHUuY29t" target="_blank">少数派</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570841841000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346411546_115785#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346411546" data-id="346411546" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346400158" data-media-id="114760" data-newsid="9" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346400158_114760" target="_blank">
+                                 <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191012/21ddab772d58453b9465be28240922f1.jpeg" alt="">
+                                </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346400158_114760" target="_blank">
+         微软新专利可用于确认Surface Duo两块屏幕的相对方向
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=QUNCMzEzNDY1N0EwNTY2OERCRTgyNzhBM0Y1ODY0NkNAdC5xcS5zb2h1LmNvbQ==" target="_blank"><img src="//5b0988e595225.cdn.sohucs.com/avatar/picon/2013/11/06/ec9aa26afda5ebeb3ece141a60cfd4f4android.png"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=QUNCMzEzNDY1N0EwNTY2OERCRTgyNzhBM0Y1ODY0NkNAdC5xcS5zb2h1LmNvbQ==" target="_blank">IT之家</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570832360000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346400158_114760#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346400158" data-id="346400158" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346346339" data-media-id="99956743" data-newsid="10" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346346339_99956743" target="_blank">
+                                 <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191011/a9c851001f004e42a208c8d2535de86e.jpeg" alt="">
+                                </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346346339_99956743" target="_blank">
+         微软专利揭示了Surface Duo的部分细节
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=Qzk5RkM5MkM0ODA2MkE1MDdBREExMDk4NzFFNUQyQTFAcXEuc29odS5jb20=" target="_blank"><img src="//sucimg.itc.cn/avatarimg/d935b5414e144a7d94371db12a9d4ac9_1500277825548"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=Qzk5RkM5MkM0ODA2MkE1MDdBREExMDk4NzFFNUQyQTFAcXEuc29odS5jb20=" target="_blank">cnBeta</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570802572000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346346339_99956743#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346346339" data-id="346346339" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346256146" data-media-id="379024" data-newsid="11" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346256146_379024" target="_blank">
+                                 <img data-src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191011/72178f0b8d6c45348bdd478f72963952.png" alt="" src="//statics.itc.cn/web/static/images/pic/preload.png">
+                                 </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346256146_379024" target="_blank">
+         微软首款折叠屏电脑亮相，两个屏幕可以同时运行两个应用
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=d3V6aGl3ZWlAYWhhaWdvdS5jb20=" target="_blank"><img src="//sucimg.itc.cn/avatarimg/2e2b770d06b74fa6a25288c1fd1cf695_1489477346426"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=d3V6aGl3ZWlAYWhhaWdvdS5jb20=" target="_blank">十三婶儿</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570778320000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346256146_379024#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346256146" data-id="346256146" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        <div data-role="news-item" class="news-box news-box-thr news-box-pic clear" data-ev="346235626" data-media-id="486088" data-newsid="12" data-loc="" data-spm-type="resource">
+        <h4><a href="//www.sohu.com/a/346235626_486088"  target="_blank">携双屏Android重归手机战场，但等待微软的依然是失败？</a></h4>
+        <div class="pic-group clear">
+            <ul>                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346235626_486088" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191011/a2f80cdbb58641559a26d70a0daef0a6.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346235626_486088" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191011/6cc94fa8e5924da887d91ab5505d55d4.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/346235626_486088" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191011/4cb4b73c65ee41f089d8c05a6c912c79.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                                    end
+                
+                " ><a href="//www.sohu.com/a/346235626_486088" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191011/b7bfbc52b6d740bca4bd98b45699ce42.jpeg" alt="">
+                                    </a></li>
+                                            </ul>
+        </div>
+        <div class="other">
+            <span class="img"><a href="http://mp.sohu.com/profile?xpt=NDI1RDk2MEFCMkE4NjY4ODdBMzEyMkE4ODc2RUJCNzFAcXEuc29odS5jb20=" target="_blank"><img src="//sucimg.itc.cn/avatarimg/5679feccc0754fafb1fa98b9f2af10f8_1483618426937" alt=""></a></span>
+                        <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0"> $info.channelName </a></span><span class="dot channel-dot">·</span>
+                        <span class="name"><a href="http://mp.sohu.com/profile?xpt=NDI1RDk2MEFCMkE4NjY4ODdBMzEyMkE4ODc2RUJCNzFAcXEuc29odS5jb20=" target="_blank">第一观点</a></span><span class="dot">·</span>
+            <span class="time" data-val="1570773024000" data-role="time"></span>
+            <a class="com" href="//www.sohu.com/a/346235626_486088#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346235626" data-id="346235626" data-role="comment-count"></span></a>
+        </div>
+    </div>
+
+
+                                        
+<div data-role="news-item" class='news-box clear  news-box-txt   news-box-aa ' data-ev="346177615" data-media-id="175007" data-newsid="13" data-loc="" data-spm-type="resource">
+        <h4><a href="//www.sohu.com/a/346177615_175007" target="_blank">
+         对比测评：MAXHUB智能会议平板与微软SurfaceHub
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=aHh6cG1kb21pQHRlbXBtYWlsZXIuZGU=" target="_blank"><img src="//sucimg.itc.cn/avatarimg/56cb8f267aaa455580b10585306f8355_1497344482261"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=aHh6cG1kb21pQHRlbXBtYWlsZXIuZGU=" target="_blank">IT数码之家</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570757602000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346177615_175007#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346177615" data-id="346177615" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346157158" data-media-id="99956743" data-newsid="14" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346157158_99956743" target="_blank">
+                                 <img data-src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191011/b247f4635cfb4e66bf0c21f4dfac6b0c.jpeg" alt="" src="//statics.itc.cn/web/static/images/pic/preload.png">
+                                 </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346157158_99956743" target="_blank">
+         [图]传统笔记本和二合一设备也能使用Windows 10X系统
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=Qzk5RkM5MkM0ODA2MkE1MDdBREExMDk4NzFFNUQyQTFAcXEuc29odS5jb20=" target="_blank"><img src="//sucimg.itc.cn/avatarimg/d935b5414e144a7d94371db12a9d4ac9_1500277825548"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=Qzk5RkM5MkM0ODA2MkE1MDdBREExMDk4NzFFNUQyQTFAcXEuc29odS5jb20=" target="_blank">cnBeta</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570750574000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346157158_99956743#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346157158" data-id="346157158" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="346114565" data-media-id="553580" data-newsid="15" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/346114565_553580" target="_blank">
+                                 <img data-src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191010/ac3dedadd28c4fc4b296f74e809ce634.png" alt="" src="//statics.itc.cn/web/static/images/pic/preload.png">
+                                 </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/346114565_553580" target="_blank">
+         微软Surface业务数据：尽管销量有所增长，但仍不到总收入的5％
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=MTc4Njg3MjM5M0BzaW5hLnNvaHUuY29t" target="_blank"><img src="//sucimg.itc.cn/avatarimg/e2d85de417b342aeb417124ffb62af9b_1521735627687"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=MTc4Njg3MjM5M0BzaW5hLnNvaHUuY29t" target="_blank">科技新鲜汇</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570721442000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/346114565_553580#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="346114565" data-id="346114565" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="345957016" data-media-id="99956743" data-newsid="16" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/345957016_99956743" target="_blank">
+                                 <img data-src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191010/a1fe6def91fc442ba4dc34eac01af9ad.jpeg" alt="" src="//statics.itc.cn/web/static/images/pic/preload.png">
+                                 </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/345957016_99956743" target="_blank">
+         [图]用户提前收到Surface Pro 7：GeekBench 5跑分曝光
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=Qzk5RkM5MkM0ODA2MkE1MDdBREExMDk4NzFFNUQyQTFAcXEuc29odS5jb20=" target="_blank"><img src="//sucimg.itc.cn/avatarimg/d935b5414e144a7d94371db12a9d4ac9_1500277825548"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=Qzk5RkM5MkM0ODA2MkE1MDdBREExMDk4NzFFNUQyQTFAcXEuc29odS5jb20=" target="_blank">cnBeta</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570674405000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/345957016_99956743#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="345957016" data-id="345957016" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="345935171" data-media-id="123634" data-newsid="17" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/345935171_123634" target="_blank">
+                                 <img data-src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191010/aaa42f8b15bd454f938fef6c13fd1485.png" alt="" src="//statics.itc.cn/web/static/images/pic/preload.png">
+                                 </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/345935171_123634" target="_blank">
+         AMD深度定制CPU现身Surface，持续冲击高端笔记本？
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=NTQxNDc1MTExMEBzaW5hLnNvaHUuY29t" target="_blank"><img src="//sucimg.itc.cn/avatarimg/b4c2528c2ace40cf9ef8d7a3000205da_1425259283249"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=NTQxNDc1MTExMEBzaW5hLnNvaHUuY29t" target="_blank">钉科技</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570670793000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/345935171_123634#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="345935171" data-id="345935171" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        
+<div data-role="news-item" class='news-box clear   news-box-aa ' data-ev="345921573" data-media-id="124852" data-newsid="18" data-loc="" data-spm-type="resource">
+        <div class="pic img-do left">
+        <a href="//www.sohu.com/a/345921573_124852" target="_blank">
+                                 <img data-src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191010/1cd17a98d5624fda9bbcb1c8675ca7a2.jpeg" alt="" src="//statics.itc.cn/web/static/images/pic/preload.png">
+                                 </a>
+    </div>
+        <h4><a href="//www.sohu.com/a/345921573_124852" target="_blank">
+         外媒吐槽微软双屏手机Surface Duo：定位猜不透，想成功很难
+        </a></h4>
+    <div class="other">
+        <span class="img"><a href="http://mp.sohu.com/profile?xpt=MTg0NzY0NDg1M0BzaW5hLnNvaHUuY29t" target="_blank"><img src="//sucimg.itc.cn/avatarimg/536cce09db314574bffd4cd5d8340090_1461653442107"  alt=""></a></span>
+                <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0">  $info.channelName</a></span><span class="dot channel-dot">·</span>
+                <span class="name"><a href="http://mp.sohu.com/profile?xpt=MTg0NzY0NDg1M0BzaW5hLnNvaHUuY29t" target="_blank">朱飞</a></span><span class="dot">·</span>
+        <span class="time" data-val="1570666565000" data-role="time"></span>
+        <a class="com" href="//www.sohu.com/a/345921573_124852#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="345921573" data-id="345921573" data-role="comment-count"></span></a>
+    </div>
+</div>
+
+                                        <div data-role="news-item" class="news-box news-box-thr news-box-pic clear" data-ev="345800352" data-media-id="305564" data-newsid="19" data-loc="" data-spm-type="resource">
+        <h4><a href="//www.sohu.com/a/345800352_305564"  target="_blank">Surface Pro 7上手评测：“小”改进“大”欢喜 堪称iPad Pro劲敌</a></h4>
+        <div class="pic-group clear">
+            <ul>                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/345800352_305564" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191009/50eea50afb264449883fa2e3c190f503.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/345800352_305564" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191009/d863b7edc7e345038c4b378ee0ae2870.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/345800352_305564" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191009/35b31e722a0d493eb609a527c047b820.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                                    end
+                
+                " ><a href="//www.sohu.com/a/345800352_305564" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191009/b6f173ed29f2499e9a401808fcda7974.jpeg" alt="">
+                                    </a></li>
+                                            </ul>
+        </div>
+        <div class="other">
+            <span class="img"><a href="http://mp.sohu.com/profile?xpt=c29odXptdDRvZWF1bG1Ac29odS5jb20=" target="_blank"><img src="//sucimg.itc.cn/avatarimg/d87d8180a96841ddb34031354ee22b7c_1447401431996" alt=""></a></span>
+                        <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0"> $info.channelName </a></span><span class="dot channel-dot">·</span>
+                        <span class="name"><a href="http://mp.sohu.com/profile?xpt=c29odXptdDRvZWF1bG1Ac29odS5jb20=" target="_blank">牛华网</a></span><span class="dot">·</span>
+            <span class="time" data-val="1570611863000" data-role="time"></span>
+            <a class="com" href="//www.sohu.com/a/345800352_305564#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="345800352" data-id="345800352" data-role="comment-count"></span></a>
+        </div>
+    </div>
+
+
+                                        <div data-role="news-item" class="news-box news-box-thr news-box-pic clear" data-ev="345795434" data-media-id="305564" data-newsid="20" data-loc="" data-spm-type="resource">
+        <h4><a href="//www.sohu.com/a/345795434_305564"  target="_blank">Surface Pro X上手体验：外形轻薄华丽、搭载定制版SQ1处理器</a></h4>
+        <div class="pic-group clear">
+            <ul>                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/345795434_305564" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191009/32ec27ed52654b71a1c71a049b4fdac7.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/345795434_305564" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191009/05ad3c564e9b426795f2492aba89776a.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                
+                " ><a href="//www.sohu.com/a/345795434_305564" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191009/0058676c5e8344579d68a696b24c3135.jpeg" alt="">
+                                    </a></li>
+                                <li class="img-do
+                                    end
+                
+                " ><a href="//www.sohu.com/a/345795434_305564" target="_blank">
+                                        <img src="//5b0988e595225.cdn.sohucs.com/c_fill,w_150,h_100,g_faces,q_70/images/20191009/c978eb00b63e4f0c924706198545fc5b.jpeg" alt="">
+                                    </a></li>
+                                            </ul>
+        </div>
+        <div class="other">
+            <span class="img"><a href="http://mp.sohu.com/profile?xpt=c29odXptdDRvZWF1bG1Ac29odS5jb20=" target="_blank"><img src="//sucimg.itc.cn/avatarimg/d87d8180a96841ddb34031354ee22b7c_1447401431996" alt=""></a></span>
+                        <span class="channel"><a href="?_f=v2-index-feeds" data-role="channelLink" target="_blank" data-channel-id="0"> $info.channelName </a></span><span class="dot channel-dot">·</span>
+                        <span class="name"><a href="http://mp.sohu.com/profile?xpt=c29odXptdDRvZWF1bG1Ac29odS5jb20=" target="_blank">牛华网</a></span><span class="dot">·</span>
+            <span class="time" data-val="1570610548000" data-role="time"></span>
+            <a class="com" href="//www.sohu.com/a/345795434_305564#comment_area" target="_blank"><i class="icon icon-comment"></i><span data-cmsid="345795434" data-id="345795434" data-role="comment-count"></span></a>
+        </div>
+    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="sidebar right">
+    <div class="search-right" id="search" data-spm="search-right"></div>
+    <div class="godA" id="nav_button">
+
+	</div>
+    <div class="godR" id="god_1">
+
+    </div>
+   <div class="bord clear recommend" id="recommend-writer" data-spm="recommend-mp">
+
+</div>    <div class="godR" id="god_2">
+
+    </div>
+    <div class="hot-article clear bord" id="hot-news" data-spm="hot-article">
+ </div>
+
+    <div class="godR" id="god_3">
+
+    </div>
+ <div class="pages-fun " id="pages-fun">
+    </div>
+    <div class="godR" id="god_4">
+
+    </div>
+    <div id="god_fix_container" class="right-fixed" style="display:none;">
+        <div class="godR" id="god_fix_1">
+
+        </div>
+    </div>
+    <div id="fixed-view" data-rel="#hot-news">
+    </div>
+</div>    </div>
+
+    <div id="float-btn" class="float-links"></div>    <div id="pop-news" class="pop-news"></div></div>
+
+
+
+<script src="//statics.itc.cn/web/static/js/lib-61587d9fb8.js"></script>
+<script src="//39d0825d09f05.cdn.sohucs.com/sdk/passport-4.0.3.js"></script>
+<!--<script src="//statics.itc.cn/web/static/js/ie8hack-07e05e83f1.js"></script>-->
+<script src="//txt.go.sohu.com/ip/soip"></script>
+<script src="//statics.itc.cn/web/static/js/main-a00895c961.js"></script>
+<!-- <script src="//js.sohu.com/pv.js"></script> -->
+<script>
+try{
+    window.sohu_mp.tag({
+        tag_id: "67603",
+        channel_id: "30",
+        tag_name:"Surface"
+    });
+}
+catch(e){
+    var html = '<div class="err-js">' +
+                '<span><em class="icon err-js-icon"></em>JS加载错误，请重新加载。</span>' +
+                '<a href="javascript:window.location.reload()" target="_blank" class="cached-btn"' +
+                '><em class="icon-cached"></em>刷新</a></div>';
+    $(document.body).prepend(html);
+   //加载监控代码
+   console.log("发生错误",e);
+}
+</script>
+<script src="//statics.itc.cn/spm/prod/js/1.0.3/spm.js"></script>
+<!--[if lt IE 8]>
+<script type="text/javascript">
+(function(){
+    var ua = navigator.userAgent;
+    var version;
+    var html = '<div class="area clear">' +
+        '<div class="ie-low">' +
+        '<p>您的浏览器版本过低<br>为了更好的体验，请升级你的浏览器。</p>' +
+        '<h5><a href="https://ie.sogou.com" target="_blank" class="upgrade-btn">马上升级</a></h5>' +
+        '</div></div>';
+    if (/MSIE ([^;]+)/.test(ua)) {
+        version = parseInt(RegExp["$1"]);
+        if (version<8) {
+            document.body.innerHTML=html;
+            var reg = new RegExp("(^| )SUV=([^;]*)(;|$)");
+            var suvs = unescape(document.cookie.match(reg)[2]); 
+            var spv_server_src = "http://pv.sohu.com/action.gif?actionId=10078&SUV="+suvs;
+            var scripts = document.createElement('script');
+            scripts.src = spv_server_src;
+            document.body.appendChild(scripts);   
+            Raven.captureException(new Error('ie'+version));   
+        }
+    }
+})()
+</script>
+<![endif]-->
+<script src="//images.sohu.com/bill/default/sohu-require.js"></script>
+<script type="text/javascript"> require(["sjs/matrix/ad/passion"]);</script>
+<script type="text/javascript" src="//www.sohu.com/sohuflash_1.js"></script>
+<script type="text/javascript" src="//images.sohu.com/bill/s2015/jscript/lib/sjs/matrix/ad/form/delivery.js"></script>
+<script type="text/javascript" src="//images.sohu.com/bill/s2015/jscript/lib/sjs/matrix/pv/pagePVmonitor.js"></script>
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+</body>
+</html>

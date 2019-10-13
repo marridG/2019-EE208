@@ -1,0 +1,442 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<META http-equiv="Page-Enter" content="blendTrans(duration=0.5)" />
+<META http-equiv="Page-Exit" content="blendTrans(duration=0.5)" />
+<link href="../../../tplimg/indexstyle.css" type="text/css" rel="stylesheet">
+<LINK href="../../../tplimg/global.css" type=text/css>
+<LINK href="../../../tplimg/default.css" rel="stylesheet" type="text/css">
+<LINK href="../../../tplimg/css.css" rel="stylesheet" type="text/css">
+<LINK href="index.files/calendar.css" rel="stylesheet" type="text/css">
+<title>城市导报 数字报纸</title>
+<SCRIPT language=Javascript src="../../../tplimg/prototypeNew.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/searchNew.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/mpNew.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/calendarNew.js"></SCRIPT>
+<SCRIPT language=Javascript src="../../../tplimg/rangeNew.js"></SCRIPT>
+<SCRIPT src="../../../tplimg/sliderNew.js" type=text/javascript></SCRIPT>
+<SCRIPT src="../../../tplimg/jspointsNew.js" type=text/javascript></SCRIPT>
+<SCRIPT id=oMapScript event=onmouseover() for=pagepicmap>
+rangeDeltaX = 5;
+rangeDeltaY = 8;
+ drawLine(event.srcElement);
+ </SCRIPT>
+
+<SCRIPT language=JavaScript>
+var tid = null;
+var speed=1000;
+var jk=-1;
+
+var colors=new Array();
+ colors[0]="#FF0000";
+ colors[1]="#00FF00";
+ colors[2]="#0000FF";
+
+function blink(){
+ var obj = eval("document.all." + "test1" );
+ var obj2 = eval("document.all." + "test2" );
+ 
+ jk++;
+ if(jk==3){
+ 	jk=-1;
+ }
+ //obj.style.color = colors[jk];
+ //obj2.style.color = colors[jk];
+ // tid = setTimeout("blink('"+ objId +"')",500);
+}
+setInterval("blink()", speed);
+</SCRIPT>
+
+<SCRIPT language=Javascript>
+function turnpage(src,mode){
+
+ currPos = src.selectedIndex;
+
+ if(mode==0){//前翻
+ 	if(currPos==0) return;
+	else {
+	 src.selectedIndex = currPos -1;
+	 src.onchange();
+	} 
+ }else{
+ if(currPos == src.length-1)
+	 return;
+	 else {
+	 src.selectedIndex = currPos +1;
+	 src.onchange();
+	 }
+ }
+}
+function changeMPCld()
+{
+ var y,m;
+ y=CLD.SY.selectedIndex+2006;
+ m=CLD.SM.selectedIndex;
+ //alert(m);
+ OBJ_MP_LOADACTION.loadPeriods("",y+"-"+appendZero(m+1));
+
+}
+</SCRIPT>
+
+<SCRIPT id=oMapScript1 event=onmouseout() for=pagepicmap>
+ MouseOutMap();
+</SCRIPT>
+
+<SCRIPT language=javascript>
+<!--
+function autoShowDate(){
+	var dateX=event.clientX + document.body.scrollLeft;
+	var dateY=event.clientY + document.body.scrollTop;
+	document.getElementById("dateDiv").style.left=dateX + "px";
+	document.getElementById("dateDiv").style.top=dateY + "px";
+	if(document.getElementById("dateDiv").style.display=="none"){
+		document.getElementById("dateDiv").style.display="block";
+	}else{
+		document.getElementById("dateDiv").style.display="none";
+	}
+}
+
+function MM_preloadImages() { //v3.0
+ var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+ var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+ if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+ var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+ var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+ d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+ if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+ for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+ if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+ var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+ if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</SCRIPT>
+
+<script language="javascript">
+ var flag=false; 
+ function fixImage(ImgD){ 
+ var image=new Image(); 
+ image.src=ImgD.src; 
+ if(image.width>0 && image.height>0){ 
+ flag=true; 
+ if(image.width/image.height>=376/515){ 
+ if(image.width>376){ 
+ ImgD.width=376; 
+ ImgD.height=(image.height*376)/image.width; 
+ }else{ 
+ ImgD.width=image.width; 
+ ImgD.height=image.height; 
+ } 
+ } 
+ else{ 
+ if(image.height>515) 
+ 		{ 
+ ImgD.height=515; 
+ ImgD.width=(image.width*515)/image.height; 
+ }else{ 
+ ImgD.width=image.width; 
+ ImgD.height=image.height; 
+ } 
+ } 
+ } 
+ } 
+</script>
+
+<STYLE type=text/css>
+#pgn {
+	BORDER-RIGHT: #292929 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #292929 1px solid; DISPLAY: none; PADDING-LEFT: 0px; FONT-SIZE: 12px; Z-INDEX: 2; BACKGROUND: #e8e8e8; LEFT: 835px; PADDING-BOTTOM: 0px; BORDER-LEFT: #292929 1px solid; WIDTH: 150px; LINE-HEIGHT: 130%; PADDING-TOP: 0px; BORDER-BOTTOM: #292929 1px solid; POSITION: absolute; TOP: 10px
+}
+.Ltd1 {
+	BORDER-RIGHT: #555 1px solid; BORDER-TOP: #555 1px solid; BORDER-LEFT: #555 1px solid; BORDER-BOTTOM: #555 1px solid
+}
+body {
+	background-image: url(http://www.linker365.com/csdb/tplimg/csdbimg/body_bg.jpg);
+	background-repeat: repeat-x;
+	background-color: #ecede6;
+}
+.style1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #33cccc
+}
+.style6 {
+	COLOR: #00ffff
+}
+.style7 {
+	COLOR: #000000
+}
+.style16 {
+	FONT-SIZE: 38px; COLOR: #ffffff; FONT-STYLE: italic; FONT-FAMILY: "隶书"
+}
+.style18 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #000000
+}
+</STYLE>
+
+<META content="MSHTML 6.00.2900.3086" name="GENERATOR" />
+<link href="22.files/css.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+.Ltd11 {	BORDER-RIGHT: #555 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #555 1px solid; PADDING-LEFT: 18px; PADDING-BOTTOM: 10px; BORDER-LEFT: #555 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: #555 1px solid
+}
+.STYLE29 {
+	color: #61625d;
+	font-weight: bold;
+}
+.STYLE30 {color: #FFFFFF}
+.STYLE36 {font-size: small}
+.STYLE39 {font-size: 14px}
+.STYLE40 {color: #FFFFFF; font-size: 12px; }
+.STYLE41 {font-size: 12px}
+.STYLE42 {
+	font-size: xx-large;
+	color: #6B696B;
+	font-weight: bold;
+}
+.STYLE44 {color: #61625d; font-weight: bold; font-size: 12px; }
+.STYLE45 {font-size: 10px}
+.STYLE47 {font-size: 9px}
+.STYLE48 {
+	font-size: x-large;
+	margin-bottom: 0px;
+	margin-top: 1px;
+}
+-->
+</style>
+</HEAD>
+<SPAN id=leveldiv title=点击查看内容 
+style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; Z-INDEX: 10; LEFT: 233px; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 210px; CURSOR: hand; POSITION: absolute; TOP: 123px; HEIGHT: 34px; BORDER-RIGHT-WIDTH: 0px"></SPAN>
+<BODY text=#000000 vLink=#000000 aLink=#ff0000 link=#000000 leftMargin=0 
+topMargin=0 onload=initMPPage();MM_preloadImages('63.files/btn_submit22.jpg','4.files/my_1a.jpg','4.files/my_2a.jpg','4.files/my_3a.jpg','4.files/my_4a.jpg','4.files/my_5a.jpg','4.files/my_6a.jpg') marginwidth="0" marginheight="0">
+<div id="ttt"></div>
+<div id="contain" style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/paper_bg.gif)">
+ <!--left-->
+ <div class="left">
+ <div class="paper">
+ <MAP NAME="pagepicmap"><Area coords="125,318,375,318,375,389,125,389,125,318,120,97,379,97,379,153,120,153,120,97" shape="polygon" href="content_178184.htm"><Area coords="306,162,384,162,384,172,306,172" shape="polygon" href="content_178185.htm"><Area coords="0,214,110,214,110,387,0,387" shape="polygon" href="content_178186.htm"><Area coords="120,408,384,408,384,568,120,568" shape="polygon" href="content_178187.htm"><Area coords="0,409,94,409,94,453,0,453" shape="polygon" href="content_178188.htm"><Area coords="87,456,110,456,110,467,87,467" shape="polygon" href="content_178189.htm"><Area coords="0,471,77,471,77,505,0,505" shape="polygon" href="content_178190.htm"><Area coords="87,510,110,510,110,518,87,518" shape="polygon" href="content_178191.htm"><Area coords="0,528,100,528,100,554,0,554" shape="polygon" href="content_178192.htm"><Area coords="82,561,110,561,110,570,82,570" shape="polygon" href="content_178193.htm"><Area coords="0,97,110,97,110,205,0,205" shape="polygon" href="content_178194.htm"><Area coords="120,175,384,175,384,311,120,311" shape="polygon" href="content_178195.htm"></MAP><img src=../../../page/281/2017-10/13/1/201710131_brief.jpg border=0 USEMAP=#PagePicMap> 
+ </div>
+ <div class="newslist">
+ <div class="title1" style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/title1_bg.gif)">
+ <table width="99%">
+ <tr>
+ <td width="77%"><span style="font-size:14px;"> <b> 第1版： 头版</b></span></td>
+ <td width="23%" align="right" ><table width=100% border=0><tr><td nowrap width=50% class=px12></td><td nowrap width=50% class=px12><a class=preart href="node_284.htm"><img src="../../../tplimg/button_pgdn1.gif" border="0" /></a>&nbsp;&nbsp;</td></tr></table></td>
+ </tr>
+ </table>
+ </div>
+ <div class="title2" style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/title2_bg.gif)">本版新闻列表</div>
+ <ul> <li class="newslist_li2" style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/bullet.gif)"> <a href=content_178184.htm class="blue1"><span style="DISPLAY: inline"><div style="display:inline" id=mp178184>八年精耕细作，<BR/>“大居”如何安居宜居更乐居？</div></span></a> </li> <li class="newslist_li2" style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/bullet.gif)"> <a href=content_178185.htm class="blue1"><span style="DISPLAY: inline"><div style="display:inline" id=mp178185><<详情请见8、9版</div></span></a> </li> <li class="newslist_li2" style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/bullet.gif)"> <a href=content_178186.htm class="blue1"><span style="DISPLAY: inline"><div style="display:inline" id=mp178186>沪出租车<BR/>8月份投诉榜公布</div></span></a> </li> <li class="newslist_li2" style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/bullet.gif)"> <a href=content_178187.htm class="blue1"><span style="DISPLAY: inline"><div style="display:inline" id=mp178187>即日起购买高铁、动车票可自主选座</div></span></a> </li> <li class="newslist_li2" style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/bullet.gif)"> <a href=content_178188.htm class="blue1"><span style="DISPLAY: inline"><div style="display:inline" id=mp178188>上门护理<BR/>破解在家养老难题</div></span></a> </li> <li class="newslist_li2" style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/bullet.gif)"> <a href=content_178189.htm class="blue1"><span style="DISPLAY: inline"><div style="display:inline" id=mp178189>—3版</div></span></a> </li> <li class="newslist_li2" style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/bullet.gif)"> <a href=content_178190.htm class="blue1"><span style="DISPLAY: inline"><div style="display:inline" id=mp178190>知名艺人发文<BR/>怒怼携程搭售</div></span></a> </li> <li class="newslist_li2" style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/bullet.gif)"> <a href=content_178191.htm class="blue1"><span style="DISPLAY: inline"><div style="display:inline" id=mp178191>—4版</div></span></a> </li> <li class="newslist_li2" style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/bullet.gif)"> <a href=content_178192.htm class="blue1"><span style="DISPLAY: inline"><div style="display:inline" id=mp178192>烹饪时<BR/>你会“精精”计较吗？</div></span></a> </li> <li class="newslist_li2" style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/bullet.gif)"> <a href=content_178193.htm class="blue1"><span style="DISPLAY: inline"><div style="display:inline" id=mp178193>—15版</div></span></a> </li> <li class="newslist_li2" style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/bullet.gif)"> <a href=content_178194.htm class="blue1"><span style="DISPLAY: inline"><div style="display:inline" id=mp178194>申城首个<BR/>红军长征纪念馆开馆</div></span></a> </li> </ul>
+ </div>
+ <!--banner-->
+ <div class="banner1">
+ <!--
+ <iframe style="width:380px;" align="center" marginheight=0 marginwidth=0 scrolling=no frameborder="0" src="http://xmwb.xmnext.com/xmwb/ad/xmwbV2_ad1.htm"></iframe>
+	 -->
+ </div>
+ </div>
+ <!--right-->
+ <div class="right">
+ <div class="logo">
+ <div style="margin-top:55px; margin-left:105px;">
+ <table width="465" border=0 cellpadding=0 cellspacing=0>
+ <tr>
+ <td width="18%">&nbsp;</td>
+ <td width="28%">&nbsp;</td>
+ <td width="42%"><a href="http://citynews.eastday.com/"><img src="../../../tplimg/button_back.gif" width="103" height="21" border="0" /></a></td>
+ <td width="12%">&nbsp;</td>
+ </tr>
+ </table>
+ <a href="http://www.linker365.com/"></a><span class="clear"><a href="http://www.linker365.com/"></a></span></div>
+ </div>
+ <div>
+ <div class="clear"></div>
+ </div>
+ <div class="main">
+ <div class="mulu_left">
+ <div class="title1 title3" style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/title3_bg.gif)">
+ <table width="98%" border="0" cellpadding="0" cellspacing="0" >
+ <tr>
+ <td width="43%" valign="top"><span class="title3_biaoti">
+ 2017年10月13日
+ </span></td>
+ <td width="15%" valign="top" style="padding-top:7px;"><a class=preart href="node_2.htm"><img src="../../../tplimg/button_bmdh.gif" border="0" /></a></td>
+ <td width="42%" valign="center"><div class="date_up">
+ <table width=100% border=0><tr><td nowrap width=50% class=px12><a class=preart href="../../2017-09/29/node_2.htm"><img src="../../../tplimg/button_pgup2.gif" border="0" /></a>&nbsp;&nbsp;</td><td nowrap width=50% class=px12></td></tr></table>
+ </div></td>
+ </tr>
+ </table>
+ </div>
+ <div class="title4" style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/title4_bg.gif)"> 
+ <p>版面目录</p>
+ </div>
+ <div class="mulu_list" >
+ <div style="height:385px; overflow-y:scroll; width:100%">
+ <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0"> <tr > <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;font-size:13px;" width="95%"><a href=node_2.htm class="blue" id=pageLink>第1版：头版</a></td> <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;" width="5%"><a href=../../../page><img src="../../../tplimg/icon.gif" width="16" height="16" border="0"></a></td> </tr> <tr > <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;font-size:13px;" width="95%"><a href=node_284.htm class="blue" id=pageLink>第2版：综合</a></td> <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;" width="5%"><a href=../../../page><img src="../../../tplimg/icon.gif" width="16" height="16" border="0"></a></td> </tr> <tr > <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;font-size:13px;" width="95%"><a href=node_285.htm class="blue" id=pageLink>第3版：城区</a></td> <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;" width="5%"><a href=../../../page/281/2017-10/13/3/201710133_pdf.pdf><img src="../../../tplimg/icon.gif" width="16" height="16" border="0"></a></td> </tr> <tr > <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;font-size:13px;" width="95%"><a href=node_286.htm class="blue" id=pageLink>第4版：消费汽车</a></td> <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;" width="5%"><a href=../../../page><img src="../../../tplimg/icon.gif" width="16" height="16" border="0"></a></td> </tr> <tr > <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;font-size:13px;" width="95%"><a href=node_287.htm class="blue" id=pageLink>第5版：城镇</a></td> <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;" width="5%"><a href=../../../page/281/2017-10/13/5/201710135_pdf.pdf><img src="../../../tplimg/icon.gif" width="16" height="16" border="0"></a></td> </tr> <tr > <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;font-size:13px;" width="95%"><a href=node_288.htm class="blue" id=pageLink>第6版：社区</a></td> <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;" width="5%"><a href=../../../page/281/2017-10/13/6/201710136_pdf.pdf><img src="../../../tplimg/icon.gif" width="16" height="16" border="0"></a></td> </tr> <tr > <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;font-size:13px;" width="95%"><a href=node_289.htm class="blue" id=pageLink>第7版：建筑</a></td> <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;" width="5%"><a href=../../../page/281/2017-10/13/7/201710137_pdf.pdf><img src="../../../tplimg/icon.gif" width="16" height="16" border="0"></a></td> </tr> <tr > <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;font-size:13px;" width="95%"><a href=node_290.htm class="blue" id=pageLink>第8版：专辑</a></td> <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;" width="5%"><a href=../../../page><img src="../../../tplimg/icon.gif" width="16" height="16" border="0"></a></td> </tr> <tr > <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;font-size:13px;" width="95%"><a href=node_291.htm class="blue" id=pageLink>第9版：专辑</a></td> <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;" width="5%"><a href=../../../page><img src="../../../tplimg/icon.gif" width="16" height="16" border="0"></a></td> </tr> <tr > <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;font-size:13px;" width="95%"><a href=node_292.htm class="blue" id=pageLink>第10版：专题</a></td> <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;" width="5%"><a href=../../../page><img src="../../../tplimg/icon.gif" width="16" height="16" border="0"></a></td> </tr> <tr > <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;font-size:13px;" width="95%"><a href=node_293.htm class="blue" id=pageLink>第11版：广告</a></td> <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;" width="5%"><a href=../../../page><img src="../../../tplimg/icon.gif" width="16" height="16" border="0"></a></td> </tr> <tr > <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;font-size:13px;" width="95%"><a href=node_294.htm class="blue" id=pageLink>第12版：城管</a></td> <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;" width="5%"><a href=../../../page/281/2017-10/13/12/2017101312_pdf.pdf><img src="../../../tplimg/icon.gif" width="16" height="16" border="0"></a></td> </tr> <tr > <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;font-size:13px;" width="95%"><a href=node_295.htm class="blue" id=pageLink>第13版：森活</a></td> <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;" width="5%"><a href=../../../page><img src="../../../tplimg/icon.gif" width="16" height="16" border="0"></a></td> </tr> <tr > <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;font-size:13px;" width="95%"><a href=node_296.htm class="blue" id=pageLink>第14版：绿化市容</a></td> <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;" width="5%"><a href=../../../page/281/2017-10/13/14/2017101314_pdf.pdf><img src="../../../tplimg/icon.gif" width="16" height="16" border="0"></a></td> </tr> <tr > <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;font-size:13px;" width="95%"><a href=node_297.htm class="blue" id=pageLink>第15版：健康</a></td> <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;" width="5%"><a href=../../../page/281/2017-10/13/15/2017101315_pdf.pdf><img src="../../../tplimg/icon.gif" width="16" height="16" border="0"></a></td> </tr> <tr > <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;font-size:13px;" width="95%"><a href=node_298.htm class="blue" id=pageLink>第16版：房产</a></td> <td style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/line.gif); background-repeat:repeat-x; background-position: bottom;" width="5%"><a href=../../../page/281/2017-10/13/16/2017101316_pdf.pdf><img src="../../../tplimg/icon.gif" width="16" height="16" border="0"></a></td> </tr> </table>
+ </div>
+ </div>
+ <div class="download"><a href="http://www.xmnext.com/xmwb/Adobe_Reader7.exe" target="_blank"><img src="../../../tplimg/download.gif" border="0"></a></div>
+ </div>
+ <div class="mulu_right">
+ <div class="login" style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/login_bg.gif); height: auto;">
+ <p align="center" class="banner2 STYLE34 STYLE42 STYLE45">&nbsp;</p>
+ <p align="center" class="banner2 STYLE34 STYLE42 STYLE48">城市联盟</p>
+ <table width="255" height="100" border="1" bordercolor="#FFFFFF" bgcolor="#D6D3CE">
+ <tr>
+ <th width="80" align="center" valign="middle" nowrap bgcolor="#FF0000" scope="col"><div align="center" class="STYLE40"><a href=http://citynews.eastday.com/hhtd/paperindex.htm class="STYLE30">淮海天地</a></div></th>
+ <th width="80" align="center" valign="middle" nowrap bgcolor="#FF0000" scope="col"><div align="center" class="STYLE40"><a href=http://citynews.eastday.com/xxjy/paperindex.htm class="STYLE30"></a><a href="http://citynews.eastday.com/zhuanqiao/paperindex.htm" class="STYLE30">颛桥</a></div></th>
+ <th width="80" align="center" valign="middle" nowrap bgcolor="#FF0000" scope="col"><div align="center" class="STYLE40"><a href="http://citynews.eastday.com/wlq/paperindex.htm" class="STYLE30">五里桥</a></div></th>
+ </tr>
+ <tr>
+ <th align="center" valign="middle" nowrap bgcolor="#FF0000" scope="col"><div align="center" class="STYLE40"><a href="http://citynews.eastday.com/chj/paperindex.htm" class="STYLE30">漕河泾</a></div></th>
+ <th align="center" valign="middle" nowrap bgcolor="#FF0000" scope="col"><div align="center" class="STYLE40"><a href="http://citynews.eastday.com/jys/paperindex.htm" class="STYLE30">金钥匙</a><a href="http://citynews.eastday.com/mhlf/paperindex.htm" class="STYLE30"></a><a href="http://citynews.eastday.com/bcjy/paperindex.htm" class="STYLE30"></a><a href="http://citynews.eastday.com/shlg/paperindex.htm" class="STYLE30"></a></div></th>
+ <th align="center" valign="middle" nowrap bgcolor="#FF0000" scope="col"><div align="center" class="STYLE40"><a href="http://citynews.eastday.com/jpxf/paperindex.htm" class="STYLE30"></a><a href="http://citynews.eastday.com/tlq/paperindex.htm" class="STYLE30">提篮桥</a><a href=http://citynews.eastday.com/xhjy/paperindex.htm class="STYLE30"></a><a href=http://citynews.eastday.com/xhjy/paperindex.htm class="STYLE30"></a></div></th>
+ </tr>
+ <tr>
+ <th align="center" valign="middle" nowrap bgcolor="#FF0000" scope="col"><div align="center" class="STYLE40"><a href="http://citynews.eastday.com/zjdgc/paperindex.htm" class="STYLE30">周家渡观察</a></div></th>
+ <th align="center" valign="middle" nowrap bgcolor="#FF0000" scope="col"><div align="center" class="STYLE40"><a href="http://citynews.eastday.com/gaoqiao/paperindex.htm" class="STYLE30">高桥</a></div></th>
+ <th align="center" valign="middle" nowrap bgcolor="#FF0000" scope="col"><div align="center"><span class="STYLE30"><span class="STYLE36"><span class="STYLE39"><span class="STYLE41"></span></span></span></span><a href="http://citynews.eastday.com/gqb/paperindex.htm" class="STYLE30">甘泉报</a><a href="http://citynews.eastday.com/fljy/paperindex.htm" class="STYLE30"></a></div></th>
+ </tr>
+ <tr>
+ <th align="center" valign="middle" nowrap bgcolor="#FF0000" scope="col"><div align="center"><a href=http://citynews.eastday.com/ddsg/paperindex.htm class="STYLE30">大地硕果</a><a href="http://citynews.eastday.com/spjw/paperindex.htm" class="STYLE30"></a></div></th>
+ <th align="center" valign="middle" nowrap bgcolor="#FF0000" scope="col"><div align="center"><a href="http://citynews.eastday.com/qbtx/paperindex.htm" class="STYLE30">七宝通讯</a></div></th>
+ <th align="center" valign="middle" nowrap bgcolor="#FF0000" scope="col"><div align="center"><a href="http://citynews.eastday.com/lfzy/paperindex.htm" class="STYLE30">临汾之音</a></div></th>
+ </tr>
+ <tr>
+ <th align="center" valign="middle" nowrap bgcolor="#FF0000" scope="col"><div align="center"><a href=http://citynews.eastday.com/hyk/paperindex.htm class="STYLE30">和 · 月刊</a></div></th>
+ <th align="center" valign="middle" nowrap bgcolor="#FF0000" scope="col"><a href="http://citynews.eastday.com/gqb/paperindex.htm" class="STYLE30"></a><a href=http://citynews.eastday.com/xhjy/paperindex.htm class="STYLE30"></a></th>
+ <th align="center" valign="middle" nowrap bgcolor="#FF0000" scope="col"><a href=http://citynews.eastday.com/lshj/paperindex.htm class="STYLE30"></a></th>
+ </tr>
+ </table>
+ <a href="http://citynews.eastday.com/" target="_blank"></a>
+ <div class="clear"></div>
+ </div>
+ <div class="title1 search" style="background-image:url(http://citynews.eastday.com/csdb/tplimg/csdbimg/title3_bg.gif)">
+ <form name="search" action="http://citynews.eastday.com:8080/search/search.jsp" method="get" target="_blank">
+ <span class="search_input">
+ <label>
+ <input name="keyWord" type="text" size="24">
+ </label>
+ </span> <span class="search_button">
+ <input type="hidden" name="search_type" value="epaper" />
+ <input type="image" src="../../../tplimg/search.gif" />
+ </span>
+ </form>
+ </div>
+ <!--
+ <div class="banner3">
+ <iframe style="width:256px; height:78px; " align="center" marginheight=0 marginwidth=0 scrolling=no frameborder="0" src="http://xmwb.xmnext.com/xmwb/ad/xmwbV2_ad3.htm"></iframe>
+ </div>
+		-->
+ <div class="date">
+ <form name=CLD style="padding:0px;margin:0px;">
+ <div class="title1 title5" style="background-image:url(http://citynews.eastday.com/csdb/tplimg/csdbimg/title3_bg.gif)"> <span class="title3_biaoti title5_biaoti">按日期查找</span> <span class="date1"> <img src="../../../tplimg/button_left.gif" style="cursor:hand;" onclick="turnpage(SY,0)" /><span class="title1 title5" style="background-image:url(http://citynews.eastday.com/csdb/tplimg/csdbimg/title3_bg.gif)"><span class="title1 title5" style="background-image:url(http://citynews.eastday.com/csdb/tplimg/csdbimg/title3_bg.gif)">
+ <select name="SY" class="jumpmenu" id="SY" onChange="changeMPCld()">
+ <script language="JavaScript" type="text/javascript">
+					for(i=2006;i<2051;i++)
+					document.write('<option>'+i+'</option>')
+ 			 </script>
+ </select>
+ </span></span><img src="../../../tplimg/button_right.gif" style="cursor:hand;" onclick="turnpage(SY,1)" > </span> <span class="date1"> <img src="../../../tplimg/button_left.gif" style="cursor:hand;" onclick="turnpage(SM,0)"><span class="title1 title5" style="background-image:url(http://citynews.eastday.com/csdb/tplimg/csdbimg/title3_bg.gif)"><span class="title1 title5" style="background-image:url(http://citynews.eastday.com/csdb/tplimg/csdbimg/title3_bg.gif)">
+ <select name="SM" class="jumpmenu" id="SM" onChange="changeMPCld()">
+ <script language="JavaScript" type="text/javascript">
+				<!-- 
+					for(i=1;i<13;i++) document.write('<option>'+i+'</option>')
+				//-->
+ 			 </script>
+ </select>
+ </span></span><img src="../../../tplimg/button_right.gif" style="cursor:hand;" onclick="turnpage(SM,1)"> </span> </div>
+ <table width="100%" height="21px" border="0" cellpadding="0" cellspacing="1" bgcolor="#FFFFFF">
+ <tr class="date2" style="background-image:url(http://www.linker365.com/csdb/tplimg/csdbimg/date_bg.gif)">
+ <td>日</td>
+ <td>一</td>
+ <td>二</td>
+ <td>三</td>
+ <td>四</td>
+ <td>五</td>
+ <td>六</td>
+ </tr>
+ </table>
+ <table class="date_table" width="100%" border="0" cellspacing="1" cellpadding="0">
+ <script language="JavaScript" type="text/javascript">
+		<!--
+			var gNum;
+			for(i=0;i<6;i++) 
+			{
+				document.write('<tr align=center>');
+				for(j=0;j<7;j++) 
+				{
+					gNum = i*7+j;
+					document.write('<td align=center id="GD' + gNum +'" width="14%"><a href="" id="CD' + gNum + '"><span ><font _onMouseOver="mOvr(' + gNum +')" onMouseOut="mOut()" id="SD' + gNum +'"');
+					document.write('></font></span></a><br><font id="LD' + gNum + '" size=2 style=display:none></font></td>');
+				}
+				document.write('</tr>');
+			}
+		//-->
+ </script>
+ </table>
+ <div class="date4"> <span class="date4_left">
+ <input name="yearfield" type="text" size="2">
+ 年
+ <input name="monfield" type="text" size="2">
+ 月
+ <input name="dayfield" type="text" size="2">
+ 日</span><span class="title1_button date4_button">
+ <input name="Input" type="image" src="../../../tplimg/button_chakan.gif" onClick="if(!checkDate()) return false;">
+ </span></div>
+ </form>
+ </div>
+ <div class="media">
+ <p><span>
+ 2017年10月13日
+ 城市导报多媒体版</span></p>
+ <p><a href="javascript:void(0);" onclick="window.external.AddFavorite('http://citynews.eastday.com/','城市导报-数字报纸');"><img src="../../../tplimg/mediabutton1.gif" border="0"></a><a href="javascript:void(0);" onClick="viewOL_RMP();"><img src="../../../tplimg/mediabutton2.gif" border="0"></a><a href="http://citynews.eastday.com/tools/FFNClt_setup.exe" target="_blank"><img src="../../../tplimg/mediabutton3.gif" border="0"></a><a href="javascript:void(0);" onClick="openRMP()"><img src="../../../tplimg/mediabutton5.gif" border="0"></a></p>
+ <p><a href="http://db.linker365.com/街道社区/进入页面之前输入密码.htm"><img src="../../../tplimg/jdsqzy.gif" width="234" height="35" border="0"></a></p>
+ </div>
+ </div>
+ <div class="clear"> </div>
+ </div>
+ <!--banner-->
+ <!--
+ <div class="banner2">
+ <iframe style="width:568px; height:60px; " align="center" marginheight=0 marginwidth=0 scrolling=no frameborder="0" src="http://xmwb.xmnext.com/xmwb/ad/xmwbV2_ad2.htm"></iframe>
+ </div>
+	-->
+ <!--footer-->
+ <div class="footer">
+ <p><span class="STYLE29">《城市导报》<span class="STYLE44">是怎样的报纸？</span></span></p>
+ <p><span class="STYLE29"><span class="STYLE44"> 一份拥有正规报纸刊号的生活资讯媒体<br>
+ 一份锁定都市白领人群的精准派发报纸。<br>
+ 主力读者：22岁至40岁，在商务写字楼上班，具有高收入、高学历、高消费特征的白领人群<br>
+ 发行量：25万份<br>
+ 出版周期：周报<br>
+ 印刷：单彩外套铜版纸</span></span></p>
+ <p><a href="http://zd.eastday.com/"><img src="../../../tplimg/logo.jpg" width="600" height="226" border="0"></a><span class="fzlogo_pic"><a href="http://www.founder.com.cn/" target="_blank"><img src="../../../tplimg/fangzheng1.gif" width="66" height="37" border="0"></a> <a href="http://www.idoican.com.cn/" target="_blank"><img src="../../../tplimg/fangzheng2.gif" width="65" height="37" border="0"></a></span><span class="fzlogo"><a href="http://www.founder.com.cn/" target="_blank">北京北大方正电子有限公司（战略合作伙伴）提供技术支持</a></span> </p>
+ <div class="clear"></div>
+ <p></p>
+ 
+ <div class="clear"></div>
+ <p></p>
+ </div>
+ </div>
+ <div class="clear"></div>
+</div>
+<p>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━<br>
+东方网(eastday.com)版权所有，未经授权禁止复制或建立镜像 <br>
+Copyright 2001-2007 Eastday.com Incorporated. All rights reserved.<br>
+………………………………………………………………………………………………………………………………………………………………………………………………………………………<br>
+<span class="STYLE47">版权声明|网站简介|网站律师|网站导航|频道招商|广告刊例|联系方式<br>
+增值电信业经营许可证（ICP）：沪B2-20050088号互联网新闻信息服务许可证:3112006001 广告经营许可证：3100003000089<br>
+信息网络传播视听节目许可证：0907180互联网出版许可证：新出网证（沪）字003号广播电视节目制作经营许可证:(沪)字第406号<br>
+ISO9001质量管理体系认证：00307Q10176R1S BS17799信息安全管理体系认证：00307I10001R0S</span></p>
+</body>
+</html>
+<!--enpproperty <founder-date>2017-10-13 23:59:59</founder-date><founder-pagenum>1</founder-pagenum><founder-papername>城市导报</founder-papername><founder-type>2</founder-type><founder-pagepicurl>csdb/page/281/2017-10/13/1/201710131_icon.jpg</founder-pagepicurl><founder-content>城市导报</founder-content> /enpproperty-->

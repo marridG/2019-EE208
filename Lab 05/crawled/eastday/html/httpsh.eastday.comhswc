@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>上海红色文创产品海上文创LOGO设计大赛</title>
+<link href="/images/20190920zjds/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ej.eastday.com/images/common/jquery2014.js"></script>
+<script src="/images/20190920zjds/jquery.SuperSlide.2.1.3.js"></script>
+<script type="text/javascript"> 	
+		if(/iPhone|Android|iPod|iPad/i.test(navigator.userAgent))
+		{
+		setTimeout("window.location.href='index_K43516.html'",10);
+ }
+ 
+</script>
+</head>
+
+<body>
+<div id="index_bg">
+	<div class="d960">
+        <div class="button1"><a href="javascript:"><img src="/images/20190920zjds/button1.png"></a></div>
+        <div class="button2"><a href="javascript:"><img src="/images/20190920zjds/button2.png"></a></div>
+        <div class="button3"><a href="javascript:"><img src="/images/20190920zjds/button3.png"></a></div>
+        <div class="button4"><a href="https://www.yysipr.com/hswb_process_red" target="_blank"><img src="/images/20190920zjds/button4.png"></a></div>
+        <div class="logo1"><img src="/images/20190920zjds/index1.png"></div>
+        <div class="logo2"><img src="/images/20190920zjds/index2.png"></div>
+        <div class="host"><img src="/images/20190920zjds/index3.png"></div>
+    </div>
+    <div id="jj_con">
+    	<div class="jj_title"><img src="/images/20190920zjds/jj_title.png"></div>
+        <div class="jj_bg">
+        	<div class="jj_close"><img src="/images/20190920zjds/close.png"></div>
+            <div class="jj_img"><img src="/images/20190920zjds/jj_img.png"></div>
+        </div>
+        <div class="jj_img1"><img src="/images/20190920zjds/jj_img1.png"></div>
+    </div>
+    <div id="ss_con">
+    	<div class="ss_title"><img src="/images/20190920zjds/ss_title.png"></div>
+        <div class="ss_bg">
+        	<div class="ss_close"><img src="/images/20190920zjds/close.png"></div>
+            <div class="ss_img"><img src="/images/20190920zjds/ss_img.png"></div>
+        </div>
+    </div>
+    <div id="zp_con">
+    	<div class="zp_title"><img src="/images/20190920zjds/zp_title.png"></div>
+        <div class="zp_bg">
+        	<div class="zp_close"><img src="/images/20190920zjds/close.png"></div>
+            <div id="slideBox" class="slideBox">
+  				<div class="hd">
+   					<ul><li></li><li></li></ul>
+  				</div>
+  				<div class="bd">
+					<ul>
+                        <li><img src="/images/20190920zjds/zp_img.png"></li>
+                        <li><img src="/images/20190920zjds/zp_img1.png"</li>
+                    </ul>
+  				</div>
+            </div>
+            <script id="jsID" type="text/javascript">
+ 			jQuery(".slideBox").slide({mainCell:".bd ul",effect:"fold"});
+ 			</script>
+        </div>
+    </div>
+</div>
+<div class="body_color"></div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        h=$(document).height();
+        $(".body_color").css({"height":h+"px"});
+    });
+	//弹出隐藏层
+    $(function(){
+        $(".button1").on('click',  function(event) {
+            $("#jj_con").fadeIn(200);
+            $(".body_color").fadeIn(100);
+        });
+        $("#jj_con .jj_close").on('click', function(event) {
+            $("#jj_con").fadeOut(200);
+            $(".body_color").fadeOut(100);
+        });
+		
+		$(".button2").on('click',  function(event) {
+            $("#ss_con").fadeIn(200);
+            $(".body_color").fadeIn(100);
+        });
+        $("#ss_con .ss_close").on('click', function(event) {
+            $("#ss_con").fadeOut(200);
+            $(".body_color").fadeOut(100);
+        });
+		
+		$(".button3").on('click',  function(event) {
+            $("#zp_con").fadeIn(200);
+            $(".body_color").fadeIn(100);
+        });
+        $("#zp_con .zp_close").on('click', function(event) {
+            $("#zp_con").fadeOut(200);
+            $(".body_color").fadeOut(100);
+        });
+    })
+</script>
+</body>
+</html>

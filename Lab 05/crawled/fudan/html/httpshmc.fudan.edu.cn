@@ -1,0 +1,1788 @@
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<base href="http://shmc.fudan.edu.cn/" /> 
+	<title>复旦大学上海医学院-</title>
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="expires" content="0" />
+	<meta http-equiv="复旦大学上海医学院-"
+		content="复旦大学上海医学院," />
+	<meta http-equiv="description"
+		content="复旦大学上海医学院," />
+	<!--首页样式-->
+<link href="css/front/style.css" rel="stylesheet" type="text/css" />
+ 
+<!--导航-->
+<link type="text/css" href="css/front/menu.css" rel="stylesheet" />
+
+<script type="text/javascript" src="js/front/jquery-1.9.1.min.js"></script>
+<script src="js/front/jquery.carouFredSel-6.0.4-packed.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+function getTabTitle(tab) {
+	var childNodesList=tab.childNodes;
+	var titleNodes=new Array();
+	var j=0;
+	var i;
+	for (i=0;i<childNodesList.length;i++) {
+		if(childNodesList[i].nodeName=="H1") {
+			titleNodes[j]=childNodesList[i];
+			j++;
+		}
+	}
+	return titleNodes;
+}
+function getTabContent(tab) {
+	var childNodesList=tab.childNodes;
+	var tabContent=new Array();
+	var j=0;
+	var i;
+	for (i=0;i<childNodesList.length;i++) {
+		if(childNodesList[i].nodeName=="DIV") {
+			tabContent[j]=childNodesList[i];
+			j++;
+		}
+	}
+	return tabContent;
+}
+function resetTab() {
+	var allDiv=document.getElementsByTagName("div");
+	var tab=new Array();
+	var j=0;
+	var i;
+	for (i=0;i<allDiv.length;i++) {
+		if(allDiv[i].className=="tabs") {
+			tab[j]=allDiv[i];
+			j++;
+		}
+	}
+	var tabTitle,tabContent;
+	for(i=0;i<tab.length;i++) {
+		tabTitle=getTabTitle(tab[i]);
+		tabTitle[0].className="selectTab";
+		tabContent=getTabContent(tab[i]);
+		tabContent[0].className="selectContent";
+		for (j=1;j<tabTitle.length;j++) {
+			tabTitle[j].className="unselectTab";
+			tabContent[j].className="unselectContent";
+		}
+	}
+}
+function changTab(tab) {
+	var tabTitle,tabContent,i;
+	if(tab.className!="selectTab") {
+		tabTitle=getTabTitle(tab.parentNode);
+		tabContent=getTabContent(tab.parentNode);
+		for(i=0;i<tabTitle.length;i++) {
+			if(tabTitle[i].className=="selectTab") {
+				tabTitle[i].className="unselectTab";
+			}
+			if(tabContent[i].className=="selectContent") {
+				tabContent[i].className="unselectContent";
+			}
+		}
+	tab.className="selectTab";
+	for(i=0;i<tabTitle.length;i++) {
+		if(tabTitle[i].className=="selectTab") {
+			tabContent[i].className="selectContent";
+			break;
+		}
+	}
+	}
+}
+
+			$(function() {
+				$('#carousel').carouFredSel({
+					direction: 'down',
+					width: 500,
+					height: 500,
+					align: false,
+					padding: [0, 0, 350, 0],
+					items: {
+						width: 500,
+						height: 30,
+						visible: 6,
+						minimum: 1
+					},
+					scroll: {
+						items: 1,
+						duration: 1000,
+						onBefore: function( data ) {
+							$('span', this).removeClass('selected');
+							data.items.visible.last().find('span').addClass('selected');
+						}
+					}
+				});
+				$('#carousel').children().click(function() {
+					$('#carousel').trigger( 'slideTo', [this, -5, 'prev'] );
+				});
+			});
+		</script>
+<script type="text/javascript" src="js/front/hover.js"></script>
+
+
+<style type="text/css">
+
+#menu li .parent { color:#fff;}
+
+</style>
+
+<script type="text/javascript">
+
+getData = function(options) {
+    $.ajax({
+        url: options.url,
+        type: "POST",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        data: "{\"page\":" + options.page + "}",
+        success: function(data, textStatus, xhr) {
+        	
+            if (data!='') {
+              
+            	$("#result").html('');
+            	
+				var html=[];
+				
+                 $.each(data, function() {
+                	html.push('<div class="list2">'+
+                    		  '<h3>'+this.title+'</h3>'+
+                    		  '<p class="ptitle">'+
+                    		  '<span class="b1">时间：'+this.addTime.substring(0,10)+'</span>'+
+                    		  '<span class="b2">来源：'+this.source+'</span>'+
+                    		  '<span class="b3">点击：'+this.hits+'</span>'+
+                    		  '</p>'+
+                    		  '<p class="info2"><img src=\"http://shmc.fudan.edu.cn:80/'+this.defaultpic+'\" width="220" height="128" align="left" />'+
+                    		   ''+this.intro.substring(0,200)+'...</p>');
+                    
+                    if(this.url != '' && this.url != null){
+                    	html.push('<p class="more2"><a href="content/'+this.id+'">更多详细</a></p>'+
+                      		  '<p class="clear"></p></div> ');
+                    }else{
+                    	html.push('<p class="more2"><a href="/html/news_xiangqing_'+this.id+'.html">更多详细</a></p>'+
+                      		  '<p class="clear"></p></div> ');
+                    }
+                    
+                });
+                   
+                $("#result").append(html.join(""));
+                
+                $('#loadMore').html('==点击加载更多==');
+                $('html,body').animate({scrollTop:300},1000);
+                 
+            }else{
+            	
+            	alert('没有更多的信息了，这是最后一页！');
+            	
+            	$('#loadMore').html('==最后一页==');
+            	
+            	//$.getData({url:options.url,page:--options.page});
+            	
+            }
+        },
+        error: function(xmlHttpRequest, textStatus, errorThrown) {
+            alert('加载数据失败！');
+        }
+    });
+};
+
+$(document).ready(function(){
+	
+	resetTab();
+	
+	var page = 1;
+	
+	$('#loadMore').click(function(){
+		
+		if($(this).html() == '==点击加载更多=='){
+			
+			$(this).html('<img src="images/front/loading.gif" width=23 hegiht=23 /> 正在加载...');
+			
+			page++;
+			
+			getData({url:'getMore',page:page});
+			
+			
+		}else{
+			
+			$(this).html('<img src="images/front/loading.gif" width=23 hegiht=23 /> 不要着急正在加载...');
+			
+		}
+		
+		return false;
+		
+	});
+	
+	$('#accoradion01').hoverAccordion({
+		activateItem:2,	      
+		onClickOnly:false,    
+		speed:'normal'          
+	}); 
+	
+	$('#accoradion02').hoverAccordion({
+		activateItem:2,	      
+		onClickOnly:false,    
+		speed:'normal'          
+	}); 
+	$('#accoradion03').hoverAccordion({
+		activateItem:2,	      
+		onClickOnly:false,    
+		speed:'normal'          
+	});
+	/*
+	 $("a").click(function() {
+        alert($(this).attr("href"));
+    });*/
+	
+})
+
+</script>
+
+<script>
+   
+
+
+</script>
+
+</head>
+<body>
+<div id="header">
+<!--导航开始-->
+
+ 
+<script type="text/javascript">
+document.writeln("<div id=\"menu\">");
+document.writeln("    <ul>");
+document.writeln("      <li><a  href=\"http://shmc.fudan.edu.cn/index.html\"  class=\"parent\">网站首页</a></li>");
+document.writeln("      <li><a  href=\"javascript:void(0);\"   class=\"parent\">总体介绍</a>");
+document.writeln("           <div><ul>");
+document.writeln("                <li><a  href=\"http://shmc.fudan.edu.cn/html/xueyuangaikuang.html\"><span>学院概况</span></a></li>");
+document.writeln("                <li><a  href=\"http://shmc.fudan.edu.cn/html/xueyuanlingdao.html\"><span>学院领导</span></a></li>");
+document.writeln("                <li><a  href=\"http://shmc.fudan.edu.cn/html/yuanshifengcai.html\"><span>院士风采</span></a></li>");
+document.writeln("                <li><a  href=\"http://shmc.fudan.edu.cn/html/yuandonghuijianjie.html\"><span>上海医学院董事会</span></a></li>");
+document.writeln("                <li><a  href=\"http://shmc.fudan.edu.cn/html/lishizhangzhici.html\"><span>颜福庆医学教育发展基金</span></a></li>");
+document.writeln("           </ul></div>");
+document.writeln("      </li>");
+document.writeln("      <li><a   href=\"javascript:void(0);\"  class=\"parent\">组织架构</a>");
+document.writeln("          <div><ul>");
+document.writeln("                <li><a  href=\"http://shmc.fudan.edu.cn/html/xueyuangaikuang.html\"><span>学术管理组织</span></a>");
+document.writeln("                    <div><ul>");
+document.writeln("                        <li><a target='_blank' href=\"http://www.acad.fudan.edu.cn/4678/list.htm\"><span>上海医学院学术委员会</span></a></li>");
+document.writeln("                    </ul></div>");
+document.writeln("                </li>");
+document.writeln("                <li><a  href=\"http://shmc.fudan.edu.cn/html/guihuabangongshi.html\"><span>行政管理部门</span></a>");
+document.writeln("                    <div><ul>");
+
+
+		
+		
+  
+ 
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		document.writeln("<li><a  href=\"http://shmc.fudan.edu.cn/html/yixueoffice.html\"><span>复旦大学上海医学院办公室</span></a></li>");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		document.writeln("<li><a  href=\"http://shmc.fudan.edu.cn/html/guihuabangongshi.html\"><span>复旦大学医学规划与科研办公室</span></a></li>");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		document.writeln("<li><a  href=\"http://shmc.fudan.edu.cn/html/jiaoyuguanlioffice.html\"><span>复旦大学医学教育管理办公室</span></a></li>");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		document.writeln("<li><a  href=\"http://shmc.fudan.edu.cn/html/yanjiushengoffice.html\"><span>复旦大学医学学位与研究生教育管理办公室</span></a></li>");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+  
+ 
+
+		
+		
+  
+ 
+
+		
+		
+  
+ 
+
+
+document.writeln("                    </ul></div>");
+document.writeln("                </li>");
+document.writeln("                <li><a  href=\"http://shmc.fudan.edu.cn/html/yuanxisuoshezhi.html\"><span>院系所设置</span></a>");
+document.writeln("                     <div><ul>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("<li><a target='_blank' href=\"http://basicmed.fudan.edu.cn/default.aspx\"><span>基础医学院</span></a></li>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("<li><a target='_blank' href=\"http://sph.fudan.edu.cn/\"><span>公共卫生学院</span></a></li>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("<li><a target='_blank' href=\"http://spfdu.fudan.edu.cn/\"><span>药学院</span></a></li>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("<li><a target='_blank' href=\"http://nursing.fudan.edu.cn/\"><span>护理学院</span></a></li>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("<li><a target='_blank' href=\"http://ibs.fudan.edu.cn\"><span>生物医学研究院</span></a></li>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("<li><a target='_blank' href=\"http://iobs.fudan.edu.cn\"><span>脑科学研究院</span></a></li>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("<li><a target='_blank' href=\"https://irm.fudan.edu.cn/\"><span>放射医学研究所</span></a></li>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("<li><a target='_blank' href=\"http://labanimal.fudan.edu.cn/\"><span>实验动物科学部</span></a></li>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("                    </ul></div>");
+document.writeln("                </li>");
+document.writeln("                <li><a  href=\"http://shmc.fudan.edu.cn/show/fushuyiyuan\"><span>附属医院</span></a>");
+document.writeln("                       <div><ul>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("<li><a target='_blank' href=\"http://www.zs-hospital.sh.cn/\"><span>复旦大学附属中山医院</span></a></li>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("<li><a target='_blank' href=\"http://www.huashan.org.cn/\"><span>复旦大学附属华山医院</span></a></li>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("<li><a target='_blank' href=\"http://www.shca.org.cn/\"><span>复旦大学附属肿瘤医院</span></a></li>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("<li><a target='_blank' href=\"http://fckyy.fudan.edu.cn/\"><span>复旦大学附属妇产科医院</span></a></li>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("<li><a target='_blank' href=\"http://ch.shmu.edu.cn/\"><span>复旦大学附属儿科医院</span></a></li>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("<li><a target='_blank' href=\"http://www.fdeent.org/\"><span>复旦大学附属眼耳鼻喉科医院</span></a></li>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("<li><a target='_blank' href=\"http://www.jinshanhos.org.cn/\"><span>复旦大学附属金山医院</span></a></li>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("<li><a target='_blank' href=\"http://www.5thhospital.com/\"><span>复旦大学附属上海市第五人民医院</span></a></li>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("<li><a target='_blank' href=\"http://www.shaphc.org/\"><span>上海市（复旦大学附属）公共卫生临床中心</span></a></li>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("<li><a target='_blank' href=\"http://www.huadonghospital.com/HDhospital/flash.htm\"><span>复旦大学附属华东医院</span></a></li>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("<li><a target='_blank' href=\"http://www.shpdh.org/pdhospital_website/HTML/DefaultSite/portal/index/index.htm\"><span>复旦大学附属浦东医院</span></a></li>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("<li><a target='_blank' href=\"http://www.jzhospital.com/\"><span>复旦大学附属静安区中心医院</span></a></li>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("<li><a target='_blank' href=\"http://www.mh-hospital.sh.cn\"><span>复旦大学附属闵行医院</span></a></li>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("<li><a target='_blank' href=\"http://www.mhwsw.com/jwzx/\"><span>复旦大学附属精神卫生中心（筹）</span></a></li>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("<li><a target='_blank' href=\"http://www.qphospital.com\"><span>复旦大学附属青浦区中心医院（筹）</span></a></li>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("<li><a target='_blank' href=\"http://www.shssdc.com/\"><span>复旦大学附属口腔医院（筹）</span></a></li>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("<li><a target='_blank' href=\"http://xhyy.sibsnet.org\"><span>复旦大学附属徐汇医院（筹）</span></a></li>");
+
+
+
+
+
+
+
+
+
+
+
+
+document.writeln("                    </ul></div>");
+document.writeln("                </li>");
+document.writeln("            </ul></div>");
+document.writeln("      </li>");
+document.writeln("      <li><a  href=\"javascript:void(0);\" class=\"parent\">新闻中心</a>");
+document.writeln("             <div><ul>");
+document.writeln("                <li><a  href=\"http://shmc.fudan.edu.cn/list/yaowenjujiao\"><span>要闻聚焦</span></a>");
+document.writeln("                    <div><ul>");
+document.writeln("                        <li><a  href=\"http://shmc.fudan.edu.cn/news/jiaodianxinwen\"><span>焦点新闻</span></a></li>");
+document.writeln("                        <li><a  href=\"http://shmc.fudan.edu.cn/news/duiwaijiaoliu\"><span>对外交流</span></a></li>");
+document.writeln("                        <li><a  href=\"http://shmc.fudan.edu.cn/news/diaoyanfangtan\"><span>调研访谈</span></a></li>");
+document.writeln("                    </ul></div>");
+document.writeln("                </li>");
+document.writeln("                <li><a  href=\"http://shmc.fudan.edu.cn/list/zonghexinwen\"><span>综合新闻</span></a>");
+document.writeln("                    <div><ul>");
+document.writeln("                        <li><a  href=\"http://shmc.fudan.edu.cn/news/kexueyanjiu\"><span>科学研究</span></a></li>");
+document.writeln("                        <li><a  href=\"http://shmc.fudan.edu.cn/news/xuekejianshe\"><span>学科建设</span></a></li>");
+document.writeln("                        <li><a  href=\"http://shmc.fudan.edu.cn/news/yixuejiaoyu\"><span>医学教育</span></a></li>");
+document.writeln("                        <li><a  href=\"http://shmc.fudan.edu.cn/news/zongheshiwu\"><span>综合事务</span></a></li>");
+document.writeln("                    </ul></div>");
+document.writeln("                </li>");
+document.writeln("                <li><a  href=\"http://shmc.fudan.edu.cn/list/xinxigonggao\"><span>信息公告</span></a>");
+document.writeln("                     <div><ul>");
+document.writeln("                        <li><a  href=\"http://shmc.fudan.edu.cn/news/jiangzuohuiyi\"><span>讲座会议</span></a></li>");
+document.writeln("                        <li><a  href=\"http://shmc.fudan.edu.cn/news/tongzhigonggao\"><span>通知公告</span></a></li>");
+document.writeln("                        <li><a  href=\"http://shmc.fudan.edu.cn/paper/ziliaoxiazai\"><span>资料下载</span></a></li>");
+document.writeln("                        <li><a  href=\"http://shmc.fudan.edu.cn/news/xiangguanwenjian\"><span>相关文件</span></a></li>");
+document.writeln("                    </ul></div>");
+document.writeln("                </li>");
+document.writeln("                <li><a target='_blank' href=\"http://shmc.fudan.edu.cn/news/meitijujiao\"><span>媒体聚焦</span></a></li>");
+document.writeln("            </ul></div>");
+document.writeln("      </li>");
+document.writeln("      <li><a target='_blank' href=\"http://shmc.fudan.edu.cn/90/shangyi/\" class=\"parent\">上医90年</a></li>");
+//document.writeln("      <li><a target='_blank' style=' background: #C30C22;color:#FFF' href=\"http://give.fudan.org.cn/underwayView.aspx?tyid=171\" class=\"parent\">90庆捐赠</a></li>");
+//document.writeln("      <li><a  href=\"http://give.fudan.org.cn/underwayView.aspx?tyid=171" class=\"parent\">捐赠项目</a></li>");
+document.writeln("      <li><a target='_blank' href=\"http://shmc.fudan.edu.cn/eng\" class=\"parent\">ENGLISH</a></li>");
+document.writeln("      <li><a target='_blank' href=\"http://www.fudan.edu.cn/\" class=\"parent\">复旦大学</a></li>");
+document.writeln("    </ul>");
+document.writeln("</div>");
+</script> 
+<!--导航结束-->
+</div>
+<div class="clear"></div>
+<!--头部结束-->
+<div class="line2"></div>
+<!--分隔红线结束-->
+<div class="wrapper padding30">
+<!--左侧开始-->
+<div id="left">
+  <div style="border:1px solid #eaeaea;">
+  
+
+
+
+
+
+<script src="js/front/jquery.KinSlideshow-1.2.1.min.js" type="text/javascript"></script>
+
+<script type="text/javascript"> 
+$(function(){
+	$("#KinSlideshow").KinSlideshow({
+			moveStyle:"right",
+			titleBar:{titleBar_height:40,titleBar_bgColor:"#000000",titleBar_alpha:0.6},
+			titleFont:{TitleFont_size:16,TitleFont_color:"#FFFFFF",TitleFont_family:"微软雅黑",TitleFont_weight:"normal"},
+			btn:{btn_bgColor:"#FFFFFF",btn_bgHoverColor:"#cc0033",btn_fontColor:"#000000",btn_fontHoverColor:"#FFFFFF",btn_borderColor:"#cccccc",btn_borderHoverColor:"#cc0033",btn_borderWidth:1}
+	});
+})
+</script>
+
+ <div id="KinSlideshow" style="visibility:hidden;">
+      
+		
+      		
+		     	<a href="content/69414"  target="_blank"><img width="620" height="360" alt="肝癌研究领域重大突破樊嘉院士团队在《细胞》杂志发表新成果" src="http://shmc.fudan.edu.cn:80//upload/20191012/20191012123207_724.jpg" /></a>
+      		
+      		
+      	
+      
+		
+      		
+		     	<a href="content/69413"  target="_blank"><img width="620" height="360" alt="药学院周璐课题组合作研究发现全新PGAM1别构抑制剂" src="http://shmc.fudan.edu.cn:80//upload/20191012/20191012083443_646.jpg" /></a>
+      		
+      		
+      	
+      
+		
+      		
+		     	<a href="content/69412"  target="_blank"><img width="620" height="360" alt="袁正宏：筑梦奋斗，继往开来，做新时代的上医人！——复旦上医2019级本" src="http://shmc.fudan.edu.cn:80//upload/20191011/20191011205643_60.jpg" /></a>
+      		
+      		
+      	
+      
+		
+      		
+		     	<a href="content/69411"  target="_blank"><img width="620" height="360" alt="桂永浩致复旦上医新生：爱国奋斗 追求卓越" src="http://shmc.fudan.edu.cn:80//upload/20191011/20191011205458_126.jpg" /></a>
+      		
+      		
+      	
+      
+		
+      		
+		     	<a href="content/69410"  target="_blank"><img width="620" height="360" alt="2019级医学新生们，复旦上医欢迎你！本科生迎新大会隆重举行" src="http://shmc.fudan.edu.cn:80//upload/20191010/20191010084134_662.jpg" /></a>
+      		
+      		
+      	
+       
+      
+    </div>
+  </div>
+  <!--新闻列表开始-->
+  
+  <div id="result">
+  
+  
+	
+  	  	
+  	  	  <div class="list2">
+			  <h3>肝癌研究领域重大突破樊嘉院士团队在《细胞》杂志发表新成果</h3>
+			  <p class="ptitle">
+			  <span class="b1">时间：2019-10-12</span>
+			  <span class="b2">来源：复旦上医官微</span>
+			  <span class="b3">点击：260</span>
+			  </p>
+			  <p class="info2"><img src="http://shmc.fudan.edu.cn:80//upload/20191012/20191012123207_724.jpg" width="220" height="128" align="left" />
+			   肝癌是我国发病率第四位、死亡率第二位的恶性肿瘤，全球每年超过一半的新发和死亡肝癌病例发生在中国，约85%的肝癌患者具有乙肝病毒感染的背景。2019年10月，国际顶级生物医学期刊Cell在线发表了复旦大学肝癌研究所樊嘉院士团队的最新成果“乙肝相关肝细胞癌的整合蛋白质基因组学特征”。该研究借助大规模的蛋白质基因组平台，以高质量的蛋白质组学技术为基础，充分结合基因组和转录组学研究，首次实现了对乙肝相关肝...</p>
+			  <p class="more2"><a href="content/69414">更多详细</a></p>
+			  <p class="clear"></p>
+	  	  </div> 
+  	  	
+  	  	
+  	  
+  
+	
+  	  	
+  	  	  <div class="list2">
+			  <h3>药学院周璐课题组合作研究发现全新PGAM1别构抑制剂</h3>
+			  <p class="ptitle">
+			  <span class="b1">时间：2019-10-12</span>
+			  <span class="b2">来源：药学院</span>
+			  <span class="b3">点击：289</span>
+			  </p>
+			  <p class="info2"><img src="http://shmc.fudan.edu.cn:80//upload/20191012/20191012083443_646.jpg" width="220" height="128" align="left" />
+			   近日，复旦大学药学院周璐课题组联手上海交通大学医学院沈瑛课题组和上海中医药大学陈红专课题组发现，新型磷酸甘油酸变位酶1（PGAM1）别构抑制剂对非小细胞肺癌的增殖和转移具有抑制作用。北京时间10月10日晚，研究成果以《磷酸甘油酸变位酶1的新型变构抑制剂抑制非小细胞肺癌的生长和转移》（“A novel allosteric inhibitor of phosphoglycerate mutase 1...</p>
+			  <p class="more2"><a href="content/69413">更多详细</a></p>
+			  <p class="clear"></p>
+	  	  </div> 
+  	  	
+  	  	
+  	  
+  
+	
+  	  	
+  	  	  <div class="list2">
+			  <h3>袁正宏：筑梦奋斗，继往开来，做新时代的上医人！——复旦上医2019级本科新生思政课</h3>
+			  <p class="ptitle">
+			  <span class="b1">时间：2019-10-11</span>
+			  <span class="b2">来源：复旦上医官微</span>
+			  <span class="b3">点击：407</span>
+			  </p>
+			  <p class="info2"><img src="http://shmc.fudan.edu.cn:80//upload/20191011/20191011205643_60.jpg" width="220" height="128" align="left" />
+			   如何在时代的坐标中找到自己的定位，如何做好新时代的上医人？10月8日下午，正大体育馆内，复旦大学党委副书记、纪委书记、上海医学院党委书记袁正宏为初入复旦上医大家庭的2019级本科新生们带来了一堂别开生面的思政课。...</p>
+			  <p class="more2"><a href="content/69412">更多详细</a></p>
+			  <p class="clear"></p>
+	  	  </div> 
+  	  	
+  	  	
+  	  
+  
+	
+  	  	
+  	  	  <div class="list2">
+			  <h3>桂永浩致复旦上医新生：爱国奋斗 追求卓越</h3>
+			  <p class="ptitle">
+			  <span class="b1">时间：2019-10-10</span>
+			  <span class="b2">来源：复旦上医官微</span>
+			  <span class="b3">点击：385</span>
+			  </p>
+			  <p class="info2"><img src="http://shmc.fudan.edu.cn:80//upload/20191011/20191011205458_126.jpg" width="220" height="128" align="left" />
+			   10月8日下午，复旦大学上海医学院、克卿书院在正大体育馆举行了2019级迎新大会。会上，复旦大学常务副校长、上海医学院院长桂永浩发表讲话。...</p>
+			  <p class="more2"><a href="content/69411">更多详细</a></p>
+			  <p class="clear"></p>
+	  	  </div> 
+  	  	
+  	  	
+  	  
+  
+	
+  	  	
+  	  	  <div class="list2">
+			  <h3>2019级医学新生们，复旦上医欢迎你！本科生迎新大会隆重举行</h3>
+			  <p class="ptitle">
+			  <span class="b1">时间：2019-10-10</span>
+			  <span class="b2">来源：复旦上医官微</span>
+			  <span class="b3">点击：848</span>
+			  </p>
+			  <p class="info2"><img src="http://shmc.fudan.edu.cn:80//upload/20191010/20191010084134_662.jpg" width="220" height="128" align="left" />
+			   “人生意义何在乎?为人群服务。服务价值何在乎?为人群灭除病苦。”在复旦上医悠扬的院歌声中，800余名2019级学生作为克卿书院的一员、一名光荣的医学生正式开启了他们的医学之路。...</p>
+			  <p class="more2"><a href="content/69410">更多详细</a></p>
+			  <p class="clear"></p>
+	  	  </div> 
+  	  	
+  	  	
+  	  
+  
+	
+  	  	
+  	  	
+  	  		<div class="list2">
+			  <h3>陆靖调研复旦大学上海医学院主题教育开展情况</h3>
+			  <p class="ptitle">
+			  <span class="b1">时间：2019-10-09</span>
+			  <span class="b2">来源：医学宣传部</span>
+			  <span class="b3">点击：180</span>
+			  </p>
+			  <p class="info2"><img src="http://shmc.fudan.edu.cn:80//upload/20191009/20191009143153_366.jpg" width="220" height="128" align="left" />
+			   10月8日上午，市教卫工作党委副书记、市教委主任陆靖一行赴复旦大学上海医学院调研“不忘初心、牢记使命”主题教育开展情况。复旦大学党委副书记、纪委书记、上海医学院党委书记袁正宏，复旦大学常务副校长、上海医学院院长桂永浩，上海医学院党委副书记杨伟国、张艳萍、徐军，副院长吴凡、汪志明参加调研。市教委办公室主任丁力陪同调研。...</p>
+			  <p class="more2"><a href="/html/news_xiangqing_69409.html">更多详细</a></p>
+			  <p class="clear"></p>
+	  	  </div> 
+  	  	
+  	  
+  
+	
+  	  	
+  	  	  <div class="list2">
+			  <h3>超燃！复旦上医人在升旗仪式上这样祝福祖国！</h3>
+			  <p class="ptitle">
+			  <span class="b1">时间：2019-10-05</span>
+			  <span class="b2">来源：复旦上医官微</span>
+			  <span class="b3">点击：536</span>
+			  </p>
+			  <p class="info2"><img src="http://shmc.fudan.edu.cn:80//upload/20191005/20191005163901_264.png" width="220" height="128" align="left" />
+			   复旦大学上海医学院师生、员工、校友们早早冒雨前来，身着印有“中国70”字样红色T恤，手持对祖国的告白标语，为祖国母亲献上最诚挚的祝福。7时整，复旦大学武警班护旗队踏着铿锵的步伐，护卫鲜艳的国旗入场。在全场雄壮庄严的国歌声中，五星红旗在众人的注目礼下冉冉升起。...</p>
+			  <p class="more2"><a href="content/69407">更多详细</a></p>
+			  <p class="clear"></p>
+	  	  </div> 
+  	  	
+  	  	
+  	  
+  
+	
+  	  	
+  	  	  <div class="list2">
+			  <h3>宗明一行调研复旦大学上海医学院</h3>
+			  <p class="ptitle">
+			  <span class="b1">时间：2019-09-26</span>
+			  <span class="b2">来源：医学宣传部</span>
+			  <span class="b3">点击：641</span>
+			  </p>
+			  <p class="info2"><img src="http://shmc.fudan.edu.cn:80//upload/20190926/20190926232947_681.jpg" width="220" height="128" align="left" />
+			   9月25日上午，上海市副市长宗明一行来到复旦大学上海医学院考察调研。宗明一行首先考察了医科图书馆、同生广场和复旦大学上海医学院校区建设情况。复旦大学党委书记焦扬陪同考察并与宗明会谈。...</p>
+			  <p class="more2"><a href="content/69355">更多详细</a></p>
+			  <p class="clear"></p>
+	  	  </div> 
+  	  	
+  	  	
+  	  
+  
+   
+   </div>
+   
+  <!--新闻列表结束-->
+  <div class="clear"></div>
+  <!--分页开始-->
+  <div id="page">
+   <span class='load'>
+   		<a href="#" class="ap" id="loadMore">==点击加载更多==</a>
+   </span> 
+  </div>
+  <!--分页结束-->
+</div>
+<!--左侧结束-->
+<!--右侧开始-->
+<div id="right">
+
+<!--搜索开始-->
+<div id="search">
+  <form id="form1" name="form1" method="post" action="search/news/">
+    <input name="workkey" type="text" id="workkey" onfocus="if(value=='文章搜索') {value=''}" onblur="if (value=='') {value='文章搜索'}" value="文章搜索" maxlength="50" />
+    <input type="image" name="imageField" id="imageField" src="images/front/search_bn.jpg" />
+  </form>
+</div>
+<!--新闻公告开始-->
+<div class="tabs" > 
+		<h1 >综合新闻</h1>
+		
+
+    <!--工作动态-->
+	<div id="nav_content">
+    <ul id="accoradion02" class="accoradion">
+		
+			
+				
+					<li><a  class="xin1"   href="content/69405">辉煌七十年，共庆新时代——华山医院庆</a>
+						<ul>
+							<li>
+								<p>在全国人民喜迎新中国成立70周年之际，9月27日下午，一场由华山医院员工自编自导自演的文艺演出以“辉煌七十年，共庆新时代...</p>
+								
+								 <p><a href="content/69405" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+				
+				
+			
+		
+			
+				
+					<li><a  class="xin1"   href="content/69404">共和国不会忘记——19位华山人荣获“</a>
+						<ul>
+							<li>
+								<p>在迎接中华人民共和国成立70周年之际，19位华山人荣获了由中共中央、国务院、中央军委颁发的“庆祝中华人民共和国成立70周...</p>
+								
+								 <p><a href="content/69404" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+				
+				
+			
+		
+			
+				
+					<li><a  class="xin1"   href="content/69403">心系革命老区，情牵红色赣南——复旦大</a>
+						<ul>
+							<li>
+								<p>转眼间，华山医院国家巡回医疗队为期1个月的江西赣州巡回医疗任务已圆满完成。9月19日上午，巡回医疗工作总结大会在江西上犹...</p>
+								
+								 <p><a href="content/69403" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+				
+				
+			
+		
+			
+				
+					<li><a  class="xin1"   href="content/69402">第三、第四批中国红十字会华山医院援巴</a>
+						<ul>
+							<li>
+								<p>9月15日，由老年医学科陈刚（队长）、检验医学科沈林杰组成的中国红十字会华山医院援巴基斯坦瓜达尔港医疗队（第四批），启程...</p>
+								
+								 <p><a href="content/69402" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+				
+				
+			
+		
+			
+				
+					<li><a  class="xin1"   href="content/69401">国际医疗与特需服务助力上海打造亚洲医</a>
+						<ul>
+							<li>
+								<p>金秋时节，硕果满枝。9月18日~21日，第一届海峡两岸国际医疗与特需服务发展大会、第十二届“高端医疗服务与建设”国际研讨...</p>
+								
+								 <p><a href="content/69401" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+				
+				
+			
+		
+			
+				
+					<li><a  class="xin1"   href="content/69400">与新中国共成长，听从医70年前辈话医</a>
+						<ul>
+							<li>
+								<p>为庆祝第二届“中国医师节”，深入贯彻“不忘初心、牢记使命”主题教育，弘扬“敬佑生命、救死扶伤、甘于奉献、大爱无疆”的卫生...</p>
+								
+								 <p><a href="content/69400" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+				
+				
+			
+		
+			
+				
+					<li><a  class="xin1"   href="content/69399">放医所积极推进“不忘初心，牢记使命”</a>
+						<ul>
+							<li>
+								<p>放射医学研究所（以下简称“放医所”）自2019年9月16日召开“不忘初心、牢记使命”主题教育启动大会以来，积极推进“不忘...</p>
+								
+								 <p><a href="content/69399" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+				
+				
+			
+		
+			
+				
+					<li><a  class="xin1"   href="content/69398">放医所召开“不忘初心，牢记使命”主题</a>
+						<ul>
+							<li>
+								<p>9月16日下午，放射医学研究所党总支组织召开“不忘初心，牢记使命”主题教育工作动员部署会议，学校第十一组巡回指导组陆伟跃...</p>
+								
+								 <p><a href="content/69398" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+				
+				
+			
+		
+			
+				
+					<li><a  class="xin1"   href="content/69397">“不忘初心，牢记使命”主题教育支部党</a>
+						<ul>
+							<li>
+								<p>9月10日下午，放射医学研究所教职工党支部开展“不忘初心、牢记使命”主题教育活动，会议由教职工支部书记邵春林同志主持，组...</p>
+								
+								 <p><a href="content/69397" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+				
+				
+			
+		
+	</ul>
+    <p class="more3"><a href="list/zonghexinwen">更多详细</a></p>
+    </div>
+    
+   
+    
+</div>
+
+<!--新闻公告开始-->
+<div class="tabs"> 
+		
+		<h1 onmousemove="changTab(this)">信息公告</h1>
+
+
+    
+    <div id="nav_content">
+    <ul id="accoradion01" class="accoradion1">
+    
+			
+    			
+    			
+    				<li><a    class="xin3"  href="/html/news_xiangqing_69408.html">卡罗林斯卡医学院宣讲会</a>
+						<ul>
+							<li>
+								<p>卡罗林斯卡医学院 (Karolinska Institutet, KI) 是世界上最著名的医学院之一。根据KI与中国留学</p>
+								 <p><a href="/html/news_xiangqing_69408.html" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+    			
+    		
+		
+			
+    			
+		    		<li><a   class="xin1"   href="content/69406">【通知】复旦大学临床医学院2020年推免生第三轮复试通知</a>
+						<ul>
+							<li>
+								<p>详细点击阅读</p>
+								 <p><a href="content/69406" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+    			
+    			
+    		
+		
+			
+    			
+		    		<li><a   class="xin1"   href="content/69356">【通知】复旦大学临床医学院2020年推免生第二轮复试通知</a>
+						<ul>
+							<li>
+								<p>详细点击阅读</p>
+								 <p><a href="content/69356" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+    			
+    			
+    		
+		
+			
+    			
+    			
+    				<li><a    class="xin3"  href="/html/news_xiangqing_69353.html">【通知】关于 2019 年国庆节放假的通知</a>
+						<ul>
+							<li>
+								<p>根据国务院办公厅通知，我校今年国庆节放假安排如下： 2019 年10 月 1日至 2019 年10月 7 日放假调休，共</p>
+								 <p><a href="/html/news_xiangqing_69353.html" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+    			
+    		
+		
+			
+    			
+		    		<li><a   class="xin1"   href="content/69351">【通知】2019年复旦大学上海医学院研究生短期国际访学资助名单（第二批）公示</a>
+						<ul>
+							<li>
+								<p>详细点击阅读</p>
+								 <p><a href="content/69351" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+    			
+    			
+    		
+		
+			
+    			
+		    		<li><a   class="xin1"   href="content/69350">【通知】复旦大学临床医学院2020年接收推免生工作细则</a>
+						<ul>
+							<li>
+								<p>详细点击阅读</p>
+								 <p><a href="content/69350" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+    			
+    			
+    		
+		
+			
+    			
+		    		<li><a    class="xin3"  href="content/69321">声 明</a>
+						<ul>
+							<li>
+								<p></p>
+								 <p><a href="content/69321" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+    			
+    			
+    		
+		
+			
+    			
+		    		<li><a    class="xin3"  href="content/69314">【通知】复旦大学临床医学院2019年全国优秀大学生夏令营入围名单-公示</a>
+						<ul>
+							<li>
+								<p>详细点击阅读</p>
+								 <p><a href="content/69314" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+    			
+    			
+    		
+		
+			
+    			
+    			
+    				<li><a    class="xin3"  href="/html/news_xiangqing_69307.html">【通知】2019年复旦大学上海医学院研究生短期国际访学资助名单（第一批）公示</a>
+						<ul>
+							<li>
+								<p>详细点击阅读</p>
+								 <p><a href="/html/news_xiangqing_69307.html" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+    			
+    		
+		
+			
+    			
+    			
+    				<li><a    class="xin3"  href="/html/news_xiangqing_69301.html">【通知】关于2019年暑假安排的通知</a>
+						<ul>
+							<li>
+								<p>6月30日起，本专科生开始放假，研究生放假时间由院系和导师根据培养计划妥善安排。2019级本科生于9月1日报到，9月2日</p>
+								 <p><a href="/html/news_xiangqing_69301.html" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+    			
+    		
+		
+			
+    			
+		    		<li><a    class="xin3"  href="content/69296">【通知】关于举办复旦大学临床医学院2019年全国优秀大学生夏令营的通知</a>
+						<ul>
+							<li>
+								<p>详细点击阅读</p>
+								 <p><a href="content/69296" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+    			
+    			
+    		
+		
+			
+    			
+		    		<li><a    class="xin3"  href="content/69209">【通知】复旦大学临床医学院及上海市影像医学研究所2019年博士研究生复试名单20190515</a>
+						<ul>
+							<li>
+								<p>详细点击阅读</p>
+								 <p><a href="content/69209" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+    			
+    			
+    		
+		
+	</ul>
+    <p class="more3"><a href="list/xinxigonggao">更多详细</a></p>
+    </div>
+    
+</div>
+
+<!--媒体聚焦开始-->
+<div class="tabs"> 
+		<h1 onmousemove="changTab(this)">媒体聚焦</h1>
+
+
+    
+    <div id="nav_content">
+    <ul id="accoradion03" class="accoradion">
+    
+			
+	    		
+	    			<li><a   class="xin3"  href="content/69092">《解放日报》：5区50万儿童将享受健</a>
+						<ul>
+							<li>
+								<p>复旦儿科医联体日前升级为康联体，此前医联体建设四年，儿科就诊明显下沉，今后徐汇区、闵行区、松江区、金山区、青浦区约50万</p>
+								 <p><a href="content/69092" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+	    		
+	    		
+	    	
+		
+			
+	    		
+	    			<li><a   class="xin3"  href="content/69091">文汇：顾玉东：我手携我心</a>
+						<ul>
+							<li>
+								<p>人类文明的漫长进程何尝不是一段人手与人脑相互促进的精彩乐章：大脑孕育智慧，双手把创意付诸实践，人类才得以不断进步、发展。</p>
+								 <p><a href="content/69091" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+	    		
+	    		
+	    	
+		
+			
+	    		
+	    			<li><a   class="xin3"  href="content/69090">中国新闻网：复旦科学家发现重新激活成</a>
+						<ul>
+							<li>
+								<p>药物成瘾是危害严重的社会问题。如何有效干预毒品复吸，是科学家们探讨的话题。复旦大学21日披露，复旦大学脑科学研究院、医学</p>
+								 <p><a href="content/69090" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+	    		
+	    		
+	    	
+		
+			
+	    		
+	    			<li><a   class="xin3"  href="content/69089">上观新闻：复旦科学家发现重新激活成瘾</a>
+						<ul>
+							<li>
+								<p>近日，复旦大学脑科学研究院、医学神经生物学国家重点实验室教授郑平课题组研究发现戒断场景重新激活成瘾记忆的神经环路枢纽。相</p>
+								 <p><a href="content/69089" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+	    		
+	    		
+	    	
+		
+			
+	    		
+	    			<li><a   class="xin3"  href="content/69088">《解放日报》：七十年从医生涯与新中国</a>
+						<ul>
+							<li>
+								<p>我是1949年新中国成立那一年，考入原上海第一医学院的，可以说我的从医生涯与祖国共成长，抗日战争、解放战争时期的落后挨打</p>
+								 <p><a href="content/69088" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+	    		
+	    		
+	    	
+		
+			
+	    		
+	    			<li><a   class="xin3"  href="content/69087">《光明日报》：未来脑学科的增长点在于</a>
+						<ul>
+							<li>
+								<p>平均年龄36岁，与20余所国际著名高校、研究院所合作，吸引全球130多位国际学者参与各个层次的研究合作计划和项目，整合来</p>
+								 <p><a href="content/69087" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+	    		
+	    		
+	    	
+		
+			
+	    		
+	    			<li><a   class="xin3"  href="content/69086">《光明日报》：脑科学：打开“生命禁区</a>
+						<ul>
+							<li>
+								<p>脑与类脑研究是世界科技发展的战略制高点，以类脑智能引领人工智能，实现人工智能普适化，将引起经济社会变革性发展，对人类文明</p>
+								 <p><a href="content/69086" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+	    		
+	    		
+	    	
+		
+			
+	    		
+	    			<li><a   class="xin3"  href="content/69085">科学网：复旦大学发现神经干细胞参与脑</a>
+						<ul>
+							<li>
+								<p>复旦大学脑科学研究院、医学神经生物学国家重点实验室解云礼课题组研究发现神经干细胞在胚胎脑中的精确定位对脑的正常发育发挥重</p>
+								 <p><a href="content/69085" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+	    		
+	    		
+	    	
+		
+			
+	    		
+	    			<li><a   class="xin3"  href="content/69084">中国新闻网：中国学者新发现为破解发育</a>
+						<ul>
+							<li>
+								<p>复旦大学30日披露，复旦大学脑科学研究院、医学神经生物学国家重点实验室解云礼课题组在神经干细胞参与脑发育机制研究方面取得</p>
+								 <p><a href="content/69084" class="more_z">更多详细&gt;&gt;</a></p>
+							</li>
+						</ul>
+					</li>
+	    		
+	    		
+	    	
+		
+	</ul>
+    <p class="more3"><a href="news/meitijujiao">更多详细</a></p>
+    </div>
+    
+</div>
+
+<!--视频开始-->
+<div class="video">
+<iframe name="banner" height="288" width="298" src="shipin.jsp" border="0" frameborder="0" scrolling="no">浏览器不支持嵌入式框架，或被配置为不显示嵌入式框架。</iframe></div>
+</div>
+
+<!--专题开始-->
+
+
+
+
+<style type="text/css">
+			 
+			#wrapper {
+				width: 298px;
+				height: 515px;
+				margin:0 auto;
+				padding-left:20px;
+				overflow: hidden;
+			}
+			#carousel {
+				padding-top: 350px;
+			}
+			#carousel div {
+				width: 298px;
+				height: 380px;
+				margin-top: -350px;
+				position: relative;
+			}
+			#carousel div span {
+				background-color: #666;
+				border-top: 1px solid #ccc;
+				color: #fff;
+				font-size: 12px;
+				line-height: 30px;
+				text-align: center;
+				display: block;
+				height: 29px;
+				cursor: pointer;
+			}
+			#carousel div span:hover {
+				background-color: #555;
+			}
+			#carousel div span.selected {
+				background-color: #b10e23;
+				cursor: default;
+			}
+			
+			#carousel div a{ text-decoration: none}
+			
+		</style>
+ 
+<div id="wrapper">
+			<div id="carousel">
+				<div>
+					<a href="http://www.library.fudan.edu.cn/medical/index.htm" target="_blank"><span>医科图书馆</span></a>
+					<img src="images/front/g3.jpg" alt="sport1" width="298" height="305" border="0" />
+				</div>
+				<div>
+					<a href="http://www.fdygc.fudan.edu.cn/main.htm" target="_blank"><span>医院管理处</span></a>
+					<img src="images/front/g2.jpg" alt="sport2" width="298" height="305" border="0"/>
+				</div>
+				 
+				<div>
+					<a href="http://www.shmc.org.cn/" target="_blank"><span>上医校友会</span> </a>
+					<img src="images/front/g1.jpg" alt="sport4" width="298" height="305" border="0"/>
+				</div>
+                <div>
+					<a href="frame/yuandonghuijianjie" target="_blank"><span>上海医学院董事会</span></a>
+					<img src="images/front/g4.jpg" alt="sport5" width="298" height="305" border="0"/>
+				</div>
+				<div>
+					<a href="single/lishizhangzhici" target="_blank"><span>颜福庆医学教育发展基金</span></a>
+					<img src="images/front/g7.jpg" alt="sport6" width="298" height="305" border="0"/>
+				</div>
+                <div>
+                	<a href="http://www.fao.fudan.edu.cn/" target="_blank">
+					<span class="selected">外事信息</span>
+					</a>
+					<img src="images/front/g5.jpg" alt="sport7" width="298" height="305" border="0"/>
+				</div>
+				<div>
+                	<a href="images/qikan.html" target="_blank">
+					<span class="selected">医科学术期刊</span>
+					</a>
+					<img src="images/front/g6.jpg" alt="sport7" width="298" height="305" border="0"/>
+				</div>
+				<div>
+                	<a href="single/jijinjieshao" target="_blank">
+					<span class="selected">复旦—复星健康梦基金</span>
+					</a>
+					<img src="images/front/ggg8.jpg" alt="sport8" width="298" height="305" border="0"/>
+				</div>
+			</div>
+		</div>  
+<!--右侧结束-->
+</div>
+<div class="clear"></div>
+<!--底部开始-->
+
+
+    
+
+
+
+
+
+
+<style type="text/css">
+#total{width:260px; height:40px; line-height:40px; font-size:20px; margin-left:8px;}
+#total .t_num{ display:inline-block; line-height:13px; margin:2px 4px 0 4px; float:left;}
+#total .t_num i{width:23px;height:36px; display:inline-block; background: url(http://shmc.fudan.edu.cn/images/front/number.png) no-repeat; background-position:0 0; text-indent:-999em}
+</style>
+<script type="text/javascript" src="http://shmc.fudan.edu.cn/js/front/animateBackground-plugin.js"></script>
+
+<script type="text/javascript">
+
+var num =15032841;
+ //alert(num);
+ $(function(){
+ 	
+	getdata();
+	//setInterval('getdata()', 5000);
+});
+
+function getdata(){
+	
+	$.ajax({
+	    url:'http://shmc.fudan.edu.cn/getVisitNum',
+		type:'POST',
+		dataType:"json",
+		//data:{'total':num},
+		cache: false,
+		timeout: 10000,
+		error: function(){
+			//alert('error');
+		},
+		success: function(data){
+			//show_num(data.count);
+			var num = data.num+707620+17830;
+			show_num(num);
+	    }
+   	});
+}
+ function show_num(n){ 
+ 	var numstr = String(n);
+ 	var len = String(numstr).length; 
+ 	var diff = 9-len;
+ 	for(var i=0;i<diff;i++)
+ 	{
+ 		numstr='0'+numstr;
+ 	}
+ 	
+ 	len = String(numstr).length; 
+ 	
+    var it = $(".t_num i"); 
+    
+   
+    for(var i=0;i<len;i++){ 
+   
+        if(it.length<=i){ 
+            $(".t_num").append("<i></i>"); 
+        } 
+        var num=String(numstr).charAt(i); 
+        //alert(num);
+        var y = -parseInt(num)*36; //y轴位置 
+        var obj = $(".t_num i").eq(i); 
+        
+        obj.animate({ //滚动动画 
+            backgroundPosition :'(0 '+String(y)+'px)'  
+            }, 'slow','swing',function(){} 
+        ); 
+        // alert(num);
+    } 
+} 
+
+
+</script>
+<div id="bottom">
+<div class="bot">
+<h3>访问量</h3>
+<div id="total"> 
+<span class="t_num"></span>
+</div> 
+<p><a href="http://shmc.fudan.edu.cn/upload/20150316/20150316083117_516.rar" title="#" target="_blank"><img src="http://shmc.fudan.edu.cn/images/front/dllogo.jpg" width="210" height="39" border="0"/></a></p>
+</div>
+
+<div class="bot">
+ <h3>联系我们</h3>
+ <p>地址：上海市医学院路138号<br />
+ 邮编：200032 <br />
+电话：021-54237900 <br />
+E-mail：medcenter@fudan.edu.cn</p>
+ </div>
+
+ <div class="bot">
+<h3>版权信息</h3>
+ <p>Copyright shmc.fudan.edu.cn 2013<br />
+ 复旦大学上海医学院版权所有<br />
+沪ICP备042465号</p></div>
+
+ <div class="bot">
+ <h3>快速通道</h3>
+ <ol>
+<li><a href="http://mail.fudan.edu.cn/" title="Email" target="_blank"><img src="http://shmc.fudan.edu.cn/images/kstd/kstd1.jpg" width="32" height="32" /></a></li>
+ <li><a href="http://www.oa.fudan.edu.cn/" title="OA" target="_blank"><img src="http://shmc.fudan.edu.cn/images/kstd/kstd2.jpg" width="32" height="32" /></a></li>
+ <li><a href="http://ehall.fudan.edu.cn/bsdt.html" title="ehall" target="_blank"><img src="http://shmc.fudan.edu.cn/images/kstd/kstd3.jpg" width="32" height="32" /></a></li>
+ <li><a href="http://payment.fudan.edu.cn/" title="payment" target="_blank"><img src="http://shmc.fudan.edu.cn/images/kstd/kstd4.jpg" width="32" height="32" /></a></li>
+<li><a href="http://bbs.fudan.edu.cn/" title="BBS" target="_blank"><img src="http://shmc.fudan.edu.cn/images/kstd/kstd5.jpg" width="32" height="32" /></a></li>
+<li><a href="http://elearning.fudan.edu.cn/portal" title="Elearning" target="_blank"><img src="http://shmc.fudan.edu.cn/images/kstd/kstd6.jpg" width="32" height="32" /></a></li>
+<li><a href="http://map.fudan.edu.cn/index.php?campus=fenglin" title="校园地图" target="_blank"><img src="http://shmc.fudan.edu.cn/images/kstd/kstd10.jpg" width="32" height="32" /></a></li>
+ <li><a href="http://www.cwgl.fudan.edu.cn/WFManager/login.jsp" title="财务查询" target="_blank"><img src="http://shmc.fudan.edu.cn/images/kstd/kstd8.jpg" width="32" height="32" /></a></li>
+ <li><a href="http://yqgx.fudan.edu.cn/" title="仪器共享" target="_blank"><img src="http://shmc.fudan.edu.cn/images/kstd/kstd9.jpg" width="32" height="32" /></a></li>
+ <li><a href="http://jpkc.fudan.edu.cn/" title="精品课程" target="_blank"><img src="http://shmc.fudan.edu.cn/images/kstd/kstd7.jpg" width="32" height="32" /></a></li>
+ </ol>
+ </div>
+</div>
+ 
+
+
+
+<!--底部结束-->
+<!--<DIV id=img1 style="Z-INDEX: 100; LEFT: 2px; WIDTH: 200px; POSITION: absolute; TOP: 43px; HEIGHT: 61px;
+ visibility: visible;"><a href="content/65694" target="_blank"><img src="images/piaod.jpg" width="200" height="105" border="0"></a></DIV>-->
+<SCRIPT src="js/js.js"></SCRIPT>
+
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1257640142'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1257640142%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+</body> 
+</html>

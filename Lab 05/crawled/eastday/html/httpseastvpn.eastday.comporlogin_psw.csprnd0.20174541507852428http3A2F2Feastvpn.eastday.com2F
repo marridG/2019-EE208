@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- 旧方案 -->
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<!-- 旧方案 -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+window.tmlversion = 6.8;	//版本号
+</script>
+
+<!-- 新方案 >
+<script src="/com/js/common.min.js"></script>
+<script src="/com/js/login.min.js"></script>
+<! 新方案 -->
+
+<!-- 旧方案 -->
+<script src="../com/common.js"></script>
+<script src="../com/component.js"></script>
+<script src="../com/Login.js"></script>
+<!-- 旧方案 -->
+
+<script type="text/javascript">
+window.client = {
+	EncryptExp:			'65537',
+	EnableResetPsw:		'0',
+	EnableKeypad:		'0',
+	showSetup:			'0',
+	showSvpntool:		'1',
+	showHelpCenter:		'1',
+	EnableDKeyVer:		'0',
+	EnableRandCode:		'0',
+	EnableAnonymous:	'0',
+	denyNormalAccess:	'0',
+	EnableMidAtkCheck:	'0',
+	EncryptKey:			'D3EABEECBFFD2A591FE8DAFA59AEFFF8E5651241E4B5D322F588EA3E4EE05E4700CB8A13E2F58AB1C1B2264C84DFFF8CC5E015B6E2A21DCFED886ECCA8FFDD3230C0682164F0DB55CDC9E5084F330C963035FD0E301D34C03201C83CA56A0F6DD9EC59D4B0110745BD84B663E6EC7DE41086AF42D839005752E5521162B6E8610D5351175C074471ABF65318F1A49584DB07EEEF49097B48CFAFA1A8D275AFF41B4C9DDC84FD429B88CD962F8BC06E7A814C4C9729AEB80CBA2949DD7388943EC7E157AD346CCD234144BA9A24E83A88F884DDB3DEDFF001BEC49F3981833A2474AAC471968B51955D99869A6EDB320B8BE65DC0F055CD7AE9968DB107EAB675',
+	EnableMultClient:   '0',     //是否开启多客户端  M7.1R1
+	MultClientGuid:     'NULL',          //开启多客户端后的GUID  M7.1R1
+	IsMultclientVersion: '1',    //是否是多客户端VPN版本。
+	UnforceInstallClient:'1',   //不强制安装客户端
+	N_INPUTNAME:		'svpn_name',
+	N_INPUTPASS:		'svpn_password',
+	N_HIDEBUTTONS:		'false',
+	N_BUTTONNAME:		'logButton',
+	N_ANONYBUTTONNAME:	'anonyButton',
+	N_INPUTRAND:		'p_rand_code',
+	N_LOGFORM:			'formLogin',
+	N_COMPLAYER:		'ComLayer',	
+	N_DKEYTIPS:			'DkeyTips',
+	N_SIGNINBYCERT:		'log0',
+	N_SIGNINBYDKEY:		'log1',
+	N_RANDCODEIMG:		'randcodeImg',
+	N_MACSYSTEM:		'MacSystem',
+	content:{
+		"NORMAL_LOGIN": tr("登 录"),
+		"ANONYMOUS_LOGIN": tr("匿名登录"),
+		"ANONYMOUS_USER": "Anonymous",
+		"NEED_USERNAME": tr("请输入用户名,否则无法登录"),
+		"INVALID_USER": tr("不合法的用户名,用户名不能超过72个字节"), 
+		"NEED_RANDCODE": tr("校验码不能为空!"),
+		"LOGING": tr("正在检测登录信息...")
+	}
+};
+
+var errorMsg = '';
+</script>
+
+</head>
+
+<body class="zh_CN">
+<span id="titleInnerHTML" style="display: none;">欢迎访问</span>
+<div class="banners" style="background-color:;">
+	<ul style="background-image: url(/por/images/default_logo.gif);">
+		<li id="language" class="language" style="display:none;">
+			<a id="zh_CN" href="javascript:toLang('zh_CN')" class="zh_CN_enable">简体中文</a>
+			<a id="en_US" href="javascript:toLang('en_US')" class="en_US_enable">English</a>
+		</li>
+	</ul>
+</div>
+<div class="content">
+	<div class="title" _html="登录"></div>
+	<form id="formLogin" name="formLogin" method="post" action="login_psw.csp?sfrnd=2346912324982305" onsubmit="return formSubmit();">
+		<input type="hidden" name="mitm_result" id="txtMITEMAttack"/>
+        <input type="hidden" name="svpn_req_randcode" id="svpn_req_randcode" value="7458"/>
+		<div id="form">
+			<dl class="input_text">
+				<dt></dt>
+				<dd>
+					<span style="width:240px; position:relative">
+						<label default_txt="用户名" forid="svpn_name" id="label_user" _html="用户名"></label>
+						<span class="span_opacity"></span><!--need to label-->
+						<input id="svpn_name" name="svpn_name" value="" type="text" maxlength="49" autocomplete="off" />
+					</span>
+				</dd>
+			</dl>
+			<dl class="input_text psw_cls">
+				<dt></dt>
+				<dd class="keyboard">
+					<span style="width:240px;position:relative">
+						<label default_txt="密　码" forid="svpn_password" id="label_psw" _html="密　码"></label>
+						<span class="span_opacity"></span><!--need to label-->
+						<input type="password" style="display:none;"> <!-- 增加一隐藏的input，让浏览器不自动进行填充 勿删 add by hcz-->
+						<input id="svpn_password" name="svpn_password" value="" type="password" maxlength="48" autocomplete="off" style=" font-family:Verdana"  />
+					</span>
+					
+					<a id="resetpsw" style="display:none;" href="/com/forgetPassword.html" _html="忘记密码了？"></a>
+				</dd>
+			</dl>
+			<dl id="p_rand_code" class="input_text" style="display: none">
+				<dt></dt>
+				<dd>
+					<span style="width:65px;position:relative">
+						<label default_txt="验证码" forid="randcode" id="label_code" _html="验证码"></label>
+						<span class="span_opacity" style="width:65px;"></span><!--need to label-->
+						<input id="randcode" name="svpn_rand_code" value="" type="text" />
+					</span>
+				</dd>
+				<dd><img id='randcodeImg' width="77" height="24"  /></dd>
+				<dd><a href="#" onClick="ChangeRandCode()" _html="看不清楚？换一个"></a></dd>
+			</dl>
+			<dl style="display: none;">
+				<dt></dt>
+				<dd id="tipsContent" class="tip_error"></dd>
+			</dl>
+			<dl class="buttons">
+				<dt></dt>
+				<dd>
+					<button id="logButton" type="submit" onfocus="closeSoftKb()" class="button_normal"></button>
+				</dd>
+				<dd>
+					<button id="anonyButton" class="button_anonymity" style="display:none;" type="button" onclick="$ID('label_user').innerHTML='&nbsp;';anonymousLogin()"></button>
+				</dd>
+			</dl>
+			<dl class="else_login" id="loginTypes">
+				<dt></dt>
+				<dd>
+					<p _html="其它登录方式：" style="color:#666666"></p>
+					<div>
+						<span class="button_two" id="log0"><a class="certificate" href="javascript:CertLogin();" _html="证书登录"></a></span>
+						<span class="button_two" id="log1"><a class="USB_KEY" href="javascript: if(!checkReLoginEx()){HandleDkey()};" _html="USB-Key登录"></a></span>
+					</div>
+				</dd>
+			</dl>
+		</div>
+	</form>
+	<div class="other_info">
+		<ul>
+			<li class="drive" id="DkeyTips" style="display: none;" _html="读取USB-KEY 失败，请手动 {0}安装驱动{1}" _htmlFormatArgs="DkeyTipsFormatArgs"></li>
+			<li id="ComLayer" style="display: none;" _html="自动安装组件失败，请手动 {0}下载安装组件{1}" _htmlFormatArgs="ComLayerFormatArgs"></li>
+			<li id="MacSystem" style="display: none;" _html="请手动 {0}下载安装组件{1}" _htmlFormatArgs="MacSystemFormatArgs"></li>
+			<li id="SangforTool" style="display: none;" _html="登录异常，请下载修复工具 {0}尝试修复{1}" _htmlFormatArgs="SangforToolFormatArgs"></li>
+			<li id="iPadClient" style="display: none;"><a href="#" target="_blank"></a></li>
+			<li id="helper" style="display: none;" _html="需要更多帮助信息，请 {0}点击这里{1}" _htmlFormatArgs="HelperFormatArgs"></li>
+		</ul>
+	</div>
+</div>
+<div id="keyborad" class="keypad">
+	
+</div>
+<script type="text/javascript">
+
+(function(){
+	var labels = ["label_user","label_psw","label_code"];
+	for(var i = 0;i<labels.length;i++)
+	{
+		var label = $ID(labels[i]);
+		var input = $ID(label.getAttribute("forid"));
+		addEvent(input,"keyup",handleInputVm);
+		addEvent(input,"keydown",handleInputVm);
+		addEvent(input,"focus",handleInputVm);
+		addEvent(input,"input",handleInputVm);
+	}
+
+	function handleInputVm()
+	{
+		for(var i = 0;i<labels.length;i++)
+		{
+			var label = $ID(labels[i]);
+			var inputId = label.getAttribute("forid");
+			if(this.id == inputId)
+			{
+				label.innerHTML=this.value?"&nbsp;":tr(label.getAttribute("default_txt"));
+				break;
+			}
+		}
+	}
+})();
+
+window.setLang({
+	'DkeyTipsFormatArgs' : ['<a href="javascript:onInstall(client.EnableDKeyVer)">', '</a>'],
+	'ComLayerFormatArgs': ['<a href="javascript:onInstall(INST_COMP)">', '</a>'],
+	'SangforToolFormatArgs': ['<a href="/com/win/svpntool.zip">', '</a>'],
+	'HelperFormatArgs': ['<a href="javascript:HelpCenter()">', '</a>'],
+	'MacSystemFormatArgs': ['<a href="javascript:onInstall(INST_MAC)">', '</a>']
+});
+
+</script>
+</body>
+</html>

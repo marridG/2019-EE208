@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html data-log-pv='{"mpc":30}'>
+    <head>
+        <title>PyTorch终于能用上谷歌云TPU，推理性能提升4倍，我们该如何薅羊毛？_训练</title>
+        <meta http-equiv="Cache-Control" content="no-transform" /> 
+<meta http-equiv="Cache-Control" content="no-siteapp" /> 
+<meta name="copyright" content="Copyright © 2017 Sohu.com Inc. All Rights Reserved." />
+<meta name="mediaid" content="量子位"/>
+<meta property="og:type" content="news"/>
+<meta property="og:image" content="${mpNews.image}"/>
+<meta property="og:url" content="www.sohu.com/a/346673470_610300"/>
+<meta property="og:release_date" content="2019-10-13 12:01"/>
+<meta itemprop="dateUpdate" content="2019-10-13 12:01" />
+<meta itemprop="datePublished" content="2019-10-13 12:01" />
+<link rel="canonical" href="http://www.sohu.com/a/346673470_610300"/>
+<link rel="alternate" media="only screen and(max-width: 640px)" href="m.sohu.com/a/346673470_610300"/>
+
+<meta name="keywords" content="PyTorch,训练,推理,Cloud,vm,进行,性能,ResNet-,Zone,数据,Colab,vm,xla,虚拟机,pip" />
+<meta name="description" content="现在PyTorch官方已经在Github上给出示例代码，教你如何免费使用谷歌云TPU训练模型，然后在Colab中进行推理。 PyTorch先介绍了在云TPU设备上训练ResNet-50模型的案例…" />
+<meta property="og:description" content="现在PyTorch官方已经在Github上给出示例代码，教你如何免费使用谷歌云TPU训练模型，然后在Colab中进行推理。 PyTorch先介绍了在云TPU设备上训练ResNet-50模型的案例…"/>
+<meta property="og:title" content="PyTorch终于能用上谷歌云TPU，推理性能提升4倍，我们该如何薅羊毛？_训练"/>
+        <meta charset="utf-8"/>
+<meta name="data-spm" content="smpc">
+<meta name="renderer" content="webkit"> 
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" />
+<link rel="icon" href="//statics.itc.cn/web/static/images/pic/sohu-logo/favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="//statics.itc.cn/web/static/images/pic/sohu-logo/favicon.ico" type="image/x-icon"/>
+<link rel="apple-touch-icon" sizes="57x57" href="//statics.itc.cn/web/static/images/pic/sohu-logo/logo-57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="//statics.itc.cn/web/static/images/pic/sohu-logo/logo-72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="//statics.itc.cn/web/static/images/pic/sohu-logo/logo-114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="//statics.itc.cn/web/static/images/pic/sohu-logo/logo-144.png" />
+<link href="//statics.itc.cn/web/static/css/main-55e89008b2.css" rel="stylesheet"/>
+<script>
+    //  加载监控代码
+</script>
+<!--[if lt IE 9]>
+<script src="//statics.itc.cn/web/static/js/es5-shim-08e41cfc3e.min.js"></script>
+<script src="//statics.itc.cn/web/static/js/es5-sham-1d5fa1124b.min.js"></script>
+<script src="//statics.itc.cn/web/static/js/html5shiv-21fc8c2ba6.js"></script>
+<link href="//statics.itc.cn/web/static/css/ie8hack-9dce3c3b96.css" rel="stylesheet" />
+<![endif]-->
+<script type="text/javascript">
+//解決IE8,IE9不支持console的问题
+(function() {
+    var method;
+    var noop = function() {};
+    var methods = [
+        'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+        'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+        'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+        'timeStamp', 'trace', 'warn'
+    ];
+    var length = methods.length;
+    var console = (window.console = window.console || {});
+
+    while (length--) {
+        method = methods[length];
+
+        // Only stub undefined methods.
+        if (!console[method]) {
+            console[method] = noop;
+        }
+    }
+}());
+</script>
+<script type="text/javascript">
+    (function () {
+        var html = document.getElementsByTagName("html")[0];
+        var width = Math.min(document.documentElement.clientWidth, 790);
+        width = width < 320 ? 320 : width;
+        if (document.documentElement.clientWidth <= 1024) {
+            html.style.fontSize = width / 790 * 79 + 'px';
+        }
+        if (window.addEventListener) {
+            window.addEventListener('resize', resizeHandler);
+        }
+        else if (window.attachEvent) {
+            window.attachEvent('onresize', resizeHandler);
+        }
+        function resizeHandler() {
+            if (document.documentElement.clientWidth <= 1024) {
+                var width = Math.min(document.documentElement.clientWidth, 790);
+                width = width < 320 ? 320 : width;
+                html.style.fontSize = width / 790 * 79 + 'px';
+            } else {
+                html.style.fontSize = "16px";
+            }
+        };
+    })();
+</script>
+
+
+    </head>
+            <body class="article-page" data-region="154" data-spm="content">
+        <div class="wrapper-box">
+            <header id="main-header" class="error-head">
+
+
+	<div class="area">
+		<div class="head-nav left" data-spm="nav">
+			<ul>
+			    <li class="index"><a data-clev="10220248" target="_blank" href="http://www.sohu.com"><em class="icon-home icon"></em><em class="sohu-logo">搜狐首页</em></a></li>
+														<li><a target="_blank" data-clev="10220249" href="http://news.sohu.com/">新闻</a></li>
+																			<li><a target="_blank" data-clev="10220250" href="http://sports.sohu.com/">体育</a></li>
+																			<li><a target="_blank" data-clev="10220251" href="http://auto.sohu.com/">汽车</a></li>
+																			<li><a target="_blank" data-clev="10220252" href="http://www.focus.cn/">房产</a></li>
+																			<li><a target="_blank" data-clev="10220253" href="http://travel.sohu.com/">旅游</a></li>
+																			<li><a target="_blank" data-clev="10220254" href="http://learning.sohu.com/">教育</a></li>
+																			<li><a target="_blank" data-clev="10220255" href="http://fashion.sohu.com/">时尚</a></li>
+																			<li><a target="_blank" data-clev="10220256" href="http://it.sohu.com/">科技</a></li>
+																			<li><a target="_blank" data-clev="10220257" href="http://business.sohu.com/">财经</a></li>
+																			<li><a target="_blank" data-clev="10220258" href="http://yule.sohu.com/">娱乐</a></li>
+																																																																																																																									<li class="more-nav"><a class="more-tag" href="javascript:void(0)">更多<em class="cor"></em></a>
+					<div class="more-nav-box">
+																																																																																																																																																					<a href="http://baobao.sohu.com/">母婴</a>
+																										<a href="http://health.sohu.com/">健康</a>
+																										<a href="http://history.sohu.com/">历史</a>
+																										<a href="http://mil.sohu.com/">军事</a>
+																										<a href="http://chihe.sohu.com/">美食</a>
+																										<a href="http://cul.sohu.com/">文化</a>
+																										<a href="http://astro.sohu.com/">星座</a>
+																										<a href="https://www.sohu.com/subject">专题</a>
+																										<a href="http://game.sohu.com/">游戏</a>
+																										<a href="http://fun.sohu.com/">搞笑</a>
+																										<a href="http://acg.sohu.com/">动漫</a>
+																										<a href="http://pets.sohu.com/">宠物</a>
+																		</div>
+				</li>
+			</ul>
+		</div>
+		<div id="head-login" class="right login">
+		</div>
+	</div>
+
+</header>            <div class="location-without-nav"></div>
+            <div class="area clearfix" id="article-container">
+                <div class="column left">
+	<div class="user-info" id="user-info" data-spm="author">
+    <div class="user-pic">
+        <!-- fromWhere为10是马甲号作者不可点击进入个人页面 -->
+                    <a href="https://mp.sohu.com/profile?xpt=cHBhZzE2OTU0ZjQyOTY5YUBzb2h1LmNvbQ==&_f=index_pagemp_1" target="_blank"><img src="http://sucimg.itc.cn/avatarimg/963d59abc8544cfb8b0d29fc9c852695_1484812755279" alt=""></a>
+            </div>
+
+    <h4>
+                    <a href="https://mp.sohu.com/profile?xpt=cHBhZzE2OTU0ZjQyOTY5YUBzb2h1LmNvbQ==&_f=index_pagemp_1" target="_blank">量子位</a>
+            </h4>
+    <!-- 积分 -->
+            <div class="fox-wrap" id="fox-integration">
+            <div class="fox-head-wrap" data-grade="tag">
+                                                                    <span class="fox-logo 
+                                                fox-golden
+                        ">
+                    </span>
+                                    <span class="fox-logo 
+                                                fox-golden
+                        ">
+                    </span>
+                            </div>
+            <div class="fox-hover-wrap" data-grade="grade">
+                <div class="fox-each-wrap 
+                                        fox-each-golden
+                    ">
+                    <p class="fox-content">
+                        由内容质量、互动评论、分享传播等多维度分值决定，勋章级别越高(
+                        <span class="fox-grade"></span>
+                        )，代表其在平台内的综合表现越好。
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+                    <dl class="user-num">
+        <dd><span class="value" data-value="3997" data-role="info-article-num"><em class="num"></em></span>文章</dd>
+        <dd><span class="value" data-value="" data-role="info-read-num"><em class="num"></em></span>总阅读</dd>
+    </dl>
+    <!-- 非马甲号作者 -->
+            <div class="user-more">
+            <a href="https://mp.sohu.com/profile?xpt=cHBhZzE2OTU0ZjQyOTY5YUBzb2h1LmNvbQ==&_f=index_pagemp_2" target="_blank">查看TA的文章&gt;</a>
+        </div>
+    </div>	<div class="article-do" id="article-do" data-spm="share">
+		<div class="article-done">
+    <dl>
+
+        <dd class="comment-do"><a href="#comment_area" data-spm-acode="8089"><span class="num" data-role="comment-count"></span><em class="comment-icon icon"></em></a></dd>
+        <!--<dd class="zan-do" data-role="like-btn"><a href="javascript:void(0)"><span class="num" data-role="like">0</span><em class="icon zan-icon"></em></a>
+
+            <span class="add-one">+1</span>
+        </dd>-->
+    </dl>
+</div>
+		<div class="share" id="share">
+
+		</div>
+
+	</div>
+
+</div>                <div class="left main">
+                    <div data-spm="content"> 
+                        <div class="text">
+                            <div class="text-title">
+    <h1>
+                    PyTorch终于能用上谷歌云TPU，推理性能提升4倍，我们该如何薅羊毛？
+                <span class="article-tag">
+                 </span>
+    </h1>
+            <div class="article-info">
+        <span class="time" id="news-time" data-val="1570939289000">2019-10-13 12:01</span>
+        <span data-role="original-link">来源:<a href="//www.sohu.com" target="_blank">量子位</a></span>
+        
+    </div>
+</div>
+<article class="article" id="mp-editor">
+    <!-- 政务处理 -->
+          <p data-role="original-title" style="display:none">原标题：PyTorch终于能用上谷歌云TPU，推理性能提升4倍，我们该如何薅羊毛？</p>
+            <p>晓查 发自 凹非寺 </p> 
+<p>量子位 报道 | 公众号 QbitAI </p> 
+<p style="text-align: left;">昨天，Facebook在PyTorch开发者大会上正式推出了PyTorch 1.3，并宣布了对谷歌云TPU的全面支持，而且还可以在Colab中调用云TPU。</p> 
+<p style="text-align: left;">之前机器学习开发者虽然也能在Colab中使用PyTorch，但是支持云TPU还是第一次，这也意味着你不需要购买昂贵的GPU，可以在云端训练自己的模型。</p> 
+<p style="text-align: left;">而且如果你是谷歌云平台（Google Cloud Platform）的新注册用户，还能获得300美元的免费额度。</p> 
+<p style="text-align: center;"><img src="http://5b0988e595225.cdn.sohucs.com/images/20191013/0ed5093fe6d044a4b639c2d0bd5d4a36.jpeg" /></p> 
+<p style="text-align: left;">现在PyTorch官方已经在Github上给出示例代码，教你如何免费使用谷歌云TPU训练模型，然后在Colab中进行推理。</p> 
+<p>训练ResNet-50 </p> 
+<p style="text-align: left;">PyTorch先介绍了在云TPU设备上训练ResNet-50模型的案例。如果你要用云TPU训练其他的图像分类模型，操作方式也是类似的。</p> 
+<p style="text-align: left;">在训练之前，我们先要转到控制台创建一个新的虚拟机实例，指定虚拟机的名称和区域。</p> 
+<p style="text-align: center;"><img src="http://5b0988e595225.cdn.sohucs.com/images/20191013/041f96847cca4345b3b8c571de56b41c.jpeg" /></p> 
+<p style="text-align: left;">如果要对Resnet50在真实数据上进行训练，需要选择具有最多CPU数量的机器类型。为了获得最佳效果，请选择<strong>n1-highmem-96</strong>机器类型。</p> 
+<p style="text-align: left;">然后选择Debian GNU/Linux 9 Stretch + PyTorch/XLA启动盘。如果打算用ImageNet真实数据训练，需要至少300GB的磁盘大小。如果使用假数据训练，默认磁盘大小只要20GB。</p> 
+<p>创建TPU </p> 
+<ol> 
+ <li>转到控制台中创建TPU。</li> 
+ <li>在“Name”中指定TPU Pod的名称。</li> 
+ <li>在“Zone”中指定云TPU的区域，确保它与之前创建的虚拟机在同一区域中。</li> 
+ <li>在“ TPU Type”下，选择TPU类型，为了获得最佳效果，请选择v3-8TPU（8个v3）。</li> 
+ <li>在“ TPU software version”下，选择最新的稳定版本。</li> 
+ <li>使用默认网络。</li> 
+ <li>设置IP地址范围，例如10.240.0.0。</li> 
+</ol> 
+<p style="text-align: left;">官方建议初次运行时使用假数据进行训练，因为fake_data会自动安装在虚拟机中，并且只需更少的时间和资源。你可以使用conda或Docker进行训练。</p> 
+<p style="text-align: left;">在fake_data上测试成功后，可以开始尝试用在ImageNet的这样实际数据上进行训练。</p> 
+<p style="text-align: left;">用conda训练：</p> 
+<p><span># Fill in your the name of your VM and the zone.</span></p> 
+<p>$ gcloud beta compute ssh <span>"your-VM-name"</span>--zone <span>"your-zone"</span>. </p> 
+<p>(vm)$ <span>export</span>TPU_IP_ADDRESS=your-ip-address </p> 
+<p>(vm)$ <span>export</span>XRT_TPU_CONFIG= <span>"tpu_worker;0;<span>$TPU_IP_ADDRESS</span>:8470"</span></p> 
+<p>(vm)$ <span>ulimit</span>-n 10240 </p> 
+<p>(vm)$ conda activate torch-xla-0.5 </p> 
+<p>(torch-xla-0.5)$ python /usr/share/torch-xla-0.5/pytorch/xla/ <span>test</span>/test_train_imagenet.py --datadir=~/imagenet --model=resnet50 --num_epochs=90 --num_workers=64 --batch_size=128 --log_steps=200 </p> 
+<p style="text-align: left;">用Docker训练：</p> 
+<p><span># Fill in your the name of your VM and the zone.</span></p> 
+<p>$ gcloud beta compute ssh <span>"your-VM-name"</span>--zone <span>"your-zone"</span>. </p> 
+<p>(vm)$ <span>export</span>TPU_IP_ADDRESS=your-ip-address </p> 
+<p>(vm)$ docker run --shm-size 128G -v ~/imagenet:/tmp/imagenet -e XRT_TPU_CONFIG= <span>"tpu_worker;0;<span>$TPU_IP_ADDRESS</span>:8470"</span>gcr.io/tpu-pytorch/xla:r0.5 python3 pytorch/xla/ <span>test</span>/test_train_imagenet.py --model=resnet50 --num_epochs=90 --num_workers=64 --log_steps=200 --datadir=/tmp/imagenet </p> 
+<p style="text-align: left;">在n1-highmem-96的虚拟机上选用完整v3-8 TPU进行训练，第一个epoch通常需要约20分钟，而随后的epoch通常需要约11分钟。该模型在90个epoch后达到约76％的top-1准确率。</p> 
+<p style="text-align: left;">为了避免谷歌云后续进行计费，在训练完成后请记得删除虚拟机和TPU。</p> 
+<p>性能比GPU提升4倍 </p> 
+<p style="text-align: left;">训练完成后，我们就可以在Colab中导入自己的模型了。</p> 
+<p style="text-align: left;">打开notebook文件，在菜单栏的<strong>Runtime</strong>中选择<strong>Change runtime type</strong>，将硬件加速器的类型改成TPU。</p> 
+<p><img height="auto" width="856" src="http://5b0988e595225.cdn.sohucs.com/images/20191013/d1451c9634134b28a2c1eff85f4ee2dc.png" /></p> 
+<p style="text-align: left;">先运行下面的代码单元格，确保可以访问Colab上的TPU：</p> 
+<p><span>import</span>os </p> 
+<p><span>assert</span>os.environ[‘COLAB_TPU_ADDR’], ‘Make sure to select TPU <span>from</span>Edit &gt; Notebook settings &gt; Hardware accelerator’ </p> 
+<p style="text-align: left;">然后在Colab中安装兼容PyTorch/TPU组件：</p> 
+<p>DIST_BUCKET= <span>"gs://tpu-pytorch/wheels"</span></p> 
+<p>TORCH_WHEEL= <span>"torch-1.15-cp36-cp36m-linux_x86_64.whl"</span></p> 
+<p>TORCH_XLA_WHEEL= <span>"torch_xla-1.15-cp36-cp36m-linux_x86_64.whl"</span></p> 
+<p>TORCHVISION_WHEEL= <span>"torchvision-0.3.0-cp36-cp36m-linux_x86_64.whl"</span></p> 
+<p><span># Install Colab TPU compat PyTorch/TPU wheels and dependencies</span></p> 
+<p>!pip uninstall -y torch torchvision </p> 
+<p>!gsutil cp <span>"<span>$DIST_BUCKET</span>/<span>$TORCH_WHEEL</span>"</span>. </p> 
+<p>!gsutil cp <span>"<span>$DIST_BUCKET</span>/<span>$TORCH_XLA_WHEEL</span>"</span>. </p> 
+<p>!gsutil cp <span>"<span>$DIST_BUCKET</span>/<span>$TORCHVISION_WHEEL</span>"</span>. </p> 
+<p>!pip install <span>"<span>$TORCH_WHEEL</span>"</span></p> 
+<p>!pip install <span>"<span>$TORCH_XLA_WHEEL</span>"</span></p> 
+<p>!pip install <span>"<span>$TORCHVISION_WHEEL</span>"</span></p> 
+<p>!sudo apt-get install libomp5 </p> 
+<p style="text-align: left;">接下来就可以导入你要训练好的模型和需要进行推理的图片了。</p> 
+<p style="text-align: left;">在PyTorch上使用TPU对性能的提升到底有多明显呢？官方选用了v2-8的一个核心，即1/8 TPU的情形，与使用英伟达Tesla K80 GPU进行对比，实测显示推理时间大大缩短，性能约有4倍左右的提升。</p> 
+<p><img height="auto" width="812" src="http://5b0988e595225.cdn.sohucs.com/images/20191013/96d86e8ebb2747c9801bc0a18e9ea4d0.png" /></p> 
+<p style="text-align: left;">GitHub地址：</p> 
+<p>https://github.com/pytorch/xla/tree/master/contrib/colab</p> 
+<p style="text-align: right;"><span style="font-size: 16px;">作者系网易新闻·网易号“各有态度”签约作者</span></p> 
+<p>— <strong>完</strong>—</p> 
+<p><strong>大会启幕！预见智能科技新未来</strong></p> 
+<p><strong>量子位MEET 2020智能未来大会</strong><span>启幕，将携手优秀AI企业、杰出科研人员呈现一场高质量行业盛会！详情可点击图片：</span></p> 
+<p><strong>榜单征集！三大奖项，锁定AI Top玩家</strong></p> 
+<p><strong>2019中国人工智能年度评选</strong><span>启幕，将评选领航企业、商业突破人物、最具创新力产品3大奖项，并于MEET 2020大会揭榜，欢迎优秀的AI公司扫码报名！</span></p> 
+<p><span style="font-size: 16px;"><strong>量子位 </strong></span><span style="font-size: 16px;">QbitAI · 头条号签约作者</span></p> 
+<p>վ'ᴗ' ի 追踪AI技术和产品新动态</p> 
+<p>喜欢就点「好看」吧 ! <a href="//www.sohu.com/?strategyid=00001 " target="_blank" title="点击进入搜狐首页" id="backsohucom" style="white-space: nowrap;"><span class="backword"><i class="backsohu"></i>返回搜狐，查看更多</span></a></p>      <!-- 政务账号添加来源标示处理 -->
+      <!-- 政务账号添加来源标示处理 -->
+      <p data-role="editor-name">责任编辑：<span></span></p>
+</article>
+<script>
+    (function() {
+        function getBrandHtml() {
+            var brands = [],
+            html = '';
+                        for(var i = 0; i < brands.length; i++) {
+                var brand = brands[i];
+                if(brands.length == i+1) {
+                    html+= '<a class="username-link" href="'+brand.url+'" target="_blank">'+brand.name+'</a>';
+                } else {
+                    html+= '<a class="username-link" href="'+brand.url+'" target="_blank">'+brand.name+'</a>、';
+                }
+            }
+            return html;
+
+        };
+        if(document.getElementById('linkBtn')){
+            document.getElementById('linkBtn').onclick = function() {
+                $('#brands').removeClass('brand');
+                $('#tipInfo').text('已实名回应');
+                $('#linkBtn').remove();
+                $('.real-response .content').css('line-height', '20px');
+                $('.real-response .time').css('line-height', '20px');
+            };
+    
+            document.getElementById('brands').innerHTML = getBrandHtml();
+        };
+    })();
+</script>
+    <div id="atricleVote"></div>
+  <div class="statement">声明：该文观点仅代表作者本人，搜狐号系信息发布平台，搜狐仅提供信息存储空间服务。</div>  <div class="bottom-relate-wrap">
+    <div class="bottom-relate-tag">
+        <div class="article-bottom-banner">
+                        <!-- 标签展示，数据最多返回10个 -->
+                                                    <a class="tag" href="//search.sohu.com/?keyword=Colab&queryType=outside" target="_blank" data-spm-stop='nev' data-spm-data="t-1">Colab</a>
+                                    <a class="tag" href="//search.sohu.com/?keyword=vm&queryType=outside" target="_blank" data-spm-stop='nev' data-spm-data="t-2">vm</a>
+                                    <a class="tag" href="//search.sohu.com/?keyword=xla&queryType=outside" target="_blank" data-spm-stop='nev' data-spm-data="t-3">xla</a>
+                                    <a class="tag" href="//search.sohu.com/?keyword=虚拟机&queryType=outside" target="_blank" data-spm-stop='nev' data-spm-data="t-4">虚拟机</a>
+                                    <a class="tag" href="//search.sohu.com/?keyword=pip&queryType=outside" target="_blank" data-spm-stop='nev' data-spm-data="t-5">pip</a>
+                                    </div>
+    </div>
+    <div class="read-wrap">
+        <span class="read-num">阅读 (<em data-role="pv" data-val="$articleStat.pv"></em>)</span>
+    </div>
+</div>
+     
+                        </div>
+                        <div class="article-oper-bord article-oper-bord">
+
+</div>
+                    </div>
+                    <div class="article-allsee clear" id="articleAllsee">
+    <div class="title">
+        <span>
+            <em class="ln"></em>
+            大家都在看
+        </span>
+    </div>
+    <div class="allsee-list clear" id="allseeList" data-spm="fd-link">
+    </div>
+</div>                    <div class="god-article-bottom" id="god_bottom_banner">
+</div>
+<div class="user-god clear" id="user-post" style="display:none">
+
+</div>                    <div class="comment" id="comment_area" data-spm="comment"  data-abdata="1">
+    <div id="mp-comment" sid="346673470"></div> 
+</div>                    
+<div class="groom-read">
+    <div class="title"><span><em class="ln"></em>推荐阅读</span></div>
+    <!-- <div class="groom-menu clear " id="news-recommend-nav" data-spm="hottag">
+<ul>     <li class="cur" data-id=""><a href="javascript:void(0)"><em class="dot"></em>推荐</a></li>
+               <li data-id="" data-tag-id="78240" ><a href="//search.sohu.com/?keyword=创业武林大会&queryType=outside">创业武林大会</a></li>
+                <li data-id="" data-tag-id="48130" ><a href="//search.sohu.com/?keyword=移动互联网&queryType=outside">移动互联网</a></li>
+                <li data-id="" data-tag-id="48139" ><a href="//search.sohu.com/?keyword=工业技术&queryType=outside">工业技术</a></li>
+                <li data-id="" data-tag-id="68623" ><a href="//search.sohu.com/?keyword=国家电网&queryType=outside">国家电网</a></li>
+                <li data-id="" data-tag-id="68625" ><a href="//search.sohu.com/?keyword=阿里星球&queryType=outside">阿里星球</a></li>
+                <li data-id="" data-tag-id="67603" ><a href="//search.sohu.com/?keyword=Surface&queryType=outside">Surface</a></li>
+                <li data-id="" data-tag-id="68626" ><a href="//search.sohu.com/?keyword=陈竺&queryType=outside">陈竺</a></li>
+                <li data-id="" data-tag-id="48160" ><a href="//search.sohu.com/?keyword=运动手环&queryType=outside">运动手环</a></li>
+                <li data-id="" data-tag-id="48162" ><a href="//search.sohu.com/?keyword=智能手表&queryType=outside">智能手表</a></li>
+                <li data-id="" data-tag-id="48165" ><a href="//search.sohu.com/?keyword=Apple Watch&queryType=outside">Apple Watch</a></li>
+                <li data-id="" data-tag-id="48167" ><a href="//search.sohu.com/?keyword=测评&queryType=outside">测评</a></li>
+                <li data-id="" data-tag-id="48173" ><a href="//search.sohu.com/?keyword=AR&queryType=outside">AR</a></li>
+            
+</ul>
+</div>
+ -->
+    <div class="news-list clear" id="main-news" style="min-height:1000px">
+    </div>
+</div>
+                </div>
+                <div class="sidebar right" id="right-side-bar" data-a="${isBaiDuAd}">
+    <div class="search-right" id="search" data-spm="search-box"></div>
+    <div class="godA" id="nav_button">
+
+    </div>
+        <div class="godR" id="god_1">
+
+    </div>
+    <div id="god_1_2" style="padding:10px 20px; display:none;">
+
+    </div>
+    
+    
+            <div data-role="hot-pic" class="clearfix bord hot-atlas"></div>
+        <div data-role="four-pic" class="clearfix hot-atlas"></div>
+        <div class="godR" id="god_2">
+
+    </div>
+    <div id="god_2_2" style="padding:10px 20px; display: none;">
+
+    </div>
+    <div class="hot-article clear bord" id="hot-news" data-spm="tw">
+ </div>
+
+    <div class="godR" id="god_3">
+
+    </div>
+    <div id="god_3_2" style="padding:10px 20px; display: none;">
+        
+    </div>
+    <div class="bord clear recommend" id="recommend-writer" data-spm="mp">
+
+</div>    <div class="godR" id="god_4">
+
+    </div>
+    <div id="god_4_2" style="padding:10px 20px; display: none;">
+        
+    </div>
+    <div class="article-recom right-side clear" id="sogou-words">
+</div>    <div id="god_5" style="padding:10px 20px;" data-spm="sqfive-ad">
+        
+    </div>
+     <div class="pages-fun  " id="pages-fun"></div>
+    <div id="god_fix_container" class="right-fixed" style="display:none;">
+        <div class="godR" id="god_fix_1">
+
+        </div>
+        <div id="god_6_2" class="god-ad-fix" style="display: none; overflow: hidden;">
+
+        </div> 
+    </div>
+     <div id="fixed-view" data-rel="#hot-news" style="z-index:2">
+    </div>
+</div>
+
+
+
+             </div>
+            <div id="float-btn" class="float-links"></div>             <div class="sohu-khd" data-role="wp-ad"><a href="javascript:void(0)" class="close-khd"></a><a href="https://www.microsoft.com/zh-cn/store/p/%E6%90%9C%E7%8B%90uwp/9nb9229mmbjh" target="_blank" class="download-khd"><i class="icon khd-d-icon"></i>免费获取</a></div>
+            <div id="pop-news" class="pop-news"></div>            <div class="left-bottom-float" id="left-bottom-ad">
+</div>        </div>
+            <div id="sohu-mod" class="sohu-mod">
+  <div class="area sohu-frag">
+    <div class="left sohu-news">
+      <div class="title">今日搜狐热点</div>
+      <div class="list">
+        <ul>
+                  </ul>
+      </div>
+    </div>
+    <div class="left auto-sohu">
+      <div class="count-down"><span>6</span>秒后</div>
+      <div class="go-sohu"><a href="http://www.sohu.com?strategyid=00004">进入搜狐首页</a></div>
+      <a href="#" target="_blank" class="close-sohu"></a>
+    </div>
+  </div>
+</div>
+<div id="sohu-remend" class="sohu-remend">
+    <div class="area sohu-remend-box">
+        <div class="remend-tt left">今日推荐</div>
+        <div class="left sohu-pp">
+            <ul>
+                            </ul>
+        </div>
+        <div class="right sohu-do">
+            <a data-clev="10220279" href="http://www.sohu.com?strategyid=00004"><div class="go-sohu">进入搜狐首页</div></a>
+            <a data-clev="10220280" href="//shang.qq.com/wpa/qunwpa?idkey=04e47b9e7004c967962f52532465719ae8a30cf05413c11934ec121fb7e2dd62" target="_blank" class="feedback-link">意见反馈</a>
+            <a data-clev="10220281" href="javascript:void(0)" target="_blank" class="close-remend"></a>
+        </div>
+    </div>
+    <div class="sohu-remend-layer"></div>
+</div>            
+
+<script src="//statics.itc.cn/web/static/js/lib-61587d9fb8.js"></script>
+<script src="//39d0825d09f05.cdn.sohucs.com/sdk/passport-4.0.3.js"></script>
+<!--<script src="//statics.itc.cn/web/static/js/ie8hack-07e05e83f1.js"></script>-->
+<script src="//txt.go.sohu.com/ip/soip"></script>
+<script src="//statics.itc.cn/spm/prod/js/1.0.2/index.js"></script>
+<script src="//statics.itc.cn/web/static/js/main-6c3f112758.js"></script>
+<script src="//js.sohu.com/pv.js"></script>
+            <!-- 城市以及ip获取接口链接，全局下挂载 window.returnCitySN -->
+<script src="//pv.sohu.com/cityjson?ie=utf-8"></script>
+<script>
+try{console.log("执行成功")
+        window.sohu_mp.article({
+        channel_id: "30",
+        news_id: "346673470",
+        cms_id: "$mpNews.cmsId",
+        media_id: "610300",
+        passport: "ppag16954f42969a@sohu.com",
+        weboUrl: "https://mp.sohu.com/profile?xpt=cHBhZzE2OTU0ZjQyOTY5YUBzb2h1LmNvbQ==",
+        title: "PyTorch终于能用上谷歌云TPU，推理性能提升4倍，我们该如何薅羊毛？",
+        channel_url:"//it.sohu.com",
+        categoryId:"911",
+        //abData_fd用于abtest
+        abData:"",
+        abData_fd:"",
+        abData_tw:"",
+        originalId:"$mpNews.originalId",
+        originalStatus:"0",
+        hasVoteInfo: "false",
+        isBaiDuAd: "",
+        isPure: "${pure}",
+        mpNewsExt:{
+            "modelId":""
+        }});
+}
+catch(e){
+    var html = '<div class="err-js">' +
+                '<span><em class="icon err-js-icon"></em>JS加载错误，请重新加载。</span>' +
+                '<a href="javascript:window.location.reload()" target="_blank" class="cached-btn"' +
+                '><em class="icon-cached"></em>刷新</a></div>';
+    $(document.body).prepend(html);
+    // Raven.captureException(e);
+    console.error("发生错误",e);
+}
+</script>
+<script>
+    (function (G,D,s,c,p) {
+        c={//监测配置
+            //此处UA参数从全局获取，在文章页初始化时进行设置，默认为UA-sohu-000011，代表新闻频道
+            UA: window._iwtUa || "UA-sohu-000011", //客户项目编号,由系统生成
+            NO_FLS:1,
+            WITH_REF:1,
+            URL:'//statics.itc.cn/iwtReport/iwt-min.js',//iwt.js的URL位置，请客户自行托管JS文件，只需修改此值，此js手动上传至云台
+            API_URL:"//irs01.com/irt?",
+        };
+        G._iwt?G._iwt.track(c,p):(G._iwtTQ=G._iwtTQ || []).push([c,p]),!G._iwtLoading && lo();
+        function lo(t) {
+            G._iwtLoading=1;s=D.createElement("script");s.src=c.URL;
+            t=D.getElementsByTagName("script");t=t[t.length-1];
+            t.parentNode.insertBefore(s,t);
+        }
+    })(this,document);
+</script>
+<!--[if lt IE 8]>
+<script type="text/javascript">
+(function(){
+    var ua = navigator.userAgent;
+    var version;
+    var html = '<div class="area clear">' +
+        '<div class="ie-low">' +
+        '<p>您的浏览器版本过低<br>为了更好的体验，请升级你的浏览器。</p>' +
+        '<h5><a href="https://ie.sogou.com" target="_blank" class="upgrade-btn">马上升级</a></h5>' +
+        '</div></div>';
+    if (/MSIE ([^;]+)/.test(ua)) {
+        version = parseInt(RegExp["$1"]);
+        if (version<8) {
+            document.body.innerHTML=html;
+            var reg = new RegExp("(^| )SUV=([^;]*)(;|$)");
+            var suvs = unescape(document.cookie.match(reg)[2]); 
+            var spv_server_src = "http://pv.sohu.com/action.gif?actionId=10078&SUV="+suvs;
+            var scripts = document.createElement('script');
+            scripts.src = spv_server_src;
+            document.body.appendChild(scripts);   
+            Raven.captureException(new Error('ie'+version));   
+        }
+    }
+})()
+</script>
+<![endif]-->
+<script src="//images.sohu.com/bill/default/sohu-require.js"></script>
+<script type="text/javascript"> require(["sjs/matrix/ad/passion"]);</script>
+<script type="text/javascript" src="//www.sohu.com/sohuflash_1.js"></script>
+<script type="text/javascript" src="//images.sohu.com/bill/s2015/jscript/lib/sjs/matrix/ad/form/delivery.js"></script>
+<script type="text/javascript" src="//images.sohu.com/bill/s2015/jscript/lib/sjs/matrix/pv/pagePVmonitor.js"></script>
+<!-- <script src="//statics.itc.cn/spm/prod/js/1.0.1/index.js"></script> -->
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script><!-- 百度联盟广告，多条广告如下脚本只需引入一次 -->
+<script type="text/javascript" src="https://cpro.baidustatic.com/cpro/ui/c.js" async="async" defer="defer"></script>
+    </body>
+</html>

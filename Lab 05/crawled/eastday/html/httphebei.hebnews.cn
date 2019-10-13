@@ -1,0 +1,585 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>河北频道_河北资讯_河北新闻网</title>
+<base target="_blank" />
+<link rel="shortcut icon" type="image/ico" href="http://www.hebnews.cn/index.ico" />
+<link href="http://img.hebnews.cn/94870.files/images/default2.css?eee" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://img.hebnews.cn/pc.js"></script>
+<script type="text/javascript" src="http://img.hebnews.cn/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="http://img.hebnews.cn/jquery.SuperSlide.2.1.1.js"></script>
+<script src="http://dup.baidustatic.com/js/ds.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?fc19c432c6dd37e78d6593b2756fb674";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<style>
+.min_feed img{    background: url(http://img.hebnews.cn/92410.files/assets/images/img_fix.png); background-size:100% 100%}
+</style>
+<body>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+.g_width {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+nav{width:100%;min-width:1200px;height:60px;}
+nav .w1000{position:relative;width:1200px;margin: 0 auto;overflow:visible}
+nav .w1000 span{display:none;padding-right:26px;
+    float: left;
+    height:22px; line-height:22px; margin-top:7px
+    }
+nav .w1000 a{color:#fff;margin-right:6px; }
+nav span{vertical-align:middle}
+nav b.nav_jia{display:inline-block;width:15px;height:15px;background:url(http://img.hebnews.cn/88590.files/images/nav_jia.png) no-repeat;vertical-align:middle;cursor:pointer;position:absolute;z-index:100;right:10px;top:10px}
+nav .nav_custom{width:1150px;height:150px;position:absolute;top:36px;z-index:99999;background:#f5f5f5;display:none;padding-top:60px;padding-left:50px; left:0}
+nav .nav_custom em{display:inline-block;padding:3px 13px;font-style:normal;cursor:pointer;margin:12px 10px 2px 12px;color:#333;font-size:14px;background:#ffffff;position:relative}
+nav .nav_custom em .delimg{position:absolute;width:10px;height:10px;background:url(http://img.hebnews.cn/88590.files/images/close.png) no-repeat;display:block;top:-4px;right:-4px;background-size:cover;z-index:500}
+nav .nav_custom em.active{background:#e60012;color:#fff}
+nav .nav_custom b.queding{position:absolute;bottom:5px;right:65px;padding:3px 15px;background:#e60012;color:#fff}
+nav .nav_custom b{position:absolute;bottom:5px;right:10px;color:#fff;font-weight:normal;cursor:pointer}
+nav .nav_custom .del_nav{position:absolute;top:205px;right:15px;color:#333;height:25px;width:80px;line-height:25px;text-align:center;font-weight:normal;cursor:pointer;border:1px solid #c7c7c7}
+nav .nav_custom .close_nav{position:absolute;top:20px;right:15px;height:30px}
+nav .nav_custom .navstatus{position:absolute;width:880px;z-index:500;top:25px;left:65px;font-size:14px;color:#333;height:20px;line-height:20px;display:block}
+nav .nav_custom .navstatus strong{font-weight:normal}
+nav .nav_custom .navstatus .error_tip{color:#e70012}
+nav .nav_custom .navstatus .tip_n{color:#e60012;font-weight:bold;margin:0 3px}
+nav .nav_custom .navstatus a{float:right;color:#333}
+nav .nav_custom .navfh{cursor:pointer}
+
+body{ min-width:1200px}
+.h2017_g_width{ width:1200px; margin: 0 auto; overflow:hidden}
+
+
+.h2017_header{ height:153px; background: url(http://img.hebnews.cn/88590.files/images/logo201701.jpg) no-repeat  center; position:relative}
+.h2017_header_logo{
+	display: block;
+	position: absolute;
+	width: 400px;
+	height: 100px;
+	outline: none;
+	left: 401px;
+	top: 26px;
+	text-indent: -9999px
+}
+.h2017_time{ float: left; margin-top:105px; margin-right: 10px}
+.h2017_weather{ float: left; margin-top:93px}
+.h2017_xianhao{ float: left; clear:left;}
+.h2017_search{ float:right; margin-top: 85px;background:url(http://img.hebnews.cn/88590.files/images/search.jpg); width:176px; height:31px;}
+.h2017_search_text{width:120px; border:0; background:0; height:30px; line-height:30px; padding-left:10px;color:#a9a9a9; font-size:14px; float:left}
+.h2017_search_buttom{width:40px; float:right;height30px; height:31px; border:0; background:0; cursor:pointer; }
+
+
+.h2017_navigation{ padding:8px 0 8px 15px; height: 68px; background:#ce1a0c;font-size: 16px;/**height:110px; */overflow:visible}
+.h2017_navigation ul li{ line-height:34px; color:#fff; width:70px; float:left}
+.h2017_navigation ul li a{ color:#fff}
+.w105{ width:103px!important;}
+
+
+/*.h2017_navigation li{ padding:0 11.5px; float: left ; border-right:1px #b00c00 solid; margin-top: 20px }
+.h2017_navigation a{ color:#fff; text-decoration: none}
+.h2017_navigation a:hover{text-decoration: underline;}
+li.h2017_navigation_jia{border:0; float:right; width:50px; height: 50px; text-align: center;padding-bottom:40px; overflow: visible;}
+li.h2017_navigation_jia:hover .h2017_navigation_more{ display: block; position: absolute; z-index: 999}
+.h2017_navigation_more{ display: none ; width: 440px;height:80px; margin-left: -380px; margin-top: 10px;*margin-top:30px;box-shadow: 0px 0 5px #d0d0d0;border:#dbdbdb solid 1px;*background:#fff; position:relative}
+.h2017_navigation_more li{margin-top: 12px; padding:0 10px 0 20px; border-right: 0}
+.h2017_navigation_more a{color:#e53a42; position: relative; z-index: 99999 }
+.h2017_navigation_more_bg{ width: 440px; height: 80px; background: #fff; display: block; opacity: .9; position: absolute; z-index: 9999; left:0; top:0}
+*/
+
+
+/*nav_down*/
+#h2017_nav_bg_down{height:38px; background: #f2f2f2;}
+#h2017_nav, #h2017_nav ul{padding: 0;margin: 0;list-style: none;line-height: 1;float: left}
+#h2017_nav li{padding-right:55px; float: left ; margin-top: 13px; font-size: 12px}
+#h2017_nav li a{color:#2a2a2a}   
+#h2017_nav li ul{ /* second-level lists */
+z-index: 9999;  position: absolute;background: #fff;left: -999em;height: auto;width: 280px;margin:0px;padding: 10px 5px;border:1px solid #ddd;box-shadow: 0 0 5px #ddd;border-radius:5px; opacity:0.9;filter:alpha(opacity=90); }
+#h2017_nav li ul li{  float:left; padding:5px; color:#a8a8a8; display:block;height:20px; white-space: nowrap;overflow: visible}
+#h2017_nav li ul li a{ white-space:nowrap}
+*+html #h2017_nav li ul{margin: 16px 0 0 -95px;} /* 二级菜单显示位置调整IE7 */
+*html #h2017_nav li ul{margin: 16px 0 0 -95px;} /* 二级菜单显示位置调整 IE6 */
+#h2017_nav li a:hover, #h2017_nav li a:active {color: #255063;text-decoration: none;}
+#h2017_nav li:hover ul, #h2017_nav li.sfhover ul{ /* lists nested under hovered list items */left: auto; /* 如果上面用left的了,那么这就不用改,最多改个数,如果用display:none了,那么这里改成display:block*/}
+.inline{ display:inline!important}
+</style>
+<script type="text/javascript" src='http://img.hebnews.cn/88590.files/images/click_nav.js' charset='utf-8'></script>
+<div class="h2017_navigation">
+<div class="g_width">
+<ul>
+<li><a target="_blank" href="http://www.hebnews.cn/">首页</a></li>
+<li class="w105"><a target="_blank" href="http://bbs.hebnews.cn/">影像河北</a></li>
+<li><a target="_blank" href="http://gov.hebnews.cn">政务</a></li>
+<li><a target="_blank" href="http://theory.hebnews.cn">理论</a></li>
+<li><a target="_blank" href="http://gongyi.hebnews.cn">公益</a></li>
+<li><a target="_blank" href="http://culture.hebnews.cn">文化</a></li>
+<li><a target="_blank" href="http://travel.hebnews.cn">旅游</a></li>
+<li><a target="_blank" href="http://finance.hebnews.cn">财经</a></li>
+<li><a target="_blank" href="http://guoqi.hebnews.cn">国企</a></li>
+<li><a target="_blank" href="http://house.hebnews.cn">房产</a></li>
+<li><a target="_blank" href="http://tc.hebnews.cn">体彩</a></li>
+<li><a target="_blank" href="http://auto.hebnews.cn">汽车</a></li>
+<li><a target="_blank" href="http://piyao.hebnews.cn">辟谣</a></li>
+<li class="w105"><a target="_blank" href="http://shuhua.hebnews.cn">书画鉴赏</a></li>
+<li class="w105"><a target="_blank" href="http://mlxc.hebnews.cn/">美丽乡村</a></li>
+</ul>
+<ul>
+<li><a target="_blank" href="http://hebei.hebnews.cn">河北</a></li>
+<li class="w105"><a target="_blank" href="http://tousu.hebnews.cn">阳光理政</a></li>
+<li><a target="_blank" href="http://xiongan.hebnews.cn">雄安</a></li>
+<li><a target="_blank" href="http://jingji.hebnews.cn">经济</a></li>
+<li><a target="_blank" href="http://edu.hebnews.cn">教育</a></li>
+<li><a target="_blank" href="http://comment.hebnews.cn">时评</a></li>
+<li><a target="_blank" href="http://sports.hebnews.cn">体育</a></li>
+<li><a target="_blank" href="http://health.hebnews.cn">健康</a></li>
+<li><a target="_blank" href="http://digi.hebnews.cn">数码</a></li>
+<li><a target="_blank" href="http://power.hebnews.cn">电力</a></li>
+<li><a target="_blank" href="http://jt.hebnews.cn">交通</a></li>
+<li><a target="_blank" href="http://zhuanti.hebnews.cn">专题</a></li>
+<li><a target="_blank" href="http://wcxx.hebnews.cn">献血</a></li>
+<li class="w105"><a target="_blank" href="http://xczx.hebnews.cn">乡村振兴</a></li>
+<li class="w105"><a target="_blank" href="http://sxbgt.hebnews.cn">失信曝光台</a></li>
+</ul>
+</div>
+</div>
+<div id="h2017_nav_bg_down">
+<div class="h2017_g_width">
+<ul id="h2017_nav">
+<li style="padding-left:10px">市县网群：</li>
+<li><a target="_blank" href="http://sjz.hebnews.cn">石家庄</a>
+<ul>
+<li><a target="_blank" href="http://luancheng.hebnews.cn/index.htm">栾城区</a></li>
+<li><a target="_blank" href="http://pingshan.hebnews.cn/index.htm">平山县</a></li>
+<li><a target="_blank" href="http://zhengding.hebnews.cn/">正定县</a></li>
+<li><a target="_blank" href="http://sjzqx.hebnews.cn/">桥西区</a></li>
+<li><a target="_blank" href="http://sjzca.hebnews.cn/">长安区</a></li>
+<li><a target="_blank" href="http://sjzyh.hebnews.cn/">裕华区</a></li>
+<li><a target="_blank" href="http://sjzgx.hebnews.cn/">高新区</a></li>
+<li><a target="_blank" href="http://jinzhou.hebnews.cn/">晋州市</a></li>
+<li><a target="_blank" href="http://gaoyi.hebnews.cn/">高邑县</a></li>
+<li><a target="_blank" href="http://yuanshi.hebnews.cn/">元氏县</a></li>
+<li><a target="_blank" href="http://zanhuang.hebnews.cn/">赞皇县</a></li>
+<li>新华区</li>
+<li>井陉矿区</li>
+<li>鹿泉区</li>
+<li>藁城区</li>
+<li>新乐市</li>
+<li>深泽县</li>
+<li>无极县</li>
+<li>赵县</li>
+<li>井陉县</li>
+<li>灵寿县</li>
+<li>行唐县</li>
+</ul>
+</li>
+<li><a target="_blank" href="http://cd.hebnews.cn">承德</a>
+<ul>
+<li><a href="http://pingquan.hebnews.cn">平泉市</a></li>
+<li><a href="http://shuangluan.hebnews.cn">双滦区</a></li>
+<li><a href="http://xinglong.hebnews.cn">兴隆县</a></li>
+<li><a href="http://cdx.hebnews.cn">承德县</a></li>
+<li><a href="http://ysyzkq.hebnews.cn">鹰手营子矿区</a></li>
+<li>双桥区</li>
+<li>滦平县</li>
+<li>隆化县</li>
+<li>丰宁满族自治县</li>
+<li>宽城满族自治县</li>
+<li>围场满族蒙古族自治县</li>
+</ul>
+</li>
+<li><a target="_blank" href="http://zjk.hebnews.cn">张家口</a>
+<ul>
+<li><a href="http://zjkjw.hebnews.cn/">张家口市纪委</a></li>
+<li><a href="http://huailai.hebnews.cn/">怀来县</a></li>
+<li><a href="http://zhangbei.hebnews.cn/">张北县</a></li>
+<li><a href="http://xiahuayuan.hebnews.cn/">下花园区</a></li>
+<li><a href="http://wanquanqu.hebnews.cn/">万全区</a></li>
+<li><a href="http://jingkaiqu.hebnews.cn/">经开区</a></li>
+<li><a href="http://chongliqu.hebnews.cn/">崇礼区</a></li>
+<li><a href="http://shangyi.hebnews.cn/">尚义县</a></li>
+<li><a href="http://qiaodongqu.hebnews.cn/">桥东区</a></li>
+<li><a href="http://zjkqx.hebnews.cn/">桥西区</a></li>
+<li><a href="http://zjkxh.hebnews.cn/">宣化区</a></li>
+<li><a href="http://guyuan.hebnews.cn/">沽源县</a></li>
+<li><a href="http://kangbao.hebnews.cn">康保县</a></li>
+<li>尚义县</li>
+<li>蔚县</li>
+<li>阳原县</li>
+<li>怀安县</li>
+<li>涿鹿县</li>
+<li>赤城县</li>
+<li>塞北管理区</li>
+<li>察北管理区</li>
+</ul>
+</li>
+<li><a target="_blank" href="http://qhd.hebnews.cn">秦皇岛</a>
+<ul>
+<li>海港区</li>
+<li>北戴河区</li>
+<li>山海关区</li>
+<li>抚宁区</li>
+<li>昌黎县</li>
+<li>卢龙县</li>
+<li>青龙满族自治县</li>
+<li>经济技术开发区</li>
+<li>北戴河新区</li>
+</ul>
+</li>
+<li><a target="_blank" href="http://ts.hebnews.cn">唐山</a>
+<ul>
+<li><a target="_blank" href="http://qianan.hebnews.cn">迁安市</a></li>
+<li><a target="_blank" href="http://luannan.hebnews.cn">滦南县</a></li>
+<li>丰南区</li>
+<li>遵化市</li>
+<li>滦县</li>
+<li>乐亭县</li>
+<li>迁西县</li>
+<li>玉田县</li>
+<li>路北区</li>
+<li>路南区</li>
+<li>古冶区</li>
+<li>开平区</li>
+<li>丰润区</li>
+<li>曹妃甸区</li>
+<li>汉沽管理区</li>
+<li>海港开发区</li>
+<li>高新开发区</li>
+<li>芦台经济技术开发区</li>
+</ul>
+</li>
+<li><a target="_blank" href="http://lf.hebnews.cn/">廊坊</a>
+<ul>
+<li><a target="_blank" href="http://bazhou.hebnews.cn">霸州市</a></li>
+<li><a target="_blank" href="http://xh.hebnews.cn">香河县</a></li>
+<li><a target="_blank" href="http://lfkfq.hebnews.cn">廊坊开发区</a></li>
+<li>广阳区</li>
+<li>安次区</li>
+<li>三河市</li>
+<li>永清县</li>
+<li>固安县</li>
+<li>文安县</li>
+<li>大城县</li>
+<li>大厂回族自治县</li>
+</ul>
+</li>
+<li><a target="_blank" href="http://bd.hebnews.cn">保定</a>
+<ul>
+<li><a target="_blank" href="http://bgxc.hebnews.cn/">白沟新城</a></li>
+<li>竞秀区</li>
+<li>莲池区</li>
+<li>满城区</li>
+<li>清苑区</li>
+<li>徐水区</li>
+<li>涞水县</li>
+<li>阜平县</li>
+<li>定兴县</li>
+<li>唐县</li>
+<li>高阳县</li>
+<li>容城县</li>
+<li>涞源县</li>
+<li>望都县</li>
+<li>安新县</li>
+<li>易县</li>
+<li>曲阳县</li>
+<li>蠡县</li>
+<li>顺平县</li>
+<li>博野县</li>
+<li>雄县</li>
+<li>安国市</li>
+<li>涿州市</li>
+<li>高碑店市</li>
+</ul>
+</li>
+<li><a target="_blank" href="http://hebei.hebnews.cn/node_135.htm">沧州</a>
+<ul>
+<li>泊头市</li>
+<li>新华区</li>
+<li>黄骅市</li>
+<li>运河区</li>
+<li>任丘市</li>
+<li>河间市</li>
+<li>沧县</li>
+<li>青县</li>
+<li>东光县</li>
+<li>海兴县</li>
+<li>盐山县</li>
+<li>肃宁县</li>
+<li>南皮县</li>
+<li>吴桥县</li>
+<li>献县</li>
+<li>孟村回族自治县</li>
+<li>沧州渤海新区</li>
+<li>沧州经济开发区</li>
+<li>沧州高新技术产业开发区</li>
+<li>沧州临港经济技术开发区</li>
+</ul>
+</li>
+<li><a target="_blank" href="http://hs.hebnews.cn">衡水</a>
+<ul>
+<li><a target="_blank" href="http://hstcq.hebnews.cn/index.htm">桃城区</a></li>
+<li><a target="_blank" href="http://jizhou.hebnews.cn/index.htm">冀州区</a></li>
+<li><a target="_blank" href="http://wuyi.hebnews.cn/index.htm">武邑县</a></li>
+<li><a target="_blank" href="http://wuqiang.hebnews.cn/index.htm">武强县</a></li>
+<li><a target="_blank" href="http://raoyang.hebnews.cn/index.htm">饶阳县</a></li>
+<li><a target="_blank" href="http://gucheng.hebnews.cn/index.htm">故城县</a></li>
+<li><a target="_blank" href="http://jingxian.hebnews.cn/index.htm">景县</a></li>
+<li><a target="_blank" href="http://hskfq.hebnews.cn/index.htm">衡水开发区</a></li>
+<li><a target="_blank" href="http://anping.hebnews.cn">安平县</a></li>
+<li>深州市</li>
+<li>衡水湖</li>
+<li>枣强县</li>
+<li>阜城县</li>
+<li>滨湖新区</li>
+</ul>
+</li>
+<li><a target="_blank" href="http://xt.hebnews.cn/">邢台</a>
+<ul style="margin-left:-18px">
+<li><a href="http://qinghe.hebnews.cn/">清河县</a></li>
+<li><a target="_blank" href="http://linxi.hebnews.cn/node_354337.htm ">临西县</a></li>
+<li>巨鹿县</li>
+<li>桥东区</li>
+<li>桥西区</li>
+<li>沙河市</li>
+<li>南宫市</li>
+<li>宁晋县</li>
+<li>内丘县</li>
+<li>广宗县</li>
+<li>邢台县</li>
+<li>任县</li>
+<li>新河县</li>
+<li>隆尧县</li>
+<li>柏乡县</li>
+<li>威县</li>
+<li>临城县</li>
+<li>平乡县</li>
+<li>南和县</li>
+<li>高新技术产业开发区</li>
+</ul>
+</li>
+<li><a target="_blank" href="http://handan.hebnews.cn">邯郸</a>
+<ul style="margin-left:-75px">
+<li><a target="_blank" href="http://fengfeng.hebnews.cn">峰峰矿区</a></li>
+<li><a target="_blank" href="http://wuan.hebnews.cn">武安市</a></li>
+<li><a target="_blank" href="http://yn.hebnews.cn">永年区</a></li>
+<li><a target="_blank" href="http://cixian.hebnews.cn">磁县</a></li>
+<li><a target="_blank" href="http://congtai.hebnews.cn">丛台区</a></li>
+<li><a target="_blank" href="http://shexian.hebnews.cn/">涉县</a></li>
+<li><a target="_blank" href="http://hdkfq.hebnews.cn/">经济技术开发区</a></li>
+<li><a target="_blank" href="http://chengan.hebnews.cn">成安县</a></li>
+<li><a target="_blank" href="http://linzhang.hebnews.cn/">临漳县</a></li>
+<li><a target="_blank" href="http://guangping.hebnews.cn">广平县</a></li>
+<li><a target="_blank" href="http://qiuxian.hebnews.cn">邱县</a></li>
+<li><a target="_blank" href="http://feixiang.hebnews.cn">肥乡区</a></li>
+<li><a target="_blank" href="http://weixian.hebnews.cn">魏县</a></li>
+<li><a target="_blank" href="http://hdjj.hebnews.cn">邯郸交警</a></li>
+<li><a target="_blank" href="http://quzhou.hebnews.cn">曲周县</a></li>
+<li>大名县</li>
+<li>复兴区</li>
+<li>邯山区</li>
+<li>鸡泽县</li>
+<li>馆陶县</li>
+</ul>
+</li>
+<li><a target="_blank" href="http://hebei.hebnews.cn/node_94523.htm">定州</a>
+</li>
+<li><a target="_blank" href="http://hebei.hebnews.cn/node_94522.htm">辛集</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="page">
+<div class="page_title">
+<h2>河北新闻</h2>
+</div>
+<div class="min_nav">
+<a href="http://hebei.hebnews.cn/node_112.htm" target="_blank">聚焦河北</a>|
+<a href="http://hebei.hebnews.cn/node_124.htm" target="_blank">便民资讯</a>|
+<a href="http://hebei.hebnews.cn/node_116.htm" target="_blank">本网原创</a>|
+<a href="http://hui.hebnews.cn/" target="_blank">绘新闻</a>|
+<a href="http://hebei.hebnews.cn/node_16421.htm" target="_blank">热点专题</a>|
+<a href="http://www.hebnews.cn/node_35551.htm" target="_blank">活动专区</a>|
+<a href="http://bbs.hebnews.cn" target="_blank">影像河北</a>
+</div>
+<div class="min_box">
+<div class="min_box_left">
+<div class="headline">
+<h1><a href="http://hebei.hebnews.cn/2019-10/12/content_7492297.htm" target="_blank"> 2019中国国际数字经济博览会在石家庄开幕</a> </h1>
+<p></p>
+</div>
+<div class="min_flash">
+<div class="yx-rotaion">
+<li class="current"><a href="http://hebei.hebnews.cn/2019-10/12/content_7492293.htm" target="_blank"><img src="http://img.hebnews.cn/2019-10/12/ef9b8a38-93eb-4403-a202-b0db248141c8.jpg" alt='大城：风力发电推动绿色发展' border="0"> <span class="border"></span><span class="mask"></span></a></li><li class="current"><a href="http://hebei.hebnews.cn/2019-10/11/content_7492271.htm" target="_blank"><img src="http://img.hebnews.cn/2019-10/11/a5164c64-f5ce-4add-a79d-2e9df66d7d5f.JPG" alt='巨鹿：“大走访”紧盯“微腐败”' border="0"> <span class="border"></span><span class="mask"></span></a></li><li class="current"><a href="http://hebei.hebnews.cn/2019-10/11/content_7492250.htm" target="_blank"><img src="http://img.hebnews.cn/2019-10/11/c7a31786-80af-40e1-ab84-97702318279c.jpg" alt='来！一起体验长城汽车无人驾驶“黑科技”' border="0"> <span class="border"></span><span class="mask"></span></a></li><li class="current"><a href="http://hebei.hebnews.cn/2019-10/11/content_7492197.htm" target="_blank"><img src="http://img.hebnews.cn/2019-10/11/c6a23681-cf2d-4b6a-aa4a-e303b0f83f3c.jpg" alt='大把“新特精”来袭，看我们在数博会捕获了啥' border="0"> <span class="border"></span><span class="mask"></span></a></li><li class="current"><a href="http://hebei.hebnews.cn/2019-10/11/content_7492033.htm" target="_blank"><img src="http://img.hebnews.cn/2019-10/11/83e6287e-d291-45a8-b453-d8ac1a5dd13a.jpg" alt='​河北彩车“盛世雄安”亮相河北博物院南广场' border="0"> <span class="border"></span><span class="mask"></span></a></li>
+</div>
+<script type="text/javascript" src="http://img.hebnews.cn/jquery.yx-rotation.js"></script>
+<script type="text/javascript">$(".yx-rotaion").yx_rotaion({ auto: true });</script>
+</div>
+</div>
+<a class="zglz" href="http://zhuanti.hebnews.cn/2016/node_113782.htm"><img src="http://img.hebnews.cn/templateRes/201705/09/94870/94870/images/lizheng.jpg" alt="治国理政进行时"></a>
+<div class="min_box_right">
+<div class="subnav">
+<a href="http://zhuanti.hebnews.cn/node_151184.htm" target="_blank" class="subnav-title">画政道</a>
+<a href="http://zhuanti.hebnews.cn/node_151184.htm" target="_blank" class="subnav-title-r">更多</a>
+</div>
+<style>
+			.hxw{ height:480px}
+            	.pic_img { margin-bottom:33px; height:220px}
+            	.pic_img img{ height:auto; margin-bottom:10px}
+            </style>
+<div class="hxw">
+<div class="pic_img">
+<a href="http://hebei.hebnews.cn/2019-09/05/content_7460593.htm" target="_blank"><img src="http://img.hebnews.cn/2019-09/05/4ffa5162-766b-42d6-90c0-e16cec32569a.jpg" border="0"> <cite class="bg"></cite><span class="txt"> 图解｜河北食品工业转型升级从七方面发力</span></a>
+</div><div class="pic_img">
+<a href="http://hebei.hebnews.cn/2019-09/02/content_7458771.htm" target="_blank"><img src="http://img.hebnews.cn/2019-09/02/ab1a394c-6583-44fd-8058-b9e845e69aec.jpg" border="0"> <cite class="bg"></cite><span class="txt"> 图表｜五大行动！河北防治尘肺病将这样做</span></a>
+</div>
+</div>
+</div>
+<div class="cl"></div>
+</div>
+<div class="min_box">
+<div class="min_box_left1">
+<div class="min_box_lef">
+<div class="subnav"><a href="http://hebei.hebnews.cn/node_112.htm" target="_blank" class="subnav-jjhb">聚焦河北</a></div>
+<div class="dailynews">
+<style>.pages{ display:none}</style>
+<a class="min_feed" href="http://ts.hebnews.cn/2019-10/13/content_7493277.htm"> <img src="http://img.hebnews.cn/2019-10/13/76af56dd-35bd-4ec7-8bbd-2dc05fdb0cee.jpg" border="0"> <h3> 唐山：青贮玉米收获忙</h3> <p><cite>[详细]</cite></p> <span>2019-10-13 15:46:21</span> </a><a class="min_feed" href="http://hebei.hebnews.cn/2019-10/13/content_7493273.htm"> <img src="http://img.hebnews.cn/2019-10/13/e7208fab-4161-49c3-9cfb-4f37bd469247.png" border="0"> <h3> 雄安新区：正处于大规模实质建设阶段 21个重点项目开建</h3> <p><cite>[详细]</cite></p> <span>2019-10-13 15:15:21</span> </a><a class="min_feed" href="http://hebei.hebnews.cn/2019-10/13/content_7493271.htm"> <img src="http://img.hebnews.cn/2019-10/13/164bfbdd-a323-4c2f-b1d5-09666e4f220c.png" border="0"> <h3> 冬奥会给京津冀带来了什么？答案在这里</h3> <p><cite>[详细]</cite></p> <span>2019-10-13 15:08:28</span> </a><a class="min_feed" href="http://hebei.hebnews.cn/2019-10/13/content_7493270.htm"> <img src="http://img.hebnews.cn/2019-10/13/e053a547-3ae7-4caa-b7eb-dd5a16d0f372.png" border="0"> <h3> 【海外媒体看河北】今天让人惊喜，明天让人期待！</h3> <p><cite>[详细]</cite></p> <span>2019-10-13 15:07:23</span> </a><a class="min_feed" href="http://hebei.hebnews.cn/2019-10/13/content_7493267.htm"> <img src="http://img.hebnews.cn/2019-10/13/63593ded-c868-48fc-bfa1-99520923d3ce.png" border="0"> <h3> 直播预告丨14日10位最美残疾人工作者揭晓</h3> <p><cite>[详细]</cite></p> <span>2019-10-13 14:27:46</span> </a><a class="min_feed" href="http://hebei.hebnews.cn/2019-10/13/content_7493255.htm"> <img src="http://img.hebnews.cn/2019-10/13/174b3d66-9427-48ee-95ed-de2fef25867b.jpg" border="0"> <h3> 中国•邯郸鬼谷子文化旅游发展研讨会在临漳县举办</h3> <p><cite>[详细]</cite></p> <span>2019-10-13 12:16:47</span> </a><a class="min_feed" href="http://hebei.hebnews.cn/2019-10/13/content_7493254.htm"> <img src="http://img.hebnews.cn/2019-10/13/372d94df-71b7-4026-9830-d438a3101c71.jpg" border="0"> <h3> 邯郸市翰光学校部分学生出现发烧症状</h3> <p><cite>[详细]</cite></p> <span>2019-10-13 12:15:45</span> </a><a class="min_feed" href="http://hebei.hebnews.cn/2019-10/13/content_7493252.htm"> <img src="http://img.hebnews.cn/2019-10/13/68edc9bd-1bc4-487d-9dd3-581c71abbccb.jpg" border="0"> <h3> 雄安新区环白洋淀国际自行车赛鸣枪开赛</h3> <p><cite>[详细]</cite></p> <span>2019-10-13 12:10:59</span> </a><a class="min_feed" href="https://4.u.mgd5.com/c/72fr/gaeu/index.html"> <img src="http://img.hebnews.cn/2019-10/13/ee091668-f238-4383-8e96-90daa37041c3.jpg" border="0"> <h3> H5｜精彩skr！你有一份邀请函请速查收！</h3> <p><cite>[详细]</cite></p> <span>2019-10-13 12:02:21</span> </a><a class="min_feed" href="http://hebei.hebnews.cn/2019-10/13/content_7493202.htm"> <img src="http://img.hebnews.cn/2019-10/13/fd5d140e-f174-41aa-a830-fe809098dc1f.jpg" border="0"> <h3> 中国足球名宿辅导团走进河北</h3> <p><cite>[详细]</cite></p> <span>2019-10-13 07:57:30</span> </a><a class="min_feed" href="http://hebei.hebnews.cn/2019-10/13/content_7493201.htm"> <img src="" border="0"> <h3> 许荷英：让李保国精神走进观众心里</h3> <p><cite>[详细]</cite></p> <span>2019-10-13 07:54:46</span> </a><a class="min_feed" href="http://hebei.hebnews.cn/2019-10/13/content_7493199.htm"> <img src="http://img.hebnews.cn/2019-10/13/51c349e2-3c2c-49a9-8caf-e38285dd5656.jpg" border="0"> <h3> 深度丨擦亮燕赵老字号“金字招牌”</h3> <p><cite>[详细]</cite></p> <span>2019-10-13 07:52:47</span> </a><a class="min_feed" href="http://hebei.hebnews.cn/2019-10/13/content_7493195.htm"> <img src="http://img.hebnews.cn/2019-10/13/f1418e8b-83f5-4b76-a055-e476e55199e9.png" border="0"> <h3> 河北省《浩荡》《地球纪元》上榜25部佳作推荐</h3> <p><cite>[详细]</cite></p> <span>2019-10-13 07:40:48</span> </a><a class="min_feed" href="http://hebei.hebnews.cn/2019-10/13/content_7493193.htm"> <img src="http://img.hebnews.cn/2019-10/13/cb018e80-473e-48b0-88a3-f86e8c23b307.png" border="0"> <h3> 前8个月河北省固定资产投资同比增长4.2%</h3> <p><cite>[详细]</cite></p> <span>2019-10-13 07:37:05</span> </a>
+<ul pages='20' current='1' class='pages'><li class='page page1 page-active'><a href='javascript:void(0)'>1</a></li><li class='page page2'><a href='http://hebei.hebnews.cn/index_2.htm'>2</a></li><li class='page page3'><a href='http://hebei.hebnews.cn/index_3.htm'>3</a></li><li class='page page4'><a href='http://hebei.hebnews.cn/index_4.htm'>4</a></li><li class='page page5'><a href='http://hebei.hebnews.cn/index_5.htm'>5</a></li><li class='page page6'><a href='http://hebei.hebnews.cn/index_6.htm'>6</a></li><li class='page page7'><a href='http://hebei.hebnews.cn/index_7.htm'>7</a></li><li class='page page8'><a href='http://hebei.hebnews.cn/index_8.htm'>8</a></li><li class='page page9'><a href='http://hebei.hebnews.cn/index_9.htm'>9</a></li><li class='page page10'><a href='http://hebei.hebnews.cn/index_10.htm'>10</a></li><li class='page page11'><a href='http://hebei.hebnews.cn/index_11.htm'>11</a></li><li class='page page12'><a href='http://hebei.hebnews.cn/index_12.htm'>12</a></li><li class='page page13'><a href='http://hebei.hebnews.cn/index_13.htm'>13</a></li><li class='page page14'><a href='http://hebei.hebnews.cn/index_14.htm'>14</a></li><li class='page page15'><a href='http://hebei.hebnews.cn/index_15.htm'>15</a></li><li class='page page16'><a href='http://hebei.hebnews.cn/index_16.htm'>16</a></li><li class='page page17'><a href='http://hebei.hebnews.cn/index_17.htm'>17</a></li><li class='page page18'><a href='http://hebei.hebnews.cn/index_18.htm'>18</a></li><li class='page page19'><a href='http://hebei.hebnews.cn/index_19.htm'>19</a></li><li class='page page20'><a href='http://hebei.hebnews.cn/index_20.htm'>20</a></li><li class='page-next'><a href='http://hebei.hebnews.cn/index_2.htm'>下一页</a></li></ul>
+</div>
+<a href="###" class="dj loadingMoreLink" target="_self">点击查看更多...</a>
+</div>
+</div>
+<script>
+	
+	
+	
+	$(".loadingMoreLink").click(function(){
+
+var nextlink = '';
+$(".pages li a").each(function(index, element) {  
+if($(element).html()=='下一页'){
+ 	nextlink = $(element).attr("href");
+}
+});
+
+$(".pages").remove();
+
+
+if(nextlink.length >0){
+$.get(nextlink, function(pCon){
+pCon = $(pCon);
+$(".dailynews").append(pCon.find(".dailynews").html());
+		//		firstPageLink.remove();
+});
+
+}else{
+$(".loadingMoreLink").text("没有更多新闻了")
+}
+
+});
+</script>
+<div class="min_box_right1">
+<div class="min_box_rightbm">
+<div class="subnav">
+<a href="http://hebei.hebnews.cn/node_124.htm" target="_blank" class="subnav-bmzx">便民资讯</a>
+<a href="http://hebei.hebnews.cn/node_124.htm" target="_blank" class="subnav-title-r">更多</a>
+</div>
+<ul>
+<li><a href="http://hebei.hebnews.cn/2019-10/10/content_7491193.htm" target="_blank"> 河北：未来三天多地有小雨 气温逐渐下降</a></li><li><a href="http://hebei.hebnews.cn/2019-10/09/content_7489850.htm" target="_blank"> 石家庄市中山路46处电子警察恢复使用</a></li><li><a href="http://hebei.hebnews.cn/2019-09/21/content_7474801.htm" target="_blank"> 这件事近期不能做！河北多地发布通知！</a></li><li><a href="http://hebei.hebnews.cn/2019-09/14/content_7467856.htm" target="_blank"> 医保将有新变化！惠及3亿多人</a></li><li><a href="http://world.hebnews.cn/2019-09/14/content_7467818.htm" target="_blank"> 遇到单位使这些"招儿",请果断说"不"!</a></li>
+</ul>
+</div>
+<div class="subnav">
+<a href="http://hebei.hebnews.cn/node_16421.htm" target="_blank" class="subnav-rdzt">热点专题</a>
+<a href="http://hebei.hebnews.cn/node_16421.htm" target="_blank" class="subnav-title-r">更多</a>
+</div>
+<div class="picy1">
+<a href="http://zhuanti.hebnews.cn/2019-06/04/content_7412553.html" target="_blank"><img src="http://img.hebnews.cn/2019-09/06/0537b7e4-beaf-4c8f-b8e2-5e75c3b568bc.jpg" border="0"> <cite class="bg"></cite><span class="txt"> 不忘初心 牢记使命</span></a>
+</div>
+<div class="tt">
+<ul class="f36d16">
+<li><a href="http://zhuanti.hebnews.cn/node_353821.htm" target="_blank"> 壮丽70年·奋斗新时代</a></li><li><a href="http://zhuanti.hebnews.cn/node_143844.htm" target="_blank"> 新时代新作为新篇章</a></li><li><a href="http://zhuanti.hebnews.cn/node_353548.htm" target="_blank"> 河北"三深化 三提升"活动</a></li>
+</ul>
+</div>
+<div class="subnav">
+<a href="http://www.hebnews.cn/node_146245.htm" target="_blank" class="subnav-hdzx">活动专区</a>
+<a href="http://www.hebnews.cn/node_146245.htm" target="_blank" class="subnav-title-r">更多</a>
+</div>
+<ul class="f34d14 a1" id="fzdh">
+<li><a href="http://zhuanti.hebnews.cn/node_354765.htm" target="_blank"> 抵制网络谣言 共建清朗空间</a></li><li><a href="http://hebei.hebnews.cn/2019-09/27/content_7482382.htm" target="_blank"> 河北精神文明建设五个一工程获奖作品公示</a></li><li><a href="http://hebei.hebnews.cn/2019-09/07/content_7462116.htm" target="_blank"> 河北阳光流动课堂公益项目 积小善成大爱</a></li><li><a href="http://shuhua.hebnews.cn/2019-10/10/content_7490436.htm" target="_blank"> “星星之火”河北十佳少年评选火热进行中</a></li>
+</ul>
+<div class="subnav">
+<a href="http://bbs.hebnews.cn" target="_blank" class="subnav-yxhb">影像河北</a>
+<a href="http://bbs.hebnews.cn" target="_blank" class="subnav-title-r">更多</a>
+</div>
+<div class="yxhb">
+<div class="slider_yxhb">
+<div class="picScroll">
+<div class="hd">
+<ul></ul>
+</div>
+<div class="bd">
+<ul class="picList">
+<li><div class="pic"><a href="http://bbs.hebnews.cn/forum.php?mod=viewthread&tid=7338809&extra=page%3D1%26filter%3Dtypeid%26typeid%3D251" target="_blank"><img src="http://img.hebnews.cn/2019-10/08/a4d86994-d226-4a97-9c1c-ea9be4d41d58.jpg" border="0"> </a></div><div class="title"><a href="http://bbs.hebnews.cn/forum.php?mod=viewthread&tid=7338809&extra=page%3D1%26filter%3Dtypeid%26typeid%3D251" target="_blank"> 叶落的季节离别多</a></div></li><li><div class="pic"><a href="http://bbs.hebnews.cn/thread-7338780-1-1.html" target="_blank"><img src="http://img.hebnews.cn/2019-10/08/e80fdd37-8faa-4f28-b4e2-3c384655b0ea.jpg" border="0"> </a></div><div class="title"><a href="http://bbs.hebnews.cn/thread-7338780-1-1.html" target="_blank"> 好戏连台庆国庆，传统文化彩纷呈</a></div></li><li><div class="pic"><a href="http://bbs.hebnews.cn/thread-7338771-1-1.html" target="_blank"><img src="http://img.hebnews.cn/2019-10/08/534c327e-abdc-4462-9108-1a742bb6d476.jpg" border="0"> </a></div><div class="title"><a href="http://bbs.hebnews.cn/thread-7338771-1-1.html" target="_blank"> 休闲的时光</a></div></li><li><div class="pic"><a href="http://bbs.hebnews.cn/thread-7338734-1-1.html" target="_blank"><img src="http://img.hebnews.cn/2019-09/30/0c3c16f7-382f-4000-976d-58eb26c36639.jpg" border="0"> </a></div><div class="title"><a href="http://bbs.hebnews.cn/thread-7338734-1-1.html" target="_blank"> 追寻革命先辈的足迹</a></div></li><li><div class="pic"><a href="http://bbs.hebnews.cn/thread-7338682-1-1.html" target="_blank"><img src="http://img.hebnews.cn/2019-09/29/6ddf5321-de52-4f91-aa44-1027a2dd806e.jpg" border="0"> </a></div><div class="title"><a href="http://bbs.hebnews.cn/thread-7338682-1-1.html" target="_blank"> 我镜头里的祖国（纪实篇） ——献给新中国七十华诞</a></div></li>
+</ul>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+		 var ary = location.href.split("&");
+		jQuery(".picScroll").slide( { titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:ary[1],autoPlay:ary[2],scroll:ary[3],vis:ary[4],easing:ary[5],delayTime:ary[6],pnLoop:ary[7],trigger:ary[8],mouseOverStop:ary[9] });
+		</script>
+</div>
+</div>
+<div class="cl"></div>
+</div>
+</div>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+
+.am-weixin {
+    text-align: center;
+    clear: both;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 25px;
+    font-size: 1.2em;
+	margin-bottom:2em; display:none
+}
+.am-weixin a{ color:#000}
+
+.am-avg-sm-4>li {
+    width: 25%; float:left; text-align:center
+}
+.am-thumbnail {
+    display: inline-block;
+    padding: 2px;
+    border: 1px solid #ddd;
+    border-radius: 0;
+    background-color: #fff;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+.nb{ display:none}
+@media screen and (max-width: 640px) {
+	.am-weixin { display:block}
+
+}
+</style>
+<ul class="am-avg-sm-4 am-thumbnails am-weixin">
+<li><img class="am-thumbnail am-thumbnail-weixin" src="http://img.hebnews.cn/92410.files/assets/images/weixin_hbrb.jpg"><p>河北日报<br>微信公众号</p></li>
+<li><img class="am-thumbnail am-thumbnail-weixin" src="http://img.hebnews.cn/92410.files/assets/images/weixin_hebnews.jpg"><p>河北新闻网<br>微信公众号</p></li>
+<li><img class="am-thumbnail am-thumbnail-weixin" src="http://img.hebnews.cn/92410.files/assets/images/weixin_yzdsb.jpg"><p>燕赵都市报<br>微信公众号</p></li>
+<li><a href="http://zhuanti.hebnews.cn/hbrbapk.htm?m-page"><img class="am-thumbnail am-thumbnail-weixin" src="http://img.hebnews.cn/92410.files/assets/images/apk_hbrb.jpg"><p>河北日报<br>客户端</p></a></li>
+</ul>
+<script src="http://img.hebnews.cn/templateRes/201612/13/88730/88730/2017footer.js?233"></script>
+<span class="nb"><a href="http://chuangxin.hebnews.cn">互联网新闻</a></span>
+<script type="text/javascript" src="http://img.hebnews.cn/amucsite/stat/NodeClick.js"></script>
+<input type="hidden" id="DocIDforCount" name="DocIDforCount" value="101">
+</body>
+</html>

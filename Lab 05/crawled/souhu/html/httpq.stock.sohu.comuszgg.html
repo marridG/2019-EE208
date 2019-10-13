@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>中概股排行-美股-搜狐</title> 
+<meta name="Keywords" content="中概股排行"> 
+<meta name="Description" content="中概股的涨跌幅，成交量，以及市值排行">
+<link href="//s2.biz.itc.cn/cn/css/suggestLists.css" type="text/css" rel="stylesheet" />
+<link href="//fund.sohu.com/upload/stock_us2014/static/css/stock_us2014.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+<!-- header begin -->
+<div class="stock_header">
+    <div class="header">
+        <div class="stocklogo"><a href="//q.stock.sohu.com/us/DJI_zhishu.html"></a></div>
+        <div class="headersea" id="FEP_searchbar">
+            <form class="autoTmp" method="get" action="javascript:void(0);" id="searchForm">
+                <ul id="FEP_searchList" class="searchList clearfix">
+                    <li class="e1">
+                      <input type="text" id="searchInput" class="kw" value="代码/名称/缩写" autocomplete="off" disableautocomplete="">
+                    </li>
+                    <li class="e2">
+                      <input type="submit" id="searchButton" class="seabtn" value="行情查询">
+                    </li>
+                </ul>
+            </form>
+            <div class="suggestLists" id="suggestDiv"></div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a class="b" href="//q.stock.sohu.com/us/DJI_zhishu.html"><span>美股首页</span></a></li>
+                <li class="current"><a class="b" href="//q.stock.sohu.com/us/DJI_zhishu.html"><span>行情</span></a></li>
+                <li><a class="b" href="//q.stock.sohu.com/us/zgg.html"><span>排行</span>|</a></li>
+                <li><a href="//q.stock.sohu.com/" target="_blank"><span>沪深行情</span></a></li>        
+                <li><a href="//q.stock.sohu.com/cn/mystock.shtml?t=cnstock" target="_blank"><span>自选股</span></a></li>
+                <!-- <li><a href="/cn/mystock.shtml"><span>股友会</span></a></li> -->
+                <li><a href="//q.fund.sohu.com/" target="_blank"><span>基金</span></a></li>
+                <!-- <li><a href="//q.fund.sohu.com"><span>炒股大赛</span></a></li> -->
+            </ul>
+        </div>
+        <div class="topuserbox"></div>
+    </div>
+</div>
+
+<div class="topbar">
+  <div class="topbarcon">
+        <div class="con c1">
+            <span class="name"><a href="/us/DJI_zhishu.html">道琼斯</a>：</span>
+            <span class="s1">--</span>
+            <span class="s2">--</span>
+            <!-- <span class="s3">--</span> -->
+        </div>
+        <div class="con c2">
+            <span class="name"><a href="/us/IXIC_zhishu.html">纳斯达克</a>：</span>
+            <span class="s1">--</span>
+            <span class="s2">--</span>
+            <!-- <span class="s3">--</span> -->
+        </div>
+        <div class="con c3">
+            <span class="name"><a href="/us/GSPC_zhishu.html">标普500</a>：</span>
+            <span class="s1">--</span>
+            <span class="s2">--</span>
+            <!-- <span class="s3">--</span> -->
+        </div>
+
+        <div class="us_status">
+        		<span class="status_off">--</span>
+        		<span class="date">--</span>
+                <div class="status_tips">
+                	<h4>美股交易时间</h4>
+                    <p>夏令：21:30-04:00（北京）<br>
+                    冬令：22:30-05:00（北京）<br>
+                    夏令/冬令：9:30-16:00（美东）
+                    </p>
+                </div>
+        </div>
+        
+  </div>
+</div>
+<div style="position:absolute;" class="popbox hidden" id="popbox"></div>
+
+<!-- header end-->
+
+<div class="area paihang">
+    <div class="tabtag2">
+        <ul>
+            <li class="current"><a href="">中国概念股</a></li>
+        </ul>
+        <div class="note">单位：美元   最后更新：<span id="updatedTime">--</span></div>
+    </div>
+    <div class="list_paihang clearfix">
+        <ul class="list_title">
+            <li>
+                <div class="col td01">序号</div>                       
+                <div class="col td02">股票名称</div>
+                <div class="col td03">股票代码</div>
+                <div class="col td04"><span sort="3">最新价格</span></div>
+                <div class="col td05"><span class="arrow_b" sort="5">涨跌幅</span></div>                       
+                <div class="col td06"><span sort="4">涨跌额</span></div>
+                <div class="col td07"><span sort="6">成交量</span></div>
+                <div class="col td08"><span sort="8">市值</span></div>
+                <div class="col td09"><span sort="7">市盈率</span></div>
+            </li>
+         </ul>
+        <ul class="list_info"></ul>
+    </div><!--list end-->
+    
+    <div class="page2"></div>
+        
+</div>
+
+<!-- footer begin -->
+<div class="area" id="foot">
+<a false;="" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('//www.sohu.com');return" href="javascript:void(0)">设置首页</a> - <a target="_blank" href="//pinyin.sogou.com/">搜狗输入法</a> - <a target="_blank" href="//up.sohu.com/">支付中心</a> - <a target="_blank" href="//hr.sohu.com">搜狐招聘</a> - <a target="_blank" href="//ad.sohu.com/">广告服务</a> - <a target="_blank" href="//sohucallcenter.blog.sohu.com/">客服中心</a> - <a target="_blank" href="//corp.sohu.com/s2006/contactus/">联系方式</a> - <a target="_blank" href="//www.sohu.com/about/privacy.html">保护隐私权</a> - <a target="_blank" href="//corp.sohu.com/">About SOHU</a> - <a target="_blank" href="//corp.sohu.com/indexcn.shtml">公司介绍</a> - <a target="_blank" href="//sitemap.sohu.com/">网站地图</a> <br>
+  Copyright <span class="fontArial">&copy;</span> 2012 Sohu.com Inc. All Rights Reserved. 搜狐公司 <span class="unline"><a target="_blank" href="//corp.sohu.com/s2007/copyright/">版权所有</a></span> <br>
+  搜狐不良信息举报电话：010－62728061 举报邮箱：<a href="mailto:jubao@contact.sohu.com">jubao@contact.sohu.com</a> 
+ </div><!--foot end-->
+<!-- footer end-->
+ 
+<script type="text/javascript" src="//s3.biz.itc.cn/cn/script/jquery-1.5.1.js"></script>
+<script type="text/javascript" src="/us/js/general.js"></script>
+<script type="text/javascript" src="//s3.biz.itc.cn/cn/script/us/zgg.js?20160826"></script>
+</body>
+</html>
+

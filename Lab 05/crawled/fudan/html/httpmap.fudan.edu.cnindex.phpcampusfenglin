@@ -1,0 +1,487 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>复旦大学校园地图</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	<link rel="stylesheet" href="css/fdugis.css" type="text/css" />
+	<link rel="stylesheet" href="lib/jqplugins/jquery-lightbox-0.5/css/jquery.lightbox-0.5.css" type="text/css" />
+	<!--[if IE 6]>
+	<style type="text/css">
+		#header img{ behavior: url(iepngfix/iepngfix.htc);}
+		#maincontent a:link {color:#0000FF;}
+		#maincontent a:visited {color:#0000FF;}
+		#maincontent a:hover {color:#0000FF;}
+		#maincontent a:active {color:#0000FF;}
+		#sidebar {overflow:hidden;}
+	</style>
+	<![endif]-->
+	<script src="lib/OpenLayers.js"></script>
+	<script src="lib/jquery.js"></script>
+	<script src="lib/jqplugins/jquery-lightbox-0.5/jquery.lightbox-0.5.js"></script>
+	<script src="lib/proj4js.js"></script>
+	<script src="lib/defs/EPSG900913.js"></script>
+	<script src="lib/projCode/merc.js"></script>
+	<!--<script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>-->
+	<script src="util.js"></script>
+	<script src="Helpers.js"></script>
+		<script src="fdugis.js"></script>
+	<script type="text/javascript">
+		if(isEventSupported("touchstart")){
+			$(document).ready(function(){
+				$("#navmenu-h li,#navmenu-v li").bind("touchstart", function(){
+					$(this).addClass("iehover");
+				});
+				$("#navmenu-h li,#navmenu-v li").bind("touchend", function(){
+					$(this).removeClass("iehover");
+				});
+			});
+		}
+		function init3dFunc(divId){
+    		var map = new OpenLayers.FMap(divId, {
+    			allOverlays:true,
+        		controls: [new OpenLayers.Control.Navigation(),
+    						new OpenLayers.Control.PanZoomBar(),
+    						new OpenLayers.Control.LayerSwitcher(),
+    						new OpenLayers.Control.KeyboardDefaults()],
+    			panMethod: null,
+    			projection: new OpenLayers.Projection("EPSG:900913"),
+    			numZoomLevels: 4,
+    			maxExtent:new OpenLayers.Bounds(18432, -65536, 73728, -16384)
+    		});
+    		var layer3DHelper = new Layer3DHelper({map:map});
+    		layer3DHelper.addLayer("fenglin3DLayer");
+    		layer3DHelper.addLayer("zhangjiang3DLayer");
+    		layer3DHelper.addLayer("handan3DLayer");
+    		if(!isIE6()){layer3DHelper.addLayer("annotation3dLayer");}
+    		var mapHelper = new MapHelper();
+    		var parameters = mapHelper.parseMapURL();
+    		map.setCenter(parameters.center, parameters.zoom);
+
+        	var campusSelectPanelIndex = map.Z_INDEX_BASE['Control'] + (map.controls ? map.controls.length : 0);
+        	var mapbar = "<div style='position:absolute;left:60px;top:4px;padding:4px;background-color:white;z-index:"
+        		+campusSelectPanelIndex+";'><ul id='mapControlers'>"
+        		+"<li><a class='campus_link' lonlat='58816, -30298' href='javascript:void(0);'>邯郸校区</a>|</li>"
+        		+"<li><a class='campus_link' lonlat='67396, -25288' href='javascript:void(0);'>江湾校区</a>|</li>"
+        		+"<li><a class='campus_link' lonlat='29272, -37680' href='javascript:void(0);'>枫林校区</a>|</li>"
+        		+"<li><a class='campus_link' lonlat='53226, -55150' href='javascript:void(0);'>张江校区</a></li>"
+        		+"<li><div class='buttons toggleMaps'><a href='javascript:void(0);'>平面</a><a href='javascript:void(0);' class='activeBtn'>三维</a></div></li>";
+        	mapbar += "</ul></div>";
+        	$(mapbar).appendTo(map.viewPortDiv);
+        	if(isIE6()){
+				$(".buttons a").css("color","#333333");
+				$("a.activeBtn").css("color","#ffffff");        		
+        	}
+    		return map;
+		}
+		//初始化地图的控制器、图层
+		    		function init(){
+    			var initFunc = function(divId){
+            		var map = new OpenLayers.FMap(divId, {
+            			allOverlays:true,
+                		controls: [new OpenLayers.Control.Navigation(),
+    								new OpenLayers.Control.PanZoomBar(),
+    								new OpenLayers.Control.LayerSwitcher(),
+    								new OpenLayers.Control.ScaleLine({geodesic:true}),
+    								new OpenLayers.Control.KeyboardDefaults()],
+    					panMethod: null,
+    					projection: new OpenLayers.Projection("EPSG:900913"),
+//    					minZoomLevel: 15,//for google maps
+//	   					maxZoomLevel: 19,
+    					numZoomLevels: 5,
+    					maxExtent:new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34)
+            		});
+            		var layerHelper = new LayerHelper({map:map});
+//    				if(window.google!==undefined){layerHelper.addLayer("googleStreetsLayer");}
+					layerHelper.addLayer("OSMSHLayer");
+    				layerHelper.addLayer("handanLayer");
+    				layerHelper.addLayer("fenglinLayer");
+    				layerHelper.addLayer("zhangjiangLayer");
+    				layerHelper.addLayer("jiangwanLayer");
+    				layerHelper.addLayer("labelLayer");
+    				var generalSymbolsLayer = layerHelper.addLayer("generalSymbolsLayer");
+    				var bsLayer = layerHelper.addLayer("busStopsLayer");
+    				var selectControl = new OpenLayers.Control.SelectFeature([generalSymbolsLayer, bsLayer],{
+    					id:"selectControl",
+    					clickout:false,
+    					toggle:false,
+    					multiple:false,
+    					hover:false
+    				});
+    				map.addControl(selectControl);
+    				selectControl.activate();
+    				var mapHelper = new MapHelper();
+    				var parameters = mapHelper.parseMapURL();
+    				map.setCenter(parameters.center, parameters.zoom);
+    				return map;
+    			};
+    			var maps = [{divId:"map2d", init:initFunc},{divId:"map3d", init:init3dFunc}];
+    			initMap(maps);
+    		}
+		</script>
+	<!--[if gte IE 5.5]>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#navmenu-h li,#navmenu-v li").hover(
+				function() { $(this).addClass("iehover"); },
+				function() { $(this).removeClass("iehover"); }
+			);
+		});
+	</script>
+	<![endif]-->
+	<!--[if lte IE 7]>
+	<script type="text/javascript">
+		$(function() {
+			var zIndexNumber = 1000;
+			$('div').each(function() {
+				$(this).css('zIndex', zIndexNumber);
+				zIndexNumber -= 10;
+			});
+		});
+	</script>
+	<![endif]-->
+</head>
+<body onload="init();">
+	<div id="header">
+		<div id="infodiv" style="position:absolute;background-color:#FBFEC5;padding:3px;display:none;"></div>
+		<a href="http://map.fudan.edu.cn"><img style="float:left;margin-right:20px;" src="img/logo.png"/></a>
+		<div style="padding:20px 0 18px 0;">
+			<form id="searchForm" action="src/annotation/search.php" method="get">
+				<span class="s_t_wp">
+					<input id="searchtxt" type="text" name="q" autocomplete="off" length="45"/>
+				</span><span class="s_b_wp"><input id="searchbtn" type="submit" value="搜索"/>
+				</span>
+			</form>
+		</div>
+		<div style="position:absolute;right:6px;top:6px;">
+			<ul id="navmenu-h">
+				<li>
+					<a href="javascript:void(0);">其它服务+</a>
+					<ul style="z-index:9000;">
+						<li><a href="src/paike/index.php">查询无课教室</a></li>
+						<li><a href="src/paike/classroom.php">查询教室排课情况</a></li>
+						<li><a href="src/ip/index.php">查询ip地址配置</a></li>
+					</ul>
+				</li><li>
+					<a href="about.html">说明</a>
+				</li><li>
+					<a class="menuItem" href="http://tac.fudan.edu.cn/thirds/map.act">登录</a>				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="maincontent">
+		<div id="mapwrapper">
+			<div id="map2d" class="map"></div>
+			<div id="map3d" class="map" style="display:none;"></div>
+		</div>
+		<div id="sidebar">
+			<div id="sidebar_toggle"></div>
+			<div id="loc_cat_panel" class="side_panel">
+				<div class="loc_cat">
+					<table class="loc_cat_t">
+						<tbody>
+							<tr class="cat_title_show">
+								<td class="loc_exptd"><a href="javascript:void(0);">-</a></td>
+								<td><strong>组织机构</strong></td>
+							</tr>
+							<tr>
+								<td class="loc_td"></td>
+								<td>
+									<a class="loc_link" annId="369" href="javascript:void(0);"><span class="loc_option">党委办公室</span></a>
+									<a class="loc_link" annId="370" href="javascript:void(0);"><span class="loc_option">纪委、监察处</span></a>
+									<a class="loc_link" annId="371" href="javascript:void(0);"><span class="loc_option">组织部</span></a>
+									<a class="loc_link" annId="372" href="javascript:void(0);"><span class="loc_option">宣传部</span></a>
+									<a class="loc_link" annId="373" href="javascript:void(0);"><span class="loc_option">统战部</span></a>
+									<a class="loc_link" annId="374" href="javascript:void(0);"><span class="loc_option">机关党委</span></a>
+									<a class="loc_link" annId="380" href="javascript:void(0);"><span class="loc_option">校长办公室</span></a>
+									<a class="loc_link" annId="394" href="javascript:void(0);"><span class="loc_option">人事处</span></a>
+									<a class="loc_link" annId="395" href="javascript:void(0);"><span class="loc_option">财务处</span></a>
+									<a class="loc_link" annId="376" href="javascript:void(0);"><span class="loc_option">学生工作部</span></a>
+									<a class="loc_link" annId="379" href="javascript:void(0);"><span class="loc_option">武装部</span></a>
+									<a class="loc_link" annId="408" href="javascript:void(0);"><span class="loc_option">教务处</span></a>
+									<a class="loc_link" annId="206" href="javascript:void(0);"><span class="loc_option">研究生院</span></a>
+									<a class="loc_link" annId="162" href="javascript:void(0);"><span class="loc_option">保卫处</span></a>
+									<a class="loc_link" annId="154" href="javascript:void(0);"><span class="loc_option">外事处</span></a>
+									<a class="loc_link" annId="409" href="javascript:void(0);"><span class="loc_option">资产处</span></a>
+									<a class="loc_link" annId="410" href="javascript:void(0);"><span class="loc_option">校产办</span></a>
+									<a class="loc_link" annId="411" href="javascript:void(0);"><span class="loc_option">总务处</span></a>
+									<a class="loc_link" annId="163" href="javascript:void(0);"><span class="loc_option">留学生处</span></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+                <div class="loc_cat">
+                	<table class="loc_cat_t">
+                		<tbody>
+                			<tr class="cat_title_hide">
+                				<td class="loc_exptd"><a href="javascript:void(0);">+</a></td>
+                				<td><strong>院系研究所</strong></td>
+                			</tr>
+                			<tr style="display:none;">
+                				<td class="loc_td"></td>
+                				<td>
+                					<a class="loc_link" annId="608" href="javascript:void(0);"><span class="loc_option">复旦学院</span></a>
+                					<a class="loc_link" annId="609" href="javascript:void(0);"><span class="loc_option">中国语言文学系</span></a>
+                					<a class="loc_link" annId="610" href="javascript:void(0);"><span class="loc_option">外国语言文学系</span></a>
+                					<a class="loc_link" annId="454" href="javascript:void(0);"><span class="loc_option">国际文化交流学院</span></a>
+                					<a class="loc_link" annId="232" href="javascript:void(0);"><span class="loc_option">新闻学院</span></a>
+                					<a class="loc_link" annId="611" href="javascript:void(0);"><span class="loc_option">哲学学院</span></a>
+                					<a class="loc_link" annId="612" href="javascript:void(0);"><span class="loc_option">历史学系</span></a>
+                					<a class="loc_link" annId="147" href="javascript:void(0);"><span class="loc_option">文物与博物馆学系</span></a>
+                					<a class="loc_link" annId="262" href="javascript:void(0);"><span class="loc_option">经济学院</span></a>
+                					<a class="loc_link" annId="505" href="javascript:void(0);"><span class="loc_option">法学院</span></a>
+                					<a class="loc_link" annId="613" href="javascript:void(0);"><span class="loc_option">国际关系与公共事务学院</span></a>
+                					<a class="loc_link" annId="614" href="javascript:void(0);"><span class="loc_option">社会发展与公共政策学院</span></a>
+                					<a class="loc_link" annId="615" href="javascript:void(0);"><span class="loc_option">数学科学学院</span></a>
+                					<a class="loc_link" annId="616" href="javascript:void(0);"><span class="loc_option">物理系</span></a>
+                					<a class="loc_link" annId="132" href="javascript:void(0);"><span class="loc_option">环境科学与工程系</span></a>
+                					<a class="loc_link" annId="617" href="javascript:void(0);"><span class="loc_option">信息科学与工程学院</span></a>
+                					<a class="loc_link" annId="130" href="javascript:void(0);"><span class="loc_option">化学系</span></a>
+                					<a class="loc_link" annId="184" href="javascript:void(0);"><span class="loc_option">生命科学学院</span></a>
+                					<a class="loc_link" annId="270" href="javascript:void(0);"><span class="loc_option">管理学院</span></a>
+                					<a class="loc_link" annId="618" href="javascript:void(0);"><span class="loc_option">力学与工程科学系</span></a>
+                					<a class="loc_link" annId="158" href="javascript:void(0);"><span class="loc_option">光源与照明工程系</span></a>
+                					<a class="loc_link" annId="619" href="javascript:void(0);"><span class="loc_option">高分子科学系</span></a>
+                					<a class="loc_link" annId="620" href="javascript:void(0);"><span class="loc_option">材料科学系</span></a>
+                					<a class="loc_link" annId="621" href="javascript:void(0);"><span class="loc_option">艺术教育中心</span></a>
+                					<a class="loc_link" annId="622" href="javascript:void(0);"><span class="loc_option">体育教学部</span></a>
+                					<a class="loc_link" annId="623" href="javascript:void(0);"><span class="loc_option">社会科学基础部</span></a>
+                					<a class="loc_link" annId="624" href="javascript:void(0);"><span class="loc_option">网络教育学院</span></a>
+                					<a class="loc_link" annId="508" href="javascript:void(0);"><span class="loc_option">发育生物学研究所</span></a>
+                					<a class="loc_link" annId="625" href="javascript:void(0);"><span class="loc_option">分析测试中心</span></a>
+                					<a class="loc_link" annId="250" href="javascript:void(0);"><span class="loc_option">美国研究中心</span></a>
+                					<a class="loc_link" annId="152" href="javascript:void(0);"><span class="loc_option">日本研究中心</span></a>
+                					<a class="loc_link" annId="626" href="javascript:void(0);"><span class="loc_option">神经生物学研究所</span></a>
+                					<a class="loc_link" annId="627" href="javascript:void(0);"><span class="loc_option">历史地理研究所</span></a>
+                					<a class="loc_link" annId="129" href="javascript:void(0);"><span class="loc_option">现代物理所</span></a>
+                					<a class="loc_link" annId="628" href="javascript:void(0);"><span class="loc_option">古籍所</span></a>
+                					<a class="loc_link" annId="629" href="javascript:void(0);"><span class="loc_option">人口所</span></a>
+                					<a class="loc_link" annId="292" href="javascript:void(0);"><span class="loc_option">复旦大学附属中学</span></a>
+                					<a class="loc_link" annId="359" href="javascript:void(0);"><span class="loc_option">复旦大学二附中</span></a>
+                					<a class="loc_link" annId="630" href="javascript:void(0);"><span class="loc_option">上海医学院</span></a>
+                					<a class="loc_link" annId="631" href="javascript:void(0);"><span class="loc_option">公共卫生学院</span></a>
+                					<a class="loc_link" annId="632" href="javascript:void(0);"><span class="loc_option">药学院</span></a>
+                					<a class="loc_link" annId="633" href="javascript:void(0);"><span class="loc_option">护理学院</span></a>
+                					<a class="loc_link" annId="634" href="javascript:void(0);"><span class="loc_option">分子病毒实验室</span></a>
+                					<a class="loc_link" annId="635" href="javascript:void(0);"><span class="loc_option">生物医学研究院</span></a>
+                					<a class="loc_link" annId="636" href="javascript:void(0);"><span class="loc_option">微电子研究院</span></a>
+                					<a class="loc_link" annId="637" href="javascript:void(0);"><span class="loc_option">软件学院</span></a>
+                				</td>
+                			</tr>
+                		</tbody>
+                	</table>
+                </div>
+				<div class="loc_cat">
+					<table class="loc_cat_t">
+						<tbody>
+							<tr class="cat_title_hide">
+								<td class="loc_exptd"><a href="javascript:void(0);">+</a></td>
+								<td><strong>教学设施</strong></td>
+							</tr>
+							<tr style="display:none;">
+								<td class="loc_td"></td>
+								<td>
+									<a class="loc_link" annId="159" href="javascript:void(0);"><span class="loc_option">一教(H1)</span></a>
+									<a class="loc_link" annId="169" href="javascript:void(0);"><span class="loc_option">二教(H2)</span></a>
+									<a class="loc_link" annId="170" href="javascript:void(0);"><span class="loc_option">三教(H3)</span></a>
+									<a class="loc_link" annId="172" href="javascript:void(0);"><span class="loc_option">四教(H4)</span></a>
+									<a class="loc_link" annId="252" href="javascript:void(0);"><span class="loc_option">五教(H5)</span></a>
+									<a class="loc_link" annId="253" href="javascript:void(0);"><span class="loc_option">六教(H6)</span></a>
+									<a class="loc_link" annId="185" href="javascript:void(0);"><span class="loc_option">光华楼（HGE,HGW,HGD,HGX）</span></a>
+									<a class="loc_link" annId="556" href="javascript:void(0);"><span class="loc_option">一教（枫林）</span></a>
+									<a class="loc_link" annId="544" href="javascript:void(0);"><span class="loc_option">二教（枫林）</span></a>
+									<a class="loc_link" annId="472" href="javascript:void(0);"><span class="loc_option">张江教学楼</span></a>
+									<a class="loc_link" annId="504" href="javascript:void(0);"><span class="loc_option">江湾教学楼</span></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="loc_cat">
+					<table class="loc_cat_t">
+						<tbody>
+							<tr class="cat_title_hide">
+								<td class="loc_exptd"><a href="javascript:void(0);">+</a></td>
+								<td><strong>住宿餐饮</strong></td>
+							</tr>
+							<tr style="display:none;">
+								<td class="loc_td"></td>
+								<td>
+									<a class="loc_link" annId="126" href="javascript:void(0);"><span class="loc_option">北区学生公寓</span></a>
+									<a class="loc_link" annId="249" href="javascript:void(0);"><span class="loc_option">南区学生公寓</span></a>
+									<a class="loc_link" annId="221" href="javascript:void(0);"><span class="loc_option">东区学生公寓</span></a>
+									<a class="loc_link" annId="267" href="javascript:void(0);"><span class="loc_option">复旦招待所</span></a>
+									<a class="loc_link" annId="228" href="javascript:void(0);"><span class="loc_option">燕园宾馆</span></a>
+									<a class="loc_link" annId="241" href="javascript:void(0);"><span class="loc_option">皇冠假日酒店</span></a>
+									<a class="loc_link" annId="45" href="javascript:void(0);"><span class="loc_option">北区食堂</span></a>
+									<a class="loc_link" annId="210" href="javascript:void(0);"><span class="loc_option">本部食堂</span></a>
+									<a class="loc_link" annId="332" href="javascript:void(0);"><span class="loc_option">南区食堂</span></a>
+									<a class="loc_link" annId="396" href="javascript:void(0);"><span class="loc_option">北区清真食堂</span></a>
+									<a class="loc_link" annId="397" href="javascript:void(0);"><span class="loc_option">南区清真食堂</span></a>
+									<a class="loc_link" annId="399" href="javascript:void(0);"><span class="loc_option">旦苑餐厅</span></a>
+									<a class="loc_link" annId="398" href="javascript:void(0);"><span class="loc_option">春晖餐厅</span></a>
+									<a class="loc_link" annId="281" href="javascript:void(0);"><span class="loc_option">教工食堂</span></a>
+									<a class="loc_link" annId="467" href="javascript:void(0);"><span class="loc_option">张江食堂</span></a>
+									<a class="loc_link" annId="546" href="javascript:void(0);"><span class="loc_option">枫林第一食堂</span></a>
+									<a class="loc_link" annId="545" href="javascript:void(0);"><span class="loc_option">枫林第二食堂</span></a>
+									<a class="loc_link" annId="502" href="javascript:void(0);"><span class="loc_option">江湾食堂</span></a>
+									<a class="loc_link" annId="571" href="javascript:void(0);"><span class="loc_option">西源宾馆</span></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="loc_cat">
+					<table class="loc_cat_t">
+						<tbody>
+							<tr class="cat_title_hide">
+								<td class="loc_exptd"><a href="javascript:void(0);">+</a></td>
+								<td><strong>休闲购物</strong></td>
+							</tr>
+							<tr style="display:none;">
+								<td class="loc_td"></td>
+								<td>
+									<a class="loc_link" annId="400" href="javascript:void(0);"><span class="loc_option">北区学生超市</span></a>
+									<a class="loc_link" annId="401" href="javascript:void(0);"><span class="loc_option">本部学生超市</span></a>
+									<a class="loc_link" annId="402" href="javascript:void(0);"><span class="loc_option">南区学生超市</span></a>
+									<a class="loc_link" annId="166" href="javascript:void(0);"><span class="loc_option">卿云轩</span></a>
+									<a class="loc_link" annId="194" href="javascript:void(0);"><span class="loc_option">学生活动中心</span></a>
+									<a class="loc_link" annId="338" href="javascript:void(0);"><span class="loc_option">学生活动中心</span></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="loc_cat">
+					<table class="loc_cat_t">
+						<tbody>
+							<tr class="cat_title_hide">
+								<td class="loc_exptd"><a href="javascript:void(0);">+</a></td>
+								<td><strong>银行储蓄</strong></td>
+							</tr>
+							<tr style="display:none;">
+								<td class="loc_td"></td>
+								<td>
+									<a class="loc_link" annId="168" href="javascript:void(0);"><span class="loc_option">农业银行复旦支行</span></a>
+									<a class="loc_link" annId="443" href="javascript:void(0);"><span class="loc_option">中国银行国定路支行</span></a>
+									<a class="loc_link" annId="442" href="javascript:void(0);"><span class="loc_option">建设银行国定路支行</span></a>
+									<a class="loc_link" annId="444" href="javascript:void(0);"><span class="loc_option">工商银行国定路支行</span></a>
+									<a class="loc_link" annId="638" href="javascript:void(0);"><span class="loc_option">交通银行五角场支行</span></a>
+									<a class="loc_link" annId="639" href="javascript:void(0);"><span class="loc_option">农业银行枫林支行</span></a>
+									<a class="loc_link" annId="640" href="javascript:void(0);"><span class="loc_option">医学院路工商银行</span></a>
+									<a class="loc_link" annId="403" href="javascript:void(0);"><span class="loc_option">农行ATM</span></a>
+									<a class="loc_link" annId="404" href="javascript:void(0);"><span class="loc_option">农行ATM</span></a>
+									<a class="loc_link" annId="405" href="javascript:void(0);"><span class="loc_option">光大银行ATM</span></a>
+									<a class="loc_link" annId="406" href="javascript:void(0);"><span class="loc_option">中行ATM</span></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="loc_cat">
+					<table class="loc_cat_t">
+						<tbody>
+							<tr class="cat_title_hide">
+								<td class="loc_exptd"><a href="javascript:void(0);">+</a></td>
+								<td><strong>医院药房</strong></td>
+							</tr>
+							<tr style="display:none;">
+								<td class="loc_td"></td>
+								<td>
+									<a class="loc_link" annId="148" href="javascript:void(0);"><span class="loc_option">校医院</span></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="loc_cat">
+					<table class="loc_cat_t">
+						<tbody>
+							<tr class="cat_title_hide">
+								<td class="loc_exptd"><a href="javascript:void(0);">+</a></td>
+								<td><strong>文体设施</strong></td>
+							</tr>
+							<tr style="display:none;">
+								<td class="loc_td"></td>
+								<td>
+									<a class="loc_link" annId="165" href="javascript:void(0);"><span class="loc_option">理科图书馆</span></a>
+									<a class="loc_link" annId="264" href="javascript:void(0);"><span class="loc_option">文科图书馆</span></a>
+									<a class="loc_link" annId="512" href="javascript:void(0);"><span class="loc_option">李兆基图书馆</span></a>
+									<a class="loc_link" annId="551" href="javascript:void(0);"><span class="loc_option">医科图书馆</span></a>
+									<a class="loc_link" annId="462" href="javascript:void(0);"><span class="loc_option">张江图书馆</span></a>
+									<a class="loc_link" annId="295" href="javascript:void(0);"><span class="loc_option">正大集团体育馆</span></a>
+									<a class="loc_link" annId="127" href="javascript:void(0);"><span class="loc_option">北区体育馆</span></a>
+									<a class="loc_link" annId="143" href="javascript:void(0);"><span class="loc_option">射击场</span></a>
+									<a class="loc_link" annId="144" href="javascript:void(0);"><span class="loc_option">运动场</span></a>
+									<a class="loc_link" annId="407" href="javascript:void(0);"><span class="loc_option">网球场</span></a>
+									<a class="loc_link" annId="271" href="javascript:void(0);"><span class="loc_option">田径场</span></a>
+									<a class="loc_link" annId="296" href="javascript:void(0);"><span class="loc_option">田径场</span></a>
+									<a class="loc_link" annId="361" href="javascript:void(0);"><span class="loc_option">田径场</span></a>
+									<a class="loc_link" annId="357" href="javascript:void(0);"><span class="loc_option">游泳馆</span></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="loc_cat">
+					<table class="loc_cat_t">
+						<tbody>
+							<tr class="cat_title_hide">
+								<td class="loc_exptd"><a href="javascript:void(0);">+</a></td>
+								<td><strong>邮局通信</strong></td>
+							</tr>
+							<tr style="display:none;">
+								<td class="loc_td"></td>
+								<td>
+									<a class="loc_link" annId="164" href="javascript:void(0);"><span class="loc_option">复旦大学邮政所</span></a>
+									<a class="loc_link" annId="641" href="javascript:void(0);"><span class="loc_option">武川路邮政所</span></a>
+									<a class="loc_link" annId="642" href="javascript:void(0);"><span class="loc_option">国定路邮政所</span></a>
+									<a class="loc_link" annId="643" href="javascript:void(0);"><span class="loc_option">东安路邮政支局</span></a>
+									<a class="loc_link" annId="644" href="javascript:void(0);"><span class="loc_option">枫林路邮政所</span></a>
+									<a class="loc_link" annId="645" href="javascript:void(0);"><span class="loc_option">张江校区收发室</span></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div id="splitterDiv" class="loc_cat" style="height:1px;line-height:1px;background-color:#333333;"><!-- --></div>
+				<div class="loc_cat">
+					<table class="loc_cat_t">
+						<tbody>
+							<tr class="cat_title_hide">
+								<td class="loc_exptd"><a href="javascript:void(0);">+</a></td>
+								<td><strong>图例</strong></td>
+							</tr>
+							<tr style="display:none;">
+								<td colspan="2">
+									<ul style="list-style-type:none;padding:0;margin: 6px;">
+										<li><div style="float:left;width:14px;height:14px;margin-right:3px;background-color:#9DCEB9"></div>教学科研用房</li>
+										<li><div style="float:left;width:14px;height:14px;margin-right:3px;background-color:#F8BA95"></div>行政用房</li>
+										<li><div style="float:left;width:14px;height:14px;margin-right:3px;background-color:#FEFBC6"></div>后勤辅助用房及其它</li>
+										<li><div style="float:left;width:14px;height:14px;margin-right:3px;background-color:#9CD9F5"></div>活动中心及体育场所</li>
+										<li><div style="float:left;width:14px;height:14px;margin-right:3px;background-color:#BFAB90"></div>学生公寓</li>
+										<li><div style="float:left;width:14px;height:14px;margin-right:3px;background-color:#D3C9B9"></div>教师公寓及教工宿舍</li>
+										<li><div style="float:left;width:14px;height:14px;margin-right:3px;background-color:#B2D7A1"></div>规划用地</li>
+										<li><div style="float:left;width:14px;height:14px;margin-right:3px;background-color:#5CBFAB"></div>河流水面</li>
+										<li><div style="float:left;width:14px;height:14px;margin-right:3px;background-color:#D7E9C3"></div>绿化&nbsp;草地&nbsp;场地</li>
+										<li><div style="float:left;width:14px;height:14px;margin-right:3px;background-color:#B1BEE1"></div>邮局、银行</li>
+										<li><div style="float:left;width:14px;height:14px;margin-right:3px;background-color:#9FC9EF"></div>停车场</li>
+										<li><img src="img/bus.png" style="float:left;width:14px;height:14px;margin-right:3px;"/>公交车站</li>
+										<li><img src="img/coin.png" style="float:left;width:14px;height:14px;margin-right:3px;"/>圈存机</li>
+																			</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div id="search_panel" class="side_panel" style="display:none">
+				<div class="sidePanelClosebox"></div>
+				<div id="result_state" style="margin:6px;"></div>
+				<div id="annsContainer" style="margin:6px"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
