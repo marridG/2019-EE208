@@ -10,6 +10,8 @@ FILTER_OUT_SCRIPTS = True  # .css .js
 FILTER_OUT_PICS = True  # .png .jpg .gif .jpeg
 FILTER_OUT_COMPRESSED = True  # .zip .rar
 ADVANCED_ENCODING = True
+# Fields
+STORE_CONTENTS = True
 # [User] Paths
 WEB_PAGE_PREFIX = "crawled/"
 WEB_PAGE_INDEX_SUBFIX = "index.txt"
@@ -169,9 +171,14 @@ class IndexFiles(object):
                                   Field.Store.YES,
                                   Field.Index.NOT_ANALYZED))
                     if len(contents) > 0:
-                        doc.add(Field("contents", contents,
-                                      Field.Store.NO,
-                                      Field.Index.ANALYZED))
+                        if STORE_CONTENTS:
+                            doc.add(Field("contents", contents,
+                                          Field.Store.YES,
+                                          Field.Index.ANALYZED))
+                        else:
+                            doc.add(Field("contents", contents,
+                                          Field.Store.NO,
+                                          Field.Index.ANALYZED))
                     else:
                         print "warning: no content in %s" % filename
                     writer.addDocument(doc)
