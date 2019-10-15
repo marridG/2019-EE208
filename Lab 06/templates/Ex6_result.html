@@ -1,6 +1,28 @@
-$def with (name)
+$def with (command, search_res_cnt, search_res, index_query_form)
 
-$if name:
-    I just wanted to say <em>hello</em> to $name.
+<form action="/s" method="GET">
+    $:index_query_form.render()
+</form>
+
+$if not command:
+    <br>
+    <font size="4" color="red">Error! No search command.</font>
+    <br>
 $else:
-    <em>Hello</em>, world!
+    Searching for "$command"<br>
+    Found $search_res_cnt items.<br><br>
+
+    $if search_res_cnt > 0:
+        $search_res_cnt
+        $for res in search_res:
+            $if(res["img_title"]):
+                img src: $res["img_src"]<br>
+                img title: $res["img_title"]<br>
+            $else:
+                title: $res['title']<br>
+            url: $res["url"]<br>
+            path: $res["path"]<br>
+            name: $res["name"]<br>
+            <br><br>
+    $else:
+        pass
