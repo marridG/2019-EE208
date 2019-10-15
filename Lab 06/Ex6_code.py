@@ -38,38 +38,39 @@ index_query_form = form.Form(
     form.Button('Search'),
 )
 
+# vm_env = lucene.initVM(vmargs=['-Djava.awt.headless=true'])
 # page templates to render
 render = web.template.render(TEMPLATES_PATH)  # your templates
 
 if __name__ == "__main__":
-    # Java Virtual Machine
-    STORE_DIR = INDEX_FILE_PATH
-    vm_env = lucene.initVM(vmargs=['-Djava.awt.headless=true'])
-    directory = SimpleFSDirectory(File(STORE_DIR))
-    searcher = IndexSearcher(DirectoryReader.open(directory))
-    analyzer = StandardAnalyzer(Version.LUCENE_CURRENT)
-
+    # vm_env = lucene.initVM(vmargs=['-Djava.awt.headless=true'])
     app = web.application(urls_page, globals())
     app.run()
 
 
 # =========================================
 # ========== WEB PAGE IMPLEMENTS ==========
-
 # add prefix to the input query command
 def func(command):
-    # vm_env.attachCurrentThread()
-    # res = searcher_run(searcher, analyzer, command)
-    # vm_env.detachCurrentThread()
-    # return res
-    # return {1:'[a]',2:'[b]',3:'[c]'}
-    return 4, [
-        {"img_title": "img_title_1", "img_src": "img_src_1", "title": "", "url": "url_1", "path": "path_1",
-         "name": "name_1"},
-        {"img_title": "img_title_2", "img_src": "img_src_2", "title": "", "url": "url_2", "path": "path_2",
-         "name": "name_2"},
-        {"img_title": "", "img_src": "", "title": "title_3", "url": "url_3", "path": "path_3", "name": "name_3"},
-        {"img_title": "", "img_src": "", "title": "title_4", "url": "url_4", "path": "path_4", "name": "name_4"}]
+    # Java Virtual Machine
+    global vm_env
+    STORE_DIR = INDEX_FILE_PATH
+    vm_env = lucene.initVM(vmargs=['-Djava.awt.headless=true'])
+    vm_env.attachCurrentThread()
+    directory = SimpleFSDirectory(File(STORE_DIR))
+    searcher = IndexSearcher(DirectoryReader.open(directory))
+    analyzer = StandardAnalyzer(Version.LUCENE_CURRENT)
+
+    res_cnt, res = searcher_run(searcher, analyzer, command)
+    vm_env.detachCurrentThread()
+    return res_cnt, res
+    # return 4, [
+    #     {"img_title": "img_title_1", "img_src": "img_src_1", "title": "", "url": "url_1", "path": "path_1",
+    #      "name": "name_1"},
+    #     {"img_title": "img_title_2", "img_src": "img_src_2", "title": "", "url": "url_2", "path": "path_2",
+    #      "name": "name_2"},
+    #     {"img_title": "", "img_src": "", "title": "title_3", "url": "url_3", "path": "path_3", "name": "name_3"},
+    #     {"img_title": "", "img_src": "", "title": "title_4", "url": "url_4", "path": "path_4", "name": "name_4"}]
 
 
 # ==PAGE== /index
@@ -131,7 +132,7 @@ def searcher_run(searcher, analyzer, command):
     #     return
 
     # print
-    # print "Searching for:", command
+    print "Searching for:", command
 
     command_dict = searcher_parseCommand(command)
     querys = BooleanQuery()
@@ -151,7 +152,7 @@ def searcher_run(searcher, analyzer, command):
         temp = {}
         doc = searcher.doc(scoreDoc.doc)
         # # explanation = searcher.explain(query, scoreDoc.doc)
-        print "-- #", str(idx + 1), "--"
+        # print "-- #", str(idx + 1), "--"
         temp["img_title"] = doc.get("img_title")
         temp["img_src"] = doc.get("img_src")
         temp["title"] = doc.get("title")
@@ -160,6 +161,6 @@ def searcher_run(searcher, analyzer, command):
         temp["name"] = doc.get("name")
         res.append(temp)
 
-        return res
+    return res_cnt, res
 # ================== END ==================
 # =========================================

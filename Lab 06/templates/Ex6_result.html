@@ -1,5 +1,10 @@
 $def with (command, search_res_cnt, search_res, index_query_form)
 
+<html>
+<head>hahahha</head>
+
+<body>
+
 <form action="/s" method="GET">
     $:index_query_form.render()
 </form>
@@ -13,16 +18,22 @@ $else:
     Found $search_res_cnt items.<br><br>
 
     $if search_res_cnt > 0:
-        $search_res_cnt
+        $# $search_res_cnt
         $for res in search_res:
             $if(res["img_title"]):
-                img src: $res["img_src"]<br>
-                img title: $res["img_title"]<br>
+                <a href=$res["img_src"]>$res["img_title"]</a><br>
+                图片<br>
+                <a href=$res["img_src"]>$res["img_src"]</a><br>
             $else:
-                title: $res['title']<br>
-            url: $res["url"]<br>
-            path: $res["path"]<br>
-            name: $res["name"]<br>
+                <a href=$res["url"]>$res['title']</a><br>
+                ...<br>
+                <a href=$res["url"]>$res["url"]</a><br>
+            $# url: $res["url"]<br>
+            $# path: $res["path"]<br>
+            $# name: $res["name"]<br>
             <br><br>
     $else:
         pass
+
+</body>
+</html>
