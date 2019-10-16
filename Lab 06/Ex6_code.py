@@ -17,12 +17,16 @@ from org.apache.lucene.search import BooleanClause
 
 import jieba
 
+import time
+from datetime import datetime
 from java.io import StringReader
 from org.apache.lucene.search.highlight import SimpleHTMLFormatter, Highlighter, QueryScorer, SimpleFragmenter, \
     SimpleHTMLFormatter
 
 # [User] limits
 MAX_ITEMS_PER_PAGE = 20
+MAX_SUMMARY_LENGTH = 25
+MAX_FRAGMENTS = 3
 # [User] Paths
 TEMPLATES_PATH = "templates"
 INDEX_FILE_PATH = "index"
@@ -50,10 +54,12 @@ except:
 
 # page templates to render
 render = web.template.render(TEMPLATES_PATH)  # your templates
-print "hello"
+if DEBUG_MODE:
+    print "hello"
 
 if __name__ == "__main__":
-    print "aloha"
+    if DEBUG_MODE:
+        print "aloha"
     app = web.application(urls_page, globals())
     app.run()
 
@@ -89,10 +95,13 @@ class url_index:
 # ==PAGE== /s
 class url_s:
     def GET(self):
+        start = time.time()
         user_data = web.input()
         command = user_data.keyword
         cnt, content = func(command)
-        return render.Ex6_result(command, cnt, content, index_query_form())
+        end = time.time()
+        time_executed = round(end - start, 5)
+        return render.Ex6_result(command, cnt, content, time_executed, index_query_form())
 
 
 # ================== END ==================
@@ -127,27 +136,18 @@ def searcher_parseCommand(command):
     return command_dict
 
 
-# def searcher_run(searcher, analyzer):
 def searcher_run(searcher, analyzer, command):
-    # while True:
-    # print
-    # print "Hit enter with no input to quit."
-    # command = raw_input("Query:")
-    # if command == '':
-    #     print "=== [ QUIT ] ==="
-    #     return
-
-    # print
     # vm_env.attachCurrentThread()
-    print "Searching for:", command
+    if DEBUG_MODE:
+        print "Searching for:", command
 
     command_dict = searcher_parseCommand(command)
     querys = BooleanQuery()
     for k, v in command_dict.iteritems():
         if 'contents' == k:
             v = " ".join(jieba.cut(v))
-        if DEBUG_MODE:
-            print k, v
+        # if DEBUG_MODE:
+        #     print k, v
         query = QueryParser(Version.LUCENE_CURRENT, k,
                             analyzer).parse(v)
         querys.add(query, BooleanClause.Occur.MUST)
@@ -157,7 +157,7 @@ def searcher_run(searcher, analyzer, command):
     # highlighter: does work
     simple_html_formatter = SimpleHTMLFormatter("<font color='red'>", "</font>")
     simple_html_highlighter = Highlighter(simple_html_formatter, QueryScorer(querys))
-    simple_html_highlighter.setTextFragmenter(SimpleFragmenter(10))
+    simple_html_highlighter.setTextFragmenter(SimpleFragmenter(MAX_SUMMARY_LENGTH))
 
     res = []
     for idx, scoreDoc in enumerate(scoreDocs):
@@ -173,7 +173,7 @@ def searcher_run(searcher, analyzer, command):
         temp["name"] = doc.get("name")
         text = doc.get("contents")
         token_stream = analyzer.tokenStream("contents", StringReader(text))
-        result = simple_html_highlighter.getBestFragments(token_stream, text, 2, u"...")
+        result = simple_html_highlighter.getBestFragments(token_stream, text, MAX_FRAGMENTS, u"...")
         temp["contents"] = result
         res.append(temp)
 

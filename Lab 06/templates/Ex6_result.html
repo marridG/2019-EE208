@@ -1,7 +1,9 @@
-$def with (command, search_res_cnt, search_res, index_query_form)
+$def with (command, search_res_cnt, search_res, time_executed, index_query_form)
 
 <html>
-<head>hahahha</head>
+<head>
+    <title>Search Results</title>
+</head>
 
 <body>
 
@@ -14,26 +16,34 @@ $if not command:
     <font size="4" color="red">Error! No search command.</font>
     <br>
 $else:
-    Searching for "$command"<br>
-    Found $search_res_cnt items.<br><br>
+    <font size="5">Searching for "$command"</font><br>
+    <em>Time Executed: $time_executed seconds</em><br>
+    $# Found $search_res_cnt items.<br><br>
+    <br><br>
 
     $if search_res_cnt > 0:
         $# $search_res_cnt
         $for res in search_res:
-            $if(res["img_title"]):
-                <a href=$res["img_src"]>$res["img_title"]</a><br>
-                图片<br>
-                <a href=$res["img_src"]>$res["img_src"]</a><br>
-            $else:
-                <a href=$res["url"]>$res['title']</a><br>
-                $:res["contents"]<br>
-                <a href=$res["url"]>$res["url"]</a><br>
+            $# $if(res["img_title"]):
+                $# <a href=$res["img_src"]>$res["img_title"]</a><br>
+                $# <em>$:res["contents"]</em><br>
+                $# <a href=$res["img_src"]>$res["img_src"]</a><br>
+            $# $else:
+                $# <font size="4.5"><a href=$res["url"]>$res['title']</a></font><br><br>
+                $# <em>$:res["contents"]</em><br>
+                $# $# <font color="green"><a href=$res["url"]>$res["url"]</a></font><br>
+                $# <font color="green"><em>$res["url"]</em></font><br><br>
+            <font size="4.5"><a href=$res["url"]>$res['title']</a></font><br><br>
+            <em>$:res["contents"]</em><br>
+            <font color="green"><em>$res["url"]</em></font><br><br>
             $# url: $res["url"]<br>
             $# path: $res["path"]<br>
             $# name: $res["name"]<br>
             <br><br>
     $else:
-        pass
+        <br>
+        <font size="5"> No Results.</font>
+        <br>
 
 </body>
 </html>
