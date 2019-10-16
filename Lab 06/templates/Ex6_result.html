@@ -26,7 +26,7 @@ $else:
                 <a href=$res["img_src"]>$res["img_src"]</a><br>
             $else:
                 <a href=$res["url"]>$res['title']</a><br>
-                ...<br>
+                $:res["contents"]<br>
                 <a href=$res["url"]>$res["url"]</a><br>
             $# url: $res["url"]<br>
             $# path: $res["path"]<br>

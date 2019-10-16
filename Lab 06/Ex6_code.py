@@ -17,6 +17,10 @@ from org.apache.lucene.search import BooleanClause
 
 import jieba
 
+from java.io import StringReader
+from org.apache.lucene.search.highlight import SimpleHTMLFormatter, Highlighter, QueryScorer, SimpleFragmenter, \
+    SimpleHTMLFormatter
+
 # [User] limits
 MAX_ITEMS_PER_PAGE = 20
 # [User] Paths
@@ -38,24 +42,26 @@ index_query_form = form.Form(
     form.Button('Search'),
 )
 
-# vm_env = lucene.initVM(vmargs=['-Djava.awt.headless=true'])
+# Java Virtual Machine
+try:
+    vm_env = lucene.initVM(vmargs=['-Djava.awt.headless=true'])
+except:
+    vm_env = lucene.getVMEnv()
+
 # page templates to render
 render = web.template.render(TEMPLATES_PATH)  # your templates
+print "hello"
 
 if __name__ == "__main__":
-    # vm_env = lucene.initVM(vmargs=['-Djava.awt.headless=true'])
+    print "aloha"
     app = web.application(urls_page, globals())
     app.run()
 
 
 # =========================================
 # ========== WEB PAGE IMPLEMENTS ==========
-# add prefix to the input query command
 def func(command):
-    # Java Virtual Machine
-    global vm_env
     STORE_DIR = INDEX_FILE_PATH
-    vm_env = lucene.initVM(vmargs=['-Djava.awt.headless=true'])
     vm_env.attachCurrentThread()
     directory = SimpleFSDirectory(File(STORE_DIR))
     searcher = IndexSearcher(DirectoryReader.open(directory))
@@ -132,6 +138,7 @@ def searcher_run(searcher, analyzer, command):
     #     return
 
     # print
+    # vm_env.attachCurrentThread()
     print "Searching for:", command
 
     command_dict = searcher_parseCommand(command)
@@ -146,8 +153,13 @@ def searcher_run(searcher, analyzer, command):
         querys.add(query, BooleanClause.Occur.MUST)
     scoreDocs = searcher.search(querys, MAX_ITEMS_PER_PAGE).scoreDocs
     res_cnt = len(scoreDocs)
-    res = []
 
+    # highlighter: does work
+    simple_html_formatter = SimpleHTMLFormatter("<font color='red'>", "</font>")
+    simple_html_highlighter = Highlighter(simple_html_formatter, QueryScorer(querys))
+    simple_html_highlighter.setTextFragmenter(SimpleFragmenter(10))
+
+    res = []
     for idx, scoreDoc in enumerate(scoreDocs):
         temp = {}
         doc = searcher.doc(scoreDoc.doc)
@@ -159,6 +171,10 @@ def searcher_run(searcher, analyzer, command):
         temp["url"] = doc.get("url")
         temp["path"] = doc.get("path")
         temp["name"] = doc.get("name")
+        text = doc.get("contents")
+        token_stream = analyzer.tokenStream("contents", StringReader(text))
+        result = simple_html_highlighter.getBestFragments(token_stream, text, 2, u"...")
+        temp["contents"] = result
         res.append(temp)
 
     return res_cnt, res
