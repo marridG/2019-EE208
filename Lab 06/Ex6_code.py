@@ -27,6 +27,7 @@ from org.apache.lucene.search.highlight import SimpleHTMLFormatter, Highlighter,
 MAX_ITEMS_PER_PAGE = 20
 MAX_SUMMARY_LENGTH = 25
 MAX_FRAGMENTS = 3
+FRAGMENT_SEPARATER = u"..."
 # [User] Paths
 TEMPLATES_PATH = "templates"
 INDEX_FILE_PATH = "index"
@@ -173,7 +174,7 @@ def searcher_run(searcher, analyzer, command):
         temp["name"] = doc.get("name")
         text = doc.get("contents")
         token_stream = analyzer.tokenStream("contents", StringReader(text))
-        result = simple_html_highlighter.getBestFragments(token_stream, text, MAX_FRAGMENTS, u"...")
+        result = simple_html_highlighter.getBestFragments(token_stream, text, MAX_FRAGMENTS, FRAGMENT_SEPARATER)
         temp["contents"] = result
         res.append(temp)
 
