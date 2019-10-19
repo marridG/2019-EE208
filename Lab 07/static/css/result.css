@@ -44,13 +44,14 @@
 	background-color: #EAEAEA;
 
 	border-width: 10px;
-	/*border-style: solid;*/
-	border-color: gray;
+	border-style: solid;
+	border-color: #EAEAEA;
 	border-radius: 10px;
 
 	font-size: 100%;
 	margin-bottom: 2%;
 	list-style: none;
+	overflow: hidden;
 }
 .result__result_contents_no_contents
 {
@@ -69,21 +70,23 @@
 	margin-top: 0.4%;
 	margin-bottom: 0.5%;
 }
-.result__result_item_web_contents, .result__result_item_web_contents_pic,.result__result_item_web_contents_content 
+.result__result_item_web_contents, .result__result_item_web_contents_pic,.result__result_item_web_contents_text
 {
 	left: 3%;
 	font-style: italic;
 	margin-bottom: 0.2%;
 	vertical-align: middle;
 	display: inline;
+	height:100%;
 }
 .result__result_item_web_contents_pic
 {
-	height: 10%;
+	height: 70%;
 	width: auto;
+	overflow:hidden;
 }
-.result__result_item_web_contents_pic_property{}
-.result__result_item_web_contents_content{}
+.result__result_item_web_contents_pic_property{max-height:200px;}
+.result__result_item_web_contents_text{width:60%;}
 .result__result_item_web_url
 {
 	font-style: italic;
