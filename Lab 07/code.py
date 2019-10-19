@@ -112,7 +112,7 @@ class url_s:
         cnt, content = func(command, category)
         end = time.time()
         time_executed = round(end - start, 5)
-        return render.result(command, cnt, content, time_executed, user_data.form)
+        return render.result(category, command, cnt, content, time_executed, user_data.form)
 
 
 # ================== END ==================
@@ -160,7 +160,7 @@ def searcher_run(searcher, analyzer, command, category):
         query = QueryParser(Version.LUCENE_CURRENT, k,
                             analyzer).parse(v)
         querys.add(query, BooleanClause.Occur.MUST)
-    print category
+    print category, category=="all"
     if not category == "all":
         category_query = QueryParser(Version.LUCENE_CURRENT, "category",
                                      analyzer).parse(category)

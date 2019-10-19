@@ -13,8 +13,10 @@ function update_results()	// search and update the results
 	
 	// get category
 	if(document.getElementsByName("category")[0].checked)
-		category="web";
+		category="all";
 	else if(document.getElementsByName("category")[1].checked)
+		category="web";
+	else if(document.getElementsByName("category")[2].checked)
 		category="image";
 	else
 		alert("check box error");
@@ -34,7 +36,28 @@ function update_results()	// search and update the results
 		{
 			document.title=keyword+" - Aloha";
 			document.getElementById("s").value=keyword;
-			document.getElementById("result__results").innerHTML=xmlhttp.responseText+"updated";
+			document.getElementById("result__results").innerHTML=xmlhttp.responseText;
+			// update category selection
+			if(category=="all")
+			    {
+			        document.getElementsByName("category")[0].checked=true;
+			        document.getElementsByName("category")[1].checked=false;
+			        document.getElementsByName("category")[2].checked=false;
+			    }
+			else if(category=="web")
+			    {
+			        document.getElementsByName("category")[0].checked=false;
+			        document.getElementsByName("category")[1].checked=true;
+			        document.getElementsByName("category")[2].checked=false;
+			    }
+			else if(category=="image")
+			    {
+			        document.getElementsByName("category")[0].checked=false;
+			        document.getElementsByName("category")[1].checked=false;
+			        document.getElementsByName("category")[2].checked=true;
+			    }
+			else
+			    alert("update category error")
 			// document.getElementByClassName("result__results")[0].innerHTML=xmlhttp.responseText+"updated";
 		}
 	}
