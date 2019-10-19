@@ -10,6 +10,9 @@ FILTER_OUT_SCRIPTS = True  # .css .js
 FILTER_OUT_PICS = True  # .png .jpg .gif .jpeg
 FILTER_OUT_COMPRESSED = True  # .zip .rar
 ADVANCED_ENCODING = True
+# Fields
+STORE_CONTENTS = True
+CATEGORY = "Image"
 # [User] Paths
 WEB_PAGE_PREFIX = "crawled_pic/"
 WEB_PAGE_INDEX_SUBFIX = "index.txt"
@@ -126,6 +129,15 @@ class IndexFiles(object):
                     if not contents_raw:
                         print "Encode Error"
                         continue
+                    # filter the title of the web page
+                    title_iter = re.finditer("<title>.*</title>", contents_raw)
+                    title = ""
+                    for i in title_iter:
+                        title = i.group().split('<title>')[-1].split("</title>")[0]
+                        if title:
+                            break
+                    if not title:
+                        continue
 
                     # filter the url and title or the images
                     soup = BeautifulSoup(contents_raw, features="html.parser")
@@ -152,6 +164,9 @@ class IndexFiles(object):
                         # '''
 
                         doc = Document()
+                        doc.add(Field("category", CATEGORY,
+                                      Field.Store.NO,
+                                      Field.Index.ANALYZED))
                         doc.add(Field("img_title", img_title,
                                       Field.Store.YES,
                                       Field.Index.NOT_ANALYZED))
@@ -164,15 +179,23 @@ class IndexFiles(object):
                         doc.add(Field("site", src_site,
                                       Field.Store.NO,
                                       Field.Index.ANALYZED))
+                        doc.add(Field("title", title,
+                                      Field.Store.YES,
+                                      Field.Index.NOT_ANALYZED))
                         doc.add(Field("name", filename,
                                       Field.Store.YES,
                                       Field.Index.NOT_ANALYZED))
                         doc.add(Field("path", root,
                                       Field.Store.YES,
                                       Field.Index.NOT_ANALYZED))
-                        doc.add(Field("contents", img_title_contents,
-                                      Field.Store.NO,
-                                      Field.Index.ANALYZED))
+                        if STORE_CONTENTS:
+                            doc.add(Field("contents", img_title_contents,
+                                          Field.Store.YES,
+                                          Field.Index.ANALYZED))
+                        else:
+                            doc.add(Field("contents", img_title_contents,
+                                          Field.Store.NO,
+                                          Field.Index.ANALYZED))
                         writer.addDocument(doc)
 
                 except Exception, e:

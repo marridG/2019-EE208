@@ -1,0 +1,68 @@
+$def with()
+<html>
+<!DOCTYPE html>
+<head>
+    <title>Home - Aloha</title>
+    <link type="text/css" rel="stylesheet" href="/static/css/main.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/index.css">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link type="text/css" href="/static/jquery/jquery-3.4.0.min.js">
+    <link rel="stylesheet" type="text/css" href="static\templates\index_search\styles.css">
+    <script src="/static/templates/index_search"></script>
+</head>
+
+<body>
+
+<div id="page">
+
+    <h1>background picture</h1>
+
+    <form action="/s" id="searchForm" method="GET" target="_blank">
+        <fieldset>
+
+            <input id="s" name="keyword" type="text"/>
+
+            <input type="submit" value="Submit" id="submitButton"/>
+
+            <div id="searchInContainer">
+                <!--<input type="radio" name="check" value="site" id="searchSite" checked />-->
+                <!--<input type="radio" id="searchSite" checked/>-->
+                <!--<label for="searchSite" id="siteNameLabel">Search</label>-->
+
+                <!--&lt;!&ndash;<input type="radio" name="check" value="web" id="searchWeb" />&ndash;&gt;-->
+                <!--<input type="radio" id="searchWeb"/>-->
+                <!--<label for="searchWeb">Search The Web</label>-->
+
+                <input type="radio" name="category" value="all" id="searchAll" checked/>
+                <label for="searchAll" id="allLabel">Everything</label>
+                <input type="radio" name="category" value="web" id="searchSite" />
+                <label for="searchSite" id="siteNameLabel">Web</label>
+                <input type="radio" name="category" value="image" id="searchWeb"/>
+                <label for="searchWeb">Image</label>
+                <input type="hidden" name="form" value="1">
+            </div>
+
+            <!--<ul class="icons">-->
+                <!--<li class="web" title="Web Search" data-searchType="web">Web</li>-->
+                <!--<li class="images" title="Image Search" data-searchType="images">Images</li>-->
+                <!--&lt;!&ndash;<li class="news" title="News Search" data-searchType="news">News</li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li class="videos" title="Video Search" data-searchType="video">Videos</li>&ndash;&gt;-->
+            <!--</ul>-->
+
+        </fieldset>
+    </form>
+
+    <div id="resultsDiv"></div>
+
+</div>
+
+<!-- It would be great if you leave the link back to the tutorial. Thanks! -->
+<p class="credit"><a href="http://tutorialzine.com/2010/09/google-powered-site-search-ajax-jquery/">Powered by Tzine
+    &amp; Google</a></p>
+
+
+
+
+</body>
+</html>

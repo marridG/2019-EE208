@@ -12,6 +12,7 @@ FILTER_OUT_COMPRESSED = True  # .zip .rar
 ADVANCED_ENCODING = True
 # Fields
 STORE_CONTENTS = True
+CATEGORY = "Web"
 # [User] Paths
 WEB_PAGE_PREFIX = "crawled/"
 WEB_PAGE_INDEX_SUBFIX = "index.txt"
@@ -155,6 +156,9 @@ class IndexFiles(object):
                     '''
 
                     doc = Document()
+                    doc.add(Field("category", CATEGORY,
+                                  Field.Store.NO,
+                                  Field.Index.ANALYZED))
                     doc.add(Field("name", filename,
                                   Field.Store.YES,
                                   Field.Index.NOT_ANALYZED))

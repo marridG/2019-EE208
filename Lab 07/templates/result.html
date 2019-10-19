@@ -1,0 +1,84 @@
+$def with (command, search_res_cnt, search_res, time_executed, show_query_form)
+
+<html>
+<head>
+    <title>$command - Aloha</title>
+    <link type="text/css" rel="stylesheet" href="/static/css/main.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/result.css">
+    <script src="/static/js/result.js"></script>
+
+    <!--<link type="text/css" href="/static/jquery/jquery-3.4.0.min.js">-->
+    <!--<link rel="stylesheet" type="text/css" href="static\templates\index_search\styles.css">-->
+    <!--<script src="/static/templates/index_search"></script>-->
+</head>
+
+<body>
+
+$if show_query_form == "1":
+    <fieldset>
+        <input id="s" name="keyword" value=$command type="text"/>
+        <input type="submit" value="Submit" onclick="update_results()" id="submitButton"/>
+
+        <div id="searchInContainer">
+            <input type="radio" name="category" value="all" id="searchAll" checked/>
+            <label for="searchAll" id="allLabel">Everything</label>
+            <input type="radio" name="category" value="web" id="searchSite"/>
+            <label for="searchSite" id="siteNameLabel">Web</label>
+            <input type="radio" name="category" value="image" id="searchWeb"/>
+            <label for="searchWeb">Image</label>
+        </div>
+    </fieldset>
+$else:
+    $pass
+
+<div class="result__results" id="result__results">
+$if not command:
+    <div class="result__error_no_command">
+        Error! No search command.
+    </div>
+$else:
+    <div class="result__info">
+        <!--<div class="result__info_command">-->
+            <!--Searching for "$command"-->
+        <!--</div>-->
+        <div class="result__info_time">
+            <!--Time Executed: -->$time_executed seconds
+        </div>
+    </div>
+    $# Found $search_res_cnt items.<br><br>
+    <br><br>
+
+    <div class="result__results_items_web">
+    $if search_res_cnt > 0:
+        $for res in search_res:
+            <div class="result__result_item_web">
+            <li class="result__result_item_web_title">
+                <a href=$res["url"]>$res['title']</a>
+            </li>
+            <li class="result__result_item_web_contents">
+                $if res["img_src"]:
+                    <div class="result__result_item_web_contents_pic">
+                        <a href=$res["img_src"]>
+                            <img class="result__result_item_web_contents_pic_property"
+                                 src=$res["img_src"]
+                                 alt="result_image">
+                        </a>
+                    </div>
+                <span class="result__result_item_web_contents_text">$:res["contents"]</span>
+            </li>
+            <li class="result__result_item_web_url">
+                $res["url"]
+            </li>
+            </div>
+    $else:
+        <div class="result__result_contents_no_contents">
+        No Results.
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
