@@ -53,12 +53,12 @@ $else:
         $for res in search_res:
             <div class="result__result_item_web">
             <li class="result__result_item_web_title">
-                <a href=$res["url"]>$res['title']</a>
+                <a href=$res["url"] target="_blank">$res['title']</a>
             </li>
             <li class="result__result_item_web_contents">
                 $if res["img_src"]:
                     <div class="result__result_item_web_contents_pic">
-                        <a href=$res["img_src"]>
+                        <a href=$res["img_src"] target="_blank">
                             <img class="result__result_item_web_contents_pic_property"
                                  src=$res["img_src"]
                                  alt="result_image">

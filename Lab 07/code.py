@@ -106,7 +106,8 @@ class url_s:
     def GET(self):
         start = time.time()
         user_data = web.input()
-        print user_data
+        if DEBUG_MODE:
+            print user_data
         command = user_data.keyword
         category = user_data.category
         cnt, content = func(command, category)
@@ -160,7 +161,8 @@ def searcher_run(searcher, analyzer, command, category):
         query = QueryParser(Version.LUCENE_CURRENT, k,
                             analyzer).parse(v)
         querys.add(query, BooleanClause.Occur.MUST)
-    print category, category=="all"
+    # if DEBUG_MODE:
+    #     print category, category=="all"
     if not category == "all":
         category_query = QueryParser(Version.LUCENE_CURRENT, "category",
                                      analyzer).parse(category)
