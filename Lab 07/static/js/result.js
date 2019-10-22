@@ -63,8 +63,8 @@ function update_results()	// search and update the results
 	}
 
 	// request
-		xmlhttp.open("GET",url, true);
-		xmlhttp.send();
+	xmlhttp.open("GET",url, true);
+	xmlhttp.send();
 }
 
 
