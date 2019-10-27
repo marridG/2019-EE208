@@ -1,0 +1,13 @@
+
+
+ssh localhost
+
+cd /usr/local/hadoop
+start-dfs.sh
+start-yarn.sh
+jps
+
+
+# hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.2.0.jar pi <nMaps> <nSamples>
+
+hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.2.0.jar pi 10 20
