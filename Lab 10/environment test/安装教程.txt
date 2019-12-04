@@ -1,0 +1,31 @@
+python+numpy+opencv环境配置：
+
+	1.基本组件安装
+	
+	sudo apt-get install python-pip
+	sudo apt-get install cmake
+	sudo apt-get install python-dev
+	
+	2.安装numpy
+	
+	unzip numpy-1.11.2.zip
+	cd numpy-1.11.2/
+	sudo python setup.py install
+	
+	3.安装opencv
+	
+	下载opencv安装包：https://codeload.github.com/opencv/opencv/zip/2.4.11
+	unzip opencv-2.4.11.zip
+	cd opencv-2.4.11/
+	cmake -D WITH_GTK_2_X=ON -D CMAKE_INSTALL_PREFIX=/usr/local .
+	make
+	sudo make install
+	
+	4.测试1
+	
+	在python命令行中输入import cv2，不报错基本确认安装成功；
+	
+	5.测试2
+	
+	在终端运行python test.py生成test1.png则安装成功。
+	
