@@ -1,0 +1,39 @@
+#!/usr/bin/env python
+
+from operator import itemgetter
+import sys
+
+"""
+!	A	0.25	B C D
+!	B	0.25	C D
+!	C	0.25	D
+!	D	0.25	B
+B	0.0833333333333
+C	0.0833333333333
+D	0.0833333333333
+C	0.125
+D	0.125
+D	0.25
+B	0.25
+^D
+"""
+
+d = 0.85
+
+current_link = None
+current_page_rank_total = 0.0
+in_link = None
+
+links = {}
+# input comes from STDIN
+for line in sys.stdin:
+    # remove leading and trailing whitespace
+    line = line.strip()
+
+    print line
+    if not line:
+        continue
+
+
+    line = line.split('\t')
+

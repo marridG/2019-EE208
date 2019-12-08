@@ -1,0 +1,50 @@
+#!/usr/bin/env python
+
+import sys
+
+"""
+0.001   // NO!
+4
+A	B C D
+B	C D
+C	D
+D	B
+^D
+"""
+
+page_names = []
+page_out_links = []
+page_cnt=0
+
+in_data=sys.stdin.read().split('\n')
+for idx, line in enumerate(in_data):
+    # remove leading and trailing whitespace
+    in_line = line.strip()
+
+#    print "::%s::" % page_cnt
+
+    # split the line into words
+    line = in_line.split('\t')
+
+    if 0==idx:  # get page count
+        try:		
+	    page_cnt = int(line[1])
+        except:
+	    print "%s\t%s" % (chr(33), in_line)
+	    continue
+        else:
+	    print "%s\t%s" % (chr(33), page_cnt)
+	    continue
+
+#    print "::%s::" % page_cnt
+
+    # node_name, out_links
+    name = line[0]
+    links = line[1]
+    page_names.append(name)
+    page_out_links.append(links)
+
+page_cnt = len(page_names)
+init_page_rank = float(1) / page_cnt
+for i in range(page_cnt):
+    print "%s\t%s\t%s" % (page_names[i], init_page_rank, page_out_links[i])

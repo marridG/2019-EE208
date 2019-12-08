@@ -1,0 +1,60 @@
+#/bin/bash
+
+input_file_path="/home/hduser/experiment/src/Ex9-2_test_input.txt"
+
+hadoop_stream_path="/usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.2.0.jar"
+initer_file_path="/home/hduser/experiment/src/Ex9-2_2_iteration_init.py"
+#initer_file_path="/home/hduser/experiment/src/samples/mapper.py"
+
+
+mv='hadoop fs -mv '
+rm='hadoop fs -rm -r '
+cp='hadoop fs -copyToLocal '
+
+function init()
+{
+	echo "***** START *****"
+	echo ""
+
+	eval "rm -rf  /home/hduser/result"
+	echo "===== Result Directory Initiated ====="
+	echo ""
+
+	eval "hadoop fs -rm -r -f tempoutput"
+	echo "=== Output Initiated ==="	
+	echo ""
+
+	eval "hadoop fs -rm -r -f tempinput"
+	eval "hadoop fs -mkdir tempinput"
+	eval "hadoop fs -D fs.local.block.size=1000000000 -put $input_file_path $2"
+	eval "hadoop fs -copyFromLocal $input_file_path tempinput"
+	echo "===== Input Initiated ====="
+	echo ""
+
+	eval "cd /home/hduser/experiment/src"
+	eval "chmod +x *.py"
+	eval "cd ~"
+	echo "===== Sources Initiated ====="
+	echo ""
+}
+
+
+function func()
+{
+
+		echo "===== Processing Initializer ====="
+		echo ""
+		eval "hadoop jar $hadoop_stream_path -files $initer_file_path -mapper $initer_file_path -reducer NONE -input $2/* -output tempoutput"
+
+    eval "$rm /user/hduser/tempoutput"
+    eval "$mv /user/hduser/tempoutput $2"
+
+}
+
+init $2
+func $1 $2
+eval "mkdir /home/hduser/result"
+eval "$cp $2/* /home/hduser/result"
+echo "===== Result Created ====="
+echo ""
+echo "***** END *****"
